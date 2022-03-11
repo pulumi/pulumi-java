@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.DeprecationStatusState;
 import io.pulumi.googlenative.compute_alpha.inputs.RolloutPolicyArgs;
@@ -25,10 +25,10 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deleted")
-      private final @Nullable Input<String> deleted;
+      private final @Nullable Output<String> deleted;
 
-    public Input<String> getDeleted() {
-        return this.deleted == null ? Input.empty() : this.deleted;
+    public Output<String> getDeleted() {
+        return this.deleted == null ? Output.empty() : this.deleted;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deprecated")
-      private final @Nullable Input<String> deprecated;
+      private final @Nullable Output<String> deprecated;
 
-    public Input<String> getDeprecated() {
-        return this.deprecated == null ? Input.empty() : this.deprecated;
+    public Output<String> getDeprecated() {
+        return this.deprecated == null ? Output.empty() : this.deprecated;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="obsolete")
-      private final @Nullable Input<String> obsolete;
+      private final @Nullable Output<String> obsolete;
 
-    public Input<String> getObsolete() {
-        return this.obsolete == null ? Input.empty() : this.obsolete;
+    public Output<String> getObsolete() {
+        return this.obsolete == null ? Output.empty() : this.obsolete;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replacement")
-      private final @Nullable Input<String> replacement;
+      private final @Nullable Output<String> replacement;
 
-    public Input<String> getReplacement() {
-        return this.replacement == null ? Input.empty() : this.replacement;
+    public Output<String> getReplacement() {
+        return this.replacement == null ? Output.empty() : this.replacement;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<DeprecationStatusState> state;
+      private final @Nullable Output<DeprecationStatusState> state;
 
-    public Input<DeprecationStatusState> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<DeprecationStatusState> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stateOverride")
-      private final @Nullable Input<RolloutPolicyArgs> stateOverride;
+      private final @Nullable Output<RolloutPolicyArgs> stateOverride;
 
-    public Input<RolloutPolicyArgs> getStateOverride() {
-        return this.stateOverride == null ? Input.empty() : this.stateOverride;
+    public Output<RolloutPolicyArgs> getStateOverride() {
+        return this.stateOverride == null ? Output.empty() : this.stateOverride;
     }
 
     public DeprecationStatusArgs(
-        @Nullable Input<String> deleted,
-        @Nullable Input<String> deprecated,
-        @Nullable Input<String> obsolete,
-        @Nullable Input<String> replacement,
-        @Nullable Input<DeprecationStatusState> state,
-        @Nullable Input<RolloutPolicyArgs> stateOverride) {
+        @Nullable Output<String> deleted,
+        @Nullable Output<String> deprecated,
+        @Nullable Output<String> obsolete,
+        @Nullable Output<String> replacement,
+        @Nullable Output<DeprecationStatusState> state,
+        @Nullable Output<RolloutPolicyArgs> stateOverride) {
         this.deleted = deleted;
         this.deprecated = deprecated;
         this.obsolete = obsolete;
@@ -102,12 +102,12 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DeprecationStatusArgs() {
-        this.deleted = Input.empty();
-        this.deprecated = Input.empty();
-        this.obsolete = Input.empty();
-        this.replacement = Input.empty();
-        this.state = Input.empty();
-        this.stateOverride = Input.empty();
+        this.deleted = Output.empty();
+        this.deprecated = Output.empty();
+        this.obsolete = Output.empty();
+        this.replacement = Output.empty();
+        this.state = Output.empty();
+        this.stateOverride = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deleted;
-        private @Nullable Input<String> deprecated;
-        private @Nullable Input<String> obsolete;
-        private @Nullable Input<String> replacement;
-        private @Nullable Input<DeprecationStatusState> state;
-        private @Nullable Input<RolloutPolicyArgs> stateOverride;
+        private @Nullable Output<String> deleted;
+        private @Nullable Output<String> deprecated;
+        private @Nullable Output<String> obsolete;
+        private @Nullable Output<String> replacement;
+        private @Nullable Output<DeprecationStatusState> state;
+        private @Nullable Output<RolloutPolicyArgs> stateOverride;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     	      this.stateOverride = defaults.stateOverride;
         }
 
-        public Builder deleted(@Nullable Input<String> deleted) {
+        public Builder deleted(@Nullable Output<String> deleted) {
             this.deleted = deleted;
             return this;
         }
 
         public Builder deleted(@Nullable String deleted) {
-            this.deleted = Input.ofNullable(deleted);
+            this.deleted = Output.ofNullable(deleted);
             return this;
         }
 
-        public Builder deprecated(@Nullable Input<String> deprecated) {
+        public Builder deprecated(@Nullable Output<String> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
         public Builder deprecated(@Nullable String deprecated) {
-            this.deprecated = Input.ofNullable(deprecated);
+            this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
 
-        public Builder obsolete(@Nullable Input<String> obsolete) {
+        public Builder obsolete(@Nullable Output<String> obsolete) {
             this.obsolete = obsolete;
             return this;
         }
 
         public Builder obsolete(@Nullable String obsolete) {
-            this.obsolete = Input.ofNullable(obsolete);
+            this.obsolete = Output.ofNullable(obsolete);
             return this;
         }
 
-        public Builder replacement(@Nullable Input<String> replacement) {
+        public Builder replacement(@Nullable Output<String> replacement) {
             this.replacement = replacement;
             return this;
         }
 
         public Builder replacement(@Nullable String replacement) {
-            this.replacement = Input.ofNullable(replacement);
+            this.replacement = Output.ofNullable(replacement);
             return this;
         }
 
-        public Builder state(@Nullable Input<DeprecationStatusState> state) {
+        public Builder state(@Nullable Output<DeprecationStatusState> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable DeprecationStatusState state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder stateOverride(@Nullable Input<RolloutPolicyArgs> stateOverride) {
+        public Builder stateOverride(@Nullable Output<RolloutPolicyArgs> stateOverride) {
             this.stateOverride = stateOverride;
             return this;
         }
 
         public Builder stateOverride(@Nullable RolloutPolicyArgs stateOverride) {
-            this.stateOverride = Input.ofNullable(stateOverride);
+            this.stateOverride = Output.ofNullable(stateOverride);
             return this;
         }
         public DeprecationStatusArgs build() {

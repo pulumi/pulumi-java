@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     public NetworkArgs(
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<String> subnetwork) {
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<String> subnetwork) {
         this.network = network;
         this.project = project;
         this.subnetwork = subnetwork;
     }
 
     private NetworkArgs() {
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.subnetwork = Input.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public NetworkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,23 +20,23 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="snapshotId", required=true)
-      private final Input<String> snapshotId;
+      private final Output<String> snapshotId;
 
-    public Input<String> getSnapshotId() {
+    public Output<String> getSnapshotId() {
         return this.snapshotId;
     }
 
@@ -45,17 +45,17 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscription", required=true)
-      private final Input<String> subscription;
+      private final Output<String> subscription;
 
-    public Input<String> getSubscription() {
+    public Output<String> getSubscription() {
         return this.subscription;
     }
 
     public SnapshotArgs(
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project,
-        Input<String> snapshotId,
-        Input<String> subscription) {
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project,
+        Output<String> snapshotId,
+        Output<String> subscription) {
         this.labels = labels;
         this.project = project;
         this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
@@ -63,10 +63,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotArgs() {
-        this.labels = Input.empty();
-        this.project = Input.empty();
-        this.snapshotId = Input.empty();
-        this.subscription = Input.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
+        this.snapshotId = Output.empty();
+        this.subscription = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,10 +78,10 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
-        private Input<String> snapshotId;
-        private Input<String> subscription;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
+        private Output<String> snapshotId;
+        private Output<String> subscription;
 
         public Builder() {
     	      // Empty
@@ -95,43 +95,43 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder snapshotId(Input<String> snapshotId) {
+        public Builder snapshotId(Output<String> snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Input.of(Objects.requireNonNull(snapshotId));
+            this.snapshotId = Output.of(Objects.requireNonNull(snapshotId));
             return this;
         }
 
-        public Builder subscription(Input<String> subscription) {
+        public Builder subscription(Output<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
         public Builder subscription(String subscription) {
-            this.subscription = Input.of(Objects.requireNonNull(subscription));
+            this.subscription = Output.of(Objects.requireNonNull(subscription));
             return this;
         }
         public SnapshotArgs build() {

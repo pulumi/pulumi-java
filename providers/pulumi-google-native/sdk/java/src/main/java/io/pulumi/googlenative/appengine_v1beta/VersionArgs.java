@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.VersionInboundServicesItem;
 import io.pulumi.googlenative.appengine_v1beta.enums.VersionServingStatus;
@@ -40,10 +40,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfig")
-      private final @Nullable Input<ApiConfigHandlerArgs> apiConfig;
+      private final @Nullable Output<ApiConfigHandlerArgs> apiConfig;
 
-    public Input<ApiConfigHandlerArgs> getApiConfig() {
-        return this.apiConfig == null ? Input.empty() : this.apiConfig;
+    public Output<ApiConfigHandlerArgs> getApiConfig() {
+        return this.apiConfig == null ? Output.empty() : this.apiConfig;
     }
 
     /**
@@ -51,16 +51,16 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineApis")
-      private final @Nullable Input<Boolean> appEngineApis;
+      private final @Nullable Output<Boolean> appEngineApis;
 
-    public Input<Boolean> getAppEngineApis() {
-        return this.appEngineApis == null ? Input.empty() : this.appEngineApis;
+    public Output<Boolean> getAppEngineApis() {
+        return this.appEngineApis == null ? Output.empty() : this.appEngineApis;
     }
 
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -69,10 +69,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticScaling")
-      private final @Nullable Input<AutomaticScalingArgs> automaticScaling;
+      private final @Nullable Output<AutomaticScalingArgs> automaticScaling;
 
-    public Input<AutomaticScalingArgs> getAutomaticScaling() {
-        return this.automaticScaling == null ? Input.empty() : this.automaticScaling;
+    public Output<AutomaticScalingArgs> getAutomaticScaling() {
+        return this.automaticScaling == null ? Output.empty() : this.automaticScaling;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basicScaling")
-      private final @Nullable Input<BasicScalingArgs> basicScaling;
+      private final @Nullable Output<BasicScalingArgs> basicScaling;
 
-    public Input<BasicScalingArgs> getBasicScaling() {
-        return this.basicScaling == null ? Input.empty() : this.basicScaling;
+    public Output<BasicScalingArgs> getBasicScaling() {
+        return this.basicScaling == null ? Output.empty() : this.basicScaling;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="betaSettings")
-      private final @Nullable Input<Map<String,String>> betaSettings;
+      private final @Nullable Output<Map<String,String>> betaSettings;
 
-    public Input<Map<String,String>> getBetaSettings() {
-        return this.betaSettings == null ? Input.empty() : this.betaSettings;
+    public Output<Map<String,String>> getBetaSettings() {
+        return this.betaSettings == null ? Output.empty() : this.betaSettings;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildEnvVariables")
-      private final @Nullable Input<Map<String,String>> buildEnvVariables;
+      private final @Nullable Output<Map<String,String>> buildEnvVariables;
 
-    public Input<Map<String,String>> getBuildEnvVariables() {
-        return this.buildEnvVariables == null ? Input.empty() : this.buildEnvVariables;
+    public Output<Map<String,String>> getBuildEnvVariables() {
+        return this.buildEnvVariables == null ? Output.empty() : this.buildEnvVariables;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultExpiration")
-      private final @Nullable Input<String> defaultExpiration;
+      private final @Nullable Output<String> defaultExpiration;
 
-    public Input<String> getDefaultExpiration() {
-        return this.defaultExpiration == null ? Input.empty() : this.defaultExpiration;
+    public Output<String> getDefaultExpiration() {
+        return this.defaultExpiration == null ? Output.empty() : this.defaultExpiration;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployment")
-      private final @Nullable Input<DeploymentArgs> deployment;
+      private final @Nullable Output<DeploymentArgs> deployment;
 
-    public Input<DeploymentArgs> getDeployment() {
-        return this.deployment == null ? Input.empty() : this.deployment;
+    public Output<DeploymentArgs> getDeployment() {
+        return this.deployment == null ? Output.empty() : this.deployment;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointsApiService")
-      private final @Nullable Input<EndpointsApiServiceArgs> endpointsApiService;
+      private final @Nullable Output<EndpointsApiServiceArgs> endpointsApiService;
 
-    public Input<EndpointsApiServiceArgs> getEndpointsApiService() {
-        return this.endpointsApiService == null ? Input.empty() : this.endpointsApiService;
+    public Output<EndpointsApiServiceArgs> getEndpointsApiService() {
+        return this.endpointsApiService == null ? Output.empty() : this.endpointsApiService;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entrypoint")
-      private final @Nullable Input<EntrypointArgs> entrypoint;
+      private final @Nullable Output<EntrypointArgs> entrypoint;
 
-    public Input<EntrypointArgs> getEntrypoint() {
-        return this.entrypoint == null ? Input.empty() : this.entrypoint;
+    public Output<EntrypointArgs> getEntrypoint() {
+        return this.entrypoint == null ? Output.empty() : this.entrypoint;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<String> env;
+      private final @Nullable Output<String> env;
 
-    public Input<String> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<String> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -168,10 +168,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="envVariables")
-      private final @Nullable Input<Map<String,String>> envVariables;
+      private final @Nullable Output<Map<String,String>> envVariables;
 
-    public Input<Map<String,String>> getEnvVariables() {
-        return this.envVariables == null ? Input.empty() : this.envVariables;
+    public Output<Map<String,String>> getEnvVariables() {
+        return this.envVariables == null ? Output.empty() : this.envVariables;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorHandlers")
-      private final @Nullable Input<List<ErrorHandlerArgs>> errorHandlers;
+      private final @Nullable Output<List<ErrorHandlerArgs>> errorHandlers;
 
-    public Input<List<ErrorHandlerArgs>> getErrorHandlers() {
-        return this.errorHandlers == null ? Input.empty() : this.errorHandlers;
+    public Output<List<ErrorHandlerArgs>> getErrorHandlers() {
+        return this.errorHandlers == null ? Output.empty() : this.errorHandlers;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handlers")
-      private final @Nullable Input<List<UrlMapArgs>> handlers;
+      private final @Nullable Output<List<UrlMapArgs>> handlers;
 
-    public Input<List<UrlMapArgs>> getHandlers() {
-        return this.handlers == null ? Input.empty() : this.handlers;
+    public Output<List<UrlMapArgs>> getHandlers() {
+        return this.handlers == null ? Output.empty() : this.handlers;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheck")
-      private final @Nullable Input<HealthCheckArgs> healthCheck;
+      private final @Nullable Output<HealthCheckArgs> healthCheck;
 
-    public Input<HealthCheckArgs> getHealthCheck() {
-        return this.healthCheck == null ? Input.empty() : this.healthCheck;
+    public Output<HealthCheckArgs> getHealthCheck() {
+        return this.healthCheck == null ? Output.empty() : this.healthCheck;
     }
 
     /**
@@ -212,10 +212,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inboundServices")
-      private final @Nullable Input<List<VersionInboundServicesItem>> inboundServices;
+      private final @Nullable Output<List<VersionInboundServicesItem>> inboundServices;
 
-    public Input<List<VersionInboundServicesItem>> getInboundServices() {
-        return this.inboundServices == null ? Input.empty() : this.inboundServices;
+    public Output<List<VersionInboundServicesItem>> getInboundServices() {
+        return this.inboundServices == null ? Output.empty() : this.inboundServices;
     }
 
     /**
@@ -234,10 +234,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceClass")
-      private final @Nullable Input<String> instanceClass;
+      private final @Nullable Output<String> instanceClass;
 
-    public Input<String> getInstanceClass() {
-        return this.instanceClass == null ? Input.empty() : this.instanceClass;
+    public Output<String> getInstanceClass() {
+        return this.instanceClass == null ? Output.empty() : this.instanceClass;
     }
 
     /**
@@ -245,10 +245,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="libraries")
-      private final @Nullable Input<List<LibraryArgs>> libraries;
+      private final @Nullable Output<List<LibraryArgs>> libraries;
 
-    public Input<List<LibraryArgs>> getLibraries() {
-        return this.libraries == null ? Input.empty() : this.libraries;
+    public Output<List<LibraryArgs>> getLibraries() {
+        return this.libraries == null ? Output.empty() : this.libraries;
     }
 
     /**
@@ -256,10 +256,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livenessCheck")
-      private final @Nullable Input<LivenessCheckArgs> livenessCheck;
+      private final @Nullable Output<LivenessCheckArgs> livenessCheck;
 
-    public Input<LivenessCheckArgs> getLivenessCheck() {
-        return this.livenessCheck == null ? Input.empty() : this.livenessCheck;
+    public Output<LivenessCheckArgs> getLivenessCheck() {
+        return this.livenessCheck == null ? Output.empty() : this.livenessCheck;
     }
 
     /**
@@ -267,10 +267,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="manualScaling")
-      private final @Nullable Input<ManualScalingArgs> manualScaling;
+      private final @Nullable Output<ManualScalingArgs> manualScaling;
 
-    public Input<ManualScalingArgs> getManualScaling() {
-        return this.manualScaling == null ? Input.empty() : this.manualScaling;
+    public Output<ManualScalingArgs> getManualScaling() {
+        return this.manualScaling == null ? Output.empty() : this.manualScaling;
     }
 
     /**
@@ -278,10 +278,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<NetworkArgs> network;
+      private final @Nullable Output<NetworkArgs> network;
 
-    public Input<NetworkArgs> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<NetworkArgs> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -289,10 +289,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nobuildFilesRegex")
-      private final @Nullable Input<String> nobuildFilesRegex;
+      private final @Nullable Output<String> nobuildFilesRegex;
 
-    public Input<String> getNobuildFilesRegex() {
-        return this.nobuildFilesRegex == null ? Input.empty() : this.nobuildFilesRegex;
+    public Output<String> getNobuildFilesRegex() {
+        return this.nobuildFilesRegex == null ? Output.empty() : this.nobuildFilesRegex;
     }
 
     /**
@@ -300,10 +300,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessCheck")
-      private final @Nullable Input<ReadinessCheckArgs> readinessCheck;
+      private final @Nullable Output<ReadinessCheckArgs> readinessCheck;
 
-    public Input<ReadinessCheckArgs> getReadinessCheck() {
-        return this.readinessCheck == null ? Input.empty() : this.readinessCheck;
+    public Output<ReadinessCheckArgs> getReadinessCheck() {
+        return this.readinessCheck == null ? Output.empty() : this.readinessCheck;
     }
 
     /**
@@ -311,10 +311,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<ResourcesArgs> resources;
+      private final @Nullable Output<ResourcesArgs> resources;
 
-    public Input<ResourcesArgs> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<ResourcesArgs> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-      private final @Nullable Input<String> runtime;
+      private final @Nullable Output<String> runtime;
 
-    public Input<String> getRuntime() {
-        return this.runtime == null ? Input.empty() : this.runtime;
+    public Output<String> getRuntime() {
+        return this.runtime == null ? Output.empty() : this.runtime;
     }
 
     /**
@@ -333,10 +333,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeApiVersion")
-      private final @Nullable Input<String> runtimeApiVersion;
+      private final @Nullable Output<String> runtimeApiVersion;
 
-    public Input<String> getRuntimeApiVersion() {
-        return this.runtimeApiVersion == null ? Input.empty() : this.runtimeApiVersion;
+    public Output<String> getRuntimeApiVersion() {
+        return this.runtimeApiVersion == null ? Output.empty() : this.runtimeApiVersion;
     }
 
     /**
@@ -344,10 +344,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeChannel")
-      private final @Nullable Input<String> runtimeChannel;
+      private final @Nullable Output<String> runtimeChannel;
 
-    public Input<String> getRuntimeChannel() {
-        return this.runtimeChannel == null ? Input.empty() : this.runtimeChannel;
+    public Output<String> getRuntimeChannel() {
+        return this.runtimeChannel == null ? Output.empty() : this.runtimeChannel;
     }
 
     /**
@@ -355,10 +355,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeMainExecutablePath")
-      private final @Nullable Input<String> runtimeMainExecutablePath;
+      private final @Nullable Output<String> runtimeMainExecutablePath;
 
-    public Input<String> getRuntimeMainExecutablePath() {
-        return this.runtimeMainExecutablePath == null ? Input.empty() : this.runtimeMainExecutablePath;
+    public Output<String> getRuntimeMainExecutablePath() {
+        return this.runtimeMainExecutablePath == null ? Output.empty() : this.runtimeMainExecutablePath;
     }
 
     /**
@@ -366,16 +366,16 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -384,10 +384,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servingStatus")
-      private final @Nullable Input<VersionServingStatus> servingStatus;
+      private final @Nullable Output<VersionServingStatus> servingStatus;
 
-    public Input<VersionServingStatus> getServingStatus() {
-        return this.servingStatus == null ? Input.empty() : this.servingStatus;
+    public Output<VersionServingStatus> getServingStatus() {
+        return this.servingStatus == null ? Output.empty() : this.servingStatus;
     }
 
     /**
@@ -395,10 +395,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threadsafe")
-      private final @Nullable Input<Boolean> threadsafe;
+      private final @Nullable Output<Boolean> threadsafe;
 
-    public Input<Boolean> getThreadsafe() {
-        return this.threadsafe == null ? Input.empty() : this.threadsafe;
+    public Output<Boolean> getThreadsafe() {
+        return this.threadsafe == null ? Output.empty() : this.threadsafe;
     }
 
     /**
@@ -406,10 +406,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vm")
-      private final @Nullable Input<Boolean> vm;
+      private final @Nullable Output<Boolean> vm;
 
-    public Input<Boolean> getVm() {
-        return this.vm == null ? Input.empty() : this.vm;
+    public Output<Boolean> getVm() {
+        return this.vm == null ? Output.empty() : this.vm;
     }
 
     /**
@@ -417,49 +417,49 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcAccessConnector")
-      private final @Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector;
+      private final @Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector;
 
-    public Input<VpcAccessConnectorArgs> getVpcAccessConnector() {
-        return this.vpcAccessConnector == null ? Input.empty() : this.vpcAccessConnector;
+    public Output<VpcAccessConnectorArgs> getVpcAccessConnector() {
+        return this.vpcAccessConnector == null ? Output.empty() : this.vpcAccessConnector;
     }
 
     public VersionArgs(
-        @Nullable Input<ApiConfigHandlerArgs> apiConfig,
-        @Nullable Input<Boolean> appEngineApis,
-        Input<String> appId,
-        @Nullable Input<AutomaticScalingArgs> automaticScaling,
-        @Nullable Input<BasicScalingArgs> basicScaling,
-        @Nullable Input<Map<String,String>> betaSettings,
-        @Nullable Input<Map<String,String>> buildEnvVariables,
-        @Nullable Input<String> defaultExpiration,
-        @Nullable Input<DeploymentArgs> deployment,
-        @Nullable Input<EndpointsApiServiceArgs> endpointsApiService,
-        @Nullable Input<EntrypointArgs> entrypoint,
-        @Nullable Input<String> env,
-        @Nullable Input<Map<String,String>> envVariables,
-        @Nullable Input<List<ErrorHandlerArgs>> errorHandlers,
-        @Nullable Input<List<UrlMapArgs>> handlers,
-        @Nullable Input<HealthCheckArgs> healthCheck,
-        @Nullable Input<String> id,
-        @Nullable Input<List<VersionInboundServicesItem>> inboundServices,
-        @Nullable Input<String> instanceClass,
-        @Nullable Input<List<LibraryArgs>> libraries,
-        @Nullable Input<LivenessCheckArgs> livenessCheck,
-        @Nullable Input<ManualScalingArgs> manualScaling,
-        @Nullable Input<NetworkArgs> network,
-        @Nullable Input<String> nobuildFilesRegex,
-        @Nullable Input<ReadinessCheckArgs> readinessCheck,
-        @Nullable Input<ResourcesArgs> resources,
-        @Nullable Input<String> runtime,
-        @Nullable Input<String> runtimeApiVersion,
-        @Nullable Input<String> runtimeChannel,
-        @Nullable Input<String> runtimeMainExecutablePath,
-        @Nullable Input<String> serviceAccount,
-        Input<String> serviceId,
-        @Nullable Input<VersionServingStatus> servingStatus,
-        @Nullable Input<Boolean> threadsafe,
-        @Nullable Input<Boolean> vm,
-        @Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector) {
+        @Nullable Output<ApiConfigHandlerArgs> apiConfig,
+        @Nullable Output<Boolean> appEngineApis,
+        Output<String> appId,
+        @Nullable Output<AutomaticScalingArgs> automaticScaling,
+        @Nullable Output<BasicScalingArgs> basicScaling,
+        @Nullable Output<Map<String,String>> betaSettings,
+        @Nullable Output<Map<String,String>> buildEnvVariables,
+        @Nullable Output<String> defaultExpiration,
+        @Nullable Output<DeploymentArgs> deployment,
+        @Nullable Output<EndpointsApiServiceArgs> endpointsApiService,
+        @Nullable Output<EntrypointArgs> entrypoint,
+        @Nullable Output<String> env,
+        @Nullable Output<Map<String,String>> envVariables,
+        @Nullable Output<List<ErrorHandlerArgs>> errorHandlers,
+        @Nullable Output<List<UrlMapArgs>> handlers,
+        @Nullable Output<HealthCheckArgs> healthCheck,
+        @Nullable Output<String> id,
+        @Nullable Output<List<VersionInboundServicesItem>> inboundServices,
+        @Nullable Output<String> instanceClass,
+        @Nullable Output<List<LibraryArgs>> libraries,
+        @Nullable Output<LivenessCheckArgs> livenessCheck,
+        @Nullable Output<ManualScalingArgs> manualScaling,
+        @Nullable Output<NetworkArgs> network,
+        @Nullable Output<String> nobuildFilesRegex,
+        @Nullable Output<ReadinessCheckArgs> readinessCheck,
+        @Nullable Output<ResourcesArgs> resources,
+        @Nullable Output<String> runtime,
+        @Nullable Output<String> runtimeApiVersion,
+        @Nullable Output<String> runtimeChannel,
+        @Nullable Output<String> runtimeMainExecutablePath,
+        @Nullable Output<String> serviceAccount,
+        Output<String> serviceId,
+        @Nullable Output<VersionServingStatus> servingStatus,
+        @Nullable Output<Boolean> threadsafe,
+        @Nullable Output<Boolean> vm,
+        @Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector) {
         this.apiConfig = apiConfig;
         this.appEngineApis = appEngineApis;
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
@@ -499,42 +499,42 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.apiConfig = Input.empty();
-        this.appEngineApis = Input.empty();
-        this.appId = Input.empty();
-        this.automaticScaling = Input.empty();
-        this.basicScaling = Input.empty();
-        this.betaSettings = Input.empty();
-        this.buildEnvVariables = Input.empty();
-        this.defaultExpiration = Input.empty();
-        this.deployment = Input.empty();
-        this.endpointsApiService = Input.empty();
-        this.entrypoint = Input.empty();
-        this.env = Input.empty();
-        this.envVariables = Input.empty();
-        this.errorHandlers = Input.empty();
-        this.handlers = Input.empty();
-        this.healthCheck = Input.empty();
-        this.id = Input.empty();
-        this.inboundServices = Input.empty();
-        this.instanceClass = Input.empty();
-        this.libraries = Input.empty();
-        this.livenessCheck = Input.empty();
-        this.manualScaling = Input.empty();
-        this.network = Input.empty();
-        this.nobuildFilesRegex = Input.empty();
-        this.readinessCheck = Input.empty();
-        this.resources = Input.empty();
-        this.runtime = Input.empty();
-        this.runtimeApiVersion = Input.empty();
-        this.runtimeChannel = Input.empty();
-        this.runtimeMainExecutablePath = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.serviceId = Input.empty();
-        this.servingStatus = Input.empty();
-        this.threadsafe = Input.empty();
-        this.vm = Input.empty();
-        this.vpcAccessConnector = Input.empty();
+        this.apiConfig = Output.empty();
+        this.appEngineApis = Output.empty();
+        this.appId = Output.empty();
+        this.automaticScaling = Output.empty();
+        this.basicScaling = Output.empty();
+        this.betaSettings = Output.empty();
+        this.buildEnvVariables = Output.empty();
+        this.defaultExpiration = Output.empty();
+        this.deployment = Output.empty();
+        this.endpointsApiService = Output.empty();
+        this.entrypoint = Output.empty();
+        this.env = Output.empty();
+        this.envVariables = Output.empty();
+        this.errorHandlers = Output.empty();
+        this.handlers = Output.empty();
+        this.healthCheck = Output.empty();
+        this.id = Output.empty();
+        this.inboundServices = Output.empty();
+        this.instanceClass = Output.empty();
+        this.libraries = Output.empty();
+        this.livenessCheck = Output.empty();
+        this.manualScaling = Output.empty();
+        this.network = Output.empty();
+        this.nobuildFilesRegex = Output.empty();
+        this.readinessCheck = Output.empty();
+        this.resources = Output.empty();
+        this.runtime = Output.empty();
+        this.runtimeApiVersion = Output.empty();
+        this.runtimeChannel = Output.empty();
+        this.runtimeMainExecutablePath = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.serviceId = Output.empty();
+        this.servingStatus = Output.empty();
+        this.threadsafe = Output.empty();
+        this.vm = Output.empty();
+        this.vpcAccessConnector = Output.empty();
     }
 
     public static Builder builder() {
@@ -546,42 +546,42 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ApiConfigHandlerArgs> apiConfig;
-        private @Nullable Input<Boolean> appEngineApis;
-        private Input<String> appId;
-        private @Nullable Input<AutomaticScalingArgs> automaticScaling;
-        private @Nullable Input<BasicScalingArgs> basicScaling;
-        private @Nullable Input<Map<String,String>> betaSettings;
-        private @Nullable Input<Map<String,String>> buildEnvVariables;
-        private @Nullable Input<String> defaultExpiration;
-        private @Nullable Input<DeploymentArgs> deployment;
-        private @Nullable Input<EndpointsApiServiceArgs> endpointsApiService;
-        private @Nullable Input<EntrypointArgs> entrypoint;
-        private @Nullable Input<String> env;
-        private @Nullable Input<Map<String,String>> envVariables;
-        private @Nullable Input<List<ErrorHandlerArgs>> errorHandlers;
-        private @Nullable Input<List<UrlMapArgs>> handlers;
-        private @Nullable Input<HealthCheckArgs> healthCheck;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<VersionInboundServicesItem>> inboundServices;
-        private @Nullable Input<String> instanceClass;
-        private @Nullable Input<List<LibraryArgs>> libraries;
-        private @Nullable Input<LivenessCheckArgs> livenessCheck;
-        private @Nullable Input<ManualScalingArgs> manualScaling;
-        private @Nullable Input<NetworkArgs> network;
-        private @Nullable Input<String> nobuildFilesRegex;
-        private @Nullable Input<ReadinessCheckArgs> readinessCheck;
-        private @Nullable Input<ResourcesArgs> resources;
-        private @Nullable Input<String> runtime;
-        private @Nullable Input<String> runtimeApiVersion;
-        private @Nullable Input<String> runtimeChannel;
-        private @Nullable Input<String> runtimeMainExecutablePath;
-        private @Nullable Input<String> serviceAccount;
-        private Input<String> serviceId;
-        private @Nullable Input<VersionServingStatus> servingStatus;
-        private @Nullable Input<Boolean> threadsafe;
-        private @Nullable Input<Boolean> vm;
-        private @Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector;
+        private @Nullable Output<ApiConfigHandlerArgs> apiConfig;
+        private @Nullable Output<Boolean> appEngineApis;
+        private Output<String> appId;
+        private @Nullable Output<AutomaticScalingArgs> automaticScaling;
+        private @Nullable Output<BasicScalingArgs> basicScaling;
+        private @Nullable Output<Map<String,String>> betaSettings;
+        private @Nullable Output<Map<String,String>> buildEnvVariables;
+        private @Nullable Output<String> defaultExpiration;
+        private @Nullable Output<DeploymentArgs> deployment;
+        private @Nullable Output<EndpointsApiServiceArgs> endpointsApiService;
+        private @Nullable Output<EntrypointArgs> entrypoint;
+        private @Nullable Output<String> env;
+        private @Nullable Output<Map<String,String>> envVariables;
+        private @Nullable Output<List<ErrorHandlerArgs>> errorHandlers;
+        private @Nullable Output<List<UrlMapArgs>> handlers;
+        private @Nullable Output<HealthCheckArgs> healthCheck;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<VersionInboundServicesItem>> inboundServices;
+        private @Nullable Output<String> instanceClass;
+        private @Nullable Output<List<LibraryArgs>> libraries;
+        private @Nullable Output<LivenessCheckArgs> livenessCheck;
+        private @Nullable Output<ManualScalingArgs> manualScaling;
+        private @Nullable Output<NetworkArgs> network;
+        private @Nullable Output<String> nobuildFilesRegex;
+        private @Nullable Output<ReadinessCheckArgs> readinessCheck;
+        private @Nullable Output<ResourcesArgs> resources;
+        private @Nullable Output<String> runtime;
+        private @Nullable Output<String> runtimeApiVersion;
+        private @Nullable Output<String> runtimeChannel;
+        private @Nullable Output<String> runtimeMainExecutablePath;
+        private @Nullable Output<String> serviceAccount;
+        private Output<String> serviceId;
+        private @Nullable Output<VersionServingStatus> servingStatus;
+        private @Nullable Output<Boolean> threadsafe;
+        private @Nullable Output<Boolean> vm;
+        private @Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector;
 
         public Builder() {
     	      // Empty
@@ -627,363 +627,363 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcAccessConnector = defaults.vpcAccessConnector;
         }
 
-        public Builder apiConfig(@Nullable Input<ApiConfigHandlerArgs> apiConfig) {
+        public Builder apiConfig(@Nullable Output<ApiConfigHandlerArgs> apiConfig) {
             this.apiConfig = apiConfig;
             return this;
         }
 
         public Builder apiConfig(@Nullable ApiConfigHandlerArgs apiConfig) {
-            this.apiConfig = Input.ofNullable(apiConfig);
+            this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
 
-        public Builder appEngineApis(@Nullable Input<Boolean> appEngineApis) {
+        public Builder appEngineApis(@Nullable Output<Boolean> appEngineApis) {
             this.appEngineApis = appEngineApis;
             return this;
         }
 
         public Builder appEngineApis(@Nullable Boolean appEngineApis) {
-            this.appEngineApis = Input.ofNullable(appEngineApis);
+            this.appEngineApis = Output.ofNullable(appEngineApis);
             return this;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder automaticScaling(@Nullable Input<AutomaticScalingArgs> automaticScaling) {
+        public Builder automaticScaling(@Nullable Output<AutomaticScalingArgs> automaticScaling) {
             this.automaticScaling = automaticScaling;
             return this;
         }
 
         public Builder automaticScaling(@Nullable AutomaticScalingArgs automaticScaling) {
-            this.automaticScaling = Input.ofNullable(automaticScaling);
+            this.automaticScaling = Output.ofNullable(automaticScaling);
             return this;
         }
 
-        public Builder basicScaling(@Nullable Input<BasicScalingArgs> basicScaling) {
+        public Builder basicScaling(@Nullable Output<BasicScalingArgs> basicScaling) {
             this.basicScaling = basicScaling;
             return this;
         }
 
         public Builder basicScaling(@Nullable BasicScalingArgs basicScaling) {
-            this.basicScaling = Input.ofNullable(basicScaling);
+            this.basicScaling = Output.ofNullable(basicScaling);
             return this;
         }
 
-        public Builder betaSettings(@Nullable Input<Map<String,String>> betaSettings) {
+        public Builder betaSettings(@Nullable Output<Map<String,String>> betaSettings) {
             this.betaSettings = betaSettings;
             return this;
         }
 
         public Builder betaSettings(@Nullable Map<String,String> betaSettings) {
-            this.betaSettings = Input.ofNullable(betaSettings);
+            this.betaSettings = Output.ofNullable(betaSettings);
             return this;
         }
 
-        public Builder buildEnvVariables(@Nullable Input<Map<String,String>> buildEnvVariables) {
+        public Builder buildEnvVariables(@Nullable Output<Map<String,String>> buildEnvVariables) {
             this.buildEnvVariables = buildEnvVariables;
             return this;
         }
 
         public Builder buildEnvVariables(@Nullable Map<String,String> buildEnvVariables) {
-            this.buildEnvVariables = Input.ofNullable(buildEnvVariables);
+            this.buildEnvVariables = Output.ofNullable(buildEnvVariables);
             return this;
         }
 
-        public Builder defaultExpiration(@Nullable Input<String> defaultExpiration) {
+        public Builder defaultExpiration(@Nullable Output<String> defaultExpiration) {
             this.defaultExpiration = defaultExpiration;
             return this;
         }
 
         public Builder defaultExpiration(@Nullable String defaultExpiration) {
-            this.defaultExpiration = Input.ofNullable(defaultExpiration);
+            this.defaultExpiration = Output.ofNullable(defaultExpiration);
             return this;
         }
 
-        public Builder deployment(@Nullable Input<DeploymentArgs> deployment) {
+        public Builder deployment(@Nullable Output<DeploymentArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
         public Builder deployment(@Nullable DeploymentArgs deployment) {
-            this.deployment = Input.ofNullable(deployment);
+            this.deployment = Output.ofNullable(deployment);
             return this;
         }
 
-        public Builder endpointsApiService(@Nullable Input<EndpointsApiServiceArgs> endpointsApiService) {
+        public Builder endpointsApiService(@Nullable Output<EndpointsApiServiceArgs> endpointsApiService) {
             this.endpointsApiService = endpointsApiService;
             return this;
         }
 
         public Builder endpointsApiService(@Nullable EndpointsApiServiceArgs endpointsApiService) {
-            this.endpointsApiService = Input.ofNullable(endpointsApiService);
+            this.endpointsApiService = Output.ofNullable(endpointsApiService);
             return this;
         }
 
-        public Builder entrypoint(@Nullable Input<EntrypointArgs> entrypoint) {
+        public Builder entrypoint(@Nullable Output<EntrypointArgs> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
         public Builder entrypoint(@Nullable EntrypointArgs entrypoint) {
-            this.entrypoint = Input.ofNullable(entrypoint);
+            this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder env(@Nullable Input<String> env) {
+        public Builder env(@Nullable Output<String> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable String env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder envVariables(@Nullable Input<Map<String,String>> envVariables) {
+        public Builder envVariables(@Nullable Output<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
         public Builder envVariables(@Nullable Map<String,String> envVariables) {
-            this.envVariables = Input.ofNullable(envVariables);
+            this.envVariables = Output.ofNullable(envVariables);
             return this;
         }
 
-        public Builder errorHandlers(@Nullable Input<List<ErrorHandlerArgs>> errorHandlers) {
+        public Builder errorHandlers(@Nullable Output<List<ErrorHandlerArgs>> errorHandlers) {
             this.errorHandlers = errorHandlers;
             return this;
         }
 
         public Builder errorHandlers(@Nullable List<ErrorHandlerArgs> errorHandlers) {
-            this.errorHandlers = Input.ofNullable(errorHandlers);
+            this.errorHandlers = Output.ofNullable(errorHandlers);
             return this;
         }
 
-        public Builder handlers(@Nullable Input<List<UrlMapArgs>> handlers) {
+        public Builder handlers(@Nullable Output<List<UrlMapArgs>> handlers) {
             this.handlers = handlers;
             return this;
         }
 
         public Builder handlers(@Nullable List<UrlMapArgs> handlers) {
-            this.handlers = Input.ofNullable(handlers);
+            this.handlers = Output.ofNullable(handlers);
             return this;
         }
 
-        public Builder healthCheck(@Nullable Input<HealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Output<HealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
         public Builder healthCheck(@Nullable HealthCheckArgs healthCheck) {
-            this.healthCheck = Input.ofNullable(healthCheck);
+            this.healthCheck = Output.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder inboundServices(@Nullable Input<List<VersionInboundServicesItem>> inboundServices) {
+        public Builder inboundServices(@Nullable Output<List<VersionInboundServicesItem>> inboundServices) {
             this.inboundServices = inboundServices;
             return this;
         }
 
         public Builder inboundServices(@Nullable List<VersionInboundServicesItem> inboundServices) {
-            this.inboundServices = Input.ofNullable(inboundServices);
+            this.inboundServices = Output.ofNullable(inboundServices);
             return this;
         }
 
-        public Builder instanceClass(@Nullable Input<String> instanceClass) {
+        public Builder instanceClass(@Nullable Output<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
         public Builder instanceClass(@Nullable String instanceClass) {
-            this.instanceClass = Input.ofNullable(instanceClass);
+            this.instanceClass = Output.ofNullable(instanceClass);
             return this;
         }
 
-        public Builder libraries(@Nullable Input<List<LibraryArgs>> libraries) {
+        public Builder libraries(@Nullable Output<List<LibraryArgs>> libraries) {
             this.libraries = libraries;
             return this;
         }
 
         public Builder libraries(@Nullable List<LibraryArgs> libraries) {
-            this.libraries = Input.ofNullable(libraries);
+            this.libraries = Output.ofNullable(libraries);
             return this;
         }
 
-        public Builder livenessCheck(@Nullable Input<LivenessCheckArgs> livenessCheck) {
+        public Builder livenessCheck(@Nullable Output<LivenessCheckArgs> livenessCheck) {
             this.livenessCheck = livenessCheck;
             return this;
         }
 
         public Builder livenessCheck(@Nullable LivenessCheckArgs livenessCheck) {
-            this.livenessCheck = Input.ofNullable(livenessCheck);
+            this.livenessCheck = Output.ofNullable(livenessCheck);
             return this;
         }
 
-        public Builder manualScaling(@Nullable Input<ManualScalingArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Output<ManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
 
         public Builder manualScaling(@Nullable ManualScalingArgs manualScaling) {
-            this.manualScaling = Input.ofNullable(manualScaling);
+            this.manualScaling = Output.ofNullable(manualScaling);
             return this;
         }
 
-        public Builder network(@Nullable Input<NetworkArgs> network) {
+        public Builder network(@Nullable Output<NetworkArgs> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable NetworkArgs network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder nobuildFilesRegex(@Nullable Input<String> nobuildFilesRegex) {
+        public Builder nobuildFilesRegex(@Nullable Output<String> nobuildFilesRegex) {
             this.nobuildFilesRegex = nobuildFilesRegex;
             return this;
         }
 
         public Builder nobuildFilesRegex(@Nullable String nobuildFilesRegex) {
-            this.nobuildFilesRegex = Input.ofNullable(nobuildFilesRegex);
+            this.nobuildFilesRegex = Output.ofNullable(nobuildFilesRegex);
             return this;
         }
 
-        public Builder readinessCheck(@Nullable Input<ReadinessCheckArgs> readinessCheck) {
+        public Builder readinessCheck(@Nullable Output<ReadinessCheckArgs> readinessCheck) {
             this.readinessCheck = readinessCheck;
             return this;
         }
 
         public Builder readinessCheck(@Nullable ReadinessCheckArgs readinessCheck) {
-            this.readinessCheck = Input.ofNullable(readinessCheck);
+            this.readinessCheck = Output.ofNullable(readinessCheck);
             return this;
         }
 
-        public Builder resources(@Nullable Input<ResourcesArgs> resources) {
+        public Builder resources(@Nullable Output<ResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable ResourcesArgs resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder runtime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Output<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
         public Builder runtime(@Nullable String runtime) {
-            this.runtime = Input.ofNullable(runtime);
+            this.runtime = Output.ofNullable(runtime);
             return this;
         }
 
-        public Builder runtimeApiVersion(@Nullable Input<String> runtimeApiVersion) {
+        public Builder runtimeApiVersion(@Nullable Output<String> runtimeApiVersion) {
             this.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
 
         public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
-            this.runtimeApiVersion = Input.ofNullable(runtimeApiVersion);
+            this.runtimeApiVersion = Output.ofNullable(runtimeApiVersion);
             return this;
         }
 
-        public Builder runtimeChannel(@Nullable Input<String> runtimeChannel) {
+        public Builder runtimeChannel(@Nullable Output<String> runtimeChannel) {
             this.runtimeChannel = runtimeChannel;
             return this;
         }
 
         public Builder runtimeChannel(@Nullable String runtimeChannel) {
-            this.runtimeChannel = Input.ofNullable(runtimeChannel);
+            this.runtimeChannel = Output.ofNullable(runtimeChannel);
             return this;
         }
 
-        public Builder runtimeMainExecutablePath(@Nullable Input<String> runtimeMainExecutablePath) {
+        public Builder runtimeMainExecutablePath(@Nullable Output<String> runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = runtimeMainExecutablePath;
             return this;
         }
 
         public Builder runtimeMainExecutablePath(@Nullable String runtimeMainExecutablePath) {
-            this.runtimeMainExecutablePath = Input.ofNullable(runtimeMainExecutablePath);
+            this.runtimeMainExecutablePath = Output.ofNullable(runtimeMainExecutablePath);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder servingStatus(@Nullable Input<VersionServingStatus> servingStatus) {
+        public Builder servingStatus(@Nullable Output<VersionServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
         public Builder servingStatus(@Nullable VersionServingStatus servingStatus) {
-            this.servingStatus = Input.ofNullable(servingStatus);
+            this.servingStatus = Output.ofNullable(servingStatus);
             return this;
         }
 
-        public Builder threadsafe(@Nullable Input<Boolean> threadsafe) {
+        public Builder threadsafe(@Nullable Output<Boolean> threadsafe) {
             this.threadsafe = threadsafe;
             return this;
         }
 
         public Builder threadsafe(@Nullable Boolean threadsafe) {
-            this.threadsafe = Input.ofNullable(threadsafe);
+            this.threadsafe = Output.ofNullable(threadsafe);
             return this;
         }
 
-        public Builder vm(@Nullable Input<Boolean> vm) {
+        public Builder vm(@Nullable Output<Boolean> vm) {
             this.vm = vm;
             return this;
         }
 
         public Builder vm(@Nullable Boolean vm) {
-            this.vm = Input.ofNullable(vm);
+            this.vm = Output.ofNullable(vm);
             return this;
         }
 
-        public Builder vpcAccessConnector(@Nullable Input<VpcAccessConnectorArgs> vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable Output<VpcAccessConnectorArgs> vpcAccessConnector) {
             this.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
 
         public Builder vpcAccessConnector(@Nullable VpcAccessConnectorArgs vpcAccessConnector) {
-            this.vpcAccessConnector = Input.ofNullable(vpcAccessConnector);
+            this.vpcAccessConnector = Output.ofNullable(vpcAccessConnector);
             return this;
         }
         public VersionArgs build() {

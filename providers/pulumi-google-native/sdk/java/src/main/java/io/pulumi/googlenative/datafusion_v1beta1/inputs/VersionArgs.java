@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.VersionType;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableFeatures")
-      private final @Nullable Input<List<String>> availableFeatures;
+      private final @Nullable Output<List<String>> availableFeatures;
 
-    public Input<List<String>> getAvailableFeatures() {
-        return this.availableFeatures == null ? Input.empty() : this.availableFeatures;
+    public Output<List<String>> getAvailableFeatures() {
+        return this.availableFeatures == null ? Output.empty() : this.availableFeatures;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultVersion")
-      private final @Nullable Input<Boolean> defaultVersion;
+      private final @Nullable Output<Boolean> defaultVersion;
 
-    public Input<Boolean> getDefaultVersion() {
-        return this.defaultVersion == null ? Input.empty() : this.defaultVersion;
+    public Output<Boolean> getDefaultVersion() {
+        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<VersionType> type;
+      private final @Nullable Output<VersionType> type;
 
-    public Input<VersionType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<VersionType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionNumber")
-      private final @Nullable Input<String> versionNumber;
+      private final @Nullable Output<String> versionNumber;
 
-    public Input<String> getVersionNumber() {
-        return this.versionNumber == null ? Input.empty() : this.versionNumber;
+    public Output<String> getVersionNumber() {
+        return this.versionNumber == null ? Output.empty() : this.versionNumber;
     }
 
     public VersionArgs(
-        @Nullable Input<List<String>> availableFeatures,
-        @Nullable Input<Boolean> defaultVersion,
-        @Nullable Input<VersionType> type,
-        @Nullable Input<String> versionNumber) {
+        @Nullable Output<List<String>> availableFeatures,
+        @Nullable Output<Boolean> defaultVersion,
+        @Nullable Output<VersionType> type,
+        @Nullable Output<String> versionNumber) {
         this.availableFeatures = availableFeatures;
         this.defaultVersion = defaultVersion;
         this.type = type;
@@ -77,10 +77,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.availableFeatures = Input.empty();
-        this.defaultVersion = Input.empty();
-        this.type = Input.empty();
-        this.versionNumber = Input.empty();
+        this.availableFeatures = Output.empty();
+        this.defaultVersion = Output.empty();
+        this.type = Output.empty();
+        this.versionNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availableFeatures;
-        private @Nullable Input<Boolean> defaultVersion;
-        private @Nullable Input<VersionType> type;
-        private @Nullable Input<String> versionNumber;
+        private @Nullable Output<List<String>> availableFeatures;
+        private @Nullable Output<Boolean> defaultVersion;
+        private @Nullable Output<VersionType> type;
+        private @Nullable Output<String> versionNumber;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder availableFeatures(@Nullable Input<List<String>> availableFeatures) {
+        public Builder availableFeatures(@Nullable Output<List<String>> availableFeatures) {
             this.availableFeatures = availableFeatures;
             return this;
         }
 
         public Builder availableFeatures(@Nullable List<String> availableFeatures) {
-            this.availableFeatures = Input.ofNullable(availableFeatures);
+            this.availableFeatures = Output.ofNullable(availableFeatures);
             return this;
         }
 
-        public Builder defaultVersion(@Nullable Input<Boolean> defaultVersion) {
+        public Builder defaultVersion(@Nullable Output<Boolean> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
         public Builder defaultVersion(@Nullable Boolean defaultVersion) {
-            this.defaultVersion = Input.ofNullable(defaultVersion);
+            this.defaultVersion = Output.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder type(@Nullable Input<VersionType> type) {
+        public Builder type(@Nullable Output<VersionType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable VersionType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder versionNumber(@Nullable Input<String> versionNumber) {
+        public Builder versionNumber(@Nullable Output<String> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
 
         public Builder versionNumber(@Nullable String versionNumber) {
-            this.versionNumber = Input.ofNullable(versionNumber);
+            this.versionNumber = Output.ofNullable(versionNumber);
             return this;
         }
         public VersionArgs build() {

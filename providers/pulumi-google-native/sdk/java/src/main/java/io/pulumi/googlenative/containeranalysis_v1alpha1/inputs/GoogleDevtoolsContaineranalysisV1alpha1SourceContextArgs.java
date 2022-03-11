@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs;
@@ -27,10 +27,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * 
      */
     @InputImport(name="cloudRepo")
-      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
+      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
 
-    public Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> getCloudRepo() {
-        return this.cloudRepo == null ? Input.empty() : this.cloudRepo;
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> getCloudRepo() {
+        return this.cloudRepo == null ? Output.empty() : this.cloudRepo;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * 
      */
     @InputImport(name="gerrit")
-      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
+      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
 
-    public Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> getGerrit() {
-        return this.gerrit == null ? Input.empty() : this.gerrit;
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> getGerrit() {
+        return this.gerrit == null ? Output.empty() : this.gerrit;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * 
      */
     @InputImport(name="git")
-      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
+      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
 
-    public Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> getGit() {
-        return this.git == null ? Input.empty() : this.git;
+    public Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> getGit() {
+        return this.git == null ? Output.empty() : this.git;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs(
-        @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo,
-        @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit,
-        @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git,
-        @Nullable Input<Map<String,String>> labels) {
+        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo,
+        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit,
+        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git,
+        @Nullable Output<Map<String,String>> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;
@@ -78,10 +78,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs() {
-        this.cloudRepo = Input.empty();
-        this.gerrit = Input.empty();
-        this.git = Input.empty();
-        this.labels = Input.empty();
+        this.cloudRepo = Output.empty();
+        this.gerrit = Output.empty();
+        this.git = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
-        private @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
-        private @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
-        private @Nullable Input<Map<String,String>> labels;
+        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
+        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
+        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     	      this.labels = defaults.labels;
         }
 
-        public Builder cloudRepo(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo) {
+        public Builder cloudRepo(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo) {
             this.cloudRepo = cloudRepo;
             return this;
         }
 
         public Builder cloudRepo(@Nullable GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs cloudRepo) {
-            this.cloudRepo = Input.ofNullable(cloudRepo);
+            this.cloudRepo = Output.ofNullable(cloudRepo);
             return this;
         }
 
-        public Builder gerrit(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
+        public Builder gerrit(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
 
         public Builder gerrit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs gerrit) {
-            this.gerrit = Input.ofNullable(gerrit);
+            this.gerrit = Output.ofNullable(gerrit);
             return this;
         }
 
-        public Builder git(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
+        public Builder git(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
 
         public Builder git(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs git) {
-            this.git = Input.ofNullable(git);
+            this.git = Output.ofNullable(git);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs build() {

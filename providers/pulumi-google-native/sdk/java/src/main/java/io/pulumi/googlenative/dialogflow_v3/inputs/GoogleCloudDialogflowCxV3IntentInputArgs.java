@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="intent", required=true)
-      private final Input<String> intent;
+      private final Output<String> intent;
 
-    public Input<String> getIntent() {
+    public Output<String> getIntent() {
         return this.intent;
     }
 
-    public GoogleCloudDialogflowCxV3IntentInputArgs(Input<String> intent) {
+    public GoogleCloudDialogflowCxV3IntentInputArgs(Output<String> intent) {
         this.intent = Objects.requireNonNull(intent, "expected parameter 'intent' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3IntentInputArgs() {
-        this.intent = Input.empty();
+        this.intent = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> intent;
+        private Output<String> intent;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
     	      this.intent = defaults.intent;
         }
 
-        public Builder intent(Input<String> intent) {
+        public Builder intent(Output<String> intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
 
         public Builder intent(String intent) {
-            this.intent = Input.of(Objects.requireNonNull(intent));
+            this.intent = Output.of(Objects.requireNonNull(intent));
             return this;
         }
         public GoogleCloudDialogflowCxV3IntentInputArgs build() {

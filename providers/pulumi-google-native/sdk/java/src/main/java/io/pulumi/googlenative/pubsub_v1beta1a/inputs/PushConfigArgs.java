@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushEndpoint")
-      private final @Nullable Input<String> pushEndpoint;
+      private final @Nullable Output<String> pushEndpoint;
 
-    public Input<String> getPushEndpoint() {
-        return this.pushEndpoint == null ? Input.empty() : this.pushEndpoint;
+    public Output<String> getPushEndpoint() {
+        return this.pushEndpoint == null ? Output.empty() : this.pushEndpoint;
     }
 
-    public PushConfigArgs(@Nullable Input<String> pushEndpoint) {
+    public PushConfigArgs(@Nullable Output<String> pushEndpoint) {
         this.pushEndpoint = pushEndpoint;
     }
 
     private PushConfigArgs() {
-        this.pushEndpoint = Input.empty();
+        this.pushEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pushEndpoint;
+        private @Nullable Output<String> pushEndpoint;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PushConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder pushEndpoint(@Nullable Input<String> pushEndpoint) {
+        public Builder pushEndpoint(@Nullable Output<String> pushEndpoint) {
             this.pushEndpoint = pushEndpoint;
             return this;
         }
 
         public Builder pushEndpoint(@Nullable String pushEndpoint) {
-            this.pushEndpoint = Input.ofNullable(pushEndpoint);
+            this.pushEndpoint = Output.ofNullable(pushEndpoint);
             return this;
         }
         public PushConfigArgs build() {

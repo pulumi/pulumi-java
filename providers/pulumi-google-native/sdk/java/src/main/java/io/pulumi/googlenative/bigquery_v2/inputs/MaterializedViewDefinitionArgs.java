@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableRefresh")
-      private final @Nullable Input<Boolean> enableRefresh;
+      private final @Nullable Output<Boolean> enableRefresh;
 
-    public Input<Boolean> getEnableRefresh() {
-        return this.enableRefresh == null ? Input.empty() : this.enableRefresh;
+    public Output<Boolean> getEnableRefresh() {
+        return this.enableRefresh == null ? Output.empty() : this.enableRefresh;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="refreshIntervalMs")
-      private final @Nullable Input<String> refreshIntervalMs;
+      private final @Nullable Output<String> refreshIntervalMs;
 
-    public Input<String> getRefreshIntervalMs() {
-        return this.refreshIntervalMs == null ? Input.empty() : this.refreshIntervalMs;
+    public Output<String> getRefreshIntervalMs() {
+        return this.refreshIntervalMs == null ? Output.empty() : this.refreshIntervalMs;
     }
 
     public MaterializedViewDefinitionArgs(
-        @Nullable Input<Boolean> enableRefresh,
-        @Nullable Input<String> query,
-        @Nullable Input<String> refreshIntervalMs) {
+        @Nullable Output<Boolean> enableRefresh,
+        @Nullable Output<String> query,
+        @Nullable Output<String> refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;
     }
 
     private MaterializedViewDefinitionArgs() {
-        this.enableRefresh = Input.empty();
-        this.query = Input.empty();
-        this.refreshIntervalMs = Input.empty();
+        this.enableRefresh = Output.empty();
+        this.query = Output.empty();
+        this.refreshIntervalMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableRefresh;
-        private @Nullable Input<String> query;
-        private @Nullable Input<String> refreshIntervalMs;
+        private @Nullable Output<Boolean> enableRefresh;
+        private @Nullable Output<String> query;
+        private @Nullable Output<String> refreshIntervalMs;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
 
-        public Builder enableRefresh(@Nullable Input<Boolean> enableRefresh) {
+        public Builder enableRefresh(@Nullable Output<Boolean> enableRefresh) {
             this.enableRefresh = enableRefresh;
             return this;
         }
 
         public Builder enableRefresh(@Nullable Boolean enableRefresh) {
-            this.enableRefresh = Input.ofNullable(enableRefresh);
+            this.enableRefresh = Output.ofNullable(enableRefresh);
             return this;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder refreshIntervalMs(@Nullable Input<String> refreshIntervalMs) {
+        public Builder refreshIntervalMs(@Nullable Output<String> refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
 
         public Builder refreshIntervalMs(@Nullable String refreshIntervalMs) {
-            this.refreshIntervalMs = Input.ofNullable(refreshIntervalMs);
+            this.refreshIntervalMs = Output.ofNullable(refreshIntervalMs);
             return this;
         }
         public MaterializedViewDefinitionArgs build() {

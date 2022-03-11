@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tableId")
-      private final @Nullable Input<String> tableId;
+      private final @Nullable Output<String> tableId;
 
-    public Input<String> getTableId() {
-        return this.tableId == null ? Input.empty() : this.tableId;
+    public Output<String> getTableId() {
+        return this.tableId == null ? Output.empty() : this.tableId;
     }
 
     public BigTableIODetailsArgs(
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> tableId) {
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> tableId) {
         this.instanceId = instanceId;
         this.project = project;
         this.tableId = tableId;
     }
 
     private BigTableIODetailsArgs() {
-        this.instanceId = Input.empty();
-        this.project = Input.empty();
-        this.tableId = Input.empty();
+        this.instanceId = Output.empty();
+        this.project = Output.empty();
+        this.tableId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> tableId;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> tableId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder tableId(@Nullable Input<String> tableId) {
+        public Builder tableId(@Nullable Output<String> tableId) {
             this.tableId = tableId;
             return this;
         }
 
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Input.ofNullable(tableId);
+            this.tableId = Output.ofNullable(tableId);
             return this;
         }
         public BigTableIODetailsArgs build() {

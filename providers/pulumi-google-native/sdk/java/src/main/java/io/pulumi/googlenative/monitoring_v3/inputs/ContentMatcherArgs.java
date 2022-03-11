@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.ContentMatcherMatcher;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matcher")
-      private final @Nullable Input<ContentMatcherMatcher> matcher;
+      private final @Nullable Output<ContentMatcherMatcher> matcher;
 
-    public Input<ContentMatcherMatcher> getMatcher() {
-        return this.matcher == null ? Input.empty() : this.matcher;
+    public Output<ContentMatcherMatcher> getMatcher() {
+        return this.matcher == null ? Output.empty() : this.matcher;
     }
 
     public ContentMatcherArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<ContentMatcherMatcher> matcher) {
+        @Nullable Output<String> content,
+        @Nullable Output<ContentMatcherMatcher> matcher) {
         this.content = content;
         this.matcher = matcher;
     }
 
     private ContentMatcherArgs() {
-        this.content = Input.empty();
-        this.matcher = Input.empty();
+        this.content = Output.empty();
+        this.matcher = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<ContentMatcherMatcher> matcher;
+        private @Nullable Output<String> content;
+        private @Nullable Output<ContentMatcherMatcher> matcher;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matcher = defaults.matcher;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder matcher(@Nullable Input<ContentMatcherMatcher> matcher) {
+        public Builder matcher(@Nullable Output<ContentMatcherMatcher> matcher) {
             this.matcher = matcher;
             return this;
         }
 
         public Builder matcher(@Nullable ContentMatcherMatcher matcher) {
-            this.matcher = Input.ofNullable(matcher);
+            this.matcher = Output.ofNullable(matcher);
             return this;
         }
         public ContentMatcherArgs build() {

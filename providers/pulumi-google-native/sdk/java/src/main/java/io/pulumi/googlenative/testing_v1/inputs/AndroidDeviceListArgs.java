@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidDevices", required=true)
-      private final Input<List<AndroidDeviceArgs>> androidDevices;
+      private final Output<List<AndroidDeviceArgs>> androidDevices;
 
-    public Input<List<AndroidDeviceArgs>> getAndroidDevices() {
+    public Output<List<AndroidDeviceArgs>> getAndroidDevices() {
         return this.androidDevices;
     }
 
-    public AndroidDeviceListArgs(Input<List<AndroidDeviceArgs>> androidDevices) {
+    public AndroidDeviceListArgs(Output<List<AndroidDeviceArgs>> androidDevices) {
         this.androidDevices = Objects.requireNonNull(androidDevices, "expected parameter 'androidDevices' to be non-null");
     }
 
     private AndroidDeviceListArgs() {
-        this.androidDevices = Input.empty();
+        this.androidDevices = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<AndroidDeviceArgs>> androidDevices;
+        private Output<List<AndroidDeviceArgs>> androidDevices;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
     	      this.androidDevices = defaults.androidDevices;
         }
 
-        public Builder androidDevices(Input<List<AndroidDeviceArgs>> androidDevices) {
+        public Builder androidDevices(Output<List<AndroidDeviceArgs>> androidDevices) {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }
 
         public Builder androidDevices(List<AndroidDeviceArgs> androidDevices) {
-            this.androidDevices = Input.of(Objects.requireNonNull(androidDevices));
+            this.androidDevices = Output.of(Objects.requireNonNull(androidDevices));
             return this;
         }
         public AndroidDeviceListArgs build() {

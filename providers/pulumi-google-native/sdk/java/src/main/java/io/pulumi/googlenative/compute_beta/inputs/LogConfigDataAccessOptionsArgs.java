@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.LogConfigDataAccessOptionsLogMode;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logMode")
-      private final @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
+      private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
-    public Input<LogConfigDataAccessOptionsLogMode> getLogMode() {
-        return this.logMode == null ? Input.empty() : this.logMode;
+    public Output<LogConfigDataAccessOptionsLogMode> getLogMode() {
+        return this.logMode == null ? Output.empty() : this.logMode;
     }
 
-    public LogConfigDataAccessOptionsArgs(@Nullable Input<LogConfigDataAccessOptionsLogMode> logMode) {
+    public LogConfigDataAccessOptionsArgs(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
         this.logMode = logMode;
     }
 
     private LogConfigDataAccessOptionsArgs() {
-        this.logMode = Input.empty();
+        this.logMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<LogConfigDataAccessOptionsLogMode> logMode;
+        private @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
     	      this.logMode = defaults.logMode;
         }
 
-        public Builder logMode(@Nullable Input<LogConfigDataAccessOptionsLogMode> logMode) {
+        public Builder logMode(@Nullable Output<LogConfigDataAccessOptionsLogMode> logMode) {
             this.logMode = logMode;
             return this;
         }
 
         public Builder logMode(@Nullable LogConfigDataAccessOptionsLogMode logMode) {
-            this.logMode = Input.ofNullable(logMode);
+            this.logMode = Output.ofNullable(logMode);
             return this;
         }
         public LogConfigDataAccessOptionsArgs build() {

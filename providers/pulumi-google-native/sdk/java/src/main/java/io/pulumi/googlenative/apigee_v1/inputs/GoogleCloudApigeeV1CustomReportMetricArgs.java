@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="function")
-      private final @Nullable Input<String> function;
+      private final @Nullable Output<String> function;
 
-    public Input<String> getFunction() {
-        return this.function == null ? Input.empty() : this.function;
+    public Output<String> getFunction() {
+        return this.function == null ? Output.empty() : this.function;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public GoogleCloudApigeeV1CustomReportMetricArgs(
-        @Nullable Input<String> function,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> function,
+        @Nullable Output<String> name) {
         this.function = function;
         this.name = name;
     }
 
     private GoogleCloudApigeeV1CustomReportMetricArgs() {
-        this.function = Input.empty();
-        this.name = Input.empty();
+        this.function = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> function;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> function;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder function(@Nullable Input<String> function) {
+        public Builder function(@Nullable Output<String> function) {
             this.function = function;
             return this;
         }
 
         public Builder function(@Nullable String function) {
-            this.function = Input.ofNullable(function);
+            this.function = Output.ofNullable(function);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public GoogleCloudApigeeV1CustomReportMetricArgs build() {

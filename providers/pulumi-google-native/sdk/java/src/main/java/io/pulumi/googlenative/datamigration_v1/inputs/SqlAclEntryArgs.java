@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-      private final @Nullable Input<String> expireTime;
+      private final @Nullable Output<String> expireTime;
 
-    public Input<String> getExpireTime() {
-        return this.expireTime == null ? Input.empty() : this.expireTime;
+    public Output<String> getExpireTime() {
+        return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public SqlAclEntryArgs(
-        @Nullable Input<String> expireTime,
-        @Nullable Input<String> label,
-        @Nullable Input<String> ttl,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> expireTime,
+        @Nullable Output<String> label,
+        @Nullable Output<String> ttl,
+        @Nullable Output<String> value) {
         this.expireTime = expireTime;
         this.label = label;
         this.ttl = ttl;
@@ -74,10 +74,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlAclEntryArgs() {
-        this.expireTime = Input.empty();
-        this.label = Input.empty();
-        this.ttl = Input.empty();
-        this.value = Input.empty();
+        this.expireTime = Output.empty();
+        this.label = Output.empty();
+        this.ttl = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expireTime;
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> ttl;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> expireTime;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> ttl;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder expireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Output<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Input.ofNullable(expireTime);
+            this.expireTime = Output.ofNullable(expireTime);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public SqlAclEntryArgs build() {

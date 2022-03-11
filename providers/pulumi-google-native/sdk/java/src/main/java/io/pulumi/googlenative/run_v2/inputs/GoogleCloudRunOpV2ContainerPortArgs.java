@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerPort")
-      private final @Nullable Input<Integer> containerPort;
+      private final @Nullable Output<Integer> containerPort;
 
-    public Input<Integer> getContainerPort() {
-        return this.containerPort == null ? Input.empty() : this.containerPort;
+    public Output<Integer> getContainerPort() {
+        return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public GoogleCloudRunOpV2ContainerPortArgs(
-        @Nullable Input<Integer> containerPort,
-        @Nullable Input<String> name) {
+        @Nullable Output<Integer> containerPort,
+        @Nullable Output<String> name) {
         this.containerPort = containerPort;
         this.name = name;
     }
 
     private GoogleCloudRunOpV2ContainerPortArgs() {
-        this.containerPort = Input.empty();
-        this.name = Input.empty();
+        this.containerPort = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerPort;
-        private @Nullable Input<String> name;
+        private @Nullable Output<Integer> containerPort;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudRunOpV2ContainerPortArgs extends io.pulumi.resourc
     	      this.name = defaults.name;
         }
 
-        public Builder containerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Output<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Input.ofNullable(containerPort);
+            this.containerPort = Output.ofNullable(containerPort);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public GoogleCloudRunOpV2ContainerPortArgs build() {

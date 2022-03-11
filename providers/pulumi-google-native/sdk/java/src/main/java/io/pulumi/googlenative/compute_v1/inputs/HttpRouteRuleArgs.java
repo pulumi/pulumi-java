@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.HttpRedirectActionArgs;
@@ -29,10 +29,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
-    public Input<HttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<HttpHeaderActionArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchRules")
-      private final @Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules;
+      private final @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
 
-    public Input<List<HttpRouteRuleMatchArgs>> getMatchRules() {
-        return this.matchRules == null ? Input.empty() : this.matchRules;
+    public Output<List<HttpRouteRuleMatchArgs>> getMatchRules() {
+        return this.matchRules == null ? Output.empty() : this.matchRules;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeAction")
-      private final @Nullable Input<HttpRouteActionArgs> routeAction;
+      private final @Nullable Output<HttpRouteActionArgs> routeAction;
 
-    public Input<HttpRouteActionArgs> getRouteAction() {
-        return this.routeAction == null ? Input.empty() : this.routeAction;
+    public Output<HttpRouteActionArgs> getRouteAction() {
+        return this.routeAction == null ? Output.empty() : this.routeAction;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlRedirect")
-      private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+      private final @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
-    public Input<HttpRedirectActionArgs> getUrlRedirect() {
-        return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
+    public Output<HttpRedirectActionArgs> getUrlRedirect() {
+        return this.urlRedirect == null ? Output.empty() : this.urlRedirect;
     }
 
     public HttpRouteRuleArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<HttpHeaderActionArgs> headerAction,
-        @Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<HttpRouteActionArgs> routeAction,
-        @Nullable Input<String> service,
-        @Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        @Nullable Output<String> description,
+        @Nullable Output<HttpHeaderActionArgs> headerAction,
+        @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<HttpRouteActionArgs> routeAction,
+        @Nullable Output<String> service,
+        @Nullable Output<HttpRedirectActionArgs> urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;
@@ -119,13 +119,13 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpRouteRuleArgs() {
-        this.description = Input.empty();
-        this.headerAction = Input.empty();
-        this.matchRules = Input.empty();
-        this.priority = Input.empty();
-        this.routeAction = Input.empty();
-        this.service = Input.empty();
-        this.urlRedirect = Input.empty();
+        this.description = Output.empty();
+        this.headerAction = Output.empty();
+        this.matchRules = Output.empty();
+        this.priority = Output.empty();
+        this.routeAction = Output.empty();
+        this.service = Output.empty();
+        this.urlRedirect = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<HttpHeaderActionArgs> headerAction;
-        private @Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<HttpRouteActionArgs> routeAction;
-        private @Nullable Input<String> service;
-        private @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+        private @Nullable Output<String> description;
+        private @Nullable Output<HttpHeaderActionArgs> headerAction;
+        private @Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<HttpRouteActionArgs> routeAction;
+        private @Nullable Output<String> service;
+        private @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder headerAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder matchRules(@Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules) {
+        public Builder matchRules(@Nullable Output<List<HttpRouteRuleMatchArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
         public Builder matchRules(@Nullable List<HttpRouteRuleMatchArgs> matchRules) {
-            this.matchRules = Input.ofNullable(matchRules);
+            this.matchRules = Output.ofNullable(matchRules);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder routeAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
         public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
-            this.routeAction = Input.ofNullable(routeAction);
+            this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder urlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
         public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
-            this.urlRedirect = Input.ofNullable(urlRedirect);
+            this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
         }
         public HttpRouteRuleArgs build() {

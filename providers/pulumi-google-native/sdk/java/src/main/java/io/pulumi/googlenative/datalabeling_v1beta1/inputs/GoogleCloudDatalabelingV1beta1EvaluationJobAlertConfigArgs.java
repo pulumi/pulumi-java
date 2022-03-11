@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @InputImport(name="email", required=true)
-      private final Input<String> email;
+      private final Output<String> email;
 
-    public Input<String> getEmail() {
+    public Output<String> getEmail() {
         return this.email;
     }
 
@@ -34,22 +34,22 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
      * 
      */
     @InputImport(name="minAcceptableMeanAveragePrecision", required=true)
-      private final Input<Double> minAcceptableMeanAveragePrecision;
+      private final Output<Double> minAcceptableMeanAveragePrecision;
 
-    public Input<Double> getMinAcceptableMeanAveragePrecision() {
+    public Output<Double> getMinAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
 
     public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs(
-        Input<String> email,
-        Input<Double> minAcceptableMeanAveragePrecision) {
+        Output<String> email,
+        Output<Double> minAcceptableMeanAveragePrecision) {
         this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
         this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision, "expected parameter 'minAcceptableMeanAveragePrecision' to be non-null");
     }
 
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs() {
-        this.email = Input.empty();
-        this.minAcceptableMeanAveragePrecision = Input.empty();
+        this.email = Output.empty();
+        this.minAcceptableMeanAveragePrecision = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     }
 
     public static final class Builder {
-        private Input<String> email;
-        private Input<Double> minAcceptableMeanAveragePrecision;
+        private Output<String> email;
+        private Output<Double> minAcceptableMeanAveragePrecision;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     	      this.minAcceptableMeanAveragePrecision = defaults.minAcceptableMeanAveragePrecision;
         }
 
-        public Builder email(Input<String> email) {
+        public Builder email(Output<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
         public Builder email(String email) {
-            this.email = Input.of(Objects.requireNonNull(email));
+            this.email = Output.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder minAcceptableMeanAveragePrecision(Input<Double> minAcceptableMeanAveragePrecision) {
+        public Builder minAcceptableMeanAveragePrecision(Output<Double> minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }
 
         public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
-            this.minAcceptableMeanAveragePrecision = Input.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
+            this.minAcceptableMeanAveragePrecision = Output.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
             return this;
         }
         public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs build() {

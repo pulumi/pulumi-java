@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends
      * 
      */
     @InputImport(name="audioUri", required=true)
-      private final Input<String> audioUri;
+      private final Output<String> audioUri;
 
-    public Input<String> getAudioUri() {
+    public Output<String> getAudioUri() {
         return this.audioUri;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(Input<String> audioUri) {
+    public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(Output<String> audioUri) {
         this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs() {
-        this.audioUri = Input.empty();
+        this.audioUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends
     }
 
     public static final class Builder {
-        private Input<String> audioUri;
+        private Output<String> audioUri;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends
     	      this.audioUri = defaults.audioUri;
         }
 
-        public Builder audioUri(Input<String> audioUri) {
+        public Builder audioUri(Output<String> audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
 
         public Builder audioUri(String audioUri) {
-            this.audioUri = Input.of(Objects.requireNonNull(audioUri));
+            this.audioUri = Output.of(Objects.requireNonNull(audioUri));
             return this;
         }
         public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceFileResourceState;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
@@ -25,10 +25,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OSPolicyResourceFileArgs> file;
+      private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Input<OSPolicyResourceFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OSPolicyResourceFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -58,10 +58,10 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<String> permissions;
+      private final @Nullable Output<String> permissions;
 
-    public Input<String> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<String> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<OSPolicyResourceFileResourceState> state;
+      private final Output<OSPolicyResourceFileResourceState> state;
 
-    public Input<OSPolicyResourceFileResourceState> getState() {
+    public Output<OSPolicyResourceFileResourceState> getState() {
         return this.state;
     }
 
     public OSPolicyResourceFileResourceArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<OSPolicyResourceFileArgs> file,
-        Input<String> path,
-        @Nullable Input<String> permissions,
-        Input<OSPolicyResourceFileResourceState> state) {
+        @Nullable Output<String> content,
+        @Nullable Output<OSPolicyResourceFileArgs> file,
+        Output<String> path,
+        @Nullable Output<String> permissions,
+        Output<OSPolicyResourceFileResourceState> state) {
         this.content = content;
         this.file = file;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
@@ -89,11 +89,11 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     }
 
     private OSPolicyResourceFileResourceArgs() {
-        this.content = Input.empty();
-        this.file = Input.empty();
-        this.path = Input.empty();
-        this.permissions = Input.empty();
-        this.state = Input.empty();
+        this.content = Output.empty();
+        this.file = Output.empty();
+        this.path = Output.empty();
+        this.permissions = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<OSPolicyResourceFileArgs> file;
-        private Input<String> path;
-        private @Nullable Input<String> permissions;
-        private Input<OSPolicyResourceFileResourceState> state;
+        private @Nullable Output<String> content;
+        private @Nullable Output<OSPolicyResourceFileArgs> file;
+        private Output<String> path;
+        private @Nullable Output<String> permissions;
+        private Output<OSPolicyResourceFileResourceState> state;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     	      this.state = defaults.state;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder file(@Nullable Input<OSPolicyResourceFileArgs> file) {
+        public Builder file(@Nullable Output<OSPolicyResourceFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder permissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder state(Input<OSPolicyResourceFileResourceState> state) {
+        public Builder state(Output<OSPolicyResourceFileResourceState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(OSPolicyResourceFileResourceState state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public OSPolicyResourceFileResourceArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -337,14 +336,14 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Occurrence(String name, OccurrenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:containeranalysis/v1beta1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:containeranalysis/v1beta1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Occurrence(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Occurrence(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:containeranalysis/v1beta1:Occurrence", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -359,7 +358,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Occurrence get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Occurrence get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Occurrence(name, id, options);
     }
 }

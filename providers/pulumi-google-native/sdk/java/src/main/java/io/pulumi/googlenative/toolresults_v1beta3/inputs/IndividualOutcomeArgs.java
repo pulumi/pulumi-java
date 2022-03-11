@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.IndividualOutcomeOutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
@@ -26,17 +26,17 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multistepNumber")
-      private final @Nullable Input<Integer> multistepNumber;
+      private final @Nullable Output<Integer> multistepNumber;
 
-    public Input<Integer> getMultistepNumber() {
-        return this.multistepNumber == null ? Input.empty() : this.multistepNumber;
+    public Output<Integer> getMultistepNumber() {
+        return this.multistepNumber == null ? Output.empty() : this.multistepNumber;
     }
 
     @InputImport(name="outcomeSummary")
-      private final @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary;
+      private final @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary;
 
-    public Input<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
-        return this.outcomeSummary == null ? Input.empty() : this.outcomeSummary;
+    public Output<IndividualOutcomeOutcomeSummary> getOutcomeSummary() {
+        return this.outcomeSummary == null ? Output.empty() : this.outcomeSummary;
     }
 
     /**
@@ -44,24 +44,24 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="runDuration")
-      private final @Nullable Input<DurationArgs> runDuration;
+      private final @Nullable Output<DurationArgs> runDuration;
 
-    public Input<DurationArgs> getRunDuration() {
-        return this.runDuration == null ? Input.empty() : this.runDuration;
+    public Output<DurationArgs> getRunDuration() {
+        return this.runDuration == null ? Output.empty() : this.runDuration;
     }
 
     @InputImport(name="stepId")
-      private final @Nullable Input<String> stepId;
+      private final @Nullable Output<String> stepId;
 
-    public Input<String> getStepId() {
-        return this.stepId == null ? Input.empty() : this.stepId;
+    public Output<String> getStepId() {
+        return this.stepId == null ? Output.empty() : this.stepId;
     }
 
     public IndividualOutcomeArgs(
-        @Nullable Input<Integer> multistepNumber,
-        @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary,
-        @Nullable Input<DurationArgs> runDuration,
-        @Nullable Input<String> stepId) {
+        @Nullable Output<Integer> multistepNumber,
+        @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary,
+        @Nullable Output<DurationArgs> runDuration,
+        @Nullable Output<String> stepId) {
         this.multistepNumber = multistepNumber;
         this.outcomeSummary = outcomeSummary;
         this.runDuration = runDuration;
@@ -69,10 +69,10 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IndividualOutcomeArgs() {
-        this.multistepNumber = Input.empty();
-        this.outcomeSummary = Input.empty();
-        this.runDuration = Input.empty();
-        this.stepId = Input.empty();
+        this.multistepNumber = Output.empty();
+        this.outcomeSummary = Output.empty();
+        this.runDuration = Output.empty();
+        this.stepId = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> multistepNumber;
-        private @Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary;
-        private @Nullable Input<DurationArgs> runDuration;
-        private @Nullable Input<String> stepId;
+        private @Nullable Output<Integer> multistepNumber;
+        private @Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary;
+        private @Nullable Output<DurationArgs> runDuration;
+        private @Nullable Output<String> stepId;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class IndividualOutcomeArgs extends io.pulumi.resources.ResourceArg
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder multistepNumber(@Nullable Input<Integer> multistepNumber) {
+        public Builder multistepNumber(@Nullable Output<Integer> multistepNumber) {
             this.multistepNumber = multistepNumber;
             return this;
         }
 
         public Builder multistepNumber(@Nullable Integer multistepNumber) {
-            this.multistepNumber = Input.ofNullable(multistepNumber);
+            this.multistepNumber = Output.ofNullable(multistepNumber);
             return this;
         }
 
-        public Builder outcomeSummary(@Nullable Input<IndividualOutcomeOutcomeSummary> outcomeSummary) {
+        public Builder outcomeSummary(@Nullable Output<IndividualOutcomeOutcomeSummary> outcomeSummary) {
             this.outcomeSummary = outcomeSummary;
             return this;
         }
 
         public Builder outcomeSummary(@Nullable IndividualOutcomeOutcomeSummary outcomeSummary) {
-            this.outcomeSummary = Input.ofNullable(outcomeSummary);
+            this.outcomeSummary = Output.ofNullable(outcomeSummary);
             return this;
         }
 
-        public Builder runDuration(@Nullable Input<DurationArgs> runDuration) {
+        public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
             this.runDuration = runDuration;
             return this;
         }
 
         public Builder runDuration(@Nullable DurationArgs runDuration) {
-            this.runDuration = Input.ofNullable(runDuration);
+            this.runDuration = Output.ofNullable(runDuration);
             return this;
         }
 
-        public Builder stepId(@Nullable Input<String> stepId) {
+        public Builder stepId(@Nullable Output<String> stepId) {
             this.stepId = stepId;
             return this;
         }
 
         public Builder stepId(@Nullable String stepId) {
-            this.stepId = Input.ofNullable(stepId);
+            this.stepId = Output.ofNullable(stepId);
             return this;
         }
         public IndividualOutcomeArgs build() {

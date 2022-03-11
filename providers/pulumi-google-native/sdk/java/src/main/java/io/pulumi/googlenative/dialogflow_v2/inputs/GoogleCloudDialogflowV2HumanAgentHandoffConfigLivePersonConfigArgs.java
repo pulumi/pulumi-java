@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
      * 
      */
     @InputImport(name="accountNumber", required=true)
-      private final Input<String> accountNumber;
+      private final Output<String> accountNumber;
 
-    public Input<String> getAccountNumber() {
+    public Output<String> getAccountNumber() {
         return this.accountNumber;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs(Input<String> accountNumber) {
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs(Output<String> accountNumber) {
         this.accountNumber = Objects.requireNonNull(accountNumber, "expected parameter 'accountNumber' to be non-null");
     }
 
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs() {
-        this.accountNumber = Input.empty();
+        this.accountNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     }
 
     public static final class Builder {
-        private Input<String> accountNumber;
+        private Output<String> accountNumber;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     	      this.accountNumber = defaults.accountNumber;
         }
 
-        public Builder accountNumber(Input<String> accountNumber) {
+        public Builder accountNumber(Output<String> accountNumber) {
             this.accountNumber = Objects.requireNonNull(accountNumber);
             return this;
         }
 
         public Builder accountNumber(String accountNumber) {
-            this.accountNumber = Input.of(Objects.requireNonNull(accountNumber));
+            this.accountNumber = Output.of(Objects.requireNonNull(accountNumber));
             return this;
         }
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs build() {

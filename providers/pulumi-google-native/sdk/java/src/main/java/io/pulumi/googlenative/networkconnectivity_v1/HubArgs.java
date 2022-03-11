@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RoutingVPCArgs;
 import java.lang.String;
@@ -22,16 +22,16 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="hubId", required=true)
-      private final Input<String> hubId;
+      private final Output<String> hubId;
 
-    public Input<String> getHubId() {
+    public Output<String> getHubId() {
         return this.hubId;
     }
 
@@ -40,10 +40,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -51,24 +51,24 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -76,20 +76,20 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingVpcs")
-      private final @Nullable Input<List<RoutingVPCArgs>> routingVpcs;
+      private final @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
-    public Input<List<RoutingVPCArgs>> getRoutingVpcs() {
-        return this.routingVpcs == null ? Input.empty() : this.routingVpcs;
+    public Output<List<RoutingVPCArgs>> getRoutingVpcs() {
+        return this.routingVpcs == null ? Output.empty() : this.routingVpcs;
     }
 
     public HubArgs(
-        @Nullable Input<String> description,
-        Input<String> hubId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        @Nullable Input<List<RoutingVPCArgs>> routingVpcs) {
+        @Nullable Output<String> description,
+        Output<String> hubId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        @Nullable Output<List<RoutingVPCArgs>> routingVpcs) {
         this.description = description;
         this.hubId = Objects.requireNonNull(hubId, "expected parameter 'hubId' to be non-null");
         this.labels = labels;
@@ -100,13 +100,13 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubArgs() {
-        this.description = Input.empty();
-        this.hubId = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.routingVpcs = Input.empty();
+        this.description = Output.empty();
+        this.hubId = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.routingVpcs = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,13 +118,13 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> hubId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<List<RoutingVPCArgs>> routingVpcs;
+        private @Nullable Output<String> description;
+        private Output<String> hubId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
         public Builder() {
     	      // Empty
@@ -141,73 +141,73 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingVpcs = defaults.routingVpcs;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder hubId(Input<String> hubId) {
+        public Builder hubId(Output<String> hubId) {
             this.hubId = Objects.requireNonNull(hubId);
             return this;
         }
 
         public Builder hubId(String hubId) {
-            this.hubId = Input.of(Objects.requireNonNull(hubId));
+            this.hubId = Output.of(Objects.requireNonNull(hubId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder routingVpcs(@Nullable Input<List<RoutingVPCArgs>> routingVpcs) {
+        public Builder routingVpcs(@Nullable Output<List<RoutingVPCArgs>> routingVpcs) {
             this.routingVpcs = routingVpcs;
             return this;
         }
 
         public Builder routingVpcs(@Nullable List<RoutingVPCArgs> routingVpcs) {
-            this.routingVpcs = Input.ofNullable(routingVpcs);
+            this.routingVpcs = Output.ofNullable(routingVpcs);
             return this;
         }
         public HubArgs build() {

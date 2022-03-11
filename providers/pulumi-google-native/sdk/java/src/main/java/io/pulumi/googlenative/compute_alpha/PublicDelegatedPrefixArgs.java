@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.PublicDelegatedPrefixPublicDelegatedSubPrefixArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isLiveMigration")
-      private final @Nullable Input<Boolean> isLiveMigration;
+      private final @Nullable Output<Boolean> isLiveMigration;
 
-    public Input<Boolean> getIsLiveMigration() {
-        return this.isLiveMigration == null ? Input.empty() : this.isLiveMigration;
+    public Output<Boolean> getIsLiveMigration() {
+        return this.isLiveMigration == null ? Output.empty() : this.isLiveMigration;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parentPrefix")
-      private final @Nullable Input<String> parentPrefix;
+      private final @Nullable Output<String> parentPrefix;
 
-    public Input<String> getParentPrefix() {
-        return this.parentPrefix == null ? Input.empty() : this.parentPrefix;
+    public Output<String> getParentPrefix() {
+        return this.parentPrefix == null ? Output.empty() : this.parentPrefix;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -84,36 +84,36 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="publicDelegatedSubPrefixs")
-      private final @Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
+      private final @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
-    public Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> getPublicDelegatedSubPrefixs() {
-        return this.publicDelegatedSubPrefixs == null ? Input.empty() : this.publicDelegatedSubPrefixs;
+    public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> getPublicDelegatedSubPrefixs() {
+        return this.publicDelegatedSubPrefixs == null ? Output.empty() : this.publicDelegatedSubPrefixs;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public PublicDelegatedPrefixArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<Boolean> isLiveMigration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentPrefix,
-        @Nullable Input<String> project,
-        @Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs,
-        Input<String> region,
-        @Nullable Input<String> requestId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<Boolean> isLiveMigration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentPrefix,
+        @Nullable Output<String> project,
+        @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs,
+        Output<String> region,
+        @Nullable Output<String> requestId) {
         this.description = description;
         this.ipCidrRange = ipCidrRange;
         this.isLiveMigration = isLiveMigration;
@@ -126,15 +126,15 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
     }
 
     private PublicDelegatedPrefixArgs() {
-        this.description = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.isLiveMigration = Input.empty();
-        this.name = Input.empty();
-        this.parentPrefix = Input.empty();
-        this.project = Input.empty();
-        this.publicDelegatedSubPrefixs = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
+        this.description = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.isLiveMigration = Output.empty();
+        this.name = Output.empty();
+        this.parentPrefix = Output.empty();
+        this.project = Output.empty();
+        this.publicDelegatedSubPrefixs = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,15 +146,15 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<Boolean> isLiveMigration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentPrefix;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<Boolean> isLiveMigration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentPrefix;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -173,93 +173,93 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder isLiveMigration(@Nullable Input<Boolean> isLiveMigration) {
+        public Builder isLiveMigration(@Nullable Output<Boolean> isLiveMigration) {
             this.isLiveMigration = isLiveMigration;
             return this;
         }
 
         public Builder isLiveMigration(@Nullable Boolean isLiveMigration) {
-            this.isLiveMigration = Input.ofNullable(isLiveMigration);
+            this.isLiveMigration = Output.ofNullable(isLiveMigration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentPrefix(@Nullable Input<String> parentPrefix) {
+        public Builder parentPrefix(@Nullable Output<String> parentPrefix) {
             this.parentPrefix = parentPrefix;
             return this;
         }
 
         public Builder parentPrefix(@Nullable String parentPrefix) {
-            this.parentPrefix = Input.ofNullable(parentPrefix);
+            this.parentPrefix = Output.ofNullable(parentPrefix);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder publicDelegatedSubPrefixs(@Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
+        public Builder publicDelegatedSubPrefixs(@Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
             return this;
         }
 
         public Builder publicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
-            this.publicDelegatedSubPrefixs = Input.ofNullable(publicDelegatedSubPrefixs);
+            this.publicDelegatedSubPrefixs = Output.ofNullable(publicDelegatedSubPrefixs);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public PublicDelegatedPrefixArgs build() {

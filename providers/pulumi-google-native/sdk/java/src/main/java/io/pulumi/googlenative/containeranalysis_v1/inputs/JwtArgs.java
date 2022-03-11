@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compactJwt")
-      private final @Nullable Input<String> compactJwt;
+      private final @Nullable Output<String> compactJwt;
 
-    public Input<String> getCompactJwt() {
-        return this.compactJwt == null ? Input.empty() : this.compactJwt;
+    public Output<String> getCompactJwt() {
+        return this.compactJwt == null ? Output.empty() : this.compactJwt;
     }
 
-    public JwtArgs(@Nullable Input<String> compactJwt) {
+    public JwtArgs(@Nullable Output<String> compactJwt) {
         this.compactJwt = compactJwt;
     }
 
     private JwtArgs() {
-        this.compactJwt = Input.empty();
+        this.compactJwt = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> compactJwt;
+        private @Nullable Output<String> compactJwt;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     	      this.compactJwt = defaults.compactJwt;
         }
 
-        public Builder compactJwt(@Nullable Input<String> compactJwt) {
+        public Builder compactJwt(@Nullable Output<String> compactJwt) {
             this.compactJwt = compactJwt;
             return this;
         }
 
         public Builder compactJwt(@Nullable String compactJwt) {
-            this.compactJwt = Input.ofNullable(compactJwt);
+            this.compactJwt = Output.ofNullable(compactJwt);
             return this;
         }
         public JwtArgs build() {

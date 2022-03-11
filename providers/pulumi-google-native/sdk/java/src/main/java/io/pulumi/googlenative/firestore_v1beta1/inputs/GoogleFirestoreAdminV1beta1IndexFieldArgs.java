@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fieldPath")
-      private final @Nullable Input<String> fieldPath;
+      private final @Nullable Output<String> fieldPath;
 
-    public Input<String> getFieldPath() {
-        return this.fieldPath == null ? Input.empty() : this.fieldPath;
+    public Output<String> getFieldPath() {
+        return this.fieldPath == null ? Output.empty() : this.fieldPath;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
+      private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
-    public Input<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public GoogleFirestoreAdminV1beta1IndexFieldArgs(
-        @Nullable Input<String> fieldPath,
-        @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
+        @Nullable Output<String> fieldPath,
+        @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
         this.fieldPath = fieldPath;
         this.mode = mode;
     }
 
     private GoogleFirestoreAdminV1beta1IndexFieldArgs() {
-        this.fieldPath = Input.empty();
-        this.mode = Input.empty();
+        this.fieldPath = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fieldPath;
-        private @Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
+        private @Nullable Output<String> fieldPath;
+        private @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
     	      this.mode = defaults.mode;
         }
 
-        public Builder fieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Output<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
         public Builder fieldPath(@Nullable String fieldPath) {
-            this.fieldPath = Input.ofNullable(fieldPath);
+            this.fieldPath = Output.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder mode(@Nullable Input<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
+        public Builder mode(@Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable GoogleFirestoreAdminV1beta1IndexFieldMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public GoogleFirestoreAdminV1beta1IndexFieldArgs build() {

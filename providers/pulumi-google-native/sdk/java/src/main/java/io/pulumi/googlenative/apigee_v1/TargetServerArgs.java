@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.TargetServerProtocol;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoArgs;
@@ -23,16 +23,16 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="environmentId", required=true)
-      private final Input<String> environmentId;
+      private final Output<String> environmentId;
 
-    public Input<String> getEnvironmentId() {
+    public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
@@ -41,9 +41,9 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host", required=true)
-      private final Input<String> host;
+      private final Output<String> host;
 
-    public Input<String> getHost() {
+    public Output<String> getHost() {
         return this.host;
     }
 
@@ -52,10 +52,10 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -63,16 +63,16 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -81,9 +81,9 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
@@ -92,10 +92,10 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<TargetServerProtocol> protocol;
+      private final @Nullable Output<TargetServerProtocol> protocol;
 
-    public Input<TargetServerProtocol> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<TargetServerProtocol> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -103,22 +103,22 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sSLInfo")
-      private final @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
+      private final @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
-    public Input<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {
-        return this.sSLInfo == null ? Input.empty() : this.sSLInfo;
+    public Output<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {
+        return this.sSLInfo == null ? Output.empty() : this.sSLInfo;
     }
 
     public TargetServerArgs(
-        @Nullable Input<String> description,
-        Input<String> environmentId,
-        Input<String> host,
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        Input<Integer> port,
-        @Nullable Input<TargetServerProtocol> protocol,
-        @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
+        @Nullable Output<String> description,
+        Output<String> environmentId,
+        Output<String> host,
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        Output<Integer> port,
+        @Nullable Output<TargetServerProtocol> protocol,
+        @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
         this.description = description;
         this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
         this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
@@ -131,15 +131,15 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetServerArgs() {
-        this.description = Input.empty();
-        this.environmentId = Input.empty();
-        this.host = Input.empty();
-        this.isEnabled = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.port = Input.empty();
-        this.protocol = Input.empty();
-        this.sSLInfo = Input.empty();
+        this.description = Output.empty();
+        this.environmentId = Output.empty();
+        this.host = Output.empty();
+        this.isEnabled = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.port = Output.empty();
+        this.protocol = Output.empty();
+        this.sSLInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,15 +151,15 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> environmentId;
-        private Input<String> host;
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private Input<Integer> port;
-        private @Nullable Input<TargetServerProtocol> protocol;
-        private @Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
+        private @Nullable Output<String> description;
+        private Output<String> environmentId;
+        private Output<String> host;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private Output<Integer> port;
+        private @Nullable Output<TargetServerProtocol> protocol;
+        private @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
         public Builder() {
     	      // Empty
@@ -178,93 +178,93 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sSLInfo = defaults.sSLInfo;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder environmentId(Input<String> environmentId) {
+        public Builder environmentId(Output<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Input.of(Objects.requireNonNull(environmentId));
+            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder host(Input<String> host) {
+        public Builder host(Output<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
         public Builder host(String host) {
-            this.host = Input.of(Objects.requireNonNull(host));
+            this.host = Output.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder protocol(@Nullable Input<TargetServerProtocol> protocol) {
+        public Builder protocol(@Nullable Output<TargetServerProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable TargetServerProtocol protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder sSLInfo(@Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
+        public Builder sSLInfo(@Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
             this.sSLInfo = sSLInfo;
             return this;
         }
 
         public Builder sSLInfo(@Nullable GoogleCloudApigeeV1TlsInfoArgs sSLInfo) {
-            this.sSLInfo = Input.ofNullable(sSLInfo);
+            this.sSLInfo = Output.ofNullable(sSLInfo);
             return this;
         }
         public TargetServerArgs build() {

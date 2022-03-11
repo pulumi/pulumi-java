@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceDatabaseType;
 import io.pulumi.googlenative.metastore_v1alpha.enums.ServiceReleaseChannel;
@@ -29,10 +29,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-      private final @Nullable Input<ServiceDatabaseType> databaseType;
+      private final @Nullable Output<ServiceDatabaseType> databaseType;
 
-    public Input<ServiceDatabaseType> getDatabaseType() {
-        return this.databaseType == null ? Input.empty() : this.databaseType;
+    public Output<ServiceDatabaseType> getDatabaseType() {
+        return this.databaseType == null ? Output.empty() : this.databaseType;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Input<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hiveMetastoreConfig")
-      private final @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig;
+      private final @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
-    public Input<HiveMetastoreConfigArgs> getHiveMetastoreConfig() {
-        return this.hiveMetastoreConfig == null ? Input.empty() : this.hiveMetastoreConfig;
+    public Output<HiveMetastoreConfigArgs> getHiveMetastoreConfig() {
+        return this.hiveMetastoreConfig == null ? Output.empty() : this.hiveMetastoreConfig;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Input<MaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataIntegration")
-      private final @Nullable Input<MetadataIntegrationArgs> metadataIntegration;
+      private final @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
 
-    public Input<MetadataIntegrationArgs> getMetadataIntegration() {
-        return this.metadataIntegration == null ? Input.empty() : this.metadataIntegration;
+    public Output<MetadataIntegrationArgs> getMetadataIntegration() {
+        return this.metadataIntegration == null ? Output.empty() : this.metadataIntegration;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Input<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<NetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -135,17 +135,17 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -153,23 +153,23 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseChannel")
-      private final @Nullable Input<ServiceReleaseChannel> releaseChannel;
+      private final @Nullable Output<ServiceReleaseChannel> releaseChannel;
 
-    public Input<ServiceReleaseChannel> getReleaseChannel() {
-        return this.releaseChannel == null ? Input.empty() : this.releaseChannel;
+    public Output<ServiceReleaseChannel> getReleaseChannel() {
+        return this.releaseChannel == null ? Output.empty() : this.releaseChannel;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="serviceId", required=true)
-      private final Input<String> serviceId;
+      private final Output<String> serviceId;
 
-    public Input<String> getServiceId() {
+    public Output<String> getServiceId() {
         return this.serviceId;
     }
 
@@ -178,29 +178,29 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<ServiceTier> tier;
+      private final @Nullable Output<ServiceTier> tier;
 
-    public Input<ServiceTier> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<ServiceTier> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public ServiceArgs(
-        @Nullable Input<ServiceDatabaseType> databaseType,
-        @Nullable Input<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Input<MetadataIntegrationArgs> metadataIntegration,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<NetworkConfigArgs> networkConfig,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        @Nullable Input<ServiceReleaseChannel> releaseChannel,
-        @Nullable Input<String> requestId,
-        Input<String> serviceId,
-        @Nullable Input<ServiceTier> tier) {
+        @Nullable Output<ServiceDatabaseType> databaseType,
+        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
+        @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MaintenanceWindowArgs> maintenanceWindow,
+        @Nullable Output<MetadataIntegrationArgs> metadataIntegration,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<NetworkConfigArgs> networkConfig,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        @Nullable Output<ServiceReleaseChannel> releaseChannel,
+        @Nullable Output<String> requestId,
+        Output<String> serviceId,
+        @Nullable Output<ServiceTier> tier) {
         this.databaseType = databaseType;
         this.encryptionConfig = encryptionConfig;
         this.hiveMetastoreConfig = hiveMetastoreConfig;
@@ -220,22 +220,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.databaseType = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.hiveMetastoreConfig = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.metadataIntegration = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.networkConfig = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.releaseChannel = Input.empty();
-        this.requestId = Input.empty();
-        this.serviceId = Input.empty();
-        this.tier = Input.empty();
+        this.databaseType = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.hiveMetastoreConfig = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.metadataIntegration = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.networkConfig = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.releaseChannel = Output.empty();
+        this.requestId = Output.empty();
+        this.serviceId = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -247,22 +247,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceDatabaseType> databaseType;
-        private @Nullable Input<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Input<MetadataIntegrationArgs> metadataIntegration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<NetworkConfigArgs> networkConfig;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ServiceReleaseChannel> releaseChannel;
-        private @Nullable Input<String> requestId;
-        private Input<String> serviceId;
-        private @Nullable Input<ServiceTier> tier;
+        private @Nullable Output<ServiceDatabaseType> databaseType;
+        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+        private @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
+        private @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<NetworkConfigArgs> networkConfig;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ServiceReleaseChannel> releaseChannel;
+        private @Nullable Output<String> requestId;
+        private Output<String> serviceId;
+        private @Nullable Output<ServiceTier> tier;
 
         public Builder() {
     	      // Empty
@@ -288,163 +288,163 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder databaseType(@Nullable Input<ServiceDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Output<ServiceDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
         public Builder databaseType(@Nullable ServiceDatabaseType databaseType) {
-            this.databaseType = Input.ofNullable(databaseType);
+            this.databaseType = Output.ofNullable(databaseType);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder hiveMetastoreConfig(@Nullable Input<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
         public Builder hiveMetastoreConfig(@Nullable HiveMetastoreConfigArgs hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = Input.ofNullable(hiveMetastoreConfig);
+            this.hiveMetastoreConfig = Output.ofNullable(hiveMetastoreConfig);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<MaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder metadataIntegration(@Nullable Input<MetadataIntegrationArgs> metadataIntegration) {
+        public Builder metadataIntegration(@Nullable Output<MetadataIntegrationArgs> metadataIntegration) {
             this.metadataIntegration = metadataIntegration;
             return this;
         }
 
         public Builder metadataIntegration(@Nullable MetadataIntegrationArgs metadataIntegration) {
-            this.metadataIntegration = Input.ofNullable(metadataIntegration);
+            this.metadataIntegration = Output.ofNullable(metadataIntegration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder releaseChannel(@Nullable Input<ServiceReleaseChannel> releaseChannel) {
+        public Builder releaseChannel(@Nullable Output<ServiceReleaseChannel> releaseChannel) {
             this.releaseChannel = releaseChannel;
             return this;
         }
 
         public Builder releaseChannel(@Nullable ServiceReleaseChannel releaseChannel) {
-            this.releaseChannel = Input.ofNullable(releaseChannel);
+            this.releaseChannel = Output.ofNullable(releaseChannel);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder serviceId(Input<String> serviceId) {
+        public Builder serviceId(Output<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
         public Builder serviceId(String serviceId) {
-            this.serviceId = Input.of(Objects.requireNonNull(serviceId));
+            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder tier(@Nullable Input<ServiceTier> tier) {
+        public Builder tier(@Nullable Output<ServiceTier> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable ServiceTier tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public ServiceArgs build() {

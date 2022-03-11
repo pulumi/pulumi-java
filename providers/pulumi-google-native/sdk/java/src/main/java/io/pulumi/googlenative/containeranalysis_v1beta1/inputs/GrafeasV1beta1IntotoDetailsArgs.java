@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
@@ -21,29 +21,29 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     public static final GrafeasV1beta1IntotoDetailsArgs Empty = new GrafeasV1beta1IntotoDetailsArgs();
 
     @InputImport(name="signatures")
-      private final @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
+      private final @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
-    public Input<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
-        return this.signatures == null ? Input.empty() : this.signatures;
+    public Output<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
+        return this.signatures == null ? Output.empty() : this.signatures;
     }
 
     @InputImport(name="signed")
-      private final @Nullable Input<LinkArgs> signed;
+      private final @Nullable Output<LinkArgs> signed;
 
-    public Input<LinkArgs> getSigned() {
-        return this.signed == null ? Input.empty() : this.signed;
+    public Output<LinkArgs> getSigned() {
+        return this.signed == null ? Output.empty() : this.signed;
     }
 
     public GrafeasV1beta1IntotoDetailsArgs(
-        @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures,
-        @Nullable Input<LinkArgs> signed) {
+        @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures,
+        @Nullable Output<LinkArgs> signed) {
         this.signatures = signatures;
         this.signed = signed;
     }
 
     private GrafeasV1beta1IntotoDetailsArgs() {
-        this.signatures = Input.empty();
-        this.signed = Input.empty();
+        this.signatures = Output.empty();
+        this.signed = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
-        private @Nullable Input<LinkArgs> signed;
+        private @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
+        private @Nullable Output<LinkArgs> signed;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     	      this.signed = defaults.signed;
         }
 
-        public Builder signatures(@Nullable Input<List<GrafeasV1beta1IntotoSignatureArgs>> signatures) {
+        public Builder signatures(@Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
 
         public Builder signatures(@Nullable List<GrafeasV1beta1IntotoSignatureArgs> signatures) {
-            this.signatures = Input.ofNullable(signatures);
+            this.signatures = Output.ofNullable(signatures);
             return this;
         }
 
-        public Builder signed(@Nullable Input<LinkArgs> signed) {
+        public Builder signed(@Nullable Output<LinkArgs> signed) {
             this.signed = signed;
             return this;
         }
 
         public Builder signed(@Nullable LinkArgs signed) {
-            this.signed = Input.ofNullable(signed);
+            this.signed = Output.ofNullable(signed);
             return this;
         }
         public GrafeasV1beta1IntotoDetailsArgs build() {

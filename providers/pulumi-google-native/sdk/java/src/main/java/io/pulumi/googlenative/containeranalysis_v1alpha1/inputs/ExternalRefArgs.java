@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.ExternalRefCategory;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<ExternalRefCategory> category;
+      private final @Nullable Output<ExternalRefCategory> category;
 
-    public Input<ExternalRefCategory> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<ExternalRefCategory> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locator")
-      private final @Nullable Input<String> locator;
+      private final @Nullable Output<String> locator;
 
-    public Input<String> getLocator() {
-        return this.locator == null ? Input.empty() : this.locator;
+    public Output<String> getLocator() {
+        return this.locator == null ? Output.empty() : this.locator;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ExternalRefArgs(
-        @Nullable Input<ExternalRefCategory> category,
-        @Nullable Input<String> comment,
-        @Nullable Input<String> locator,
-        @Nullable Input<String> type) {
+        @Nullable Output<ExternalRefCategory> category,
+        @Nullable Output<String> comment,
+        @Nullable Output<String> locator,
+        @Nullable Output<String> type) {
         this.category = category;
         this.comment = comment;
         this.locator = locator;
@@ -75,10 +75,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExternalRefArgs() {
-        this.category = Input.empty();
-        this.comment = Input.empty();
-        this.locator = Input.empty();
-        this.type = Input.empty();
+        this.category = Output.empty();
+        this.comment = Output.empty();
+        this.locator = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExternalRefCategory> category;
-        private @Nullable Input<String> comment;
-        private @Nullable Input<String> locator;
-        private @Nullable Input<String> type;
+        private @Nullable Output<ExternalRefCategory> category;
+        private @Nullable Output<String> comment;
+        private @Nullable Output<String> locator;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder category(@Nullable Input<ExternalRefCategory> category) {
+        public Builder category(@Nullable Output<ExternalRefCategory> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable ExternalRefCategory category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder locator(@Nullable Input<String> locator) {
+        public Builder locator(@Nullable Output<String> locator) {
             this.locator = locator;
             return this;
         }
 
         public Builder locator(@Nullable String locator) {
-            this.locator = Input.ofNullable(locator);
+            this.locator = Output.ofNullable(locator);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ExternalRefArgs build() {

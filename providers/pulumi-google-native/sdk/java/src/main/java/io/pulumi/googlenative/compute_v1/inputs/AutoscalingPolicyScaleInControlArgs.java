@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.FixedOrPercentArgs;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxScaledInReplicas")
-      private final @Nullable Input<FixedOrPercentArgs> maxScaledInReplicas;
+      private final @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
 
-    public Input<FixedOrPercentArgs> getMaxScaledInReplicas() {
-        return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
+    public Output<FixedOrPercentArgs> getMaxScaledInReplicas() {
+        return this.maxScaledInReplicas == null ? Output.empty() : this.maxScaledInReplicas;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeWindowSec")
-      private final @Nullable Input<Integer> timeWindowSec;
+      private final @Nullable Output<Integer> timeWindowSec;
 
-    public Input<Integer> getTimeWindowSec() {
-        return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;
+    public Output<Integer> getTimeWindowSec() {
+        return this.timeWindowSec == null ? Output.empty() : this.timeWindowSec;
     }
 
     public AutoscalingPolicyScaleInControlArgs(
-        @Nullable Input<FixedOrPercentArgs> maxScaledInReplicas,
-        @Nullable Input<Integer> timeWindowSec) {
+        @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas,
+        @Nullable Output<Integer> timeWindowSec) {
         this.maxScaledInReplicas = maxScaledInReplicas;
         this.timeWindowSec = timeWindowSec;
     }
 
     private AutoscalingPolicyScaleInControlArgs() {
-        this.maxScaledInReplicas = Input.empty();
-        this.timeWindowSec = Input.empty();
+        this.maxScaledInReplicas = Output.empty();
+        this.timeWindowSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FixedOrPercentArgs> maxScaledInReplicas;
-        private @Nullable Input<Integer> timeWindowSec;
+        private @Nullable Output<FixedOrPercentArgs> maxScaledInReplicas;
+        private @Nullable Output<Integer> timeWindowSec;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoscalingPolicyScaleInControlArgs extends io.pulumi.resourc
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder maxScaledInReplicas(@Nullable Input<FixedOrPercentArgs> maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable Output<FixedOrPercentArgs> maxScaledInReplicas) {
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
         public Builder maxScaledInReplicas(@Nullable FixedOrPercentArgs maxScaledInReplicas) {
-            this.maxScaledInReplicas = Input.ofNullable(maxScaledInReplicas);
+            this.maxScaledInReplicas = Output.ofNullable(maxScaledInReplicas);
             return this;
         }
 
-        public Builder timeWindowSec(@Nullable Input<Integer> timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
 
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Input.ofNullable(timeWindowSec);
+            this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
         }
         public AutoscalingPolicyScaleInControlArgs build() {

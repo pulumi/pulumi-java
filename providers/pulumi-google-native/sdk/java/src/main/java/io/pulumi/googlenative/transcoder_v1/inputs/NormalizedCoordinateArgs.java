@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="x")
-      private final @Nullable Input<Double> x;
+      private final @Nullable Output<Double> x;
 
-    public Input<Double> getX() {
-        return this.x == null ? Input.empty() : this.x;
+    public Output<Double> getX() {
+        return this.x == null ? Output.empty() : this.x;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="y")
-      private final @Nullable Input<Double> y;
+      private final @Nullable Output<Double> y;
 
-    public Input<Double> getY() {
-        return this.y == null ? Input.empty() : this.y;
+    public Output<Double> getY() {
+        return this.y == null ? Output.empty() : this.y;
     }
 
     public NormalizedCoordinateArgs(
-        @Nullable Input<Double> x,
-        @Nullable Input<Double> y) {
+        @Nullable Output<Double> x,
+        @Nullable Output<Double> y) {
         this.x = x;
         this.y = y;
     }
 
     private NormalizedCoordinateArgs() {
-        this.x = Input.empty();
-        this.y = Input.empty();
+        this.x = Output.empty();
+        this.y = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> x;
-        private @Nullable Input<Double> y;
+        private @Nullable Output<Double> x;
+        private @Nullable Output<Double> y;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NormalizedCoordinateArgs extends io.pulumi.resources.Resource
     	      this.y = defaults.y;
         }
 
-        public Builder x(@Nullable Input<Double> x) {
+        public Builder x(@Nullable Output<Double> x) {
             this.x = x;
             return this;
         }
 
         public Builder x(@Nullable Double x) {
-            this.x = Input.ofNullable(x);
+            this.x = Output.ofNullable(x);
             return this;
         }
 
-        public Builder y(@Nullable Input<Double> y) {
+        public Builder y(@Nullable Output<Double> y) {
             this.y = y;
             return this;
         }
 
         public Builder y(@Nullable Double y) {
-            this.y = Input.ofNullable(y);
+            this.y = Output.ofNullable(y);
             return this;
         }
         public NormalizedCoordinateArgs build() {

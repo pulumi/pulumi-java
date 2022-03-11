@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.HttpCheckContentType;
 import io.pulumi.googlenative.monitoring_v3.enums.HttpCheckRequestMethod;
@@ -29,10 +29,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authInfo")
-      private final @Nullable Input<BasicAuthenticationArgs> authInfo;
+      private final @Nullable Output<BasicAuthenticationArgs> authInfo;
 
-    public Input<BasicAuthenticationArgs> getAuthInfo() {
-        return this.authInfo == null ? Input.empty() : this.authInfo;
+    public Output<BasicAuthenticationArgs> getAuthInfo() {
+        return this.authInfo == null ? Output.empty() : this.authInfo;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<HttpCheckContentType> contentType;
+      private final @Nullable Output<HttpCheckContentType> contentType;
 
-    public Input<HttpCheckContentType> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<HttpCheckContentType> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Output<Map<String,String>> headers;
 
-    public Input<Map<String,String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Map<String,String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maskHeaders")
-      private final @Nullable Input<Boolean> maskHeaders;
+      private final @Nullable Output<Boolean> maskHeaders;
 
-    public Input<Boolean> getMaskHeaders() {
-        return this.maskHeaders == null ? Input.empty() : this.maskHeaders;
+    public Output<Boolean> getMaskHeaders() {
+        return this.maskHeaders == null ? Output.empty() : this.maskHeaders;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestMethod")
-      private final @Nullable Input<HttpCheckRequestMethod> requestMethod;
+      private final @Nullable Output<HttpCheckRequestMethod> requestMethod;
 
-    public Input<HttpCheckRequestMethod> getRequestMethod() {
-        return this.requestMethod == null ? Input.empty() : this.requestMethod;
+    public Output<HttpCheckRequestMethod> getRequestMethod() {
+        return this.requestMethod == null ? Output.empty() : this.requestMethod;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSsl")
-      private final @Nullable Input<Boolean> useSsl;
+      private final @Nullable Output<Boolean> useSsl;
 
-    public Input<Boolean> getUseSsl() {
-        return this.useSsl == null ? Input.empty() : this.useSsl;
+    public Output<Boolean> getUseSsl() {
+        return this.useSsl == null ? Output.empty() : this.useSsl;
     }
 
     /**
@@ -128,23 +128,23 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateSsl")
-      private final @Nullable Input<Boolean> validateSsl;
+      private final @Nullable Output<Boolean> validateSsl;
 
-    public Input<Boolean> getValidateSsl() {
-        return this.validateSsl == null ? Input.empty() : this.validateSsl;
+    public Output<Boolean> getValidateSsl() {
+        return this.validateSsl == null ? Output.empty() : this.validateSsl;
     }
 
     public HttpCheckArgs(
-        @Nullable Input<BasicAuthenticationArgs> authInfo,
-        @Nullable Input<String> body,
-        @Nullable Input<HttpCheckContentType> contentType,
-        @Nullable Input<Map<String,String>> headers,
-        @Nullable Input<Boolean> maskHeaders,
-        @Nullable Input<String> path,
-        @Nullable Input<Integer> port,
-        @Nullable Input<HttpCheckRequestMethod> requestMethod,
-        @Nullable Input<Boolean> useSsl,
-        @Nullable Input<Boolean> validateSsl) {
+        @Nullable Output<BasicAuthenticationArgs> authInfo,
+        @Nullable Output<String> body,
+        @Nullable Output<HttpCheckContentType> contentType,
+        @Nullable Output<Map<String,String>> headers,
+        @Nullable Output<Boolean> maskHeaders,
+        @Nullable Output<String> path,
+        @Nullable Output<Integer> port,
+        @Nullable Output<HttpCheckRequestMethod> requestMethod,
+        @Nullable Output<Boolean> useSsl,
+        @Nullable Output<Boolean> validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;
@@ -158,16 +158,16 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpCheckArgs() {
-        this.authInfo = Input.empty();
-        this.body = Input.empty();
-        this.contentType = Input.empty();
-        this.headers = Input.empty();
-        this.maskHeaders = Input.empty();
-        this.path = Input.empty();
-        this.port = Input.empty();
-        this.requestMethod = Input.empty();
-        this.useSsl = Input.empty();
-        this.validateSsl = Input.empty();
+        this.authInfo = Output.empty();
+        this.body = Output.empty();
+        this.contentType = Output.empty();
+        this.headers = Output.empty();
+        this.maskHeaders = Output.empty();
+        this.path = Output.empty();
+        this.port = Output.empty();
+        this.requestMethod = Output.empty();
+        this.useSsl = Output.empty();
+        this.validateSsl = Output.empty();
     }
 
     public static Builder builder() {
@@ -179,16 +179,16 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicAuthenticationArgs> authInfo;
-        private @Nullable Input<String> body;
-        private @Nullable Input<HttpCheckContentType> contentType;
-        private @Nullable Input<Map<String,String>> headers;
-        private @Nullable Input<Boolean> maskHeaders;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<HttpCheckRequestMethod> requestMethod;
-        private @Nullable Input<Boolean> useSsl;
-        private @Nullable Input<Boolean> validateSsl;
+        private @Nullable Output<BasicAuthenticationArgs> authInfo;
+        private @Nullable Output<String> body;
+        private @Nullable Output<HttpCheckContentType> contentType;
+        private @Nullable Output<Map<String,String>> headers;
+        private @Nullable Output<Boolean> maskHeaders;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<HttpCheckRequestMethod> requestMethod;
+        private @Nullable Output<Boolean> useSsl;
+        private @Nullable Output<Boolean> validateSsl;
 
         public Builder() {
     	      // Empty
@@ -208,103 +208,103 @@ public final class HttpCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateSsl = defaults.validateSsl;
         }
 
-        public Builder authInfo(@Nullable Input<BasicAuthenticationArgs> authInfo) {
+        public Builder authInfo(@Nullable Output<BasicAuthenticationArgs> authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
         public Builder authInfo(@Nullable BasicAuthenticationArgs authInfo) {
-            this.authInfo = Input.ofNullable(authInfo);
+            this.authInfo = Output.ofNullable(authInfo);
             return this;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<HttpCheckContentType> contentType) {
+        public Builder contentType(@Nullable Output<HttpCheckContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable HttpCheckContentType contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder maskHeaders(@Nullable Input<Boolean> maskHeaders) {
+        public Builder maskHeaders(@Nullable Output<Boolean> maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
 
         public Builder maskHeaders(@Nullable Boolean maskHeaders) {
-            this.maskHeaders = Input.ofNullable(maskHeaders);
+            this.maskHeaders = Output.ofNullable(maskHeaders);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder requestMethod(@Nullable Input<HttpCheckRequestMethod> requestMethod) {
+        public Builder requestMethod(@Nullable Output<HttpCheckRequestMethod> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
         public Builder requestMethod(@Nullable HttpCheckRequestMethod requestMethod) {
-            this.requestMethod = Input.ofNullable(requestMethod);
+            this.requestMethod = Output.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder useSsl(@Nullable Input<Boolean> useSsl) {
+        public Builder useSsl(@Nullable Output<Boolean> useSsl) {
             this.useSsl = useSsl;
             return this;
         }
 
         public Builder useSsl(@Nullable Boolean useSsl) {
-            this.useSsl = Input.ofNullable(useSsl);
+            this.useSsl = Output.ofNullable(useSsl);
             return this;
         }
 
-        public Builder validateSsl(@Nullable Input<Boolean> validateSsl) {
+        public Builder validateSsl(@Nullable Output<Boolean> validateSsl) {
             this.validateSsl = validateSsl;
             return this;
         }
 
         public Builder validateSsl(@Nullable Boolean validateSsl) {
-            this.validateSsl = Input.ofNullable(validateSsl);
+            this.validateSsl = Output.ofNullable(validateSsl);
             return this;
         }
         public HttpCheckArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs;
@@ -17,9 +17,9 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     public static final FeedbackMessageArgs Empty = new FeedbackMessageArgs();
 
     @InputImport(name="annotatedDatasetId", required=true)
-      private final Input<String> annotatedDatasetId;
+      private final Output<String> annotatedDatasetId;
 
-    public Input<String> getAnnotatedDatasetId() {
+    public Output<String> getAnnotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
@@ -28,10 +28,10 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -39,23 +39,23 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="feedbackThreadId", required=true)
-      private final Input<String> feedbackThreadId;
+      private final Output<String> feedbackThreadId;
 
-    public Input<String> getFeedbackThreadId() {
+    public Output<String> getFeedbackThreadId() {
         return this.feedbackThreadId;
     }
 
@@ -64,10 +64,10 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -75,44 +75,44 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="operatorFeedbackMetadata")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
-    public Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
-        return this.operatorFeedbackMetadata == null ? Input.empty() : this.operatorFeedbackMetadata;
+    public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
+        return this.operatorFeedbackMetadata == null ? Output.empty() : this.operatorFeedbackMetadata;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requesterFeedbackMetadata")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
-    public Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {
-        return this.requesterFeedbackMetadata == null ? Input.empty() : this.requesterFeedbackMetadata;
+    public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {
+        return this.requesterFeedbackMetadata == null ? Output.empty() : this.requesterFeedbackMetadata;
     }
 
     public FeedbackMessageArgs(
-        Input<String> annotatedDatasetId,
-        @Nullable Input<String> body,
-        @Nullable Input<String> createTime,
-        Input<String> datasetId,
-        Input<String> feedbackThreadId,
-        @Nullable Input<String> image,
-        @Nullable Input<String> name,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
+        Output<String> annotatedDatasetId,
+        @Nullable Output<String> body,
+        @Nullable Output<String> createTime,
+        Output<String> datasetId,
+        Output<String> feedbackThreadId,
+        @Nullable Output<String> image,
+        @Nullable Output<String> name,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
         this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId, "expected parameter 'annotatedDatasetId' to be non-null");
         this.body = body;
         this.createTime = createTime;
@@ -126,16 +126,16 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FeedbackMessageArgs() {
-        this.annotatedDatasetId = Input.empty();
-        this.body = Input.empty();
-        this.createTime = Input.empty();
-        this.datasetId = Input.empty();
-        this.feedbackThreadId = Input.empty();
-        this.image = Input.empty();
-        this.name = Input.empty();
-        this.operatorFeedbackMetadata = Input.empty();
-        this.project = Input.empty();
-        this.requesterFeedbackMetadata = Input.empty();
+        this.annotatedDatasetId = Output.empty();
+        this.body = Output.empty();
+        this.createTime = Output.empty();
+        this.datasetId = Output.empty();
+        this.feedbackThreadId = Output.empty();
+        this.image = Output.empty();
+        this.name = Output.empty();
+        this.operatorFeedbackMetadata = Output.empty();
+        this.project = Output.empty();
+        this.requesterFeedbackMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,16 +147,16 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> annotatedDatasetId;
-        private @Nullable Input<String> body;
-        private @Nullable Input<String> createTime;
-        private Input<String> datasetId;
-        private Input<String> feedbackThreadId;
-        private @Nullable Input<String> image;
-        private @Nullable Input<String> name;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
+        private Output<String> annotatedDatasetId;
+        private @Nullable Output<String> body;
+        private @Nullable Output<String> createTime;
+        private Output<String> datasetId;
+        private Output<String> feedbackThreadId;
+        private @Nullable Output<String> image;
+        private @Nullable Output<String> name;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
         public Builder() {
     	      // Empty
@@ -176,103 +176,103 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     	      this.requesterFeedbackMetadata = defaults.requesterFeedbackMetadata;
         }
 
-        public Builder annotatedDatasetId(Input<String> annotatedDatasetId) {
+        public Builder annotatedDatasetId(Output<String> annotatedDatasetId) {
             this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId);
             return this;
         }
 
         public Builder annotatedDatasetId(String annotatedDatasetId) {
-            this.annotatedDatasetId = Input.of(Objects.requireNonNull(annotatedDatasetId));
+            this.annotatedDatasetId = Output.of(Objects.requireNonNull(annotatedDatasetId));
             return this;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder feedbackThreadId(Input<String> feedbackThreadId) {
+        public Builder feedbackThreadId(Output<String> feedbackThreadId) {
             this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId);
             return this;
         }
 
         public Builder feedbackThreadId(String feedbackThreadId) {
-            this.feedbackThreadId = Input.of(Objects.requireNonNull(feedbackThreadId));
+            this.feedbackThreadId = Output.of(Objects.requireNonNull(feedbackThreadId));
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operatorFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
+        public Builder operatorFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = operatorFeedbackMetadata;
             return this;
         }
 
         public Builder operatorFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs operatorFeedbackMetadata) {
-            this.operatorFeedbackMetadata = Input.ofNullable(operatorFeedbackMetadata);
+            this.operatorFeedbackMetadata = Output.ofNullable(operatorFeedbackMetadata);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requesterFeedbackMetadata(@Nullable Input<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
+        public Builder requesterFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = requesterFeedbackMetadata;
             return this;
         }
 
         public Builder requesterFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs requesterFeedbackMetadata) {
-            this.requesterFeedbackMetadata = Input.ofNullable(requesterFeedbackMetadata);
+            this.requesterFeedbackMetadata = Output.ofNullable(requesterFeedbackMetadata);
             return this;
         }
         public FeedbackMessageArgs build() {

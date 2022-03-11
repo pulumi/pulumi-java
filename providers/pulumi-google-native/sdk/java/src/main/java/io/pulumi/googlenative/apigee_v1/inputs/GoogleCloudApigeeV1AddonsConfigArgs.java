@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AdvancedApiOpsConfigArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ConnectorsPlatformConfigArgs;
@@ -26,10 +26,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="advancedApiOpsConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
 
-    public Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> getAdvancedApiOpsConfig() {
-        return this.advancedApiOpsConfig == null ? Input.empty() : this.advancedApiOpsConfig;
+    public Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> getAdvancedApiOpsConfig() {
+        return this.advancedApiOpsConfig == null ? Output.empty() : this.advancedApiOpsConfig;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectorsPlatformConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
 
-    public Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> getConnectorsPlatformConfig() {
-        return this.connectorsPlatformConfig == null ? Input.empty() : this.connectorsPlatformConfig;
+    public Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> getConnectorsPlatformConfig() {
+        return this.connectorsPlatformConfig == null ? Output.empty() : this.connectorsPlatformConfig;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="integrationConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
 
-    public Input<GoogleCloudApigeeV1IntegrationConfigArgs> getIntegrationConfig() {
-        return this.integrationConfig == null ? Input.empty() : this.integrationConfig;
+    public Output<GoogleCloudApigeeV1IntegrationConfigArgs> getIntegrationConfig() {
+        return this.integrationConfig == null ? Output.empty() : this.integrationConfig;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monetizationConfig")
-      private final @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
+      private final @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 
-    public Input<GoogleCloudApigeeV1MonetizationConfigArgs> getMonetizationConfig() {
-        return this.monetizationConfig == null ? Input.empty() : this.monetizationConfig;
+    public Output<GoogleCloudApigeeV1MonetizationConfigArgs> getMonetizationConfig() {
+        return this.monetizationConfig == null ? Output.empty() : this.monetizationConfig;
     }
 
     public GoogleCloudApigeeV1AddonsConfigArgs(
-        @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig,
-        @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig,
-        @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig,
-        @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
+        @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig,
+        @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig,
+        @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig,
+        @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
         this.advancedApiOpsConfig = advancedApiOpsConfig;
         this.connectorsPlatformConfig = connectorsPlatformConfig;
         this.integrationConfig = integrationConfig;
@@ -77,10 +77,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudApigeeV1AddonsConfigArgs() {
-        this.advancedApiOpsConfig = Input.empty();
-        this.connectorsPlatformConfig = Input.empty();
-        this.integrationConfig = Input.empty();
-        this.monetizationConfig = Input.empty();
+        this.advancedApiOpsConfig = Output.empty();
+        this.connectorsPlatformConfig = Output.empty();
+        this.integrationConfig = Output.empty();
+        this.monetizationConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
-        private @Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
-        private @Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
-        private @Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
+        private @Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig;
+        private @Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig;
+        private @Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig;
+        private @Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GoogleCloudApigeeV1AddonsConfigArgs extends io.pulumi.resourc
     	      this.monetizationConfig = defaults.monetizationConfig;
         }
 
-        public Builder advancedApiOpsConfig(@Nullable Input<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig) {
+        public Builder advancedApiOpsConfig(@Nullable Output<GoogleCloudApigeeV1AdvancedApiOpsConfigArgs> advancedApiOpsConfig) {
             this.advancedApiOpsConfig = advancedApiOpsConfig;
             return this;
         }
 
         public Builder advancedApiOpsConfig(@Nullable GoogleCloudApigeeV1AdvancedApiOpsConfigArgs advancedApiOpsConfig) {
-            this.advancedApiOpsConfig = Input.ofNullable(advancedApiOpsConfig);
+            this.advancedApiOpsConfig = Output.ofNullable(advancedApiOpsConfig);
             return this;
         }
 
-        public Builder connectorsPlatformConfig(@Nullable Input<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig) {
+        public Builder connectorsPlatformConfig(@Nullable Output<GoogleCloudApigeeV1ConnectorsPlatformConfigArgs> connectorsPlatformConfig) {
             this.connectorsPlatformConfig = connectorsPlatformConfig;
             return this;
         }
 
         public Builder connectorsPlatformConfig(@Nullable GoogleCloudApigeeV1ConnectorsPlatformConfigArgs connectorsPlatformConfig) {
-            this.connectorsPlatformConfig = Input.ofNullable(connectorsPlatformConfig);
+            this.connectorsPlatformConfig = Output.ofNullable(connectorsPlatformConfig);
             return this;
         }
 
-        public Builder integrationConfig(@Nullable Input<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig) {
+        public Builder integrationConfig(@Nullable Output<GoogleCloudApigeeV1IntegrationConfigArgs> integrationConfig) {
             this.integrationConfig = integrationConfig;
             return this;
         }
 
         public Builder integrationConfig(@Nullable GoogleCloudApigeeV1IntegrationConfigArgs integrationConfig) {
-            this.integrationConfig = Input.ofNullable(integrationConfig);
+            this.integrationConfig = Output.ofNullable(integrationConfig);
             return this;
         }
 
-        public Builder monetizationConfig(@Nullable Input<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
+        public Builder monetizationConfig(@Nullable Output<GoogleCloudApigeeV1MonetizationConfigArgs> monetizationConfig) {
             this.monetizationConfig = monetizationConfig;
             return this;
         }
 
         public Builder monetizationConfig(@Nullable GoogleCloudApigeeV1MonetizationConfigArgs monetizationConfig) {
-            this.monetizationConfig = Input.ofNullable(monetizationConfig);
+            this.monetizationConfig = Output.ofNullable(monetizationConfig);
             return this;
         }
         public GoogleCloudApigeeV1AddonsConfigArgs build() {

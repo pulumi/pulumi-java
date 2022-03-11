@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="table")
-      private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
+      private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
-    public Input<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
-        return this.table == null ? Input.empty() : this.table;
+    public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
+        return this.table == null ? Output.empty() : this.table;
     }
 
     public GooglePrivacyDlpV2BigQueryFieldArgs(
-        @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field,
-        @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
+        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field,
+        @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
         this.field = field;
         this.table = table;
     }
 
     private GooglePrivacyDlpV2BigQueryFieldArgs() {
-        this.field = Input.empty();
-        this.table = Input.empty();
+        this.field = Output.empty();
+        this.table = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
-        private @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
+        private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
     	      this.table = defaults.table;
         }
 
-        public Builder field(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+        public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder table(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
+        public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             this.table = table;
             return this;
         }
 
         public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
-            this.table = Input.ofNullable(table);
+            this.table = Output.ofNullable(table);
             return this;
         }
         public GooglePrivacyDlpV2BigQueryFieldArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
      * 
      */
     @InputImport(name="parameter")
-      private final @Nullable Input<String> parameter;
+      private final @Nullable Output<String> parameter;
 
-    public Input<String> getParameter() {
-        return this.parameter == null ? Input.empty() : this.parameter;
+    public Output<String> getParameter() {
+        return this.parameter == null ? Output.empty() : this.parameter;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs(
-        @Nullable Input<String> parameter,
-        @Nullable Input<Object> value) {
+        @Nullable Output<String> parameter,
+        @Nullable Output<Object> value) {
         this.parameter = parameter;
         this.value = value;
     }
 
     private GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs() {
-        this.parameter = Input.empty();
-        this.value = Input.empty();
+        this.parameter = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> parameter;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<String> parameter;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionAr
     	      this.value = defaults.value;
         }
 
-        public Builder parameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Output<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Input.ofNullable(parameter);
+            this.parameter = Output.ofNullable(parameter);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs build() {

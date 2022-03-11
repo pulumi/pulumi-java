@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.GuestOsFeatureType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GuestOsFeatureType> type;
+      private final @Nullable Output<GuestOsFeatureType> type;
 
-    public Input<GuestOsFeatureType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GuestOsFeatureType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public GuestOsFeatureArgs(@Nullable Input<GuestOsFeatureType> type) {
+    public GuestOsFeatureArgs(@Nullable Output<GuestOsFeatureType> type) {
         this.type = type;
     }
 
     private GuestOsFeatureArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GuestOsFeatureType> type;
+        private @Nullable Output<GuestOsFeatureType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<GuestOsFeatureType> type) {
+        public Builder type(@Nullable Output<GuestOsFeatureType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GuestOsFeatureType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GuestOsFeatureArgs build() {

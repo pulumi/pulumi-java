@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.servicemanagement_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class ServiceConsumerIamPolicy extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceConsumerIamPolicy(String name, ServiceConsumerIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:servicemanagement/v1:ServiceConsumerIamPolicy", name, args == null ? ServiceConsumerIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:servicemanagement/v1:ServiceConsumerIamPolicy", name, args == null ? ServiceConsumerIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceConsumerIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceConsumerIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:servicemanagement/v1:ServiceConsumerIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class ServiceConsumerIamPolicy extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceConsumerIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceConsumerIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceConsumerIamPolicy(name, id, options);
     }
 }

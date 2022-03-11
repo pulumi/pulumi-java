@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="allowMultiLabel")
-      private final @Nullable Input<Boolean> allowMultiLabel;
+      private final @Nullable Output<Boolean> allowMultiLabel;
 
-    public Input<Boolean> getAllowMultiLabel() {
-        return this.allowMultiLabel == null ? Input.empty() : this.allowMultiLabel;
+    public Output<Boolean> getAllowMultiLabel() {
+        return this.allowMultiLabel == null ? Output.empty() : this.allowMultiLabel;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="annotationSpecSet", required=true)
-      private final Input<String> annotationSpecSet;
+      private final Output<String> annotationSpecSet;
 
-    public Input<String> getAnnotationSpecSet() {
+    public Output<String> getAnnotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -47,25 +47,25 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
      * 
      */
     @InputImport(name="answerAggregationType")
-      private final @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
+      private final @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
-    public Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> getAnswerAggregationType() {
-        return this.answerAggregationType == null ? Input.empty() : this.answerAggregationType;
+    public Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> getAnswerAggregationType() {
+        return this.answerAggregationType == null ? Output.empty() : this.answerAggregationType;
     }
 
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs(
-        @Nullable Input<Boolean> allowMultiLabel,
-        Input<String> annotationSpecSet,
-        @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
+        @Nullable Output<Boolean> allowMultiLabel,
+        Output<String> annotationSpecSet,
+        @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
         this.allowMultiLabel = allowMultiLabel;
         this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
         this.answerAggregationType = answerAggregationType;
     }
 
     private GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs() {
-        this.allowMultiLabel = Input.empty();
-        this.annotationSpecSet = Input.empty();
-        this.answerAggregationType = Input.empty();
+        this.allowMultiLabel = Output.empty();
+        this.annotationSpecSet = Output.empty();
+        this.answerAggregationType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowMultiLabel;
-        private Input<String> annotationSpecSet;
-        private @Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
+        private @Nullable Output<Boolean> allowMultiLabel;
+        private Output<String> annotationSpecSet;
+        private @Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs e
     	      this.answerAggregationType = defaults.answerAggregationType;
         }
 
-        public Builder allowMultiLabel(@Nullable Input<Boolean> allowMultiLabel) {
+        public Builder allowMultiLabel(@Nullable Output<Boolean> allowMultiLabel) {
             this.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
         public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
-            this.allowMultiLabel = Input.ofNullable(allowMultiLabel);
+            this.allowMultiLabel = Output.ofNullable(allowMultiLabel);
             return this;
         }
 
-        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Output<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
+            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder answerAggregationType(@Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
+        public Builder answerAggregationType(@Nullable Output<GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType> answerAggregationType) {
             this.answerAggregationType = answerAggregationType;
             return this;
         }
 
         public Builder answerAggregationType(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigAnswerAggregationType answerAggregationType) {
-            this.answerAggregationType = Input.ofNullable(answerAggregationType);
+            this.answerAggregationType = Output.ofNullable(answerAggregationType);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs build() {

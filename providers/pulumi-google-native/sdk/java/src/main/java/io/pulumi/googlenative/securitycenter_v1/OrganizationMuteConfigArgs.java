@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -41,16 +41,16 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<String> filter;
+      private final Output<String> filter;
 
-    public Input<String> getFilter() {
+    public Output<String> getFilter() {
         return this.filter;
     }
 
     @InputImport(name="muteConfigId", required=true)
-      private final Input<String> muteConfigId;
+      private final Output<String> muteConfigId;
 
-    public Input<String> getMuteConfigId() {
+    public Output<String> getMuteConfigId() {
         return this.muteConfigId;
     }
 
@@ -59,26 +59,26 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public OrganizationMuteConfigArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> filter,
-        Input<String> muteConfigId,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> filter,
+        Output<String> muteConfigId,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.description = description;
         this.displayName = displayName;
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
@@ -88,12 +88,12 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     }
 
     private OrganizationMuteConfigArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.filter = Input.empty();
-        this.muteConfigId = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.filter = Output.empty();
+        this.muteConfigId = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,12 +105,12 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> filter;
-        private Input<String> muteConfigId;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> filter;
+        private Output<String> muteConfigId;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -126,63 +126,63 @@ public final class OrganizationMuteConfigArgs extends io.pulumi.resources.Resour
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder filter(Input<String> filter) {
+        public Builder filter(Output<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(String filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder muteConfigId(Input<String> muteConfigId) {
+        public Builder muteConfigId(Output<String> muteConfigId) {
             this.muteConfigId = Objects.requireNonNull(muteConfigId);
             return this;
         }
 
         public Builder muteConfigId(String muteConfigId) {
-            this.muteConfigId = Input.of(Objects.requireNonNull(muteConfigId));
+            this.muteConfigId = Output.of(Objects.requireNonNull(muteConfigId));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public OrganizationMuteConfigArgs build() {

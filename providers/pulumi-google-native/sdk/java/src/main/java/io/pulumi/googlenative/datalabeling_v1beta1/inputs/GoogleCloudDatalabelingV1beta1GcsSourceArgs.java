@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
      * 
      */
     @InputImport(name="inputUri", required=true)
-      private final Input<String> inputUri;
+      private final Output<String> inputUri;
 
-    public Input<String> getInputUri() {
+    public Output<String> getInputUri() {
         return this.inputUri;
     }
 
@@ -33,22 +33,22 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
      * 
      */
     @InputImport(name="mimeType", required=true)
-      private final Input<String> mimeType;
+      private final Output<String> mimeType;
 
-    public Input<String> getMimeType() {
+    public Output<String> getMimeType() {
         return this.mimeType;
     }
 
     public GoogleCloudDatalabelingV1beta1GcsSourceArgs(
-        Input<String> inputUri,
-        Input<String> mimeType) {
+        Output<String> inputUri,
+        Output<String> mimeType) {
         this.inputUri = Objects.requireNonNull(inputUri, "expected parameter 'inputUri' to be non-null");
         this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
     }
 
     private GoogleCloudDatalabelingV1beta1GcsSourceArgs() {
-        this.inputUri = Input.empty();
-        this.mimeType = Input.empty();
+        this.inputUri = Output.empty();
+        this.mimeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<String> inputUri;
-        private Input<String> mimeType;
+        private Output<String> inputUri;
+        private Output<String> mimeType;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceArgs extends io.pulumi
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder inputUri(Input<String> inputUri) {
+        public Builder inputUri(Output<String> inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
 
         public Builder inputUri(String inputUri) {
-            this.inputUri = Input.of(Objects.requireNonNull(inputUri));
+            this.inputUri = Output.of(Objects.requireNonNull(inputUri));
             return this;
         }
 
-        public Builder mimeType(Input<String> mimeType) {
+        public Builder mimeType(Output<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
         public Builder mimeType(String mimeType) {
-            this.mimeType = Input.of(Objects.requireNonNull(mimeType));
+            this.mimeType = Output.of(Objects.requireNonNull(mimeType));
             return this;
         }
         public GoogleCloudDatalabelingV1beta1GcsSourceArgs build() {

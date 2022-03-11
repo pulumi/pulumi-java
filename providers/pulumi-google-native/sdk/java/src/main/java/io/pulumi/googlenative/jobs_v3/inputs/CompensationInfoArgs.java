@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationEntryArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="entries")
-      private final @Nullable Input<List<CompensationEntryArgs>> entries;
+      private final @Nullable Output<List<CompensationEntryArgs>> entries;
 
-    public Input<List<CompensationEntryArgs>> getEntries() {
-        return this.entries == null ? Input.empty() : this.entries;
+    public Output<List<CompensationEntryArgs>> getEntries() {
+        return this.entries == null ? Output.empty() : this.entries;
     }
 
-    public CompensationInfoArgs(@Nullable Input<List<CompensationEntryArgs>> entries) {
+    public CompensationInfoArgs(@Nullable Output<List<CompensationEntryArgs>> entries) {
         this.entries = entries;
     }
 
     private CompensationInfoArgs() {
-        this.entries = Input.empty();
+        this.entries = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CompensationEntryArgs>> entries;
+        private @Nullable Output<List<CompensationEntryArgs>> entries;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
     	      this.entries = defaults.entries;
         }
 
-        public Builder entries(@Nullable Input<List<CompensationEntryArgs>> entries) {
+        public Builder entries(@Nullable Output<List<CompensationEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
         public Builder entries(@Nullable List<CompensationEntryArgs> entries) {
-            this.entries = Input.ofNullable(entries);
+            this.entries = Output.ofNullable(entries);
             return this;
         }
         public CompensationInfoArgs build() {

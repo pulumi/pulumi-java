@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featurePolicy")
-      private final @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
+      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
 
-    public Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> getFeaturePolicy() {
-        return this.featurePolicy == null ? Input.empty() : this.featurePolicy;
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> getFeaturePolicy() {
+        return this.featurePolicy == null ? Output.empty() : this.featurePolicy;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<String> parent;
+      private final @Nullable Output<String> parent;
 
-    public Input<String> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<String> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public InstanceArgs(
-        @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> parent,
-        @Nullable Input<String> project) {
+        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> parent,
+        @Nullable Output<String> project) {
         this.featurePolicy = featurePolicy;
         this.instanceId = instanceId;
         this.location = location;
@@ -80,11 +80,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.featurePolicy = Input.empty();
-        this.instanceId = Input.empty();
-        this.location = Input.empty();
-        this.parent = Input.empty();
-        this.project = Input.empty();
+        this.featurePolicy = Output.empty();
+        this.instanceId = Output.empty();
+        this.location = Output.empty();
+        this.parent = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,11 +96,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> parent;
-        private @Nullable Input<String> project;
+        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> parent;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -115,53 +115,53 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder featurePolicy(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy) {
+        public Builder featurePolicy(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy) {
             this.featurePolicy = featurePolicy;
             return this;
         }
 
         public Builder featurePolicy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs featurePolicy) {
-            this.featurePolicy = Input.ofNullable(featurePolicy);
+            this.featurePolicy = Output.ofNullable(featurePolicy);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder parent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Output<String> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable String parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public InstanceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.HttpRedirectActionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.HttpRouteActionArgs;
@@ -26,10 +26,10 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="paths")
-      private final @Nullable Input<List<String>> paths;
+      private final @Nullable Output<List<String>> paths;
 
-    public Input<List<String>> getPaths() {
-        return this.paths == null ? Input.empty() : this.paths;
+    public Output<List<String>> getPaths() {
+        return this.paths == null ? Output.empty() : this.paths;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeAction")
-      private final @Nullable Input<HttpRouteActionArgs> routeAction;
+      private final @Nullable Output<HttpRouteActionArgs> routeAction;
 
-    public Input<HttpRouteActionArgs> getRouteAction() {
-        return this.routeAction == null ? Input.empty() : this.routeAction;
+    public Output<HttpRouteActionArgs> getRouteAction() {
+        return this.routeAction == null ? Output.empty() : this.routeAction;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlRedirect")
-      private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+      private final @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
-    public Input<HttpRedirectActionArgs> getUrlRedirect() {
-        return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
+    public Output<HttpRedirectActionArgs> getUrlRedirect() {
+        return this.urlRedirect == null ? Output.empty() : this.urlRedirect;
     }
 
     public PathRuleArgs(
-        @Nullable Input<List<String>> paths,
-        @Nullable Input<HttpRouteActionArgs> routeAction,
-        @Nullable Input<String> service,
-        @Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        @Nullable Output<List<String>> paths,
+        @Nullable Output<HttpRouteActionArgs> routeAction,
+        @Nullable Output<String> service,
+        @Nullable Output<HttpRedirectActionArgs> urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;
@@ -77,10 +77,10 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PathRuleArgs() {
-        this.paths = Input.empty();
-        this.routeAction = Input.empty();
-        this.service = Input.empty();
-        this.urlRedirect = Input.empty();
+        this.paths = Output.empty();
+        this.routeAction = Output.empty();
+        this.service = Output.empty();
+        this.urlRedirect = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> paths;
-        private @Nullable Input<HttpRouteActionArgs> routeAction;
-        private @Nullable Input<String> service;
-        private @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+        private @Nullable Output<List<String>> paths;
+        private @Nullable Output<HttpRouteActionArgs> routeAction;
+        private @Nullable Output<String> service;
+        private @Nullable Output<HttpRedirectActionArgs> urlRedirect;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder paths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Output<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Input.ofNullable(paths);
+            this.paths = Output.ofNullable(paths);
             return this;
         }
 
-        public Builder routeAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Output<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
         public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
-            this.routeAction = Input.ofNullable(routeAction);
+            this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder urlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Output<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
         public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
-            this.urlRedirect = Input.ofNullable(urlRedirect);
+            this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
         }
         public PathRuleArgs build() {

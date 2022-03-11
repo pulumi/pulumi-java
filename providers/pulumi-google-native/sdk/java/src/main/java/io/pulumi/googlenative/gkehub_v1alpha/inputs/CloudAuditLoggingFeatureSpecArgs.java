@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allowlistedServiceAccounts")
-      private final @Nullable Input<List<String>> allowlistedServiceAccounts;
+      private final @Nullable Output<List<String>> allowlistedServiceAccounts;
 
-    public Input<List<String>> getAllowlistedServiceAccounts() {
-        return this.allowlistedServiceAccounts == null ? Input.empty() : this.allowlistedServiceAccounts;
+    public Output<List<String>> getAllowlistedServiceAccounts() {
+        return this.allowlistedServiceAccounts == null ? Output.empty() : this.allowlistedServiceAccounts;
     }
 
-    public CloudAuditLoggingFeatureSpecArgs(@Nullable Input<List<String>> allowlistedServiceAccounts) {
+    public CloudAuditLoggingFeatureSpecArgs(@Nullable Output<List<String>> allowlistedServiceAccounts) {
         this.allowlistedServiceAccounts = allowlistedServiceAccounts;
     }
 
     private CloudAuditLoggingFeatureSpecArgs() {
-        this.allowlistedServiceAccounts = Input.empty();
+        this.allowlistedServiceAccounts = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowlistedServiceAccounts;
+        private @Nullable Output<List<String>> allowlistedServiceAccounts;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
     	      this.allowlistedServiceAccounts = defaults.allowlistedServiceAccounts;
         }
 
-        public Builder allowlistedServiceAccounts(@Nullable Input<List<String>> allowlistedServiceAccounts) {
+        public Builder allowlistedServiceAccounts(@Nullable Output<List<String>> allowlistedServiceAccounts) {
             this.allowlistedServiceAccounts = allowlistedServiceAccounts;
             return this;
         }
 
         public Builder allowlistedServiceAccounts(@Nullable List<String> allowlistedServiceAccounts) {
-            this.allowlistedServiceAccounts = Input.ofNullable(allowlistedServiceAccounts);
+            this.allowlistedServiceAccounts = Output.ofNullable(allowlistedServiceAccounts);
             return this;
         }
         public CloudAuditLoggingFeatureSpecArgs build() {

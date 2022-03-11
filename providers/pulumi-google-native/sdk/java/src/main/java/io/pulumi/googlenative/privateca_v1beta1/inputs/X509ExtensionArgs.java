@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
@@ -24,9 +24,9 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="critical", required=true)
-      private final Input<Boolean> critical;
+      private final Output<Boolean> critical;
 
-    public Input<Boolean> getCritical() {
+    public Output<Boolean> getCritical() {
         return this.critical;
     }
 
@@ -35,9 +35,9 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<ObjectIdArgs> objectId;
+      private final Output<ObjectIdArgs> objectId;
 
-    public Input<ObjectIdArgs> getObjectId() {
+    public Output<ObjectIdArgs> getObjectId() {
         return this.objectId;
     }
 
@@ -46,25 +46,25 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public X509ExtensionArgs(
-        Input<Boolean> critical,
-        Input<ObjectIdArgs> objectId,
-        Input<String> value) {
+        Output<Boolean> critical,
+        Output<ObjectIdArgs> objectId,
+        Output<String> value) {
         this.critical = Objects.requireNonNull(critical, "expected parameter 'critical' to be non-null");
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private X509ExtensionArgs() {
-        this.critical = Input.empty();
-        this.objectId = Input.empty();
-        this.value = Input.empty();
+        this.critical = Output.empty();
+        this.objectId = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> critical;
-        private Input<ObjectIdArgs> objectId;
-        private Input<String> value;
+        private Output<Boolean> critical;
+        private Output<ObjectIdArgs> objectId;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder critical(Input<Boolean> critical) {
+        public Builder critical(Output<Boolean> critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
         public Builder critical(Boolean critical) {
-            this.critical = Input.of(Objects.requireNonNull(critical));
+            this.critical = Output.of(Objects.requireNonNull(critical));
             return this;
         }
 
-        public Builder objectId(Input<ObjectIdArgs> objectId) {
+        public Builder objectId(Output<ObjectIdArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(ObjectIdArgs objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public X509ExtensionArgs build() {

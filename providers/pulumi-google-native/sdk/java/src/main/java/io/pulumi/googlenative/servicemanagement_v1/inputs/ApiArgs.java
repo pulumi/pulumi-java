@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.ApiSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MethodArgs;
@@ -29,10 +29,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methods")
-      private final @Nullable Input<List<MethodArgs>> methods;
+      private final @Nullable Output<List<MethodArgs>> methods;
 
-    public Input<List<MethodArgs>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<MethodArgs>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mixins")
-      private final @Nullable Input<List<MixinArgs>> mixins;
+      private final @Nullable Output<List<MixinArgs>> mixins;
 
-    public Input<List<MixinArgs>> getMixins() {
-        return this.mixins == null ? Input.empty() : this.mixins;
+    public Output<List<MixinArgs>> getMixins() {
+        return this.mixins == null ? Output.empty() : this.mixins;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceContext")
-      private final @Nullable Input<SourceContextArgs> sourceContext;
+      private final @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Input<SourceContextArgs> getSourceContext() {
-        return this.sourceContext == null ? Input.empty() : this.sourceContext;
+    public Output<SourceContextArgs> getSourceContext() {
+        return this.sourceContext == null ? Output.empty() : this.sourceContext;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-      private final @Nullable Input<ApiSyntax> syntax;
+      private final @Nullable Output<ApiSyntax> syntax;
 
-    public Input<ApiSyntax> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<ApiSyntax> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     /**
@@ -95,20 +95,20 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ApiArgs(
-        @Nullable Input<List<MethodArgs>> methods,
-        @Nullable Input<List<MixinArgs>> mixins,
-        @Nullable Input<String> name,
-        @Nullable Input<List<OptionArgs>> options,
-        @Nullable Input<SourceContextArgs> sourceContext,
-        @Nullable Input<ApiSyntax> syntax,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<MethodArgs>> methods,
+        @Nullable Output<List<MixinArgs>> mixins,
+        @Nullable Output<String> name,
+        @Nullable Output<List<OptionArgs>> options,
+        @Nullable Output<SourceContextArgs> sourceContext,
+        @Nullable Output<ApiSyntax> syntax,
+        @Nullable Output<String> version) {
         this.methods = methods;
         this.mixins = mixins;
         this.name = name;
@@ -119,13 +119,13 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.methods = Input.empty();
-        this.mixins = Input.empty();
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.sourceContext = Input.empty();
-        this.syntax = Input.empty();
-        this.version = Input.empty();
+        this.methods = Output.empty();
+        this.mixins = Output.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.sourceContext = Output.empty();
+        this.syntax = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,13 +137,13 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MethodArgs>> methods;
-        private @Nullable Input<List<MixinArgs>> mixins;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<OptionArgs>> options;
-        private @Nullable Input<SourceContextArgs> sourceContext;
-        private @Nullable Input<ApiSyntax> syntax;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<MethodArgs>> methods;
+        private @Nullable Output<List<MixinArgs>> mixins;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<OptionArgs>> options;
+        private @Nullable Output<SourceContextArgs> sourceContext;
+        private @Nullable Output<ApiSyntax> syntax;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -160,73 +160,73 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder methods(@Nullable Input<List<MethodArgs>> methods) {
+        public Builder methods(@Nullable Output<List<MethodArgs>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<MethodArgs> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder mixins(@Nullable Input<List<MixinArgs>> mixins) {
+        public Builder mixins(@Nullable Output<List<MixinArgs>> mixins) {
             this.mixins = mixins;
             return this;
         }
 
         public Builder mixins(@Nullable List<MixinArgs> mixins) {
-            this.mixins = Input.ofNullable(mixins);
+            this.mixins = Output.ofNullable(mixins);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Input.ofNullable(sourceContext);
+            this.sourceContext = Output.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<ApiSyntax> syntax) {
+        public Builder syntax(@Nullable Output<ApiSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable ApiSyntax syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ApiArgs build() {

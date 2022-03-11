@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceAttemptResultArgs;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completionTime")
-      private final @Nullable Input<String> completionTime;
+      private final @Nullable Output<String> completionTime;
 
-    public Input<String> getCompletionTime() {
-        return this.completionTime == null ? Input.empty() : this.completionTime;
+    public Output<String> getCompletionTime() {
+        return this.completionTime == null ? Output.empty() : this.completionTime;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failed")
-      private final @Nullable Input<Integer> failed;
+      private final @Nullable Output<Integer> failed;
 
-    public Input<Integer> getFailed() {
-        return this.failed == null ? Input.empty() : this.failed;
+    public Output<Integer> getFailed() {
+        return this.failed == null ? Output.empty() : this.failed;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="index", required=true)
-      private final Input<Integer> index;
+      private final Output<Integer> index;
 
-    public Input<Integer> getIndex() {
+    public Output<Integer> getIndex() {
         return this.index;
     }
 
@@ -58,10 +58,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastAttemptResult")
-      private final @Nullable Input<InstanceAttemptResultArgs> lastAttemptResult;
+      private final @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
 
-    public Input<InstanceAttemptResultArgs> getLastAttemptResult() {
-        return this.lastAttemptResult == null ? Input.empty() : this.lastAttemptResult;
+    public Output<InstanceAttemptResultArgs> getLastAttemptResult() {
+        return this.lastAttemptResult == null ? Output.empty() : this.lastAttemptResult;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastExitCode")
-      private final @Nullable Input<Integer> lastExitCode;
+      private final @Nullable Output<Integer> lastExitCode;
 
-    public Input<Integer> getLastExitCode() {
-        return this.lastExitCode == null ? Input.empty() : this.lastExitCode;
+    public Output<Integer> getLastExitCode() {
+        return this.lastExitCode == null ? Output.empty() : this.lastExitCode;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restarted")
-      private final @Nullable Input<Integer> restarted;
+      private final @Nullable Output<Integer> restarted;
 
-    public Input<Integer> getRestarted() {
-        return this.restarted == null ? Input.empty() : this.restarted;
+    public Output<Integer> getRestarted() {
+        return this.restarted == null ? Output.empty() : this.restarted;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="succeeded")
-      private final @Nullable Input<Integer> succeeded;
+      private final @Nullable Output<Integer> succeeded;
 
-    public Input<Integer> getSucceeded() {
-        return this.succeeded == null ? Input.empty() : this.succeeded;
+    public Output<Integer> getSucceeded() {
+        return this.succeeded == null ? Output.empty() : this.succeeded;
     }
 
     public InstanceStatusArgs(
-        @Nullable Input<String> completionTime,
-        @Nullable Input<Integer> failed,
-        Input<Integer> index,
-        @Nullable Input<InstanceAttemptResultArgs> lastAttemptResult,
-        @Nullable Input<Integer> lastExitCode,
-        @Nullable Input<Integer> restarted,
-        @Nullable Input<String> startTime,
-        @Nullable Input<Integer> succeeded) {
+        @Nullable Output<String> completionTime,
+        @Nullable Output<Integer> failed,
+        Output<Integer> index,
+        @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult,
+        @Nullable Output<Integer> lastExitCode,
+        @Nullable Output<Integer> restarted,
+        @Nullable Output<String> startTime,
+        @Nullable Output<Integer> succeeded) {
         this.completionTime = completionTime;
         this.failed = failed;
         this.index = Objects.requireNonNull(index, "expected parameter 'index' to be non-null");
@@ -128,14 +128,14 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceStatusArgs() {
-        this.completionTime = Input.empty();
-        this.failed = Input.empty();
-        this.index = Input.empty();
-        this.lastAttemptResult = Input.empty();
-        this.lastExitCode = Input.empty();
-        this.restarted = Input.empty();
-        this.startTime = Input.empty();
-        this.succeeded = Input.empty();
+        this.completionTime = Output.empty();
+        this.failed = Output.empty();
+        this.index = Output.empty();
+        this.lastAttemptResult = Output.empty();
+        this.lastExitCode = Output.empty();
+        this.restarted = Output.empty();
+        this.startTime = Output.empty();
+        this.succeeded = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> completionTime;
-        private @Nullable Input<Integer> failed;
-        private Input<Integer> index;
-        private @Nullable Input<InstanceAttemptResultArgs> lastAttemptResult;
-        private @Nullable Input<Integer> lastExitCode;
-        private @Nullable Input<Integer> restarted;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<Integer> succeeded;
+        private @Nullable Output<String> completionTime;
+        private @Nullable Output<Integer> failed;
+        private Output<Integer> index;
+        private @Nullable Output<InstanceAttemptResultArgs> lastAttemptResult;
+        private @Nullable Output<Integer> lastExitCode;
+        private @Nullable Output<Integer> restarted;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<Integer> succeeded;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class InstanceStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder completionTime(@Nullable Input<String> completionTime) {
+        public Builder completionTime(@Nullable Output<String> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
         public Builder completionTime(@Nullable String completionTime) {
-            this.completionTime = Input.ofNullable(completionTime);
+            this.completionTime = Output.ofNullable(completionTime);
             return this;
         }
 
-        public Builder failed(@Nullable Input<Integer> failed) {
+        public Builder failed(@Nullable Output<Integer> failed) {
             this.failed = failed;
             return this;
         }
 
         public Builder failed(@Nullable Integer failed) {
-            this.failed = Input.ofNullable(failed);
+            this.failed = Output.ofNullable(failed);
             return this;
         }
 
-        public Builder index(Input<Integer> index) {
+        public Builder index(Output<Integer> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
         public Builder index(Integer index) {
-            this.index = Input.of(Objects.requireNonNull(index));
+            this.index = Output.of(Objects.requireNonNull(index));
             return this;
         }
 
-        public Builder lastAttemptResult(@Nullable Input<InstanceAttemptResultArgs> lastAttemptResult) {
+        public Builder lastAttemptResult(@Nullable Output<InstanceAttemptResultArgs> lastAttemptResult) {
             this.lastAttemptResult = lastAttemptResult;
             return this;
         }
 
         public Builder lastAttemptResult(@Nullable InstanceAttemptResultArgs lastAttemptResult) {
-            this.lastAttemptResult = Input.ofNullable(lastAttemptResult);
+            this.lastAttemptResult = Output.ofNullable(lastAttemptResult);
             return this;
         }
 
-        public Builder lastExitCode(@Nullable Input<Integer> lastExitCode) {
+        public Builder lastExitCode(@Nullable Output<Integer> lastExitCode) {
             this.lastExitCode = lastExitCode;
             return this;
         }
 
         public Builder lastExitCode(@Nullable Integer lastExitCode) {
-            this.lastExitCode = Input.ofNullable(lastExitCode);
+            this.lastExitCode = Output.ofNullable(lastExitCode);
             return this;
         }
 
-        public Builder restarted(@Nullable Input<Integer> restarted) {
+        public Builder restarted(@Nullable Output<Integer> restarted) {
             this.restarted = restarted;
             return this;
         }
 
         public Builder restarted(@Nullable Integer restarted) {
-            this.restarted = Input.ofNullable(restarted);
+            this.restarted = Output.ofNullable(restarted);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder succeeded(@Nullable Input<Integer> succeeded) {
+        public Builder succeeded(@Nullable Output<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
         public Builder succeeded(@Nullable Integer succeeded) {
-            this.succeeded = Input.ofNullable(succeeded);
+            this.succeeded = Output.ofNullable(succeeded);
             return this;
         }
         public InstanceStatusArgs build() {

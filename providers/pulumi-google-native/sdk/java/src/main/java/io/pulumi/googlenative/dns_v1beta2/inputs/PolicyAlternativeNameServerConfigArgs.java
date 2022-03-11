@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     public static final PolicyAlternativeNameServerConfigArgs Empty = new PolicyAlternativeNameServerConfigArgs();
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -28,22 +28,22 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetNameServers")
-      private final @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+      private final @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
-    public Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
-        return this.targetNameServers == null ? Input.empty() : this.targetNameServers;
+    public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
+        return this.targetNameServers == null ? Output.empty() : this.targetNameServers;
     }
 
     public PolicyAlternativeNameServerConfigArgs(
-        @Nullable Input<String> kind,
-        @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
+        @Nullable Output<String> kind,
+        @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }
 
     private PolicyAlternativeNameServerConfigArgs() {
-        this.kind = Input.empty();
-        this.targetNameServers = Input.empty();
+        this.kind = Output.empty();
+        this.targetNameServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder targetNameServers(@Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
+        public Builder targetNameServers(@Nullable Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers) {
             this.targetNameServers = targetNameServers;
             return this;
         }
 
         public Builder targetNameServers(@Nullable List<PolicyAlternativeNameServerConfigTargetNameServerArgs> targetNameServers) {
-            this.targetNameServers = Input.ofNullable(targetNameServers);
+            this.targetNameServers = Output.ofNullable(targetNameServers);
             return this;
         }
         public PolicyAlternativeNameServerConfigArgs build() {

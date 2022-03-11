@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic")
-      private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
+    public Output<String> getPubsubTopic() {
+        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sendForBulkImport")
-      private final @Nullable Input<Boolean> sendForBulkImport;
+      private final @Nullable Output<Boolean> sendForBulkImport;
 
-    public Input<Boolean> getSendForBulkImport() {
-        return this.sendForBulkImport == null ? Input.empty() : this.sendForBulkImport;
+    public Output<Boolean> getSendForBulkImport() {
+        return this.sendForBulkImport == null ? Output.empty() : this.sendForBulkImport;
     }
 
     public NotificationConfigArgs(
-        @Nullable Input<String> pubsubTopic,
-        @Nullable Input<Boolean> sendForBulkImport) {
+        @Nullable Output<String> pubsubTopic,
+        @Nullable Output<Boolean> sendForBulkImport) {
         this.pubsubTopic = pubsubTopic;
         this.sendForBulkImport = sendForBulkImport;
     }
 
     private NotificationConfigArgs() {
-        this.pubsubTopic = Input.empty();
-        this.sendForBulkImport = Input.empty();
+        this.pubsubTopic = Output.empty();
+        this.sendForBulkImport = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pubsubTopic;
-        private @Nullable Input<Boolean> sendForBulkImport;
+        private @Nullable Output<String> pubsubTopic;
+        private @Nullable Output<Boolean> sendForBulkImport;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.sendForBulkImport = defaults.sendForBulkImport;
         }
 
-        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Input.ofNullable(pubsubTopic);
+            this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
 
-        public Builder sendForBulkImport(@Nullable Input<Boolean> sendForBulkImport) {
+        public Builder sendForBulkImport(@Nullable Output<Boolean> sendForBulkImport) {
             this.sendForBulkImport = sendForBulkImport;
             return this;
         }
 
         public Builder sendForBulkImport(@Nullable Boolean sendForBulkImport) {
-            this.sendForBulkImport = Input.ofNullable(sendForBulkImport);
+            this.sendForBulkImport = Output.ofNullable(sendForBulkImport);
             return this;
         }
         public NotificationConfigArgs build() {

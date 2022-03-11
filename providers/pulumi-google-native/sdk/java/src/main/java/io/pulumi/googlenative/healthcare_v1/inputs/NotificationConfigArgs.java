@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsubTopic")
-      private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
+    public Output<String> getPubsubTopic() {
+        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
     }
 
-    public NotificationConfigArgs(@Nullable Input<String> pubsubTopic) {
+    public NotificationConfigArgs(@Nullable Output<String> pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 
     private NotificationConfigArgs() {
-        this.pubsubTopic = Input.empty();
+        this.pubsubTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> pubsubTopic;
+        private @Nullable Output<String> pubsubTopic;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Input.ofNullable(pubsubTopic);
+            this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
         public NotificationConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
@@ -25,10 +25,10 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intotoStatement")
-      private final @Nullable Input<InTotoStatementArgs> intotoStatement;
+      private final @Nullable Output<InTotoStatementArgs> intotoStatement;
 
-    public Input<InTotoStatementArgs> getIntotoStatement() {
-        return this.intotoStatement == null ? Input.empty() : this.intotoStatement;
+    public Output<InTotoStatementArgs> getIntotoStatement() {
+        return this.intotoStatement == null ? Output.empty() : this.intotoStatement;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provenance")
-      private final @Nullable Input<BuildProvenanceArgs> provenance;
+      private final @Nullable Output<BuildProvenanceArgs> provenance;
 
-    public Input<BuildProvenanceArgs> getProvenance() {
-        return this.provenance == null ? Input.empty() : this.provenance;
+    public Output<BuildProvenanceArgs> getProvenance() {
+        return this.provenance == null ? Output.empty() : this.provenance;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provenanceBytes")
-      private final @Nullable Input<String> provenanceBytes;
+      private final @Nullable Output<String> provenanceBytes;
 
-    public Input<String> getProvenanceBytes() {
-        return this.provenanceBytes == null ? Input.empty() : this.provenanceBytes;
+    public Output<String> getProvenanceBytes() {
+        return this.provenanceBytes == null ? Output.empty() : this.provenanceBytes;
     }
 
     public BuildDetailsArgs(
-        @Nullable Input<InTotoStatementArgs> intotoStatement,
-        @Nullable Input<BuildProvenanceArgs> provenance,
-        @Nullable Input<String> provenanceBytes) {
+        @Nullable Output<InTotoStatementArgs> intotoStatement,
+        @Nullable Output<BuildProvenanceArgs> provenance,
+        @Nullable Output<String> provenanceBytes) {
         this.intotoStatement = intotoStatement;
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;
     }
 
     private BuildDetailsArgs() {
-        this.intotoStatement = Input.empty();
-        this.provenance = Input.empty();
-        this.provenanceBytes = Input.empty();
+        this.intotoStatement = Output.empty();
+        this.provenance = Output.empty();
+        this.provenanceBytes = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<InTotoStatementArgs> intotoStatement;
-        private @Nullable Input<BuildProvenanceArgs> provenance;
-        private @Nullable Input<String> provenanceBytes;
+        private @Nullable Output<InTotoStatementArgs> intotoStatement;
+        private @Nullable Output<BuildProvenanceArgs> provenance;
+        private @Nullable Output<String> provenanceBytes;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder intotoStatement(@Nullable Input<InTotoStatementArgs> intotoStatement) {
+        public Builder intotoStatement(@Nullable Output<InTotoStatementArgs> intotoStatement) {
             this.intotoStatement = intotoStatement;
             return this;
         }
 
         public Builder intotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
-            this.intotoStatement = Input.ofNullable(intotoStatement);
+            this.intotoStatement = Output.ofNullable(intotoStatement);
             return this;
         }
 
-        public Builder provenance(@Nullable Input<BuildProvenanceArgs> provenance) {
+        public Builder provenance(@Nullable Output<BuildProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
 
         public Builder provenance(@Nullable BuildProvenanceArgs provenance) {
-            this.provenance = Input.ofNullable(provenance);
+            this.provenance = Output.ofNullable(provenance);
             return this;
         }
 
-        public Builder provenanceBytes(@Nullable Input<String> provenanceBytes) {
+        public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
             this.provenanceBytes = provenanceBytes;
             return this;
         }
 
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Input.ofNullable(provenanceBytes);
+            this.provenanceBytes = Output.ofNullable(provenanceBytes);
             return this;
         }
         public BuildDetailsArgs build() {

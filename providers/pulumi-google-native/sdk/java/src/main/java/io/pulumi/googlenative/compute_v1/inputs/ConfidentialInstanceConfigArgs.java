@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableConfidentialCompute")
-      private final @Nullable Input<Boolean> enableConfidentialCompute;
+      private final @Nullable Output<Boolean> enableConfidentialCompute;
 
-    public Input<Boolean> getEnableConfidentialCompute() {
-        return this.enableConfidentialCompute == null ? Input.empty() : this.enableConfidentialCompute;
+    public Output<Boolean> getEnableConfidentialCompute() {
+        return this.enableConfidentialCompute == null ? Output.empty() : this.enableConfidentialCompute;
     }
 
-    public ConfidentialInstanceConfigArgs(@Nullable Input<Boolean> enableConfidentialCompute) {
+    public ConfidentialInstanceConfigArgs(@Nullable Output<Boolean> enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
     private ConfidentialInstanceConfigArgs() {
-        this.enableConfidentialCompute = Input.empty();
+        this.enableConfidentialCompute = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableConfidentialCompute;
+        private @Nullable Output<Boolean> enableConfidentialCompute;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConfidentialInstanceConfigArgs extends io.pulumi.resources.Re
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder enableConfidentialCompute(@Nullable Input<Boolean> enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(@Nullable Output<Boolean> enableConfidentialCompute) {
             this.enableConfidentialCompute = enableConfidentialCompute;
             return this;
         }
 
         public Builder enableConfidentialCompute(@Nullable Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Input.ofNullable(enableConfidentialCompute);
+            this.enableConfidentialCompute = Output.ofNullable(enableConfidentialCompute);
             return this;
         }
         public ConfidentialInstanceConfigArgs build() {

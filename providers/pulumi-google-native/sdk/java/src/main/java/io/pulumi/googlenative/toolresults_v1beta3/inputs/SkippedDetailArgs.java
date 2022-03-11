@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleAppVersion")
-      private final @Nullable Input<Boolean> incompatibleAppVersion;
+      private final @Nullable Output<Boolean> incompatibleAppVersion;
 
-    public Input<Boolean> getIncompatibleAppVersion() {
-        return this.incompatibleAppVersion == null ? Input.empty() : this.incompatibleAppVersion;
+    public Output<Boolean> getIncompatibleAppVersion() {
+        return this.incompatibleAppVersion == null ? Output.empty() : this.incompatibleAppVersion;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleArchitecture")
-      private final @Nullable Input<Boolean> incompatibleArchitecture;
+      private final @Nullable Output<Boolean> incompatibleArchitecture;
 
-    public Input<Boolean> getIncompatibleArchitecture() {
-        return this.incompatibleArchitecture == null ? Input.empty() : this.incompatibleArchitecture;
+    public Output<Boolean> getIncompatibleArchitecture() {
+        return this.incompatibleArchitecture == null ? Output.empty() : this.incompatibleArchitecture;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incompatibleDevice")
-      private final @Nullable Input<Boolean> incompatibleDevice;
+      private final @Nullable Output<Boolean> incompatibleDevice;
 
-    public Input<Boolean> getIncompatibleDevice() {
-        return this.incompatibleDevice == null ? Input.empty() : this.incompatibleDevice;
+    public Output<Boolean> getIncompatibleDevice() {
+        return this.incompatibleDevice == null ? Output.empty() : this.incompatibleDevice;
     }
 
     public SkippedDetailArgs(
-        @Nullable Input<Boolean> incompatibleAppVersion,
-        @Nullable Input<Boolean> incompatibleArchitecture,
-        @Nullable Input<Boolean> incompatibleDevice) {
+        @Nullable Output<Boolean> incompatibleAppVersion,
+        @Nullable Output<Boolean> incompatibleArchitecture,
+        @Nullable Output<Boolean> incompatibleDevice) {
         this.incompatibleAppVersion = incompatibleAppVersion;
         this.incompatibleArchitecture = incompatibleArchitecture;
         this.incompatibleDevice = incompatibleDevice;
     }
 
     private SkippedDetailArgs() {
-        this.incompatibleAppVersion = Input.empty();
-        this.incompatibleArchitecture = Input.empty();
-        this.incompatibleDevice = Input.empty();
+        this.incompatibleAppVersion = Output.empty();
+        this.incompatibleArchitecture = Output.empty();
+        this.incompatibleDevice = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> incompatibleAppVersion;
-        private @Nullable Input<Boolean> incompatibleArchitecture;
-        private @Nullable Input<Boolean> incompatibleDevice;
+        private @Nullable Output<Boolean> incompatibleAppVersion;
+        private @Nullable Output<Boolean> incompatibleArchitecture;
+        private @Nullable Output<Boolean> incompatibleDevice;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.incompatibleDevice = defaults.incompatibleDevice;
         }
 
-        public Builder incompatibleAppVersion(@Nullable Input<Boolean> incompatibleAppVersion) {
+        public Builder incompatibleAppVersion(@Nullable Output<Boolean> incompatibleAppVersion) {
             this.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
 
         public Builder incompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
-            this.incompatibleAppVersion = Input.ofNullable(incompatibleAppVersion);
+            this.incompatibleAppVersion = Output.ofNullable(incompatibleAppVersion);
             return this;
         }
 
-        public Builder incompatibleArchitecture(@Nullable Input<Boolean> incompatibleArchitecture) {
+        public Builder incompatibleArchitecture(@Nullable Output<Boolean> incompatibleArchitecture) {
             this.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
 
         public Builder incompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
-            this.incompatibleArchitecture = Input.ofNullable(incompatibleArchitecture);
+            this.incompatibleArchitecture = Output.ofNullable(incompatibleArchitecture);
             return this;
         }
 
-        public Builder incompatibleDevice(@Nullable Input<Boolean> incompatibleDevice) {
+        public Builder incompatibleDevice(@Nullable Output<Boolean> incompatibleDevice) {
             this.incompatibleDevice = incompatibleDevice;
             return this;
         }
 
         public Builder incompatibleDevice(@Nullable Boolean incompatibleDevice) {
-            this.incompatibleDevice = Input.ofNullable(incompatibleDevice);
+            this.incompatibleDevice = Output.ofNullable(incompatibleDevice);
             return this;
         }
         public SkippedDetailArgs build() {

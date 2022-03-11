@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automlModel")
-      private final @Nullable Input<String> automlModel;
+      private final @Nullable Output<String> automlModel;
 
-    public Input<String> getAutomlModel() {
-        return this.automlModel == null ? Input.empty() : this.automlModel;
+    public Output<String> getAutomlModel() {
+        return this.automlModel == null ? Output.empty() : this.automlModel;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsTfliteUri")
-      private final @Nullable Input<String> gcsTfliteUri;
+      private final @Nullable Output<String> gcsTfliteUri;
 
-    public Input<String> getGcsTfliteUri() {
-        return this.gcsTfliteUri == null ? Input.empty() : this.gcsTfliteUri;
+    public Output<String> getGcsTfliteUri() {
+        return this.gcsTfliteUri == null ? Output.empty() : this.gcsTfliteUri;
     }
 
     public TfLiteModelArgs(
-        @Nullable Input<String> automlModel,
-        @Nullable Input<String> gcsTfliteUri) {
+        @Nullable Output<String> automlModel,
+        @Nullable Output<String> gcsTfliteUri) {
         this.automlModel = automlModel;
         this.gcsTfliteUri = gcsTfliteUri;
     }
 
     private TfLiteModelArgs() {
-        this.automlModel = Input.empty();
-        this.gcsTfliteUri = Input.empty();
+        this.automlModel = Output.empty();
+        this.gcsTfliteUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> automlModel;
-        private @Nullable Input<String> gcsTfliteUri;
+        private @Nullable Output<String> automlModel;
+        private @Nullable Output<String> gcsTfliteUri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gcsTfliteUri = defaults.gcsTfliteUri;
         }
 
-        public Builder automlModel(@Nullable Input<String> automlModel) {
+        public Builder automlModel(@Nullable Output<String> automlModel) {
             this.automlModel = automlModel;
             return this;
         }
 
         public Builder automlModel(@Nullable String automlModel) {
-            this.automlModel = Input.ofNullable(automlModel);
+            this.automlModel = Output.ofNullable(automlModel);
             return this;
         }
 
-        public Builder gcsTfliteUri(@Nullable Input<String> gcsTfliteUri) {
+        public Builder gcsTfliteUri(@Nullable Output<String> gcsTfliteUri) {
             this.gcsTfliteUri = gcsTfliteUri;
             return this;
         }
 
         public Builder gcsTfliteUri(@Nullable String gcsTfliteUri) {
-            this.gcsTfliteUri = Input.ofNullable(gcsTfliteUri);
+            this.gcsTfliteUri = Output.ofNullable(gcsTfliteUri);
             return this;
         }
         public TfLiteModelArgs build() {

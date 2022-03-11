@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta2.inputs.PushConfigArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ackDeadlineSeconds")
-      private final @Nullable Input<Integer> ackDeadlineSeconds;
+      private final @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Input<Integer> getAckDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
+    public Output<Integer> getAckDeadlineSeconds() {
+        return this.ackDeadlineSeconds == null ? Output.empty() : this.ackDeadlineSeconds;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -50,16 +50,16 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushConfig")
-      private final @Nullable Input<PushConfigArgs> pushConfig;
+      private final @Nullable Output<PushConfigArgs> pushConfig;
 
-    public Input<PushConfigArgs> getPushConfig() {
-        return this.pushConfig == null ? Input.empty() : this.pushConfig;
+    public Output<PushConfigArgs> getPushConfig() {
+        return this.pushConfig == null ? Output.empty() : this.pushConfig;
     }
 
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
@@ -68,19 +68,19 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<Integer> ackDeadlineSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<PushConfigArgs> pushConfig,
-        Input<String> subscriptionId,
-        @Nullable Input<String> topic) {
+        @Nullable Output<Integer> ackDeadlineSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<PushConfigArgs> pushConfig,
+        Output<String> subscriptionId,
+        @Nullable Output<String> topic) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.name = name;
         this.project = project;
@@ -90,12 +90,12 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.pushConfig = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.topic = Input.empty();
+        this.ackDeadlineSeconds = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.pushConfig = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,12 +107,12 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> ackDeadlineSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<PushConfigArgs> pushConfig;
-        private Input<String> subscriptionId;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<Integer> ackDeadlineSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<PushConfigArgs> pushConfig;
+        private Output<String> subscriptionId;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -128,63 +128,63 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder ackDeadlineSeconds(@Nullable Input<Integer> ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Input.ofNullable(ackDeadlineSeconds);
+            this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder pushConfig(@Nullable Input<PushConfigArgs> pushConfig) {
+        public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
 
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Input.ofNullable(pushConfig);
+            this.pushConfig = Output.ofNullable(pushConfig);
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public SubscriptionArgs build() {

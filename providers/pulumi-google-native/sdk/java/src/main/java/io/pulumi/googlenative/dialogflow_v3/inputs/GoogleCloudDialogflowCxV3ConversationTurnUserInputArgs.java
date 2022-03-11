@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3QueryInputArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="enableSentimentAnalysis")
-      private final @Nullable Input<Boolean> enableSentimentAnalysis;
+      private final @Nullable Output<Boolean> enableSentimentAnalysis;
 
-    public Input<Boolean> getEnableSentimentAnalysis() {
-        return this.enableSentimentAnalysis == null ? Input.empty() : this.enableSentimentAnalysis;
+    public Output<Boolean> getEnableSentimentAnalysis() {
+        return this.enableSentimentAnalysis == null ? Output.empty() : this.enableSentimentAnalysis;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="injectedParameters")
-      private final @Nullable Input<Map<String,String>> injectedParameters;
+      private final @Nullable Output<Map<String,String>> injectedParameters;
 
-    public Input<Map<String,String>> getInjectedParameters() {
-        return this.injectedParameters == null ? Input.empty() : this.injectedParameters;
+    public Output<Map<String,String>> getInjectedParameters() {
+        return this.injectedParameters == null ? Output.empty() : this.injectedParameters;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="input")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input;
 
-    public Input<GoogleCloudDialogflowCxV3QueryInputArgs> getInput() {
-        return this.input == null ? Input.empty() : this.input;
+    public Output<GoogleCloudDialogflowCxV3QueryInputArgs> getInput() {
+        return this.input == null ? Output.empty() : this.input;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
      * 
      */
     @InputImport(name="isWebhookEnabled")
-      private final @Nullable Input<Boolean> isWebhookEnabled;
+      private final @Nullable Output<Boolean> isWebhookEnabled;
 
-    public Input<Boolean> getIsWebhookEnabled() {
-        return this.isWebhookEnabled == null ? Input.empty() : this.isWebhookEnabled;
+    public Output<Boolean> getIsWebhookEnabled() {
+        return this.isWebhookEnabled == null ? Output.empty() : this.isWebhookEnabled;
     }
 
     public GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs(
-        @Nullable Input<Boolean> enableSentimentAnalysis,
-        @Nullable Input<Map<String,String>> injectedParameters,
-        @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input,
-        @Nullable Input<Boolean> isWebhookEnabled) {
+        @Nullable Output<Boolean> enableSentimentAnalysis,
+        @Nullable Output<Map<String,String>> injectedParameters,
+        @Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input,
+        @Nullable Output<Boolean> isWebhookEnabled) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         this.injectedParameters = injectedParameters;
         this.input = input;
@@ -77,10 +77,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     }
 
     private GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs() {
-        this.enableSentimentAnalysis = Input.empty();
-        this.injectedParameters = Input.empty();
-        this.input = Input.empty();
-        this.isWebhookEnabled = Input.empty();
+        this.enableSentimentAnalysis = Output.empty();
+        this.injectedParameters = Output.empty();
+        this.input = Output.empty();
+        this.isWebhookEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableSentimentAnalysis;
-        private @Nullable Input<Map<String,String>> injectedParameters;
-        private @Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input;
-        private @Nullable Input<Boolean> isWebhookEnabled;
+        private @Nullable Output<Boolean> enableSentimentAnalysis;
+        private @Nullable Output<Map<String,String>> injectedParameters;
+        private @Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input;
+        private @Nullable Output<Boolean> isWebhookEnabled;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs extend
     	      this.isWebhookEnabled = defaults.isWebhookEnabled;
         }
 
-        public Builder enableSentimentAnalysis(@Nullable Input<Boolean> enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
             this.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
 
         public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
-            this.enableSentimentAnalysis = Input.ofNullable(enableSentimentAnalysis);
+            this.enableSentimentAnalysis = Output.ofNullable(enableSentimentAnalysis);
             return this;
         }
 
-        public Builder injectedParameters(@Nullable Input<Map<String,String>> injectedParameters) {
+        public Builder injectedParameters(@Nullable Output<Map<String,String>> injectedParameters) {
             this.injectedParameters = injectedParameters;
             return this;
         }
 
         public Builder injectedParameters(@Nullable Map<String,String> injectedParameters) {
-            this.injectedParameters = Input.ofNullable(injectedParameters);
+            this.injectedParameters = Output.ofNullable(injectedParameters);
             return this;
         }
 
-        public Builder input(@Nullable Input<GoogleCloudDialogflowCxV3QueryInputArgs> input) {
+        public Builder input(@Nullable Output<GoogleCloudDialogflowCxV3QueryInputArgs> input) {
             this.input = input;
             return this;
         }
 
         public Builder input(@Nullable GoogleCloudDialogflowCxV3QueryInputArgs input) {
-            this.input = Input.ofNullable(input);
+            this.input = Output.ofNullable(input);
             return this;
         }
 
-        public Builder isWebhookEnabled(@Nullable Input<Boolean> isWebhookEnabled) {
+        public Builder isWebhookEnabled(@Nullable Output<Boolean> isWebhookEnabled) {
             this.isWebhookEnabled = isWebhookEnabled;
             return this;
         }
 
         public Builder isWebhookEnabled(@Nullable Boolean isWebhookEnabled) {
-            this.isWebhookEnabled = Input.ofNullable(isWebhookEnabled);
+            this.isWebhookEnabled = Output.ofNullable(isWebhookEnabled);
             return this;
         }
         public GoogleCloudDialogflowCxV3ConversationTurnUserInputArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableFhirpathValidation")
-      private final @Nullable Input<Boolean> disableFhirpathValidation;
+      private final @Nullable Output<Boolean> disableFhirpathValidation;
 
-    public Input<Boolean> getDisableFhirpathValidation() {
-        return this.disableFhirpathValidation == null ? Input.empty() : this.disableFhirpathValidation;
+    public Output<Boolean> getDisableFhirpathValidation() {
+        return this.disableFhirpathValidation == null ? Output.empty() : this.disableFhirpathValidation;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableProfileValidation")
-      private final @Nullable Input<Boolean> disableProfileValidation;
+      private final @Nullable Output<Boolean> disableProfileValidation;
 
-    public Input<Boolean> getDisableProfileValidation() {
-        return this.disableProfileValidation == null ? Input.empty() : this.disableProfileValidation;
+    public Output<Boolean> getDisableProfileValidation() {
+        return this.disableProfileValidation == null ? Output.empty() : this.disableProfileValidation;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableReferenceTypeValidation")
-      private final @Nullable Input<Boolean> disableReferenceTypeValidation;
+      private final @Nullable Output<Boolean> disableReferenceTypeValidation;
 
-    public Input<Boolean> getDisableReferenceTypeValidation() {
-        return this.disableReferenceTypeValidation == null ? Input.empty() : this.disableReferenceTypeValidation;
+    public Output<Boolean> getDisableReferenceTypeValidation() {
+        return this.disableReferenceTypeValidation == null ? Output.empty() : this.disableReferenceTypeValidation;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableRequiredFieldValidation")
-      private final @Nullable Input<Boolean> disableRequiredFieldValidation;
+      private final @Nullable Output<Boolean> disableRequiredFieldValidation;
 
-    public Input<Boolean> getDisableRequiredFieldValidation() {
-        return this.disableRequiredFieldValidation == null ? Input.empty() : this.disableRequiredFieldValidation;
+    public Output<Boolean> getDisableRequiredFieldValidation() {
+        return this.disableRequiredFieldValidation == null ? Output.empty() : this.disableRequiredFieldValidation;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabledImplementationGuides")
-      private final @Nullable Input<List<String>> enabledImplementationGuides;
+      private final @Nullable Output<List<String>> enabledImplementationGuides;
 
-    public Input<List<String>> getEnabledImplementationGuides() {
-        return this.enabledImplementationGuides == null ? Input.empty() : this.enabledImplementationGuides;
+    public Output<List<String>> getEnabledImplementationGuides() {
+        return this.enabledImplementationGuides == null ? Output.empty() : this.enabledImplementationGuides;
     }
 
     public ValidationConfigArgs(
-        @Nullable Input<Boolean> disableFhirpathValidation,
-        @Nullable Input<Boolean> disableProfileValidation,
-        @Nullable Input<Boolean> disableReferenceTypeValidation,
-        @Nullable Input<Boolean> disableRequiredFieldValidation,
-        @Nullable Input<List<String>> enabledImplementationGuides) {
+        @Nullable Output<Boolean> disableFhirpathValidation,
+        @Nullable Output<Boolean> disableProfileValidation,
+        @Nullable Output<Boolean> disableReferenceTypeValidation,
+        @Nullable Output<Boolean> disableRequiredFieldValidation,
+        @Nullable Output<List<String>> enabledImplementationGuides) {
         this.disableFhirpathValidation = disableFhirpathValidation;
         this.disableProfileValidation = disableProfileValidation;
         this.disableReferenceTypeValidation = disableReferenceTypeValidation;
@@ -89,11 +89,11 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ValidationConfigArgs() {
-        this.disableFhirpathValidation = Input.empty();
-        this.disableProfileValidation = Input.empty();
-        this.disableReferenceTypeValidation = Input.empty();
-        this.disableRequiredFieldValidation = Input.empty();
-        this.enabledImplementationGuides = Input.empty();
+        this.disableFhirpathValidation = Output.empty();
+        this.disableProfileValidation = Output.empty();
+        this.disableReferenceTypeValidation = Output.empty();
+        this.disableRequiredFieldValidation = Output.empty();
+        this.enabledImplementationGuides = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableFhirpathValidation;
-        private @Nullable Input<Boolean> disableProfileValidation;
-        private @Nullable Input<Boolean> disableReferenceTypeValidation;
-        private @Nullable Input<Boolean> disableRequiredFieldValidation;
-        private @Nullable Input<List<String>> enabledImplementationGuides;
+        private @Nullable Output<Boolean> disableFhirpathValidation;
+        private @Nullable Output<Boolean> disableProfileValidation;
+        private @Nullable Output<Boolean> disableReferenceTypeValidation;
+        private @Nullable Output<Boolean> disableRequiredFieldValidation;
+        private @Nullable Output<List<String>> enabledImplementationGuides;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ValidationConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.enabledImplementationGuides = defaults.enabledImplementationGuides;
         }
 
-        public Builder disableFhirpathValidation(@Nullable Input<Boolean> disableFhirpathValidation) {
+        public Builder disableFhirpathValidation(@Nullable Output<Boolean> disableFhirpathValidation) {
             this.disableFhirpathValidation = disableFhirpathValidation;
             return this;
         }
 
         public Builder disableFhirpathValidation(@Nullable Boolean disableFhirpathValidation) {
-            this.disableFhirpathValidation = Input.ofNullable(disableFhirpathValidation);
+            this.disableFhirpathValidation = Output.ofNullable(disableFhirpathValidation);
             return this;
         }
 
-        public Builder disableProfileValidation(@Nullable Input<Boolean> disableProfileValidation) {
+        public Builder disableProfileValidation(@Nullable Output<Boolean> disableProfileValidation) {
             this.disableProfileValidation = disableProfileValidation;
             return this;
         }
 
         public Builder disableProfileValidation(@Nullable Boolean disableProfileValidation) {
-            this.disableProfileValidation = Input.ofNullable(disableProfileValidation);
+            this.disableProfileValidation = Output.ofNullable(disableProfileValidation);
             return this;
         }
 
-        public Builder disableReferenceTypeValidation(@Nullable Input<Boolean> disableReferenceTypeValidation) {
+        public Builder disableReferenceTypeValidation(@Nullable Output<Boolean> disableReferenceTypeValidation) {
             this.disableReferenceTypeValidation = disableReferenceTypeValidation;
             return this;
         }
 
         public Builder disableReferenceTypeValidation(@Nullable Boolean disableReferenceTypeValidation) {
-            this.disableReferenceTypeValidation = Input.ofNullable(disableReferenceTypeValidation);
+            this.disableReferenceTypeValidation = Output.ofNullable(disableReferenceTypeValidation);
             return this;
         }
 
-        public Builder disableRequiredFieldValidation(@Nullable Input<Boolean> disableRequiredFieldValidation) {
+        public Builder disableRequiredFieldValidation(@Nullable Output<Boolean> disableRequiredFieldValidation) {
             this.disableRequiredFieldValidation = disableRequiredFieldValidation;
             return this;
         }
 
         public Builder disableRequiredFieldValidation(@Nullable Boolean disableRequiredFieldValidation) {
-            this.disableRequiredFieldValidation = Input.ofNullable(disableRequiredFieldValidation);
+            this.disableRequiredFieldValidation = Output.ofNullable(disableRequiredFieldValidation);
             return this;
         }
 
-        public Builder enabledImplementationGuides(@Nullable Input<List<String>> enabledImplementationGuides) {
+        public Builder enabledImplementationGuides(@Nullable Output<List<String>> enabledImplementationGuides) {
             this.enabledImplementationGuides = enabledImplementationGuides;
             return this;
         }
 
         public Builder enabledImplementationGuides(@Nullable List<String> enabledImplementationGuides) {
-            this.enabledImplementationGuides = Input.ofNullable(enabledImplementationGuides);
+            this.enabledImplementationGuides = Output.ofNullable(enabledImplementationGuides);
             return this;
         }
         public ValidationConfigArgs build() {

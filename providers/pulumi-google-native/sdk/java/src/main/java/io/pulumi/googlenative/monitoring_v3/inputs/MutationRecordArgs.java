@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutateTime")
-      private final @Nullable Input<String> mutateTime;
+      private final @Nullable Output<String> mutateTime;
 
-    public Input<String> getMutateTime() {
-        return this.mutateTime == null ? Input.empty() : this.mutateTime;
+    public Output<String> getMutateTime() {
+        return this.mutateTime == null ? Output.empty() : this.mutateTime;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mutatedBy")
-      private final @Nullable Input<String> mutatedBy;
+      private final @Nullable Output<String> mutatedBy;
 
-    public Input<String> getMutatedBy() {
-        return this.mutatedBy == null ? Input.empty() : this.mutatedBy;
+    public Output<String> getMutatedBy() {
+        return this.mutatedBy == null ? Output.empty() : this.mutatedBy;
     }
 
     public MutationRecordArgs(
-        @Nullable Input<String> mutateTime,
-        @Nullable Input<String> mutatedBy) {
+        @Nullable Output<String> mutateTime,
+        @Nullable Output<String> mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }
 
     private MutationRecordArgs() {
-        this.mutateTime = Input.empty();
-        this.mutatedBy = Input.empty();
+        this.mutateTime = Output.empty();
+        this.mutatedBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> mutateTime;
-        private @Nullable Input<String> mutatedBy;
+        private @Nullable Output<String> mutateTime;
+        private @Nullable Output<String> mutatedBy;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder mutateTime(@Nullable Input<String> mutateTime) {
+        public Builder mutateTime(@Nullable Output<String> mutateTime) {
             this.mutateTime = mutateTime;
             return this;
         }
 
         public Builder mutateTime(@Nullable String mutateTime) {
-            this.mutateTime = Input.ofNullable(mutateTime);
+            this.mutateTime = Output.ofNullable(mutateTime);
             return this;
         }
 
-        public Builder mutatedBy(@Nullable Input<String> mutatedBy) {
+        public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }
 
         public Builder mutatedBy(@Nullable String mutatedBy) {
-            this.mutatedBy = Input.ofNullable(mutatedBy);
+            this.mutatedBy = Output.ofNullable(mutatedBy);
             return this;
         }
         public MutationRecordArgs build() {

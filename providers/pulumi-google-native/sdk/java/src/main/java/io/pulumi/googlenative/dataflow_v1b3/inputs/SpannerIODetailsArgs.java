@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseId")
-      private final @Nullable Input<String> databaseId;
+      private final @Nullable Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
-        return this.databaseId == null ? Input.empty() : this.databaseId;
+    public Output<String> getDatabaseId() {
+        return this.databaseId == null ? Output.empty() : this.databaseId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceId")
-      private final @Nullable Input<String> instanceId;
+      private final @Nullable Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
-        return this.instanceId == null ? Input.empty() : this.instanceId;
+    public Output<String> getInstanceId() {
+        return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public SpannerIODetailsArgs(
-        @Nullable Input<String> databaseId,
-        @Nullable Input<String> instanceId,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> databaseId,
+        @Nullable Output<String> instanceId,
+        @Nullable Output<String> project) {
         this.databaseId = databaseId;
         this.instanceId = instanceId;
         this.project = project;
     }
 
     private SpannerIODetailsArgs() {
-        this.databaseId = Input.empty();
-        this.instanceId = Input.empty();
-        this.project = Input.empty();
+        this.databaseId = Output.empty();
+        this.instanceId = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseId;
-        private @Nullable Input<String> instanceId;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> databaseId;
+        private @Nullable Output<String> instanceId;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     	      this.project = defaults.project;
         }
 
-        public Builder databaseId(@Nullable Input<String> databaseId) {
+        public Builder databaseId(@Nullable Output<String> databaseId) {
             this.databaseId = databaseId;
             return this;
         }
 
         public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Input.ofNullable(databaseId);
+            this.databaseId = Output.ofNullable(databaseId);
             return this;
         }
 
-        public Builder instanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Output<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Input.ofNullable(instanceId);
+            this.instanceId = Output.ofNullable(instanceId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public SpannerIODetailsArgs build() {

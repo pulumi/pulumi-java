@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-      private final @Nullable Input<Integer> height;
+      private final @Nullable Output<Integer> height;
 
-    public Input<Integer> getHeight() {
-        return this.height == null ? Input.empty() : this.height;
+    public Output<Integer> getHeight() {
+        return this.height == null ? Output.empty() : this.height;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widget")
-      private final @Nullable Input<WidgetArgs> widget;
+      private final @Nullable Output<WidgetArgs> widget;
 
-    public Input<WidgetArgs> getWidget() {
-        return this.widget == null ? Input.empty() : this.widget;
+    public Output<WidgetArgs> getWidget() {
+        return this.widget == null ? Output.empty() : this.widget;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-      private final @Nullable Input<Integer> width;
+      private final @Nullable Output<Integer> width;
 
-    public Input<Integer> getWidth() {
-        return this.width == null ? Input.empty() : this.width;
+    public Output<Integer> getWidth() {
+        return this.width == null ? Output.empty() : this.width;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xPos")
-      private final @Nullable Input<Integer> xPos;
+      private final @Nullable Output<Integer> xPos;
 
-    public Input<Integer> getXPos() {
-        return this.xPos == null ? Input.empty() : this.xPos;
+    public Output<Integer> getXPos() {
+        return this.xPos == null ? Output.empty() : this.xPos;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yPos")
-      private final @Nullable Input<Integer> yPos;
+      private final @Nullable Output<Integer> yPos;
 
-    public Input<Integer> getYPos() {
-        return this.yPos == null ? Input.empty() : this.yPos;
+    public Output<Integer> getYPos() {
+        return this.yPos == null ? Output.empty() : this.yPos;
     }
 
     public TileArgs(
-        @Nullable Input<Integer> height,
-        @Nullable Input<WidgetArgs> widget,
-        @Nullable Input<Integer> width,
-        @Nullable Input<Integer> xPos,
-        @Nullable Input<Integer> yPos) {
+        @Nullable Output<Integer> height,
+        @Nullable Output<WidgetArgs> widget,
+        @Nullable Output<Integer> width,
+        @Nullable Output<Integer> xPos,
+        @Nullable Output<Integer> yPos) {
         this.height = height;
         this.widget = widget;
         this.width = width;
@@ -88,11 +88,11 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TileArgs() {
-        this.height = Input.empty();
-        this.widget = Input.empty();
-        this.width = Input.empty();
-        this.xPos = Input.empty();
-        this.yPos = Input.empty();
+        this.height = Output.empty();
+        this.widget = Output.empty();
+        this.width = Output.empty();
+        this.xPos = Output.empty();
+        this.yPos = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> height;
-        private @Nullable Input<WidgetArgs> widget;
-        private @Nullable Input<Integer> width;
-        private @Nullable Input<Integer> xPos;
-        private @Nullable Input<Integer> yPos;
+        private @Nullable Output<Integer> height;
+        private @Nullable Output<WidgetArgs> widget;
+        private @Nullable Output<Integer> width;
+        private @Nullable Output<Integer> xPos;
+        private @Nullable Output<Integer> yPos;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yPos = defaults.yPos;
         }
 
-        public Builder height(@Nullable Input<Integer> height) {
+        public Builder height(@Nullable Output<Integer> height) {
             this.height = height;
             return this;
         }
 
         public Builder height(@Nullable Integer height) {
-            this.height = Input.ofNullable(height);
+            this.height = Output.ofNullable(height);
             return this;
         }
 
-        public Builder widget(@Nullable Input<WidgetArgs> widget) {
+        public Builder widget(@Nullable Output<WidgetArgs> widget) {
             this.widget = widget;
             return this;
         }
 
         public Builder widget(@Nullable WidgetArgs widget) {
-            this.widget = Input.ofNullable(widget);
+            this.widget = Output.ofNullable(widget);
             return this;
         }
 
-        public Builder width(@Nullable Input<Integer> width) {
+        public Builder width(@Nullable Output<Integer> width) {
             this.width = width;
             return this;
         }
 
         public Builder width(@Nullable Integer width) {
-            this.width = Input.ofNullable(width);
+            this.width = Output.ofNullable(width);
             return this;
         }
 
-        public Builder xPos(@Nullable Input<Integer> xPos) {
+        public Builder xPos(@Nullable Output<Integer> xPos) {
             this.xPos = xPos;
             return this;
         }
 
         public Builder xPos(@Nullable Integer xPos) {
-            this.xPos = Input.ofNullable(xPos);
+            this.xPos = Output.ofNullable(xPos);
             return this;
         }
 
-        public Builder yPos(@Nullable Input<Integer> yPos) {
+        public Builder yPos(@Nullable Output<Integer> yPos) {
             this.yPos = yPos;
             return this;
         }
 
         public Builder yPos(@Nullable Integer yPos) {
-            this.yPos = Input.ofNullable(yPos);
+            this.yPos = Output.ofNullable(yPos);
             return this;
         }
         public TileArgs build() {

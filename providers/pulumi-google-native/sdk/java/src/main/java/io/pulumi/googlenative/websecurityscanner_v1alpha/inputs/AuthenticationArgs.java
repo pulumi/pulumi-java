@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.CustomAccountArgs;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.inputs.GoogleAccountArgs;
@@ -24,10 +24,10 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customAccount")
-      private final @Nullable Input<CustomAccountArgs> customAccount;
+      private final @Nullable Output<CustomAccountArgs> customAccount;
 
-    public Input<CustomAccountArgs> getCustomAccount() {
-        return this.customAccount == null ? Input.empty() : this.customAccount;
+    public Output<CustomAccountArgs> getCustomAccount() {
+        return this.customAccount == null ? Output.empty() : this.customAccount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleAccount")
-      private final @Nullable Input<GoogleAccountArgs> googleAccount;
+      private final @Nullable Output<GoogleAccountArgs> googleAccount;
 
-    public Input<GoogleAccountArgs> getGoogleAccount() {
-        return this.googleAccount == null ? Input.empty() : this.googleAccount;
+    public Output<GoogleAccountArgs> getGoogleAccount() {
+        return this.googleAccount == null ? Output.empty() : this.googleAccount;
     }
 
     public AuthenticationArgs(
-        @Nullable Input<CustomAccountArgs> customAccount,
-        @Nullable Input<GoogleAccountArgs> googleAccount) {
+        @Nullable Output<CustomAccountArgs> customAccount,
+        @Nullable Output<GoogleAccountArgs> googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }
 
     private AuthenticationArgs() {
-        this.customAccount = Input.empty();
-        this.googleAccount = Input.empty();
+        this.customAccount = Output.empty();
+        this.googleAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomAccountArgs> customAccount;
-        private @Nullable Input<GoogleAccountArgs> googleAccount;
+        private @Nullable Output<CustomAccountArgs> customAccount;
+        private @Nullable Output<GoogleAccountArgs> googleAccount;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder customAccount(@Nullable Input<CustomAccountArgs> customAccount) {
+        public Builder customAccount(@Nullable Output<CustomAccountArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
         public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
-            this.customAccount = Input.ofNullable(customAccount);
+            this.customAccount = Output.ofNullable(customAccount);
             return this;
         }
 
-        public Builder googleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Output<GoogleAccountArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
         public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
-            this.googleAccount = Input.ofNullable(googleAccount);
+            this.googleAccount = Output.ofNullable(googleAccount);
             return this;
         }
         public AuthenticationArgs build() {

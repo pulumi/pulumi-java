@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="expressions")
-      private final @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+      private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
-    public Input<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
-        return this.expressions == null ? Input.empty() : this.expressions;
+    public Output<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
+        return this.expressions == null ? Output.empty() : this.expressions;
     }
 
-    public GooglePrivacyDlpV2RecordConditionArgs(@Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
+    public GooglePrivacyDlpV2RecordConditionArgs(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
         this.expressions = expressions;
     }
 
     private GooglePrivacyDlpV2RecordConditionArgs() {
-        this.expressions = Input.empty();
+        this.expressions = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions;
+        private @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
     	      this.expressions = defaults.expressions;
         }
 
-        public Builder expressions(@Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
+        public Builder expressions(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
             this.expressions = expressions;
             return this;
         }
 
         public Builder expressions(@Nullable GooglePrivacyDlpV2ExpressionsArgs expressions) {
-            this.expressions = Input.ofNullable(expressions);
+            this.expressions = Output.ofNullable(expressions);
             return this;
         }
         public GooglePrivacyDlpV2RecordConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.enums.PublicKeyType;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
@@ -35,22 +35,22 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<PublicKeyType> type;
+      private final @Nullable Output<PublicKeyType> type;
 
-    public Input<PublicKeyType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<PublicKeyType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public PublicKeyArgs(
-        Input<String> key,
-        @Nullable Input<PublicKeyType> type) {
+        Output<String> key,
+        @Nullable Output<PublicKeyType> type) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.type = type;
     }
 
     private PublicKeyArgs() {
-        this.key = Input.empty();
-        this.type = Input.empty();
+        this.key = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private @Nullable Input<PublicKeyType> type;
+        private Output<String> key;
+        private @Nullable Output<PublicKeyType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder type(@Nullable Input<PublicKeyType> type) {
+        public Builder type(@Nullable Output<PublicKeyType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable PublicKeyType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public PublicKeyArgs build() {

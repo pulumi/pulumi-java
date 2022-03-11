@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowJaggedRows")
-      private final @Nullable Input<Boolean> allowJaggedRows;
+      private final @Nullable Output<Boolean> allowJaggedRows;
 
-    public Input<Boolean> getAllowJaggedRows() {
-        return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
+    public Output<Boolean> getAllowJaggedRows() {
+        return this.allowJaggedRows == null ? Output.empty() : this.allowJaggedRows;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowQuotedNewlines")
-      private final @Nullable Input<Boolean> allowQuotedNewlines;
+      private final @Nullable Output<Boolean> allowQuotedNewlines;
 
-    public Input<Boolean> getAllowQuotedNewlines() {
-        return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
+    public Output<Boolean> getAllowQuotedNewlines() {
+        return this.allowQuotedNewlines == null ? Output.empty() : this.allowQuotedNewlines;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDelimiter")
-      private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Output<String> fieldDelimiter;
 
-    public Input<String> getFieldDelimiter() {
-        return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
+    public Output<String> getFieldDelimiter() {
+        return this.fieldDelimiter == null ? Output.empty() : this.fieldDelimiter;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nullMarker")
-      private final @Nullable Input<String> nullMarker;
+      private final @Nullable Output<String> nullMarker;
 
-    public Input<String> getNullMarker() {
-        return this.nullMarker == null ? Input.empty() : this.nullMarker;
+    public Output<String> getNullMarker() {
+        return this.nullMarker == null ? Output.empty() : this.nullMarker;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quote")
-      private final @Nullable Input<String> quote;
+      private final @Nullable Output<String> quote;
 
-    public Input<String> getQuote() {
-        return this.quote == null ? Input.empty() : this.quote;
+    public Output<String> getQuote() {
+        return this.quote == null ? Output.empty() : this.quote;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipLeadingRows")
-      private final @Nullable Input<String> skipLeadingRows;
+      private final @Nullable Output<String> skipLeadingRows;
 
-    public Input<String> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
+    public Output<String> getSkipLeadingRows() {
+        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
     }
 
     public CsvOptionsArgs(
-        @Nullable Input<Boolean> allowJaggedRows,
-        @Nullable Input<Boolean> allowQuotedNewlines,
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> fieldDelimiter,
-        @Nullable Input<String> nullMarker,
-        @Nullable Input<String> quote,
-        @Nullable Input<String> skipLeadingRows) {
+        @Nullable Output<Boolean> allowJaggedRows,
+        @Nullable Output<Boolean> allowQuotedNewlines,
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> fieldDelimiter,
+        @Nullable Output<String> nullMarker,
+        @Nullable Output<String> quote,
+        @Nullable Output<String> skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;
@@ -110,13 +110,13 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CsvOptionsArgs() {
-        this.allowJaggedRows = Input.empty();
-        this.allowQuotedNewlines = Input.empty();
-        this.encoding = Input.empty();
-        this.fieldDelimiter = Input.empty();
-        this.nullMarker = Input.empty();
-        this.quote = Input.empty();
-        this.skipLeadingRows = Input.empty();
+        this.allowJaggedRows = Output.empty();
+        this.allowQuotedNewlines = Output.empty();
+        this.encoding = Output.empty();
+        this.fieldDelimiter = Output.empty();
+        this.nullMarker = Output.empty();
+        this.quote = Output.empty();
+        this.skipLeadingRows = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowJaggedRows;
-        private @Nullable Input<Boolean> allowQuotedNewlines;
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> fieldDelimiter;
-        private @Nullable Input<String> nullMarker;
-        private @Nullable Input<String> quote;
-        private @Nullable Input<String> skipLeadingRows;
+        private @Nullable Output<Boolean> allowJaggedRows;
+        private @Nullable Output<Boolean> allowQuotedNewlines;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> fieldDelimiter;
+        private @Nullable Output<String> nullMarker;
+        private @Nullable Output<String> quote;
+        private @Nullable Output<String> skipLeadingRows;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder allowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
         public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
-            this.allowJaggedRows = Input.ofNullable(allowJaggedRows);
+            this.allowJaggedRows = Output.ofNullable(allowJaggedRows);
             return this;
         }
 
-        public Builder allowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
-            this.allowQuotedNewlines = Input.ofNullable(allowQuotedNewlines);
+            this.allowQuotedNewlines = Output.ofNullable(allowQuotedNewlines);
             return this;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
+            this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder nullMarker(@Nullable Input<String> nullMarker) {
+        public Builder nullMarker(@Nullable Output<String> nullMarker) {
             this.nullMarker = nullMarker;
             return this;
         }
 
         public Builder nullMarker(@Nullable String nullMarker) {
-            this.nullMarker = Input.ofNullable(nullMarker);
+            this.nullMarker = Output.ofNullable(nullMarker);
             return this;
         }
 
-        public Builder quote(@Nullable Input<String> quote) {
+        public Builder quote(@Nullable Output<String> quote) {
             this.quote = quote;
             return this;
         }
 
         public Builder quote(@Nullable String quote) {
-            this.quote = Input.ofNullable(quote);
+            this.quote = Output.ofNullable(quote);
             return this;
         }
 
-        public Builder skipLeadingRows(@Nullable Input<String> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
         public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
-            this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
         }
         public CsvOptionsArgs build() {

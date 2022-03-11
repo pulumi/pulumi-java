@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="autoprovisioned")
-      private final @Nullable Input<Boolean> autoprovisioned;
+      private final @Nullable Output<Boolean> autoprovisioned;
 
-    public Input<Boolean> getAutoprovisioned() {
-        return this.autoprovisioned == null ? Input.empty() : this.autoprovisioned;
+    public Output<Boolean> getAutoprovisioned() {
+        return this.autoprovisioned == null ? Output.empty() : this.autoprovisioned;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxNodeCount")
-      private final @Nullable Input<Integer> maxNodeCount;
+      private final @Nullable Output<Integer> maxNodeCount;
 
-    public Input<Integer> getMaxNodeCount() {
-        return this.maxNodeCount == null ? Input.empty() : this.maxNodeCount;
+    public Output<Integer> getMaxNodeCount() {
+        return this.maxNodeCount == null ? Output.empty() : this.maxNodeCount;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="minNodeCount")
-      private final @Nullable Input<Integer> minNodeCount;
+      private final @Nullable Output<Integer> minNodeCount;
 
-    public Input<Integer> getMinNodeCount() {
-        return this.minNodeCount == null ? Input.empty() : this.minNodeCount;
+    public Output<Integer> getMinNodeCount() {
+        return this.minNodeCount == null ? Output.empty() : this.minNodeCount;
     }
 
     public NodePoolAutoscalingArgs(
-        @Nullable Input<Boolean> autoprovisioned,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Integer> maxNodeCount,
-        @Nullable Input<Integer> minNodeCount) {
+        @Nullable Output<Boolean> autoprovisioned,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Integer> maxNodeCount,
+        @Nullable Output<Integer> minNodeCount) {
         this.autoprovisioned = autoprovisioned;
         this.enabled = enabled;
         this.maxNodeCount = maxNodeCount;
@@ -75,10 +75,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     }
 
     private NodePoolAutoscalingArgs() {
-        this.autoprovisioned = Input.empty();
-        this.enabled = Input.empty();
-        this.maxNodeCount = Input.empty();
-        this.minNodeCount = Input.empty();
+        this.autoprovisioned = Output.empty();
+        this.enabled = Output.empty();
+        this.maxNodeCount = Output.empty();
+        this.minNodeCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoprovisioned;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Integer> maxNodeCount;
-        private @Nullable Input<Integer> minNodeCount;
+        private @Nullable Output<Boolean> autoprovisioned;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Integer> maxNodeCount;
+        private @Nullable Output<Integer> minNodeCount;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class NodePoolAutoscalingArgs extends io.pulumi.resources.ResourceA
     	      this.minNodeCount = defaults.minNodeCount;
         }
 
-        public Builder autoprovisioned(@Nullable Input<Boolean> autoprovisioned) {
+        public Builder autoprovisioned(@Nullable Output<Boolean> autoprovisioned) {
             this.autoprovisioned = autoprovisioned;
             return this;
         }
 
         public Builder autoprovisioned(@Nullable Boolean autoprovisioned) {
-            this.autoprovisioned = Input.ofNullable(autoprovisioned);
+            this.autoprovisioned = Output.ofNullable(autoprovisioned);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder maxNodeCount(@Nullable Input<Integer> maxNodeCount) {
+        public Builder maxNodeCount(@Nullable Output<Integer> maxNodeCount) {
             this.maxNodeCount = maxNodeCount;
             return this;
         }
 
         public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
-            this.maxNodeCount = Input.ofNullable(maxNodeCount);
+            this.maxNodeCount = Output.ofNullable(maxNodeCount);
             return this;
         }
 
-        public Builder minNodeCount(@Nullable Input<Integer> minNodeCount) {
+        public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
 
         public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = Input.ofNullable(minNodeCount);
+            this.minNodeCount = Output.ofNullable(minNodeCount);
             return this;
         }
         public NodePoolAutoscalingArgs build() {

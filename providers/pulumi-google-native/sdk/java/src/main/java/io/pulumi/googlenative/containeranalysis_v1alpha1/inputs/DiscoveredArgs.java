@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredAnalysisStatus;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveredContinuousAnalysis;
@@ -26,10 +26,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisStatus")
-      private final @Nullable Input<DiscoveredAnalysisStatus> analysisStatus;
+      private final @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
 
-    public Input<DiscoveredAnalysisStatus> getAnalysisStatus() {
-        return this.analysisStatus == null ? Input.empty() : this.analysisStatus;
+    public Output<DiscoveredAnalysisStatus> getAnalysisStatus() {
+        return this.analysisStatus == null ? Output.empty() : this.analysisStatus;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisStatusError")
-      private final @Nullable Input<StatusArgs> analysisStatusError;
+      private final @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Input<StatusArgs> getAnalysisStatusError() {
-        return this.analysisStatusError == null ? Input.empty() : this.analysisStatusError;
+    public Output<StatusArgs> getAnalysisStatusError() {
+        return this.analysisStatusError == null ? Output.empty() : this.analysisStatusError;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="continuousAnalysis")
-      private final @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis;
+      private final @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
 
-    public Input<DiscoveredContinuousAnalysis> getContinuousAnalysis() {
-        return this.continuousAnalysis == null ? Input.empty() : this.continuousAnalysis;
+    public Output<DiscoveredContinuousAnalysis> getContinuousAnalysis() {
+        return this.continuousAnalysis == null ? Output.empty() : this.continuousAnalysis;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpe")
-      private final @Nullable Input<String> cpe;
+      private final @Nullable Output<String> cpe;
 
-    public Input<String> getCpe() {
-        return this.cpe == null ? Input.empty() : this.cpe;
+    public Output<String> getCpe() {
+        return this.cpe == null ? Output.empty() : this.cpe;
     }
 
     public DiscoveredArgs(
-        @Nullable Input<DiscoveredAnalysisStatus> analysisStatus,
-        @Nullable Input<StatusArgs> analysisStatusError,
-        @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis,
-        @Nullable Input<String> cpe) {
+        @Nullable Output<DiscoveredAnalysisStatus> analysisStatus,
+        @Nullable Output<StatusArgs> analysisStatusError,
+        @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis,
+        @Nullable Output<String> cpe) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;
@@ -77,10 +77,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiscoveredArgs() {
-        this.analysisStatus = Input.empty();
-        this.analysisStatusError = Input.empty();
-        this.continuousAnalysis = Input.empty();
-        this.cpe = Input.empty();
+        this.analysisStatus = Output.empty();
+        this.analysisStatusError = Output.empty();
+        this.continuousAnalysis = Output.empty();
+        this.cpe = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DiscoveredAnalysisStatus> analysisStatus;
-        private @Nullable Input<StatusArgs> analysisStatusError;
-        private @Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis;
-        private @Nullable Input<String> cpe;
+        private @Nullable Output<DiscoveredAnalysisStatus> analysisStatus;
+        private @Nullable Output<StatusArgs> analysisStatusError;
+        private @Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis;
+        private @Nullable Output<String> cpe;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class DiscoveredArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cpe = defaults.cpe;
         }
 
-        public Builder analysisStatus(@Nullable Input<DiscoveredAnalysisStatus> analysisStatus) {
+        public Builder analysisStatus(@Nullable Output<DiscoveredAnalysisStatus> analysisStatus) {
             this.analysisStatus = analysisStatus;
             return this;
         }
 
         public Builder analysisStatus(@Nullable DiscoveredAnalysisStatus analysisStatus) {
-            this.analysisStatus = Input.ofNullable(analysisStatus);
+            this.analysisStatus = Output.ofNullable(analysisStatus);
             return this;
         }
 
-        public Builder analysisStatusError(@Nullable Input<StatusArgs> analysisStatusError) {
+        public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
             this.analysisStatusError = analysisStatusError;
             return this;
         }
 
         public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
-            this.analysisStatusError = Input.ofNullable(analysisStatusError);
+            this.analysisStatusError = Output.ofNullable(analysisStatusError);
             return this;
         }
 
-        public Builder continuousAnalysis(@Nullable Input<DiscoveredContinuousAnalysis> continuousAnalysis) {
+        public Builder continuousAnalysis(@Nullable Output<DiscoveredContinuousAnalysis> continuousAnalysis) {
             this.continuousAnalysis = continuousAnalysis;
             return this;
         }
 
         public Builder continuousAnalysis(@Nullable DiscoveredContinuousAnalysis continuousAnalysis) {
-            this.continuousAnalysis = Input.ofNullable(continuousAnalysis);
+            this.continuousAnalysis = Output.ofNullable(continuousAnalysis);
             return this;
         }
 
-        public Builder cpe(@Nullable Input<String> cpe) {
+        public Builder cpe(@Nullable Output<String> cpe) {
             this.cpe = cpe;
             return this;
         }
 
         public Builder cpe(@Nullable String cpe) {
-            this.cpe = Input.ofNullable(cpe);
+            this.cpe = Output.ofNullable(cpe);
             return this;
         }
         public DiscoveredArgs build() {

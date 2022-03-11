@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.StatusConditionCanonicalCode;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="canonicalCode")
-      private final @Nullable Input<StatusConditionCanonicalCode> canonicalCode;
+      private final @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
 
-    public Input<StatusConditionCanonicalCode> getCanonicalCode() {
-        return this.canonicalCode == null ? Input.empty() : this.canonicalCode;
+    public Output<StatusConditionCanonicalCode> getCanonicalCode() {
+        return this.canonicalCode == null ? Output.empty() : this.canonicalCode;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     public StatusConditionArgs(
-        @Nullable Input<StatusConditionCanonicalCode> canonicalCode,
-        @Nullable Input<String> message) {
+        @Nullable Output<StatusConditionCanonicalCode> canonicalCode,
+        @Nullable Output<String> message) {
         this.canonicalCode = canonicalCode;
         this.message = message;
     }
 
     private StatusConditionArgs() {
-        this.canonicalCode = Input.empty();
-        this.message = Input.empty();
+        this.canonicalCode = Output.empty();
+        this.message = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<StatusConditionCanonicalCode> canonicalCode;
-        private @Nullable Input<String> message;
+        private @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
+        private @Nullable Output<String> message;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class StatusConditionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.message = defaults.message;
         }
 
-        public Builder canonicalCode(@Nullable Input<StatusConditionCanonicalCode> canonicalCode) {
+        public Builder canonicalCode(@Nullable Output<StatusConditionCanonicalCode> canonicalCode) {
             this.canonicalCode = canonicalCode;
             return this;
         }
 
         public Builder canonicalCode(@Nullable StatusConditionCanonicalCode canonicalCode) {
-            this.canonicalCode = Input.ofNullable(canonicalCode);
+            this.canonicalCode = Output.ofNullable(canonicalCode);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
         public StatusConditionArgs build() {

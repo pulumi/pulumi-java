@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -242,14 +241,14 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:compute/beta:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegionSslCertificate(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegionSslCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:compute/beta:RegionSslCertificate", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -264,7 +263,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionSslCertificate get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegionSslCertificate get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegionSslCertificate(name, id, options);
     }
 }

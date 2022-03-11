@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
      * 
      */
     @InputImport(name="postbackData")
-      private final @Nullable Input<String> postbackData;
+      private final @Nullable Output<String> postbackData;
 
-    public Input<String> getPostbackData() {
-        return this.postbackData == null ? Input.empty() : this.postbackData;
+    public Output<String> getPostbackData() {
+        return this.postbackData == null ? Output.empty() : this.postbackData;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<String> text;
+      private final @Nullable Output<String> text;
 
-    public Input<String> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<String> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs(
-        @Nullable Input<String> postbackData,
-        @Nullable Input<String> text) {
+        @Nullable Output<String> postbackData,
+        @Nullable Output<String> text) {
         this.postbackData = postbackData;
         this.text = text;
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs() {
-        this.postbackData = Input.empty();
-        this.text = Input.empty();
+        this.postbackData = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> postbackData;
-        private @Nullable Input<String> text;
+        private @Nullable Output<String> postbackData;
+        private @Nullable Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     	      this.text = defaults.text;
         }
 
-        public Builder postbackData(@Nullable Input<String> postbackData) {
+        public Builder postbackData(@Nullable Output<String> postbackData) {
             this.postbackData = postbackData;
             return this;
         }
 
         public Builder postbackData(@Nullable String postbackData) {
-            this.postbackData = Input.ofNullable(postbackData);
+            this.postbackData = Output.ofNullable(postbackData);
             return this;
         }
 
-        public Builder text(@Nullable Input<String> text) {
+        public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable String text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs build() {

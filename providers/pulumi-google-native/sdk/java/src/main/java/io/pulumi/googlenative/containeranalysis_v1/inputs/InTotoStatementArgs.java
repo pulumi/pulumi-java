@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaProvenanceArgs;
@@ -27,31 +27,31 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="predicateType")
-      private final @Nullable Input<String> predicateType;
+      private final @Nullable Output<String> predicateType;
 
-    public Input<String> getPredicateType() {
-        return this.predicateType == null ? Input.empty() : this.predicateType;
+    public Output<String> getPredicateType() {
+        return this.predicateType == null ? Output.empty() : this.predicateType;
     }
 
     @InputImport(name="provenance")
-      private final @Nullable Input<InTotoProvenanceArgs> provenance;
+      private final @Nullable Output<InTotoProvenanceArgs> provenance;
 
-    public Input<InTotoProvenanceArgs> getProvenance() {
-        return this.provenance == null ? Input.empty() : this.provenance;
+    public Output<InTotoProvenanceArgs> getProvenance() {
+        return this.provenance == null ? Output.empty() : this.provenance;
     }
 
     @InputImport(name="slsaProvenance")
-      private final @Nullable Input<SlsaProvenanceArgs> slsaProvenance;
+      private final @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
 
-    public Input<SlsaProvenanceArgs> getSlsaProvenance() {
-        return this.slsaProvenance == null ? Input.empty() : this.slsaProvenance;
+    public Output<SlsaProvenanceArgs> getSlsaProvenance() {
+        return this.slsaProvenance == null ? Output.empty() : this.slsaProvenance;
     }
 
     @InputImport(name="subject")
-      private final @Nullable Input<List<SubjectArgs>> subject;
+      private final @Nullable Output<List<SubjectArgs>> subject;
 
-    public Input<List<SubjectArgs>> getSubject() {
-        return this.subject == null ? Input.empty() : this.subject;
+    public Output<List<SubjectArgs>> getSubject() {
+        return this.subject == null ? Output.empty() : this.subject;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public InTotoStatementArgs(
-        @Nullable Input<String> predicateType,
-        @Nullable Input<InTotoProvenanceArgs> provenance,
-        @Nullable Input<SlsaProvenanceArgs> slsaProvenance,
-        @Nullable Input<List<SubjectArgs>> subject,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> predicateType,
+        @Nullable Output<InTotoProvenanceArgs> provenance,
+        @Nullable Output<SlsaProvenanceArgs> slsaProvenance,
+        @Nullable Output<List<SubjectArgs>> subject,
+        @Nullable Output<String> type) {
         this.predicateType = predicateType;
         this.provenance = provenance;
         this.slsaProvenance = slsaProvenance;
@@ -79,11 +79,11 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InTotoStatementArgs() {
-        this.predicateType = Input.empty();
-        this.provenance = Input.empty();
-        this.slsaProvenance = Input.empty();
-        this.subject = Input.empty();
-        this.type = Input.empty();
+        this.predicateType = Output.empty();
+        this.provenance = Output.empty();
+        this.slsaProvenance = Output.empty();
+        this.subject = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> predicateType;
-        private @Nullable Input<InTotoProvenanceArgs> provenance;
-        private @Nullable Input<SlsaProvenanceArgs> slsaProvenance;
-        private @Nullable Input<List<SubjectArgs>> subject;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> predicateType;
+        private @Nullable Output<InTotoProvenanceArgs> provenance;
+        private @Nullable Output<SlsaProvenanceArgs> slsaProvenance;
+        private @Nullable Output<List<SubjectArgs>> subject;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder predicateType(@Nullable Input<String> predicateType) {
+        public Builder predicateType(@Nullable Output<String> predicateType) {
             this.predicateType = predicateType;
             return this;
         }
 
         public Builder predicateType(@Nullable String predicateType) {
-            this.predicateType = Input.ofNullable(predicateType);
+            this.predicateType = Output.ofNullable(predicateType);
             return this;
         }
 
-        public Builder provenance(@Nullable Input<InTotoProvenanceArgs> provenance) {
+        public Builder provenance(@Nullable Output<InTotoProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
 
         public Builder provenance(@Nullable InTotoProvenanceArgs provenance) {
-            this.provenance = Input.ofNullable(provenance);
+            this.provenance = Output.ofNullable(provenance);
             return this;
         }
 
-        public Builder slsaProvenance(@Nullable Input<SlsaProvenanceArgs> slsaProvenance) {
+        public Builder slsaProvenance(@Nullable Output<SlsaProvenanceArgs> slsaProvenance) {
             this.slsaProvenance = slsaProvenance;
             return this;
         }
 
         public Builder slsaProvenance(@Nullable SlsaProvenanceArgs slsaProvenance) {
-            this.slsaProvenance = Input.ofNullable(slsaProvenance);
+            this.slsaProvenance = Output.ofNullable(slsaProvenance);
             return this;
         }
 
-        public Builder subject(@Nullable Input<List<SubjectArgs>> subject) {
+        public Builder subject(@Nullable Output<List<SubjectArgs>> subject) {
             this.subject = subject;
             return this;
         }
 
         public Builder subject(@Nullable List<SubjectArgs> subject) {
-            this.subject = Input.ofNullable(subject);
+            this.subject = Output.ofNullable(subject);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public InTotoStatementArgs build() {

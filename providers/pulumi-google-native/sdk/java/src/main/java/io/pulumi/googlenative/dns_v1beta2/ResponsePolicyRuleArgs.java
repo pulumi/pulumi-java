@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.ResponsePolicyRuleBehavior;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyRuleLocalDataArgs;
@@ -21,17 +21,17 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="behavior")
-      private final @Nullable Input<ResponsePolicyRuleBehavior> behavior;
+      private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
-    public Input<ResponsePolicyRuleBehavior> getBehavior() {
-        return this.behavior == null ? Input.empty() : this.behavior;
+    public Output<ResponsePolicyRuleBehavior> getBehavior() {
+        return this.behavior == null ? Output.empty() : this.behavior;
     }
 
     @InputImport(name="clientOperationId")
-      private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Output<String> clientOperationId;
 
-    public Input<String> getClientOperationId() {
-        return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
+    public Output<String> getClientOperationId() {
+        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
     }
 
     /**
@@ -39,17 +39,17 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dnsName")
-      private final @Nullable Input<String> dnsName;
+      private final @Nullable Output<String> dnsName;
 
-    public Input<String> getDnsName() {
-        return this.dnsName == null ? Input.empty() : this.dnsName;
+    public Output<String> getDnsName() {
+        return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -57,23 +57,23 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localData")
-      private final @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData;
+      private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
-    public Input<ResponsePolicyRuleLocalDataArgs> getLocalData() {
-        return this.localData == null ? Input.empty() : this.localData;
+    public Output<ResponsePolicyRuleLocalDataArgs> getLocalData() {
+        return this.localData == null ? Output.empty() : this.localData;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="responsePolicy", required=true)
-      private final Input<String> responsePolicy;
+      private final Output<String> responsePolicy;
 
-    public Input<String> getResponsePolicy() {
+    public Output<String> getResponsePolicy() {
         return this.responsePolicy;
     }
 
@@ -82,21 +82,21 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     public ResponsePolicyRuleArgs(
-        @Nullable Input<ResponsePolicyRuleBehavior> behavior,
-        @Nullable Input<String> clientOperationId,
-        @Nullable Input<String> dnsName,
-        @Nullable Input<String> kind,
-        @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData,
-        @Nullable Input<String> project,
-        Input<String> responsePolicy,
-        @Nullable Input<String> ruleName) {
+        @Nullable Output<ResponsePolicyRuleBehavior> behavior,
+        @Nullable Output<String> clientOperationId,
+        @Nullable Output<String> dnsName,
+        @Nullable Output<String> kind,
+        @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData,
+        @Nullable Output<String> project,
+        Output<String> responsePolicy,
+        @Nullable Output<String> ruleName) {
         this.behavior = behavior;
         this.clientOperationId = clientOperationId;
         this.dnsName = dnsName;
@@ -108,14 +108,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResponsePolicyRuleArgs() {
-        this.behavior = Input.empty();
-        this.clientOperationId = Input.empty();
-        this.dnsName = Input.empty();
-        this.kind = Input.empty();
-        this.localData = Input.empty();
-        this.project = Input.empty();
-        this.responsePolicy = Input.empty();
-        this.ruleName = Input.empty();
+        this.behavior = Output.empty();
+        this.clientOperationId = Output.empty();
+        this.dnsName = Output.empty();
+        this.kind = Output.empty();
+        this.localData = Output.empty();
+        this.project = Output.empty();
+        this.responsePolicy = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,14 +127,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<ResponsePolicyRuleBehavior> behavior;
-        private @Nullable Input<String> clientOperationId;
-        private @Nullable Input<String> dnsName;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData;
-        private @Nullable Input<String> project;
-        private Input<String> responsePolicy;
-        private @Nullable Input<String> ruleName;
+        private @Nullable Output<ResponsePolicyRuleBehavior> behavior;
+        private @Nullable Output<String> clientOperationId;
+        private @Nullable Output<String> dnsName;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
+        private @Nullable Output<String> project;
+        private Output<String> responsePolicy;
+        private @Nullable Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -152,83 +152,83 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder behavior(@Nullable Input<ResponsePolicyRuleBehavior> behavior) {
+        public Builder behavior(@Nullable Output<ResponsePolicyRuleBehavior> behavior) {
             this.behavior = behavior;
             return this;
         }
 
         public Builder behavior(@Nullable ResponsePolicyRuleBehavior behavior) {
-            this.behavior = Input.ofNullable(behavior);
+            this.behavior = Output.ofNullable(behavior);
             return this;
         }
 
-        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Input.ofNullable(clientOperationId);
+            this.clientOperationId = Output.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder dnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Output<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Input.ofNullable(dnsName);
+            this.dnsName = Output.ofNullable(dnsName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder localData(@Nullable Input<ResponsePolicyRuleLocalDataArgs> localData) {
+        public Builder localData(@Nullable Output<ResponsePolicyRuleLocalDataArgs> localData) {
             this.localData = localData;
             return this;
         }
 
         public Builder localData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
-            this.localData = Input.ofNullable(localData);
+            this.localData = Output.ofNullable(localData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder responsePolicy(Input<String> responsePolicy) {
+        public Builder responsePolicy(Output<String> responsePolicy) {
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }
 
         public Builder responsePolicy(String responsePolicy) {
-            this.responsePolicy = Input.of(Objects.requireNonNull(responsePolicy));
+            this.responsePolicy = Output.of(Objects.requireNonNull(responsePolicy));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
         public ResponsePolicyRuleArgs build() {

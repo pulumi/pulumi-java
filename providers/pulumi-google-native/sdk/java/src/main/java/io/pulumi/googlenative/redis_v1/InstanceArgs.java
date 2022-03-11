@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1.enums.InstanceConnectMode;
 import io.pulumi.googlenative.redis_v1.enums.InstanceReadReplicasMode;
@@ -28,10 +28,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternativeLocationId")
-      private final @Nullable Input<String> alternativeLocationId;
+      private final @Nullable Output<String> alternativeLocationId;
 
-    public Input<String> getAlternativeLocationId() {
-        return this.alternativeLocationId == null ? Input.empty() : this.alternativeLocationId;
+    public Output<String> getAlternativeLocationId() {
+        return this.alternativeLocationId == null ? Output.empty() : this.alternativeLocationId;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authEnabled")
-      private final @Nullable Input<Boolean> authEnabled;
+      private final @Nullable Output<Boolean> authEnabled;
 
-    public Input<Boolean> getAuthEnabled() {
-        return this.authEnabled == null ? Input.empty() : this.authEnabled;
+    public Output<Boolean> getAuthEnabled() {
+        return this.authEnabled == null ? Output.empty() : this.authEnabled;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-      private final @Nullable Input<String> authorizedNetwork;
+      private final @Nullable Output<String> authorizedNetwork;
 
-    public Input<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
+    public Output<String> getAuthorizedNetwork() {
+        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectMode")
-      private final @Nullable Input<InstanceConnectMode> connectMode;
+      private final @Nullable Output<InstanceConnectMode> connectMode;
 
-    public Input<InstanceConnectMode> getConnectMode() {
-        return this.connectMode == null ? Input.empty() : this.connectMode;
+    public Output<InstanceConnectMode> getConnectMode() {
+        return this.connectMode == null ? Output.empty() : this.connectMode;
     }
 
     /**
@@ -72,16 +72,16 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -90,10 +90,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-      private final @Nullable Input<MaintenancePolicyArgs> maintenancePolicy;
+      private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
-    public Input<MaintenancePolicyArgs> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
+    public Output<MaintenancePolicyArgs> getMaintenancePolicy() {
+        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memorySizeGb", required=true)
-      private final Input<Integer> memorySizeGb;
+      private final Output<Integer> memorySizeGb;
 
-    public Input<Integer> getMemorySizeGb() {
+    public Output<Integer> getMemorySizeGb() {
         return this.memorySizeGb;
     }
 
@@ -134,10 +134,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -145,17 +145,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="persistenceConfig")
-      private final @Nullable Input<PersistenceConfigArgs> persistenceConfig;
+      private final @Nullable Output<PersistenceConfigArgs> persistenceConfig;
 
-    public Input<PersistenceConfigArgs> getPersistenceConfig() {
-        return this.persistenceConfig == null ? Input.empty() : this.persistenceConfig;
+    public Output<PersistenceConfigArgs> getPersistenceConfig() {
+        return this.persistenceConfig == null ? Output.empty() : this.persistenceConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readReplicasMode")
-      private final @Nullable Input<InstanceReadReplicasMode> readReplicasMode;
+      private final @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
 
-    public Input<InstanceReadReplicasMode> getReadReplicasMode() {
-        return this.readReplicasMode == null ? Input.empty() : this.readReplicasMode;
+    public Output<InstanceReadReplicasMode> getReadReplicasMode() {
+        return this.readReplicasMode == null ? Output.empty() : this.readReplicasMode;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisConfigs")
-      private final @Nullable Input<Map<String,String>> redisConfigs;
+      private final @Nullable Output<Map<String,String>> redisConfigs;
 
-    public Input<Map<String,String>> getRedisConfigs() {
-        return this.redisConfigs == null ? Input.empty() : this.redisConfigs;
+    public Output<Map<String,String>> getRedisConfigs() {
+        return this.redisConfigs == null ? Output.empty() : this.redisConfigs;
     }
 
     /**
@@ -185,10 +185,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisVersion")
-      private final @Nullable Input<String> redisVersion;
+      private final @Nullable Output<String> redisVersion;
 
-    public Input<String> getRedisVersion() {
-        return this.redisVersion == null ? Input.empty() : this.redisVersion;
+    public Output<String> getRedisVersion() {
+        return this.redisVersion == null ? Output.empty() : this.redisVersion;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaCount")
-      private final @Nullable Input<Integer> replicaCount;
+      private final @Nullable Output<Integer> replicaCount;
 
-    public Input<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Input.empty() : this.replicaCount;
+    public Output<Integer> getReplicaCount() {
+        return this.replicaCount == null ? Output.empty() : this.replicaCount;
     }
 
     /**
@@ -207,10 +207,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-      private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Output<String> reservedIpRange;
 
-    public Input<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
+    public Output<String> getReservedIpRange() {
+        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryIpRange")
-      private final @Nullable Input<String> secondaryIpRange;
+      private final @Nullable Output<String> secondaryIpRange;
 
-    public Input<String> getSecondaryIpRange() {
-        return this.secondaryIpRange == null ? Input.empty() : this.secondaryIpRange;
+    public Output<String> getSecondaryIpRange() {
+        return this.secondaryIpRange == null ? Output.empty() : this.secondaryIpRange;
     }
 
     /**
@@ -229,9 +229,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<InstanceTier> tier;
+      private final Output<InstanceTier> tier;
 
-    public Input<InstanceTier> getTier() {
+    public Output<InstanceTier> getTier() {
         return this.tier;
     }
 
@@ -240,34 +240,34 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transitEncryptionMode")
-      private final @Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode;
+      private final @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
-    public Input<InstanceTransitEncryptionMode> getTransitEncryptionMode() {
-        return this.transitEncryptionMode == null ? Input.empty() : this.transitEncryptionMode;
+    public Output<InstanceTransitEncryptionMode> getTransitEncryptionMode() {
+        return this.transitEncryptionMode == null ? Output.empty() : this.transitEncryptionMode;
     }
 
     public InstanceArgs(
-        @Nullable Input<String> alternativeLocationId,
-        @Nullable Input<Boolean> authEnabled,
-        @Nullable Input<String> authorizedNetwork,
-        @Nullable Input<InstanceConnectMode> connectMode,
-        @Nullable Input<String> displayName,
-        Input<String> instanceId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MaintenancePolicyArgs> maintenancePolicy,
-        Input<Integer> memorySizeGb,
-        @Nullable Input<String> name,
-        @Nullable Input<PersistenceConfigArgs> persistenceConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<InstanceReadReplicasMode> readReplicasMode,
-        @Nullable Input<Map<String,String>> redisConfigs,
-        @Nullable Input<String> redisVersion,
-        @Nullable Input<Integer> replicaCount,
-        @Nullable Input<String> reservedIpRange,
-        @Nullable Input<String> secondaryIpRange,
-        Input<InstanceTier> tier,
-        @Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode) {
+        @Nullable Output<String> alternativeLocationId,
+        @Nullable Output<Boolean> authEnabled,
+        @Nullable Output<String> authorizedNetwork,
+        @Nullable Output<InstanceConnectMode> connectMode,
+        @Nullable Output<String> displayName,
+        Output<String> instanceId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MaintenancePolicyArgs> maintenancePolicy,
+        Output<Integer> memorySizeGb,
+        @Nullable Output<String> name,
+        @Nullable Output<PersistenceConfigArgs> persistenceConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<InstanceReadReplicasMode> readReplicasMode,
+        @Nullable Output<Map<String,String>> redisConfigs,
+        @Nullable Output<String> redisVersion,
+        @Nullable Output<Integer> replicaCount,
+        @Nullable Output<String> reservedIpRange,
+        @Nullable Output<String> secondaryIpRange,
+        Output<InstanceTier> tier,
+        @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode) {
         this.alternativeLocationId = alternativeLocationId;
         this.authEnabled = authEnabled;
         this.authorizedNetwork = authorizedNetwork;
@@ -292,27 +292,27 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.alternativeLocationId = Input.empty();
-        this.authEnabled = Input.empty();
-        this.authorizedNetwork = Input.empty();
-        this.connectMode = Input.empty();
-        this.displayName = Input.empty();
-        this.instanceId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.maintenancePolicy = Input.empty();
-        this.memorySizeGb = Input.empty();
-        this.name = Input.empty();
-        this.persistenceConfig = Input.empty();
-        this.project = Input.empty();
-        this.readReplicasMode = Input.empty();
-        this.redisConfigs = Input.empty();
-        this.redisVersion = Input.empty();
-        this.replicaCount = Input.empty();
-        this.reservedIpRange = Input.empty();
-        this.secondaryIpRange = Input.empty();
-        this.tier = Input.empty();
-        this.transitEncryptionMode = Input.empty();
+        this.alternativeLocationId = Output.empty();
+        this.authEnabled = Output.empty();
+        this.authorizedNetwork = Output.empty();
+        this.connectMode = Output.empty();
+        this.displayName = Output.empty();
+        this.instanceId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.maintenancePolicy = Output.empty();
+        this.memorySizeGb = Output.empty();
+        this.name = Output.empty();
+        this.persistenceConfig = Output.empty();
+        this.project = Output.empty();
+        this.readReplicasMode = Output.empty();
+        this.redisConfigs = Output.empty();
+        this.redisVersion = Output.empty();
+        this.replicaCount = Output.empty();
+        this.reservedIpRange = Output.empty();
+        this.secondaryIpRange = Output.empty();
+        this.tier = Output.empty();
+        this.transitEncryptionMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -324,27 +324,27 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alternativeLocationId;
-        private @Nullable Input<Boolean> authEnabled;
-        private @Nullable Input<String> authorizedNetwork;
-        private @Nullable Input<InstanceConnectMode> connectMode;
-        private @Nullable Input<String> displayName;
-        private Input<String> instanceId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MaintenancePolicyArgs> maintenancePolicy;
-        private Input<Integer> memorySizeGb;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PersistenceConfigArgs> persistenceConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<InstanceReadReplicasMode> readReplicasMode;
-        private @Nullable Input<Map<String,String>> redisConfigs;
-        private @Nullable Input<String> redisVersion;
-        private @Nullable Input<Integer> replicaCount;
-        private @Nullable Input<String> reservedIpRange;
-        private @Nullable Input<String> secondaryIpRange;
-        private Input<InstanceTier> tier;
-        private @Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode;
+        private @Nullable Output<String> alternativeLocationId;
+        private @Nullable Output<Boolean> authEnabled;
+        private @Nullable Output<String> authorizedNetwork;
+        private @Nullable Output<InstanceConnectMode> connectMode;
+        private @Nullable Output<String> displayName;
+        private Output<String> instanceId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
+        private Output<Integer> memorySizeGb;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PersistenceConfigArgs> persistenceConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
+        private @Nullable Output<Map<String,String>> redisConfigs;
+        private @Nullable Output<String> redisVersion;
+        private @Nullable Output<Integer> replicaCount;
+        private @Nullable Output<String> reservedIpRange;
+        private @Nullable Output<String> secondaryIpRange;
+        private Output<InstanceTier> tier;
+        private @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
         public Builder() {
     	      // Empty
@@ -375,213 +375,213 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitEncryptionMode = defaults.transitEncryptionMode;
         }
 
-        public Builder alternativeLocationId(@Nullable Input<String> alternativeLocationId) {
+        public Builder alternativeLocationId(@Nullable Output<String> alternativeLocationId) {
             this.alternativeLocationId = alternativeLocationId;
             return this;
         }
 
         public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
-            this.alternativeLocationId = Input.ofNullable(alternativeLocationId);
+            this.alternativeLocationId = Output.ofNullable(alternativeLocationId);
             return this;
         }
 
-        public Builder authEnabled(@Nullable Input<Boolean> authEnabled) {
+        public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Input.ofNullable(authEnabled);
+            this.authEnabled = Output.ofNullable(authEnabled);
             return this;
         }
 
-        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder connectMode(@Nullable Input<InstanceConnectMode> connectMode) {
+        public Builder connectMode(@Nullable Output<InstanceConnectMode> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
         public Builder connectMode(@Nullable InstanceConnectMode connectMode) {
-            this.connectMode = Input.ofNullable(connectMode);
+            this.connectMode = Output.ofNullable(connectMode);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maintenancePolicy(@Nullable Input<MaintenancePolicyArgs> maintenancePolicy) {
+        public Builder maintenancePolicy(@Nullable Output<MaintenancePolicyArgs> maintenancePolicy) {
             this.maintenancePolicy = maintenancePolicy;
             return this;
         }
 
         public Builder maintenancePolicy(@Nullable MaintenancePolicyArgs maintenancePolicy) {
-            this.maintenancePolicy = Input.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
             return this;
         }
 
-        public Builder memorySizeGb(Input<Integer> memorySizeGb) {
+        public Builder memorySizeGb(Output<Integer> memorySizeGb) {
             this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
             return this;
         }
 
         public Builder memorySizeGb(Integer memorySizeGb) {
-            this.memorySizeGb = Input.of(Objects.requireNonNull(memorySizeGb));
+            this.memorySizeGb = Output.of(Objects.requireNonNull(memorySizeGb));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder persistenceConfig(@Nullable Input<PersistenceConfigArgs> persistenceConfig) {
+        public Builder persistenceConfig(@Nullable Output<PersistenceConfigArgs> persistenceConfig) {
             this.persistenceConfig = persistenceConfig;
             return this;
         }
 
         public Builder persistenceConfig(@Nullable PersistenceConfigArgs persistenceConfig) {
-            this.persistenceConfig = Input.ofNullable(persistenceConfig);
+            this.persistenceConfig = Output.ofNullable(persistenceConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder readReplicasMode(@Nullable Input<InstanceReadReplicasMode> readReplicasMode) {
+        public Builder readReplicasMode(@Nullable Output<InstanceReadReplicasMode> readReplicasMode) {
             this.readReplicasMode = readReplicasMode;
             return this;
         }
 
         public Builder readReplicasMode(@Nullable InstanceReadReplicasMode readReplicasMode) {
-            this.readReplicasMode = Input.ofNullable(readReplicasMode);
+            this.readReplicasMode = Output.ofNullable(readReplicasMode);
             return this;
         }
 
-        public Builder redisConfigs(@Nullable Input<Map<String,String>> redisConfigs) {
+        public Builder redisConfigs(@Nullable Output<Map<String,String>> redisConfigs) {
             this.redisConfigs = redisConfigs;
             return this;
         }
 
         public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
-            this.redisConfigs = Input.ofNullable(redisConfigs);
+            this.redisConfigs = Output.ofNullable(redisConfigs);
             return this;
         }
 
-        public Builder redisVersion(@Nullable Input<String> redisVersion) {
+        public Builder redisVersion(@Nullable Output<String> redisVersion) {
             this.redisVersion = redisVersion;
             return this;
         }
 
         public Builder redisVersion(@Nullable String redisVersion) {
-            this.redisVersion = Input.ofNullable(redisVersion);
+            this.redisVersion = Output.ofNullable(redisVersion);
             return this;
         }
 
-        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Input.ofNullable(replicaCount);
+            this.replicaCount = Output.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Input.ofNullable(reservedIpRange);
+            this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
         }
 
-        public Builder secondaryIpRange(@Nullable Input<String> secondaryIpRange) {
+        public Builder secondaryIpRange(@Nullable Output<String> secondaryIpRange) {
             this.secondaryIpRange = secondaryIpRange;
             return this;
         }
 
         public Builder secondaryIpRange(@Nullable String secondaryIpRange) {
-            this.secondaryIpRange = Input.ofNullable(secondaryIpRange);
+            this.secondaryIpRange = Output.ofNullable(secondaryIpRange);
             return this;
         }
 
-        public Builder tier(Input<InstanceTier> tier) {
+        public Builder tier(Output<InstanceTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(InstanceTier tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
 
-        public Builder transitEncryptionMode(@Nullable Input<InstanceTransitEncryptionMode> transitEncryptionMode) {
+        public Builder transitEncryptionMode(@Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode) {
             this.transitEncryptionMode = transitEncryptionMode;
             return this;
         }
 
         public Builder transitEncryptionMode(@Nullable InstanceTransitEncryptionMode transitEncryptionMode) {
-            this.transitEncryptionMode = Input.ofNullable(transitEncryptionMode);
+            this.transitEncryptionMode = Output.ofNullable(transitEncryptionMode);
             return this;
         }
         public InstanceArgs build() {

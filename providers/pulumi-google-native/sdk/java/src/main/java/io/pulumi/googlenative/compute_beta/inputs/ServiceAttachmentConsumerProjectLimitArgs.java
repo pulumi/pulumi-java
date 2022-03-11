@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionLimit")
-      private final @Nullable Input<Integer> connectionLimit;
+      private final @Nullable Output<Integer> connectionLimit;
 
-    public Input<Integer> getConnectionLimit() {
-        return this.connectionLimit == null ? Input.empty() : this.connectionLimit;
+    public Output<Integer> getConnectionLimit() {
+        return this.connectionLimit == null ? Output.empty() : this.connectionLimit;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="projectIdOrNum")
-      private final @Nullable Input<String> projectIdOrNum;
+      private final @Nullable Output<String> projectIdOrNum;
 
-    public Input<String> getProjectIdOrNum() {
-        return this.projectIdOrNum == null ? Input.empty() : this.projectIdOrNum;
+    public Output<String> getProjectIdOrNum() {
+        return this.projectIdOrNum == null ? Output.empty() : this.projectIdOrNum;
     }
 
     public ServiceAttachmentConsumerProjectLimitArgs(
-        @Nullable Input<Integer> connectionLimit,
-        @Nullable Input<String> projectIdOrNum) {
+        @Nullable Output<Integer> connectionLimit,
+        @Nullable Output<String> projectIdOrNum) {
         this.connectionLimit = connectionLimit;
         this.projectIdOrNum = projectIdOrNum;
     }
 
     private ServiceAttachmentConsumerProjectLimitArgs() {
-        this.connectionLimit = Input.empty();
-        this.projectIdOrNum = Input.empty();
+        this.connectionLimit = Output.empty();
+        this.projectIdOrNum = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> connectionLimit;
-        private @Nullable Input<String> projectIdOrNum;
+        private @Nullable Output<Integer> connectionLimit;
+        private @Nullable Output<String> projectIdOrNum;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
     	      this.projectIdOrNum = defaults.projectIdOrNum;
         }
 
-        public Builder connectionLimit(@Nullable Input<Integer> connectionLimit) {
+        public Builder connectionLimit(@Nullable Output<Integer> connectionLimit) {
             this.connectionLimit = connectionLimit;
             return this;
         }
 
         public Builder connectionLimit(@Nullable Integer connectionLimit) {
-            this.connectionLimit = Input.ofNullable(connectionLimit);
+            this.connectionLimit = Output.ofNullable(connectionLimit);
             return this;
         }
 
-        public Builder projectIdOrNum(@Nullable Input<String> projectIdOrNum) {
+        public Builder projectIdOrNum(@Nullable Output<String> projectIdOrNum) {
             this.projectIdOrNum = projectIdOrNum;
             return this;
         }
 
         public Builder projectIdOrNum(@Nullable String projectIdOrNum) {
-            this.projectIdOrNum = Input.ofNullable(projectIdOrNum);
+            this.projectIdOrNum = Output.ofNullable(projectIdOrNum);
             return this;
         }
         public ServiceAttachmentConsumerProjectLimitArgs build() {

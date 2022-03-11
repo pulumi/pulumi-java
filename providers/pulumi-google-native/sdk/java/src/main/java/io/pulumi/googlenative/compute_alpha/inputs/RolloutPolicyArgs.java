@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRolloutTime")
-      private final @Nullable Input<String> defaultRolloutTime;
+      private final @Nullable Output<String> defaultRolloutTime;
 
-    public Input<String> getDefaultRolloutTime() {
-        return this.defaultRolloutTime == null ? Input.empty() : this.defaultRolloutTime;
+    public Output<String> getDefaultRolloutTime() {
+        return this.defaultRolloutTime == null ? Output.empty() : this.defaultRolloutTime;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationRolloutPolicies")
-      private final @Nullable Input<Map<String,String>> locationRolloutPolicies;
+      private final @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
-    public Input<Map<String,String>> getLocationRolloutPolicies() {
-        return this.locationRolloutPolicies == null ? Input.empty() : this.locationRolloutPolicies;
+    public Output<Map<String,String>> getLocationRolloutPolicies() {
+        return this.locationRolloutPolicies == null ? Output.empty() : this.locationRolloutPolicies;
     }
 
     public RolloutPolicyArgs(
-        @Nullable Input<String> defaultRolloutTime,
-        @Nullable Input<Map<String,String>> locationRolloutPolicies) {
+        @Nullable Output<String> defaultRolloutTime,
+        @Nullable Output<Map<String,String>> locationRolloutPolicies) {
         this.defaultRolloutTime = defaultRolloutTime;
         this.locationRolloutPolicies = locationRolloutPolicies;
     }
 
     private RolloutPolicyArgs() {
-        this.defaultRolloutTime = Input.empty();
-        this.locationRolloutPolicies = Input.empty();
+        this.defaultRolloutTime = Output.empty();
+        this.locationRolloutPolicies = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultRolloutTime;
-        private @Nullable Input<Map<String,String>> locationRolloutPolicies;
+        private @Nullable Output<String> defaultRolloutTime;
+        private @Nullable Output<Map<String,String>> locationRolloutPolicies;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
         }
 
-        public Builder defaultRolloutTime(@Nullable Input<String> defaultRolloutTime) {
+        public Builder defaultRolloutTime(@Nullable Output<String> defaultRolloutTime) {
             this.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
 
         public Builder defaultRolloutTime(@Nullable String defaultRolloutTime) {
-            this.defaultRolloutTime = Input.ofNullable(defaultRolloutTime);
+            this.defaultRolloutTime = Output.ofNullable(defaultRolloutTime);
             return this;
         }
 
-        public Builder locationRolloutPolicies(@Nullable Input<Map<String,String>> locationRolloutPolicies) {
+        public Builder locationRolloutPolicies(@Nullable Output<Map<String,String>> locationRolloutPolicies) {
             this.locationRolloutPolicies = locationRolloutPolicies;
             return this;
         }
 
         public Builder locationRolloutPolicies(@Nullable Map<String,String> locationRolloutPolicies) {
-            this.locationRolloutPolicies = Input.ofNullable(locationRolloutPolicies);
+            this.locationRolloutPolicies = Output.ofNullable(locationRolloutPolicies);
             return this;
         }
         public RolloutPolicyArgs build() {

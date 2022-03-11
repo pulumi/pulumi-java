@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<JobConfigArgs> config;
+      private final @Nullable Output<JobConfigArgs> config;
 
-    public Input<JobConfigArgs> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<JobConfigArgs> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -32,17 +32,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputUri")
-      private final @Nullable Input<String> inputUri;
+      private final @Nullable Output<String> inputUri;
 
-    public Input<String> getInputUri() {
-        return this.inputUri == null ? Input.empty() : this.inputUri;
+    public Output<String> getInputUri() {
+        return this.inputUri == null ? Output.empty() : this.inputUri;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputUri")
-      private final @Nullable Input<String> outputUri;
+      private final @Nullable Output<String> outputUri;
 
-    public Input<String> getOutputUri() {
-        return this.outputUri == null ? Input.empty() : this.outputUri;
+    public Output<String> getOutputUri() {
+        return this.outputUri == null ? Output.empty() : this.outputUri;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-      private final @Nullable Input<String> templateId;
+      private final @Nullable Output<String> templateId;
 
-    public Input<String> getTemplateId() {
-        return this.templateId == null ? Input.empty() : this.templateId;
+    public Output<String> getTemplateId() {
+        return this.templateId == null ? Output.empty() : this.templateId;
     }
 
     /**
@@ -90,21 +90,21 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttlAfterCompletionDays")
-      private final @Nullable Input<Integer> ttlAfterCompletionDays;
+      private final @Nullable Output<Integer> ttlAfterCompletionDays;
 
-    public Input<Integer> getTtlAfterCompletionDays() {
-        return this.ttlAfterCompletionDays == null ? Input.empty() : this.ttlAfterCompletionDays;
+    public Output<Integer> getTtlAfterCompletionDays() {
+        return this.ttlAfterCompletionDays == null ? Output.empty() : this.ttlAfterCompletionDays;
     }
 
     public JobArgs(
-        @Nullable Input<JobConfigArgs> config,
-        @Nullable Input<String> inputUri,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> outputUri,
-        @Nullable Input<String> project,
-        @Nullable Input<String> templateId,
-        @Nullable Input<Integer> ttlAfterCompletionDays) {
+        @Nullable Output<JobConfigArgs> config,
+        @Nullable Output<String> inputUri,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> outputUri,
+        @Nullable Output<String> project,
+        @Nullable Output<String> templateId,
+        @Nullable Output<Integer> ttlAfterCompletionDays) {
         this.config = config;
         this.inputUri = inputUri;
         this.location = location;
@@ -116,14 +116,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.config = Input.empty();
-        this.inputUri = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.outputUri = Input.empty();
-        this.project = Input.empty();
-        this.templateId = Input.empty();
-        this.ttlAfterCompletionDays = Input.empty();
+        this.config = Output.empty();
+        this.inputUri = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.outputUri = Output.empty();
+        this.project = Output.empty();
+        this.templateId = Output.empty();
+        this.ttlAfterCompletionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,14 +135,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobConfigArgs> config;
-        private @Nullable Input<String> inputUri;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> outputUri;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> templateId;
-        private @Nullable Input<Integer> ttlAfterCompletionDays;
+        private @Nullable Output<JobConfigArgs> config;
+        private @Nullable Output<String> inputUri;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> outputUri;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> templateId;
+        private @Nullable Output<Integer> ttlAfterCompletionDays;
 
         public Builder() {
     	      // Empty
@@ -160,83 +160,83 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttlAfterCompletionDays = defaults.ttlAfterCompletionDays;
         }
 
-        public Builder config(@Nullable Input<JobConfigArgs> config) {
+        public Builder config(@Nullable Output<JobConfigArgs> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable JobConfigArgs config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder inputUri(@Nullable Input<String> inputUri) {
+        public Builder inputUri(@Nullable Output<String> inputUri) {
             this.inputUri = inputUri;
             return this;
         }
 
         public Builder inputUri(@Nullable String inputUri) {
-            this.inputUri = Input.ofNullable(inputUri);
+            this.inputUri = Output.ofNullable(inputUri);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder outputUri(@Nullable Input<String> outputUri) {
+        public Builder outputUri(@Nullable Output<String> outputUri) {
             this.outputUri = outputUri;
             return this;
         }
 
         public Builder outputUri(@Nullable String outputUri) {
-            this.outputUri = Input.ofNullable(outputUri);
+            this.outputUri = Output.ofNullable(outputUri);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder templateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Input.ofNullable(templateId);
+            this.templateId = Output.ofNullable(templateId);
             return this;
         }
 
-        public Builder ttlAfterCompletionDays(@Nullable Input<Integer> ttlAfterCompletionDays) {
+        public Builder ttlAfterCompletionDays(@Nullable Output<Integer> ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = ttlAfterCompletionDays;
             return this;
         }
 
         public Builder ttlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
-            this.ttlAfterCompletionDays = Input.ofNullable(ttlAfterCompletionDays);
+            this.ttlAfterCompletionDays = Output.ofNullable(ttlAfterCompletionDays);
             return this;
         }
         public JobArgs build() {

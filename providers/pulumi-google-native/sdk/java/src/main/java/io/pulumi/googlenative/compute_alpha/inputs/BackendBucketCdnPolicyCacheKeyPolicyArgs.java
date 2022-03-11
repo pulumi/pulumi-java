@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="includeHttpHeaders")
-      private final @Nullable Input<List<String>> includeHttpHeaders;
+      private final @Nullable Output<List<String>> includeHttpHeaders;
 
-    public Input<List<String>> getIncludeHttpHeaders() {
-        return this.includeHttpHeaders == null ? Input.empty() : this.includeHttpHeaders;
+    public Output<List<String>> getIncludeHttpHeaders() {
+        return this.includeHttpHeaders == null ? Output.empty() : this.includeHttpHeaders;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="queryStringWhitelist")
-      private final @Nullable Input<List<String>> queryStringWhitelist;
+      private final @Nullable Output<List<String>> queryStringWhitelist;
 
-    public Input<List<String>> getQueryStringWhitelist() {
-        return this.queryStringWhitelist == null ? Input.empty() : this.queryStringWhitelist;
+    public Output<List<String>> getQueryStringWhitelist() {
+        return this.queryStringWhitelist == null ? Output.empty() : this.queryStringWhitelist;
     }
 
     public BackendBucketCdnPolicyCacheKeyPolicyArgs(
-        @Nullable Input<List<String>> includeHttpHeaders,
-        @Nullable Input<List<String>> queryStringWhitelist) {
+        @Nullable Output<List<String>> includeHttpHeaders,
+        @Nullable Output<List<String>> queryStringWhitelist) {
         this.includeHttpHeaders = includeHttpHeaders;
         this.queryStringWhitelist = queryStringWhitelist;
     }
 
     private BackendBucketCdnPolicyCacheKeyPolicyArgs() {
-        this.includeHttpHeaders = Input.empty();
-        this.queryStringWhitelist = Input.empty();
+        this.includeHttpHeaders = Output.empty();
+        this.queryStringWhitelist = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> includeHttpHeaders;
-        private @Nullable Input<List<String>> queryStringWhitelist;
+        private @Nullable Output<List<String>> includeHttpHeaders;
+        private @Nullable Output<List<String>> queryStringWhitelist;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     	      this.queryStringWhitelist = defaults.queryStringWhitelist;
         }
 
-        public Builder includeHttpHeaders(@Nullable Input<List<String>> includeHttpHeaders) {
+        public Builder includeHttpHeaders(@Nullable Output<List<String>> includeHttpHeaders) {
             this.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
         public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
-            this.includeHttpHeaders = Input.ofNullable(includeHttpHeaders);
+            this.includeHttpHeaders = Output.ofNullable(includeHttpHeaders);
             return this;
         }
 
-        public Builder queryStringWhitelist(@Nullable Input<List<String>> queryStringWhitelist) {
+        public Builder queryStringWhitelist(@Nullable Output<List<String>> queryStringWhitelist) {
             this.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
         public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
-            this.queryStringWhitelist = Input.ofNullable(queryStringWhitelist);
+            this.queryStringWhitelist = Output.ofNullable(queryStringWhitelist);
             return this;
         }
         public BackendBucketCdnPolicyCacheKeyPolicyArgs build() {

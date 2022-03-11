@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.ModelStateArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.TfLiteModelArgs;
@@ -22,9 +22,9 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,17 +33,17 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<ModelStateArgs> state;
+      private final @Nullable Output<ModelStateArgs> state;
 
-    public Input<ModelStateArgs> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<ModelStateArgs> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -73,19 +73,19 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tfliteModel")
-      private final @Nullable Input<TfLiteModelArgs> tfliteModel;
+      private final @Nullable Output<TfLiteModelArgs> tfliteModel;
 
-    public Input<TfLiteModelArgs> getTfliteModel() {
-        return this.tfliteModel == null ? Input.empty() : this.tfliteModel;
+    public Output<TfLiteModelArgs> getTfliteModel() {
+        return this.tfliteModel == null ? Output.empty() : this.tfliteModel;
     }
 
     public ModelArgs(
-        Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<ModelStateArgs> state,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<TfLiteModelArgs> tfliteModel) {
+        Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<ModelStateArgs> state,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<TfLiteModelArgs> tfliteModel) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.name = name;
         this.project = project;
@@ -95,12 +95,12 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.tfliteModel = Input.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.tfliteModel = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ModelStateArgs> state;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<TfLiteModelArgs> tfliteModel;
+        private Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ModelStateArgs> state;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<TfLiteModelArgs> tfliteModel;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tfliteModel = defaults.tfliteModel;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<ModelStateArgs> state) {
+        public Builder state(@Nullable Output<ModelStateArgs> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable ModelStateArgs state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tfliteModel(@Nullable Input<TfLiteModelArgs> tfliteModel) {
+        public Builder tfliteModel(@Nullable Output<TfLiteModelArgs> tfliteModel) {
             this.tfliteModel = tfliteModel;
             return this;
         }
 
         public Builder tfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
-            this.tfliteModel = Input.ofNullable(tfliteModel);
+            this.tfliteModel = Output.ofNullable(tfliteModel);
             return this;
         }
         public ModelArgs build() {

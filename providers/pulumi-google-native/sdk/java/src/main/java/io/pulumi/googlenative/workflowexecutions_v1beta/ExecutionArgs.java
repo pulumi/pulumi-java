@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.workflowexecutions_v1beta.enums.ExecutionCallLogLevel;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="argument")
-      private final @Nullable Input<String> argument;
+      private final @Nullable Output<String> argument;
 
-    public Input<String> getArgument() {
-        return this.argument == null ? Input.empty() : this.argument;
+    public Output<String> getArgument() {
+        return this.argument == null ? Output.empty() : this.argument;
     }
 
     /**
@@ -31,39 +31,39 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="callLogLevel")
-      private final @Nullable Input<ExecutionCallLogLevel> callLogLevel;
+      private final @Nullable Output<ExecutionCallLogLevel> callLogLevel;
 
-    public Input<ExecutionCallLogLevel> getCallLogLevel() {
-        return this.callLogLevel == null ? Input.empty() : this.callLogLevel;
+    public Output<ExecutionCallLogLevel> getCallLogLevel() {
+        return this.callLogLevel == null ? Output.empty() : this.callLogLevel;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="workflowId", required=true)
-      private final Input<String> workflowId;
+      private final Output<String> workflowId;
 
-    public Input<String> getWorkflowId() {
+    public Output<String> getWorkflowId() {
         return this.workflowId;
     }
 
     public ExecutionArgs(
-        @Nullable Input<String> argument,
-        @Nullable Input<ExecutionCallLogLevel> callLogLevel,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<String> workflowId) {
+        @Nullable Output<String> argument,
+        @Nullable Output<ExecutionCallLogLevel> callLogLevel,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<String> workflowId) {
         this.argument = argument;
         this.callLogLevel = callLogLevel;
         this.location = location;
@@ -72,11 +72,11 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecutionArgs() {
-        this.argument = Input.empty();
-        this.callLogLevel = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.workflowId = Input.empty();
+        this.argument = Output.empty();
+        this.callLogLevel = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.workflowId = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,11 +88,11 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> argument;
-        private @Nullable Input<ExecutionCallLogLevel> callLogLevel;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<String> workflowId;
+        private @Nullable Output<String> argument;
+        private @Nullable Output<ExecutionCallLogLevel> callLogLevel;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<String> workflowId;
 
         public Builder() {
     	      // Empty
@@ -107,53 +107,53 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder argument(@Nullable Input<String> argument) {
+        public Builder argument(@Nullable Output<String> argument) {
             this.argument = argument;
             return this;
         }
 
         public Builder argument(@Nullable String argument) {
-            this.argument = Input.ofNullable(argument);
+            this.argument = Output.ofNullable(argument);
             return this;
         }
 
-        public Builder callLogLevel(@Nullable Input<ExecutionCallLogLevel> callLogLevel) {
+        public Builder callLogLevel(@Nullable Output<ExecutionCallLogLevel> callLogLevel) {
             this.callLogLevel = callLogLevel;
             return this;
         }
 
         public Builder callLogLevel(@Nullable ExecutionCallLogLevel callLogLevel) {
-            this.callLogLevel = Input.ofNullable(callLogLevel);
+            this.callLogLevel = Output.ofNullable(callLogLevel);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder workflowId(Input<String> workflowId) {
+        public Builder workflowId(Output<String> workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
 
         public Builder workflowId(String workflowId) {
-            this.workflowId = Input.of(Objects.requireNonNull(workflowId));
+            this.workflowId = Output.of(Objects.requireNonNull(workflowId));
             return this;
         }
         public ExecutionArgs build() {

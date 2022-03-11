@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3.inputs.GlossaryInputConfigArgs;
 import io.pulumi.googlenative.translate_v3.inputs.LanguageCodePairArgs;
@@ -22,9 +22,9 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputConfig", required=true)
-      private final Input<GlossaryInputConfigArgs> inputConfig;
+      private final Output<GlossaryInputConfigArgs> inputConfig;
 
-    public Input<GlossaryInputConfigArgs> getInputConfig() {
+    public Output<GlossaryInputConfigArgs> getInputConfig() {
         return this.inputConfig;
     }
 
@@ -33,10 +33,10 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCodesSet")
-      private final @Nullable Input<LanguageCodesSetArgs> languageCodesSet;
+      private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
-    public Input<LanguageCodesSetArgs> getLanguageCodesSet() {
-        return this.languageCodesSet == null ? Input.empty() : this.languageCodesSet;
+    public Output<LanguageCodesSetArgs> getLanguageCodesSet() {
+        return this.languageCodesSet == null ? Output.empty() : this.languageCodesSet;
     }
 
     /**
@@ -44,17 +44,17 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languagePair")
-      private final @Nullable Input<LanguageCodePairArgs> languagePair;
+      private final @Nullable Output<LanguageCodePairArgs> languagePair;
 
-    public Input<LanguageCodePairArgs> getLanguagePair() {
-        return this.languagePair == null ? Input.empty() : this.languagePair;
+    public Output<LanguageCodePairArgs> getLanguagePair() {
+        return this.languagePair == null ? Output.empty() : this.languagePair;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -62,26 +62,26 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GlossaryArgs(
-        Input<GlossaryInputConfigArgs> inputConfig,
-        @Nullable Input<LanguageCodesSetArgs> languageCodesSet,
-        @Nullable Input<LanguageCodePairArgs> languagePair,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project) {
+        Output<GlossaryInputConfigArgs> inputConfig,
+        @Nullable Output<LanguageCodesSetArgs> languageCodesSet,
+        @Nullable Output<LanguageCodePairArgs> languagePair,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project) {
         this.inputConfig = Objects.requireNonNull(inputConfig, "expected parameter 'inputConfig' to be non-null");
         this.languageCodesSet = languageCodesSet;
         this.languagePair = languagePair;
@@ -91,12 +91,12 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlossaryArgs() {
-        this.inputConfig = Input.empty();
-        this.languageCodesSet = Input.empty();
-        this.languagePair = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
+        this.inputConfig = Output.empty();
+        this.languageCodesSet = Output.empty();
+        this.languagePair = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GlossaryInputConfigArgs> inputConfig;
-        private @Nullable Input<LanguageCodesSetArgs> languageCodesSet;
-        private @Nullable Input<LanguageCodePairArgs> languagePair;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
+        private Output<GlossaryInputConfigArgs> inputConfig;
+        private @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
+        private @Nullable Output<LanguageCodePairArgs> languagePair;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder inputConfig(Input<GlossaryInputConfigArgs> inputConfig) {
+        public Builder inputConfig(Output<GlossaryInputConfigArgs> inputConfig) {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
 
         public Builder inputConfig(GlossaryInputConfigArgs inputConfig) {
-            this.inputConfig = Input.of(Objects.requireNonNull(inputConfig));
+            this.inputConfig = Output.of(Objects.requireNonNull(inputConfig));
             return this;
         }
 
-        public Builder languageCodesSet(@Nullable Input<LanguageCodesSetArgs> languageCodesSet) {
+        public Builder languageCodesSet(@Nullable Output<LanguageCodesSetArgs> languageCodesSet) {
             this.languageCodesSet = languageCodesSet;
             return this;
         }
 
         public Builder languageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
-            this.languageCodesSet = Input.ofNullable(languageCodesSet);
+            this.languageCodesSet = Output.ofNullable(languageCodesSet);
             return this;
         }
 
-        public Builder languagePair(@Nullable Input<LanguageCodePairArgs> languagePair) {
+        public Builder languagePair(@Nullable Output<LanguageCodePairArgs> languagePair) {
             this.languagePair = languagePair;
             return this;
         }
 
         public Builder languagePair(@Nullable LanguageCodePairArgs languagePair) {
-            this.languagePair = Input.ofNullable(languagePair);
+            this.languagePair = Output.ofNullable(languagePair);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GlossaryArgs build() {

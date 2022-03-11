@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactHashesArgs;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     public static final GrafeasV1beta1IntotoArtifactArgs Empty = new GrafeasV1beta1IntotoArtifactArgs();
 
     @InputImport(name="hashes")
-      private final @Nullable Input<ArtifactHashesArgs> hashes;
+      private final @Nullable Output<ArtifactHashesArgs> hashes;
 
-    public Input<ArtifactHashesArgs> getHashes() {
-        return this.hashes == null ? Input.empty() : this.hashes;
+    public Output<ArtifactHashesArgs> getHashes() {
+        return this.hashes == null ? Output.empty() : this.hashes;
     }
 
     @InputImport(name="resourceUri")
-      private final @Nullable Input<String> resourceUri;
+      private final @Nullable Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<String> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
     public GrafeasV1beta1IntotoArtifactArgs(
-        @Nullable Input<ArtifactHashesArgs> hashes,
-        @Nullable Input<String> resourceUri) {
+        @Nullable Output<ArtifactHashesArgs> hashes,
+        @Nullable Output<String> resourceUri) {
         this.hashes = hashes;
         this.resourceUri = resourceUri;
     }
 
     private GrafeasV1beta1IntotoArtifactArgs() {
-        this.hashes = Input.empty();
-        this.resourceUri = Input.empty();
+        this.hashes = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ArtifactHashesArgs> hashes;
-        private @Nullable Input<String> resourceUri;
+        private @Nullable Output<ArtifactHashesArgs> hashes;
+        private @Nullable Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GrafeasV1beta1IntotoArtifactArgs extends io.pulumi.resources.
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder hashes(@Nullable Input<ArtifactHashesArgs> hashes) {
+        public Builder hashes(@Nullable Output<ArtifactHashesArgs> hashes) {
             this.hashes = hashes;
             return this;
         }
 
         public Builder hashes(@Nullable ArtifactHashesArgs hashes) {
-            this.hashes = Input.ofNullable(hashes);
+            this.hashes = Output.ofNullable(hashes);
             return this;
         }
 
-        public Builder resourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
         public GrafeasV1beta1IntotoArtifactArgs build() {

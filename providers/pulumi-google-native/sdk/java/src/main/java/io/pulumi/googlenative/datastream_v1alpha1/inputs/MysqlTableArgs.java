@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlColumnArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlColumns")
-      private final @Nullable Input<List<MysqlColumnArgs>> mysqlColumns;
+      private final @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
-    public Input<List<MysqlColumnArgs>> getMysqlColumns() {
-        return this.mysqlColumns == null ? Input.empty() : this.mysqlColumns;
+    public Output<List<MysqlColumnArgs>> getMysqlColumns() {
+        return this.mysqlColumns == null ? Output.empty() : this.mysqlColumns;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public MysqlTableArgs(
-        @Nullable Input<List<MysqlColumnArgs>> mysqlColumns,
-        @Nullable Input<String> tableName) {
+        @Nullable Output<List<MysqlColumnArgs>> mysqlColumns,
+        @Nullable Output<String> tableName) {
         this.mysqlColumns = mysqlColumns;
         this.tableName = tableName;
     }
 
     private MysqlTableArgs() {
-        this.mysqlColumns = Input.empty();
-        this.tableName = Input.empty();
+        this.mysqlColumns = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MysqlColumnArgs>> mysqlColumns;
-        private @Nullable Input<String> tableName;
+        private @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder mysqlColumns(@Nullable Input<List<MysqlColumnArgs>> mysqlColumns) {
+        public Builder mysqlColumns(@Nullable Output<List<MysqlColumnArgs>> mysqlColumns) {
             this.mysqlColumns = mysqlColumns;
             return this;
         }
 
         public Builder mysqlColumns(@Nullable List<MysqlColumnArgs> mysqlColumns) {
-            this.mysqlColumns = Input.ofNullable(mysqlColumns);
+            this.mysqlColumns = Output.ofNullable(mysqlColumns);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public MysqlTableArgs build() {

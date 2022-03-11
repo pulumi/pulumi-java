@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<RangePartitioningRangeArgs> range;
+      private final @Nullable Output<RangePartitioningRangeArgs> range;
 
-    public Input<RangePartitioningRangeArgs> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<RangePartitioningRangeArgs> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     public RangePartitioningArgs(
-        @Nullable Input<String> field,
-        @Nullable Input<RangePartitioningRangeArgs> range) {
+        @Nullable Output<String> field,
+        @Nullable Output<RangePartitioningRangeArgs> range) {
         this.field = field;
         this.range = range;
     }
 
     private RangePartitioningArgs() {
-        this.field = Input.empty();
-        this.range = Input.empty();
+        this.field = Output.empty();
+        this.range = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> field;
-        private @Nullable Input<RangePartitioningRangeArgs> range;
+        private @Nullable Output<String> field;
+        private @Nullable Output<RangePartitioningRangeArgs> range;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     	      this.range = defaults.range;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder range(@Nullable Input<RangePartitioningRangeArgs> range) {
+        public Builder range(@Nullable Output<RangePartitioningRangeArgs> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable RangePartitioningRangeArgs range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
         public RangePartitioningArgs build() {

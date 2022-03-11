@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximum")
-      private final @Nullable Input<String> maximum;
+      private final @Nullable Output<String> maximum;
 
-    public Input<String> getMaximum() {
-        return this.maximum == null ? Input.empty() : this.maximum;
+    public Output<String> getMaximum() {
+        return this.maximum == null ? Output.empty() : this.maximum;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimum")
-      private final @Nullable Input<String> minimum;
+      private final @Nullable Output<String> minimum;
 
-    public Input<String> getMinimum() {
-        return this.minimum == null ? Input.empty() : this.minimum;
+    public Output<String> getMinimum() {
+        return this.minimum == null ? Output.empty() : this.minimum;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public ResourceLimitArgs(
-        @Nullable Input<String> maximum,
-        @Nullable Input<String> minimum,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<String> maximum,
+        @Nullable Output<String> minimum,
+        @Nullable Output<String> resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;
     }
 
     private ResourceLimitArgs() {
-        this.maximum = Input.empty();
-        this.minimum = Input.empty();
-        this.resourceType = Input.empty();
+        this.maximum = Output.empty();
+        this.minimum = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maximum;
-        private @Nullable Input<String> minimum;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> maximum;
+        private @Nullable Output<String> minimum;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder maximum(@Nullable Input<String> maximum) {
+        public Builder maximum(@Nullable Output<String> maximum) {
             this.maximum = maximum;
             return this;
         }
 
         public Builder maximum(@Nullable String maximum) {
-            this.maximum = Input.ofNullable(maximum);
+            this.maximum = Output.ofNullable(maximum);
             return this;
         }
 
-        public Builder minimum(@Nullable Input<String> minimum) {
+        public Builder minimum(@Nullable Output<String> minimum) {
             this.minimum = minimum;
             return this;
         }
 
         public Builder minimum(@Nullable String minimum) {
-            this.minimum = Input.ofNullable(minimum);
+            this.minimum = Output.ofNullable(minimum);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public ResourceLimitArgs build() {

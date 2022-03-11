@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpeUri")
-      private final @Nullable Input<String> cpeUri;
+      private final @Nullable Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
-        return this.cpeUri == null ? Input.empty() : this.cpeUri;
+    public Output<String> getCpeUri() {
+        return this.cpeUri == null ? Output.empty() : this.cpeUri;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<VersionArgs> version;
+      private final @Nullable Output<VersionArgs> version;
 
-    public Input<VersionArgs> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<VersionArgs> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public LocationArgs(
-        @Nullable Input<String> cpeUri,
-        @Nullable Input<String> path,
-        @Nullable Input<VersionArgs> version) {
+        @Nullable Output<String> cpeUri,
+        @Nullable Output<String> path,
+        @Nullable Output<VersionArgs> version) {
         this.cpeUri = cpeUri;
         this.path = path;
         this.version = version;
     }
 
     private LocationArgs() {
-        this.cpeUri = Input.empty();
-        this.path = Input.empty();
-        this.version = Input.empty();
+        this.cpeUri = Output.empty();
+        this.path = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cpeUri;
-        private @Nullable Input<String> path;
-        private @Nullable Input<VersionArgs> version;
+        private @Nullable Output<String> cpeUri;
+        private @Nullable Output<String> path;
+        private @Nullable Output<VersionArgs> version;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder cpeUri(@Nullable Input<String> cpeUri) {
+        public Builder cpeUri(@Nullable Output<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
 
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Input.ofNullable(cpeUri);
+            this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder version(@Nullable Input<VersionArgs> version) {
+        public Builder version(@Nullable Output<VersionArgs> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable VersionArgs version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public LocationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskCount")
-      private final @Nullable Input<Integer> diskCount;
+      private final @Nullable Output<Integer> diskCount;
 
-    public Input<Integer> getDiskCount() {
-        return this.diskCount == null ? Input.empty() : this.diskCount;
+    public Output<Integer> getDiskCount() {
+        return this.diskCount == null ? Output.empty() : this.diskCount;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     public LocalDiskArgs(
-        @Nullable Input<Integer> diskCount,
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> diskType) {
+        @Nullable Output<Integer> diskCount,
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> diskType) {
         this.diskCount = diskCount;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
     }
 
     private LocalDiskArgs() {
-        this.diskCount = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskType = Input.empty();
+        this.diskCount = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskCount;
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> diskType;
+        private @Nullable Output<Integer> diskCount;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> diskType;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder diskCount(@Nullable Input<Integer> diskCount) {
+        public Builder diskCount(@Nullable Output<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Input.ofNullable(diskCount);
+            this.diskCount = Output.ofNullable(diskCount);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
         public LocalDiskArgs build() {

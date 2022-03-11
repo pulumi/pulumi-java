@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-      private final @Nullable Input<List<String>> images;
+      private final @Nullable Output<List<String>> images;
 
-    public Input<List<String>> getImages() {
-        return this.images == null ? Input.empty() : this.images;
+    public Output<List<String>> getImages() {
+        return this.images == null ? Output.empty() : this.images;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objects")
-      private final @Nullable Input<ArtifactObjectsArgs> objects;
+      private final @Nullable Output<ArtifactObjectsArgs> objects;
 
-    public Input<ArtifactObjectsArgs> getObjects() {
-        return this.objects == null ? Input.empty() : this.objects;
+    public Output<ArtifactObjectsArgs> getObjects() {
+        return this.objects == null ? Output.empty() : this.objects;
     }
 
     public ArtifactsArgs(
-        @Nullable Input<List<String>> images,
-        @Nullable Input<ArtifactObjectsArgs> objects) {
+        @Nullable Output<List<String>> images,
+        @Nullable Output<ArtifactObjectsArgs> objects) {
         this.images = images;
         this.objects = objects;
     }
 
     private ArtifactsArgs() {
-        this.images = Input.empty();
-        this.objects = Input.empty();
+        this.images = Output.empty();
+        this.objects = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> images;
-        private @Nullable Input<ArtifactObjectsArgs> objects;
+        private @Nullable Output<List<String>> images;
+        private @Nullable Output<ArtifactObjectsArgs> objects;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objects = defaults.objects;
         }
 
-        public Builder images(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Output<List<String>> images) {
             this.images = images;
             return this;
         }
 
         public Builder images(@Nullable List<String> images) {
-            this.images = Input.ofNullable(images);
+            this.images = Output.ofNullable(images);
             return this;
         }
 
-        public Builder objects(@Nullable Input<ArtifactObjectsArgs> objects) {
+        public Builder objects(@Nullable Output<ArtifactObjectsArgs> objects) {
             this.objects = objects;
             return this;
         }
 
         public Builder objects(@Nullable ArtifactObjectsArgs objects) {
-            this.objects = Input.ofNullable(objects);
+            this.objects = Output.ofNullable(objects);
             return this;
         }
         public ArtifactsArgs build() {

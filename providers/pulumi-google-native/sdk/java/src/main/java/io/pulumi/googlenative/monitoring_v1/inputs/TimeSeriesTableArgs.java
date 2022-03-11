@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TableDataSetArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataSets", required=true)
-      private final Input<List<TableDataSetArgs>> dataSets;
+      private final Output<List<TableDataSetArgs>> dataSets;
 
-    public Input<List<TableDataSetArgs>> getDataSets() {
+    public Output<List<TableDataSetArgs>> getDataSets() {
         return this.dataSets;
     }
 
-    public TimeSeriesTableArgs(Input<List<TableDataSetArgs>> dataSets) {
+    public TimeSeriesTableArgs(Output<List<TableDataSetArgs>> dataSets) {
         this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
     }
 
     private TimeSeriesTableArgs() {
-        this.dataSets = Input.empty();
+        this.dataSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<TableDataSetArgs>> dataSets;
+        private Output<List<TableDataSetArgs>> dataSets;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TimeSeriesTableArgs extends io.pulumi.resources.ResourceArgs 
     	      this.dataSets = defaults.dataSets;
         }
 
-        public Builder dataSets(Input<List<TableDataSetArgs>> dataSets) {
+        public Builder dataSets(Output<List<TableDataSetArgs>> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
 
         public Builder dataSets(List<TableDataSetArgs> dataSets) {
-            this.dataSets = Input.of(Objects.requireNonNull(dataSets));
+            this.dataSets = Output.of(Objects.requireNonNull(dataSets));
             return this;
         }
         public TimeSeriesTableArgs build() {

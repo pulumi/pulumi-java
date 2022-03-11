@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.inputs.CloudSqlSettingsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<CloudSqlSettingsArgs> settings;
+      private final @Nullable Output<CloudSqlSettingsArgs> settings;
 
-    public Input<CloudSqlSettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<CloudSqlSettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
-    public CloudSqlConnectionProfileArgs(@Nullable Input<CloudSqlSettingsArgs> settings) {
+    public CloudSqlConnectionProfileArgs(@Nullable Output<CloudSqlSettingsArgs> settings) {
         this.settings = settings;
     }
 
     private CloudSqlConnectionProfileArgs() {
-        this.settings = Input.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudSqlSettingsArgs> settings;
+        private @Nullable Output<CloudSqlSettingsArgs> settings;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     	      this.settings = defaults.settings;
         }
 
-        public Builder settings(@Nullable Input<CloudSqlSettingsArgs> settings) {
+        public Builder settings(@Nullable Output<CloudSqlSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable CloudSqlSettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public CloudSqlConnectionProfileArgs build() {

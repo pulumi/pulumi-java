@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,10 +17,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiArgs Empty = new ApiArgs();
 
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -28,10 +28,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-      private final @Nullable Input<String> data;
+      private final @Nullable Output<String> data;
 
-    public Input<String> getData() {
-        return this.data == null ? Input.empty() : this.data;
+    public Output<String> getData() {
+        return this.data == null ? Output.empty() : this.data;
     }
 
     /**
@@ -50,41 +50,41 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Input<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<Map<String,String>>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="validate")
-      private final @Nullable Input<String> validate;
+      private final @Nullable Output<String> validate;
 
-    public Input<String> getValidate() {
-        return this.validate == null ? Input.empty() : this.validate;
+    public Output<String> getValidate() {
+        return this.validate == null ? Output.empty() : this.validate;
     }
 
     public ApiArgs(
-        @Nullable Input<String> action,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> data,
-        @Nullable Input<List<Map<String,String>>> extensions,
-        @Nullable Input<String> name,
-        Input<String> organizationId,
-        @Nullable Input<String> validate) {
+        @Nullable Output<String> action,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> data,
+        @Nullable Output<List<Map<String,String>>> extensions,
+        @Nullable Output<String> name,
+        Output<String> organizationId,
+        @Nullable Output<String> validate) {
         this.action = action;
         this.contentType = contentType;
         this.data = data;
@@ -95,13 +95,13 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.action = Input.empty();
-        this.contentType = Input.empty();
-        this.data = Input.empty();
-        this.extensions = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
-        this.validate = Input.empty();
+        this.action = Output.empty();
+        this.contentType = Output.empty();
+        this.data = Output.empty();
+        this.extensions = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
+        this.validate = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,13 +113,13 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> data;
-        private @Nullable Input<List<Map<String,String>>> extensions;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
-        private @Nullable Input<String> validate;
+        private @Nullable Output<String> action;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> data;
+        private @Nullable Output<List<Map<String,String>>> extensions;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
+        private @Nullable Output<String> validate;
 
         public Builder() {
     	      // Empty
@@ -136,73 +136,73 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validate = defaults.validate;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder data(@Nullable Input<String> data) {
+        public Builder data(@Nullable Output<String> data) {
             this.data = data;
             return this;
         }
 
         public Builder data(@Nullable String data) {
-            this.data = Input.ofNullable(data);
+            this.data = Output.ofNullable(data);
             return this;
         }
 
-        public Builder extensions(@Nullable Input<List<Map<String,String>>> extensions) {
+        public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder validate(@Nullable Input<String> validate) {
+        public Builder validate(@Nullable Output<String> validate) {
             this.validate = validate;
             return this;
         }
 
         public Builder validate(@Nullable String validate) {
-            this.validate = Input.ofNullable(validate);
+            this.validate = Output.ofNullable(validate);
             return this;
         }
         public ApiArgs build() {

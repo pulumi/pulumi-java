@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerProjectId")
-      private final @Nullable Input<String> producerProjectId;
+      private final @Nullable Output<String> producerProjectId;
 
-    public Input<String> getProducerProjectId() {
-        return this.producerProjectId == null ? Input.empty() : this.producerProjectId;
+    public Output<String> getProducerProjectId() {
+        return this.producerProjectId == null ? Output.empty() : this.producerProjectId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     public ServiceArgs(
-        @Nullable Input<String> producerProjectId,
-        @Nullable Input<String> serviceName) {
+        @Nullable Output<String> producerProjectId,
+        @Nullable Output<String> serviceName) {
         this.producerProjectId = producerProjectId;
         this.serviceName = serviceName;
     }
 
     private ServiceArgs() {
-        this.producerProjectId = Input.empty();
-        this.serviceName = Input.empty();
+        this.producerProjectId = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> producerProjectId;
-        private @Nullable Input<String> serviceName;
+        private @Nullable Output<String> producerProjectId;
+        private @Nullable Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder producerProjectId(@Nullable Input<String> producerProjectId) {
+        public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
             this.producerProjectId = producerProjectId;
             return this;
         }
 
         public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Input.ofNullable(producerProjectId);
+            this.producerProjectId = Output.ofNullable(producerProjectId);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
         public ServiceArgs build() {

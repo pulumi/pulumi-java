@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VersionSourceArgs;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="messageSchemaConfigs")
-      private final @Nullable Input<Map<String,String>> messageSchemaConfigs;
+      private final @Nullable Output<Map<String,String>> messageSchemaConfigs;
 
-    public Input<Map<String,String>> getMessageSchemaConfigs() {
-        return this.messageSchemaConfigs == null ? Input.empty() : this.messageSchemaConfigs;
+    public Output<Map<String,String>> getMessageSchemaConfigs() {
+        return this.messageSchemaConfigs == null ? Output.empty() : this.messageSchemaConfigs;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<List<VersionSourceArgs>> version;
+      private final @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Input<List<VersionSourceArgs>> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<List<VersionSourceArgs>> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public Hl7SchemaConfigArgs(
-        @Nullable Input<Map<String,String>> messageSchemaConfigs,
-        @Nullable Input<List<VersionSourceArgs>> version) {
+        @Nullable Output<Map<String,String>> messageSchemaConfigs,
+        @Nullable Output<List<VersionSourceArgs>> version) {
         this.messageSchemaConfigs = messageSchemaConfigs;
         this.version = version;
     }
 
     private Hl7SchemaConfigArgs() {
-        this.messageSchemaConfigs = Input.empty();
-        this.version = Input.empty();
+        this.messageSchemaConfigs = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> messageSchemaConfigs;
-        private @Nullable Input<List<VersionSourceArgs>> version;
+        private @Nullable Output<Map<String,String>> messageSchemaConfigs;
+        private @Nullable Output<List<VersionSourceArgs>> version;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder messageSchemaConfigs(@Nullable Input<Map<String,String>> messageSchemaConfigs) {
+        public Builder messageSchemaConfigs(@Nullable Output<Map<String,String>> messageSchemaConfigs) {
             this.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
 
         public Builder messageSchemaConfigs(@Nullable Map<String,String> messageSchemaConfigs) {
-            this.messageSchemaConfigs = Input.ofNullable(messageSchemaConfigs);
+            this.messageSchemaConfigs = Output.ofNullable(messageSchemaConfigs);
             return this;
         }
 
-        public Builder version(@Nullable Input<List<VersionSourceArgs>> version) {
+        public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public Hl7SchemaConfigArgs build() {

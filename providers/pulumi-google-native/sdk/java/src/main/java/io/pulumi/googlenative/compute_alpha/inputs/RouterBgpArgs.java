@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpAdvertiseMode;
 import io.pulumi.googlenative.compute_alpha.enums.RouterBgpAdvertisedGroupsItem;
@@ -23,10 +23,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-      private final @Nullable Input<RouterBgpAdvertiseMode> advertiseMode;
+      private final @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
 
-    public Input<RouterBgpAdvertiseMode> getAdvertiseMode() {
-        return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
+    public Output<RouterBgpAdvertiseMode> getAdvertiseMode() {
+        return this.advertiseMode == null ? Output.empty() : this.advertiseMode;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-      private final @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
+      private final @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
-    public Input<List<RouterBgpAdvertisedGroupsItem>> getAdvertisedGroups() {
-        return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
+    public Output<List<RouterBgpAdvertisedGroupsItem>> getAdvertisedGroups() {
+        return this.advertisedGroups == null ? Output.empty() : this.advertisedGroups;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-      private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+      private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
-    public Input<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
+    public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
+        return this.advertisedIpRanges == null ? Output.empty() : this.advertisedIpRanges;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn")
-      private final @Nullable Input<Integer> asn;
+      private final @Nullable Output<Integer> asn;
 
-    public Input<Integer> getAsn() {
-        return this.asn == null ? Input.empty() : this.asn;
+    public Output<Integer> getAsn() {
+        return this.asn == null ? Output.empty() : this.asn;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepaliveInterval")
-      private final @Nullable Input<Integer> keepaliveInterval;
+      private final @Nullable Output<Integer> keepaliveInterval;
 
-    public Input<Integer> getKeepaliveInterval() {
-        return this.keepaliveInterval == null ? Input.empty() : this.keepaliveInterval;
+    public Output<Integer> getKeepaliveInterval() {
+        return this.keepaliveInterval == null ? Output.empty() : this.keepaliveInterval;
     }
 
     public RouterBgpArgs(
-        @Nullable Input<RouterBgpAdvertiseMode> advertiseMode,
-        @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups,
-        @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges,
-        @Nullable Input<Integer> asn,
-        @Nullable Input<Integer> keepaliveInterval) {
+        @Nullable Output<RouterBgpAdvertiseMode> advertiseMode,
+        @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups,
+        @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges,
+        @Nullable Output<Integer> asn,
+        @Nullable Output<Integer> keepaliveInterval) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
@@ -87,11 +87,11 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterBgpArgs() {
-        this.advertiseMode = Input.empty();
-        this.advertisedGroups = Input.empty();
-        this.advertisedIpRanges = Input.empty();
-        this.asn = Input.empty();
-        this.keepaliveInterval = Input.empty();
+        this.advertiseMode = Output.empty();
+        this.advertisedGroups = Output.empty();
+        this.advertisedIpRanges = Output.empty();
+        this.asn = Output.empty();
+        this.keepaliveInterval = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RouterBgpAdvertiseMode> advertiseMode;
-        private @Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
-        private @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
-        private @Nullable Input<Integer> asn;
-        private @Nullable Input<Integer> keepaliveInterval;
+        private @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
+        private @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
+        private @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+        private @Nullable Output<Integer> asn;
+        private @Nullable Output<Integer> keepaliveInterval;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keepaliveInterval = defaults.keepaliveInterval;
         }
 
-        public Builder advertiseMode(@Nullable Input<RouterBgpAdvertiseMode> advertiseMode) {
+        public Builder advertiseMode(@Nullable Output<RouterBgpAdvertiseMode> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
         public Builder advertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
-            this.advertiseMode = Input.ofNullable(advertiseMode);
+            this.advertiseMode = Output.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder advertisedGroups(@Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
         public Builder advertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
-            this.advertisedGroups = Input.ofNullable(advertisedGroups);
+            this.advertisedGroups = Output.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder advertisedIpRanges(@Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
         public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
+            this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder asn(@Nullable Input<Integer> asn) {
+        public Builder asn(@Nullable Output<Integer> asn) {
             this.asn = asn;
             return this;
         }
 
         public Builder asn(@Nullable Integer asn) {
-            this.asn = Input.ofNullable(asn);
+            this.asn = Output.ofNullable(asn);
             return this;
         }
 
-        public Builder keepaliveInterval(@Nullable Input<Integer> keepaliveInterval) {
+        public Builder keepaliveInterval(@Nullable Output<Integer> keepaliveInterval) {
             this.keepaliveInterval = keepaliveInterval;
             return this;
         }
 
         public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
-            this.keepaliveInterval = Input.ofNullable(keepaliveInterval);
+            this.keepaliveInterval = Output.ofNullable(keepaliveInterval);
             return this;
         }
         public RouterBgpArgs build() {

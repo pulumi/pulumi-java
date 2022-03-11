@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<Integer> code;
+      private final @Nullable Output<Integer> code;
 
-    public Input<Integer> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<Integer> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public BackendBucketCdnPolicyNegativeCachingPolicyArgs(
-        @Nullable Input<Integer> code,
-        @Nullable Input<Integer> ttl) {
+        @Nullable Output<Integer> code,
+        @Nullable Output<Integer> ttl) {
         this.code = code;
         this.ttl = ttl;
     }
 
     private BackendBucketCdnPolicyNegativeCachingPolicyArgs() {
-        this.code = Input.empty();
-        this.ttl = Input.empty();
+        this.code = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> code;
-        private @Nullable Input<Integer> ttl;
+        private @Nullable Output<Integer> code;
+        private @Nullable Output<Integer> ttl;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyArgs extends io.pu
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder code(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Output<Integer> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable Integer code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public BackendBucketCdnPolicyNegativeCachingPolicyArgs build() {

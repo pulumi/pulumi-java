@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-      private final @Nullable Input<String> collation;
+      private final @Nullable Output<String> collation;
 
-    public Input<String> getCollation() {
-        return this.collation == null ? Input.empty() : this.collation;
+    public Output<String> getCollation() {
+        return this.collation == null ? Output.empty() : this.collation;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnName")
-      private final @Nullable Input<String> columnName;
+      private final @Nullable Output<String> columnName;
 
-    public Input<String> getColumnName() {
-        return this.columnName == null ? Input.empty() : this.columnName;
+    public Output<String> getColumnName() {
+        return this.columnName == null ? Output.empty() : this.columnName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType")
-      private final @Nullable Input<String> dataType;
+      private final @Nullable Output<String> dataType;
 
-    public Input<String> getDataType() {
-        return this.dataType == null ? Input.empty() : this.dataType;
+    public Output<String> getDataType() {
+        return this.dataType == null ? Output.empty() : this.dataType;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="length")
-      private final @Nullable Input<Integer> length;
+      private final @Nullable Output<Integer> length;
 
-    public Input<Integer> getLength() {
-        return this.length == null ? Input.empty() : this.length;
+    public Output<Integer> getLength() {
+        return this.length == null ? Output.empty() : this.length;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nullable")
-      private final @Nullable Input<Boolean> nullable;
+      private final @Nullable Output<Boolean> nullable;
 
-    public Input<Boolean> getNullable() {
-        return this.nullable == null ? Input.empty() : this.nullable;
+    public Output<Boolean> getNullable() {
+        return this.nullable == null ? Output.empty() : this.nullable;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ordinalPosition")
-      private final @Nullable Input<Integer> ordinalPosition;
+      private final @Nullable Output<Integer> ordinalPosition;
 
-    public Input<Integer> getOrdinalPosition() {
-        return this.ordinalPosition == null ? Input.empty() : this.ordinalPosition;
+    public Output<Integer> getOrdinalPosition() {
+        return this.ordinalPosition == null ? Output.empty() : this.ordinalPosition;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKey")
-      private final @Nullable Input<Boolean> primaryKey;
+      private final @Nullable Output<Boolean> primaryKey;
 
-    public Input<Boolean> getPrimaryKey() {
-        return this.primaryKey == null ? Input.empty() : this.primaryKey;
+    public Output<Boolean> getPrimaryKey() {
+        return this.primaryKey == null ? Output.empty() : this.primaryKey;
     }
 
     public MysqlColumnArgs(
-        @Nullable Input<String> collation,
-        @Nullable Input<String> columnName,
-        @Nullable Input<String> dataType,
-        @Nullable Input<Integer> length,
-        @Nullable Input<Boolean> nullable,
-        @Nullable Input<Integer> ordinalPosition,
-        @Nullable Input<Boolean> primaryKey) {
+        @Nullable Output<String> collation,
+        @Nullable Output<String> columnName,
+        @Nullable Output<String> dataType,
+        @Nullable Output<Integer> length,
+        @Nullable Output<Boolean> nullable,
+        @Nullable Output<Integer> ordinalPosition,
+        @Nullable Output<Boolean> primaryKey) {
         this.collation = collation;
         this.columnName = columnName;
         this.dataType = dataType;
@@ -115,13 +115,13 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlColumnArgs() {
-        this.collation = Input.empty();
-        this.columnName = Input.empty();
-        this.dataType = Input.empty();
-        this.length = Input.empty();
-        this.nullable = Input.empty();
-        this.ordinalPosition = Input.empty();
-        this.primaryKey = Input.empty();
+        this.collation = Output.empty();
+        this.columnName = Output.empty();
+        this.dataType = Output.empty();
+        this.length = Output.empty();
+        this.nullable = Output.empty();
+        this.ordinalPosition = Output.empty();
+        this.primaryKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collation;
-        private @Nullable Input<String> columnName;
-        private @Nullable Input<String> dataType;
-        private @Nullable Input<Integer> length;
-        private @Nullable Input<Boolean> nullable;
-        private @Nullable Input<Integer> ordinalPosition;
-        private @Nullable Input<Boolean> primaryKey;
+        private @Nullable Output<String> collation;
+        private @Nullable Output<String> columnName;
+        private @Nullable Output<String> dataType;
+        private @Nullable Output<Integer> length;
+        private @Nullable Output<Boolean> nullable;
+        private @Nullable Output<Integer> ordinalPosition;
+        private @Nullable Output<Boolean> primaryKey;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryKey = defaults.primaryKey;
         }
 
-        public Builder collation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Output<String> collation) {
             this.collation = collation;
             return this;
         }
 
         public Builder collation(@Nullable String collation) {
-            this.collation = Input.ofNullable(collation);
+            this.collation = Output.ofNullable(collation);
             return this;
         }
 
-        public Builder columnName(@Nullable Input<String> columnName) {
+        public Builder columnName(@Nullable Output<String> columnName) {
             this.columnName = columnName;
             return this;
         }
 
         public Builder columnName(@Nullable String columnName) {
-            this.columnName = Input.ofNullable(columnName);
+            this.columnName = Output.ofNullable(columnName);
             return this;
         }
 
-        public Builder dataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Output<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Input.ofNullable(dataType);
+            this.dataType = Output.ofNullable(dataType);
             return this;
         }
 
-        public Builder length(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Output<Integer> length) {
             this.length = length;
             return this;
         }
 
         public Builder length(@Nullable Integer length) {
-            this.length = Input.ofNullable(length);
+            this.length = Output.ofNullable(length);
             return this;
         }
 
-        public Builder nullable(@Nullable Input<Boolean> nullable) {
+        public Builder nullable(@Nullable Output<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
 
         public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Input.ofNullable(nullable);
+            this.nullable = Output.ofNullable(nullable);
             return this;
         }
 
-        public Builder ordinalPosition(@Nullable Input<Integer> ordinalPosition) {
+        public Builder ordinalPosition(@Nullable Output<Integer> ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
             return this;
         }
 
         public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
-            this.ordinalPosition = Input.ofNullable(ordinalPosition);
+            this.ordinalPosition = Output.ofNullable(ordinalPosition);
             return this;
         }
 
-        public Builder primaryKey(@Nullable Input<Boolean> primaryKey) {
+        public Builder primaryKey(@Nullable Output<Boolean> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
         public Builder primaryKey(@Nullable Boolean primaryKey) {
-            this.primaryKey = Input.ofNullable(primaryKey);
+            this.primaryKey = Output.ofNullable(primaryKey);
             return this;
         }
         public MysqlColumnArgs build() {

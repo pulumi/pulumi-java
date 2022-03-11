@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * 
      */
     @InputImport(name="maxSize")
-      private final @Nullable Input<String> maxSize;
+      private final @Nullable Output<String> maxSize;
 
-    public Input<String> getMaxSize() {
-        return this.maxSize == null ? Input.empty() : this.maxSize;
+    public Output<String> getMaxSize() {
+        return this.maxSize == null ? Output.empty() : this.maxSize;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
      * 
      */
     @InputImport(name="minSize")
-      private final @Nullable Input<String> minSize;
+      private final @Nullable Output<String> minSize;
 
-    public Input<String> getMinSize() {
-        return this.minSize == null ? Input.empty() : this.minSize;
+    public Output<String> getMinSize() {
+        return this.minSize == null ? Output.empty() : this.minSize;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs(
-        @Nullable Input<String> maxSize,
-        @Nullable Input<String> minSize) {
+        @Nullable Output<String> maxSize,
+        @Nullable Output<String> minSize) {
         this.maxSize = maxSize;
         this.minSize = minSize;
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs() {
-        this.maxSize = Input.empty();
-        this.minSize = Input.empty();
+        this.maxSize = Output.empty();
+        this.minSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxSize;
-        private @Nullable Input<String> minSize;
+        private @Nullable Output<String> maxSize;
+        private @Nullable Output<String> minSize;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs e
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder maxSize(@Nullable Input<String> maxSize) {
+        public Builder maxSize(@Nullable Output<String> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
         public Builder maxSize(@Nullable String maxSize) {
-            this.maxSize = Input.ofNullable(maxSize);
+            this.maxSize = Output.ofNullable(maxSize);
             return this;
         }
 
-        public Builder minSize(@Nullable Input<String> minSize) {
+        public Builder minSize(@Nullable Output<String> minSize) {
             this.minSize = minSize;
             return this;
         }
 
         public Builder minSize(@Nullable String minSize) {
-            this.minSize = Input.ofNullable(minSize);
+            this.minSize = Output.ofNullable(minSize);
             return this;
         }
         public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStorage")
-      private final @Nullable Input<String> artifactStorage;
+      private final @Nullable Output<String> artifactStorage;
 
-    public Input<String> getArtifactStorage() {
-        return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
+    public Output<String> getArtifactStorage() {
+        return this.artifactStorage == null ? Output.empty() : this.artifactStorage;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     public DefaultPoolArgs(
-        @Nullable Input<String> artifactStorage,
-        @Nullable Input<String> serviceAccount) {
+        @Nullable Output<String> artifactStorage,
+        @Nullable Output<String> serviceAccount) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
     }
 
     private DefaultPoolArgs() {
-        this.artifactStorage = Input.empty();
-        this.serviceAccount = Input.empty();
+        this.artifactStorage = Output.empty();
+        this.serviceAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactStorage;
-        private @Nullable Input<String> serviceAccount;
+        private @Nullable Output<String> artifactStorage;
+        private @Nullable Output<String> serviceAccount;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder artifactStorage(@Nullable Input<String> artifactStorage) {
+        public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
             this.artifactStorage = artifactStorage;
             return this;
         }
 
         public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Input.ofNullable(artifactStorage);
+            this.artifactStorage = Output.ofNullable(artifactStorage);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
         public DefaultPoolArgs build() {

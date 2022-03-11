@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="localObjectReference")
-      private final @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
-    public Input<LocalObjectReferenceArgs> getLocalObjectReference() {
-        return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
+    public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
+        return this.localObjectReference == null ? Output.empty() : this.localObjectReference;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public SecretEnvSourceArgs(
-        @Nullable Input<LocalObjectReferenceArgs> localObjectReference,
-        @Nullable Input<String> name,
-        @Nullable Input<Boolean> optional) {
+        @Nullable Output<LocalObjectReferenceArgs> localObjectReference,
+        @Nullable Output<String> name,
+        @Nullable Output<Boolean> optional) {
         this.localObjectReference = localObjectReference;
         this.name = name;
         this.optional = optional;
     }
 
     private SecretEnvSourceArgs() {
-        this.localObjectReference = Input.empty();
-        this.name = Input.empty();
-        this.optional = Input.empty();
+        this.localObjectReference = Output.empty();
+        this.name = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<LocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Boolean> optional;
+        private @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class SecretEnvSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.optional = defaults.optional;
         }
 
-        public Builder localObjectReference(@Nullable Input<LocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
         public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Input.ofNullable(localObjectReference);
+            this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public SecretEnvSourceArgs build() {

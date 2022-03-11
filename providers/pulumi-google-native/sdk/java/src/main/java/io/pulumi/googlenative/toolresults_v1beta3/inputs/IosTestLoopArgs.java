@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId")
-      private final @Nullable Input<String> bundleId;
+      private final @Nullable Output<String> bundleId;
 
-    public Input<String> getBundleId() {
-        return this.bundleId == null ? Input.empty() : this.bundleId;
+    public Output<String> getBundleId() {
+        return this.bundleId == null ? Output.empty() : this.bundleId;
     }
 
-    public IosTestLoopArgs(@Nullable Input<String> bundleId) {
+    public IosTestLoopArgs(@Nullable Output<String> bundleId) {
         this.bundleId = bundleId;
     }
 
     private IosTestLoopArgs() {
-        this.bundleId = Input.empty();
+        this.bundleId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bundleId;
+        private @Nullable Output<String> bundleId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bundleId = defaults.bundleId;
         }
 
-        public Builder bundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Output<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Input.ofNullable(bundleId);
+            this.bundleId = Output.ofNullable(bundleId);
             return this;
         }
         public IosTestLoopArgs build() {

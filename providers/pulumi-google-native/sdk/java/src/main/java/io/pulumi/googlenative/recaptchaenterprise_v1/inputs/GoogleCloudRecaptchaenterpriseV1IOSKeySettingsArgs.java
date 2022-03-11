@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * 
      */
     @InputImport(name="allowAllBundleIds")
-      private final @Nullable Input<Boolean> allowAllBundleIds;
+      private final @Nullable Output<Boolean> allowAllBundleIds;
 
-    public Input<Boolean> getAllowAllBundleIds() {
-        return this.allowAllBundleIds == null ? Input.empty() : this.allowAllBundleIds;
+    public Output<Boolean> getAllowAllBundleIds() {
+        return this.allowAllBundleIds == null ? Output.empty() : this.allowAllBundleIds;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
      * 
      */
     @InputImport(name="allowedBundleIds")
-      private final @Nullable Input<List<String>> allowedBundleIds;
+      private final @Nullable Output<List<String>> allowedBundleIds;
 
-    public Input<List<String>> getAllowedBundleIds() {
-        return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;
+    public Output<List<String>> getAllowedBundleIds() {
+        return this.allowedBundleIds == null ? Output.empty() : this.allowedBundleIds;
     }
 
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs(
-        @Nullable Input<Boolean> allowAllBundleIds,
-        @Nullable Input<List<String>> allowedBundleIds) {
+        @Nullable Output<Boolean> allowAllBundleIds,
+        @Nullable Output<List<String>> allowedBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         this.allowedBundleIds = allowedBundleIds;
     }
 
     private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs() {
-        this.allowAllBundleIds = Input.empty();
-        this.allowedBundleIds = Input.empty();
+        this.allowAllBundleIds = Output.empty();
+        this.allowedBundleIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowAllBundleIds;
-        private @Nullable Input<List<String>> allowedBundleIds;
+        private @Nullable Output<Boolean> allowAllBundleIds;
+        private @Nullable Output<List<String>> allowedBundleIds;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs extends io
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder allowAllBundleIds(@Nullable Input<Boolean> allowAllBundleIds) {
+        public Builder allowAllBundleIds(@Nullable Output<Boolean> allowAllBundleIds) {
             this.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
 
         public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
-            this.allowAllBundleIds = Input.ofNullable(allowAllBundleIds);
+            this.allowAllBundleIds = Output.ofNullable(allowAllBundleIds);
             return this;
         }
 
-        public Builder allowedBundleIds(@Nullable Input<List<String>> allowedBundleIds) {
+        public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }
 
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
+            this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
             return this;
         }
         public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs build() {

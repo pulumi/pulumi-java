@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class ServiceBindingIamPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceBindingIamPolicy(String name, ServiceBindingIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkservices/v1beta1:ServiceBindingIamPolicy", name, args == null ? ServiceBindingIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:networkservices/v1beta1:ServiceBindingIamPolicy", name, args == null ? ServiceBindingIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServiceBindingIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServiceBindingIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:networkservices/v1beta1:ServiceBindingIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class ServiceBindingIamPolicy extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceBindingIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceBindingIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServiceBindingIamPolicy(name, id, options);
     }
 }

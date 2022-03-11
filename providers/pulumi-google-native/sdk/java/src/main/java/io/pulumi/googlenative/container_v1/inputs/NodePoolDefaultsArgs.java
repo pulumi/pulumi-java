@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigDefaultsArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="nodeConfigDefaults")
-      private final @Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults;
+      private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
-    public Input<NodeConfigDefaultsArgs> getNodeConfigDefaults() {
-        return this.nodeConfigDefaults == null ? Input.empty() : this.nodeConfigDefaults;
+    public Output<NodeConfigDefaultsArgs> getNodeConfigDefaults() {
+        return this.nodeConfigDefaults == null ? Output.empty() : this.nodeConfigDefaults;
     }
 
-    public NodePoolDefaultsArgs(@Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults) {
+    public NodePoolDefaultsArgs(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
         this.nodeConfigDefaults = nodeConfigDefaults;
     }
 
     private NodePoolDefaultsArgs() {
-        this.nodeConfigDefaults = Input.empty();
+        this.nodeConfigDefaults = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults;
+        private @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
     	      this.nodeConfigDefaults = defaults.nodeConfigDefaults;
         }
 
-        public Builder nodeConfigDefaults(@Nullable Input<NodeConfigDefaultsArgs> nodeConfigDefaults) {
+        public Builder nodeConfigDefaults(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
             this.nodeConfigDefaults = nodeConfigDefaults;
             return this;
         }
 
         public Builder nodeConfigDefaults(@Nullable NodeConfigDefaultsArgs nodeConfigDefaults) {
-            this.nodeConfigDefaults = Input.ofNullable(nodeConfigDefaults);
+            this.nodeConfigDefaults = Output.ofNullable(nodeConfigDefaults);
             return this;
         }
         public NodePoolDefaultsArgs build() {

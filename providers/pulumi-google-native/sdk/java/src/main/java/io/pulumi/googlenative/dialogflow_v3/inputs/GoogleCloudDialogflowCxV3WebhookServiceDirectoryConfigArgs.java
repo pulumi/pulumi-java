@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @InputImport(name="genericWebService")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
-    public Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
-        return this.genericWebService == null ? Input.empty() : this.genericWebService;
+    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
+        return this.genericWebService == null ? Output.empty() : this.genericWebService;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(
-        @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService,
-        Input<String> service) {
+        @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService,
+        Output<String> service) {
         this.genericWebService = genericWebService;
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs() {
-        this.genericWebService = Input.empty();
-        this.service = Input.empty();
+        this.genericWebService = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
-        private Input<String> service;
+        private @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     	      this.service = defaults.service;
         }
 
-        public Builder genericWebService(@Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService) {
+        public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService) {
             this.genericWebService = genericWebService;
             return this;
         }
 
         public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Input.ofNullable(genericWebService);
+            this.genericWebService = Output.ofNullable(genericWebService);
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs build() {

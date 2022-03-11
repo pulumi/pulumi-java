@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.enums.CaPoolTier;
 import io.pulumi.googlenative.privateca_v1.inputs.IssuancePolicyArgs;
@@ -19,9 +19,9 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     public static final CaPoolArgs Empty = new CaPoolArgs();
 
     @InputImport(name="caPoolId", required=true)
-      private final Input<String> caPoolId;
+      private final Output<String> caPoolId;
 
-    public Input<String> getCaPoolId() {
+    public Output<String> getCaPoolId() {
         return this.caPoolId;
     }
 
@@ -30,10 +30,10 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuancePolicy")
-      private final @Nullable Input<IssuancePolicyArgs> issuancePolicy;
+      private final @Nullable Output<IssuancePolicyArgs> issuancePolicy;
 
-    public Input<IssuancePolicyArgs> getIssuancePolicy() {
-        return this.issuancePolicy == null ? Input.empty() : this.issuancePolicy;
+    public Output<IssuancePolicyArgs> getIssuancePolicy() {
+        return this.issuancePolicy == null ? Output.empty() : this.issuancePolicy;
     }
 
     /**
@@ -41,24 +41,24 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishingOptions")
-      private final @Nullable Input<PublishingOptionsArgs> publishingOptions;
+      private final @Nullable Output<PublishingOptionsArgs> publishingOptions;
 
-    public Input<PublishingOptionsArgs> getPublishingOptions() {
-        return this.publishingOptions == null ? Input.empty() : this.publishingOptions;
+    public Output<PublishingOptionsArgs> getPublishingOptions() {
+        return this.publishingOptions == null ? Output.empty() : this.publishingOptions;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -84,21 +84,21 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier", required=true)
-      private final Input<CaPoolTier> tier;
+      private final Output<CaPoolTier> tier;
 
-    public Input<CaPoolTier> getTier() {
+    public Output<CaPoolTier> getTier() {
         return this.tier;
     }
 
     public CaPoolArgs(
-        Input<String> caPoolId,
-        @Nullable Input<IssuancePolicyArgs> issuancePolicy,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<PublishingOptionsArgs> publishingOptions,
-        @Nullable Input<String> requestId,
-        Input<CaPoolTier> tier) {
+        Output<String> caPoolId,
+        @Nullable Output<IssuancePolicyArgs> issuancePolicy,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<PublishingOptionsArgs> publishingOptions,
+        @Nullable Output<String> requestId,
+        Output<CaPoolTier> tier) {
         this.caPoolId = Objects.requireNonNull(caPoolId, "expected parameter 'caPoolId' to be non-null");
         this.issuancePolicy = issuancePolicy;
         this.labels = labels;
@@ -110,14 +110,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CaPoolArgs() {
-        this.caPoolId = Input.empty();
-        this.issuancePolicy = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.publishingOptions = Input.empty();
-        this.requestId = Input.empty();
-        this.tier = Input.empty();
+        this.caPoolId = Output.empty();
+        this.issuancePolicy = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.publishingOptions = Output.empty();
+        this.requestId = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,14 +129,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> caPoolId;
-        private @Nullable Input<IssuancePolicyArgs> issuancePolicy;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<PublishingOptionsArgs> publishingOptions;
-        private @Nullable Input<String> requestId;
-        private Input<CaPoolTier> tier;
+        private Output<String> caPoolId;
+        private @Nullable Output<IssuancePolicyArgs> issuancePolicy;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<PublishingOptionsArgs> publishingOptions;
+        private @Nullable Output<String> requestId;
+        private Output<CaPoolTier> tier;
 
         public Builder() {
     	      // Empty
@@ -154,83 +154,83 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder caPoolId(Input<String> caPoolId) {
+        public Builder caPoolId(Output<String> caPoolId) {
             this.caPoolId = Objects.requireNonNull(caPoolId);
             return this;
         }
 
         public Builder caPoolId(String caPoolId) {
-            this.caPoolId = Input.of(Objects.requireNonNull(caPoolId));
+            this.caPoolId = Output.of(Objects.requireNonNull(caPoolId));
             return this;
         }
 
-        public Builder issuancePolicy(@Nullable Input<IssuancePolicyArgs> issuancePolicy) {
+        public Builder issuancePolicy(@Nullable Output<IssuancePolicyArgs> issuancePolicy) {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
 
         public Builder issuancePolicy(@Nullable IssuancePolicyArgs issuancePolicy) {
-            this.issuancePolicy = Input.ofNullable(issuancePolicy);
+            this.issuancePolicy = Output.ofNullable(issuancePolicy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder publishingOptions(@Nullable Input<PublishingOptionsArgs> publishingOptions) {
+        public Builder publishingOptions(@Nullable Output<PublishingOptionsArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
 
         public Builder publishingOptions(@Nullable PublishingOptionsArgs publishingOptions) {
-            this.publishingOptions = Input.ofNullable(publishingOptions);
+            this.publishingOptions = Output.ofNullable(publishingOptions);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder tier(Input<CaPoolTier> tier) {
+        public Builder tier(Output<CaPoolTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
         public Builder tier(CaPoolTier tier) {
-            this.tier = Input.of(Objects.requireNonNull(tier));
+            this.tier = Output.of(Objects.requireNonNull(tier));
             return this;
         }
         public CaPoolArgs build() {

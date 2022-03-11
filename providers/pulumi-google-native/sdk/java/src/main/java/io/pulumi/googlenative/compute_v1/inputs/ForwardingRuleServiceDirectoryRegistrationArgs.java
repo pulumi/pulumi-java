@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="serviceDirectoryRegion")
-      private final @Nullable Input<String> serviceDirectoryRegion;
+      private final @Nullable Output<String> serviceDirectoryRegion;
 
-    public Input<String> getServiceDirectoryRegion() {
-        return this.serviceDirectoryRegion == null ? Input.empty() : this.serviceDirectoryRegion;
+    public Output<String> getServiceDirectoryRegion() {
+        return this.serviceDirectoryRegion == null ? Output.empty() : this.serviceDirectoryRegion;
     }
 
     public ForwardingRuleServiceDirectoryRegistrationArgs(
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> service,
-        @Nullable Input<String> serviceDirectoryRegion) {
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> service,
+        @Nullable Output<String> serviceDirectoryRegion) {
         this.namespace = namespace;
         this.service = service;
         this.serviceDirectoryRegion = serviceDirectoryRegion;
     }
 
     private ForwardingRuleServiceDirectoryRegistrationArgs() {
-        this.namespace = Input.empty();
-        this.service = Input.empty();
-        this.serviceDirectoryRegion = Input.empty();
+        this.namespace = Output.empty();
+        this.service = Output.empty();
+        this.serviceDirectoryRegion = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> serviceDirectoryRegion;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> serviceDirectoryRegion;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder serviceDirectoryRegion(@Nullable Input<String> serviceDirectoryRegion) {
+        public Builder serviceDirectoryRegion(@Nullable Output<String> serviceDirectoryRegion) {
             this.serviceDirectoryRegion = serviceDirectoryRegion;
             return this;
         }
 
         public Builder serviceDirectoryRegion(@Nullable String serviceDirectoryRegion) {
-            this.serviceDirectoryRegion = Input.ofNullable(serviceDirectoryRegion);
+            this.serviceDirectoryRegion = Output.ofNullable(serviceDirectoryRegion);
             return this;
         }
         public ForwardingRuleServiceDirectoryRegistrationArgs build() {

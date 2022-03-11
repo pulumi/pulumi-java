@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ChannelCredentialsChannelCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
@@ -24,10 +24,10 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificates")
-      private final @Nullable Input<TlsCertificatePathsArgs> certificates;
+      private final @Nullable Output<TlsCertificatePathsArgs> certificates;
 
-    public Input<TlsCertificatePathsArgs> getCertificates() {
-        return this.certificates == null ? Input.empty() : this.certificates;
+    public Output<TlsCertificatePathsArgs> getCertificates() {
+        return this.certificates == null ? Output.empty() : this.certificates;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="channelCredentialType")
-      private final @Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType;
+      private final @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
-    public Input<ChannelCredentialsChannelCredentialType> getChannelCredentialType() {
-        return this.channelCredentialType == null ? Input.empty() : this.channelCredentialType;
+    public Output<ChannelCredentialsChannelCredentialType> getChannelCredentialType() {
+        return this.channelCredentialType == null ? Output.empty() : this.channelCredentialType;
     }
 
     public ChannelCredentialsArgs(
-        @Nullable Input<TlsCertificatePathsArgs> certificates,
-        @Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType) {
+        @Nullable Output<TlsCertificatePathsArgs> certificates,
+        @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType) {
         this.certificates = certificates;
         this.channelCredentialType = channelCredentialType;
     }
 
     private ChannelCredentialsArgs() {
-        this.certificates = Input.empty();
-        this.channelCredentialType = Input.empty();
+        this.certificates = Output.empty();
+        this.channelCredentialType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<TlsCertificatePathsArgs> certificates;
-        private @Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType;
+        private @Nullable Output<TlsCertificatePathsArgs> certificates;
+        private @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     	      this.channelCredentialType = defaults.channelCredentialType;
         }
 
-        public Builder certificates(@Nullable Input<TlsCertificatePathsArgs> certificates) {
+        public Builder certificates(@Nullable Output<TlsCertificatePathsArgs> certificates) {
             this.certificates = certificates;
             return this;
         }
 
         public Builder certificates(@Nullable TlsCertificatePathsArgs certificates) {
-            this.certificates = Input.ofNullable(certificates);
+            this.certificates = Output.ofNullable(certificates);
             return this;
         }
 
-        public Builder channelCredentialType(@Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType) {
+        public Builder channelCredentialType(@Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType) {
             this.channelCredentialType = channelCredentialType;
             return this;
         }
 
         public Builder channelCredentialType(@Nullable ChannelCredentialsChannelCredentialType channelCredentialType) {
-            this.channelCredentialType = Input.ofNullable(channelCredentialType);
+            this.channelCredentialType = Output.ofNullable(channelCredentialType);
             return this;
         }
         public ChannelCredentialsArgs build() {

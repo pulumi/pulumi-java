@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1.enums.PkixPublicKeySignatureAlgorithm;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicKeyPem")
-      private final @Nullable Input<String> publicKeyPem;
+      private final @Nullable Output<String> publicKeyPem;
 
-    public Input<String> getPublicKeyPem() {
-        return this.publicKeyPem == null ? Input.empty() : this.publicKeyPem;
+    public Output<String> getPublicKeyPem() {
+        return this.publicKeyPem == null ? Output.empty() : this.publicKeyPem;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureAlgorithm")
-      private final @Nullable Input<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
+      private final @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
 
-    public Input<PkixPublicKeySignatureAlgorithm> getSignatureAlgorithm() {
-        return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;
+    public Output<PkixPublicKeySignatureAlgorithm> getSignatureAlgorithm() {
+        return this.signatureAlgorithm == null ? Output.empty() : this.signatureAlgorithm;
     }
 
     public PkixPublicKeyArgs(
-        @Nullable Input<String> publicKeyPem,
-        @Nullable Input<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
+        @Nullable Output<String> publicKeyPem,
+        @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }
 
     private PkixPublicKeyArgs() {
-        this.publicKeyPem = Input.empty();
-        this.signatureAlgorithm = Input.empty();
+        this.publicKeyPem = Output.empty();
+        this.signatureAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> publicKeyPem;
-        private @Nullable Input<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
+        private @Nullable Output<String> publicKeyPem;
+        private @Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PkixPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder publicKeyPem(@Nullable Input<String> publicKeyPem) {
+        public Builder publicKeyPem(@Nullable Output<String> publicKeyPem) {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
 
         public Builder publicKeyPem(@Nullable String publicKeyPem) {
-            this.publicKeyPem = Input.ofNullable(publicKeyPem);
+            this.publicKeyPem = Output.ofNullable(publicKeyPem);
             return this;
         }
 
-        public Builder signatureAlgorithm(@Nullable Input<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable Output<PkixPublicKeySignatureAlgorithm> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
         public Builder signatureAlgorithm(@Nullable PkixPublicKeySignatureAlgorithm signatureAlgorithm) {
-            this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
+            this.signatureAlgorithm = Output.ofNullable(signatureAlgorithm);
             return this;
         }
         public PkixPublicKeyArgs build() {

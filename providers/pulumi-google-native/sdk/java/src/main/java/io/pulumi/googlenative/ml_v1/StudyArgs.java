@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__StudyConfigArgs;
 import java.lang.String;
@@ -16,17 +16,17 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     public static final StudyArgs Empty = new StudyArgs();
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -34,24 +34,24 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studyConfig", required=true)
-      private final Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
+      private final Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
-    public Input<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
+    public Output<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
         return this.studyConfig;
     }
 
     @InputImport(name="studyId", required=true)
-      private final Input<String> studyId;
+      private final Output<String> studyId;
 
-    public Input<String> getStudyId() {
+    public Output<String> getStudyId() {
         return this.studyId;
     }
 
     public StudyArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig,
-        Input<String> studyId) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig,
+        Output<String> studyId) {
         this.location = location;
         this.project = project;
         this.studyConfig = Objects.requireNonNull(studyConfig, "expected parameter 'studyConfig' to be non-null");
@@ -59,10 +59,10 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudyArgs() {
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.studyConfig = Input.empty();
-        this.studyId = Input.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.studyConfig = Output.empty();
+        this.studyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
-        private Input<String> studyId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
+        private Output<String> studyId;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.studyId = defaults.studyId;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder studyConfig(Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig) {
+        public Builder studyConfig(Output<GoogleCloudMlV1__StudyConfigArgs> studyConfig) {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }
 
         public Builder studyConfig(GoogleCloudMlV1__StudyConfigArgs studyConfig) {
-            this.studyConfig = Input.of(Objects.requireNonNull(studyConfig));
+            this.studyConfig = Output.of(Objects.requireNonNull(studyConfig));
             return this;
         }
 
-        public Builder studyId(Input<String> studyId) {
+        public Builder studyId(Output<String> studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
 
         public Builder studyId(String studyId) {
-            this.studyId = Input.of(Objects.requireNonNull(studyId));
+            this.studyId = Output.of(Objects.requireNonNull(studyId));
             return this;
         }
         public StudyArgs build() {

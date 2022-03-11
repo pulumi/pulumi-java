@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
      * 
      */
     @InputImport(name="bigqueryDestination")
-      private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
-    public Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
-        return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
+    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
+        return this.bigqueryDestination == null ? Output.empty() : this.bigqueryDestination;
     }
 
-    public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(@Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
+    public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
     }
 
     private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs() {
-        this.bigqueryDestination = Input.empty();
+        this.bigqueryDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+        private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder bigqueryDestination(@Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
             this.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
         public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Input.ofNullable(bigqueryDestination);
+            this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
             return this;
         }
         public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {

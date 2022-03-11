@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rootDirectory")
-      private final @Nullable Input<String> rootDirectory;
+      private final @Nullable Output<String> rootDirectory;
 
-    public Input<String> getRootDirectory() {
-        return this.rootDirectory == null ? Input.empty() : this.rootDirectory;
+    public Output<String> getRootDirectory() {
+        return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
     }
 
-    public PosixFilesystemArgs(@Nullable Input<String> rootDirectory) {
+    public PosixFilesystemArgs(@Nullable Output<String> rootDirectory) {
         this.rootDirectory = rootDirectory;
     }
 
     private PosixFilesystemArgs() {
-        this.rootDirectory = Input.empty();
+        this.rootDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> rootDirectory;
+        private @Nullable Output<String> rootDirectory;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder rootDirectory(@Nullable Input<String> rootDirectory) {
+        public Builder rootDirectory(@Nullable Output<String> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
         public Builder rootDirectory(@Nullable String rootDirectory) {
-            this.rootDirectory = Input.ofNullable(rootDirectory);
+            this.rootDirectory = Output.ofNullable(rootDirectory);
             return this;
         }
         public PosixFilesystemArgs build() {

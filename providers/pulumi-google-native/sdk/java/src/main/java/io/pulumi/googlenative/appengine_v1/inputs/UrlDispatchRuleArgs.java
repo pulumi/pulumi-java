@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public UrlDispatchRuleArgs(
-        @Nullable Input<String> domain,
-        @Nullable Input<String> path,
-        @Nullable Input<String> service) {
+        @Nullable Output<String> domain,
+        @Nullable Output<String> path,
+        @Nullable Output<String> service) {
         this.domain = domain;
         this.path = path;
         this.service = service;
     }
 
     private UrlDispatchRuleArgs() {
-        this.domain = Input.empty();
-        this.path = Input.empty();
-        this.service = Input.empty();
+        this.domain = Output.empty();
+        this.path = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> path;
-        private @Nullable Input<String> service;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> path;
+        private @Nullable Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UrlDispatchRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public UrlDispatchRuleArgs build() {

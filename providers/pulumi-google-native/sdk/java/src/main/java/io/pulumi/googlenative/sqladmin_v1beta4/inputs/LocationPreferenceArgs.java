@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="followGaeApplication")
-      private final @Nullable Input<String> followGaeApplication;
+      private final @Nullable Output<String> followGaeApplication;
 
-    public Input<String> getFollowGaeApplication() {
-        return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
+    public Output<String> getFollowGaeApplication() {
+        return this.followGaeApplication == null ? Output.empty() : this.followGaeApplication;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secondaryZone")
-      private final @Nullable Input<String> secondaryZone;
+      private final @Nullable Output<String> secondaryZone;
 
-    public Input<String> getSecondaryZone() {
-        return this.secondaryZone == null ? Input.empty() : this.secondaryZone;
+    public Output<String> getSecondaryZone() {
+        return this.secondaryZone == null ? Output.empty() : this.secondaryZone;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public LocationPreferenceArgs(
-        @Nullable Input<String> followGaeApplication,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> secondaryZone,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> followGaeApplication,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> secondaryZone,
+        @Nullable Output<String> zone) {
         this.followGaeApplication = followGaeApplication;
         this.kind = kind;
         this.secondaryZone = secondaryZone;
@@ -74,10 +74,10 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LocationPreferenceArgs() {
-        this.followGaeApplication = Input.empty();
-        this.kind = Input.empty();
-        this.secondaryZone = Input.empty();
-        this.zone = Input.empty();
+        this.followGaeApplication = Output.empty();
+        this.kind = Output.empty();
+        this.secondaryZone = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> followGaeApplication;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> secondaryZone;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> followGaeApplication;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> secondaryZone;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
     	      this.zone = defaults.zone;
         }
 
-        public Builder followGaeApplication(@Nullable Input<String> followGaeApplication) {
+        public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
 
         public Builder followGaeApplication(@Nullable String followGaeApplication) {
-            this.followGaeApplication = Input.ofNullable(followGaeApplication);
+            this.followGaeApplication = Output.ofNullable(followGaeApplication);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder secondaryZone(@Nullable Input<String> secondaryZone) {
+        public Builder secondaryZone(@Nullable Output<String> secondaryZone) {
             this.secondaryZone = secondaryZone;
             return this;
         }
 
         public Builder secondaryZone(@Nullable String secondaryZone) {
-            this.secondaryZone = Input.ofNullable(secondaryZone);
+            this.secondaryZone = Output.ofNullable(secondaryZone);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public LocationPreferenceArgs build() {

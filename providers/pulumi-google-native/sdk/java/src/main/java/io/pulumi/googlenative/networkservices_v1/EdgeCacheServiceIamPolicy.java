@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.networkservices_v1;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -119,14 +118,14 @@ public class EdgeCacheServiceIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public EdgeCacheServiceIamPolicy(String name, EdgeCacheServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkservices/v1:EdgeCacheServiceIamPolicy", name, args == null ? EdgeCacheServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:networkservices/v1:EdgeCacheServiceIamPolicy", name, args == null ? EdgeCacheServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EdgeCacheServiceIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EdgeCacheServiceIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:networkservices/v1:EdgeCacheServiceIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -141,7 +140,7 @@ public class EdgeCacheServiceIamPolicy extends io.pulumi.resources.CustomResourc
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EdgeCacheServiceIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EdgeCacheServiceIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EdgeCacheServiceIamPolicy(name, id, options);
     }
 }

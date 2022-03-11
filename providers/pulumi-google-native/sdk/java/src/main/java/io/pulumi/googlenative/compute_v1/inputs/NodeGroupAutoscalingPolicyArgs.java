@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.NodeGroupAutoscalingPolicyMode;
 import java.lang.Integer;
@@ -20,10 +20,10 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxNodes")
-      private final @Nullable Input<Integer> maxNodes;
+      private final @Nullable Output<Integer> maxNodes;
 
-    public Input<Integer> getMaxNodes() {
-        return this.maxNodes == null ? Input.empty() : this.maxNodes;
+    public Output<Integer> getMaxNodes() {
+        return this.maxNodes == null ? Output.empty() : this.maxNodes;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="minNodes")
-      private final @Nullable Input<Integer> minNodes;
+      private final @Nullable Output<Integer> minNodes;
 
-    public Input<Integer> getMinNodes() {
-        return this.minNodes == null ? Input.empty() : this.minNodes;
+    public Output<Integer> getMinNodes() {
+        return this.minNodes == null ? Output.empty() : this.minNodes;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<NodeGroupAutoscalingPolicyMode> mode;
+      private final @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
-    public Input<NodeGroupAutoscalingPolicyMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<NodeGroupAutoscalingPolicyMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     public NodeGroupAutoscalingPolicyArgs(
-        @Nullable Input<Integer> maxNodes,
-        @Nullable Input<Integer> minNodes,
-        @Nullable Input<NodeGroupAutoscalingPolicyMode> mode) {
+        @Nullable Output<Integer> maxNodes,
+        @Nullable Output<Integer> minNodes,
+        @Nullable Output<NodeGroupAutoscalingPolicyMode> mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;
     }
 
     private NodeGroupAutoscalingPolicyArgs() {
-        this.maxNodes = Input.empty();
-        this.minNodes = Input.empty();
-        this.mode = Input.empty();
+        this.maxNodes = Output.empty();
+        this.minNodes = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxNodes;
-        private @Nullable Input<Integer> minNodes;
-        private @Nullable Input<NodeGroupAutoscalingPolicyMode> mode;
+        private @Nullable Output<Integer> maxNodes;
+        private @Nullable Output<Integer> minNodes;
+        private @Nullable Output<NodeGroupAutoscalingPolicyMode> mode;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class NodeGroupAutoscalingPolicyArgs extends io.pulumi.resources.Re
     	      this.mode = defaults.mode;
         }
 
-        public Builder maxNodes(@Nullable Input<Integer> maxNodes) {
+        public Builder maxNodes(@Nullable Output<Integer> maxNodes) {
             this.maxNodes = maxNodes;
             return this;
         }
 
         public Builder maxNodes(@Nullable Integer maxNodes) {
-            this.maxNodes = Input.ofNullable(maxNodes);
+            this.maxNodes = Output.ofNullable(maxNodes);
             return this;
         }
 
-        public Builder minNodes(@Nullable Input<Integer> minNodes) {
+        public Builder minNodes(@Nullable Output<Integer> minNodes) {
             this.minNodes = minNodes;
             return this;
         }
 
         public Builder minNodes(@Nullable Integer minNodes) {
-            this.minNodes = Input.ofNullable(minNodes);
+            this.minNodes = Output.ofNullable(minNodes);
             return this;
         }
 
-        public Builder mode(@Nullable Input<NodeGroupAutoscalingPolicyMode> mode) {
+        public Builder mode(@Nullable Output<NodeGroupAutoscalingPolicyMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable NodeGroupAutoscalingPolicyMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public NodeGroupAutoscalingPolicyArgs build() {

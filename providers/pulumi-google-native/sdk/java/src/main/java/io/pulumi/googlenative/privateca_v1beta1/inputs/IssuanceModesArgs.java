@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowConfigBasedIssuance", required=true)
-      private final Input<Boolean> allowConfigBasedIssuance;
+      private final Output<Boolean> allowConfigBasedIssuance;
 
-    public Input<Boolean> getAllowConfigBasedIssuance() {
+    public Output<Boolean> getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
     }
 
@@ -33,22 +33,22 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCsrBasedIssuance", required=true)
-      private final Input<Boolean> allowCsrBasedIssuance;
+      private final Output<Boolean> allowCsrBasedIssuance;
 
-    public Input<Boolean> getAllowCsrBasedIssuance() {
+    public Output<Boolean> getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
     }
 
     public IssuanceModesArgs(
-        Input<Boolean> allowConfigBasedIssuance,
-        Input<Boolean> allowCsrBasedIssuance) {
+        Output<Boolean> allowConfigBasedIssuance,
+        Output<Boolean> allowCsrBasedIssuance) {
         this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance, "expected parameter 'allowConfigBasedIssuance' to be non-null");
         this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance, "expected parameter 'allowCsrBasedIssuance' to be non-null");
     }
 
     private IssuanceModesArgs() {
-        this.allowConfigBasedIssuance = Input.empty();
-        this.allowCsrBasedIssuance = Input.empty();
+        this.allowConfigBasedIssuance = Output.empty();
+        this.allowCsrBasedIssuance = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> allowConfigBasedIssuance;
-        private Input<Boolean> allowCsrBasedIssuance;
+        private Output<Boolean> allowConfigBasedIssuance;
+        private Output<Boolean> allowCsrBasedIssuance;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
         }
 
-        public Builder allowConfigBasedIssuance(Input<Boolean> allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(Output<Boolean> allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
 
         public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
-            this.allowConfigBasedIssuance = Input.of(Objects.requireNonNull(allowConfigBasedIssuance));
+            this.allowConfigBasedIssuance = Output.of(Objects.requireNonNull(allowConfigBasedIssuance));
             return this;
         }
 
-        public Builder allowCsrBasedIssuance(Input<Boolean> allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(Output<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
 
         public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
-            this.allowCsrBasedIssuance = Input.of(Objects.requireNonNull(allowCsrBasedIssuance));
+            this.allowCsrBasedIssuance = Output.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
         }
         public IssuanceModesArgs build() {

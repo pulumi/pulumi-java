@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType;
 import java.lang.Double;
@@ -25,10 +25,10 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-      private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Input<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
+    public Output<Double> getSingleInstanceAssignment() {
+        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="utilizationTarget")
-      private final @Nullable Input<Double> utilizationTarget;
+      private final @Nullable Output<Double> utilizationTarget;
 
-    public Input<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Input.empty() : this.utilizationTarget;
+    public Output<Double> getUtilizationTarget() {
+        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
      * 
      */
     @InputImport(name="utilizationTargetType")
-      private final @Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
+      private final @Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
 
-    public Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> getUtilizationTargetType() {
-        return this.utilizationTargetType == null ? Input.empty() : this.utilizationTargetType;
+    public Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> getUtilizationTargetType() {
+        return this.utilizationTargetType == null ? Output.empty() : this.utilizationTargetType;
     }
 
     public AutoscalingPolicyCustomMetricUtilizationArgs(
-        @Nullable Input<String> filter,
-        @Nullable Input<String> metric,
-        @Nullable Input<Double> singleInstanceAssignment,
-        @Nullable Input<Double> utilizationTarget,
-        @Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
+        @Nullable Output<String> filter,
+        @Nullable Output<String> metric,
+        @Nullable Output<Double> singleInstanceAssignment,
+        @Nullable Output<Double> utilizationTarget,
+        @Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
         this.filter = filter;
         this.metric = metric;
         this.singleInstanceAssignment = singleInstanceAssignment;
@@ -89,11 +89,11 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     }
 
     private AutoscalingPolicyCustomMetricUtilizationArgs() {
-        this.filter = Input.empty();
-        this.metric = Input.empty();
-        this.singleInstanceAssignment = Input.empty();
-        this.utilizationTarget = Input.empty();
-        this.utilizationTargetType = Input.empty();
+        this.filter = Output.empty();
+        this.metric = Output.empty();
+        this.singleInstanceAssignment = Output.empty();
+        this.utilizationTarget = Output.empty();
+        this.utilizationTargetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> metric;
-        private @Nullable Input<Double> singleInstanceAssignment;
-        private @Nullable Input<Double> utilizationTarget;
-        private @Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> metric;
+        private @Nullable Output<Double> singleInstanceAssignment;
+        private @Nullable Output<Double> utilizationTarget;
+        private @Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     	      this.utilizationTargetType = defaults.utilizationTargetType;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder utilizationTarget(@Nullable Input<Double> utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
 
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Input.ofNullable(utilizationTarget);
+            this.utilizationTarget = Output.ofNullable(utilizationTarget);
             return this;
         }
 
-        public Builder utilizationTargetType(@Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
+        public Builder utilizationTargetType(@Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
             this.utilizationTargetType = utilizationTargetType;
             return this;
         }
 
         public Builder utilizationTargetType(@Nullable AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType utilizationTargetType) {
-            this.utilizationTargetType = Input.ofNullable(utilizationTargetType);
+            this.utilizationTargetType = Output.ofNullable(utilizationTargetType);
             return this;
         }
         public AutoscalingPolicyCustomMetricUtilizationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<String> count;
+      private final @Nullable Output<String> count;
 
-    public Input<String> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<String> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="instanceProperties")
-      private final @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+      private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
-    public Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
-        return this.instanceProperties == null ? Input.empty() : this.instanceProperties;
+    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
+        return this.instanceProperties == null ? Output.empty() : this.instanceProperties;
     }
 
     public AllocationSpecificSKUReservationArgs(
-        @Nullable Input<String> count,
-        @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
+        @Nullable Output<String> count,
+        @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
         this.count = count;
         this.instanceProperties = instanceProperties;
     }
 
     private AllocationSpecificSKUReservationArgs() {
-        this.count = Input.empty();
-        this.instanceProperties = Input.empty();
+        this.count = Output.empty();
+        this.instanceProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> count;
-        private @Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+        private @Nullable Output<String> count;
+        private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
     	      this.instanceProperties = defaults.instanceProperties;
         }
 
-        public Builder count(@Nullable Input<String> count) {
+        public Builder count(@Nullable Output<String> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable String count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder instanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
+        public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = instanceProperties;
             return this;
         }
 
         public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Input.ofNullable(instanceProperties);
+            this.instanceProperties = Output.ofNullable(instanceProperties);
             return this;
         }
         public AllocationSpecificSKUReservationArgs build() {

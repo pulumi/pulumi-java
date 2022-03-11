@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="domains")
-      private final @Nullable Input<List<String>> domains;
+      private final @Nullable Output<List<String>> domains;
 
-    public Input<List<String>> getDomains() {
-        return this.domains == null ? Input.empty() : this.domains;
+    public Output<List<String>> getDomains() {
+        return this.domains == null ? Output.empty() : this.domains;
     }
 
-    public SslCertificateManagedSslCertificateArgs(@Nullable Input<List<String>> domains) {
+    public SslCertificateManagedSslCertificateArgs(@Nullable Output<List<String>> domains) {
         this.domains = domains;
     }
 
     private SslCertificateManagedSslCertificateArgs() {
-        this.domains = Input.empty();
+        this.domains = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> domains;
+        private @Nullable Output<List<String>> domains;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SslCertificateManagedSslCertificateArgs extends io.pulumi.res
     	      this.domains = defaults.domains;
         }
 
-        public Builder domains(@Nullable Input<List<String>> domains) {
+        public Builder domains(@Nullable Output<List<String>> domains) {
             this.domains = domains;
             return this;
         }
 
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Input.ofNullable(domains);
+            this.domains = Output.ofNullable(domains);
             return this;
         }
         public SslCertificateManagedSslCertificateArgs build() {

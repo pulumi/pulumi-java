@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
-    public TcpCheckArgs(@Nullable Input<Integer> port) {
+    public TcpCheckArgs(@Nullable Output<Integer> port) {
         this.port = port;
     }
 
     private TcpCheckArgs() {
-        this.port = Input.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> port;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class TcpCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public TcpCheckArgs build() {

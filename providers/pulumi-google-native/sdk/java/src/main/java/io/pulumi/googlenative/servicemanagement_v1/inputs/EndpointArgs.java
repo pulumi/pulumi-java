@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCors")
-      private final @Nullable Input<Boolean> allowCors;
+      private final @Nullable Output<Boolean> allowCors;
 
-    public Input<Boolean> getAllowCors() {
-        return this.allowCors == null ? Input.empty() : this.allowCors;
+    public Output<Boolean> getAllowCors() {
+        return this.allowCors == null ? Output.empty() : this.allowCors;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     public EndpointArgs(
-        @Nullable Input<Boolean> allowCors,
-        @Nullable Input<String> name,
-        @Nullable Input<String> target) {
+        @Nullable Output<Boolean> allowCors,
+        @Nullable Output<String> name,
+        @Nullable Output<String> target) {
         this.allowCors = allowCors;
         this.name = name;
         this.target = target;
     }
 
     private EndpointArgs() {
-        this.allowCors = Input.empty();
-        this.name = Input.empty();
-        this.target = Input.empty();
+        this.allowCors = Output.empty();
+        this.name = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCors;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> target;
+        private @Nullable Output<Boolean> allowCors;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder allowCors(@Nullable Input<Boolean> allowCors) {
+        public Builder allowCors(@Nullable Output<Boolean> allowCors) {
             this.allowCors = allowCors;
             return this;
         }
 
         public Builder allowCors(@Nullable Boolean allowCors) {
-            this.allowCors = Input.ofNullable(allowCors);
+            this.allowCors = Output.ofNullable(allowCors);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
         public EndpointArgs build() {

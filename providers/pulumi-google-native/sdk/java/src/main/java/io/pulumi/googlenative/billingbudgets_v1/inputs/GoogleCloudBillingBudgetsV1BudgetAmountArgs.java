@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1LastPeriodAmountArgs;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeMoneyArgs;
@@ -24,10 +24,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
      * 
      */
     @InputImport(name="lastPeriodAmount")
-      private final @Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
+      private final @Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
 
-    public Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> getLastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Input.empty() : this.lastPeriodAmount;
+    public Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> getLastPeriodAmount() {
+        return this.lastPeriodAmount == null ? Output.empty() : this.lastPeriodAmount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
      * 
      */
     @InputImport(name="specifiedAmount")
-      private final @Nullable Input<GoogleTypeMoneyArgs> specifiedAmount;
+      private final @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
-    public Input<GoogleTypeMoneyArgs> getSpecifiedAmount() {
-        return this.specifiedAmount == null ? Input.empty() : this.specifiedAmount;
+    public Output<GoogleTypeMoneyArgs> getSpecifiedAmount() {
+        return this.specifiedAmount == null ? Output.empty() : this.specifiedAmount;
     }
 
     public GoogleCloudBillingBudgetsV1BudgetAmountArgs(
-        @Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount,
-        @Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
+        @Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount,
+        @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }
 
     private GoogleCloudBillingBudgetsV1BudgetAmountArgs() {
-        this.lastPeriodAmount = Input.empty();
-        this.specifiedAmount = Input.empty();
+        this.lastPeriodAmount = Output.empty();
+        this.specifiedAmount = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
-        private @Nullable Input<GoogleTypeMoneyArgs> specifiedAmount;
+        private @Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
+        private @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder lastPeriodAmount(@Nullable Input<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
         public Builder lastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1LastPeriodAmountArgs lastPeriodAmount) {
-            this.lastPeriodAmount = Input.ofNullable(lastPeriodAmount);
+            this.lastPeriodAmount = Output.ofNullable(lastPeriodAmount);
             return this;
         }
 
-        public Builder specifiedAmount(@Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
+        public Builder specifiedAmount(@Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
 
         public Builder specifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
-            this.specifiedAmount = Input.ofNullable(specifiedAmount);
+            this.specifiedAmount = Output.ofNullable(specifiedAmount);
             return this;
         }
         public GoogleCloudBillingBudgetsV1BudgetAmountArgs build() {

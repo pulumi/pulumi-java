@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
      * 
      */
     @InputImport(name="caseSensitive")
-      private final @Nullable Input<Boolean> caseSensitive;
+      private final @Nullable Output<Boolean> caseSensitive;
 
-    public Input<Boolean> getCaseSensitive() {
-        return this.caseSensitive == null ? Input.empty() : this.caseSensitive;
+    public Output<Boolean> getCaseSensitive() {
+        return this.caseSensitive == null ? Output.empty() : this.caseSensitive;
     }
 
-    public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(@Nullable Input<Boolean> caseSensitive) {
+    public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(@Nullable Output<Boolean> caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
 
     private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs() {
-        this.caseSensitive = Input.empty();
+        this.caseSensitive = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> caseSensitive;
+        private @Nullable Output<Boolean> caseSensitive;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder caseSensitive(@Nullable Input<Boolean> caseSensitive) {
+        public Builder caseSensitive(@Nullable Output<Boolean> caseSensitive) {
             this.caseSensitive = caseSensitive;
             return this;
         }
 
         public Builder caseSensitive(@Nullable Boolean caseSensitive) {
-            this.caseSensitive = Input.ofNullable(caseSensitive);
+            this.caseSensitive = Output.ofNullable(caseSensitive);
             return this;
         }
         public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {

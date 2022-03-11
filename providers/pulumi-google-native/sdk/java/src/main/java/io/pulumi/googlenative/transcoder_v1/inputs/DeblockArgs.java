@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strength")
-      private final @Nullable Input<Double> strength;
+      private final @Nullable Output<Double> strength;
 
-    public Input<Double> getStrength() {
-        return this.strength == null ? Input.empty() : this.strength;
+    public Output<Double> getStrength() {
+        return this.strength == null ? Output.empty() : this.strength;
     }
 
     public DeblockArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<Double> strength) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<Double> strength) {
         this.enabled = enabled;
         this.strength = strength;
     }
 
     private DeblockArgs() {
-        this.enabled = Input.empty();
-        this.strength = Input.empty();
+        this.enabled = Output.empty();
+        this.strength = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<Double> strength;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<Double> strength;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.strength = defaults.strength;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder strength(@Nullable Input<Double> strength) {
+        public Builder strength(@Nullable Output<Double> strength) {
             this.strength = strength;
             return this;
         }
 
         public Builder strength(@Nullable Double strength) {
-            this.strength = Input.ofNullable(strength);
+            this.strength = Output.ofNullable(strength);
             return this;
         }
         public DeblockArgs build() {

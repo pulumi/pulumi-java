@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.AssetOrArchive;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectCustomerEncryptionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectOwnerArgs;
@@ -27,10 +27,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acl")
-      private final @Nullable Input<List<ObjectAccessControlArgs>> acl;
+      private final @Nullable Output<List<ObjectAccessControlArgs>> acl;
 
-    public Input<List<ObjectAccessControlArgs>> getAcl() {
-        return this.acl == null ? Input.empty() : this.acl;
+    public Output<List<ObjectAccessControlArgs>> getAcl() {
+        return this.acl == null ? Output.empty() : this.acl;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
@@ -49,10 +49,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheControl")
-      private final @Nullable Input<String> cacheControl;
+      private final @Nullable Output<String> cacheControl;
 
-    public Input<String> getCacheControl() {
-        return this.cacheControl == null ? Input.empty() : this.cacheControl;
+    public Output<String> getCacheControl() {
+        return this.cacheControl == null ? Output.empty() : this.cacheControl;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentCount")
-      private final @Nullable Input<Integer> componentCount;
+      private final @Nullable Output<Integer> componentCount;
 
-    public Input<Integer> getComponentCount() {
-        return this.componentCount == null ? Input.empty() : this.componentCount;
+    public Output<Integer> getComponentCount() {
+        return this.componentCount == null ? Output.empty() : this.componentCount;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentDisposition")
-      private final @Nullable Input<String> contentDisposition;
+      private final @Nullable Output<String> contentDisposition;
 
-    public Input<String> getContentDisposition() {
-        return this.contentDisposition == null ? Input.empty() : this.contentDisposition;
+    public Output<String> getContentDisposition() {
+        return this.contentDisposition == null ? Output.empty() : this.contentDisposition;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentEncoding")
-      private final @Nullable Input<String> contentEncoding;
+      private final @Nullable Output<String> contentEncoding;
 
-    public Input<String> getContentEncoding() {
-        return this.contentEncoding == null ? Input.empty() : this.contentEncoding;
+    public Output<String> getContentEncoding() {
+        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentLanguage")
-      private final @Nullable Input<String> contentLanguage;
+      private final @Nullable Output<String> contentLanguage;
 
-    public Input<String> getContentLanguage() {
-        return this.contentLanguage == null ? Input.empty() : this.contentLanguage;
+    public Output<String> getContentLanguage() {
+        return this.contentLanguage == null ? Output.empty() : this.contentLanguage;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crc32c")
-      private final @Nullable Input<String> crc32c;
+      private final @Nullable Output<String> crc32c;
 
-    public Input<String> getCrc32c() {
-        return this.crc32c == null ? Input.empty() : this.crc32c;
+    public Output<String> getCrc32c() {
+        return this.crc32c == null ? Output.empty() : this.crc32c;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customTime")
-      private final @Nullable Input<String> customTime;
+      private final @Nullable Output<String> customTime;
 
-    public Input<String> getCustomTime() {
-        return this.customTime == null ? Input.empty() : this.customTime;
+    public Output<String> getCustomTime() {
+        return this.customTime == null ? Output.empty() : this.customTime;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerEncryption")
-      private final @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption;
+      private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
-    public Input<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
-        return this.customerEncryption == null ? Input.empty() : this.customerEncryption;
+    public Output<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
+        return this.customerEncryption == null ? Output.empty() : this.customerEncryption;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventBasedHold")
-      private final @Nullable Input<Boolean> eventBasedHold;
+      private final @Nullable Output<Boolean> eventBasedHold;
 
-    public Input<Boolean> getEventBasedHold() {
-        return this.eventBasedHold == null ? Input.empty() : this.eventBasedHold;
+    public Output<Boolean> getEventBasedHold() {
+        return this.eventBasedHold == null ? Output.empty() : this.eventBasedHold;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="generation")
-      private final @Nullable Input<String> generation;
+      private final @Nullable Output<String> generation;
 
-    public Input<String> getGeneration() {
-        return this.generation == null ? Input.empty() : this.generation;
+    public Output<String> getGeneration() {
+        return this.generation == null ? Output.empty() : this.generation;
     }
 
     /**
@@ -181,38 +181,38 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     @InputImport(name="ifGenerationMatch")
-      private final @Nullable Input<String> ifGenerationMatch;
+      private final @Nullable Output<String> ifGenerationMatch;
 
-    public Input<String> getIfGenerationMatch() {
-        return this.ifGenerationMatch == null ? Input.empty() : this.ifGenerationMatch;
+    public Output<String> getIfGenerationMatch() {
+        return this.ifGenerationMatch == null ? Output.empty() : this.ifGenerationMatch;
     }
 
     @InputImport(name="ifGenerationNotMatch")
-      private final @Nullable Input<String> ifGenerationNotMatch;
+      private final @Nullable Output<String> ifGenerationNotMatch;
 
-    public Input<String> getIfGenerationNotMatch() {
-        return this.ifGenerationNotMatch == null ? Input.empty() : this.ifGenerationNotMatch;
+    public Output<String> getIfGenerationNotMatch() {
+        return this.ifGenerationNotMatch == null ? Output.empty() : this.ifGenerationNotMatch;
     }
 
     @InputImport(name="ifMetagenerationMatch")
-      private final @Nullable Input<String> ifMetagenerationMatch;
+      private final @Nullable Output<String> ifMetagenerationMatch;
 
-    public Input<String> getIfMetagenerationMatch() {
-        return this.ifMetagenerationMatch == null ? Input.empty() : this.ifMetagenerationMatch;
+    public Output<String> getIfMetagenerationMatch() {
+        return this.ifMetagenerationMatch == null ? Output.empty() : this.ifMetagenerationMatch;
     }
 
     @InputImport(name="ifMetagenerationNotMatch")
-      private final @Nullable Input<String> ifMetagenerationNotMatch;
+      private final @Nullable Output<String> ifMetagenerationNotMatch;
 
-    public Input<String> getIfMetagenerationNotMatch() {
-        return this.ifMetagenerationNotMatch == null ? Input.empty() : this.ifMetagenerationNotMatch;
+    public Output<String> getIfMetagenerationNotMatch() {
+        return this.ifMetagenerationNotMatch == null ? Output.empty() : this.ifMetagenerationNotMatch;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -242,10 +242,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="md5Hash")
-      private final @Nullable Input<String> md5Hash;
+      private final @Nullable Output<String> md5Hash;
 
-    public Input<String> getMd5Hash() {
-        return this.md5Hash == null ? Input.empty() : this.md5Hash;
+    public Output<String> getMd5Hash() {
+        return this.md5Hash == null ? Output.empty() : this.md5Hash;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaLink")
-      private final @Nullable Input<String> mediaLink;
+      private final @Nullable Output<String> mediaLink;
 
-    public Input<String> getMediaLink() {
-        return this.mediaLink == null ? Input.empty() : this.mediaLink;
+    public Output<String> getMediaLink() {
+        return this.mediaLink == null ? Output.empty() : this.mediaLink;
     }
 
     /**
@@ -264,10 +264,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -275,10 +275,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metageneration")
-      private final @Nullable Input<String> metageneration;
+      private final @Nullable Output<String> metageneration;
 
-    public Input<String> getMetageneration() {
-        return this.metageneration == null ? Input.empty() : this.metageneration;
+    public Output<String> getMetageneration() {
+        return this.metageneration == null ? Output.empty() : this.metageneration;
     }
 
     /**
@@ -286,10 +286,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -297,31 +297,31 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<BucketObjectOwnerArgs> owner;
+      private final @Nullable Output<BucketObjectOwnerArgs> owner;
 
-    public Input<BucketObjectOwnerArgs> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<BucketObjectOwnerArgs> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     @InputImport(name="predefinedAcl")
-      private final @Nullable Input<String> predefinedAcl;
+      private final @Nullable Output<String> predefinedAcl;
 
-    public Input<String> getPredefinedAcl() {
-        return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
+    public Output<String> getPredefinedAcl() {
+        return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
     @InputImport(name="projection")
-      private final @Nullable Input<String> projection;
+      private final @Nullable Output<String> projection;
 
-    public Input<String> getProjection() {
-        return this.projection == null ? Input.empty() : this.projection;
+    public Output<String> getProjection() {
+        return this.projection == null ? Output.empty() : this.projection;
     }
 
     @InputImport(name="provisionalUserProject")
-      private final @Nullable Input<String> provisionalUserProject;
+      private final @Nullable Output<String> provisionalUserProject;
 
-    public Input<String> getProvisionalUserProject() {
-        return this.provisionalUserProject == null ? Input.empty() : this.provisionalUserProject;
+    public Output<String> getProvisionalUserProject() {
+        return this.provisionalUserProject == null ? Output.empty() : this.provisionalUserProject;
     }
 
     /**
@@ -329,10 +329,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionExpirationTime")
-      private final @Nullable Input<String> retentionExpirationTime;
+      private final @Nullable Output<String> retentionExpirationTime;
 
-    public Input<String> getRetentionExpirationTime() {
-        return this.retentionExpirationTime == null ? Input.empty() : this.retentionExpirationTime;
+    public Output<String> getRetentionExpirationTime() {
+        return this.retentionExpirationTime == null ? Output.empty() : this.retentionExpirationTime;
     }
 
     /**
@@ -340,10 +340,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -351,17 +351,17 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<AssetOrArchive> source;
+      private final @Nullable Output<AssetOrArchive> source;
 
-    public Input<AssetOrArchive> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<AssetOrArchive> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -369,10 +369,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageClass")
-      private final @Nullable Input<String> storageClass;
+      private final @Nullable Output<String> storageClass;
 
-    public Input<String> getStorageClass() {
-        return this.storageClass == null ? Input.empty() : this.storageClass;
+    public Output<String> getStorageClass() {
+        return this.storageClass == null ? Output.empty() : this.storageClass;
     }
 
     /**
@@ -380,10 +380,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="temporaryHold")
-      private final @Nullable Input<Boolean> temporaryHold;
+      private final @Nullable Output<Boolean> temporaryHold;
 
-    public Input<Boolean> getTemporaryHold() {
-        return this.temporaryHold == null ? Input.empty() : this.temporaryHold;
+    public Output<Boolean> getTemporaryHold() {
+        return this.temporaryHold == null ? Output.empty() : this.temporaryHold;
     }
 
     /**
@@ -391,10 +391,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeCreated")
-      private final @Nullable Input<String> timeCreated;
+      private final @Nullable Output<String> timeCreated;
 
-    public Input<String> getTimeCreated() {
-        return this.timeCreated == null ? Input.empty() : this.timeCreated;
+    public Output<String> getTimeCreated() {
+        return this.timeCreated == null ? Output.empty() : this.timeCreated;
     }
 
     /**
@@ -402,10 +402,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeDeleted")
-      private final @Nullable Input<String> timeDeleted;
+      private final @Nullable Output<String> timeDeleted;
 
-    public Input<String> getTimeDeleted() {
-        return this.timeDeleted == null ? Input.empty() : this.timeDeleted;
+    public Output<String> getTimeDeleted() {
+        return this.timeDeleted == null ? Output.empty() : this.timeDeleted;
     }
 
     /**
@@ -413,10 +413,10 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeStorageClassUpdated")
-      private final @Nullable Input<String> timeStorageClassUpdated;
+      private final @Nullable Output<String> timeStorageClassUpdated;
 
-    public Input<String> getTimeStorageClassUpdated() {
-        return this.timeStorageClassUpdated == null ? Input.empty() : this.timeStorageClassUpdated;
+    public Output<String> getTimeStorageClassUpdated() {
+        return this.timeStorageClassUpdated == null ? Output.empty() : this.timeStorageClassUpdated;
     }
 
     /**
@@ -424,61 +424,61 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-      private final @Nullable Input<String> updated;
+      private final @Nullable Output<String> updated;
 
-    public Input<String> getUpdated() {
-        return this.updated == null ? Input.empty() : this.updated;
+    public Output<String> getUpdated() {
+        return this.updated == null ? Output.empty() : this.updated;
     }
 
     @InputImport(name="userProject")
-      private final @Nullable Input<String> userProject;
+      private final @Nullable Output<String> userProject;
 
-    public Input<String> getUserProject() {
-        return this.userProject == null ? Input.empty() : this.userProject;
+    public Output<String> getUserProject() {
+        return this.userProject == null ? Output.empty() : this.userProject;
     }
 
     public BucketObjectArgs(
-        @Nullable Input<List<ObjectAccessControlArgs>> acl,
-        Input<String> bucket,
-        @Nullable Input<String> cacheControl,
-        @Nullable Input<Integer> componentCount,
-        @Nullable Input<String> contentDisposition,
-        @Nullable Input<String> contentEncoding,
-        @Nullable Input<String> contentLanguage,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> crc32c,
-        @Nullable Input<String> customTime,
-        @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption,
-        @Nullable Input<String> etag,
-        @Nullable Input<Boolean> eventBasedHold,
-        @Nullable Input<String> generation,
-        @Nullable Input<String> id,
-        @Nullable Input<String> ifGenerationMatch,
-        @Nullable Input<String> ifGenerationNotMatch,
-        @Nullable Input<String> ifMetagenerationMatch,
-        @Nullable Input<String> ifMetagenerationNotMatch,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<String> md5Hash,
-        @Nullable Input<String> mediaLink,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> metageneration,
-        @Nullable Input<String> name,
-        @Nullable Input<BucketObjectOwnerArgs> owner,
-        @Nullable Input<String> predefinedAcl,
-        @Nullable Input<String> projection,
-        @Nullable Input<String> provisionalUserProject,
-        @Nullable Input<String> retentionExpirationTime,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> size,
-        @Nullable Input<AssetOrArchive> source,
-        @Nullable Input<String> storageClass,
-        @Nullable Input<Boolean> temporaryHold,
-        @Nullable Input<String> timeCreated,
-        @Nullable Input<String> timeDeleted,
-        @Nullable Input<String> timeStorageClassUpdated,
-        @Nullable Input<String> updated,
-        @Nullable Input<String> userProject) {
+        @Nullable Output<List<ObjectAccessControlArgs>> acl,
+        Output<String> bucket,
+        @Nullable Output<String> cacheControl,
+        @Nullable Output<Integer> componentCount,
+        @Nullable Output<String> contentDisposition,
+        @Nullable Output<String> contentEncoding,
+        @Nullable Output<String> contentLanguage,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> crc32c,
+        @Nullable Output<String> customTime,
+        @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption,
+        @Nullable Output<String> etag,
+        @Nullable Output<Boolean> eventBasedHold,
+        @Nullable Output<String> generation,
+        @Nullable Output<String> id,
+        @Nullable Output<String> ifGenerationMatch,
+        @Nullable Output<String> ifGenerationNotMatch,
+        @Nullable Output<String> ifMetagenerationMatch,
+        @Nullable Output<String> ifMetagenerationNotMatch,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<String> md5Hash,
+        @Nullable Output<String> mediaLink,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> metageneration,
+        @Nullable Output<String> name,
+        @Nullable Output<BucketObjectOwnerArgs> owner,
+        @Nullable Output<String> predefinedAcl,
+        @Nullable Output<String> projection,
+        @Nullable Output<String> provisionalUserProject,
+        @Nullable Output<String> retentionExpirationTime,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> size,
+        @Nullable Output<AssetOrArchive> source,
+        @Nullable Output<String> storageClass,
+        @Nullable Output<Boolean> temporaryHold,
+        @Nullable Output<String> timeCreated,
+        @Nullable Output<String> timeDeleted,
+        @Nullable Output<String> timeStorageClassUpdated,
+        @Nullable Output<String> updated,
+        @Nullable Output<String> userProject) {
         this.acl = acl;
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.cacheControl = cacheControl;
@@ -523,47 +523,47 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketObjectArgs() {
-        this.acl = Input.empty();
-        this.bucket = Input.empty();
-        this.cacheControl = Input.empty();
-        this.componentCount = Input.empty();
-        this.contentDisposition = Input.empty();
-        this.contentEncoding = Input.empty();
-        this.contentLanguage = Input.empty();
-        this.contentType = Input.empty();
-        this.crc32c = Input.empty();
-        this.customTime = Input.empty();
-        this.customerEncryption = Input.empty();
-        this.etag = Input.empty();
-        this.eventBasedHold = Input.empty();
-        this.generation = Input.empty();
-        this.id = Input.empty();
-        this.ifGenerationMatch = Input.empty();
-        this.ifGenerationNotMatch = Input.empty();
-        this.ifMetagenerationMatch = Input.empty();
-        this.ifMetagenerationNotMatch = Input.empty();
-        this.kind = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.md5Hash = Input.empty();
-        this.mediaLink = Input.empty();
-        this.metadata = Input.empty();
-        this.metageneration = Input.empty();
-        this.name = Input.empty();
-        this.owner = Input.empty();
-        this.predefinedAcl = Input.empty();
-        this.projection = Input.empty();
-        this.provisionalUserProject = Input.empty();
-        this.retentionExpirationTime = Input.empty();
-        this.selfLink = Input.empty();
-        this.size = Input.empty();
-        this.source = Input.empty();
-        this.storageClass = Input.empty();
-        this.temporaryHold = Input.empty();
-        this.timeCreated = Input.empty();
-        this.timeDeleted = Input.empty();
-        this.timeStorageClassUpdated = Input.empty();
-        this.updated = Input.empty();
-        this.userProject = Input.empty();
+        this.acl = Output.empty();
+        this.bucket = Output.empty();
+        this.cacheControl = Output.empty();
+        this.componentCount = Output.empty();
+        this.contentDisposition = Output.empty();
+        this.contentEncoding = Output.empty();
+        this.contentLanguage = Output.empty();
+        this.contentType = Output.empty();
+        this.crc32c = Output.empty();
+        this.customTime = Output.empty();
+        this.customerEncryption = Output.empty();
+        this.etag = Output.empty();
+        this.eventBasedHold = Output.empty();
+        this.generation = Output.empty();
+        this.id = Output.empty();
+        this.ifGenerationMatch = Output.empty();
+        this.ifGenerationNotMatch = Output.empty();
+        this.ifMetagenerationMatch = Output.empty();
+        this.ifMetagenerationNotMatch = Output.empty();
+        this.kind = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.md5Hash = Output.empty();
+        this.mediaLink = Output.empty();
+        this.metadata = Output.empty();
+        this.metageneration = Output.empty();
+        this.name = Output.empty();
+        this.owner = Output.empty();
+        this.predefinedAcl = Output.empty();
+        this.projection = Output.empty();
+        this.provisionalUserProject = Output.empty();
+        this.retentionExpirationTime = Output.empty();
+        this.selfLink = Output.empty();
+        this.size = Output.empty();
+        this.source = Output.empty();
+        this.storageClass = Output.empty();
+        this.temporaryHold = Output.empty();
+        this.timeCreated = Output.empty();
+        this.timeDeleted = Output.empty();
+        this.timeStorageClassUpdated = Output.empty();
+        this.updated = Output.empty();
+        this.userProject = Output.empty();
     }
 
     public static Builder builder() {
@@ -575,47 +575,47 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ObjectAccessControlArgs>> acl;
-        private Input<String> bucket;
-        private @Nullable Input<String> cacheControl;
-        private @Nullable Input<Integer> componentCount;
-        private @Nullable Input<String> contentDisposition;
-        private @Nullable Input<String> contentEncoding;
-        private @Nullable Input<String> contentLanguage;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> crc32c;
-        private @Nullable Input<String> customTime;
-        private @Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Boolean> eventBasedHold;
-        private @Nullable Input<String> generation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> ifGenerationMatch;
-        private @Nullable Input<String> ifGenerationNotMatch;
-        private @Nullable Input<String> ifMetagenerationMatch;
-        private @Nullable Input<String> ifMetagenerationNotMatch;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<String> md5Hash;
-        private @Nullable Input<String> mediaLink;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> metageneration;
-        private @Nullable Input<String> name;
-        private @Nullable Input<BucketObjectOwnerArgs> owner;
-        private @Nullable Input<String> predefinedAcl;
-        private @Nullable Input<String> projection;
-        private @Nullable Input<String> provisionalUserProject;
-        private @Nullable Input<String> retentionExpirationTime;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> size;
-        private @Nullable Input<AssetOrArchive> source;
-        private @Nullable Input<String> storageClass;
-        private @Nullable Input<Boolean> temporaryHold;
-        private @Nullable Input<String> timeCreated;
-        private @Nullable Input<String> timeDeleted;
-        private @Nullable Input<String> timeStorageClassUpdated;
-        private @Nullable Input<String> updated;
-        private @Nullable Input<String> userProject;
+        private @Nullable Output<List<ObjectAccessControlArgs>> acl;
+        private Output<String> bucket;
+        private @Nullable Output<String> cacheControl;
+        private @Nullable Output<Integer> componentCount;
+        private @Nullable Output<String> contentDisposition;
+        private @Nullable Output<String> contentEncoding;
+        private @Nullable Output<String> contentLanguage;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> crc32c;
+        private @Nullable Output<String> customTime;
+        private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Boolean> eventBasedHold;
+        private @Nullable Output<String> generation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> ifGenerationMatch;
+        private @Nullable Output<String> ifGenerationNotMatch;
+        private @Nullable Output<String> ifMetagenerationMatch;
+        private @Nullable Output<String> ifMetagenerationNotMatch;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<String> md5Hash;
+        private @Nullable Output<String> mediaLink;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> metageneration;
+        private @Nullable Output<String> name;
+        private @Nullable Output<BucketObjectOwnerArgs> owner;
+        private @Nullable Output<String> predefinedAcl;
+        private @Nullable Output<String> projection;
+        private @Nullable Output<String> provisionalUserProject;
+        private @Nullable Output<String> retentionExpirationTime;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> size;
+        private @Nullable Output<AssetOrArchive> source;
+        private @Nullable Output<String> storageClass;
+        private @Nullable Output<Boolean> temporaryHold;
+        private @Nullable Output<String> timeCreated;
+        private @Nullable Output<String> timeDeleted;
+        private @Nullable Output<String> timeStorageClassUpdated;
+        private @Nullable Output<String> updated;
+        private @Nullable Output<String> userProject;
 
         public Builder() {
     	      // Empty
@@ -666,413 +666,413 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder acl(@Nullable Input<List<ObjectAccessControlArgs>> acl) {
+        public Builder acl(@Nullable Output<List<ObjectAccessControlArgs>> acl) {
             this.acl = acl;
             return this;
         }
 
         public Builder acl(@Nullable List<ObjectAccessControlArgs> acl) {
-            this.acl = Input.ofNullable(acl);
+            this.acl = Output.ofNullable(acl);
             return this;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder cacheControl(@Nullable Input<String> cacheControl) {
+        public Builder cacheControl(@Nullable Output<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
         public Builder cacheControl(@Nullable String cacheControl) {
-            this.cacheControl = Input.ofNullable(cacheControl);
+            this.cacheControl = Output.ofNullable(cacheControl);
             return this;
         }
 
-        public Builder componentCount(@Nullable Input<Integer> componentCount) {
+        public Builder componentCount(@Nullable Output<Integer> componentCount) {
             this.componentCount = componentCount;
             return this;
         }
 
         public Builder componentCount(@Nullable Integer componentCount) {
-            this.componentCount = Input.ofNullable(componentCount);
+            this.componentCount = Output.ofNullable(componentCount);
             return this;
         }
 
-        public Builder contentDisposition(@Nullable Input<String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
         public Builder contentDisposition(@Nullable String contentDisposition) {
-            this.contentDisposition = Input.ofNullable(contentDisposition);
+            this.contentDisposition = Output.ofNullable(contentDisposition);
             return this;
         }
 
-        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Input.ofNullable(contentEncoding);
+            this.contentEncoding = Output.ofNullable(contentEncoding);
             return this;
         }
 
-        public Builder contentLanguage(@Nullable Input<String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
         public Builder contentLanguage(@Nullable String contentLanguage) {
-            this.contentLanguage = Input.ofNullable(contentLanguage);
+            this.contentLanguage = Output.ofNullable(contentLanguage);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder crc32c(@Nullable Input<String> crc32c) {
+        public Builder crc32c(@Nullable Output<String> crc32c) {
             this.crc32c = crc32c;
             return this;
         }
 
         public Builder crc32c(@Nullable String crc32c) {
-            this.crc32c = Input.ofNullable(crc32c);
+            this.crc32c = Output.ofNullable(crc32c);
             return this;
         }
 
-        public Builder customTime(@Nullable Input<String> customTime) {
+        public Builder customTime(@Nullable Output<String> customTime) {
             this.customTime = customTime;
             return this;
         }
 
         public Builder customTime(@Nullable String customTime) {
-            this.customTime = Input.ofNullable(customTime);
+            this.customTime = Output.ofNullable(customTime);
             return this;
         }
 
-        public Builder customerEncryption(@Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption) {
+        public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             this.customerEncryption = customerEncryption;
             return this;
         }
 
         public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
-            this.customerEncryption = Input.ofNullable(customerEncryption);
+            this.customerEncryption = Output.ofNullable(customerEncryption);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder eventBasedHold(@Nullable Input<Boolean> eventBasedHold) {
+        public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             this.eventBasedHold = eventBasedHold;
             return this;
         }
 
         public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
-            this.eventBasedHold = Input.ofNullable(eventBasedHold);
+            this.eventBasedHold = Output.ofNullable(eventBasedHold);
             return this;
         }
 
-        public Builder generation(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Output<String> generation) {
             this.generation = generation;
             return this;
         }
 
         public Builder generation(@Nullable String generation) {
-            this.generation = Input.ofNullable(generation);
+            this.generation = Output.ofNullable(generation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder ifGenerationMatch(@Nullable Input<String> ifGenerationMatch) {
+        public Builder ifGenerationMatch(@Nullable Output<String> ifGenerationMatch) {
             this.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
 
         public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
-            this.ifGenerationMatch = Input.ofNullable(ifGenerationMatch);
+            this.ifGenerationMatch = Output.ofNullable(ifGenerationMatch);
             return this;
         }
 
-        public Builder ifGenerationNotMatch(@Nullable Input<String> ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(@Nullable Output<String> ifGenerationNotMatch) {
             this.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
 
         public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
-            this.ifGenerationNotMatch = Input.ofNullable(ifGenerationNotMatch);
+            this.ifGenerationNotMatch = Output.ofNullable(ifGenerationNotMatch);
             return this;
         }
 
-        public Builder ifMetagenerationMatch(@Nullable Input<String> ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable Output<String> ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
         public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
-            this.ifMetagenerationMatch = Input.ofNullable(ifMetagenerationMatch);
+            this.ifMetagenerationMatch = Output.ofNullable(ifMetagenerationMatch);
             return this;
         }
 
-        public Builder ifMetagenerationNotMatch(@Nullable Input<String> ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable Output<String> ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
         public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
-            this.ifMetagenerationNotMatch = Input.ofNullable(ifMetagenerationNotMatch);
+            this.ifMetagenerationNotMatch = Output.ofNullable(ifMetagenerationNotMatch);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder md5Hash(@Nullable Input<String> md5Hash) {
+        public Builder md5Hash(@Nullable Output<String> md5Hash) {
             this.md5Hash = md5Hash;
             return this;
         }
 
         public Builder md5Hash(@Nullable String md5Hash) {
-            this.md5Hash = Input.ofNullable(md5Hash);
+            this.md5Hash = Output.ofNullable(md5Hash);
             return this;
         }
 
-        public Builder mediaLink(@Nullable Input<String> mediaLink) {
+        public Builder mediaLink(@Nullable Output<String> mediaLink) {
             this.mediaLink = mediaLink;
             return this;
         }
 
         public Builder mediaLink(@Nullable String mediaLink) {
-            this.mediaLink = Input.ofNullable(mediaLink);
+            this.mediaLink = Output.ofNullable(mediaLink);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metageneration(@Nullable Input<String> metageneration) {
+        public Builder metageneration(@Nullable Output<String> metageneration) {
             this.metageneration = metageneration;
             return this;
         }
 
         public Builder metageneration(@Nullable String metageneration) {
-            this.metageneration = Input.ofNullable(metageneration);
+            this.metageneration = Output.ofNullable(metageneration);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder owner(@Nullable Input<BucketObjectOwnerArgs> owner) {
+        public Builder owner(@Nullable Output<BucketObjectOwnerArgs> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable BucketObjectOwnerArgs owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
         public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Input.ofNullable(predefinedAcl);
+            this.predefinedAcl = Output.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder projection(@Nullable Input<String> projection) {
+        public Builder projection(@Nullable Output<String> projection) {
             this.projection = projection;
             return this;
         }
 
         public Builder projection(@Nullable String projection) {
-            this.projection = Input.ofNullable(projection);
+            this.projection = Output.ofNullable(projection);
             return this;
         }
 
-        public Builder provisionalUserProject(@Nullable Input<String> provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable Output<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Input.ofNullable(provisionalUserProject);
+            this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
             return this;
         }
 
-        public Builder retentionExpirationTime(@Nullable Input<String> retentionExpirationTime) {
+        public Builder retentionExpirationTime(@Nullable Output<String> retentionExpirationTime) {
             this.retentionExpirationTime = retentionExpirationTime;
             return this;
         }
 
         public Builder retentionExpirationTime(@Nullable String retentionExpirationTime) {
-            this.retentionExpirationTime = Input.ofNullable(retentionExpirationTime);
+            this.retentionExpirationTime = Output.ofNullable(retentionExpirationTime);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder source(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Output<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable AssetOrArchive source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder storageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Output<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Input.ofNullable(storageClass);
+            this.storageClass = Output.ofNullable(storageClass);
             return this;
         }
 
-        public Builder temporaryHold(@Nullable Input<Boolean> temporaryHold) {
+        public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
 
         public Builder temporaryHold(@Nullable Boolean temporaryHold) {
-            this.temporaryHold = Input.ofNullable(temporaryHold);
+            this.temporaryHold = Output.ofNullable(temporaryHold);
             return this;
         }
 
-        public Builder timeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Output<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Input.ofNullable(timeCreated);
+            this.timeCreated = Output.ofNullable(timeCreated);
             return this;
         }
 
-        public Builder timeDeleted(@Nullable Input<String> timeDeleted) {
+        public Builder timeDeleted(@Nullable Output<String> timeDeleted) {
             this.timeDeleted = timeDeleted;
             return this;
         }
 
         public Builder timeDeleted(@Nullable String timeDeleted) {
-            this.timeDeleted = Input.ofNullable(timeDeleted);
+            this.timeDeleted = Output.ofNullable(timeDeleted);
             return this;
         }
 
-        public Builder timeStorageClassUpdated(@Nullable Input<String> timeStorageClassUpdated) {
+        public Builder timeStorageClassUpdated(@Nullable Output<String> timeStorageClassUpdated) {
             this.timeStorageClassUpdated = timeStorageClassUpdated;
             return this;
         }
 
         public Builder timeStorageClassUpdated(@Nullable String timeStorageClassUpdated) {
-            this.timeStorageClassUpdated = Input.ofNullable(timeStorageClassUpdated);
+            this.timeStorageClassUpdated = Output.ofNullable(timeStorageClassUpdated);
             return this;
         }
 
-        public Builder updated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Output<String> updated) {
             this.updated = updated;
             return this;
         }
 
         public Builder updated(@Nullable String updated) {
-            this.updated = Input.ofNullable(updated);
+            this.updated = Output.ofNullable(updated);
             return this;
         }
 
-        public Builder userProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Output<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Input.ofNullable(userProject);
+            this.userProject = Output.ofNullable(userProject);
             return this;
         }
         public BucketObjectArgs build() {

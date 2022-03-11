@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,9 +16,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     public static final BackupArgs Empty = new BackupArgs();
 
     @InputImport(name="backupId", required=true)
-      private final Input<String> backupId;
+      private final Output<String> backupId;
 
-    public Input<String> getBackupId() {
+    public Output<String> getBackupId() {
         return this.backupId;
     }
 
@@ -27,10 +27,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -38,24 +38,24 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFileShare")
-      private final @Nullable Input<String> sourceFileShare;
+      private final @Nullable Output<String> sourceFileShare;
 
-    public Input<String> getSourceFileShare() {
-        return this.sourceFileShare == null ? Input.empty() : this.sourceFileShare;
+    public Output<String> getSourceFileShare() {
+        return this.sourceFileShare == null ? Output.empty() : this.sourceFileShare;
     }
 
     /**
@@ -74,20 +74,20 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceInstance")
-      private final @Nullable Input<String> sourceInstance;
+      private final @Nullable Output<String> sourceInstance;
 
-    public Input<String> getSourceInstance() {
-        return this.sourceInstance == null ? Input.empty() : this.sourceInstance;
+    public Output<String> getSourceInstance() {
+        return this.sourceInstance == null ? Output.empty() : this.sourceInstance;
     }
 
     public BackupArgs(
-        Input<String> backupId,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> sourceFileShare,
-        @Nullable Input<String> sourceInstance) {
+        Output<String> backupId,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> sourceFileShare,
+        @Nullable Output<String> sourceInstance) {
         this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
         this.description = description;
         this.labels = labels;
@@ -98,13 +98,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.backupId = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.sourceFileShare = Input.empty();
-        this.sourceInstance = Input.empty();
+        this.backupId = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.sourceFileShare = Output.empty();
+        this.sourceInstance = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,13 +116,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> backupId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> sourceFileShare;
-        private @Nullable Input<String> sourceInstance;
+        private Output<String> backupId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> sourceFileShare;
+        private @Nullable Output<String> sourceInstance;
 
         public Builder() {
     	      // Empty
@@ -139,73 +139,73 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceInstance = defaults.sourceInstance;
         }
 
-        public Builder backupId(Input<String> backupId) {
+        public Builder backupId(Output<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Input.of(Objects.requireNonNull(backupId));
+            this.backupId = Output.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder sourceFileShare(@Nullable Input<String> sourceFileShare) {
+        public Builder sourceFileShare(@Nullable Output<String> sourceFileShare) {
             this.sourceFileShare = sourceFileShare;
             return this;
         }
 
         public Builder sourceFileShare(@Nullable String sourceFileShare) {
-            this.sourceFileShare = Input.ofNullable(sourceFileShare);
+            this.sourceFileShare = Output.ofNullable(sourceFileShare);
             return this;
         }
 
-        public Builder sourceInstance(@Nullable Input<String> sourceInstance) {
+        public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
 
         public Builder sourceInstance(@Nullable String sourceInstance) {
-            this.sourceInstance = Input.ofNullable(sourceInstance);
+            this.sourceInstance = Output.ofNullable(sourceInstance);
             return this;
         }
         public BackupArgs build() {

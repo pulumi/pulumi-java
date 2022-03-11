@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     public WorkerConfigArgs(
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<String> machineType) {
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<String> machineType) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
     }
 
     private WorkerConfigArgs() {
-        this.diskSizeGb = Input.empty();
-        this.machineType = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.machineType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<String> machineType;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<String> machineType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WorkerConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
         public WorkerConfigArgs build() {

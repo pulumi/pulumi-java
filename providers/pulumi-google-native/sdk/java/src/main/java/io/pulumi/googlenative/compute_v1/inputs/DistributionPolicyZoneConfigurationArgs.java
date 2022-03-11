@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
-    public DistributionPolicyZoneConfigurationArgs(@Nullable Input<String> zone) {
+    public DistributionPolicyZoneConfigurationArgs(@Nullable Output<String> zone) {
         this.zone = zone;
     }
 
     private DistributionPolicyZoneConfigurationArgs() {
-        this.zone = Input.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     	      this.zone = defaults.zone;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DistributionPolicyZoneConfigurationArgs build() {

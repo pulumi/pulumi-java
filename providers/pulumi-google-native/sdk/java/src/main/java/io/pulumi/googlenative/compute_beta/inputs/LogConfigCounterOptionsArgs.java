@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.LogConfigCounterOptionsCustomFieldArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customFields")
-      private final @Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
+      private final @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
 
-    public Input<List<LogConfigCounterOptionsCustomFieldArgs>> getCustomFields() {
-        return this.customFields == null ? Input.empty() : this.customFields;
+    public Output<List<LogConfigCounterOptionsCustomFieldArgs>> getCustomFields() {
+        return this.customFields == null ? Output.empty() : this.customFields;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     public LogConfigCounterOptionsArgs(
-        @Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields,
-        @Nullable Input<String> field,
-        @Nullable Input<String> metric) {
+        @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields,
+        @Nullable Output<String> field,
+        @Nullable Output<String> metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;
     }
 
     private LogConfigCounterOptionsArgs() {
-        this.customFields = Input.empty();
-        this.field = Input.empty();
-        this.metric = Input.empty();
+        this.customFields = Output.empty();
+        this.field = Output.empty();
+        this.metric = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
-        private @Nullable Input<String> field;
-        private @Nullable Input<String> metric;
+        private @Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields;
+        private @Nullable Output<String> field;
+        private @Nullable Output<String> metric;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     	      this.metric = defaults.metric;
         }
 
-        public Builder customFields(@Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields) {
+        public Builder customFields(@Nullable Output<List<LogConfigCounterOptionsCustomFieldArgs>> customFields) {
             this.customFields = customFields;
             return this;
         }
 
         public Builder customFields(@Nullable List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
-            this.customFields = Input.ofNullable(customFields);
+            this.customFields = Output.ofNullable(customFields);
             return this;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
         public LogConfigCounterOptionsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceListArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidMatrixArgs;
@@ -25,10 +25,10 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidDeviceList")
-      private final @Nullable Input<AndroidDeviceListArgs> androidDeviceList;
+      private final @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
 
-    public Input<AndroidDeviceListArgs> getAndroidDeviceList() {
-        return this.androidDeviceList == null ? Input.empty() : this.androidDeviceList;
+    public Output<AndroidDeviceListArgs> getAndroidDeviceList() {
+        return this.androidDeviceList == null ? Output.empty() : this.androidDeviceList;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidMatrix")
-      private final @Nullable Input<AndroidMatrixArgs> androidMatrix;
+      private final @Nullable Output<AndroidMatrixArgs> androidMatrix;
 
-    public Input<AndroidMatrixArgs> getAndroidMatrix() {
-        return this.androidMatrix == null ? Input.empty() : this.androidMatrix;
+    public Output<AndroidMatrixArgs> getAndroidMatrix() {
+        return this.androidMatrix == null ? Output.empty() : this.androidMatrix;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iosDeviceList")
-      private final @Nullable Input<IosDeviceListArgs> iosDeviceList;
+      private final @Nullable Output<IosDeviceListArgs> iosDeviceList;
 
-    public Input<IosDeviceListArgs> getIosDeviceList() {
-        return this.iosDeviceList == null ? Input.empty() : this.iosDeviceList;
+    public Output<IosDeviceListArgs> getIosDeviceList() {
+        return this.iosDeviceList == null ? Output.empty() : this.iosDeviceList;
     }
 
     public EnvironmentMatrixArgs(
-        @Nullable Input<AndroidDeviceListArgs> androidDeviceList,
-        @Nullable Input<AndroidMatrixArgs> androidMatrix,
-        @Nullable Input<IosDeviceListArgs> iosDeviceList) {
+        @Nullable Output<AndroidDeviceListArgs> androidDeviceList,
+        @Nullable Output<AndroidMatrixArgs> androidMatrix,
+        @Nullable Output<IosDeviceListArgs> iosDeviceList) {
         this.androidDeviceList = androidDeviceList;
         this.androidMatrix = androidMatrix;
         this.iosDeviceList = iosDeviceList;
     }
 
     private EnvironmentMatrixArgs() {
-        this.androidDeviceList = Input.empty();
-        this.androidMatrix = Input.empty();
-        this.iosDeviceList = Input.empty();
+        this.androidDeviceList = Output.empty();
+        this.androidMatrix = Output.empty();
+        this.iosDeviceList = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<AndroidDeviceListArgs> androidDeviceList;
-        private @Nullable Input<AndroidMatrixArgs> androidMatrix;
-        private @Nullable Input<IosDeviceListArgs> iosDeviceList;
+        private @Nullable Output<AndroidDeviceListArgs> androidDeviceList;
+        private @Nullable Output<AndroidMatrixArgs> androidMatrix;
+        private @Nullable Output<IosDeviceListArgs> iosDeviceList;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
     	      this.iosDeviceList = defaults.iosDeviceList;
         }
 
-        public Builder androidDeviceList(@Nullable Input<AndroidDeviceListArgs> androidDeviceList) {
+        public Builder androidDeviceList(@Nullable Output<AndroidDeviceListArgs> androidDeviceList) {
             this.androidDeviceList = androidDeviceList;
             return this;
         }
 
         public Builder androidDeviceList(@Nullable AndroidDeviceListArgs androidDeviceList) {
-            this.androidDeviceList = Input.ofNullable(androidDeviceList);
+            this.androidDeviceList = Output.ofNullable(androidDeviceList);
             return this;
         }
 
-        public Builder androidMatrix(@Nullable Input<AndroidMatrixArgs> androidMatrix) {
+        public Builder androidMatrix(@Nullable Output<AndroidMatrixArgs> androidMatrix) {
             this.androidMatrix = androidMatrix;
             return this;
         }
 
         public Builder androidMatrix(@Nullable AndroidMatrixArgs androidMatrix) {
-            this.androidMatrix = Input.ofNullable(androidMatrix);
+            this.androidMatrix = Output.ofNullable(androidMatrix);
             return this;
         }
 
-        public Builder iosDeviceList(@Nullable Input<IosDeviceListArgs> iosDeviceList) {
+        public Builder iosDeviceList(@Nullable Output<IosDeviceListArgs> iosDeviceList) {
             this.iosDeviceList = iosDeviceList;
             return this;
         }
 
         public Builder iosDeviceList(@Nullable IosDeviceListArgs iosDeviceList) {
-            this.iosDeviceList = Input.ofNullable(iosDeviceList);
+            this.iosDeviceList = Output.ofNullable(iosDeviceList);
             return this;
         }
         public EnvironmentMatrixArgs build() {

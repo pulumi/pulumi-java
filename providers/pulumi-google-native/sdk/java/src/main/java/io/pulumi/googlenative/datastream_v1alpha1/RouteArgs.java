@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddress", required=true)
-      private final Input<String> destinationAddress;
+      private final Output<String> destinationAddress;
 
-    public Input<String> getDestinationAddress() {
+    public Output<String> getDestinationAddress() {
         return this.destinationAddress;
     }
 
@@ -32,10 +32,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPort")
-      private final @Nullable Input<Integer> destinationPort;
+      private final @Nullable Output<Integer> destinationPort;
 
-    public Input<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Input.empty() : this.destinationPort;
+    public Output<Integer> getDestinationPort() {
+        return this.destinationPort == null ? Output.empty() : this.destinationPort;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -54,57 +54,57 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="privateConnectionId", required=true)
-      private final Input<String> privateConnectionId;
+      private final Output<String> privateConnectionId;
 
-    public Input<String> getPrivateConnectionId() {
+    public Output<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     @InputImport(name="routeId", required=true)
-      private final Input<String> routeId;
+      private final Output<String> routeId;
 
-    public Input<String> getRouteId() {
+    public Output<String> getRouteId() {
         return this.routeId;
     }
 
     public RouteArgs(
-        Input<String> destinationAddress,
-        @Nullable Input<Integer> destinationPort,
-        Input<String> displayName,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        Input<String> privateConnectionId,
-        @Nullable Input<String> project,
-        @Nullable Input<String> requestId,
-        Input<String> routeId) {
+        Output<String> destinationAddress,
+        @Nullable Output<Integer> destinationPort,
+        Output<String> displayName,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        Output<String> privateConnectionId,
+        @Nullable Output<String> project,
+        @Nullable Output<String> requestId,
+        Output<String> routeId) {
         this.destinationAddress = Objects.requireNonNull(destinationAddress, "expected parameter 'destinationAddress' to be non-null");
         this.destinationPort = destinationPort;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -117,15 +117,15 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.destinationAddress = Input.empty();
-        this.destinationPort = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.privateConnectionId = Input.empty();
-        this.project = Input.empty();
-        this.requestId = Input.empty();
-        this.routeId = Input.empty();
+        this.destinationAddress = Output.empty();
+        this.destinationPort = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.privateConnectionId = Output.empty();
+        this.project = Output.empty();
+        this.requestId = Output.empty();
+        this.routeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -137,15 +137,15 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> destinationAddress;
-        private @Nullable Input<Integer> destinationPort;
-        private Input<String> displayName;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private Input<String> privateConnectionId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> requestId;
-        private Input<String> routeId;
+        private Output<String> destinationAddress;
+        private @Nullable Output<Integer> destinationPort;
+        private Output<String> displayName;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private Output<String> privateConnectionId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> requestId;
+        private Output<String> routeId;
 
         public Builder() {
     	      // Empty
@@ -164,93 +164,93 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routeId = defaults.routeId;
         }
 
-        public Builder destinationAddress(Input<String> destinationAddress) {
+        public Builder destinationAddress(Output<String> destinationAddress) {
             this.destinationAddress = Objects.requireNonNull(destinationAddress);
             return this;
         }
 
         public Builder destinationAddress(String destinationAddress) {
-            this.destinationAddress = Input.of(Objects.requireNonNull(destinationAddress));
+            this.destinationAddress = Output.of(Objects.requireNonNull(destinationAddress));
             return this;
         }
 
-        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Input.ofNullable(destinationPort);
+            this.destinationPort = Output.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateConnectionId(Input<String> privateConnectionId) {
+        public Builder privateConnectionId(Output<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
 
         public Builder privateConnectionId(String privateConnectionId) {
-            this.privateConnectionId = Input.of(Objects.requireNonNull(privateConnectionId));
+            this.privateConnectionId = Output.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder routeId(Input<String> routeId) {
+        public Builder routeId(Output<String> routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
 
         public Builder routeId(String routeId) {
-            this.routeId = Input.of(Objects.requireNonNull(routeId));
+            this.routeId = Output.of(Objects.requireNonNull(routeId));
             return this;
         }
         public RouteArgs build() {

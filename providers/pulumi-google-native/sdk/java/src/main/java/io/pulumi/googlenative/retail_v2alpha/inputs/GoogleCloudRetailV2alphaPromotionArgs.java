@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="promotionId")
-      private final @Nullable Input<String> promotionId;
+      private final @Nullable Output<String> promotionId;
 
-    public Input<String> getPromotionId() {
-        return this.promotionId == null ? Input.empty() : this.promotionId;
+    public Output<String> getPromotionId() {
+        return this.promotionId == null ? Output.empty() : this.promotionId;
     }
 
-    public GoogleCloudRetailV2alphaPromotionArgs(@Nullable Input<String> promotionId) {
+    public GoogleCloudRetailV2alphaPromotionArgs(@Nullable Output<String> promotionId) {
         this.promotionId = promotionId;
     }
 
     private GoogleCloudRetailV2alphaPromotionArgs() {
-        this.promotionId = Input.empty();
+        this.promotionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> promotionId;
+        private @Nullable Output<String> promotionId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
     	      this.promotionId = defaults.promotionId;
         }
 
-        public Builder promotionId(@Nullable Input<String> promotionId) {
+        public Builder promotionId(@Nullable Output<String> promotionId) {
             this.promotionId = promotionId;
             return this;
         }
 
         public Builder promotionId(@Nullable String promotionId) {
-            this.promotionId = Input.ofNullable(promotionId);
+            this.promotionId = Output.ofNullable(promotionId);
             return this;
         }
         public GoogleCloudRetailV2alphaPromotionArgs build() {

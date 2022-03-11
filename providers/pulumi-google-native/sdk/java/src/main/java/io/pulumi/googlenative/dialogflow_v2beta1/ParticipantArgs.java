@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ParticipantRole;
 import java.lang.String;
@@ -17,9 +17,9 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     public static final ParticipantArgs Empty = new ParticipantArgs();
 
     @InputImport(name="conversationId", required=true)
-      private final Input<String> conversationId;
+      private final Output<String> conversationId;
 
-    public Input<String> getConversationId() {
+    public Output<String> getConversationId() {
         return this.conversationId;
     }
 
@@ -28,17 +28,17 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentsMetadataFilters")
-      private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
+      private final @Nullable Output<Map<String,String>> documentsMetadataFilters;
 
-    public Input<Map<String,String>> getDocumentsMetadataFilters() {
-        return this.documentsMetadataFilters == null ? Input.empty() : this.documentsMetadataFilters;
+    public Output<Map<String,String>> getDocumentsMetadataFilters() {
+        return this.documentsMetadataFilters == null ? Output.empty() : this.documentsMetadataFilters;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obfuscatedExternalUserId")
-      private final @Nullable Input<String> obfuscatedExternalUserId;
+      private final @Nullable Output<String> obfuscatedExternalUserId;
 
-    public Input<String> getObfuscatedExternalUserId() {
-        return this.obfuscatedExternalUserId == null ? Input.empty() : this.obfuscatedExternalUserId;
+    public Output<String> getObfuscatedExternalUserId() {
+        return this.obfuscatedExternalUserId == null ? Output.empty() : this.obfuscatedExternalUserId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -75,20 +75,20 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<ParticipantRole> role;
+      private final @Nullable Output<ParticipantRole> role;
 
-    public Input<ParticipantRole> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<ParticipantRole> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public ParticipantArgs(
-        Input<String> conversationId,
-        @Nullable Input<Map<String,String>> documentsMetadataFilters,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> obfuscatedExternalUserId,
-        @Nullable Input<String> project,
-        @Nullable Input<ParticipantRole> role) {
+        Output<String> conversationId,
+        @Nullable Output<Map<String,String>> documentsMetadataFilters,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> obfuscatedExternalUserId,
+        @Nullable Output<String> project,
+        @Nullable Output<ParticipantRole> role) {
         this.conversationId = Objects.requireNonNull(conversationId, "expected parameter 'conversationId' to be non-null");
         this.documentsMetadataFilters = documentsMetadataFilters;
         this.location = location;
@@ -99,13 +99,13 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParticipantArgs() {
-        this.conversationId = Input.empty();
-        this.documentsMetadataFilters = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.obfuscatedExternalUserId = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.conversationId = Output.empty();
+        this.documentsMetadataFilters = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.obfuscatedExternalUserId = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,13 +117,13 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> conversationId;
-        private @Nullable Input<Map<String,String>> documentsMetadataFilters;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> obfuscatedExternalUserId;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ParticipantRole> role;
+        private Output<String> conversationId;
+        private @Nullable Output<Map<String,String>> documentsMetadataFilters;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> obfuscatedExternalUserId;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ParticipantRole> role;
 
         public Builder() {
     	      // Empty
@@ -140,73 +140,73 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder conversationId(Input<String> conversationId) {
+        public Builder conversationId(Output<String> conversationId) {
             this.conversationId = Objects.requireNonNull(conversationId);
             return this;
         }
 
         public Builder conversationId(String conversationId) {
-            this.conversationId = Input.of(Objects.requireNonNull(conversationId));
+            this.conversationId = Output.of(Objects.requireNonNull(conversationId));
             return this;
         }
 
-        public Builder documentsMetadataFilters(@Nullable Input<Map<String,String>> documentsMetadataFilters) {
+        public Builder documentsMetadataFilters(@Nullable Output<Map<String,String>> documentsMetadataFilters) {
             this.documentsMetadataFilters = documentsMetadataFilters;
             return this;
         }
 
         public Builder documentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
-            this.documentsMetadataFilters = Input.ofNullable(documentsMetadataFilters);
+            this.documentsMetadataFilters = Output.ofNullable(documentsMetadataFilters);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder obfuscatedExternalUserId(@Nullable Input<String> obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(@Nullable Output<String> obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = obfuscatedExternalUserId;
             return this;
         }
 
         public Builder obfuscatedExternalUserId(@Nullable String obfuscatedExternalUserId) {
-            this.obfuscatedExternalUserId = Input.ofNullable(obfuscatedExternalUserId);
+            this.obfuscatedExternalUserId = Output.ofNullable(obfuscatedExternalUserId);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(@Nullable Input<ParticipantRole> role) {
+        public Builder role(@Nullable Output<ParticipantRole> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable ParticipantRole role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public ParticipantArgs build() {

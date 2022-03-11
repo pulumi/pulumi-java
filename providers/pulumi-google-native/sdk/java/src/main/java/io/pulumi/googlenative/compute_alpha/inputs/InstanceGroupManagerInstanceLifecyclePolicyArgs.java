@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
      * 
      */
     @InputImport(name="metadataBasedReadinessSignal")
-      private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+      private final @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
-    public Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
-        return this.metadataBasedReadinessSignal == null ? Input.empty() : this.metadataBasedReadinessSignal;
+    public Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
+        return this.metadataBasedReadinessSignal == null ? Output.empty() : this.metadataBasedReadinessSignal;
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyArgs(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
+    public InstanceGroupManagerInstanceLifecyclePolicyArgs(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
         this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
     }
 
     private InstanceGroupManagerInstanceLifecyclePolicyArgs() {
-        this.metadataBasedReadinessSignal = Input.empty();
+        this.metadataBasedReadinessSignal = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+        private @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
     	      this.metadataBasedReadinessSignal = defaults.metadataBasedReadinessSignal;
         }
 
-        public Builder metadataBasedReadinessSignal(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
+        public Builder metadataBasedReadinessSignal(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
             this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
             return this;
         }
 
         public Builder metadataBasedReadinessSignal(@Nullable InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
-            this.metadataBasedReadinessSignal = Input.ofNullable(metadataBasedReadinessSignal);
+            this.metadataBasedReadinessSignal = Output.ofNullable(metadataBasedReadinessSignal);
             return this;
         }
         public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {

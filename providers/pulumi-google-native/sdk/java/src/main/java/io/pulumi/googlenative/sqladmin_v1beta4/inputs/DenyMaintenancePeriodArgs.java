@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startDate")
-      private final @Nullable Input<String> startDate;
+      private final @Nullable Output<String> startDate;
 
-    public Input<String> getStartDate() {
-        return this.startDate == null ? Input.empty() : this.startDate;
+    public Output<String> getStartDate() {
+        return this.startDate == null ? Output.empty() : this.startDate;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     public DenyMaintenancePeriodArgs(
-        @Nullable Input<String> endDate,
-        @Nullable Input<String> startDate,
-        @Nullable Input<String> time) {
+        @Nullable Output<String> endDate,
+        @Nullable Output<String> startDate,
+        @Nullable Output<String> time) {
         this.endDate = endDate;
         this.startDate = startDate;
         this.time = time;
     }
 
     private DenyMaintenancePeriodArgs() {
-        this.endDate = Input.empty();
-        this.startDate = Input.empty();
-        this.time = Input.empty();
+        this.endDate = Output.empty();
+        this.startDate = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endDate;
-        private @Nullable Input<String> startDate;
-        private @Nullable Input<String> time;
+        private @Nullable Output<String> endDate;
+        private @Nullable Output<String> startDate;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
     	      this.time = defaults.time;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder startDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Output<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Input.ofNullable(startDate);
+            this.startDate = Output.ofNullable(startDate);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public DenyMaintenancePeriodArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-      private final @Nullable Input<Integer> instances;
+      private final @Nullable Output<Integer> instances;
 
-    public Input<Integer> getInstances() {
-        return this.instances == null ? Input.empty() : this.instances;
+    public Output<Integer> getInstances() {
+        return this.instances == null ? Output.empty() : this.instances;
     }
 
-    public ManualScalingArgs(@Nullable Input<Integer> instances) {
+    public ManualScalingArgs(@Nullable Output<Integer> instances) {
         this.instances = instances;
     }
 
     private ManualScalingArgs() {
-        this.instances = Input.empty();
+        this.instances = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> instances;
+        private @Nullable Output<Integer> instances;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instances = defaults.instances;
         }
 
-        public Builder instances(@Nullable Input<Integer> instances) {
+        public Builder instances(@Nullable Output<Integer> instances) {
             this.instances = instances;
             return this;
         }
 
         public Builder instances(@Nullable Integer instances) {
-            this.instances = Input.ofNullable(instances);
+            this.instances = Output.ofNullable(instances);
             return this;
         }
         public ManualScalingArgs build() {

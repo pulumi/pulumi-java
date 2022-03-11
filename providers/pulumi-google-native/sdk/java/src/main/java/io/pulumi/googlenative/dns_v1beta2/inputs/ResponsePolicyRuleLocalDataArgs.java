@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="localDatas")
-      private final @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
+      private final @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
-    public Input<List<ResourceRecordSetArgs>> getLocalDatas() {
-        return this.localDatas == null ? Input.empty() : this.localDatas;
+    public Output<List<ResourceRecordSetArgs>> getLocalDatas() {
+        return this.localDatas == null ? Output.empty() : this.localDatas;
     }
 
-    public ResponsePolicyRuleLocalDataArgs(@Nullable Input<List<ResourceRecordSetArgs>> localDatas) {
+    public ResponsePolicyRuleLocalDataArgs(@Nullable Output<List<ResourceRecordSetArgs>> localDatas) {
         this.localDatas = localDatas;
     }
 
     private ResponsePolicyRuleLocalDataArgs() {
-        this.localDatas = Input.empty();
+        this.localDatas = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResourceRecordSetArgs>> localDatas;
+        private @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
     	      this.localDatas = defaults.localDatas;
         }
 
-        public Builder localDatas(@Nullable Input<List<ResourceRecordSetArgs>> localDatas) {
+        public Builder localDatas(@Nullable Output<List<ResourceRecordSetArgs>> localDatas) {
             this.localDatas = localDatas;
             return this;
         }
 
         public Builder localDatas(@Nullable List<ResourceRecordSetArgs> localDatas) {
-            this.localDatas = Input.ofNullable(localDatas);
+            this.localDatas = Output.ofNullable(localDatas);
             return this;
         }
         public ResponsePolicyRuleLocalDataArgs build() {

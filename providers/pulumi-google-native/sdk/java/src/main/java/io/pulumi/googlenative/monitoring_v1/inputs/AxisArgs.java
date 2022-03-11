@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.AxisScale;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<AxisScale> scale;
+      private final @Nullable Output<AxisScale> scale;
 
-    public Input<AxisScale> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<AxisScale> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     public AxisArgs(
-        @Nullable Input<String> label,
-        @Nullable Input<AxisScale> scale) {
+        @Nullable Output<String> label,
+        @Nullable Output<AxisScale> scale) {
         this.label = label;
         this.scale = scale;
     }
 
     private AxisArgs() {
-        this.label = Input.empty();
-        this.scale = Input.empty();
+        this.label = Output.empty();
+        this.scale = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
-        private @Nullable Input<AxisScale> scale;
+        private @Nullable Output<String> label;
+        private @Nullable Output<AxisScale> scale;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scale = defaults.scale;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder scale(@Nullable Input<AxisScale> scale) {
+        public Builder scale(@Nullable Output<AxisScale> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable AxisScale scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
         public AxisArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterLabels")
-      private final @Nullable Input<Map<String,String>> clusterLabels;
+      private final @Nullable Output<Map<String,String>> clusterLabels;
 
-    public Input<Map<String,String>> getClusterLabels() {
-        return this.clusterLabels == null ? Input.empty() : this.clusterLabels;
+    public Output<Map<String,String>> getClusterLabels() {
+        return this.clusterLabels == null ? Output.empty() : this.clusterLabels;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
     public JobPlacementArgs(
-        @Nullable Input<Map<String,String>> clusterLabels,
-        Input<String> clusterName) {
+        @Nullable Output<Map<String,String>> clusterLabels,
+        Output<String> clusterName) {
         this.clusterLabels = clusterLabels;
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
     }
 
     private JobPlacementArgs() {
-        this.clusterLabels = Input.empty();
-        this.clusterName = Input.empty();
+        this.clusterLabels = Output.empty();
+        this.clusterName = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> clusterLabels;
-        private Input<String> clusterName;
+        private @Nullable Output<Map<String,String>> clusterLabels;
+        private Output<String> clusterName;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterName = defaults.clusterName;
         }
 
-        public Builder clusterLabels(@Nullable Input<Map<String,String>> clusterLabels) {
+        public Builder clusterLabels(@Nullable Output<Map<String,String>> clusterLabels) {
             this.clusterLabels = clusterLabels;
             return this;
         }
 
         public Builder clusterLabels(@Nullable Map<String,String> clusterLabels) {
-            this.clusterLabels = Input.ofNullable(clusterLabels);
+            this.clusterLabels = Output.ofNullable(clusterLabels);
             return this;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
         public JobPlacementArgs build() {

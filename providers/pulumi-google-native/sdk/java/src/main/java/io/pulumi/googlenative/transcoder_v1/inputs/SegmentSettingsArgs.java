@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="individualSegments", required=true)
-      private final Input<Boolean> individualSegments;
+      private final Output<Boolean> individualSegments;
 
-    public Input<Boolean> getIndividualSegments() {
+    public Output<Boolean> getIndividualSegments() {
         return this.individualSegments;
     }
 
@@ -35,22 +35,22 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="segmentDuration")
-      private final @Nullable Input<String> segmentDuration;
+      private final @Nullable Output<String> segmentDuration;
 
-    public Input<String> getSegmentDuration() {
-        return this.segmentDuration == null ? Input.empty() : this.segmentDuration;
+    public Output<String> getSegmentDuration() {
+        return this.segmentDuration == null ? Output.empty() : this.segmentDuration;
     }
 
     public SegmentSettingsArgs(
-        Input<Boolean> individualSegments,
-        @Nullable Input<String> segmentDuration) {
+        Output<Boolean> individualSegments,
+        @Nullable Output<String> segmentDuration) {
         this.individualSegments = Objects.requireNonNull(individualSegments, "expected parameter 'individualSegments' to be non-null");
         this.segmentDuration = segmentDuration;
     }
 
     private SegmentSettingsArgs() {
-        this.individualSegments = Input.empty();
-        this.segmentDuration = Input.empty();
+        this.individualSegments = Output.empty();
+        this.segmentDuration = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Boolean> individualSegments;
-        private @Nullable Input<String> segmentDuration;
+        private Output<Boolean> individualSegments;
+        private @Nullable Output<String> segmentDuration;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SegmentSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.segmentDuration = defaults.segmentDuration;
         }
 
-        public Builder individualSegments(Input<Boolean> individualSegments) {
+        public Builder individualSegments(Output<Boolean> individualSegments) {
             this.individualSegments = Objects.requireNonNull(individualSegments);
             return this;
         }
 
         public Builder individualSegments(Boolean individualSegments) {
-            this.individualSegments = Input.of(Objects.requireNonNull(individualSegments));
+            this.individualSegments = Output.of(Objects.requireNonNull(individualSegments));
             return this;
         }
 
-        public Builder segmentDuration(@Nullable Input<String> segmentDuration) {
+        public Builder segmentDuration(@Nullable Output<String> segmentDuration) {
             this.segmentDuration = segmentDuration;
             return this;
         }
 
         public Builder segmentDuration(@Nullable String segmentDuration) {
-            this.segmentDuration = Input.ofNullable(segmentDuration);
+            this.segmentDuration = Output.ofNullable(segmentDuration);
             return this;
         }
         public SegmentSettingsArgs build() {

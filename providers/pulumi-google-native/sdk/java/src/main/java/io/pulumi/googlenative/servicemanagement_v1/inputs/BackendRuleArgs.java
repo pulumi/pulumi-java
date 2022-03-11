@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.BackendRulePathTranslation;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-      private final @Nullable Input<String> address;
+      private final @Nullable Output<String> address;
 
-    public Input<String> getAddress() {
-        return this.address == null ? Input.empty() : this.address;
+    public Output<String> getAddress() {
+        return this.address == null ? Output.empty() : this.address;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadline")
-      private final @Nullable Input<Double> deadline;
+      private final @Nullable Output<Double> deadline;
 
-    public Input<Double> getDeadline() {
-        return this.deadline == null ? Input.empty() : this.deadline;
+    public Output<Double> getDeadline() {
+        return this.deadline == null ? Output.empty() : this.deadline;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableAuth")
-      private final @Nullable Input<Boolean> disableAuth;
+      private final @Nullable Output<Boolean> disableAuth;
 
-    public Input<Boolean> getDisableAuth() {
-        return this.disableAuth == null ? Input.empty() : this.disableAuth;
+    public Output<Boolean> getDisableAuth() {
+        return this.disableAuth == null ? Output.empty() : this.disableAuth;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwtAudience")
-      private final @Nullable Input<String> jwtAudience;
+      private final @Nullable Output<String> jwtAudience;
 
-    public Input<String> getJwtAudience() {
-        return this.jwtAudience == null ? Input.empty() : this.jwtAudience;
+    public Output<String> getJwtAudience() {
+        return this.jwtAudience == null ? Output.empty() : this.jwtAudience;
     }
 
     /**
@@ -70,17 +70,17 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationDeadline")
-      private final @Nullable Input<Double> operationDeadline;
+      private final @Nullable Output<Double> operationDeadline;
 
-    public Input<Double> getOperationDeadline() {
-        return this.operationDeadline == null ? Input.empty() : this.operationDeadline;
+    public Output<Double> getOperationDeadline() {
+        return this.operationDeadline == null ? Output.empty() : this.operationDeadline;
     }
 
     @InputImport(name="pathTranslation")
-      private final @Nullable Input<BackendRulePathTranslation> pathTranslation;
+      private final @Nullable Output<BackendRulePathTranslation> pathTranslation;
 
-    public Input<BackendRulePathTranslation> getPathTranslation() {
-        return this.pathTranslation == null ? Input.empty() : this.pathTranslation;
+    public Output<BackendRulePathTranslation> getPathTranslation() {
+        return this.pathTranslation == null ? Output.empty() : this.pathTranslation;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -99,21 +99,21 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public BackendRuleArgs(
-        @Nullable Input<String> address,
-        @Nullable Input<Double> deadline,
-        @Nullable Input<Boolean> disableAuth,
-        @Nullable Input<String> jwtAudience,
-        @Nullable Input<Double> operationDeadline,
-        @Nullable Input<BackendRulePathTranslation> pathTranslation,
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> selector) {
+        @Nullable Output<String> address,
+        @Nullable Output<Double> deadline,
+        @Nullable Output<Boolean> disableAuth,
+        @Nullable Output<String> jwtAudience,
+        @Nullable Output<Double> operationDeadline,
+        @Nullable Output<BackendRulePathTranslation> pathTranslation,
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> selector) {
         this.address = address;
         this.deadline = deadline;
         this.disableAuth = disableAuth;
@@ -125,14 +125,14 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendRuleArgs() {
-        this.address = Input.empty();
-        this.deadline = Input.empty();
-        this.disableAuth = Input.empty();
-        this.jwtAudience = Input.empty();
-        this.operationDeadline = Input.empty();
-        this.pathTranslation = Input.empty();
-        this.protocol = Input.empty();
-        this.selector = Input.empty();
+        this.address = Output.empty();
+        this.deadline = Output.empty();
+        this.disableAuth = Output.empty();
+        this.jwtAudience = Output.empty();
+        this.operationDeadline = Output.empty();
+        this.pathTranslation = Output.empty();
+        this.protocol = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> address;
-        private @Nullable Input<Double> deadline;
-        private @Nullable Input<Boolean> disableAuth;
-        private @Nullable Input<String> jwtAudience;
-        private @Nullable Input<Double> operationDeadline;
-        private @Nullable Input<BackendRulePathTranslation> pathTranslation;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<String> address;
+        private @Nullable Output<Double> deadline;
+        private @Nullable Output<Boolean> disableAuth;
+        private @Nullable Output<String> jwtAudience;
+        private @Nullable Output<Double> operationDeadline;
+        private @Nullable Output<BackendRulePathTranslation> pathTranslation;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder address(@Nullable Input<String> address) {
+        public Builder address(@Nullable Output<String> address) {
             this.address = address;
             return this;
         }
 
         public Builder address(@Nullable String address) {
-            this.address = Input.ofNullable(address);
+            this.address = Output.ofNullable(address);
             return this;
         }
 
-        public Builder deadline(@Nullable Input<Double> deadline) {
+        public Builder deadline(@Nullable Output<Double> deadline) {
             this.deadline = deadline;
             return this;
         }
 
         public Builder deadline(@Nullable Double deadline) {
-            this.deadline = Input.ofNullable(deadline);
+            this.deadline = Output.ofNullable(deadline);
             return this;
         }
 
-        public Builder disableAuth(@Nullable Input<Boolean> disableAuth) {
+        public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
             this.disableAuth = disableAuth;
             return this;
         }
 
         public Builder disableAuth(@Nullable Boolean disableAuth) {
-            this.disableAuth = Input.ofNullable(disableAuth);
+            this.disableAuth = Output.ofNullable(disableAuth);
             return this;
         }
 
-        public Builder jwtAudience(@Nullable Input<String> jwtAudience) {
+        public Builder jwtAudience(@Nullable Output<String> jwtAudience) {
             this.jwtAudience = jwtAudience;
             return this;
         }
 
         public Builder jwtAudience(@Nullable String jwtAudience) {
-            this.jwtAudience = Input.ofNullable(jwtAudience);
+            this.jwtAudience = Output.ofNullable(jwtAudience);
             return this;
         }
 
-        public Builder operationDeadline(@Nullable Input<Double> operationDeadline) {
+        public Builder operationDeadline(@Nullable Output<Double> operationDeadline) {
             this.operationDeadline = operationDeadline;
             return this;
         }
 
         public Builder operationDeadline(@Nullable Double operationDeadline) {
-            this.operationDeadline = Input.ofNullable(operationDeadline);
+            this.operationDeadline = Output.ofNullable(operationDeadline);
             return this;
         }
 
-        public Builder pathTranslation(@Nullable Input<BackendRulePathTranslation> pathTranslation) {
+        public Builder pathTranslation(@Nullable Output<BackendRulePathTranslation> pathTranslation) {
             this.pathTranslation = pathTranslation;
             return this;
         }
 
         public Builder pathTranslation(@Nullable BackendRulePathTranslation pathTranslation) {
-            this.pathTranslation = Input.ofNullable(pathTranslation);
+            this.pathTranslation = Output.ofNullable(pathTranslation);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public BackendRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -35,10 +35,10 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv4Addresses")
-      private final @Nullable Input<List<String>> ipv4Addresses;
+      private final @Nullable Output<List<String>> ipv4Addresses;
 
-    public Input<List<String>> getIpv4Addresses() {
-        return this.ipv4Addresses == null ? Input.empty() : this.ipv4Addresses;
+    public Output<List<String>> getIpv4Addresses() {
+        return this.ipv4Addresses == null ? Output.empty() : this.ipv4Addresses;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Addresses")
-      private final @Nullable Input<List<String>> ipv6Addresses;
+      private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Input<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
+    public Output<List<String>> getIpv6Addresses() {
+        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
     }
 
     public GlueRecordArgs(
-        Input<String> hostName,
-        @Nullable Input<List<String>> ipv4Addresses,
-        @Nullable Input<List<String>> ipv6Addresses) {
+        Output<String> hostName,
+        @Nullable Output<List<String>> ipv4Addresses,
+        @Nullable Output<List<String>> ipv6Addresses) {
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
         this.ipv4Addresses = ipv4Addresses;
         this.ipv6Addresses = ipv6Addresses;
     }
 
     private GlueRecordArgs() {
-        this.hostName = Input.empty();
-        this.ipv4Addresses = Input.empty();
-        this.ipv6Addresses = Input.empty();
+        this.hostName = Output.empty();
+        this.ipv4Addresses = Output.empty();
+        this.ipv6Addresses = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> hostName;
-        private @Nullable Input<List<String>> ipv4Addresses;
-        private @Nullable Input<List<String>> ipv6Addresses;
+        private Output<String> hostName;
+        private @Nullable Output<List<String>> ipv4Addresses;
+        private @Nullable Output<List<String>> ipv6Addresses;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipv6Addresses = defaults.ipv6Addresses;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder ipv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable Output<List<String>> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
         public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
-            this.ipv4Addresses = Input.ofNullable(ipv4Addresses);
+            this.ipv4Addresses = Output.ofNullable(ipv4Addresses);
             return this;
         }
 
-        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
             return this;
         }
         public GlueRecordArgs build() {

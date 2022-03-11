@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.enums.ExecutionConfigUsagesItem;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolArgs;
@@ -27,10 +27,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="artifactStorage")
-      private final @Nullable Input<String> artifactStorage;
+      private final @Nullable Output<String> artifactStorage;
 
-    public Input<String> getArtifactStorage() {
-        return this.artifactStorage == null ? Input.empty() : this.artifactStorage;
+    public Output<String> getArtifactStorage() {
+        return this.artifactStorage == null ? Output.empty() : this.artifactStorage;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultPool")
-      private final @Nullable Input<DefaultPoolArgs> defaultPool;
+      private final @Nullable Output<DefaultPoolArgs> defaultPool;
 
-    public Input<DefaultPoolArgs> getDefaultPool() {
-        return this.defaultPool == null ? Input.empty() : this.defaultPool;
+    public Output<DefaultPoolArgs> getDefaultPool() {
+        return this.defaultPool == null ? Output.empty() : this.defaultPool;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privatePool")
-      private final @Nullable Input<PrivatePoolArgs> privatePool;
+      private final @Nullable Output<PrivatePoolArgs> privatePool;
 
-    public Input<PrivatePoolArgs> getPrivatePool() {
-        return this.privatePool == null ? Input.empty() : this.privatePool;
+    public Output<PrivatePoolArgs> getPrivatePool() {
+        return this.privatePool == null ? Output.empty() : this.privatePool;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -71,9 +71,9 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usages", required=true)
-      private final Input<List<ExecutionConfigUsagesItem>> usages;
+      private final Output<List<ExecutionConfigUsagesItem>> usages;
 
-    public Input<List<ExecutionConfigUsagesItem>> getUsages() {
+    public Output<List<ExecutionConfigUsagesItem>> getUsages() {
         return this.usages;
     }
 
@@ -82,19 +82,19 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workerPool")
-      private final @Nullable Input<String> workerPool;
+      private final @Nullable Output<String> workerPool;
 
-    public Input<String> getWorkerPool() {
-        return this.workerPool == null ? Input.empty() : this.workerPool;
+    public Output<String> getWorkerPool() {
+        return this.workerPool == null ? Output.empty() : this.workerPool;
     }
 
     public ExecutionConfigArgs(
-        @Nullable Input<String> artifactStorage,
-        @Nullable Input<DefaultPoolArgs> defaultPool,
-        @Nullable Input<PrivatePoolArgs> privatePool,
-        @Nullable Input<String> serviceAccount,
-        Input<List<ExecutionConfigUsagesItem>> usages,
-        @Nullable Input<String> workerPool) {
+        @Nullable Output<String> artifactStorage,
+        @Nullable Output<DefaultPoolArgs> defaultPool,
+        @Nullable Output<PrivatePoolArgs> privatePool,
+        @Nullable Output<String> serviceAccount,
+        Output<List<ExecutionConfigUsagesItem>> usages,
+        @Nullable Output<String> workerPool) {
         this.artifactStorage = artifactStorage;
         this.defaultPool = defaultPool;
         this.privatePool = privatePool;
@@ -104,12 +104,12 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ExecutionConfigArgs() {
-        this.artifactStorage = Input.empty();
-        this.defaultPool = Input.empty();
-        this.privatePool = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.usages = Input.empty();
-        this.workerPool = Input.empty();
+        this.artifactStorage = Output.empty();
+        this.defaultPool = Output.empty();
+        this.privatePool = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.usages = Output.empty();
+        this.workerPool = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> artifactStorage;
-        private @Nullable Input<DefaultPoolArgs> defaultPool;
-        private @Nullable Input<PrivatePoolArgs> privatePool;
-        private @Nullable Input<String> serviceAccount;
-        private Input<List<ExecutionConfigUsagesItem>> usages;
-        private @Nullable Input<String> workerPool;
+        private @Nullable Output<String> artifactStorage;
+        private @Nullable Output<DefaultPoolArgs> defaultPool;
+        private @Nullable Output<PrivatePoolArgs> privatePool;
+        private @Nullable Output<String> serviceAccount;
+        private Output<List<ExecutionConfigUsagesItem>> usages;
+        private @Nullable Output<String> workerPool;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder artifactStorage(@Nullable Input<String> artifactStorage) {
+        public Builder artifactStorage(@Nullable Output<String> artifactStorage) {
             this.artifactStorage = artifactStorage;
             return this;
         }
 
         public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Input.ofNullable(artifactStorage);
+            this.artifactStorage = Output.ofNullable(artifactStorage);
             return this;
         }
 
-        public Builder defaultPool(@Nullable Input<DefaultPoolArgs> defaultPool) {
+        public Builder defaultPool(@Nullable Output<DefaultPoolArgs> defaultPool) {
             this.defaultPool = defaultPool;
             return this;
         }
 
         public Builder defaultPool(@Nullable DefaultPoolArgs defaultPool) {
-            this.defaultPool = Input.ofNullable(defaultPool);
+            this.defaultPool = Output.ofNullable(defaultPool);
             return this;
         }
 
-        public Builder privatePool(@Nullable Input<PrivatePoolArgs> privatePool) {
+        public Builder privatePool(@Nullable Output<PrivatePoolArgs> privatePool) {
             this.privatePool = privatePool;
             return this;
         }
 
         public Builder privatePool(@Nullable PrivatePoolArgs privatePool) {
-            this.privatePool = Input.ofNullable(privatePool);
+            this.privatePool = Output.ofNullable(privatePool);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder usages(Input<List<ExecutionConfigUsagesItem>> usages) {
+        public Builder usages(Output<List<ExecutionConfigUsagesItem>> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
 
         public Builder usages(List<ExecutionConfigUsagesItem> usages) {
-            this.usages = Input.of(Objects.requireNonNull(usages));
+            this.usages = Output.of(Objects.requireNonNull(usages));
             return this;
         }
 
-        public Builder workerPool(@Nullable Input<String> workerPool) {
+        public Builder workerPool(@Nullable Output<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
 
         public Builder workerPool(@Nullable String workerPool) {
-            this.workerPool = Input.ofNullable(workerPool);
+            this.workerPool = Output.ofNullable(workerPool);
             return this;
         }
         public ExecutionConfigArgs build() {

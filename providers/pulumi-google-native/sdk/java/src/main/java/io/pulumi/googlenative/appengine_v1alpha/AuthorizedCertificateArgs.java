@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.CertificateRawDataArgs;
 import java.lang.String;
@@ -16,9 +16,9 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     public static final AuthorizedCertificateArgs Empty = new AuthorizedCertificateArgs();
 
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -27,10 +27,10 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateRawData")
-      private final @Nullable Input<CertificateRawDataArgs> certificateRawData;
+      private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
-    public Input<CertificateRawDataArgs> getCertificateRawData() {
-        return this.certificateRawData == null ? Input.empty() : this.certificateRawData;
+    public Output<CertificateRawDataArgs> getCertificateRawData() {
+        return this.certificateRawData == null ? Output.empty() : this.certificateRawData;
     }
 
     /**
@@ -38,25 +38,25 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     public AuthorizedCertificateArgs(
-        Input<String> appId,
-        @Nullable Input<CertificateRawDataArgs> certificateRawData,
-        @Nullable Input<String> displayName) {
+        Output<String> appId,
+        @Nullable Output<CertificateRawDataArgs> certificateRawData,
+        @Nullable Output<String> displayName) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.certificateRawData = certificateRawData;
         this.displayName = displayName;
     }
 
     private AuthorizedCertificateArgs() {
-        this.appId = Input.empty();
-        this.certificateRawData = Input.empty();
-        this.displayName = Input.empty();
+        this.appId = Output.empty();
+        this.certificateRawData = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<CertificateRawDataArgs> certificateRawData;
-        private @Nullable Input<String> displayName;
+        private Output<String> appId;
+        private @Nullable Output<CertificateRawDataArgs> certificateRawData;
+        private @Nullable Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder certificateRawData(@Nullable Input<CertificateRawDataArgs> certificateRawData) {
+        public Builder certificateRawData(@Nullable Output<CertificateRawDataArgs> certificateRawData) {
             this.certificateRawData = certificateRawData;
             return this;
         }
 
         public Builder certificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
-            this.certificateRawData = Input.ofNullable(certificateRawData);
+            this.certificateRawData = Output.ofNullable(certificateRawData);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
         public AuthorizedCertificateArgs build() {

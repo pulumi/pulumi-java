@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.GoogleCloudRunV1ConditionArgs;
 import io.pulumi.googlenative.run_v1.inputs.ResourceRecordArgs;
@@ -27,10 +27,10 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
+      private final @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
 
-    public Input<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<GoogleCloudRunV1ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mappedRouteName")
-      private final @Nullable Input<String> mappedRouteName;
+      private final @Nullable Output<String> mappedRouteName;
 
-    public Input<String> getMappedRouteName() {
-        return this.mappedRouteName == null ? Input.empty() : this.mappedRouteName;
+    public Output<String> getMappedRouteName() {
+        return this.mappedRouteName == null ? Output.empty() : this.mappedRouteName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="observedGeneration")
-      private final @Nullable Input<Integer> observedGeneration;
+      private final @Nullable Output<Integer> observedGeneration;
 
-    public Input<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
+    public Output<Integer> getObservedGeneration() {
+        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceRecords")
-      private final @Nullable Input<List<ResourceRecordArgs>> resourceRecords;
+      private final @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
 
-    public Input<List<ResourceRecordArgs>> getResourceRecords() {
-        return this.resourceRecords == null ? Input.empty() : this.resourceRecords;
+    public Output<List<ResourceRecordArgs>> getResourceRecords() {
+        return this.resourceRecords == null ? Output.empty() : this.resourceRecords;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public DomainMappingStatusArgs(
-        @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions,
-        @Nullable Input<String> mappedRouteName,
-        @Nullable Input<Integer> observedGeneration,
-        @Nullable Input<List<ResourceRecordArgs>> resourceRecords,
-        @Nullable Input<String> url) {
+        @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions,
+        @Nullable Output<String> mappedRouteName,
+        @Nullable Output<Integer> observedGeneration,
+        @Nullable Output<List<ResourceRecordArgs>> resourceRecords,
+        @Nullable Output<String> url) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;
@@ -91,11 +91,11 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainMappingStatusArgs() {
-        this.conditions = Input.empty();
-        this.mappedRouteName = Input.empty();
-        this.observedGeneration = Input.empty();
-        this.resourceRecords = Input.empty();
-        this.url = Input.empty();
+        this.conditions = Output.empty();
+        this.mappedRouteName = Output.empty();
+        this.observedGeneration = Output.empty();
+        this.resourceRecords = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions;
-        private @Nullable Input<String> mappedRouteName;
-        private @Nullable Input<Integer> observedGeneration;
-        private @Nullable Input<List<ResourceRecordArgs>> resourceRecords;
-        private @Nullable Input<String> url;
+        private @Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions;
+        private @Nullable Output<String> mappedRouteName;
+        private @Nullable Output<Integer> observedGeneration;
+        private @Nullable Output<List<ResourceRecordArgs>> resourceRecords;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder conditions(@Nullable Input<List<GoogleCloudRunV1ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<GoogleCloudRunV1ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<GoogleCloudRunV1ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder mappedRouteName(@Nullable Input<String> mappedRouteName) {
+        public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
 
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
-            this.mappedRouteName = Input.ofNullable(mappedRouteName);
+            this.mappedRouteName = Output.ofNullable(mappedRouteName);
             return this;
         }
 
-        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Input.ofNullable(observedGeneration);
+            this.observedGeneration = Output.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder resourceRecords(@Nullable Input<List<ResourceRecordArgs>> resourceRecords) {
+        public Builder resourceRecords(@Nullable Output<List<ResourceRecordArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
 
         public Builder resourceRecords(@Nullable List<ResourceRecordArgs> resourceRecords) {
-            this.resourceRecords = Input.ofNullable(resourceRecords);
+            this.resourceRecords = Output.ofNullable(resourceRecords);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public DomainMappingStatusArgs build() {

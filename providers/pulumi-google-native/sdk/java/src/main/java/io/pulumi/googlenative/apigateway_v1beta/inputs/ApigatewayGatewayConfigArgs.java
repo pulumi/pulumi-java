@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBackendConfigArgs;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="backendConfig", required=true)
-      private final Input<ApigatewayBackendConfigArgs> backendConfig;
+      private final Output<ApigatewayBackendConfigArgs> backendConfig;
 
-    public Input<ApigatewayBackendConfigArgs> getBackendConfig() {
+    public Output<ApigatewayBackendConfigArgs> getBackendConfig() {
         return this.backendConfig;
     }
 
-    public ApigatewayGatewayConfigArgs(Input<ApigatewayBackendConfigArgs> backendConfig) {
+    public ApigatewayGatewayConfigArgs(Output<ApigatewayBackendConfigArgs> backendConfig) {
         this.backendConfig = Objects.requireNonNull(backendConfig, "expected parameter 'backendConfig' to be non-null");
     }
 
     private ApigatewayGatewayConfigArgs() {
-        this.backendConfig = Input.empty();
+        this.backendConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<ApigatewayBackendConfigArgs> backendConfig;
+        private Output<ApigatewayBackendConfigArgs> backendConfig;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ApigatewayGatewayConfigArgs extends io.pulumi.resources.Resou
     	      this.backendConfig = defaults.backendConfig;
         }
 
-        public Builder backendConfig(Input<ApigatewayBackendConfigArgs> backendConfig) {
+        public Builder backendConfig(Output<ApigatewayBackendConfigArgs> backendConfig) {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
 
         public Builder backendConfig(ApigatewayBackendConfigArgs backendConfig) {
-            this.backendConfig = Input.of(Objects.requireNonNull(backendConfig));
+            this.backendConfig = Output.of(Objects.requireNonNull(backendConfig));
             return this;
         }
         public ApigatewayGatewayConfigArgs build() {

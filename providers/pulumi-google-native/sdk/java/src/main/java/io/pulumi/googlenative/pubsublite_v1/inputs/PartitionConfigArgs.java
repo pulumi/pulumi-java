@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsublite_v1.inputs.CapacityArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<CapacityArgs> capacity;
+      private final @Nullable Output<CapacityArgs> capacity;
 
-    public Input<CapacityArgs> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<CapacityArgs> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<String> count;
+      private final @Nullable Output<String> count;
 
-    public Input<String> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<String> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     public PartitionConfigArgs(
-        @Nullable Input<CapacityArgs> capacity,
-        @Nullable Input<String> count) {
+        @Nullable Output<CapacityArgs> capacity,
+        @Nullable Output<String> count) {
         this.capacity = capacity;
         this.count = count;
     }
 
     private PartitionConfigArgs() {
-        this.capacity = Input.empty();
-        this.count = Input.empty();
+        this.capacity = Output.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<CapacityArgs> capacity;
-        private @Nullable Input<String> count;
+        private @Nullable Output<CapacityArgs> capacity;
+        private @Nullable Output<String> count;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.count = defaults.count;
         }
 
-        public Builder capacity(@Nullable Input<CapacityArgs> capacity) {
+        public Builder capacity(@Nullable Output<CapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable CapacityArgs capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder count(@Nullable Input<String> count) {
+        public Builder count(@Nullable Output<String> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable String count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public PartitionConfigArgs build() {

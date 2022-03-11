@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
      * 
      */
     @InputImport(name="context")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getContext() {
-        return this.context == null ? Input.empty() : this.context;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
+        return this.context == null ? Output.empty() : this.context;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
      * 
      */
     @InputImport(name="cryptoKey")
-      private final @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+      private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Input<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Input.empty() : this.cryptoKey;
+    public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
+        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
      * 
      */
     @InputImport(name="surrogateInfoType")
-      private final @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
+      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
-    public Input<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Input.empty() : this.surrogateInfoType;
+    public Output<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
+        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
     }
 
     public GooglePrivacyDlpV2CryptoDeterministicConfigArgs(
-        @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context,
-        @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey,
-        @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
+        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context,
+        @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey,
+        @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.surrogateInfoType = surrogateInfoType;
     }
 
     private GooglePrivacyDlpV2CryptoDeterministicConfigArgs() {
-        this.context = Input.empty();
-        this.cryptoKey = Input.empty();
-        this.surrogateInfoType = Input.empty();
+        this.context = Output.empty();
+        this.cryptoKey = Output.empty();
+        this.surrogateInfoType = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context;
-        private @Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
-        private @Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
+        private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+        private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends io.pu
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder context(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
+        public Builder context(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context) {
             this.context = context;
             return this;
         }
 
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
-            this.context = Input.ofNullable(context);
+            this.context = Output.ofNullable(context);
             return this;
         }
 
-        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Input.ofNullable(cryptoKey);
+            this.cryptoKey = Output.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder surrogateInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
 
         public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
             return this;
         }
         public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {

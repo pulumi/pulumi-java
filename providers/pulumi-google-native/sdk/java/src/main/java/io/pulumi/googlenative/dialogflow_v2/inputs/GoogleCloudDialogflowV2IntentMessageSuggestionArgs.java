@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionArgs extends io
      * 
      */
     @InputImport(name="title", required=true)
-      private final Input<String> title;
+      private final Output<String> title;
 
-    public Input<String> getTitle() {
+    public Output<String> getTitle() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageSuggestionArgs(Input<String> title) {
+    public GoogleCloudDialogflowV2IntentMessageSuggestionArgs(Output<String> title) {
         this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageSuggestionArgs() {
-        this.title = Input.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionArgs extends io
     }
 
     public static final class Builder {
-        private Input<String> title;
+        private Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionArgs extends io
     	      this.title = defaults.title;
         }
 
-        public Builder title(Input<String> title) {
+        public Builder title(Output<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
         public Builder title(String title) {
-            this.title = Input.of(Objects.requireNonNull(title));
+            this.title = Output.of(Objects.requireNonNull(title));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageSuggestionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
@@ -30,10 +30,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertChart")
-      private final @Nullable Input<AlertChartArgs> alertChart;
+      private final @Nullable Output<AlertChartArgs> alertChart;
 
-    public Input<AlertChartArgs> getAlertChart() {
-        return this.alertChart == null ? Input.empty() : this.alertChart;
+    public Output<AlertChartArgs> getAlertChart() {
+        return this.alertChart == null ? Output.empty() : this.alertChart;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blank")
-      private final @Nullable Input<EmptyArgs> blank;
+      private final @Nullable Output<EmptyArgs> blank;
 
-    public Input<EmptyArgs> getBlank() {
-        return this.blank == null ? Input.empty() : this.blank;
+    public Output<EmptyArgs> getBlank() {
+        return this.blank == null ? Output.empty() : this.blank;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsPanel")
-      private final @Nullable Input<LogsPanelArgs> logsPanel;
+      private final @Nullable Output<LogsPanelArgs> logsPanel;
 
-    public Input<LogsPanelArgs> getLogsPanel() {
-        return this.logsPanel == null ? Input.empty() : this.logsPanel;
+    public Output<LogsPanelArgs> getLogsPanel() {
+        return this.logsPanel == null ? Output.empty() : this.logsPanel;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scorecard")
-      private final @Nullable Input<ScorecardArgs> scorecard;
+      private final @Nullable Output<ScorecardArgs> scorecard;
 
-    public Input<ScorecardArgs> getScorecard() {
-        return this.scorecard == null ? Input.empty() : this.scorecard;
+    public Output<ScorecardArgs> getScorecard() {
+        return this.scorecard == null ? Output.empty() : this.scorecard;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<TextArgs> text;
+      private final @Nullable Output<TextArgs> text;
 
-    public Input<TextArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<TextArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesTable")
-      private final @Nullable Input<TimeSeriesTableArgs> timeSeriesTable;
+      private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
-    public Input<TimeSeriesTableArgs> getTimeSeriesTable() {
-        return this.timeSeriesTable == null ? Input.empty() : this.timeSeriesTable;
+    public Output<TimeSeriesTableArgs> getTimeSeriesTable() {
+        return this.timeSeriesTable == null ? Output.empty() : this.timeSeriesTable;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     /**
@@ -107,21 +107,21 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xyChart")
-      private final @Nullable Input<XyChartArgs> xyChart;
+      private final @Nullable Output<XyChartArgs> xyChart;
 
-    public Input<XyChartArgs> getXyChart() {
-        return this.xyChart == null ? Input.empty() : this.xyChart;
+    public Output<XyChartArgs> getXyChart() {
+        return this.xyChart == null ? Output.empty() : this.xyChart;
     }
 
     public WidgetArgs(
-        @Nullable Input<AlertChartArgs> alertChart,
-        @Nullable Input<EmptyArgs> blank,
-        @Nullable Input<LogsPanelArgs> logsPanel,
-        @Nullable Input<ScorecardArgs> scorecard,
-        @Nullable Input<TextArgs> text,
-        @Nullable Input<TimeSeriesTableArgs> timeSeriesTable,
-        @Nullable Input<String> title,
-        @Nullable Input<XyChartArgs> xyChart) {
+        @Nullable Output<AlertChartArgs> alertChart,
+        @Nullable Output<EmptyArgs> blank,
+        @Nullable Output<LogsPanelArgs> logsPanel,
+        @Nullable Output<ScorecardArgs> scorecard,
+        @Nullable Output<TextArgs> text,
+        @Nullable Output<TimeSeriesTableArgs> timeSeriesTable,
+        @Nullable Output<String> title,
+        @Nullable Output<XyChartArgs> xyChart) {
         this.alertChart = alertChart;
         this.blank = blank;
         this.logsPanel = logsPanel;
@@ -133,14 +133,14 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WidgetArgs() {
-        this.alertChart = Input.empty();
-        this.blank = Input.empty();
-        this.logsPanel = Input.empty();
-        this.scorecard = Input.empty();
-        this.text = Input.empty();
-        this.timeSeriesTable = Input.empty();
-        this.title = Input.empty();
-        this.xyChart = Input.empty();
+        this.alertChart = Output.empty();
+        this.blank = Output.empty();
+        this.logsPanel = Output.empty();
+        this.scorecard = Output.empty();
+        this.text = Output.empty();
+        this.timeSeriesTable = Output.empty();
+        this.title = Output.empty();
+        this.xyChart = Output.empty();
     }
 
     public static Builder builder() {
@@ -152,14 +152,14 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AlertChartArgs> alertChart;
-        private @Nullable Input<EmptyArgs> blank;
-        private @Nullable Input<LogsPanelArgs> logsPanel;
-        private @Nullable Input<ScorecardArgs> scorecard;
-        private @Nullable Input<TextArgs> text;
-        private @Nullable Input<TimeSeriesTableArgs> timeSeriesTable;
-        private @Nullable Input<String> title;
-        private @Nullable Input<XyChartArgs> xyChart;
+        private @Nullable Output<AlertChartArgs> alertChart;
+        private @Nullable Output<EmptyArgs> blank;
+        private @Nullable Output<LogsPanelArgs> logsPanel;
+        private @Nullable Output<ScorecardArgs> scorecard;
+        private @Nullable Output<TextArgs> text;
+        private @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
+        private @Nullable Output<String> title;
+        private @Nullable Output<XyChartArgs> xyChart;
 
         public Builder() {
     	      // Empty
@@ -177,83 +177,83 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xyChart = defaults.xyChart;
         }
 
-        public Builder alertChart(@Nullable Input<AlertChartArgs> alertChart) {
+        public Builder alertChart(@Nullable Output<AlertChartArgs> alertChart) {
             this.alertChart = alertChart;
             return this;
         }
 
         public Builder alertChart(@Nullable AlertChartArgs alertChart) {
-            this.alertChart = Input.ofNullable(alertChart);
+            this.alertChart = Output.ofNullable(alertChart);
             return this;
         }
 
-        public Builder blank(@Nullable Input<EmptyArgs> blank) {
+        public Builder blank(@Nullable Output<EmptyArgs> blank) {
             this.blank = blank;
             return this;
         }
 
         public Builder blank(@Nullable EmptyArgs blank) {
-            this.blank = Input.ofNullable(blank);
+            this.blank = Output.ofNullable(blank);
             return this;
         }
 
-        public Builder logsPanel(@Nullable Input<LogsPanelArgs> logsPanel) {
+        public Builder logsPanel(@Nullable Output<LogsPanelArgs> logsPanel) {
             this.logsPanel = logsPanel;
             return this;
         }
 
         public Builder logsPanel(@Nullable LogsPanelArgs logsPanel) {
-            this.logsPanel = Input.ofNullable(logsPanel);
+            this.logsPanel = Output.ofNullable(logsPanel);
             return this;
         }
 
-        public Builder scorecard(@Nullable Input<ScorecardArgs> scorecard) {
+        public Builder scorecard(@Nullable Output<ScorecardArgs> scorecard) {
             this.scorecard = scorecard;
             return this;
         }
 
         public Builder scorecard(@Nullable ScorecardArgs scorecard) {
-            this.scorecard = Input.ofNullable(scorecard);
+            this.scorecard = Output.ofNullable(scorecard);
             return this;
         }
 
-        public Builder text(@Nullable Input<TextArgs> text) {
+        public Builder text(@Nullable Output<TextArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable TextArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
 
-        public Builder timeSeriesTable(@Nullable Input<TimeSeriesTableArgs> timeSeriesTable) {
+        public Builder timeSeriesTable(@Nullable Output<TimeSeriesTableArgs> timeSeriesTable) {
             this.timeSeriesTable = timeSeriesTable;
             return this;
         }
 
         public Builder timeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
-            this.timeSeriesTable = Input.ofNullable(timeSeriesTable);
+            this.timeSeriesTable = Output.ofNullable(timeSeriesTable);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
 
-        public Builder xyChart(@Nullable Input<XyChartArgs> xyChart) {
+        public Builder xyChart(@Nullable Output<XyChartArgs> xyChart) {
             this.xyChart = xyChart;
             return this;
         }
 
         public Builder xyChart(@Nullable XyChartArgs xyChart) {
-            this.xyChart = Input.ofNullable(xyChart);
+            this.xyChart = Output.ofNullable(xyChart);
             return this;
         }
         public WidgetArgs build() {

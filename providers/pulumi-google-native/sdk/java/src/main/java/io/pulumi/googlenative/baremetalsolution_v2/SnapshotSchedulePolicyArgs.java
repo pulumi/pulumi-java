@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.baremetalsolution_v2.inputs.ScheduleArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -44,24 +44,24 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -69,27 +69,27 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schedules")
-      private final @Nullable Input<List<ScheduleArgs>> schedules;
+      private final @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Input<List<ScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Input.empty() : this.schedules;
+    public Output<List<ScheduleArgs>> getSchedules() {
+        return this.schedules == null ? Output.empty() : this.schedules;
     }
 
     @InputImport(name="snapshotSchedulePolicyId", required=true)
-      private final Input<String> snapshotSchedulePolicyId;
+      private final Output<String> snapshotSchedulePolicyId;
 
-    public Input<String> getSnapshotSchedulePolicyId() {
+    public Output<String> getSnapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
     }
 
     public SnapshotSchedulePolicyArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> id,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<List<ScheduleArgs>> schedules,
-        Input<String> snapshotSchedulePolicyId) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> id,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<List<ScheduleArgs>> schedules,
+        Output<String> snapshotSchedulePolicyId) {
         this.description = description;
         this.id = id;
         this.labels = labels;
@@ -100,13 +100,13 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     }
 
     private SnapshotSchedulePolicyArgs() {
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.schedules = Input.empty();
-        this.snapshotSchedulePolicyId = Input.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.schedules = Output.empty();
+        this.snapshotSchedulePolicyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,13 +118,13 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<ScheduleArgs>> schedules;
-        private Input<String> snapshotSchedulePolicyId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<ScheduleArgs>> schedules;
+        private Output<String> snapshotSchedulePolicyId;
 
         public Builder() {
     	      // Empty
@@ -141,73 +141,73 @@ public final class SnapshotSchedulePolicyArgs extends io.pulumi.resources.Resour
     	      this.snapshotSchedulePolicyId = defaults.snapshotSchedulePolicyId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Input.ofNullable(schedules);
+            this.schedules = Output.ofNullable(schedules);
             return this;
         }
 
-        public Builder snapshotSchedulePolicyId(Input<String> snapshotSchedulePolicyId) {
+        public Builder snapshotSchedulePolicyId(Output<String> snapshotSchedulePolicyId) {
             this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId);
             return this;
         }
 
         public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
-            this.snapshotSchedulePolicyId = Input.of(Objects.requireNonNull(snapshotSchedulePolicyId));
+            this.snapshotSchedulePolicyId = Output.of(Objects.requireNonNull(snapshotSchedulePolicyId));
             return this;
         }
         public SnapshotSchedulePolicyArgs build() {

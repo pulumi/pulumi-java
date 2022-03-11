@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResourceArgs;
@@ -27,10 +27,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exec")
-      private final @Nullable Input<OSPolicyResourceExecResourceArgs> exec;
+      private final @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
 
-    public Input<OSPolicyResourceExecResourceArgs> getExec() {
-        return this.exec == null ? Input.empty() : this.exec;
+    public Output<OSPolicyResourceExecResourceArgs> getExec() {
+        return this.exec == null ? Output.empty() : this.exec;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OSPolicyResourceFileResourceArgs> file;
+      private final @Nullable Output<OSPolicyResourceFileResourceArgs> file;
 
-    public Input<OSPolicyResourceFileResourceArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OSPolicyResourceFileResourceArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -60,10 +60,10 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pkg")
-      private final @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg;
+      private final @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
 
-    public Input<OSPolicyResourcePackageResourceArgs> getPkg() {
-        return this.pkg == null ? Input.empty() : this.pkg;
+    public Output<OSPolicyResourcePackageResourceArgs> getPkg() {
+        return this.pkg == null ? Output.empty() : this.pkg;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repository")
-      private final @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository;
+      private final @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
-    public Input<OSPolicyResourceRepositoryResourceArgs> getRepository() {
-        return this.repository == null ? Input.empty() : this.repository;
+    public Output<OSPolicyResourceRepositoryResourceArgs> getRepository() {
+        return this.repository == null ? Output.empty() : this.repository;
     }
 
     public OSPolicyResourceArgs(
-        @Nullable Input<OSPolicyResourceExecResourceArgs> exec,
-        @Nullable Input<OSPolicyResourceFileResourceArgs> file,
-        Input<String> id,
-        @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg,
-        @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository) {
+        @Nullable Output<OSPolicyResourceExecResourceArgs> exec,
+        @Nullable Output<OSPolicyResourceFileResourceArgs> file,
+        Output<String> id,
+        @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg,
+        @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository) {
         this.exec = exec;
         this.file = file;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
@@ -91,11 +91,11 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OSPolicyResourceArgs() {
-        this.exec = Input.empty();
-        this.file = Input.empty();
-        this.id = Input.empty();
-        this.pkg = Input.empty();
-        this.repository = Input.empty();
+        this.exec = Output.empty();
+        this.file = Output.empty();
+        this.id = Output.empty();
+        this.pkg = Output.empty();
+        this.repository = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<OSPolicyResourceExecResourceArgs> exec;
-        private @Nullable Input<OSPolicyResourceFileResourceArgs> file;
-        private Input<String> id;
-        private @Nullable Input<OSPolicyResourcePackageResourceArgs> pkg;
-        private @Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository;
+        private @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
+        private @Nullable Output<OSPolicyResourceFileResourceArgs> file;
+        private Output<String> id;
+        private @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
+        private @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.repository = defaults.repository;
         }
 
-        public Builder exec(@Nullable Input<OSPolicyResourceExecResourceArgs> exec) {
+        public Builder exec(@Nullable Output<OSPolicyResourceExecResourceArgs> exec) {
             this.exec = exec;
             return this;
         }
 
         public Builder exec(@Nullable OSPolicyResourceExecResourceArgs exec) {
-            this.exec = Input.ofNullable(exec);
+            this.exec = Output.ofNullable(exec);
             return this;
         }
 
-        public Builder file(@Nullable Input<OSPolicyResourceFileResourceArgs> file) {
+        public Builder file(@Nullable Output<OSPolicyResourceFileResourceArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OSPolicyResourceFileResourceArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder pkg(@Nullable Input<OSPolicyResourcePackageResourceArgs> pkg) {
+        public Builder pkg(@Nullable Output<OSPolicyResourcePackageResourceArgs> pkg) {
             this.pkg = pkg;
             return this;
         }
 
         public Builder pkg(@Nullable OSPolicyResourcePackageResourceArgs pkg) {
-            this.pkg = Input.ofNullable(pkg);
+            this.pkg = Output.ofNullable(pkg);
             return this;
         }
 
-        public Builder repository(@Nullable Input<OSPolicyResourceRepositoryResourceArgs> repository) {
+        public Builder repository(@Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository) {
             this.repository = repository;
             return this;
         }
 
         public Builder repository(@Nullable OSPolicyResourceRepositoryResourceArgs repository) {
-            this.repository = Input.ofNullable(repository);
+            this.repository = Output.ofNullable(repository);
             return this;
         }
         public OSPolicyResourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canIpForward")
-      private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Output<Boolean> canIpForward;
 
-    public Input<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Input.empty() : this.canIpForward;
+    public Output<Boolean> getCanIpForward() {
+        return this.canIpForward == null ? Output.empty() : this.canIpForward;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableExternalIps")
-      private final @Nullable Input<Boolean> enableExternalIps;
+      private final @Nullable Output<Boolean> enableExternalIps;
 
-    public Input<Boolean> getEnableExternalIps() {
-        return this.enableExternalIps == null ? Input.empty() : this.enableExternalIps;
+    public Output<Boolean> getEnableExternalIps() {
+        return this.enableExternalIps == null ? Output.empty() : this.enableExternalIps;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     public NetworkConfigArgs(
-        @Nullable Input<Boolean> canIpForward,
-        @Nullable Input<Boolean> enableExternalIps,
-        @Nullable Input<String> network,
-        @Nullable Input<String> subnetwork) {
+        @Nullable Output<Boolean> canIpForward,
+        @Nullable Output<Boolean> enableExternalIps,
+        @Nullable Output<String> network,
+        @Nullable Output<String> subnetwork) {
         this.canIpForward = canIpForward;
         this.enableExternalIps = enableExternalIps;
         this.network = network;
@@ -75,10 +75,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkConfigArgs() {
-        this.canIpForward = Input.empty();
-        this.enableExternalIps = Input.empty();
-        this.network = Input.empty();
-        this.subnetwork = Input.empty();
+        this.canIpForward = Output.empty();
+        this.enableExternalIps = Output.empty();
+        this.network = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> canIpForward;
-        private @Nullable Input<Boolean> enableExternalIps;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<Boolean> canIpForward;
+        private @Nullable Output<Boolean> enableExternalIps;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Input.ofNullable(canIpForward);
+            this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder enableExternalIps(@Nullable Input<Boolean> enableExternalIps) {
+        public Builder enableExternalIps(@Nullable Output<Boolean> enableExternalIps) {
             this.enableExternalIps = enableExternalIps;
             return this;
         }
 
         public Builder enableExternalIps(@Nullable Boolean enableExternalIps) {
-            this.enableExternalIps = Input.ofNullable(enableExternalIps);
+            this.enableExternalIps = Output.ofNullable(enableExternalIps);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public NetworkConfigArgs build() {

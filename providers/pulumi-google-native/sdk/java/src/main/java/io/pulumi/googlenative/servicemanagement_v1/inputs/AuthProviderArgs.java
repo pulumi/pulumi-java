@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audiences")
-      private final @Nullable Input<String> audiences;
+      private final @Nullable Output<String> audiences;
 
-    public Input<String> getAudiences() {
-        return this.audiences == null ? Input.empty() : this.audiences;
+    public Output<String> getAudiences() {
+        return this.audiences == null ? Output.empty() : this.audiences;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationUrl")
-      private final @Nullable Input<String> authorizationUrl;
+      private final @Nullable Output<String> authorizationUrl;
 
-    public Input<String> getAuthorizationUrl() {
-        return this.authorizationUrl == null ? Input.empty() : this.authorizationUrl;
+    public Output<String> getAuthorizationUrl() {
+        return this.authorizationUrl == null ? Output.empty() : this.authorizationUrl;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwksUri")
-      private final @Nullable Input<String> jwksUri;
+      private final @Nullable Output<String> jwksUri;
 
-    public Input<String> getJwksUri() {
-        return this.jwksUri == null ? Input.empty() : this.jwksUri;
+    public Output<String> getJwksUri() {
+        return this.jwksUri == null ? Output.empty() : this.jwksUri;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwtLocations")
-      private final @Nullable Input<List<JwtLocationArgs>> jwtLocations;
+      private final @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
-    public Input<List<JwtLocationArgs>> getJwtLocations() {
-        return this.jwtLocations == null ? Input.empty() : this.jwtLocations;
+    public Output<List<JwtLocationArgs>> getJwtLocations() {
+        return this.jwtLocations == null ? Output.empty() : this.jwtLocations;
     }
 
     public AuthProviderArgs(
-        @Nullable Input<String> audiences,
-        @Nullable Input<String> authorizationUrl,
-        @Nullable Input<String> id,
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> jwksUri,
-        @Nullable Input<List<JwtLocationArgs>> jwtLocations) {
+        @Nullable Output<String> audiences,
+        @Nullable Output<String> authorizationUrl,
+        @Nullable Output<String> id,
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> jwksUri,
+        @Nullable Output<List<JwtLocationArgs>> jwtLocations) {
         this.audiences = audiences;
         this.authorizationUrl = authorizationUrl;
         this.id = id;
@@ -102,12 +102,12 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthProviderArgs() {
-        this.audiences = Input.empty();
-        this.authorizationUrl = Input.empty();
-        this.id = Input.empty();
-        this.issuer = Input.empty();
-        this.jwksUri = Input.empty();
-        this.jwtLocations = Input.empty();
+        this.audiences = Output.empty();
+        this.authorizationUrl = Output.empty();
+        this.id = Output.empty();
+        this.issuer = Output.empty();
+        this.jwksUri = Output.empty();
+        this.jwtLocations = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audiences;
-        private @Nullable Input<String> authorizationUrl;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> jwksUri;
-        private @Nullable Input<List<JwtLocationArgs>> jwtLocations;
+        private @Nullable Output<String> audiences;
+        private @Nullable Output<String> authorizationUrl;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> jwksUri;
+        private @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.jwtLocations = defaults.jwtLocations;
         }
 
-        public Builder audiences(@Nullable Input<String> audiences) {
+        public Builder audiences(@Nullable Output<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
         public Builder audiences(@Nullable String audiences) {
-            this.audiences = Input.ofNullable(audiences);
+            this.audiences = Output.ofNullable(audiences);
             return this;
         }
 
-        public Builder authorizationUrl(@Nullable Input<String> authorizationUrl) {
+        public Builder authorizationUrl(@Nullable Output<String> authorizationUrl) {
             this.authorizationUrl = authorizationUrl;
             return this;
         }
 
         public Builder authorizationUrl(@Nullable String authorizationUrl) {
-            this.authorizationUrl = Input.ofNullable(authorizationUrl);
+            this.authorizationUrl = Output.ofNullable(authorizationUrl);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder jwksUri(@Nullable Input<String> jwksUri) {
+        public Builder jwksUri(@Nullable Output<String> jwksUri) {
             this.jwksUri = jwksUri;
             return this;
         }
 
         public Builder jwksUri(@Nullable String jwksUri) {
-            this.jwksUri = Input.ofNullable(jwksUri);
+            this.jwksUri = Output.ofNullable(jwksUri);
             return this;
         }
 
-        public Builder jwtLocations(@Nullable Input<List<JwtLocationArgs>> jwtLocations) {
+        public Builder jwtLocations(@Nullable Output<List<JwtLocationArgs>> jwtLocations) {
             this.jwtLocations = jwtLocations;
             return this;
         }
 
         public Builder jwtLocations(@Nullable List<JwtLocationArgs> jwtLocations) {
-            this.jwtLocations = Input.ofNullable(jwtLocations);
+            this.jwtLocations = Output.ofNullable(jwtLocations);
             return this;
         }
         public AuthProviderArgs build() {

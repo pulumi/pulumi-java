@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="siteToSiteDataTransfer")
-      private final @Nullable Input<Boolean> siteToSiteDataTransfer;
+      private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Input<Boolean> getSiteToSiteDataTransfer() {
-        return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
+    public Output<Boolean> getSiteToSiteDataTransfer() {
+        return this.siteToSiteDataTransfer == null ? Output.empty() : this.siteToSiteDataTransfer;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="uris")
-      private final @Nullable Input<List<String>> uris;
+      private final @Nullable Output<List<String>> uris;
 
-    public Input<List<String>> getUris() {
-        return this.uris == null ? Input.empty() : this.uris;
+    public Output<List<String>> getUris() {
+        return this.uris == null ? Output.empty() : this.uris;
     }
 
     public LinkedInterconnectAttachmentsArgs(
-        @Nullable Input<Boolean> siteToSiteDataTransfer,
-        @Nullable Input<List<String>> uris) {
+        @Nullable Output<Boolean> siteToSiteDataTransfer,
+        @Nullable Output<List<String>> uris) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         this.uris = uris;
     }
 
     private LinkedInterconnectAttachmentsArgs() {
-        this.siteToSiteDataTransfer = Input.empty();
-        this.uris = Input.empty();
+        this.siteToSiteDataTransfer = Output.empty();
+        this.uris = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> siteToSiteDataTransfer;
-        private @Nullable Input<List<String>> uris;
+        private @Nullable Output<Boolean> siteToSiteDataTransfer;
+        private @Nullable Output<List<String>> uris;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class LinkedInterconnectAttachmentsArgs extends io.pulumi.resources
     	      this.uris = defaults.uris;
         }
 
-        public Builder siteToSiteDataTransfer(@Nullable Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
 
         public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Input.ofNullable(siteToSiteDataTransfer);
+            this.siteToSiteDataTransfer = Output.ofNullable(siteToSiteDataTransfer);
             return this;
         }
 
-        public Builder uris(@Nullable Input<List<String>> uris) {
+        public Builder uris(@Nullable Output<List<String>> uris) {
             this.uris = uris;
             return this;
         }
 
         public Builder uris(@Nullable List<String> uris) {
-            this.uris = Input.ofNullable(uris);
+            this.uris = Output.ofNullable(uris);
             return this;
         }
         public LinkedInterconnectAttachmentsArgs build() {

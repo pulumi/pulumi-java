@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numFacetBuckets")
-      private final @Nullable Input<Integer> numFacetBuckets;
+      private final @Nullable Output<Integer> numFacetBuckets;
 
-    public Input<Integer> getNumFacetBuckets() {
-        return this.numFacetBuckets == null ? Input.empty() : this.numFacetBuckets;
+    public Output<Integer> getNumFacetBuckets() {
+        return this.numFacetBuckets == null ? Output.empty() : this.numFacetBuckets;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-      private final @Nullable Input<String> objectType;
+      private final @Nullable Output<String> objectType;
 
-    public Input<String> getObjectType() {
-        return this.objectType == null ? Input.empty() : this.objectType;
+    public Output<String> getObjectType() {
+        return this.objectType == null ? Output.empty() : this.objectType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operatorName")
-      private final @Nullable Input<String> operatorName;
+      private final @Nullable Output<String> operatorName;
 
-    public Input<String> getOperatorName() {
-        return this.operatorName == null ? Input.empty() : this.operatorName;
+    public Output<String> getOperatorName() {
+        return this.operatorName == null ? Output.empty() : this.operatorName;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceName")
-      private final @Nullable Input<String> sourceName;
+      private final @Nullable Output<String> sourceName;
 
-    public Input<String> getSourceName() {
-        return this.sourceName == null ? Input.empty() : this.sourceName;
+    public Output<String> getSourceName() {
+        return this.sourceName == null ? Output.empty() : this.sourceName;
     }
 
     public FacetOptionsArgs(
-        @Nullable Input<Integer> numFacetBuckets,
-        @Nullable Input<String> objectType,
-        @Nullable Input<String> operatorName,
-        @Nullable Input<String> sourceName) {
+        @Nullable Output<Integer> numFacetBuckets,
+        @Nullable Output<String> objectType,
+        @Nullable Output<String> operatorName,
+        @Nullable Output<String> sourceName) {
         this.numFacetBuckets = numFacetBuckets;
         this.objectType = objectType;
         this.operatorName = operatorName;
@@ -75,10 +75,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FacetOptionsArgs() {
-        this.numFacetBuckets = Input.empty();
-        this.objectType = Input.empty();
-        this.operatorName = Input.empty();
-        this.sourceName = Input.empty();
+        this.numFacetBuckets = Output.empty();
+        this.objectType = Output.empty();
+        this.operatorName = Output.empty();
+        this.sourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> numFacetBuckets;
-        private @Nullable Input<String> objectType;
-        private @Nullable Input<String> operatorName;
-        private @Nullable Input<String> sourceName;
+        private @Nullable Output<Integer> numFacetBuckets;
+        private @Nullable Output<String> objectType;
+        private @Nullable Output<String> operatorName;
+        private @Nullable Output<String> sourceName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceName = defaults.sourceName;
         }
 
-        public Builder numFacetBuckets(@Nullable Input<Integer> numFacetBuckets) {
+        public Builder numFacetBuckets(@Nullable Output<Integer> numFacetBuckets) {
             this.numFacetBuckets = numFacetBuckets;
             return this;
         }
 
         public Builder numFacetBuckets(@Nullable Integer numFacetBuckets) {
-            this.numFacetBuckets = Input.ofNullable(numFacetBuckets);
+            this.numFacetBuckets = Output.ofNullable(numFacetBuckets);
             return this;
         }
 
-        public Builder objectType(@Nullable Input<String> objectType) {
+        public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
 
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Input.ofNullable(objectType);
+            this.objectType = Output.ofNullable(objectType);
             return this;
         }
 
-        public Builder operatorName(@Nullable Input<String> operatorName) {
+        public Builder operatorName(@Nullable Output<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
 
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Input.ofNullable(operatorName);
+            this.operatorName = Output.ofNullable(operatorName);
             return this;
         }
 
-        public Builder sourceName(@Nullable Input<String> sourceName) {
+        public Builder sourceName(@Nullable Output<String> sourceName) {
             this.sourceName = sourceName;
             return this;
         }
 
         public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Input.ofNullable(sourceName);
+            this.sourceName = Output.ofNullable(sourceName);
             return this;
         }
         public FacetOptionsArgs build() {

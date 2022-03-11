@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     public CaseClassificationArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> id) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> id) {
         this.displayName = displayName;
         this.id = id;
     }
 
     private CaseClassificationArgs() {
-        this.displayName = Input.empty();
-        this.id = Input.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> id;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
     	      this.id = defaults.id;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
         public CaseClassificationArgs build() {

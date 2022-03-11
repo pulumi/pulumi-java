@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.oslogin_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTimeUsec")
-      private final @Nullable Input<String> expirationTimeUsec;
+      private final @Nullable Output<String> expirationTimeUsec;
 
-    public Input<String> getExpirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
+    public Output<String> getExpirationTimeUsec() {
+        return this.expirationTimeUsec == null ? Output.empty() : this.expirationTimeUsec;
     }
 
     /**
@@ -30,32 +30,32 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     @InputImport(name="userId", required=true)
-      private final Input<String> userId;
+      private final Output<String> userId;
 
-    public Input<String> getUserId() {
+    public Output<String> getUserId() {
         return this.userId;
     }
 
     public SshPublicKeyArgs(
-        @Nullable Input<String> expirationTimeUsec,
-        @Nullable Input<String> key,
-        Input<String> userId) {
+        @Nullable Output<String> expirationTimeUsec,
+        @Nullable Output<String> key,
+        Output<String> userId) {
         this.expirationTimeUsec = expirationTimeUsec;
         this.key = key;
         this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
     }
 
     private SshPublicKeyArgs() {
-        this.expirationTimeUsec = Input.empty();
-        this.key = Input.empty();
-        this.userId = Input.empty();
+        this.expirationTimeUsec = Output.empty();
+        this.key = Output.empty();
+        this.userId = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationTimeUsec;
-        private @Nullable Input<String> key;
-        private Input<String> userId;
+        private @Nullable Output<String> expirationTimeUsec;
+        private @Nullable Output<String> key;
+        private Output<String> userId;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder expirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
         public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Input.ofNullable(expirationTimeUsec);
+            this.expirationTimeUsec = Output.ofNullable(expirationTimeUsec);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder userId(Input<String> userId) {
+        public Builder userId(Output<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
         public Builder userId(String userId) {
-            this.userId = Input.of(Objects.requireNonNull(userId));
+            this.userId = Output.of(Objects.requireNonNull(userId));
             return this;
         }
         public SshPublicKeyArgs build() {

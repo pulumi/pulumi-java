@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="classification")
-      private final @Nullable Input<String> classification;
+      private final @Nullable Output<String> classification;
 
-    public Input<String> getClassification() {
-        return this.classification == null ? Input.empty() : this.classification;
+    public Output<String> getClassification() {
+        return this.classification == null ? Output.empty() : this.classification;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cpeUri")
-      private final @Nullable Input<String> cpeUri;
+      private final @Nullable Output<String> cpeUri;
 
-    public Input<String> getCpeUri() {
-        return this.cpeUri == null ? Input.empty() : this.cpeUri;
+    public Output<String> getCpeUri() {
+        return this.cpeUri == null ? Output.empty() : this.cpeUri;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cve")
-      private final @Nullable Input<List<String>> cve;
+      private final @Nullable Output<List<String>> cve;
 
-    public Input<List<String>> getCve() {
-        return this.cve == null ? Input.empty() : this.cve;
+    public Output<List<String>> getCve() {
+        return this.cve == null ? Output.empty() : this.cve;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="severity")
-      private final @Nullable Input<String> severity;
+      private final @Nullable Output<String> severity;
 
-    public Input<String> getSeverity() {
-        return this.severity == null ? Input.empty() : this.severity;
+    public Output<String> getSeverity() {
+        return this.severity == null ? Output.empty() : this.severity;
     }
 
     public UpgradeDistributionArgs(
-        @Nullable Input<String> classification,
-        @Nullable Input<String> cpeUri,
-        @Nullable Input<List<String>> cve,
-        @Nullable Input<String> severity) {
+        @Nullable Output<String> classification,
+        @Nullable Output<String> cpeUri,
+        @Nullable Output<List<String>> cve,
+        @Nullable Output<String> severity) {
         this.classification = classification;
         this.cpeUri = cpeUri;
         this.cve = cve;
@@ -75,10 +75,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     }
 
     private UpgradeDistributionArgs() {
-        this.classification = Input.empty();
-        this.cpeUri = Input.empty();
-        this.cve = Input.empty();
-        this.severity = Input.empty();
+        this.classification = Output.empty();
+        this.cpeUri = Output.empty();
+        this.cve = Output.empty();
+        this.severity = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> classification;
-        private @Nullable Input<String> cpeUri;
-        private @Nullable Input<List<String>> cve;
-        private @Nullable Input<String> severity;
+        private @Nullable Output<String> classification;
+        private @Nullable Output<String> cpeUri;
+        private @Nullable Output<List<String>> cve;
+        private @Nullable Output<String> severity;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     	      this.severity = defaults.severity;
         }
 
-        public Builder classification(@Nullable Input<String> classification) {
+        public Builder classification(@Nullable Output<String> classification) {
             this.classification = classification;
             return this;
         }
 
         public Builder classification(@Nullable String classification) {
-            this.classification = Input.ofNullable(classification);
+            this.classification = Output.ofNullable(classification);
             return this;
         }
 
-        public Builder cpeUri(@Nullable Input<String> cpeUri) {
+        public Builder cpeUri(@Nullable Output<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
 
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Input.ofNullable(cpeUri);
+            this.cpeUri = Output.ofNullable(cpeUri);
             return this;
         }
 
-        public Builder cve(@Nullable Input<List<String>> cve) {
+        public Builder cve(@Nullable Output<List<String>> cve) {
             this.cve = cve;
             return this;
         }
 
         public Builder cve(@Nullable List<String> cve) {
-            this.cve = Input.ofNullable(cve);
+            this.cve = Output.ofNullable(cve);
             return this;
         }
 
-        public Builder severity(@Nullable Input<String> severity) {
+        public Builder severity(@Nullable Output<String> severity) {
             this.severity = severity;
             return this;
         }
 
         public Builder severity(@Nullable String severity) {
-            this.severity = Input.ofNullable(severity);
+            this.severity = Output.ofNullable(severity);
             return this;
         }
         public UpgradeDistributionArgs build() {

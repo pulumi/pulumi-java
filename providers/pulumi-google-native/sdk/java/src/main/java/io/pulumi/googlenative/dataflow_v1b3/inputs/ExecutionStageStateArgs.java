@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="currentStateTime")
-      private final @Nullable Input<String> currentStateTime;
+      private final @Nullable Output<String> currentStateTime;
 
-    public Input<String> getCurrentStateTime() {
-        return this.currentStateTime == null ? Input.empty() : this.currentStateTime;
+    public Output<String> getCurrentStateTime() {
+        return this.currentStateTime == null ? Output.empty() : this.currentStateTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionStageName")
-      private final @Nullable Input<String> executionStageName;
+      private final @Nullable Output<String> executionStageName;
 
-    public Input<String> getExecutionStageName() {
-        return this.executionStageName == null ? Input.empty() : this.executionStageName;
+    public Output<String> getExecutionStageName() {
+        return this.executionStageName == null ? Output.empty() : this.executionStageName;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="executionStageState")
-      private final @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState;
+      private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
-    public Input<ExecutionStageStateExecutionStageState> getExecutionStageState() {
-        return this.executionStageState == null ? Input.empty() : this.executionStageState;
+    public Output<ExecutionStageStateExecutionStageState> getExecutionStageState() {
+        return this.executionStageState == null ? Output.empty() : this.executionStageState;
     }
 
     public ExecutionStageStateArgs(
-        @Nullable Input<String> currentStateTime,
-        @Nullable Input<String> executionStageName,
-        @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState) {
+        @Nullable Output<String> currentStateTime,
+        @Nullable Output<String> executionStageName,
+        @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
         this.currentStateTime = currentStateTime;
         this.executionStageName = executionStageName;
         this.executionStageState = executionStageState;
     }
 
     private ExecutionStageStateArgs() {
-        this.currentStateTime = Input.empty();
-        this.executionStageName = Input.empty();
-        this.executionStageState = Input.empty();
+        this.currentStateTime = Output.empty();
+        this.executionStageName = Output.empty();
+        this.executionStageState = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> currentStateTime;
-        private @Nullable Input<String> executionStageName;
-        private @Nullable Input<ExecutionStageStateExecutionStageState> executionStageState;
+        private @Nullable Output<String> currentStateTime;
+        private @Nullable Output<String> executionStageName;
+        private @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     	      this.executionStageState = defaults.executionStageState;
         }
 
-        public Builder currentStateTime(@Nullable Input<String> currentStateTime) {
+        public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
             this.currentStateTime = currentStateTime;
             return this;
         }
 
         public Builder currentStateTime(@Nullable String currentStateTime) {
-            this.currentStateTime = Input.ofNullable(currentStateTime);
+            this.currentStateTime = Output.ofNullable(currentStateTime);
             return this;
         }
 
-        public Builder executionStageName(@Nullable Input<String> executionStageName) {
+        public Builder executionStageName(@Nullable Output<String> executionStageName) {
             this.executionStageName = executionStageName;
             return this;
         }
 
         public Builder executionStageName(@Nullable String executionStageName) {
-            this.executionStageName = Input.ofNullable(executionStageName);
+            this.executionStageName = Output.ofNullable(executionStageName);
             return this;
         }
 
-        public Builder executionStageState(@Nullable Input<ExecutionStageStateExecutionStageState> executionStageState) {
+        public Builder executionStageState(@Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
             this.executionStageState = executionStageState;
             return this;
         }
 
         public Builder executionStageState(@Nullable ExecutionStageStateExecutionStageState executionStageState) {
-            this.executionStageState = Input.ofNullable(executionStageState);
+            this.executionStageState = Output.ofNullable(executionStageState);
             return this;
         }
         public ExecutionStageStateArgs build() {

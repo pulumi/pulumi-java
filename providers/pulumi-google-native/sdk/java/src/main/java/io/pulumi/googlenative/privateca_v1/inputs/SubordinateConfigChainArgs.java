@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="pemCertificates", required=true)
-      private final Input<List<String>> pemCertificates;
+      private final Output<List<String>> pemCertificates;
 
-    public Input<List<String>> getPemCertificates() {
+    public Output<List<String>> getPemCertificates() {
         return this.pemCertificates;
     }
 
-    public SubordinateConfigChainArgs(Input<List<String>> pemCertificates) {
+    public SubordinateConfigChainArgs(Output<List<String>> pemCertificates) {
         this.pemCertificates = Objects.requireNonNull(pemCertificates, "expected parameter 'pemCertificates' to be non-null");
     }
 
     private SubordinateConfigChainArgs() {
-        this.pemCertificates = Input.empty();
+        this.pemCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<List<String>> pemCertificates;
+        private Output<List<String>> pemCertificates;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
     	      this.pemCertificates = defaults.pemCertificates;
         }
 
-        public Builder pemCertificates(Input<List<String>> pemCertificates) {
+        public Builder pemCertificates(Output<List<String>> pemCertificates) {
             this.pemCertificates = Objects.requireNonNull(pemCertificates);
             return this;
         }
 
         public Builder pemCertificates(List<String> pemCertificates) {
-            this.pemCertificates = Input.of(Objects.requireNonNull(pemCertificates));
+            this.pemCertificates = Output.of(Objects.requireNonNull(pemCertificates));
             return this;
         }
         public SubordinateConfigChainArgs build() {

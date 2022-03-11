@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+      private final @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
-    public Input<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    public GooglePrivacyDlpV2ConditionsArgs(@Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
+    public GooglePrivacyDlpV2ConditionsArgs(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
         this.conditions = conditions;
     }
 
     private GooglePrivacyDlpV2ConditionsArgs() {
-        this.conditions = Input.empty();
+        this.conditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+        private @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder conditions(@Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<GooglePrivacyDlpV2ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
         public GooglePrivacyDlpV2ConditionsArgs build() {

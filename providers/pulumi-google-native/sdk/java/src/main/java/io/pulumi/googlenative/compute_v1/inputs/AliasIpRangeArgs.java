@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetworkRangeName")
-      private final @Nullable Input<String> subnetworkRangeName;
+      private final @Nullable Output<String> subnetworkRangeName;
 
-    public Input<String> getSubnetworkRangeName() {
-        return this.subnetworkRangeName == null ? Input.empty() : this.subnetworkRangeName;
+    public Output<String> getSubnetworkRangeName() {
+        return this.subnetworkRangeName == null ? Output.empty() : this.subnetworkRangeName;
     }
 
     public AliasIpRangeArgs(
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<String> subnetworkRangeName) {
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<String> subnetworkRangeName) {
         this.ipCidrRange = ipCidrRange;
         this.subnetworkRangeName = subnetworkRangeName;
     }
 
     private AliasIpRangeArgs() {
-        this.ipCidrRange = Input.empty();
-        this.subnetworkRangeName = Input.empty();
+        this.ipCidrRange = Output.empty();
+        this.subnetworkRangeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<String> subnetworkRangeName;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<String> subnetworkRangeName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AliasIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder subnetworkRangeName(@Nullable Input<String> subnetworkRangeName) {
+        public Builder subnetworkRangeName(@Nullable Output<String> subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
 
         public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
-            this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
+            this.subnetworkRangeName = Output.ofNullable(subnetworkRangeName);
             return this;
         }
         public AliasIpRangeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCredentialFormat;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<PublicKeyCredentialFormat> format;
+      private final @Nullable Output<PublicKeyCredentialFormat> format;
 
-    public Input<PublicKeyCredentialFormat> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<PublicKeyCredentialFormat> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     public PublicKeyCredentialArgs(
-        @Nullable Input<PublicKeyCredentialFormat> format,
-        @Nullable Input<String> key) {
+        @Nullable Output<PublicKeyCredentialFormat> format,
+        @Nullable Output<String> key) {
         this.format = format;
         this.key = key;
     }
 
     private PublicKeyCredentialArgs() {
-        this.format = Input.empty();
-        this.key = Input.empty();
+        this.format = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<PublicKeyCredentialFormat> format;
-        private @Nullable Input<String> key;
+        private @Nullable Output<PublicKeyCredentialFormat> format;
+        private @Nullable Output<String> key;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     	      this.key = defaults.key;
         }
 
-        public Builder format(@Nullable Input<PublicKeyCredentialFormat> format) {
+        public Builder format(@Nullable Output<PublicKeyCredentialFormat> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable PublicKeyCredentialFormat format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
         public PublicKeyCredentialArgs build() {

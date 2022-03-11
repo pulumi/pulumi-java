@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourceExecResourceExecInterpreter;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
@@ -26,10 +26,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="file")
-      private final @Nullable Input<OSPolicyResourceFileArgs> file;
+      private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Input<OSPolicyResourceFileArgs> getFile() {
-        return this.file == null ? Input.empty() : this.file;
+    public Output<OSPolicyResourceFileArgs> getFile() {
+        return this.file == null ? Output.empty() : this.file;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="interpreter", required=true)
-      private final Input<OSPolicyResourceExecResourceExecInterpreter> interpreter;
+      private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
-    public Input<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
+    public Output<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
         return this.interpreter;
     }
 
@@ -59,10 +59,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="outputFilePath")
-      private final @Nullable Input<String> outputFilePath;
+      private final @Nullable Output<String> outputFilePath;
 
-    public Input<String> getOutputFilePath() {
-        return this.outputFilePath == null ? Input.empty() : this.outputFilePath;
+    public Output<String> getOutputFilePath() {
+        return this.outputFilePath == null ? Output.empty() : this.outputFilePath;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     public OSPolicyResourceExecResourceExecArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<OSPolicyResourceFileArgs> file,
-        Input<OSPolicyResourceExecResourceExecInterpreter> interpreter,
-        @Nullable Input<String> outputFilePath,
-        @Nullable Input<String> script) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<OSPolicyResourceFileArgs> file,
+        Output<OSPolicyResourceExecResourceExecInterpreter> interpreter,
+        @Nullable Output<String> outputFilePath,
+        @Nullable Output<String> script) {
         this.args = args;
         this.file = file;
         this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
@@ -90,11 +90,11 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     }
 
     private OSPolicyResourceExecResourceExecArgs() {
-        this.args = Input.empty();
-        this.file = Input.empty();
-        this.interpreter = Input.empty();
-        this.outputFilePath = Input.empty();
-        this.script = Input.empty();
+        this.args = Output.empty();
+        this.file = Output.empty();
+        this.interpreter = Output.empty();
+        this.outputFilePath = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<OSPolicyResourceFileArgs> file;
-        private Input<OSPolicyResourceExecResourceExecInterpreter> interpreter;
-        private @Nullable Input<String> outputFilePath;
-        private @Nullable Input<String> script;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<OSPolicyResourceFileArgs> file;
+        private Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
+        private @Nullable Output<String> outputFilePath;
+        private @Nullable Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     	      this.script = defaults.script;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder file(@Nullable Input<OSPolicyResourceFileArgs> file) {
+        public Builder file(@Nullable Output<OSPolicyResourceFileArgs> file) {
             this.file = file;
             return this;
         }
 
         public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Input.ofNullable(file);
+            this.file = Output.ofNullable(file);
             return this;
         }
 
-        public Builder interpreter(Input<OSPolicyResourceExecResourceExecInterpreter> interpreter) {
+        public Builder interpreter(Output<OSPolicyResourceExecResourceExecInterpreter> interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
         public Builder interpreter(OSPolicyResourceExecResourceExecInterpreter interpreter) {
-            this.interpreter = Input.of(Objects.requireNonNull(interpreter));
+            this.interpreter = Output.of(Objects.requireNonNull(interpreter));
             return this;
         }
 
-        public Builder outputFilePath(@Nullable Input<String> outputFilePath) {
+        public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
 
         public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Input.ofNullable(outputFilePath);
+            this.outputFilePath = Output.ofNullable(outputFilePath);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
         public OSPolicyResourceExecResourceExecArgs build() {

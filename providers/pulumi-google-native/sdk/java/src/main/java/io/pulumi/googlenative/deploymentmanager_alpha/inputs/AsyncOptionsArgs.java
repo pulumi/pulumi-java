@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.PollingOptionsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodMatch")
-      private final @Nullable Input<String> methodMatch;
+      private final @Nullable Output<String> methodMatch;
 
-    public Input<String> getMethodMatch() {
-        return this.methodMatch == null ? Input.empty() : this.methodMatch;
+    public Output<String> getMethodMatch() {
+        return this.methodMatch == null ? Output.empty() : this.methodMatch;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pollingOptions")
-      private final @Nullable Input<PollingOptionsArgs> pollingOptions;
+      private final @Nullable Output<PollingOptionsArgs> pollingOptions;
 
-    public Input<PollingOptionsArgs> getPollingOptions() {
-        return this.pollingOptions == null ? Input.empty() : this.pollingOptions;
+    public Output<PollingOptionsArgs> getPollingOptions() {
+        return this.pollingOptions == null ? Output.empty() : this.pollingOptions;
     }
 
     public AsyncOptionsArgs(
-        @Nullable Input<String> methodMatch,
-        @Nullable Input<PollingOptionsArgs> pollingOptions) {
+        @Nullable Output<String> methodMatch,
+        @Nullable Output<PollingOptionsArgs> pollingOptions) {
         this.methodMatch = methodMatch;
         this.pollingOptions = pollingOptions;
     }
 
     private AsyncOptionsArgs() {
-        this.methodMatch = Input.empty();
-        this.pollingOptions = Input.empty();
+        this.methodMatch = Output.empty();
+        this.pollingOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> methodMatch;
-        private @Nullable Input<PollingOptionsArgs> pollingOptions;
+        private @Nullable Output<String> methodMatch;
+        private @Nullable Output<PollingOptionsArgs> pollingOptions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AsyncOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pollingOptions = defaults.pollingOptions;
         }
 
-        public Builder methodMatch(@Nullable Input<String> methodMatch) {
+        public Builder methodMatch(@Nullable Output<String> methodMatch) {
             this.methodMatch = methodMatch;
             return this;
         }
 
         public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Input.ofNullable(methodMatch);
+            this.methodMatch = Output.ofNullable(methodMatch);
             return this;
         }
 
-        public Builder pollingOptions(@Nullable Input<PollingOptionsArgs> pollingOptions) {
+        public Builder pollingOptions(@Nullable Output<PollingOptionsArgs> pollingOptions) {
             this.pollingOptions = pollingOptions;
             return this;
         }
 
         public Builder pollingOptions(@Nullable PollingOptionsArgs pollingOptions) {
-            this.pollingOptions = Input.ofNullable(pollingOptions);
+            this.pollingOptions = Output.ofNullable(pollingOptions);
             return this;
         }
         public AsyncOptionsArgs build() {

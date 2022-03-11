@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiConfig", required=true)
-      private final Input<String> apiConfig;
+      private final Output<String> apiConfig;
 
-    public Input<String> getApiConfig() {
+    public Output<String> getApiConfig() {
         return this.apiConfig;
     }
 
@@ -31,16 +31,16 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     @InputImport(name="gatewayId", required=true)
-      private final Input<String> gatewayId;
+      private final Output<String> gatewayId;
 
-    public Input<String> getGatewayId() {
+    public Output<String> getGatewayId() {
         return this.gatewayId;
     }
 
@@ -49,33 +49,33 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public GatewayArgs(
-        Input<String> apiConfig,
-        @Nullable Input<String> displayName,
-        Input<String> gatewayId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project) {
+        Output<String> apiConfig,
+        @Nullable Output<String> displayName,
+        Output<String> gatewayId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project) {
         this.apiConfig = Objects.requireNonNull(apiConfig, "expected parameter 'apiConfig' to be non-null");
         this.displayName = displayName;
         this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
@@ -85,12 +85,12 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.apiConfig = Input.empty();
-        this.displayName = Input.empty();
-        this.gatewayId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
+        this.apiConfig = Output.empty();
+        this.displayName = Output.empty();
+        this.gatewayId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> apiConfig;
-        private @Nullable Input<String> displayName;
-        private Input<String> gatewayId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
+        private Output<String> apiConfig;
+        private @Nullable Output<String> displayName;
+        private Output<String> gatewayId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder apiConfig(Input<String> apiConfig) {
+        public Builder apiConfig(Output<String> apiConfig) {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
 
         public Builder apiConfig(String apiConfig) {
-            this.apiConfig = Input.of(Objects.requireNonNull(apiConfig));
+            this.apiConfig = Output.of(Objects.requireNonNull(apiConfig));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder gatewayId(Input<String> gatewayId) {
+        public Builder gatewayId(Output<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Input.of(Objects.requireNonNull(gatewayId));
+            this.gatewayId = Output.of(Objects.requireNonNull(gatewayId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public GatewayArgs build() {

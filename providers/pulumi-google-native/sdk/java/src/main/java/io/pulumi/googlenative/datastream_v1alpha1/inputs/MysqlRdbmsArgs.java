@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlDatabaseArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlDatabases")
-      private final @Nullable Input<List<MysqlDatabaseArgs>> mysqlDatabases;
+      private final @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
-    public Input<List<MysqlDatabaseArgs>> getMysqlDatabases() {
-        return this.mysqlDatabases == null ? Input.empty() : this.mysqlDatabases;
+    public Output<List<MysqlDatabaseArgs>> getMysqlDatabases() {
+        return this.mysqlDatabases == null ? Output.empty() : this.mysqlDatabases;
     }
 
-    public MysqlRdbmsArgs(@Nullable Input<List<MysqlDatabaseArgs>> mysqlDatabases) {
+    public MysqlRdbmsArgs(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
         this.mysqlDatabases = mysqlDatabases;
     }
 
     private MysqlRdbmsArgs() {
-        this.mysqlDatabases = Input.empty();
+        this.mysqlDatabases = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MysqlDatabaseArgs>> mysqlDatabases;
+        private @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mysqlDatabases = defaults.mysqlDatabases;
         }
 
-        public Builder mysqlDatabases(@Nullable Input<List<MysqlDatabaseArgs>> mysqlDatabases) {
+        public Builder mysqlDatabases(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
             this.mysqlDatabases = mysqlDatabases;
             return this;
         }
 
         public Builder mysqlDatabases(@Nullable List<MysqlDatabaseArgs> mysqlDatabases) {
-            this.mysqlDatabases = Input.ofNullable(mysqlDatabases);
+            this.mysqlDatabases = Output.ofNullable(mysqlDatabases);
             return this;
         }
         public MysqlRdbmsArgs build() {

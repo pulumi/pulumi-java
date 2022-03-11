@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.WorkerPoolDefaultPackageSet;
 import io.pulumi.googlenative.dataflow_v1b3.enums.WorkerPoolIpConfiguration;
@@ -34,10 +34,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingSettings")
-      private final @Nullable Input<AutoscalingSettingsArgs> autoscalingSettings;
+      private final @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
 
-    public Input<AutoscalingSettingsArgs> getAutoscalingSettings() {
-        return this.autoscalingSettings == null ? Input.empty() : this.autoscalingSettings;
+    public Output<AutoscalingSettingsArgs> getAutoscalingSettings() {
+        return this.autoscalingSettings == null ? Output.empty() : this.autoscalingSettings;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-      private final @Nullable Input<List<DiskArgs>> dataDisks;
+      private final @Nullable Output<List<DiskArgs>> dataDisks;
 
-    public Input<List<DiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Input.empty() : this.dataDisks;
+    public Output<List<DiskArgs>> getDataDisks() {
+        return this.dataDisks == null ? Output.empty() : this.dataDisks;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPackageSet")
-      private final @Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet;
+      private final @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
 
-    public Input<WorkerPoolDefaultPackageSet> getDefaultPackageSet() {
-        return this.defaultPackageSet == null ? Input.empty() : this.defaultPackageSet;
+    public Output<WorkerPoolDefaultPackageSet> getDefaultPackageSet() {
+        return this.defaultPackageSet == null ? Output.empty() : this.defaultPackageSet;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Output<Integer> diskSizeGb;
 
-    public Input<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<Integer> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSourceImage")
-      private final @Nullable Input<String> diskSourceImage;
+      private final @Nullable Output<String> diskSourceImage;
 
-    public Input<String> getDiskSourceImage() {
-        return this.diskSourceImage == null ? Input.empty() : this.diskSourceImage;
+    public Output<String> getDiskSourceImage() {
+        return this.diskSourceImage == null ? Output.empty() : this.diskSourceImage;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<String> diskType;
+      private final @Nullable Output<String> diskType;
 
-    public Input<String> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<String> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-      private final @Nullable Input<WorkerPoolIpConfiguration> ipConfiguration;
+      private final @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
 
-    public Input<WorkerPoolIpConfiguration> getIpConfiguration() {
-        return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
+    public Output<WorkerPoolIpConfiguration> getIpConfiguration() {
+        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -155,10 +155,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numThreadsPerWorker")
-      private final @Nullable Input<Integer> numThreadsPerWorker;
+      private final @Nullable Output<Integer> numThreadsPerWorker;
 
-    public Input<Integer> getNumThreadsPerWorker() {
-        return this.numThreadsPerWorker == null ? Input.empty() : this.numThreadsPerWorker;
+    public Output<Integer> getNumThreadsPerWorker() {
+        return this.numThreadsPerWorker == null ? Output.empty() : this.numThreadsPerWorker;
     }
 
     /**
@@ -166,10 +166,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numWorkers")
-      private final @Nullable Input<Integer> numWorkers;
+      private final @Nullable Output<Integer> numWorkers;
 
-    public Input<Integer> getNumWorkers() {
-        return this.numWorkers == null ? Input.empty() : this.numWorkers;
+    public Output<Integer> getNumWorkers() {
+        return this.numWorkers == null ? Output.empty() : this.numWorkers;
     }
 
     /**
@@ -177,10 +177,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onHostMaintenance")
-      private final @Nullable Input<String> onHostMaintenance;
+      private final @Nullable Output<String> onHostMaintenance;
 
-    public Input<String> getOnHostMaintenance() {
-        return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
+    public Output<String> getOnHostMaintenance() {
+        return this.onHostMaintenance == null ? Output.empty() : this.onHostMaintenance;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packages")
-      private final @Nullable Input<List<PackageArgs>> packages;
+      private final @Nullable Output<List<PackageArgs>> packages;
 
-    public Input<List<PackageArgs>> getPackages() {
-        return this.packages == null ? Input.empty() : this.packages;
+    public Output<List<PackageArgs>> getPackages() {
+        return this.packages == null ? Output.empty() : this.packages;
     }
 
     /**
@@ -199,10 +199,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolArgs")
-      private final @Nullable Input<Map<String,String>> poolArgs;
+      private final @Nullable Output<Map<String,String>> poolArgs;
 
-    public Input<Map<String,String>> getPoolArgs() {
-        return this.poolArgs == null ? Input.empty() : this.poolArgs;
+    public Output<Map<String,String>> getPoolArgs() {
+        return this.poolArgs == null ? Output.empty() : this.poolArgs;
     }
 
     /**
@@ -210,10 +210,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkHarnessContainerImages")
-      private final @Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
+      private final @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
 
-    public Input<List<SdkHarnessContainerImageArgs>> getSdkHarnessContainerImages() {
-        return this.sdkHarnessContainerImages == null ? Input.empty() : this.sdkHarnessContainerImages;
+    public Output<List<SdkHarnessContainerImageArgs>> getSdkHarnessContainerImages() {
+        return this.sdkHarnessContainerImages == null ? Output.empty() : this.sdkHarnessContainerImages;
     }
 
     /**
@@ -221,10 +221,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -232,10 +232,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskrunnerSettings")
-      private final @Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings;
+      private final @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
 
-    public Input<TaskRunnerSettingsArgs> getTaskrunnerSettings() {
-        return this.taskrunnerSettings == null ? Input.empty() : this.taskrunnerSettings;
+    public Output<TaskRunnerSettingsArgs> getTaskrunnerSettings() {
+        return this.taskrunnerSettings == null ? Output.empty() : this.taskrunnerSettings;
     }
 
     /**
@@ -243,10 +243,10 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="teardownPolicy")
-      private final @Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy;
+      private final @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
 
-    public Input<WorkerPoolTeardownPolicy> getTeardownPolicy() {
-        return this.teardownPolicy == null ? Input.empty() : this.teardownPolicy;
+    public Output<WorkerPoolTeardownPolicy> getTeardownPolicy() {
+        return this.teardownPolicy == null ? Output.empty() : this.teardownPolicy;
     }
 
     /**
@@ -254,34 +254,34 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public WorkerPoolArgs(
-        @Nullable Input<AutoscalingSettingsArgs> autoscalingSettings,
-        @Nullable Input<List<DiskArgs>> dataDisks,
-        @Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet,
-        @Nullable Input<Integer> diskSizeGb,
-        @Nullable Input<String> diskSourceImage,
-        @Nullable Input<String> diskType,
-        @Nullable Input<WorkerPoolIpConfiguration> ipConfiguration,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> network,
-        @Nullable Input<Integer> numThreadsPerWorker,
-        @Nullable Input<Integer> numWorkers,
-        @Nullable Input<String> onHostMaintenance,
-        @Nullable Input<List<PackageArgs>> packages,
-        @Nullable Input<Map<String,String>> poolArgs,
-        @Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings,
-        @Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy,
-        @Nullable Input<String> zone) {
+        @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings,
+        @Nullable Output<List<DiskArgs>> dataDisks,
+        @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet,
+        @Nullable Output<Integer> diskSizeGb,
+        @Nullable Output<String> diskSourceImage,
+        @Nullable Output<String> diskType,
+        @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> network,
+        @Nullable Output<Integer> numThreadsPerWorker,
+        @Nullable Output<Integer> numWorkers,
+        @Nullable Output<String> onHostMaintenance,
+        @Nullable Output<List<PackageArgs>> packages,
+        @Nullable Output<Map<String,String>> poolArgs,
+        @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings,
+        @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy,
+        @Nullable Output<String> zone) {
         this.autoscalingSettings = autoscalingSettings;
         this.dataDisks = dataDisks;
         this.defaultPackageSet = defaultPackageSet;
@@ -306,27 +306,27 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.autoscalingSettings = Input.empty();
-        this.dataDisks = Input.empty();
-        this.defaultPackageSet = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.diskSourceImage = Input.empty();
-        this.diskType = Input.empty();
-        this.ipConfiguration = Input.empty();
-        this.kind = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.network = Input.empty();
-        this.numThreadsPerWorker = Input.empty();
-        this.numWorkers = Input.empty();
-        this.onHostMaintenance = Input.empty();
-        this.packages = Input.empty();
-        this.poolArgs = Input.empty();
-        this.sdkHarnessContainerImages = Input.empty();
-        this.subnetwork = Input.empty();
-        this.taskrunnerSettings = Input.empty();
-        this.teardownPolicy = Input.empty();
-        this.zone = Input.empty();
+        this.autoscalingSettings = Output.empty();
+        this.dataDisks = Output.empty();
+        this.defaultPackageSet = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.diskSourceImage = Output.empty();
+        this.diskType = Output.empty();
+        this.ipConfiguration = Output.empty();
+        this.kind = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.network = Output.empty();
+        this.numThreadsPerWorker = Output.empty();
+        this.numWorkers = Output.empty();
+        this.onHostMaintenance = Output.empty();
+        this.packages = Output.empty();
+        this.poolArgs = Output.empty();
+        this.sdkHarnessContainerImages = Output.empty();
+        this.subnetwork = Output.empty();
+        this.taskrunnerSettings = Output.empty();
+        this.teardownPolicy = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -338,27 +338,27 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscalingSettingsArgs> autoscalingSettings;
-        private @Nullable Input<List<DiskArgs>> dataDisks;
-        private @Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet;
-        private @Nullable Input<Integer> diskSizeGb;
-        private @Nullable Input<String> diskSourceImage;
-        private @Nullable Input<String> diskType;
-        private @Nullable Input<WorkerPoolIpConfiguration> ipConfiguration;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> network;
-        private @Nullable Input<Integer> numThreadsPerWorker;
-        private @Nullable Input<Integer> numWorkers;
-        private @Nullable Input<String> onHostMaintenance;
-        private @Nullable Input<List<PackageArgs>> packages;
-        private @Nullable Input<Map<String,String>> poolArgs;
-        private @Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings;
-        private @Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<AutoscalingSettingsArgs> autoscalingSettings;
+        private @Nullable Output<List<DiskArgs>> dataDisks;
+        private @Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet;
+        private @Nullable Output<Integer> diskSizeGb;
+        private @Nullable Output<String> diskSourceImage;
+        private @Nullable Output<String> diskType;
+        private @Nullable Output<WorkerPoolIpConfiguration> ipConfiguration;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> network;
+        private @Nullable Output<Integer> numThreadsPerWorker;
+        private @Nullable Output<Integer> numWorkers;
+        private @Nullable Output<String> onHostMaintenance;
+        private @Nullable Output<List<PackageArgs>> packages;
+        private @Nullable Output<Map<String,String>> poolArgs;
+        private @Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings;
+        private @Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -389,213 +389,213 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder autoscalingSettings(@Nullable Input<AutoscalingSettingsArgs> autoscalingSettings) {
+        public Builder autoscalingSettings(@Nullable Output<AutoscalingSettingsArgs> autoscalingSettings) {
             this.autoscalingSettings = autoscalingSettings;
             return this;
         }
 
         public Builder autoscalingSettings(@Nullable AutoscalingSettingsArgs autoscalingSettings) {
-            this.autoscalingSettings = Input.ofNullable(autoscalingSettings);
+            this.autoscalingSettings = Output.ofNullable(autoscalingSettings);
             return this;
         }
 
-        public Builder dataDisks(@Nullable Input<List<DiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Output<List<DiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         public Builder dataDisks(@Nullable List<DiskArgs> dataDisks) {
-            this.dataDisks = Input.ofNullable(dataDisks);
+            this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder defaultPackageSet(@Nullable Input<WorkerPoolDefaultPackageSet> defaultPackageSet) {
+        public Builder defaultPackageSet(@Nullable Output<WorkerPoolDefaultPackageSet> defaultPackageSet) {
             this.defaultPackageSet = defaultPackageSet;
             return this;
         }
 
         public Builder defaultPackageSet(@Nullable WorkerPoolDefaultPackageSet defaultPackageSet) {
-            this.defaultPackageSet = Input.ofNullable(defaultPackageSet);
+            this.defaultPackageSet = Output.ofNullable(defaultPackageSet);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder diskSourceImage(@Nullable Input<String> diskSourceImage) {
+        public Builder diskSourceImage(@Nullable Output<String> diskSourceImage) {
             this.diskSourceImage = diskSourceImage;
             return this;
         }
 
         public Builder diskSourceImage(@Nullable String diskSourceImage) {
-            this.diskSourceImage = Input.ofNullable(diskSourceImage);
+            this.diskSourceImage = Output.ofNullable(diskSourceImage);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Output<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder ipConfiguration(@Nullable Input<WorkerPoolIpConfiguration> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Output<WorkerPoolIpConfiguration> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
         public Builder ipConfiguration(@Nullable WorkerPoolIpConfiguration ipConfiguration) {
-            this.ipConfiguration = Input.ofNullable(ipConfiguration);
+            this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder numThreadsPerWorker(@Nullable Input<Integer> numThreadsPerWorker) {
+        public Builder numThreadsPerWorker(@Nullable Output<Integer> numThreadsPerWorker) {
             this.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
 
         public Builder numThreadsPerWorker(@Nullable Integer numThreadsPerWorker) {
-            this.numThreadsPerWorker = Input.ofNullable(numThreadsPerWorker);
+            this.numThreadsPerWorker = Output.ofNullable(numThreadsPerWorker);
             return this;
         }
 
-        public Builder numWorkers(@Nullable Input<Integer> numWorkers) {
+        public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
             this.numWorkers = numWorkers;
             return this;
         }
 
         public Builder numWorkers(@Nullable Integer numWorkers) {
-            this.numWorkers = Input.ofNullable(numWorkers);
+            this.numWorkers = Output.ofNullable(numWorkers);
             return this;
         }
 
-        public Builder onHostMaintenance(@Nullable Input<String> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Output<String> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
         public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
-            this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
+            this.onHostMaintenance = Output.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder packages(@Nullable Input<List<PackageArgs>> packages) {
+        public Builder packages(@Nullable Output<List<PackageArgs>> packages) {
             this.packages = packages;
             return this;
         }
 
         public Builder packages(@Nullable List<PackageArgs> packages) {
-            this.packages = Input.ofNullable(packages);
+            this.packages = Output.ofNullable(packages);
             return this;
         }
 
-        public Builder poolArgs(@Nullable Input<Map<String,String>> poolArgs) {
+        public Builder poolArgs(@Nullable Output<Map<String,String>> poolArgs) {
             this.poolArgs = poolArgs;
             return this;
         }
 
         public Builder poolArgs(@Nullable Map<String,String> poolArgs) {
-            this.poolArgs = Input.ofNullable(poolArgs);
+            this.poolArgs = Output.ofNullable(poolArgs);
             return this;
         }
 
-        public Builder sdkHarnessContainerImages(@Nullable Input<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
+        public Builder sdkHarnessContainerImages(@Nullable Output<List<SdkHarnessContainerImageArgs>> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
 
         public Builder sdkHarnessContainerImages(@Nullable List<SdkHarnessContainerImageArgs> sdkHarnessContainerImages) {
-            this.sdkHarnessContainerImages = Input.ofNullable(sdkHarnessContainerImages);
+            this.sdkHarnessContainerImages = Output.ofNullable(sdkHarnessContainerImages);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder taskrunnerSettings(@Nullable Input<TaskRunnerSettingsArgs> taskrunnerSettings) {
+        public Builder taskrunnerSettings(@Nullable Output<TaskRunnerSettingsArgs> taskrunnerSettings) {
             this.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
 
         public Builder taskrunnerSettings(@Nullable TaskRunnerSettingsArgs taskrunnerSettings) {
-            this.taskrunnerSettings = Input.ofNullable(taskrunnerSettings);
+            this.taskrunnerSettings = Output.ofNullable(taskrunnerSettings);
             return this;
         }
 
-        public Builder teardownPolicy(@Nullable Input<WorkerPoolTeardownPolicy> teardownPolicy) {
+        public Builder teardownPolicy(@Nullable Output<WorkerPoolTeardownPolicy> teardownPolicy) {
             this.teardownPolicy = teardownPolicy;
             return this;
         }
 
         public Builder teardownPolicy(@Nullable WorkerPoolTeardownPolicy teardownPolicy) {
-            this.teardownPolicy = Input.ofNullable(teardownPolicy);
+            this.teardownPolicy = Output.ofNullable(teardownPolicy);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public WorkerPoolArgs build() {

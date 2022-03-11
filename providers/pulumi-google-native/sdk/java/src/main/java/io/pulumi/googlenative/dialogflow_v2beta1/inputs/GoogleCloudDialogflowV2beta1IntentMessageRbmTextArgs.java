@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
      * 
      */
     @InputImport(name="rbmSuggestion")
-      private final @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
+      private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
-    public Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getRbmSuggestion() {
-        return this.rbmSuggestion == null ? Input.empty() : this.rbmSuggestion;
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getRbmSuggestion() {
+        return this.rbmSuggestion == null ? Output.empty() : this.rbmSuggestion;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
      * 
      */
     @InputImport(name="text", required=true)
-      private final Input<String> text;
+      private final Output<String> text;
 
-    public Input<String> getText() {
+    public Output<String> getText() {
         return this.text;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(
-        @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion,
-        Input<String> text) {
+        @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion,
+        Output<String> text) {
         this.rbmSuggestion = rbmSuggestion;
         this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs() {
-        this.rbmSuggestion = Input.empty();
-        this.text = Input.empty();
+        this.rbmSuggestion = Output.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
-        private Input<String> text;
+        private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
+        private Output<String> text;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     	      this.text = defaults.text;
         }
 
-        public Builder rbmSuggestion(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
+        public Builder rbmSuggestion(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
             this.rbmSuggestion = rbmSuggestion;
             return this;
         }
 
         public Builder rbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
-            this.rbmSuggestion = Input.ofNullable(rbmSuggestion);
+            this.rbmSuggestion = Output.ofNullable(rbmSuggestion);
             return this;
         }
 
-        public Builder text(Input<String> text) {
+        public Builder text(Output<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
         public Builder text(String text) {
-            this.text = Input.of(Objects.requireNonNull(text));
+            this.text = Output.of(Objects.requireNonNull(text));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs build() {

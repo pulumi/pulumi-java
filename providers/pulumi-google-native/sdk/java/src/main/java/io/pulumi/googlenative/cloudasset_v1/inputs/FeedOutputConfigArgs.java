@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="pubsubDestination")
-      private final @Nullable Input<PubsubDestinationArgs> pubsubDestination;
+      private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Input<PubsubDestinationArgs> getPubsubDestination() {
-        return this.pubsubDestination == null ? Input.empty() : this.pubsubDestination;
+    public Output<PubsubDestinationArgs> getPubsubDestination() {
+        return this.pubsubDestination == null ? Output.empty() : this.pubsubDestination;
     }
 
-    public FeedOutputConfigArgs(@Nullable Input<PubsubDestinationArgs> pubsubDestination) {
+    public FeedOutputConfigArgs(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 
     private FeedOutputConfigArgs() {
-        this.pubsubDestination = Input.empty();
+        this.pubsubDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<PubsubDestinationArgs> pubsubDestination;
+        private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder pubsubDestination(@Nullable Input<PubsubDestinationArgs> pubsubDestination) {
+        public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
             this.pubsubDestination = pubsubDestination;
             return this;
         }
 
         public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Input.ofNullable(pubsubDestination);
+            this.pubsubDestination = Output.ofNullable(pubsubDestination);
             return this;
         }
         public FeedOutputConfigArgs build() {

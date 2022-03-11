@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="otherNativeCrash")
-      private final @Nullable Input<Boolean> otherNativeCrash;
+      private final @Nullable Output<Boolean> otherNativeCrash;
 
-    public Input<Boolean> getOtherNativeCrash() {
-        return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
+    public Output<Boolean> getOtherNativeCrash() {
+        return this.otherNativeCrash == null ? Output.empty() : this.otherNativeCrash;
     }
 
-    public SuccessDetailArgs(@Nullable Input<Boolean> otherNativeCrash) {
+    public SuccessDetailArgs(@Nullable Output<Boolean> otherNativeCrash) {
         this.otherNativeCrash = otherNativeCrash;
     }
 
     private SuccessDetailArgs() {
-        this.otherNativeCrash = Input.empty();
+        this.otherNativeCrash = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> otherNativeCrash;
+        private @Nullable Output<Boolean> otherNativeCrash;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.otherNativeCrash = defaults.otherNativeCrash;
         }
 
-        public Builder otherNativeCrash(@Nullable Input<Boolean> otherNativeCrash) {
+        public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
             this.otherNativeCrash = otherNativeCrash;
             return this;
         }
 
         public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
+            this.otherNativeCrash = Output.ofNullable(otherNativeCrash);
             return this;
         }
         public SuccessDetailArgs build() {

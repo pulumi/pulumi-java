@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsublite_v1.enums.DeliveryConfigDeliveryRequirement;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryRequirement")
-      private final @Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement;
+      private final @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
-    public Input<DeliveryConfigDeliveryRequirement> getDeliveryRequirement() {
-        return this.deliveryRequirement == null ? Input.empty() : this.deliveryRequirement;
+    public Output<DeliveryConfigDeliveryRequirement> getDeliveryRequirement() {
+        return this.deliveryRequirement == null ? Output.empty() : this.deliveryRequirement;
     }
 
-    public DeliveryConfigArgs(@Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
+    public DeliveryConfigArgs(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
         this.deliveryRequirement = deliveryRequirement;
     }
 
     private DeliveryConfigArgs() {
-        this.deliveryRequirement = Input.empty();
+        this.deliveryRequirement = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement;
+        private @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deliveryRequirement = defaults.deliveryRequirement;
         }
 
-        public Builder deliveryRequirement(@Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
+        public Builder deliveryRequirement(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
             this.deliveryRequirement = deliveryRequirement;
             return this;
         }
 
         public Builder deliveryRequirement(@Nullable DeliveryConfigDeliveryRequirement deliveryRequirement) {
-            this.deliveryRequirement = Input.ofNullable(deliveryRequirement);
+            this.deliveryRequirement = Output.ofNullable(deliveryRequirement);
             return this;
         }
         public DeliveryConfigArgs build() {

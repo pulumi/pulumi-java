@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="charactersToSkip")
-      private final @Nullable Input<String> charactersToSkip;
+      private final @Nullable Output<String> charactersToSkip;
 
-    public Input<String> getCharactersToSkip() {
-        return this.charactersToSkip == null ? Input.empty() : this.charactersToSkip;
+    public Output<String> getCharactersToSkip() {
+        return this.charactersToSkip == null ? Output.empty() : this.charactersToSkip;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="commonCharactersToIgnore")
-      private final @Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;
+      private final @Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;
 
-    public Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> getCommonCharactersToIgnore() {
-        return this.commonCharactersToIgnore == null ? Input.empty() : this.commonCharactersToIgnore;
+    public Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> getCommonCharactersToIgnore() {
+        return this.commonCharactersToIgnore == null ? Output.empty() : this.commonCharactersToIgnore;
     }
 
     public GooglePrivacyDlpV2CharsToIgnoreArgs(
-        @Nullable Input<String> charactersToSkip,
-        @Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
+        @Nullable Output<String> charactersToSkip,
+        @Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }
 
     private GooglePrivacyDlpV2CharsToIgnoreArgs() {
-        this.charactersToSkip = Input.empty();
-        this.commonCharactersToIgnore = Input.empty();
+        this.charactersToSkip = Output.empty();
+        this.commonCharactersToIgnore = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> charactersToSkip;
-        private @Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;
+        private @Nullable Output<String> charactersToSkip;
+        private @Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
     	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
         }
 
-        public Builder charactersToSkip(@Nullable Input<String> charactersToSkip) {
+        public Builder charactersToSkip(@Nullable Output<String> charactersToSkip) {
             this.charactersToSkip = charactersToSkip;
             return this;
         }
 
         public Builder charactersToSkip(@Nullable String charactersToSkip) {
-            this.charactersToSkip = Input.ofNullable(charactersToSkip);
+            this.charactersToSkip = Output.ofNullable(charactersToSkip);
             return this;
         }
 
-        public Builder commonCharactersToIgnore(@Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(@Nullable Output<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
 
         public Builder commonCharactersToIgnore(@Nullable GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = Input.ofNullable(commonCharactersToIgnore);
+            this.commonCharactersToIgnore = Output.ofNullable(commonCharactersToIgnore);
             return this;
         }
         public GooglePrivacyDlpV2CharsToIgnoreArgs build() {

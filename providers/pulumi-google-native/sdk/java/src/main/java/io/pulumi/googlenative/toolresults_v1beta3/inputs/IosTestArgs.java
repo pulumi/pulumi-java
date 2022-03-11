@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoArgs;
@@ -27,10 +27,10 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosAppInfo")
-      private final @Nullable Input<IosAppInfoArgs> iosAppInfo;
+      private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
-    public Input<IosAppInfoArgs> getIosAppInfo() {
-        return this.iosAppInfo == null ? Input.empty() : this.iosAppInfo;
+    public Output<IosAppInfoArgs> getIosAppInfo() {
+        return this.iosAppInfo == null ? Output.empty() : this.iosAppInfo;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosRoboTest")
-      private final @Nullable Input<IosRoboTestArgs> iosRoboTest;
+      private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
-    public Input<IosRoboTestArgs> getIosRoboTest() {
-        return this.iosRoboTest == null ? Input.empty() : this.iosRoboTest;
+    public Output<IosRoboTestArgs> getIosRoboTest() {
+        return this.iosRoboTest == null ? Output.empty() : this.iosRoboTest;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosTestLoop")
-      private final @Nullable Input<IosTestLoopArgs> iosTestLoop;
+      private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Input<IosTestLoopArgs> getIosTestLoop() {
-        return this.iosTestLoop == null ? Input.empty() : this.iosTestLoop;
+    public Output<IosTestLoopArgs> getIosTestLoop() {
+        return this.iosTestLoop == null ? Output.empty() : this.iosTestLoop;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosXcTest")
-      private final @Nullable Input<IosXcTestArgs> iosXcTest;
+      private final @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Input<IosXcTestArgs> getIosXcTest() {
-        return this.iosXcTest == null ? Input.empty() : this.iosXcTest;
+    public Output<IosXcTestArgs> getIosXcTest() {
+        return this.iosXcTest == null ? Output.empty() : this.iosXcTest;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testTimeout")
-      private final @Nullable Input<DurationArgs> testTimeout;
+      private final @Nullable Output<DurationArgs> testTimeout;
 
-    public Input<DurationArgs> getTestTimeout() {
-        return this.testTimeout == null ? Input.empty() : this.testTimeout;
+    public Output<DurationArgs> getTestTimeout() {
+        return this.testTimeout == null ? Output.empty() : this.testTimeout;
     }
 
     public IosTestArgs(
-        @Nullable Input<IosAppInfoArgs> iosAppInfo,
-        @Nullable Input<IosRoboTestArgs> iosRoboTest,
-        @Nullable Input<IosTestLoopArgs> iosTestLoop,
-        @Nullable Input<IosXcTestArgs> iosXcTest,
-        @Nullable Input<DurationArgs> testTimeout) {
+        @Nullable Output<IosAppInfoArgs> iosAppInfo,
+        @Nullable Output<IosRoboTestArgs> iosRoboTest,
+        @Nullable Output<IosTestLoopArgs> iosTestLoop,
+        @Nullable Output<IosXcTestArgs> iosXcTest,
+        @Nullable Output<DurationArgs> testTimeout) {
         this.iosAppInfo = iosAppInfo;
         this.iosRoboTest = iosRoboTest;
         this.iosTestLoop = iosTestLoop;
@@ -91,11 +91,11 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestArgs() {
-        this.iosAppInfo = Input.empty();
-        this.iosRoboTest = Input.empty();
-        this.iosTestLoop = Input.empty();
-        this.iosXcTest = Input.empty();
-        this.testTimeout = Input.empty();
+        this.iosAppInfo = Output.empty();
+        this.iosRoboTest = Output.empty();
+        this.iosTestLoop = Output.empty();
+        this.iosXcTest = Output.empty();
+        this.testTimeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IosAppInfoArgs> iosAppInfo;
-        private @Nullable Input<IosRoboTestArgs> iosRoboTest;
-        private @Nullable Input<IosTestLoopArgs> iosTestLoop;
-        private @Nullable Input<IosXcTestArgs> iosXcTest;
-        private @Nullable Input<DurationArgs> testTimeout;
+        private @Nullable Output<IosAppInfoArgs> iosAppInfo;
+        private @Nullable Output<IosRoboTestArgs> iosRoboTest;
+        private @Nullable Output<IosTestLoopArgs> iosTestLoop;
+        private @Nullable Output<IosXcTestArgs> iosXcTest;
+        private @Nullable Output<DurationArgs> testTimeout;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder iosAppInfo(@Nullable Input<IosAppInfoArgs> iosAppInfo) {
+        public Builder iosAppInfo(@Nullable Output<IosAppInfoArgs> iosAppInfo) {
             this.iosAppInfo = iosAppInfo;
             return this;
         }
 
         public Builder iosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
-            this.iosAppInfo = Input.ofNullable(iosAppInfo);
+            this.iosAppInfo = Output.ofNullable(iosAppInfo);
             return this;
         }
 
-        public Builder iosRoboTest(@Nullable Input<IosRoboTestArgs> iosRoboTest) {
+        public Builder iosRoboTest(@Nullable Output<IosRoboTestArgs> iosRoboTest) {
             this.iosRoboTest = iosRoboTest;
             return this;
         }
 
         public Builder iosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
-            this.iosRoboTest = Input.ofNullable(iosRoboTest);
+            this.iosRoboTest = Output.ofNullable(iosRoboTest);
             return this;
         }
 
-        public Builder iosTestLoop(@Nullable Input<IosTestLoopArgs> iosTestLoop) {
+        public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
             this.iosTestLoop = iosTestLoop;
             return this;
         }
 
         public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
-            this.iosTestLoop = Input.ofNullable(iosTestLoop);
+            this.iosTestLoop = Output.ofNullable(iosTestLoop);
             return this;
         }
 
-        public Builder iosXcTest(@Nullable Input<IosXcTestArgs> iosXcTest) {
+        public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
             this.iosXcTest = iosXcTest;
             return this;
         }
 
         public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
-            this.iosXcTest = Input.ofNullable(iosXcTest);
+            this.iosXcTest = Output.ofNullable(iosXcTest);
             return this;
         }
 
-        public Builder testTimeout(@Nullable Input<DurationArgs> testTimeout) {
+        public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
 
         public Builder testTimeout(@Nullable DurationArgs testTimeout) {
-            this.testTimeout = Input.ofNullable(testTimeout);
+            this.testTimeout = Output.ofNullable(testTimeout);
             return this;
         }
         public IosTestArgs build() {

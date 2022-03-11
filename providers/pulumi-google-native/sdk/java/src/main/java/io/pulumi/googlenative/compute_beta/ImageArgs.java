@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.ImageSourceType;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyArgs;
@@ -29,10 +29,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveSizeBytes")
-      private final @Nullable Input<String> archiveSizeBytes;
+      private final @Nullable Output<String> archiveSizeBytes;
 
-    public Input<String> getArchiveSizeBytes() {
-        return this.archiveSizeBytes == null ? Input.empty() : this.archiveSizeBytes;
+    public Output<String> getArchiveSizeBytes() {
+        return this.archiveSizeBytes == null ? Output.empty() : this.archiveSizeBytes;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deprecated")
-      private final @Nullable Input<DeprecationStatusArgs> deprecated;
+      private final @Nullable Output<DeprecationStatusArgs> deprecated;
 
-    public Input<DeprecationStatusArgs> getDeprecated() {
-        return this.deprecated == null ? Input.empty() : this.deprecated;
+    public Output<DeprecationStatusArgs> getDeprecated() {
+        return this.deprecated == null ? Output.empty() : this.deprecated;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -73,17 +73,17 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     @InputImport(name="forceCreate")
-      private final @Nullable Input<String> forceCreate;
+      private final @Nullable Output<String> forceCreate;
 
-    public Input<String> getForceCreate() {
-        return this.forceCreate == null ? Input.empty() : this.forceCreate;
+    public Output<String> getForceCreate() {
+        return this.forceCreate == null ? Output.empty() : this.forceCreate;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestOsFeatures")
-      private final @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
+      private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
-    public Input<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Input.empty() : this.guestOsFeatures;
+    public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
+        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> imageEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getImageEncryptionKey() {
-        return this.imageEncryptionKey == null ? Input.empty() : this.imageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getImageEncryptionKey() {
+        return this.imageEncryptionKey == null ? Output.empty() : this.imageEncryptionKey;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseCodes")
-      private final @Nullable Input<List<String>> licenseCodes;
+      private final @Nullable Output<List<String>> licenseCodes;
 
-    public Input<List<String>> getLicenseCodes() {
-        return this.licenseCodes == null ? Input.empty() : this.licenseCodes;
+    public Output<List<String>> getLicenseCodes() {
+        return this.licenseCodes == null ? Output.empty() : this.licenseCodes;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenses")
-      private final @Nullable Input<List<String>> licenses;
+      private final @Nullable Output<List<String>> licenses;
 
-    public Input<List<String>> getLicenses() {
-        return this.licenses == null ? Input.empty() : this.licenses;
+    public Output<List<String>> getLicenses() {
+        return this.licenses == null ? Output.empty() : this.licenses;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locked")
-      private final @Nullable Input<Boolean> locked;
+      private final @Nullable Output<Boolean> locked;
 
-    public Input<Boolean> getLocked() {
-        return this.locked == null ? Input.empty() : this.locked;
+    public Output<Boolean> getLocked() {
+        return this.locked == null ? Output.empty() : this.locked;
     }
 
     /**
@@ -157,17 +157,17 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -175,17 +175,17 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawDisk")
-      private final @Nullable Input<ImageRawDiskArgs> rawDisk;
+      private final @Nullable Output<ImageRawDiskArgs> rawDisk;
 
-    public Input<ImageRawDiskArgs> getRawDisk() {
-        return this.rawDisk == null ? Input.empty() : this.rawDisk;
+    public Output<ImageRawDiskArgs> getRawDisk() {
+        return this.rawDisk == null ? Output.empty() : this.rawDisk;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutOverride")
-      private final @Nullable Input<RolloutPolicyArgs> rolloutOverride;
+      private final @Nullable Output<RolloutPolicyArgs> rolloutOverride;
 
-    public Input<RolloutPolicyArgs> getRolloutOverride() {
-        return this.rolloutOverride == null ? Input.empty() : this.rolloutOverride;
+    public Output<RolloutPolicyArgs> getRolloutOverride() {
+        return this.rolloutOverride == null ? Output.empty() : this.rolloutOverride;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shieldedInstanceInitialState")
-      private final @Nullable Input<InitialStateConfigArgs> shieldedInstanceInitialState;
+      private final @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
 
-    public Input<InitialStateConfigArgs> getShieldedInstanceInitialState() {
-        return this.shieldedInstanceInitialState == null ? Input.empty() : this.shieldedInstanceInitialState;
+    public Output<InitialStateConfigArgs> getShieldedInstanceInitialState() {
+        return this.shieldedInstanceInitialState == null ? Output.empty() : this.shieldedInstanceInitialState;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk")
-      private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Output<String> sourceDisk;
 
-    public Input<String> getSourceDisk() {
-        return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
+    public Output<String> getSourceDisk() {
+        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDiskEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Input.empty() : this.sourceDiskEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
+        return this.sourceDiskEncryptionKey == null ? Output.empty() : this.sourceDiskEncryptionKey;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImage")
-      private final @Nullable Input<String> sourceImage;
+      private final @Nullable Output<String> sourceImage;
 
-    public Input<String> getSourceImage() {
-        return this.sourceImage == null ? Input.empty() : this.sourceImage;
+    public Output<String> getSourceImage() {
+        return this.sourceImage == null ? Output.empty() : this.sourceImage;
     }
 
     /**
@@ -248,10 +248,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
+        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshot")
-      private final @Nullable Input<String> sourceSnapshot;
+      private final @Nullable Output<String> sourceSnapshot;
 
-    public Input<String> getSourceSnapshot() {
-        return this.sourceSnapshot == null ? Input.empty() : this.sourceSnapshot;
+    public Output<String> getSourceSnapshot() {
+        return this.sourceSnapshot == null ? Output.empty() : this.sourceSnapshot;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Input<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -281,10 +281,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-      private final @Nullable Input<ImageSourceType> sourceType;
+      private final @Nullable Output<ImageSourceType> sourceType;
 
-    public Input<ImageSourceType> getSourceType() {
-        return this.sourceType == null ? Input.empty() : this.sourceType;
+    public Output<ImageSourceType> getSourceType() {
+        return this.sourceType == null ? Output.empty() : this.sourceType;
     }
 
     /**
@@ -292,10 +292,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocations")
-      private final @Nullable Input<List<String>> storageLocations;
+      private final @Nullable Output<List<String>> storageLocations;
 
-    public Input<List<String>> getStorageLocations() {
-        return this.storageLocations == null ? Input.empty() : this.storageLocations;
+    public Output<List<String>> getStorageLocations() {
+        return this.storageLocations == null ? Output.empty() : this.storageLocations;
     }
 
     /**
@@ -303,40 +303,40 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userLicenses")
-      private final @Nullable Input<List<String>> userLicenses;
+      private final @Nullable Output<List<String>> userLicenses;
 
-    public Input<List<String>> getUserLicenses() {
-        return this.userLicenses == null ? Input.empty() : this.userLicenses;
+    public Output<List<String>> getUserLicenses() {
+        return this.userLicenses == null ? Output.empty() : this.userLicenses;
     }
 
     public ImageArgs(
-        @Nullable Input<String> archiveSizeBytes,
-        @Nullable Input<DeprecationStatusArgs> deprecated,
-        @Nullable Input<String> description,
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<String> family,
-        @Nullable Input<String> forceCreate,
-        @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures,
-        @Nullable Input<CustomerEncryptionKeyArgs> imageEncryptionKey,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> licenseCodes,
-        @Nullable Input<List<String>> licenses,
-        @Nullable Input<Boolean> locked,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<ImageRawDiskArgs> rawDisk,
-        @Nullable Input<String> requestId,
-        @Nullable Input<RolloutPolicyArgs> rolloutOverride,
-        @Nullable Input<InitialStateConfigArgs> shieldedInstanceInitialState,
-        @Nullable Input<String> sourceDisk,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey,
-        @Nullable Input<String> sourceImage,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Input<String> sourceSnapshot,
-        @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Input<ImageSourceType> sourceType,
-        @Nullable Input<List<String>> storageLocations,
-        @Nullable Input<List<String>> userLicenses) {
+        @Nullable Output<String> archiveSizeBytes,
+        @Nullable Output<DeprecationStatusArgs> deprecated,
+        @Nullable Output<String> description,
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<String> family,
+        @Nullable Output<String> forceCreate,
+        @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures,
+        @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> licenseCodes,
+        @Nullable Output<List<String>> licenses,
+        @Nullable Output<Boolean> locked,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<ImageRawDiskArgs> rawDisk,
+        @Nullable Output<String> requestId,
+        @Nullable Output<RolloutPolicyArgs> rolloutOverride,
+        @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState,
+        @Nullable Output<String> sourceDisk,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey,
+        @Nullable Output<String> sourceImage,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey,
+        @Nullable Output<String> sourceSnapshot,
+        @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey,
+        @Nullable Output<ImageSourceType> sourceType,
+        @Nullable Output<List<String>> storageLocations,
+        @Nullable Output<List<String>> userLicenses) {
         this.archiveSizeBytes = archiveSizeBytes;
         this.deprecated = deprecated;
         this.description = description;
@@ -367,33 +367,33 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.archiveSizeBytes = Input.empty();
-        this.deprecated = Input.empty();
-        this.description = Input.empty();
-        this.diskSizeGb = Input.empty();
-        this.family = Input.empty();
-        this.forceCreate = Input.empty();
-        this.guestOsFeatures = Input.empty();
-        this.imageEncryptionKey = Input.empty();
-        this.labels = Input.empty();
-        this.licenseCodes = Input.empty();
-        this.licenses = Input.empty();
-        this.locked = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rawDisk = Input.empty();
-        this.requestId = Input.empty();
-        this.rolloutOverride = Input.empty();
-        this.shieldedInstanceInitialState = Input.empty();
-        this.sourceDisk = Input.empty();
-        this.sourceDiskEncryptionKey = Input.empty();
-        this.sourceImage = Input.empty();
-        this.sourceImageEncryptionKey = Input.empty();
-        this.sourceSnapshot = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
-        this.sourceType = Input.empty();
-        this.storageLocations = Input.empty();
-        this.userLicenses = Input.empty();
+        this.archiveSizeBytes = Output.empty();
+        this.deprecated = Output.empty();
+        this.description = Output.empty();
+        this.diskSizeGb = Output.empty();
+        this.family = Output.empty();
+        this.forceCreate = Output.empty();
+        this.guestOsFeatures = Output.empty();
+        this.imageEncryptionKey = Output.empty();
+        this.labels = Output.empty();
+        this.licenseCodes = Output.empty();
+        this.licenses = Output.empty();
+        this.locked = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rawDisk = Output.empty();
+        this.requestId = Output.empty();
+        this.rolloutOverride = Output.empty();
+        this.shieldedInstanceInitialState = Output.empty();
+        this.sourceDisk = Output.empty();
+        this.sourceDiskEncryptionKey = Output.empty();
+        this.sourceImage = Output.empty();
+        this.sourceImageEncryptionKey = Output.empty();
+        this.sourceSnapshot = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.sourceType = Output.empty();
+        this.storageLocations = Output.empty();
+        this.userLicenses = Output.empty();
     }
 
     public static Builder builder() {
@@ -405,33 +405,33 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> archiveSizeBytes;
-        private @Nullable Input<DeprecationStatusArgs> deprecated;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<String> family;
-        private @Nullable Input<String> forceCreate;
-        private @Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures;
-        private @Nullable Input<CustomerEncryptionKeyArgs> imageEncryptionKey;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> licenseCodes;
-        private @Nullable Input<List<String>> licenses;
-        private @Nullable Input<Boolean> locked;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<ImageRawDiskArgs> rawDisk;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<RolloutPolicyArgs> rolloutOverride;
-        private @Nullable Input<InitialStateConfigArgs> shieldedInstanceInitialState;
-        private @Nullable Input<String> sourceDisk;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
-        private @Nullable Input<String> sourceImage;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Input<String> sourceSnapshot;
-        private @Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Input<ImageSourceType> sourceType;
-        private @Nullable Input<List<String>> storageLocations;
-        private @Nullable Input<List<String>> userLicenses;
+        private @Nullable Output<String> archiveSizeBytes;
+        private @Nullable Output<DeprecationStatusArgs> deprecated;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<String> family;
+        private @Nullable Output<String> forceCreate;
+        private @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
+        private @Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> licenseCodes;
+        private @Nullable Output<List<String>> licenses;
+        private @Nullable Output<Boolean> locked;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<ImageRawDiskArgs> rawDisk;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<RolloutPolicyArgs> rolloutOverride;
+        private @Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState;
+        private @Nullable Output<String> sourceDisk;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
+        private @Nullable Output<String> sourceImage;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
+        private @Nullable Output<String> sourceSnapshot;
+        private @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<ImageSourceType> sourceType;
+        private @Nullable Output<List<String>> storageLocations;
+        private @Nullable Output<List<String>> userLicenses;
 
         public Builder() {
     	      // Empty
@@ -468,273 +468,273 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userLicenses = defaults.userLicenses;
         }
 
-        public Builder archiveSizeBytes(@Nullable Input<String> archiveSizeBytes) {
+        public Builder archiveSizeBytes(@Nullable Output<String> archiveSizeBytes) {
             this.archiveSizeBytes = archiveSizeBytes;
             return this;
         }
 
         public Builder archiveSizeBytes(@Nullable String archiveSizeBytes) {
-            this.archiveSizeBytes = Input.ofNullable(archiveSizeBytes);
+            this.archiveSizeBytes = Output.ofNullable(archiveSizeBytes);
             return this;
         }
 
-        public Builder deprecated(@Nullable Input<DeprecationStatusArgs> deprecated) {
+        public Builder deprecated(@Nullable Output<DeprecationStatusArgs> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
         public Builder deprecated(@Nullable DeprecationStatusArgs deprecated) {
-            this.deprecated = Input.ofNullable(deprecated);
+            this.deprecated = Output.ofNullable(deprecated);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder forceCreate(@Nullable Input<String> forceCreate) {
+        public Builder forceCreate(@Nullable Output<String> forceCreate) {
             this.forceCreate = forceCreate;
             return this;
         }
 
         public Builder forceCreate(@Nullable String forceCreate) {
-            this.forceCreate = Input.ofNullable(forceCreate);
+            this.forceCreate = Output.ofNullable(forceCreate);
             return this;
         }
 
-        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder imageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> imageEncryptionKey) {
+        public Builder imageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> imageEncryptionKey) {
             this.imageEncryptionKey = imageEncryptionKey;
             return this;
         }
 
         public Builder imageEncryptionKey(@Nullable CustomerEncryptionKeyArgs imageEncryptionKey) {
-            this.imageEncryptionKey = Input.ofNullable(imageEncryptionKey);
+            this.imageEncryptionKey = Output.ofNullable(imageEncryptionKey);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder licenseCodes(@Nullable Input<List<String>> licenseCodes) {
+        public Builder licenseCodes(@Nullable Output<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
 
         public Builder licenseCodes(@Nullable List<String> licenseCodes) {
-            this.licenseCodes = Input.ofNullable(licenseCodes);
+            this.licenseCodes = Output.ofNullable(licenseCodes);
             return this;
         }
 
-        public Builder licenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Output<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Input.ofNullable(licenses);
+            this.licenses = Output.ofNullable(licenses);
             return this;
         }
 
-        public Builder locked(@Nullable Input<Boolean> locked) {
+        public Builder locked(@Nullable Output<Boolean> locked) {
             this.locked = locked;
             return this;
         }
 
         public Builder locked(@Nullable Boolean locked) {
-            this.locked = Input.ofNullable(locked);
+            this.locked = Output.ofNullable(locked);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rawDisk(@Nullable Input<ImageRawDiskArgs> rawDisk) {
+        public Builder rawDisk(@Nullable Output<ImageRawDiskArgs> rawDisk) {
             this.rawDisk = rawDisk;
             return this;
         }
 
         public Builder rawDisk(@Nullable ImageRawDiskArgs rawDisk) {
-            this.rawDisk = Input.ofNullable(rawDisk);
+            this.rawDisk = Output.ofNullable(rawDisk);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder rolloutOverride(@Nullable Input<RolloutPolicyArgs> rolloutOverride) {
+        public Builder rolloutOverride(@Nullable Output<RolloutPolicyArgs> rolloutOverride) {
             this.rolloutOverride = rolloutOverride;
             return this;
         }
 
         public Builder rolloutOverride(@Nullable RolloutPolicyArgs rolloutOverride) {
-            this.rolloutOverride = Input.ofNullable(rolloutOverride);
+            this.rolloutOverride = Output.ofNullable(rolloutOverride);
             return this;
         }
 
-        public Builder shieldedInstanceInitialState(@Nullable Input<InitialStateConfigArgs> shieldedInstanceInitialState) {
+        public Builder shieldedInstanceInitialState(@Nullable Output<InitialStateConfigArgs> shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = shieldedInstanceInitialState;
             return this;
         }
 
         public Builder shieldedInstanceInitialState(@Nullable InitialStateConfigArgs shieldedInstanceInitialState) {
-            this.shieldedInstanceInitialState = Input.ofNullable(shieldedInstanceInitialState);
+            this.shieldedInstanceInitialState = Output.ofNullable(shieldedInstanceInitialState);
             return this;
         }
 
-        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Input.ofNullable(sourceDisk);
+            this.sourceDisk = Output.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder sourceDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
 
         public Builder sourceDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Input.ofNullable(sourceDiskEncryptionKey);
+            this.sourceDiskEncryptionKey = Output.ofNullable(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder sourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Output<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Input.ofNullable(sourceImage);
+            this.sourceImage = Output.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder sourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder sourceSnapshot(@Nullable Input<String> sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
+            this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder sourceType(@Nullable Input<ImageSourceType> sourceType) {
+        public Builder sourceType(@Nullable Output<ImageSourceType> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
         public Builder sourceType(@Nullable ImageSourceType sourceType) {
-            this.sourceType = Input.ofNullable(sourceType);
+            this.sourceType = Output.ofNullable(sourceType);
             return this;
         }
 
-        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
         public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Input.ofNullable(storageLocations);
+            this.storageLocations = Output.ofNullable(storageLocations);
             return this;
         }
 
-        public Builder userLicenses(@Nullable Input<List<String>> userLicenses) {
+        public Builder userLicenses(@Nullable Output<List<String>> userLicenses) {
             this.userLicenses = userLicenses;
             return this;
         }
 
         public Builder userLicenses(@Nullable List<String> userLicenses) {
-            this.userLicenses = Input.ofNullable(userLicenses);
+            this.userLicenses = Output.ofNullable(userLicenses);
             return this;
         }
         public ImageArgs build() {

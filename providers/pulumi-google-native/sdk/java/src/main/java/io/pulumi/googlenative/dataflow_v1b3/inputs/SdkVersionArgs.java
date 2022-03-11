@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.SdkVersionSdkSupportStatus;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkSupportStatus")
-      private final @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus;
+      private final @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
-    public Input<SdkVersionSdkSupportStatus> getSdkSupportStatus() {
-        return this.sdkSupportStatus == null ? Input.empty() : this.sdkSupportStatus;
+    public Output<SdkVersionSdkSupportStatus> getSdkSupportStatus() {
+        return this.sdkSupportStatus == null ? Output.empty() : this.sdkSupportStatus;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDisplayName")
-      private final @Nullable Input<String> versionDisplayName;
+      private final @Nullable Output<String> versionDisplayName;
 
-    public Input<String> getVersionDisplayName() {
-        return this.versionDisplayName == null ? Input.empty() : this.versionDisplayName;
+    public Output<String> getVersionDisplayName() {
+        return this.versionDisplayName == null ? Output.empty() : this.versionDisplayName;
     }
 
     public SdkVersionArgs(
-        @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus,
-        @Nullable Input<String> version,
-        @Nullable Input<String> versionDisplayName) {
+        @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus,
+        @Nullable Output<String> version,
+        @Nullable Output<String> versionDisplayName) {
         this.sdkSupportStatus = sdkSupportStatus;
         this.version = version;
         this.versionDisplayName = versionDisplayName;
     }
 
     private SdkVersionArgs() {
-        this.sdkSupportStatus = Input.empty();
-        this.version = Input.empty();
-        this.versionDisplayName = Input.empty();
+        this.sdkSupportStatus = Output.empty();
+        this.version = Output.empty();
+        this.versionDisplayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus;
-        private @Nullable Input<String> version;
-        private @Nullable Input<String> versionDisplayName;
+        private @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
+        private @Nullable Output<String> version;
+        private @Nullable Output<String> versionDisplayName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDisplayName = defaults.versionDisplayName;
         }
 
-        public Builder sdkSupportStatus(@Nullable Input<SdkVersionSdkSupportStatus> sdkSupportStatus) {
+        public Builder sdkSupportStatus(@Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus) {
             this.sdkSupportStatus = sdkSupportStatus;
             return this;
         }
 
         public Builder sdkSupportStatus(@Nullable SdkVersionSdkSupportStatus sdkSupportStatus) {
-            this.sdkSupportStatus = Input.ofNullable(sdkSupportStatus);
+            this.sdkSupportStatus = Output.ofNullable(sdkSupportStatus);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder versionDisplayName(@Nullable Input<String> versionDisplayName) {
+        public Builder versionDisplayName(@Nullable Output<String> versionDisplayName) {
             this.versionDisplayName = versionDisplayName;
             return this;
         }
 
         public Builder versionDisplayName(@Nullable String versionDisplayName) {
-            this.versionDisplayName = Input.ofNullable(versionDisplayName);
+            this.versionDisplayName = Output.ofNullable(versionDisplayName);
             return this;
         }
         public SdkVersionArgs build() {

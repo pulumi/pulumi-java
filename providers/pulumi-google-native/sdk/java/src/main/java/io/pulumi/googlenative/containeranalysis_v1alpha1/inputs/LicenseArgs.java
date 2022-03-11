@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comments")
-      private final @Nullable Input<String> comments;
+      private final @Nullable Output<String> comments;
 
-    public Input<String> getComments() {
-        return this.comments == null ? Input.empty() : this.comments;
+    public Output<String> getComments() {
+        return this.comments == null ? Output.empty() : this.comments;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression")
-      private final @Nullable Input<String> expression;
+      private final @Nullable Output<String> expression;
 
-    public Input<String> getExpression() {
-        return this.expression == null ? Input.empty() : this.expression;
+    public Output<String> getExpression() {
+        return this.expression == null ? Output.empty() : this.expression;
     }
 
     public LicenseArgs(
-        @Nullable Input<String> comments,
-        @Nullable Input<String> expression) {
+        @Nullable Output<String> comments,
+        @Nullable Output<String> expression) {
         this.comments = comments;
         this.expression = expression;
     }
 
     private LicenseArgs() {
-        this.comments = Input.empty();
-        this.expression = Input.empty();
+        this.comments = Output.empty();
+        this.expression = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comments;
-        private @Nullable Input<String> expression;
+        private @Nullable Output<String> comments;
+        private @Nullable Output<String> expression;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expression = defaults.expression;
         }
 
-        public Builder comments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Output<String> comments) {
             this.comments = comments;
             return this;
         }
 
         public Builder comments(@Nullable String comments) {
-            this.comments = Input.ofNullable(comments);
+            this.comments = Output.ofNullable(comments);
             return this;
         }
 
-        public Builder expression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Output<String> expression) {
             this.expression = expression;
             return this;
         }
 
         public Builder expression(@Nullable String expression) {
-            this.expression = Input.ofNullable(expression);
+            this.expression = Output.ofNullable(expression);
             return this;
         }
         public LicenseArgs build() {

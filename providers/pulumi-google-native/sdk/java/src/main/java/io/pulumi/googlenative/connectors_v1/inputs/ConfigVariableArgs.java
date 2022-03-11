@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="boolValue")
-      private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Output<Boolean> boolValue;
 
-    public Input<Boolean> getBoolValue() {
-        return this.boolValue == null ? Input.empty() : this.boolValue;
+    public Output<Boolean> getBoolValue() {
+        return this.boolValue == null ? Output.empty() : this.boolValue;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intValue")
-      private final @Nullable Input<String> intValue;
+      private final @Nullable Output<String> intValue;
 
-    public Input<String> getIntValue() {
-        return this.intValue == null ? Input.empty() : this.intValue;
+    public Output<String> getIntValue() {
+        return this.intValue == null ? Output.empty() : this.intValue;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretValue")
-      private final @Nullable Input<SecretArgs> secretValue;
+      private final @Nullable Output<SecretArgs> secretValue;
 
-    public Input<SecretArgs> getSecretValue() {
-        return this.secretValue == null ? Input.empty() : this.secretValue;
+    public Output<SecretArgs> getSecretValue() {
+        return this.secretValue == null ? Output.empty() : this.secretValue;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     public ConfigVariableArgs(
-        @Nullable Input<Boolean> boolValue,
-        @Nullable Input<String> intValue,
-        @Nullable Input<String> key,
-        @Nullable Input<SecretArgs> secretValue,
-        @Nullable Input<String> stringValue) {
+        @Nullable Output<Boolean> boolValue,
+        @Nullable Output<String> intValue,
+        @Nullable Output<String> key,
+        @Nullable Output<SecretArgs> secretValue,
+        @Nullable Output<String> stringValue) {
         this.boolValue = boolValue;
         this.intValue = intValue;
         this.key = key;
@@ -89,11 +89,11 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigVariableArgs() {
-        this.boolValue = Input.empty();
-        this.intValue = Input.empty();
-        this.key = Input.empty();
-        this.secretValue = Input.empty();
-        this.stringValue = Input.empty();
+        this.boolValue = Output.empty();
+        this.intValue = Output.empty();
+        this.key = Output.empty();
+        this.secretValue = Output.empty();
+        this.stringValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> boolValue;
-        private @Nullable Input<String> intValue;
-        private @Nullable Input<String> key;
-        private @Nullable Input<SecretArgs> secretValue;
-        private @Nullable Input<String> stringValue;
+        private @Nullable Output<Boolean> boolValue;
+        private @Nullable Output<String> intValue;
+        private @Nullable Output<String> key;
+        private @Nullable Output<SecretArgs> secretValue;
+        private @Nullable Output<String> stringValue;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Output<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Input.ofNullable(boolValue);
+            this.boolValue = Output.ofNullable(boolValue);
             return this;
         }
 
-        public Builder intValue(@Nullable Input<String> intValue) {
+        public Builder intValue(@Nullable Output<String> intValue) {
             this.intValue = intValue;
             return this;
         }
 
         public Builder intValue(@Nullable String intValue) {
-            this.intValue = Input.ofNullable(intValue);
+            this.intValue = Output.ofNullable(intValue);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder secretValue(@Nullable Input<SecretArgs> secretValue) {
+        public Builder secretValue(@Nullable Output<SecretArgs> secretValue) {
             this.secretValue = secretValue;
             return this;
         }
 
         public Builder secretValue(@Nullable SecretArgs secretValue) {
-            this.secretValue = Input.ofNullable(secretValue);
+            this.secretValue = Output.ofNullable(secretValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
         public ConfigVariableArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleArgs;
 import java.lang.Boolean;
@@ -25,10 +25,10 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fullyDecodeReservedExpansion")
-      private final @Nullable Input<Boolean> fullyDecodeReservedExpansion;
+      private final @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
-    public Input<Boolean> getFullyDecodeReservedExpansion() {
-        return this.fullyDecodeReservedExpansion == null ? Input.empty() : this.fullyDecodeReservedExpansion;
+    public Output<Boolean> getFullyDecodeReservedExpansion() {
+        return this.fullyDecodeReservedExpansion == null ? Output.empty() : this.fullyDecodeReservedExpansion;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<HttpRuleArgs>> rules;
+      private final @Nullable Output<List<HttpRuleArgs>> rules;
 
-    public Input<List<HttpRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<HttpRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public HttpArgs(
-        @Nullable Input<Boolean> fullyDecodeReservedExpansion,
-        @Nullable Input<List<HttpRuleArgs>> rules) {
+        @Nullable Output<Boolean> fullyDecodeReservedExpansion,
+        @Nullable Output<List<HttpRuleArgs>> rules) {
         this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
         this.rules = rules;
     }
 
     private HttpArgs() {
-        this.fullyDecodeReservedExpansion = Input.empty();
-        this.rules = Input.empty();
+        this.fullyDecodeReservedExpansion = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> fullyDecodeReservedExpansion;
-        private @Nullable Input<List<HttpRuleArgs>> rules;
+        private @Nullable Output<Boolean> fullyDecodeReservedExpansion;
+        private @Nullable Output<List<HttpRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder fullyDecodeReservedExpansion(@Nullable Input<Boolean> fullyDecodeReservedExpansion) {
+        public Builder fullyDecodeReservedExpansion(@Nullable Output<Boolean> fullyDecodeReservedExpansion) {
             this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
             return this;
         }
 
         public Builder fullyDecodeReservedExpansion(@Nullable Boolean fullyDecodeReservedExpansion) {
-            this.fullyDecodeReservedExpansion = Input.ofNullable(fullyDecodeReservedExpansion);
+            this.fullyDecodeReservedExpansion = Output.ofNullable(fullyDecodeReservedExpansion);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<HttpRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<HttpRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<HttpRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public HttpArgs build() {

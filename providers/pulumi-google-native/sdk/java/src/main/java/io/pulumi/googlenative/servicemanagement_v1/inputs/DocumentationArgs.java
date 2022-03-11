@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DocumentationRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.PageArgs;
@@ -26,10 +26,10 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentationRootUrl")
-      private final @Nullable Input<String> documentationRootUrl;
+      private final @Nullable Output<String> documentationRootUrl;
 
-    public Input<String> getDocumentationRootUrl() {
-        return this.documentationRootUrl == null ? Input.empty() : this.documentationRootUrl;
+    public Output<String> getDocumentationRootUrl() {
+        return this.documentationRootUrl == null ? Output.empty() : this.documentationRootUrl;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overview")
-      private final @Nullable Input<String> overview;
+      private final @Nullable Output<String> overview;
 
-    public Input<String> getOverview() {
-        return this.overview == null ? Input.empty() : this.overview;
+    public Output<String> getOverview() {
+        return this.overview == null ? Output.empty() : this.overview;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pages")
-      private final @Nullable Input<List<PageArgs>> pages;
+      private final @Nullable Output<List<PageArgs>> pages;
 
-    public Input<List<PageArgs>> getPages() {
-        return this.pages == null ? Input.empty() : this.pages;
+    public Output<List<PageArgs>> getPages() {
+        return this.pages == null ? Output.empty() : this.pages;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<DocumentationRuleArgs>> rules;
+      private final @Nullable Output<List<DocumentationRuleArgs>> rules;
 
-    public Input<List<DocumentationRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<DocumentationRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRootUrl")
-      private final @Nullable Input<String> serviceRootUrl;
+      private final @Nullable Output<String> serviceRootUrl;
 
-    public Input<String> getServiceRootUrl() {
-        return this.serviceRootUrl == null ? Input.empty() : this.serviceRootUrl;
+    public Output<String> getServiceRootUrl() {
+        return this.serviceRootUrl == null ? Output.empty() : this.serviceRootUrl;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="summary")
-      private final @Nullable Input<String> summary;
+      private final @Nullable Output<String> summary;
 
-    public Input<String> getSummary() {
-        return this.summary == null ? Input.empty() : this.summary;
+    public Output<String> getSummary() {
+        return this.summary == null ? Output.empty() : this.summary;
     }
 
     public DocumentationArgs(
-        @Nullable Input<String> documentationRootUrl,
-        @Nullable Input<String> overview,
-        @Nullable Input<List<PageArgs>> pages,
-        @Nullable Input<List<DocumentationRuleArgs>> rules,
-        @Nullable Input<String> serviceRootUrl,
-        @Nullable Input<String> summary) {
+        @Nullable Output<String> documentationRootUrl,
+        @Nullable Output<String> overview,
+        @Nullable Output<List<PageArgs>> pages,
+        @Nullable Output<List<DocumentationRuleArgs>> rules,
+        @Nullable Output<String> serviceRootUrl,
+        @Nullable Output<String> summary) {
         this.documentationRootUrl = documentationRootUrl;
         this.overview = overview;
         this.pages = pages;
@@ -103,12 +103,12 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentationArgs() {
-        this.documentationRootUrl = Input.empty();
-        this.overview = Input.empty();
-        this.pages = Input.empty();
-        this.rules = Input.empty();
-        this.serviceRootUrl = Input.empty();
-        this.summary = Input.empty();
+        this.documentationRootUrl = Output.empty();
+        this.overview = Output.empty();
+        this.pages = Output.empty();
+        this.rules = Output.empty();
+        this.serviceRootUrl = Output.empty();
+        this.summary = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> documentationRootUrl;
-        private @Nullable Input<String> overview;
-        private @Nullable Input<List<PageArgs>> pages;
-        private @Nullable Input<List<DocumentationRuleArgs>> rules;
-        private @Nullable Input<String> serviceRootUrl;
-        private @Nullable Input<String> summary;
+        private @Nullable Output<String> documentationRootUrl;
+        private @Nullable Output<String> overview;
+        private @Nullable Output<List<PageArgs>> pages;
+        private @Nullable Output<List<DocumentationRuleArgs>> rules;
+        private @Nullable Output<String> serviceRootUrl;
+        private @Nullable Output<String> summary;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.summary = defaults.summary;
         }
 
-        public Builder documentationRootUrl(@Nullable Input<String> documentationRootUrl) {
+        public Builder documentationRootUrl(@Nullable Output<String> documentationRootUrl) {
             this.documentationRootUrl = documentationRootUrl;
             return this;
         }
 
         public Builder documentationRootUrl(@Nullable String documentationRootUrl) {
-            this.documentationRootUrl = Input.ofNullable(documentationRootUrl);
+            this.documentationRootUrl = Output.ofNullable(documentationRootUrl);
             return this;
         }
 
-        public Builder overview(@Nullable Input<String> overview) {
+        public Builder overview(@Nullable Output<String> overview) {
             this.overview = overview;
             return this;
         }
 
         public Builder overview(@Nullable String overview) {
-            this.overview = Input.ofNullable(overview);
+            this.overview = Output.ofNullable(overview);
             return this;
         }
 
-        public Builder pages(@Nullable Input<List<PageArgs>> pages) {
+        public Builder pages(@Nullable Output<List<PageArgs>> pages) {
             this.pages = pages;
             return this;
         }
 
         public Builder pages(@Nullable List<PageArgs> pages) {
-            this.pages = Input.ofNullable(pages);
+            this.pages = Output.ofNullable(pages);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<DocumentationRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<DocumentationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<DocumentationRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder serviceRootUrl(@Nullable Input<String> serviceRootUrl) {
+        public Builder serviceRootUrl(@Nullable Output<String> serviceRootUrl) {
             this.serviceRootUrl = serviceRootUrl;
             return this;
         }
 
         public Builder serviceRootUrl(@Nullable String serviceRootUrl) {
-            this.serviceRootUrl = Input.ofNullable(serviceRootUrl);
+            this.serviceRootUrl = Output.ofNullable(serviceRootUrl);
             return this;
         }
 
-        public Builder summary(@Nullable Input<String> summary) {
+        public Builder summary(@Nullable Output<String> summary) {
             this.summary = summary;
             return this;
         }
 
         public Builder summary(@Nullable String summary) {
-            this.summary = Input.ofNullable(summary);
+            this.summary = Output.ofNullable(summary);
             return this;
         }
         public DocumentationArgs build() {

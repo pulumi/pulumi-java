@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.TemplateContentsInterpreter;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ImportFileArgs;
@@ -26,10 +26,10 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="imports")
-      private final @Nullable Input<List<ImportFileArgs>> imports;
+      private final @Nullable Output<List<ImportFileArgs>> imports;
 
-    public Input<List<ImportFileArgs>> getImports() {
-        return this.imports == null ? Input.empty() : this.imports;
+    public Output<List<ImportFileArgs>> getImports() {
+        return this.imports == null ? Output.empty() : this.imports;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interpreter")
-      private final @Nullable Input<TemplateContentsInterpreter> interpreter;
+      private final @Nullable Output<TemplateContentsInterpreter> interpreter;
 
-    public Input<TemplateContentsInterpreter> getInterpreter() {
-        return this.interpreter == null ? Input.empty() : this.interpreter;
+    public Output<TemplateContentsInterpreter> getInterpreter() {
+        return this.interpreter == null ? Output.empty() : this.interpreter;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mainTemplate")
-      private final @Nullable Input<String> mainTemplate;
+      private final @Nullable Output<String> mainTemplate;
 
-    public Input<String> getMainTemplate() {
-        return this.mainTemplate == null ? Input.empty() : this.mainTemplate;
+    public Output<String> getMainTemplate() {
+        return this.mainTemplate == null ? Output.empty() : this.mainTemplate;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="template")
-      private final @Nullable Input<String> template;
+      private final @Nullable Output<String> template;
 
-    public Input<String> getTemplate() {
-        return this.template == null ? Input.empty() : this.template;
+    public Output<String> getTemplate() {
+        return this.template == null ? Output.empty() : this.template;
     }
 
     public TemplateContentsArgs(
-        @Nullable Input<List<ImportFileArgs>> imports,
-        @Nullable Input<TemplateContentsInterpreter> interpreter,
-        @Nullable Input<String> mainTemplate,
-        @Nullable Input<String> schema,
-        @Nullable Input<String> template) {
+        @Nullable Output<List<ImportFileArgs>> imports,
+        @Nullable Output<TemplateContentsInterpreter> interpreter,
+        @Nullable Output<String> mainTemplate,
+        @Nullable Output<String> schema,
+        @Nullable Output<String> template) {
         this.imports = imports;
         this.interpreter = interpreter;
         this.mainTemplate = mainTemplate;
@@ -90,11 +90,11 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TemplateContentsArgs() {
-        this.imports = Input.empty();
-        this.interpreter = Input.empty();
-        this.mainTemplate = Input.empty();
-        this.schema = Input.empty();
-        this.template = Input.empty();
+        this.imports = Output.empty();
+        this.interpreter = Output.empty();
+        this.mainTemplate = Output.empty();
+        this.schema = Output.empty();
+        this.template = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImportFileArgs>> imports;
-        private @Nullable Input<TemplateContentsInterpreter> interpreter;
-        private @Nullable Input<String> mainTemplate;
-        private @Nullable Input<String> schema;
-        private @Nullable Input<String> template;
+        private @Nullable Output<List<ImportFileArgs>> imports;
+        private @Nullable Output<TemplateContentsInterpreter> interpreter;
+        private @Nullable Output<String> mainTemplate;
+        private @Nullable Output<String> schema;
+        private @Nullable Output<String> template;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
     	      this.template = defaults.template;
         }
 
-        public Builder imports(@Nullable Input<List<ImportFileArgs>> imports) {
+        public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Input.ofNullable(imports);
+            this.imports = Output.ofNullable(imports);
             return this;
         }
 
-        public Builder interpreter(@Nullable Input<TemplateContentsInterpreter> interpreter) {
+        public Builder interpreter(@Nullable Output<TemplateContentsInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
         public Builder interpreter(@Nullable TemplateContentsInterpreter interpreter) {
-            this.interpreter = Input.ofNullable(interpreter);
+            this.interpreter = Output.ofNullable(interpreter);
             return this;
         }
 
-        public Builder mainTemplate(@Nullable Input<String> mainTemplate) {
+        public Builder mainTemplate(@Nullable Output<String> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
         public Builder mainTemplate(@Nullable String mainTemplate) {
-            this.mainTemplate = Input.ofNullable(mainTemplate);
+            this.mainTemplate = Output.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder template(@Nullable Input<String> template) {
+        public Builder template(@Nullable Output<String> template) {
             this.template = template;
             return this;
         }
 
         public Builder template(@Nullable String template) {
-            this.template = Input.ofNullable(template);
+            this.template = Output.ofNullable(template);
             return this;
         }
         public TemplateContentsArgs build() {

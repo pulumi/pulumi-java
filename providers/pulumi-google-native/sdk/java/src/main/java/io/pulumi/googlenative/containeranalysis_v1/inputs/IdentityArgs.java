@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-      private final @Nullable Input<Integer> revision;
+      private final @Nullable Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
-        return this.revision == null ? Input.empty() : this.revision;
+    public Output<Integer> getRevision() {
+        return this.revision == null ? Output.empty() : this.revision;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateId")
-      private final @Nullable Input<String> updateId;
+      private final @Nullable Output<String> updateId;
 
-    public Input<String> getUpdateId() {
-        return this.updateId == null ? Input.empty() : this.updateId;
+    public Output<String> getUpdateId() {
+        return this.updateId == null ? Output.empty() : this.updateId;
     }
 
     public IdentityArgs(
-        @Nullable Input<Integer> revision,
-        @Nullable Input<String> updateId) {
+        @Nullable Output<Integer> revision,
+        @Nullable Output<String> updateId) {
         this.revision = revision;
         this.updateId = updateId;
     }
 
     private IdentityArgs() {
-        this.revision = Input.empty();
-        this.updateId = Input.empty();
+        this.revision = Output.empty();
+        this.updateId = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> revision;
-        private @Nullable Input<String> updateId;
+        private @Nullable Output<Integer> revision;
+        private @Nullable Output<String> updateId;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateId = defaults.updateId;
         }
 
-        public Builder revision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Output<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Input.ofNullable(revision);
+            this.revision = Output.ofNullable(revision);
             return this;
         }
 
-        public Builder updateId(@Nullable Input<String> updateId) {
+        public Builder updateId(@Nullable Output<String> updateId) {
             this.updateId = updateId;
             return this;
         }
 
         public Builder updateId(@Nullable String updateId) {
-            this.updateId = Input.ofNullable(updateId);
+            this.updateId = Output.ofNullable(updateId);
             return this;
         }
         public IdentityArgs build() {

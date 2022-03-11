@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleLocation")
-      private final @Nullable Input<FileReferenceArgs> bundleLocation;
+      private final @Nullable Output<FileReferenceArgs> bundleLocation;
 
-    public Input<FileReferenceArgs> getBundleLocation() {
-        return this.bundleLocation == null ? Input.empty() : this.bundleLocation;
+    public Output<FileReferenceArgs> getBundleLocation() {
+        return this.bundleLocation == null ? Output.empty() : this.bundleLocation;
     }
 
-    public AppBundleArgs(@Nullable Input<FileReferenceArgs> bundleLocation) {
+    public AppBundleArgs(@Nullable Output<FileReferenceArgs> bundleLocation) {
         this.bundleLocation = bundleLocation;
     }
 
     private AppBundleArgs() {
-        this.bundleLocation = Input.empty();
+        this.bundleLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FileReferenceArgs> bundleLocation;
+        private @Nullable Output<FileReferenceArgs> bundleLocation;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bundleLocation = defaults.bundleLocation;
         }
 
-        public Builder bundleLocation(@Nullable Input<FileReferenceArgs> bundleLocation) {
+        public Builder bundleLocation(@Nullable Output<FileReferenceArgs> bundleLocation) {
             this.bundleLocation = bundleLocation;
             return this;
         }
 
         public Builder bundleLocation(@Nullable FileReferenceArgs bundleLocation) {
-            this.bundleLocation = Input.ofNullable(bundleLocation);
+            this.bundleLocation = Output.ofNullable(bundleLocation);
             return this;
         }
         public AppBundleArgs build() {

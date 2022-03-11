@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strength")
-      private final @Nullable Input<Double> strength;
+      private final @Nullable Output<Double> strength;
 
-    public Input<Double> getStrength() {
-        return this.strength == null ? Input.empty() : this.strength;
+    public Output<Double> getStrength() {
+        return this.strength == null ? Output.empty() : this.strength;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tune")
-      private final @Nullable Input<String> tune;
+      private final @Nullable Output<String> tune;
 
-    public Input<String> getTune() {
-        return this.tune == null ? Input.empty() : this.tune;
+    public Output<String> getTune() {
+        return this.tune == null ? Output.empty() : this.tune;
     }
 
     public DenoiseArgs(
-        @Nullable Input<Double> strength,
-        @Nullable Input<String> tune) {
+        @Nullable Output<Double> strength,
+        @Nullable Output<String> tune) {
         this.strength = strength;
         this.tune = tune;
     }
 
     private DenoiseArgs() {
-        this.strength = Input.empty();
-        this.tune = Input.empty();
+        this.strength = Output.empty();
+        this.tune = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> strength;
-        private @Nullable Input<String> tune;
+        private @Nullable Output<Double> strength;
+        private @Nullable Output<String> tune;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tune = defaults.tune;
         }
 
-        public Builder strength(@Nullable Input<Double> strength) {
+        public Builder strength(@Nullable Output<Double> strength) {
             this.strength = strength;
             return this;
         }
 
         public Builder strength(@Nullable Double strength) {
-            this.strength = Input.ofNullable(strength);
+            this.strength = Output.ofNullable(strength);
             return this;
         }
 
-        public Builder tune(@Nullable Input<String> tune) {
+        public Builder tune(@Nullable Output<String> tune) {
             this.tune = tune;
             return this;
         }
 
         public Builder tune(@Nullable String tune) {
-            this.tune = Input.ofNullable(tune);
+            this.tune = Output.ofNullable(tune);
             return this;
         }
         public DenoiseArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="create")
-      private final @Nullable Input<String> create;
+      private final @Nullable Output<String> create;
 
-    public Input<String> getCreate() {
-        return this.create == null ? Input.empty() : this.create;
+    public Output<String> getCreate() {
+        return this.create == null ? Output.empty() : this.create;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delete")
-      private final @Nullable Input<String> delete;
+      private final @Nullable Output<String> delete;
 
-    public Input<String> getDelete() {
-        return this.delete == null ? Input.empty() : this.delete;
+    public Output<String> getDelete() {
+        return this.delete == null ? Output.empty() : this.delete;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="get")
-      private final @Nullable Input<String> get;
+      private final @Nullable Output<String> get;
 
-    public Input<String> getGet() {
-        return this.get == null ? Input.empty() : this.get;
+    public Output<String> getGet() {
+        return this.get == null ? Output.empty() : this.get;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setIamPolicy")
-      private final @Nullable Input<String> setIamPolicy;
+      private final @Nullable Output<String> setIamPolicy;
 
-    public Input<String> getSetIamPolicy() {
-        return this.setIamPolicy == null ? Input.empty() : this.setIamPolicy;
+    public Output<String> getSetIamPolicy() {
+        return this.setIamPolicy == null ? Output.empty() : this.setIamPolicy;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="update")
-      private final @Nullable Input<String> update;
+      private final @Nullable Output<String> update;
 
-    public Input<String> getUpdate() {
-        return this.update == null ? Input.empty() : this.update;
+    public Output<String> getUpdate() {
+        return this.update == null ? Output.empty() : this.update;
     }
 
     public MethodMapArgs(
-        @Nullable Input<String> create,
-        @Nullable Input<String> delete,
-        @Nullable Input<String> get,
-        @Nullable Input<String> setIamPolicy,
-        @Nullable Input<String> update) {
+        @Nullable Output<String> create,
+        @Nullable Output<String> delete,
+        @Nullable Output<String> get,
+        @Nullable Output<String> setIamPolicy,
+        @Nullable Output<String> update) {
         this.create = create;
         this.delete = delete;
         this.get = get;
@@ -87,11 +87,11 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodMapArgs() {
-        this.create = Input.empty();
-        this.delete = Input.empty();
-        this.get = Input.empty();
-        this.setIamPolicy = Input.empty();
-        this.update = Input.empty();
+        this.create = Output.empty();
+        this.delete = Output.empty();
+        this.get = Output.empty();
+        this.setIamPolicy = Output.empty();
+        this.update = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> create;
-        private @Nullable Input<String> delete;
-        private @Nullable Input<String> get;
-        private @Nullable Input<String> setIamPolicy;
-        private @Nullable Input<String> update;
+        private @Nullable Output<String> create;
+        private @Nullable Output<String> delete;
+        private @Nullable Output<String> get;
+        private @Nullable Output<String> setIamPolicy;
+        private @Nullable Output<String> update;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.update = defaults.update;
         }
 
-        public Builder create(@Nullable Input<String> create) {
+        public Builder create(@Nullable Output<String> create) {
             this.create = create;
             return this;
         }
 
         public Builder create(@Nullable String create) {
-            this.create = Input.ofNullable(create);
+            this.create = Output.ofNullable(create);
             return this;
         }
 
-        public Builder delete(@Nullable Input<String> delete) {
+        public Builder delete(@Nullable Output<String> delete) {
             this.delete = delete;
             return this;
         }
 
         public Builder delete(@Nullable String delete) {
-            this.delete = Input.ofNullable(delete);
+            this.delete = Output.ofNullable(delete);
             return this;
         }
 
-        public Builder get(@Nullable Input<String> get) {
+        public Builder get(@Nullable Output<String> get) {
             this.get = get;
             return this;
         }
 
         public Builder get(@Nullable String get) {
-            this.get = Input.ofNullable(get);
+            this.get = Output.ofNullable(get);
             return this;
         }
 
-        public Builder setIamPolicy(@Nullable Input<String> setIamPolicy) {
+        public Builder setIamPolicy(@Nullable Output<String> setIamPolicy) {
             this.setIamPolicy = setIamPolicy;
             return this;
         }
 
         public Builder setIamPolicy(@Nullable String setIamPolicy) {
-            this.setIamPolicy = Input.ofNullable(setIamPolicy);
+            this.setIamPolicy = Output.ofNullable(setIamPolicy);
             return this;
         }
 
-        public Builder update(@Nullable Input<String> update) {
+        public Builder update(@Nullable Output<String> update) {
             this.update = update;
             return this;
         }
 
         public Builder update(@Nullable String update) {
-            this.update = Input.ofNullable(update);
+            this.update = Output.ofNullable(update);
             return this;
         }
         public MethodMapArgs build() {

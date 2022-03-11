@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.enums.DynamicGroupQueryResourceType;
 import java.lang.String;
@@ -24,29 +24,29 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     @InputImport(name="resourceType")
-      private final @Nullable Input<DynamicGroupQueryResourceType> resourceType;
+      private final @Nullable Output<DynamicGroupQueryResourceType> resourceType;
 
-    public Input<DynamicGroupQueryResourceType> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<DynamicGroupQueryResourceType> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public DynamicGroupQueryArgs(
-        @Nullable Input<String> query,
-        @Nullable Input<DynamicGroupQueryResourceType> resourceType) {
+        @Nullable Output<String> query,
+        @Nullable Output<DynamicGroupQueryResourceType> resourceType) {
         this.query = query;
         this.resourceType = resourceType;
     }
 
     private DynamicGroupQueryArgs() {
-        this.query = Input.empty();
-        this.resourceType = Input.empty();
+        this.query = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> query;
-        private @Nullable Input<DynamicGroupQueryResourceType> resourceType;
+        private @Nullable Output<String> query;
+        private @Nullable Output<DynamicGroupQueryResourceType> resourceType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<DynamicGroupQueryResourceType> resourceType) {
+        public Builder resourceType(@Nullable Output<DynamicGroupQueryResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable DynamicGroupQueryResourceType resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public DynamicGroupQueryArgs build() {

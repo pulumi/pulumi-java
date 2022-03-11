@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.ResourceGroupResourceType;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<ResourceGroupResourceType> resourceType;
+      private final @Nullable Output<ResourceGroupResourceType> resourceType;
 
-    public Input<ResourceGroupResourceType> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<ResourceGroupResourceType> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public ResourceGroupArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<ResourceGroupResourceType> resourceType) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<ResourceGroupResourceType> resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }
 
     private ResourceGroupArgs() {
-        this.groupId = Input.empty();
-        this.resourceType = Input.empty();
+        this.groupId = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<ResourceGroupResourceType> resourceType;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<ResourceGroupResourceType> resourceType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<ResourceGroupResourceType> resourceType) {
+        public Builder resourceType(@Nullable Output<ResourceGroupResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable ResourceGroupResourceType resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public ResourceGroupArgs build() {

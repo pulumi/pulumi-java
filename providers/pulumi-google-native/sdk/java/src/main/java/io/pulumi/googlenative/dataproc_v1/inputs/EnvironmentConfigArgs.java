@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
@@ -24,10 +24,10 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="executionConfig")
-      private final @Nullable Input<ExecutionConfigArgs> executionConfig;
+      private final @Nullable Output<ExecutionConfigArgs> executionConfig;
 
-    public Input<ExecutionConfigArgs> getExecutionConfig() {
-        return this.executionConfig == null ? Input.empty() : this.executionConfig;
+    public Output<ExecutionConfigArgs> getExecutionConfig() {
+        return this.executionConfig == null ? Output.empty() : this.executionConfig;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peripheralsConfig")
-      private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
+      private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
-    public Input<PeripheralsConfigArgs> getPeripheralsConfig() {
-        return this.peripheralsConfig == null ? Input.empty() : this.peripheralsConfig;
+    public Output<PeripheralsConfigArgs> getPeripheralsConfig() {
+        return this.peripheralsConfig == null ? Output.empty() : this.peripheralsConfig;
     }
 
     public EnvironmentConfigArgs(
-        @Nullable Input<ExecutionConfigArgs> executionConfig,
-        @Nullable Input<PeripheralsConfigArgs> peripheralsConfig) {
+        @Nullable Output<ExecutionConfigArgs> executionConfig,
+        @Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
         this.executionConfig = executionConfig;
         this.peripheralsConfig = peripheralsConfig;
     }
 
     private EnvironmentConfigArgs() {
-        this.executionConfig = Input.empty();
-        this.peripheralsConfig = Input.empty();
+        this.executionConfig = Output.empty();
+        this.peripheralsConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ExecutionConfigArgs> executionConfig;
-        private @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
+        private @Nullable Output<ExecutionConfigArgs> executionConfig;
+        private @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.peripheralsConfig = defaults.peripheralsConfig;
         }
 
-        public Builder executionConfig(@Nullable Input<ExecutionConfigArgs> executionConfig) {
+        public Builder executionConfig(@Nullable Output<ExecutionConfigArgs> executionConfig) {
             this.executionConfig = executionConfig;
             return this;
         }
 
         public Builder executionConfig(@Nullable ExecutionConfigArgs executionConfig) {
-            this.executionConfig = Input.ofNullable(executionConfig);
+            this.executionConfig = Output.ofNullable(executionConfig);
             return this;
         }
 
-        public Builder peripheralsConfig(@Nullable Input<PeripheralsConfigArgs> peripheralsConfig) {
+        public Builder peripheralsConfig(@Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
             this.peripheralsConfig = peripheralsConfig;
             return this;
         }
 
         public Builder peripheralsConfig(@Nullable PeripheralsConfigArgs peripheralsConfig) {
-            this.peripheralsConfig = Input.ofNullable(peripheralsConfig);
+            this.peripheralsConfig = Output.ofNullable(peripheralsConfig);
             return this;
         }
         public EnvironmentConfigArgs build() {

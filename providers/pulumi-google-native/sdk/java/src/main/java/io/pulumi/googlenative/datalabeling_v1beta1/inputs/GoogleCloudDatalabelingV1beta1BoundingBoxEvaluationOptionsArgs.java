@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
      * 
      */
     @InputImport(name="iouThreshold")
-      private final @Nullable Input<Double> iouThreshold;
+      private final @Nullable Output<Double> iouThreshold;
 
-    public Input<Double> getIouThreshold() {
-        return this.iouThreshold == null ? Input.empty() : this.iouThreshold;
+    public Output<Double> getIouThreshold() {
+        return this.iouThreshold == null ? Output.empty() : this.iouThreshold;
     }
 
-    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(@Nullable Input<Double> iouThreshold) {
+    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(@Nullable Output<Double> iouThreshold) {
         this.iouThreshold = iouThreshold;
     }
 
     private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs() {
-        this.iouThreshold = Input.empty();
+        this.iouThreshold = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> iouThreshold;
+        private @Nullable Output<Double> iouThreshold;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
     	      this.iouThreshold = defaults.iouThreshold;
         }
 
-        public Builder iouThreshold(@Nullable Input<Double> iouThreshold) {
+        public Builder iouThreshold(@Nullable Output<Double> iouThreshold) {
             this.iouThreshold = iouThreshold;
             return this;
         }
 
         public Builder iouThreshold(@Nullable Double iouThreshold) {
-            this.iouThreshold = Input.ofNullable(iouThreshold);
+            this.iouThreshold = Output.ofNullable(iouThreshold);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {

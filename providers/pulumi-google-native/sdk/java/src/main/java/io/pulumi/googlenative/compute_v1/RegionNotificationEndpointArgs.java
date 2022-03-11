@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.NotificationEndpointGrpcSettingsArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="grpcSettings")
-      private final @Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings;
+      private final @Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings;
 
-    public Input<NotificationEndpointGrpcSettingsArgs> getGrpcSettings() {
-        return this.grpcSettings == null ? Input.empty() : this.grpcSettings;
+    public Output<NotificationEndpointGrpcSettingsArgs> getGrpcSettings() {
+        return this.grpcSettings == null ? Output.empty() : this.grpcSettings;
     }
 
     /**
@@ -42,40 +42,40 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     public RegionNotificationEndpointArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> region,
-        @Nullable Input<String> requestId) {
+        @Nullable Output<String> description,
+        @Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> region,
+        @Nullable Output<String> requestId) {
         this.description = description;
         this.grpcSettings = grpcSettings;
         this.name = name;
@@ -85,12 +85,12 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
     }
 
     private RegionNotificationEndpointArgs() {
-        this.description = Input.empty();
-        this.grpcSettings = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.requestId = Input.empty();
+        this.description = Output.empty();
+        this.grpcSettings = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.requestId = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> region;
-        private @Nullable Input<String> requestId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> region;
+        private @Nullable Output<String> requestId;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder grpcSettings(@Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings) {
+        public Builder grpcSettings(@Nullable Output<NotificationEndpointGrpcSettingsArgs> grpcSettings) {
             this.grpcSettings = grpcSettings;
             return this;
         }
 
         public Builder grpcSettings(@Nullable NotificationEndpointGrpcSettingsArgs grpcSettings) {
-            this.grpcSettings = Input.ofNullable(grpcSettings);
+            this.grpcSettings = Output.ofNullable(grpcSettings);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
         public RegionNotificationEndpointArgs build() {

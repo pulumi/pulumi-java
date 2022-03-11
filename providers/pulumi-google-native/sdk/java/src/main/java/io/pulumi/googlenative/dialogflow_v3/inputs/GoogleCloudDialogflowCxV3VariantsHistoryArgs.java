@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
      * 
      */
     @InputImport(name="versionVariants")
-      private final @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+      private final @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
-    public Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
-        return this.versionVariants == null ? Input.empty() : this.versionVariants;
+    public Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
+        return this.versionVariants == null ? Output.empty() : this.versionVariants;
     }
 
     public GoogleCloudDialogflowCxV3VariantsHistoryArgs(
-        @Nullable Input<String> updateTime,
-        @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
+        @Nullable Output<String> updateTime,
+        @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
         this.updateTime = updateTime;
         this.versionVariants = versionVariants;
     }
 
     private GoogleCloudDialogflowCxV3VariantsHistoryArgs() {
-        this.updateTime = Input.empty();
-        this.versionVariants = Input.empty();
+        this.updateTime = Output.empty();
+        this.versionVariants = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> updateTime;
-        private @Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
+        private @Nullable Output<String> updateTime;
+        private @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
 
-        public Builder versionVariants(@Nullable Input<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
+        public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
             this.versionVariants = versionVariants;
             return this;
         }
 
         public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
-            this.versionVariants = Input.ofNullable(versionVariants);
+            this.versionVariants = Output.ofNullable(versionVariants);
             return this;
         }
         public GoogleCloudDialogflowCxV3VariantsHistoryArgs build() {

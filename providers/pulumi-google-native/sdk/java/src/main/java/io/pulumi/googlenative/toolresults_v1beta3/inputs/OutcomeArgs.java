@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.OutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailArgs;
@@ -27,10 +27,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureDetail")
-      private final @Nullable Input<FailureDetailArgs> failureDetail;
+      private final @Nullable Output<FailureDetailArgs> failureDetail;
 
-    public Input<FailureDetailArgs> getFailureDetail() {
-        return this.failureDetail == null ? Input.empty() : this.failureDetail;
+    public Output<FailureDetailArgs> getFailureDetail() {
+        return this.failureDetail == null ? Output.empty() : this.failureDetail;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inconclusiveDetail")
-      private final @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail;
+      private final @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
 
-    public Input<InconclusiveDetailArgs> getInconclusiveDetail() {
-        return this.inconclusiveDetail == null ? Input.empty() : this.inconclusiveDetail;
+    public Output<InconclusiveDetailArgs> getInconclusiveDetail() {
+        return this.inconclusiveDetail == null ? Output.empty() : this.inconclusiveDetail;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skippedDetail")
-      private final @Nullable Input<SkippedDetailArgs> skippedDetail;
+      private final @Nullable Output<SkippedDetailArgs> skippedDetail;
 
-    public Input<SkippedDetailArgs> getSkippedDetail() {
-        return this.skippedDetail == null ? Input.empty() : this.skippedDetail;
+    public Output<SkippedDetailArgs> getSkippedDetail() {
+        return this.skippedDetail == null ? Output.empty() : this.skippedDetail;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successDetail")
-      private final @Nullable Input<SuccessDetailArgs> successDetail;
+      private final @Nullable Output<SuccessDetailArgs> successDetail;
 
-    public Input<SuccessDetailArgs> getSuccessDetail() {
-        return this.successDetail == null ? Input.empty() : this.successDetail;
+    public Output<SuccessDetailArgs> getSuccessDetail() {
+        return this.successDetail == null ? Output.empty() : this.successDetail;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="summary")
-      private final @Nullable Input<OutcomeSummary> summary;
+      private final @Nullable Output<OutcomeSummary> summary;
 
-    public Input<OutcomeSummary> getSummary() {
-        return this.summary == null ? Input.empty() : this.summary;
+    public Output<OutcomeSummary> getSummary() {
+        return this.summary == null ? Output.empty() : this.summary;
     }
 
     public OutcomeArgs(
-        @Nullable Input<FailureDetailArgs> failureDetail,
-        @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail,
-        @Nullable Input<SkippedDetailArgs> skippedDetail,
-        @Nullable Input<SuccessDetailArgs> successDetail,
-        @Nullable Input<OutcomeSummary> summary) {
+        @Nullable Output<FailureDetailArgs> failureDetail,
+        @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail,
+        @Nullable Output<SkippedDetailArgs> skippedDetail,
+        @Nullable Output<SuccessDetailArgs> successDetail,
+        @Nullable Output<OutcomeSummary> summary) {
         this.failureDetail = failureDetail;
         this.inconclusiveDetail = inconclusiveDetail;
         this.skippedDetail = skippedDetail;
@@ -91,11 +91,11 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutcomeArgs() {
-        this.failureDetail = Input.empty();
-        this.inconclusiveDetail = Input.empty();
-        this.skippedDetail = Input.empty();
-        this.successDetail = Input.empty();
-        this.summary = Input.empty();
+        this.failureDetail = Output.empty();
+        this.inconclusiveDetail = Output.empty();
+        this.skippedDetail = Output.empty();
+        this.successDetail = Output.empty();
+        this.summary = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<FailureDetailArgs> failureDetail;
-        private @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail;
-        private @Nullable Input<SkippedDetailArgs> skippedDetail;
-        private @Nullable Input<SuccessDetailArgs> successDetail;
-        private @Nullable Input<OutcomeSummary> summary;
+        private @Nullable Output<FailureDetailArgs> failureDetail;
+        private @Nullable Output<InconclusiveDetailArgs> inconclusiveDetail;
+        private @Nullable Output<SkippedDetailArgs> skippedDetail;
+        private @Nullable Output<SuccessDetailArgs> successDetail;
+        private @Nullable Output<OutcomeSummary> summary;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.summary = defaults.summary;
         }
 
-        public Builder failureDetail(@Nullable Input<FailureDetailArgs> failureDetail) {
+        public Builder failureDetail(@Nullable Output<FailureDetailArgs> failureDetail) {
             this.failureDetail = failureDetail;
             return this;
         }
 
         public Builder failureDetail(@Nullable FailureDetailArgs failureDetail) {
-            this.failureDetail = Input.ofNullable(failureDetail);
+            this.failureDetail = Output.ofNullable(failureDetail);
             return this;
         }
 
-        public Builder inconclusiveDetail(@Nullable Input<InconclusiveDetailArgs> inconclusiveDetail) {
+        public Builder inconclusiveDetail(@Nullable Output<InconclusiveDetailArgs> inconclusiveDetail) {
             this.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
 
         public Builder inconclusiveDetail(@Nullable InconclusiveDetailArgs inconclusiveDetail) {
-            this.inconclusiveDetail = Input.ofNullable(inconclusiveDetail);
+            this.inconclusiveDetail = Output.ofNullable(inconclusiveDetail);
             return this;
         }
 
-        public Builder skippedDetail(@Nullable Input<SkippedDetailArgs> skippedDetail) {
+        public Builder skippedDetail(@Nullable Output<SkippedDetailArgs> skippedDetail) {
             this.skippedDetail = skippedDetail;
             return this;
         }
 
         public Builder skippedDetail(@Nullable SkippedDetailArgs skippedDetail) {
-            this.skippedDetail = Input.ofNullable(skippedDetail);
+            this.skippedDetail = Output.ofNullable(skippedDetail);
             return this;
         }
 
-        public Builder successDetail(@Nullable Input<SuccessDetailArgs> successDetail) {
+        public Builder successDetail(@Nullable Output<SuccessDetailArgs> successDetail) {
             this.successDetail = successDetail;
             return this;
         }
 
         public Builder successDetail(@Nullable SuccessDetailArgs successDetail) {
-            this.successDetail = Input.ofNullable(successDetail);
+            this.successDetail = Output.ofNullable(successDetail);
             return this;
         }
 
-        public Builder summary(@Nullable Input<OutcomeSummary> summary) {
+        public Builder summary(@Nullable Output<OutcomeSummary> summary) {
             this.summary = summary;
             return this;
         }
 
         public Builder summary(@Nullable OutcomeSummary summary) {
-            this.summary = Input.ofNullable(summary);
+            this.summary = Output.ofNullable(summary);
             return this;
         }
         public OutcomeArgs build() {

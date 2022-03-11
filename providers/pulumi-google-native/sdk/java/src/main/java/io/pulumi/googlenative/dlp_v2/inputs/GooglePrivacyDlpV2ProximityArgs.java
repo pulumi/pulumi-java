@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowAfter")
-      private final @Nullable Input<Integer> windowAfter;
+      private final @Nullable Output<Integer> windowAfter;
 
-    public Input<Integer> getWindowAfter() {
-        return this.windowAfter == null ? Input.empty() : this.windowAfter;
+    public Output<Integer> getWindowAfter() {
+        return this.windowAfter == null ? Output.empty() : this.windowAfter;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowBefore")
-      private final @Nullable Input<Integer> windowBefore;
+      private final @Nullable Output<Integer> windowBefore;
 
-    public Input<Integer> getWindowBefore() {
-        return this.windowBefore == null ? Input.empty() : this.windowBefore;
+    public Output<Integer> getWindowBefore() {
+        return this.windowBefore == null ? Output.empty() : this.windowBefore;
     }
 
     public GooglePrivacyDlpV2ProximityArgs(
-        @Nullable Input<Integer> windowAfter,
-        @Nullable Input<Integer> windowBefore) {
+        @Nullable Output<Integer> windowAfter,
+        @Nullable Output<Integer> windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }
 
     private GooglePrivacyDlpV2ProximityArgs() {
-        this.windowAfter = Input.empty();
-        this.windowBefore = Input.empty();
+        this.windowAfter = Output.empty();
+        this.windowBefore = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> windowAfter;
-        private @Nullable Input<Integer> windowBefore;
+        private @Nullable Output<Integer> windowAfter;
+        private @Nullable Output<Integer> windowBefore;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder windowAfter(@Nullable Input<Integer> windowAfter) {
+        public Builder windowAfter(@Nullable Output<Integer> windowAfter) {
             this.windowAfter = windowAfter;
             return this;
         }
 
         public Builder windowAfter(@Nullable Integer windowAfter) {
-            this.windowAfter = Input.ofNullable(windowAfter);
+            this.windowAfter = Output.ofNullable(windowAfter);
             return this;
         }
 
-        public Builder windowBefore(@Nullable Input<Integer> windowBefore) {
+        public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
             this.windowBefore = windowBefore;
             return this;
         }
 
         public Builder windowBefore(@Nullable Integer windowBefore) {
-            this.windowBefore = Input.ofNullable(windowBefore);
+            this.windowBefore = Output.ofNullable(windowBefore);
             return this;
         }
         public GooglePrivacyDlpV2ProximityArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleIamV1__AuditLogConfigLogType;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="exemptedMembers")
-      private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Output<List<String>> exemptedMembers;
 
-    public Input<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
+    public Output<List<String>> getExemptedMembers() {
+        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="logType")
-      private final @Nullable Input<GoogleIamV1__AuditLogConfigLogType> logType;
+      private final @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
 
-    public Input<GoogleIamV1__AuditLogConfigLogType> getLogType() {
-        return this.logType == null ? Input.empty() : this.logType;
+    public Output<GoogleIamV1__AuditLogConfigLogType> getLogType() {
+        return this.logType == null ? Output.empty() : this.logType;
     }
 
     public GoogleIamV1__AuditLogConfigArgs(
-        @Nullable Input<List<String>> exemptedMembers,
-        @Nullable Input<GoogleIamV1__AuditLogConfigLogType> logType) {
+        @Nullable Output<List<String>> exemptedMembers,
+        @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }
 
     private GoogleIamV1__AuditLogConfigArgs() {
-        this.exemptedMembers = Input.empty();
-        this.logType = Input.empty();
+        this.exemptedMembers = Output.empty();
+        this.logType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> exemptedMembers;
-        private @Nullable Input<GoogleIamV1__AuditLogConfigLogType> logType;
+        private @Nullable Output<List<String>> exemptedMembers;
+        private @Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleIamV1__AuditLogConfigArgs extends io.pulumi.resources.R
     	      this.logType = defaults.logType;
         }
 
-        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Output<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Input.ofNullable(exemptedMembers);
+            this.exemptedMembers = Output.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder logType(@Nullable Input<GoogleIamV1__AuditLogConfigLogType> logType) {
+        public Builder logType(@Nullable Output<GoogleIamV1__AuditLogConfigLogType> logType) {
             this.logType = logType;
             return this;
         }
 
         public Builder logType(@Nullable GoogleIamV1__AuditLogConfigLogType logType) {
-            this.logType = Input.ofNullable(logType);
+            this.logType = Output.ofNullable(logType);
             return this;
         }
         public GoogleIamV1__AuditLogConfigArgs build() {

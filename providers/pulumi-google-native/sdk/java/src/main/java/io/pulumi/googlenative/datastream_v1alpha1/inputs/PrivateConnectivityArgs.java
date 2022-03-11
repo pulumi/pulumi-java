@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     public static final PrivateConnectivityArgs Empty = new PrivateConnectivityArgs();
 
     @InputImport(name="privateConnectionName")
-      private final @Nullable Input<String> privateConnectionName;
+      private final @Nullable Output<String> privateConnectionName;
 
-    public Input<String> getPrivateConnectionName() {
-        return this.privateConnectionName == null ? Input.empty() : this.privateConnectionName;
+    public Output<String> getPrivateConnectionName() {
+        return this.privateConnectionName == null ? Output.empty() : this.privateConnectionName;
     }
 
-    public PrivateConnectivityArgs(@Nullable Input<String> privateConnectionName) {
+    public PrivateConnectivityArgs(@Nullable Output<String> privateConnectionName) {
         this.privateConnectionName = privateConnectionName;
     }
 
     private PrivateConnectivityArgs() {
-        this.privateConnectionName = Input.empty();
+        this.privateConnectionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> privateConnectionName;
+        private @Nullable Output<String> privateConnectionName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     	      this.privateConnectionName = defaults.privateConnectionName;
         }
 
-        public Builder privateConnectionName(@Nullable Input<String> privateConnectionName) {
+        public Builder privateConnectionName(@Nullable Output<String> privateConnectionName) {
             this.privateConnectionName = privateConnectionName;
             return this;
         }
 
         public Builder privateConnectionName(@Nullable String privateConnectionName) {
-            this.privateConnectionName = Input.ofNullable(privateConnectionName);
+            this.privateConnectionName = Output.ofNullable(privateConnectionName);
             return this;
         }
         public PrivateConnectivityArgs build() {

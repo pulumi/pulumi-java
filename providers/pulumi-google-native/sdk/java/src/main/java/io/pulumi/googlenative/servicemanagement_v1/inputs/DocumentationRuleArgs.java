@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deprecationDescription")
-      private final @Nullable Input<String> deprecationDescription;
+      private final @Nullable Output<String> deprecationDescription;
 
-    public Input<String> getDeprecationDescription() {
-        return this.deprecationDescription == null ? Input.empty() : this.deprecationDescription;
+    public Output<String> getDeprecationDescription() {
+        return this.deprecationDescription == null ? Output.empty() : this.deprecationDescription;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="selector")
-      private final @Nullable Input<String> selector;
+      private final @Nullable Output<String> selector;
 
-    public Input<String> getSelector() {
-        return this.selector == null ? Input.empty() : this.selector;
+    public Output<String> getSelector() {
+        return this.selector == null ? Output.empty() : this.selector;
     }
 
     public DocumentationRuleArgs(
-        @Nullable Input<String> deprecationDescription,
-        @Nullable Input<String> description,
-        @Nullable Input<String> selector) {
+        @Nullable Output<String> deprecationDescription,
+        @Nullable Output<String> description,
+        @Nullable Output<String> selector) {
         this.deprecationDescription = deprecationDescription;
         this.description = description;
         this.selector = selector;
     }
 
     private DocumentationRuleArgs() {
-        this.deprecationDescription = Input.empty();
-        this.description = Input.empty();
-        this.selector = Input.empty();
+        this.deprecationDescription = Output.empty();
+        this.description = Output.empty();
+        this.selector = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deprecationDescription;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> selector;
+        private @Nullable Output<String> deprecationDescription;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> selector;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class DocumentationRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.selector = defaults.selector;
         }
 
-        public Builder deprecationDescription(@Nullable Input<String> deprecationDescription) {
+        public Builder deprecationDescription(@Nullable Output<String> deprecationDescription) {
             this.deprecationDescription = deprecationDescription;
             return this;
         }
 
         public Builder deprecationDescription(@Nullable String deprecationDescription) {
-            this.deprecationDescription = Input.ofNullable(deprecationDescription);
+            this.deprecationDescription = Output.ofNullable(deprecationDescription);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder selector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Output<String> selector) {
             this.selector = selector;
             return this;
         }
 
         public Builder selector(@Nullable String selector) {
-            this.selector = Input.ofNullable(selector);
+            this.selector = Output.ofNullable(selector);
             return this;
         }
         public DocumentationRuleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="requestHeadersToAdds")
-      private final @Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
+      private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
-    public Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> getRequestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Input.empty() : this.requestHeadersToAdds;
+    public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> getRequestHeadersToAdds() {
+        return this.requestHeadersToAdds == null ? Output.empty() : this.requestHeadersToAdds;
     }
 
-    public SecurityPolicyRuleHttpHeaderActionArgs(@Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
+    public SecurityPolicyRuleHttpHeaderActionArgs(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
         this.requestHeadersToAdds = requestHeadersToAdds;
     }
 
     private SecurityPolicyRuleHttpHeaderActionArgs() {
-        this.requestHeadersToAdds = Input.empty();
+        this.requestHeadersToAdds = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
+        private @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
     	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
         }
 
-        public Builder requestHeadersToAdds(@Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
         public Builder requestHeadersToAdds(@Nullable List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Input.ofNullable(requestHeadersToAdds);
+            this.requestHeadersToAdds = Output.ofNullable(requestHeadersToAdds);
             return this;
         }
         public SecurityPolicyRuleHttpHeaderActionArgs build() {

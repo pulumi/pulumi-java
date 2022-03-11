@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,17 +19,17 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -37,25 +37,25 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesetName")
-      private final @Nullable Input<String> rulesetName;
+      private final @Nullable Output<String> rulesetName;
 
-    public Input<String> getRulesetName() {
-        return this.rulesetName == null ? Input.empty() : this.rulesetName;
+    public Output<String> getRulesetName() {
+        return this.rulesetName == null ? Output.empty() : this.rulesetName;
     }
 
     public ReleaseArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> rulesetName) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> rulesetName) {
         this.name = name;
         this.project = project;
         this.rulesetName = rulesetName;
     }
 
     private ReleaseArgs() {
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rulesetName = Input.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rulesetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> rulesetName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> rulesetName;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rulesetName = defaults.rulesetName;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rulesetName(@Nullable Input<String> rulesetName) {
+        public Builder rulesetName(@Nullable Output<String> rulesetName) {
             this.rulesetName = rulesetName;
             return this;
         }
 
         public Builder rulesetName(@Nullable String rulesetName) {
-            this.rulesetName = Input.ofNullable(rulesetName);
+            this.rulesetName = Output.ofNullable(rulesetName);
             return this;
         }
         public ReleaseArgs build() {

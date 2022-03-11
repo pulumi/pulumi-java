@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ManualArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleArgs;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="manual")
-      private final @Nullable Input<GooglePrivacyDlpV2ManualArgs> manual;
+      private final @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
 
-    public Input<GooglePrivacyDlpV2ManualArgs> getManual() {
-        return this.manual == null ? Input.empty() : this.manual;
+    public Output<GooglePrivacyDlpV2ManualArgs> getManual() {
+        return this.manual == null ? Output.empty() : this.manual;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule;
+      private final @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
-    public Input<GooglePrivacyDlpV2ScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<GooglePrivacyDlpV2ScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     public GooglePrivacyDlpV2TriggerArgs(
-        @Nullable Input<GooglePrivacyDlpV2ManualArgs> manual,
-        @Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule) {
+        @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual,
+        @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
         this.manual = manual;
         this.schedule = schedule;
     }
 
     private GooglePrivacyDlpV2TriggerArgs() {
-        this.manual = Input.empty();
-        this.schedule = Input.empty();
+        this.manual = Output.empty();
+        this.schedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<GooglePrivacyDlpV2ManualArgs> manual;
-        private @Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule;
+        private @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
+        private @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder manual(@Nullable Input<GooglePrivacyDlpV2ManualArgs> manual) {
+        public Builder manual(@Nullable Output<GooglePrivacyDlpV2ManualArgs> manual) {
             this.manual = manual;
             return this;
         }
 
         public Builder manual(@Nullable GooglePrivacyDlpV2ManualArgs manual) {
-            this.manual = Input.ofNullable(manual);
+            this.manual = Output.ofNullable(manual);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<GooglePrivacyDlpV2ScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable GooglePrivacyDlpV2ScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
         public GooglePrivacyDlpV2TriggerArgs build() {

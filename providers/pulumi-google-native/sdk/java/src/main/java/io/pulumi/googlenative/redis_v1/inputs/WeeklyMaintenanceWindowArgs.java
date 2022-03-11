@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1.enums.WeeklyMaintenanceWindowDay;
 import io.pulumi.googlenative.redis_v1.inputs.TimeOfDayArgs;
@@ -23,9 +23,9 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="day", required=true)
-      private final Input<WeeklyMaintenanceWindowDay> day;
+      private final Output<WeeklyMaintenanceWindowDay> day;
 
-    public Input<WeeklyMaintenanceWindowDay> getDay() {
+    public Output<WeeklyMaintenanceWindowDay> getDay() {
         return this.day;
     }
 
@@ -34,22 +34,22 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<TimeOfDayArgs> startTime;
+      private final Output<TimeOfDayArgs> startTime;
 
-    public Input<TimeOfDayArgs> getStartTime() {
+    public Output<TimeOfDayArgs> getStartTime() {
         return this.startTime;
     }
 
     public WeeklyMaintenanceWindowArgs(
-        Input<WeeklyMaintenanceWindowDay> day,
-        Input<TimeOfDayArgs> startTime) {
+        Output<WeeklyMaintenanceWindowDay> day,
+        Output<TimeOfDayArgs> startTime) {
         this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private WeeklyMaintenanceWindowArgs() {
-        this.day = Input.empty();
-        this.startTime = Input.empty();
+        this.day = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<WeeklyMaintenanceWindowDay> day;
-        private Input<TimeOfDayArgs> startTime;
+        private Output<WeeklyMaintenanceWindowDay> day;
+        private Output<TimeOfDayArgs> startTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder day(Input<WeeklyMaintenanceWindowDay> day) {
+        public Builder day(Output<WeeklyMaintenanceWindowDay> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
         public Builder day(WeeklyMaintenanceWindowDay day) {
-            this.day = Input.of(Objects.requireNonNull(day));
+            this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder startTime(Input<TimeOfDayArgs> startTime) {
+        public Builder startTime(Output<TimeOfDayArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(TimeOfDayArgs startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public WeeklyMaintenanceWindowArgs build() {

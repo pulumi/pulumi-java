@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
-    public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(Input<String> version) {
+    public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs(Output<String> version) {
         this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
     }
 
     private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs() {
-        this.version = Input.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
     }
 
     public static final class Builder {
-        private Input<String> version;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs ex
     	      this.version = defaults.version;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigArgs build() {

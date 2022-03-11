@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.BindingArgs;
 import java.lang.Integer;
@@ -22,16 +22,16 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bindings")
-      private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Input<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Input.empty() : this.bindings;
+    public Output<List<BindingArgs>> getBindings() {
+        return this.bindings == null ? Output.empty() : this.bindings;
     }
 
     @InputImport(name="clusterId", required=true)
-      private final Input<String> clusterId;
+      private final Output<String> clusterId;
 
-    public Input<String> getClusterId() {
+    public Output<String> getClusterId() {
         return this.clusterId;
     }
 
@@ -40,23 +40,23 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="regionId", required=true)
-      private final Input<String> regionId;
+      private final Output<String> regionId;
 
-    public Input<String> getRegionId() {
+    public Output<String> getRegionId() {
         return this.regionId;
     }
 
@@ -65,19 +65,19 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RegionClusterIamPolicyArgs(
-        @Nullable Input<List<BindingArgs>> bindings,
-        Input<String> clusterId,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> project,
-        Input<String> regionId,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<List<BindingArgs>> bindings,
+        Output<String> clusterId,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> project,
+        Output<String> regionId,
+        @Nullable Output<Integer> version) {
         this.bindings = bindings;
         this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
         this.etag = etag;
@@ -87,12 +87,12 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private RegionClusterIamPolicyArgs() {
-        this.bindings = Input.empty();
-        this.clusterId = Input.empty();
-        this.etag = Input.empty();
-        this.project = Input.empty();
-        this.regionId = Input.empty();
-        this.version = Input.empty();
+        this.bindings = Output.empty();
+        this.clusterId = Output.empty();
+        this.etag = Output.empty();
+        this.project = Output.empty();
+        this.regionId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,12 +104,12 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BindingArgs>> bindings;
-        private Input<String> clusterId;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> project;
-        private Input<String> regionId;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<List<BindingArgs>> bindings;
+        private Output<String> clusterId;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> project;
+        private Output<String> regionId;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -125,63 +125,63 @@ public final class RegionClusterIamPolicyArgs extends io.pulumi.resources.Resour
     	      this.version = defaults.version;
         }
 
-        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Input.ofNullable(bindings);
+            this.bindings = Output.ofNullable(bindings);
             return this;
         }
 
-        public Builder clusterId(Input<String> clusterId) {
+        public Builder clusterId(Output<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Input.of(Objects.requireNonNull(clusterId));
+            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder regionId(Input<String> regionId) {
+        public Builder regionId(Output<String> regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
 
         public Builder regionId(String regionId) {
-            this.regionId = Input.of(Objects.requireNonNull(regionId));
+            this.regionId = Output.of(Objects.requireNonNull(regionId));
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RegionClusterIamPolicyArgs build() {

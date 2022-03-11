@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
      * 
      */
     @InputImport(name="spendBasis")
-      private final @Nullable Input<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
+      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
 
-    public Input<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> getSpendBasis() {
-        return this.spendBasis == null ? Input.empty() : this.spendBasis;
+    public Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> getSpendBasis() {
+        return this.spendBasis == null ? Output.empty() : this.spendBasis;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
      * 
      */
     @InputImport(name="thresholdPercent", required=true)
-      private final Input<Double> thresholdPercent;
+      private final Output<Double> thresholdPercent;
 
-    public Input<Double> getThresholdPercent() {
+    public Output<Double> getThresholdPercent() {
         return this.thresholdPercent;
     }
 
     public GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs(
-        @Nullable Input<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis,
-        Input<Double> thresholdPercent) {
+        @Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis,
+        Output<Double> thresholdPercent) {
         this.spendBasis = spendBasis;
         this.thresholdPercent = Objects.requireNonNull(thresholdPercent, "expected parameter 'thresholdPercent' to be non-null");
     }
 
     private GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs() {
-        this.spendBasis = Input.empty();
-        this.thresholdPercent = Input.empty();
+        this.spendBasis = Output.empty();
+        this.thresholdPercent = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
-        private Input<Double> thresholdPercent;
+        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
+        private Output<Double> thresholdPercent;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
     	      this.thresholdPercent = defaults.thresholdPercent;
         }
 
-        public Builder spendBasis(@Nullable Input<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis) {
+        public Builder spendBasis(@Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis) {
             this.spendBasis = spendBasis;
             return this;
         }
 
         public Builder spendBasis(@Nullable GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis spendBasis) {
-            this.spendBasis = Input.ofNullable(spendBasis);
+            this.spendBasis = Output.ofNullable(spendBasis);
             return this;
         }
 
-        public Builder thresholdPercent(Input<Double> thresholdPercent) {
+        public Builder thresholdPercent(Output<Double> thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
 
         public Builder thresholdPercent(Double thresholdPercent) {
-            this.thresholdPercent = Input.of(Objects.requireNonNull(thresholdPercent));
+            this.thresholdPercent = Output.of(Objects.requireNonNull(thresholdPercent));
             return this;
         }
         public GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs build() {

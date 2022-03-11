@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<String> columns;
+      private final @Nullable Output<String> columns;
 
-    public Input<String> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<String> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="widgets")
-      private final @Nullable Input<List<WidgetArgs>> widgets;
+      private final @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Input<List<WidgetArgs>> getWidgets() {
-        return this.widgets == null ? Input.empty() : this.widgets;
+    public Output<List<WidgetArgs>> getWidgets() {
+        return this.widgets == null ? Output.empty() : this.widgets;
     }
 
     public GridLayoutArgs(
-        @Nullable Input<String> columns,
-        @Nullable Input<List<WidgetArgs>> widgets) {
+        @Nullable Output<String> columns,
+        @Nullable Output<List<WidgetArgs>> widgets) {
         this.columns = columns;
         this.widgets = widgets;
     }
 
     private GridLayoutArgs() {
-        this.columns = Input.empty();
-        this.widgets = Input.empty();
+        this.columns = Output.empty();
+        this.widgets = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> columns;
-        private @Nullable Input<List<WidgetArgs>> widgets;
+        private @Nullable Output<String> columns;
+        private @Nullable Output<List<WidgetArgs>> widgets;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder columns(@Nullable Input<String> columns) {
+        public Builder columns(@Nullable Output<String> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable String columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
 
-        public Builder widgets(@Nullable Input<List<WidgetArgs>> widgets) {
+        public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
             this.widgets = widgets;
             return this;
         }
 
         public Builder widgets(@Nullable List<WidgetArgs> widgets) {
-            this.widgets = Input.ofNullable(widgets);
+            this.widgets = Output.ofNullable(widgets);
             return this;
         }
         public GridLayoutArgs build() {

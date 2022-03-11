@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="meshUid")
-      private final @Nullable Input<String> meshUid;
+      private final @Nullable Output<String> meshUid;
 
-    public Input<String> getMeshUid() {
-        return this.meshUid == null ? Input.empty() : this.meshUid;
+    public Output<String> getMeshUid() {
+        return this.meshUid == null ? Output.empty() : this.meshUid;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-      private final @Nullable Input<String> serviceName;
+      private final @Nullable Output<String> serviceName;
 
-    public Input<String> getServiceName() {
-        return this.serviceName == null ? Input.empty() : this.serviceName;
+    public Output<String> getServiceName() {
+        return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceNamespace")
-      private final @Nullable Input<String> serviceNamespace;
+      private final @Nullable Output<String> serviceNamespace;
 
-    public Input<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Input.empty() : this.serviceNamespace;
+    public Output<String> getServiceNamespace() {
+        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
     }
 
     public MeshIstioArgs(
-        @Nullable Input<String> meshUid,
-        @Nullable Input<String> serviceName,
-        @Nullable Input<String> serviceNamespace) {
+        @Nullable Output<String> meshUid,
+        @Nullable Output<String> serviceName,
+        @Nullable Output<String> serviceNamespace) {
         this.meshUid = meshUid;
         this.serviceName = serviceName;
         this.serviceNamespace = serviceNamespace;
     }
 
     private MeshIstioArgs() {
-        this.meshUid = Input.empty();
-        this.serviceName = Input.empty();
-        this.serviceNamespace = Input.empty();
+        this.meshUid = Output.empty();
+        this.serviceName = Output.empty();
+        this.serviceNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> meshUid;
-        private @Nullable Input<String> serviceName;
-        private @Nullable Input<String> serviceNamespace;
+        private @Nullable Output<String> meshUid;
+        private @Nullable Output<String> serviceName;
+        private @Nullable Output<String> serviceNamespace;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MeshIstioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder meshUid(@Nullable Input<String> meshUid) {
+        public Builder meshUid(@Nullable Output<String> meshUid) {
             this.meshUid = meshUid;
             return this;
         }
 
         public Builder meshUid(@Nullable String meshUid) {
-            this.meshUid = Input.ofNullable(meshUid);
+            this.meshUid = Output.ofNullable(meshUid);
             return this;
         }
 
-        public Builder serviceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Output<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Input.ofNullable(serviceName);
+            this.serviceName = Output.ofNullable(serviceName);
             return this;
         }
 
-        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Input.ofNullable(serviceNamespace);
+            this.serviceNamespace = Output.ofNullable(serviceNamespace);
             return this;
         }
         public MeshIstioArgs build() {

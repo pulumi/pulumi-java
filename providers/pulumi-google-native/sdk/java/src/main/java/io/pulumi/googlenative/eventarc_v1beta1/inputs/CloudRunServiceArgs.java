@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="region", required=true)
-      private final Input<String> region;
+      private final Output<String> region;
 
-    public Input<String> getRegion() {
+    public Output<String> getRegion() {
         return this.region;
     }
 
@@ -45,25 +45,25 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public CloudRunServiceArgs(
-        @Nullable Input<String> path,
-        Input<String> region,
-        Input<String> service) {
+        @Nullable Output<String> path,
+        Output<String> region,
+        Output<String> service) {
         this.path = path;
         this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private CloudRunServiceArgs() {
-        this.path = Input.empty();
-        this.region = Input.empty();
-        this.service = Input.empty();
+        this.path = Output.empty();
+        this.region = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private Input<String> region;
-        private Input<String> service;
+        private @Nullable Output<String> path;
+        private Output<String> region;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder region(Input<String> region) {
+        public Builder region(Output<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
         public Builder region(String region) {
-            this.region = Input.of(Objects.requireNonNull(region));
+            this.region = Output.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public CloudRunServiceArgs build() {

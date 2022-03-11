@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.DevicePolicyAllowedDeviceManagementLevelsItem;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.DevicePolicyAllowedEncryptionStatusesItem;
@@ -27,10 +27,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedDeviceManagementLevels")
-      private final @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
+      private final @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
 
-    public Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> getAllowedDeviceManagementLevels() {
-        return this.allowedDeviceManagementLevels == null ? Input.empty() : this.allowedDeviceManagementLevels;
+    public Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> getAllowedDeviceManagementLevels() {
+        return this.allowedDeviceManagementLevels == null ? Output.empty() : this.allowedDeviceManagementLevels;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedEncryptionStatuses")
-      private final @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
+      private final @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
 
-    public Input<List<DevicePolicyAllowedEncryptionStatusesItem>> getAllowedEncryptionStatuses() {
-        return this.allowedEncryptionStatuses == null ? Input.empty() : this.allowedEncryptionStatuses;
+    public Output<List<DevicePolicyAllowedEncryptionStatusesItem>> getAllowedEncryptionStatuses() {
+        return this.allowedEncryptionStatuses == null ? Output.empty() : this.allowedEncryptionStatuses;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osConstraints")
-      private final @Nullable Input<List<OsConstraintArgs>> osConstraints;
+      private final @Nullable Output<List<OsConstraintArgs>> osConstraints;
 
-    public Input<List<OsConstraintArgs>> getOsConstraints() {
-        return this.osConstraints == null ? Input.empty() : this.osConstraints;
+    public Output<List<OsConstraintArgs>> getOsConstraints() {
+        return this.osConstraints == null ? Output.empty() : this.osConstraints;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireAdminApproval")
-      private final @Nullable Input<Boolean> requireAdminApproval;
+      private final @Nullable Output<Boolean> requireAdminApproval;
 
-    public Input<Boolean> getRequireAdminApproval() {
-        return this.requireAdminApproval == null ? Input.empty() : this.requireAdminApproval;
+    public Output<Boolean> getRequireAdminApproval() {
+        return this.requireAdminApproval == null ? Output.empty() : this.requireAdminApproval;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireCorpOwned")
-      private final @Nullable Input<Boolean> requireCorpOwned;
+      private final @Nullable Output<Boolean> requireCorpOwned;
 
-    public Input<Boolean> getRequireCorpOwned() {
-        return this.requireCorpOwned == null ? Input.empty() : this.requireCorpOwned;
+    public Output<Boolean> getRequireCorpOwned() {
+        return this.requireCorpOwned == null ? Output.empty() : this.requireCorpOwned;
     }
 
     /**
@@ -82,19 +82,19 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireScreenlock")
-      private final @Nullable Input<Boolean> requireScreenlock;
+      private final @Nullable Output<Boolean> requireScreenlock;
 
-    public Input<Boolean> getRequireScreenlock() {
-        return this.requireScreenlock == null ? Input.empty() : this.requireScreenlock;
+    public Output<Boolean> getRequireScreenlock() {
+        return this.requireScreenlock == null ? Output.empty() : this.requireScreenlock;
     }
 
     public DevicePolicyArgs(
-        @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels,
-        @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses,
-        @Nullable Input<List<OsConstraintArgs>> osConstraints,
-        @Nullable Input<Boolean> requireAdminApproval,
-        @Nullable Input<Boolean> requireCorpOwned,
-        @Nullable Input<Boolean> requireScreenlock) {
+        @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels,
+        @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses,
+        @Nullable Output<List<OsConstraintArgs>> osConstraints,
+        @Nullable Output<Boolean> requireAdminApproval,
+        @Nullable Output<Boolean> requireCorpOwned,
+        @Nullable Output<Boolean> requireScreenlock) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         this.osConstraints = osConstraints;
@@ -104,12 +104,12 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DevicePolicyArgs() {
-        this.allowedDeviceManagementLevels = Input.empty();
-        this.allowedEncryptionStatuses = Input.empty();
-        this.osConstraints = Input.empty();
-        this.requireAdminApproval = Input.empty();
-        this.requireCorpOwned = Input.empty();
-        this.requireScreenlock = Input.empty();
+        this.allowedDeviceManagementLevels = Output.empty();
+        this.allowedEncryptionStatuses = Output.empty();
+        this.osConstraints = Output.empty();
+        this.requireAdminApproval = Output.empty();
+        this.requireCorpOwned = Output.empty();
+        this.requireScreenlock = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,12 +121,12 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
-        private @Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
-        private @Nullable Input<List<OsConstraintArgs>> osConstraints;
-        private @Nullable Input<Boolean> requireAdminApproval;
-        private @Nullable Input<Boolean> requireCorpOwned;
-        private @Nullable Input<Boolean> requireScreenlock;
+        private @Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels;
+        private @Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses;
+        private @Nullable Output<List<OsConstraintArgs>> osConstraints;
+        private @Nullable Output<Boolean> requireAdminApproval;
+        private @Nullable Output<Boolean> requireCorpOwned;
+        private @Nullable Output<Boolean> requireScreenlock;
 
         public Builder() {
     	      // Empty
@@ -142,63 +142,63 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireScreenlock = defaults.requireScreenlock;
         }
 
-        public Builder allowedDeviceManagementLevels(@Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable Output<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
         public Builder allowedDeviceManagementLevels(@Nullable List<DevicePolicyAllowedDeviceManagementLevelsItem> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = Input.ofNullable(allowedDeviceManagementLevels);
+            this.allowedDeviceManagementLevels = Output.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
 
-        public Builder allowedEncryptionStatuses(@Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable Output<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
         public Builder allowedEncryptionStatuses(@Nullable List<DevicePolicyAllowedEncryptionStatusesItem> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = Input.ofNullable(allowedEncryptionStatuses);
+            this.allowedEncryptionStatuses = Output.ofNullable(allowedEncryptionStatuses);
             return this;
         }
 
-        public Builder osConstraints(@Nullable Input<List<OsConstraintArgs>> osConstraints) {
+        public Builder osConstraints(@Nullable Output<List<OsConstraintArgs>> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
 
         public Builder osConstraints(@Nullable List<OsConstraintArgs> osConstraints) {
-            this.osConstraints = Input.ofNullable(osConstraints);
+            this.osConstraints = Output.ofNullable(osConstraints);
             return this;
         }
 
-        public Builder requireAdminApproval(@Nullable Input<Boolean> requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Output<Boolean> requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
         public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
-            this.requireAdminApproval = Input.ofNullable(requireAdminApproval);
+            this.requireAdminApproval = Output.ofNullable(requireAdminApproval);
             return this;
         }
 
-        public Builder requireCorpOwned(@Nullable Input<Boolean> requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
         public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
-            this.requireCorpOwned = Input.ofNullable(requireCorpOwned);
+            this.requireCorpOwned = Output.ofNullable(requireCorpOwned);
             return this;
         }
 
-        public Builder requireScreenlock(@Nullable Input<Boolean> requireScreenlock) {
+        public Builder requireScreenlock(@Nullable Output<Boolean> requireScreenlock) {
             this.requireScreenlock = requireScreenlock;
             return this;
         }
 
         public Builder requireScreenlock(@Nullable Boolean requireScreenlock) {
-            this.requireScreenlock = Input.ofNullable(requireScreenlock);
+            this.requireScreenlock = Output.ofNullable(requireScreenlock);
             return this;
         }
         public DevicePolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="diskSizeGb")
-      private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Output<String> diskSizeGb;
 
-    public Input<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
+    public Output<String> getDiskSizeGb() {
+        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="interface")
-      private final @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
+      private final @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
 
-    public Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(
-        @Nullable Input<String> diskSizeGb,
-        @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
+        @Nullable Output<String> diskSizeGb,
+        @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
         this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }
 
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs() {
-        this.diskSizeGb = Input.empty();
-        this.$interface = Input.empty();
+        this.diskSizeGb = Output.empty();
+        this.$interface = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskSizeGb;
-        private @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
+        private @Nullable Output<String> diskSizeGb;
+        private @Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Input.ofNullable(diskSizeGb);
+            this.diskSizeGb = Output.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
+        public Builder $interface(@Nullable Output<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
         public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityGroup")
-      private final @Nullable Input<String> securityGroup;
+      private final @Nullable Output<String> securityGroup;
 
-    public Input<String> getSecurityGroup() {
-        return this.securityGroup == null ? Input.empty() : this.securityGroup;
+    public Output<String> getSecurityGroup() {
+        return this.securityGroup == null ? Output.empty() : this.securityGroup;
     }
 
     public AuthenticatorGroupsConfigArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> securityGroup) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> securityGroup) {
         this.enabled = enabled;
         this.securityGroup = securityGroup;
     }
 
     private AuthenticatorGroupsConfigArgs() {
-        this.enabled = Input.empty();
-        this.securityGroup = Input.empty();
+        this.enabled = Output.empty();
+        this.securityGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> securityGroup;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> securityGroup;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder securityGroup(@Nullable Input<String> securityGroup) {
+        public Builder securityGroup(@Nullable Output<String> securityGroup) {
             this.securityGroup = securityGroup;
             return this;
         }
 
         public Builder securityGroup(@Nullable String securityGroup) {
-            this.securityGroup = Input.ofNullable(securityGroup);
+            this.securityGroup = Output.ofNullable(securityGroup);
             return this;
         }
         public AuthenticatorGroupsConfigArgs build() {

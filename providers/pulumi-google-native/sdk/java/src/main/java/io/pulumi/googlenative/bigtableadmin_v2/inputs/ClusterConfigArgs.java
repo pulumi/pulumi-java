@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterAutoscalingConfigArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterAutoscalingConfig")
-      private final @Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
+      private final @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
-    public Input<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {
-        return this.clusterAutoscalingConfig == null ? Input.empty() : this.clusterAutoscalingConfig;
+    public Output<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {
+        return this.clusterAutoscalingConfig == null ? Output.empty() : this.clusterAutoscalingConfig;
     }
 
-    public ClusterConfigArgs(@Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
+    public ClusterConfigArgs(@Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
         this.clusterAutoscalingConfig = clusterAutoscalingConfig;
     }
 
     private ClusterConfigArgs() {
-        this.clusterAutoscalingConfig = Input.empty();
+        this.clusterAutoscalingConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
+        private @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterAutoscalingConfig = defaults.clusterAutoscalingConfig;
         }
 
-        public Builder clusterAutoscalingConfig(@Nullable Input<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
+        public Builder clusterAutoscalingConfig(@Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
             this.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;
         }
 
         public Builder clusterAutoscalingConfig(@Nullable ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
-            this.clusterAutoscalingConfig = Input.ofNullable(clusterAutoscalingConfig);
+            this.clusterAutoscalingConfig = Output.ofNullable(clusterAutoscalingConfig);
             return this;
         }
         public ClusterConfigArgs build() {

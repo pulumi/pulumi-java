@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rangeName")
-      private final @Nullable Input<String> rangeName;
+      private final @Nullable Output<String> rangeName;
 
-    public Input<String> getRangeName() {
-        return this.rangeName == null ? Input.empty() : this.rangeName;
+    public Output<String> getRangeName() {
+        return this.rangeName == null ? Output.empty() : this.rangeName;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="reservedInternalRange")
-      private final @Nullable Input<String> reservedInternalRange;
+      private final @Nullable Output<String> reservedInternalRange;
 
-    public Input<String> getReservedInternalRange() {
-        return this.reservedInternalRange == null ? Input.empty() : this.reservedInternalRange;
+    public Output<String> getReservedInternalRange() {
+        return this.reservedInternalRange == null ? Output.empty() : this.reservedInternalRange;
     }
 
     public SubnetworkSecondaryRangeArgs(
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<String> rangeName,
-        @Nullable Input<String> reservedInternalRange) {
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<String> rangeName,
+        @Nullable Output<String> reservedInternalRange) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
         this.reservedInternalRange = reservedInternalRange;
     }
 
     private SubnetworkSecondaryRangeArgs() {
-        this.ipCidrRange = Input.empty();
-        this.rangeName = Input.empty();
-        this.reservedInternalRange = Input.empty();
+        this.ipCidrRange = Output.empty();
+        this.rangeName = Output.empty();
+        this.reservedInternalRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<String> rangeName;
-        private @Nullable Input<String> reservedInternalRange;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<String> rangeName;
+        private @Nullable Output<String> reservedInternalRange;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
     	      this.reservedInternalRange = defaults.reservedInternalRange;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder rangeName(@Nullable Input<String> rangeName) {
+        public Builder rangeName(@Nullable Output<String> rangeName) {
             this.rangeName = rangeName;
             return this;
         }
 
         public Builder rangeName(@Nullable String rangeName) {
-            this.rangeName = Input.ofNullable(rangeName);
+            this.rangeName = Output.ofNullable(rangeName);
             return this;
         }
 
-        public Builder reservedInternalRange(@Nullable Input<String> reservedInternalRange) {
+        public Builder reservedInternalRange(@Nullable Output<String> reservedInternalRange) {
             this.reservedInternalRange = reservedInternalRange;
             return this;
         }
 
         public Builder reservedInternalRange(@Nullable String reservedInternalRange) {
-            this.reservedInternalRange = Input.ofNullable(reservedInternalRange);
+            this.reservedInternalRange = Output.ofNullable(reservedInternalRange);
             return this;
         }
         public SubnetworkSecondaryRangeArgs build() {

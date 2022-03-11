@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appInitialActivity")
-      private final @Nullable Input<String> appInitialActivity;
+      private final @Nullable Output<String> appInitialActivity;
 
-    public Input<String> getAppInitialActivity() {
-        return this.appInitialActivity == null ? Input.empty() : this.appInitialActivity;
+    public Output<String> getAppInitialActivity() {
+        return this.appInitialActivity == null ? Output.empty() : this.appInitialActivity;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bootstrapPackageId")
-      private final @Nullable Input<String> bootstrapPackageId;
+      private final @Nullable Output<String> bootstrapPackageId;
 
-    public Input<String> getBootstrapPackageId() {
-        return this.bootstrapPackageId == null ? Input.empty() : this.bootstrapPackageId;
+    public Output<String> getBootstrapPackageId() {
+        return this.bootstrapPackageId == null ? Output.empty() : this.bootstrapPackageId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bootstrapRunnerClass")
-      private final @Nullable Input<String> bootstrapRunnerClass;
+      private final @Nullable Output<String> bootstrapRunnerClass;
 
-    public Input<String> getBootstrapRunnerClass() {
-        return this.bootstrapRunnerClass == null ? Input.empty() : this.bootstrapRunnerClass;
+    public Output<String> getBootstrapRunnerClass() {
+        return this.bootstrapRunnerClass == null ? Output.empty() : this.bootstrapRunnerClass;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxDepth")
-      private final @Nullable Input<Integer> maxDepth;
+      private final @Nullable Output<Integer> maxDepth;
 
-    public Input<Integer> getMaxDepth() {
-        return this.maxDepth == null ? Input.empty() : this.maxDepth;
+    public Output<Integer> getMaxDepth() {
+        return this.maxDepth == null ? Output.empty() : this.maxDepth;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxSteps")
-      private final @Nullable Input<Integer> maxSteps;
+      private final @Nullable Output<Integer> maxSteps;
 
-    public Input<Integer> getMaxSteps() {
-        return this.maxSteps == null ? Input.empty() : this.maxSteps;
+    public Output<Integer> getMaxSteps() {
+        return this.maxSteps == null ? Output.empty() : this.maxSteps;
     }
 
     public AndroidRoboTestArgs(
-        @Nullable Input<String> appInitialActivity,
-        @Nullable Input<String> bootstrapPackageId,
-        @Nullable Input<String> bootstrapRunnerClass,
-        @Nullable Input<Integer> maxDepth,
-        @Nullable Input<Integer> maxSteps) {
+        @Nullable Output<String> appInitialActivity,
+        @Nullable Output<String> bootstrapPackageId,
+        @Nullable Output<String> bootstrapRunnerClass,
+        @Nullable Output<Integer> maxDepth,
+        @Nullable Output<Integer> maxSteps) {
         this.appInitialActivity = appInitialActivity;
         this.bootstrapPackageId = bootstrapPackageId;
         this.bootstrapRunnerClass = bootstrapRunnerClass;
@@ -88,11 +88,11 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AndroidRoboTestArgs() {
-        this.appInitialActivity = Input.empty();
-        this.bootstrapPackageId = Input.empty();
-        this.bootstrapRunnerClass = Input.empty();
-        this.maxDepth = Input.empty();
-        this.maxSteps = Input.empty();
+        this.appInitialActivity = Output.empty();
+        this.bootstrapPackageId = Output.empty();
+        this.bootstrapRunnerClass = Output.empty();
+        this.maxDepth = Output.empty();
+        this.maxSteps = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> appInitialActivity;
-        private @Nullable Input<String> bootstrapPackageId;
-        private @Nullable Input<String> bootstrapRunnerClass;
-        private @Nullable Input<Integer> maxDepth;
-        private @Nullable Input<Integer> maxSteps;
+        private @Nullable Output<String> appInitialActivity;
+        private @Nullable Output<String> bootstrapPackageId;
+        private @Nullable Output<String> bootstrapRunnerClass;
+        private @Nullable Output<Integer> maxDepth;
+        private @Nullable Output<Integer> maxSteps;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     	      this.maxSteps = defaults.maxSteps;
         }
 
-        public Builder appInitialActivity(@Nullable Input<String> appInitialActivity) {
+        public Builder appInitialActivity(@Nullable Output<String> appInitialActivity) {
             this.appInitialActivity = appInitialActivity;
             return this;
         }
 
         public Builder appInitialActivity(@Nullable String appInitialActivity) {
-            this.appInitialActivity = Input.ofNullable(appInitialActivity);
+            this.appInitialActivity = Output.ofNullable(appInitialActivity);
             return this;
         }
 
-        public Builder bootstrapPackageId(@Nullable Input<String> bootstrapPackageId) {
+        public Builder bootstrapPackageId(@Nullable Output<String> bootstrapPackageId) {
             this.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
 
         public Builder bootstrapPackageId(@Nullable String bootstrapPackageId) {
-            this.bootstrapPackageId = Input.ofNullable(bootstrapPackageId);
+            this.bootstrapPackageId = Output.ofNullable(bootstrapPackageId);
             return this;
         }
 
-        public Builder bootstrapRunnerClass(@Nullable Input<String> bootstrapRunnerClass) {
+        public Builder bootstrapRunnerClass(@Nullable Output<String> bootstrapRunnerClass) {
             this.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
 
         public Builder bootstrapRunnerClass(@Nullable String bootstrapRunnerClass) {
-            this.bootstrapRunnerClass = Input.ofNullable(bootstrapRunnerClass);
+            this.bootstrapRunnerClass = Output.ofNullable(bootstrapRunnerClass);
             return this;
         }
 
-        public Builder maxDepth(@Nullable Input<Integer> maxDepth) {
+        public Builder maxDepth(@Nullable Output<Integer> maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
 
         public Builder maxDepth(@Nullable Integer maxDepth) {
-            this.maxDepth = Input.ofNullable(maxDepth);
+            this.maxDepth = Output.ofNullable(maxDepth);
             return this;
         }
 
-        public Builder maxSteps(@Nullable Input<Integer> maxSteps) {
+        public Builder maxSteps(@Nullable Output<Integer> maxSteps) {
             this.maxSteps = maxSteps;
             return this;
         }
 
         public Builder maxSteps(@Nullable Integer maxSteps) {
-            this.maxSteps = Input.ofNullable(maxSteps);
+            this.maxSteps = Output.ofNullable(maxSteps);
             return this;
         }
         public AndroidRoboTestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queries")
-      private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
+      private final @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
-    public Input<List<DynamicGroupQueryArgs>> getQueries() {
-        return this.queries == null ? Input.empty() : this.queries;
+    public Output<List<DynamicGroupQueryArgs>> getQueries() {
+        return this.queries == null ? Output.empty() : this.queries;
     }
 
-    public DynamicGroupMetadataArgs(@Nullable Input<List<DynamicGroupQueryArgs>> queries) {
+    public DynamicGroupMetadataArgs(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
         this.queries = queries;
     }
 
     private DynamicGroupMetadataArgs() {
-        this.queries = Input.empty();
+        this.queries = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DynamicGroupQueryArgs>> queries;
+        private @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
     	      this.queries = defaults.queries;
         }
 
-        public Builder queries(@Nullable Input<List<DynamicGroupQueryArgs>> queries) {
+        public Builder queries(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
             this.queries = queries;
             return this;
         }
 
         public Builder queries(@Nullable List<DynamicGroupQueryArgs> queries) {
-            this.queries = Input.ofNullable(queries);
+            this.queries = Output.ofNullable(queries);
             return this;
         }
         public DynamicGroupMetadataArgs build() {

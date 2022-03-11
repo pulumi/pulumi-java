@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DataSourceRestrictionArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FacetOptionsArgs;
@@ -27,10 +27,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataSourceRestrictions")
-      private final @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
+      private final @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
-    public Input<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
-        return this.dataSourceRestrictions == null ? Input.empty() : this.dataSourceRestrictions;
+    public Output<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
+        return this.dataSourceRestrictions == null ? Output.empty() : this.dataSourceRestrictions;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultFacetOptions")
-      private final @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions;
+      private final @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
-    public Input<List<FacetOptionsArgs>> getDefaultFacetOptions() {
-        return this.defaultFacetOptions == null ? Input.empty() : this.defaultFacetOptions;
+    public Output<List<FacetOptionsArgs>> getDefaultFacetOptions() {
+        return this.defaultFacetOptions == null ? Output.empty() : this.defaultFacetOptions;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultSortOptions")
-      private final @Nullable Input<SortOptionsArgs> defaultSortOptions;
+      private final @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
-    public Input<SortOptionsArgs> getDefaultSortOptions() {
-        return this.defaultSortOptions == null ? Input.empty() : this.defaultSortOptions;
+    public Output<SortOptionsArgs> getDefaultSortOptions() {
+        return this.defaultSortOptions == null ? Output.empty() : this.defaultSortOptions;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enableAuditLog")
-      private final @Nullable Input<Boolean> enableAuditLog;
+      private final @Nullable Output<Boolean> enableAuditLog;
 
-    public Input<Boolean> getEnableAuditLog() {
-        return this.enableAuditLog == null ? Input.empty() : this.enableAuditLog;
+    public Output<Boolean> getEnableAuditLog() {
+        return this.enableAuditLog == null ? Output.empty() : this.enableAuditLog;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="queryInterpretationConfig")
-      private final @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig;
+      private final @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
-    public Input<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
-        return this.queryInterpretationConfig == null ? Input.empty() : this.queryInterpretationConfig;
+    public Output<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
+        return this.queryInterpretationConfig == null ? Output.empty() : this.queryInterpretationConfig;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="returnResultThumbnailUrls")
-      private final @Nullable Input<Boolean> returnResultThumbnailUrls;
+      private final @Nullable Output<Boolean> returnResultThumbnailUrls;
 
-    public Input<Boolean> getReturnResultThumbnailUrls() {
-        return this.returnResultThumbnailUrls == null ? Input.empty() : this.returnResultThumbnailUrls;
+    public Output<Boolean> getReturnResultThumbnailUrls() {
+        return this.returnResultThumbnailUrls == null ? Output.empty() : this.returnResultThumbnailUrls;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scoringConfig")
-      private final @Nullable Input<ScoringConfigArgs> scoringConfig;
+      private final @Nullable Output<ScoringConfigArgs> scoringConfig;
 
-    public Input<ScoringConfigArgs> getScoringConfig() {
-        return this.scoringConfig == null ? Input.empty() : this.scoringConfig;
+    public Output<ScoringConfigArgs> getScoringConfig() {
+        return this.scoringConfig == null ? Output.empty() : this.scoringConfig;
     }
 
     /**
@@ -126,23 +126,23 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sourceConfig")
-      private final @Nullable Input<List<SourceConfigArgs>> sourceConfig;
+      private final @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
-    public Input<List<SourceConfigArgs>> getSourceConfig() {
-        return this.sourceConfig == null ? Input.empty() : this.sourceConfig;
+    public Output<List<SourceConfigArgs>> getSourceConfig() {
+        return this.sourceConfig == null ? Output.empty() : this.sourceConfig;
     }
 
     public SearchApplicationArgs(
-        @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions,
-        @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions,
-        @Nullable Input<SortOptionsArgs> defaultSortOptions,
-        @Nullable Input<String> displayName,
-        @Nullable Input<Boolean> enableAuditLog,
-        @Nullable Input<String> name,
-        @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig,
-        @Nullable Input<Boolean> returnResultThumbnailUrls,
-        @Nullable Input<ScoringConfigArgs> scoringConfig,
-        @Nullable Input<List<SourceConfigArgs>> sourceConfig) {
+        @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions,
+        @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions,
+        @Nullable Output<SortOptionsArgs> defaultSortOptions,
+        @Nullable Output<String> displayName,
+        @Nullable Output<Boolean> enableAuditLog,
+        @Nullable Output<String> name,
+        @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig,
+        @Nullable Output<Boolean> returnResultThumbnailUrls,
+        @Nullable Output<ScoringConfigArgs> scoringConfig,
+        @Nullable Output<List<SourceConfigArgs>> sourceConfig) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         this.defaultFacetOptions = defaultFacetOptions;
         this.defaultSortOptions = defaultSortOptions;
@@ -156,16 +156,16 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SearchApplicationArgs() {
-        this.dataSourceRestrictions = Input.empty();
-        this.defaultFacetOptions = Input.empty();
-        this.defaultSortOptions = Input.empty();
-        this.displayName = Input.empty();
-        this.enableAuditLog = Input.empty();
-        this.name = Input.empty();
-        this.queryInterpretationConfig = Input.empty();
-        this.returnResultThumbnailUrls = Input.empty();
-        this.scoringConfig = Input.empty();
-        this.sourceConfig = Input.empty();
+        this.dataSourceRestrictions = Output.empty();
+        this.defaultFacetOptions = Output.empty();
+        this.defaultSortOptions = Output.empty();
+        this.displayName = Output.empty();
+        this.enableAuditLog = Output.empty();
+        this.name = Output.empty();
+        this.queryInterpretationConfig = Output.empty();
+        this.returnResultThumbnailUrls = Output.empty();
+        this.scoringConfig = Output.empty();
+        this.sourceConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,16 +177,16 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
-        private @Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions;
-        private @Nullable Input<SortOptionsArgs> defaultSortOptions;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<Boolean> enableAuditLog;
-        private @Nullable Input<String> name;
-        private @Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig;
-        private @Nullable Input<Boolean> returnResultThumbnailUrls;
-        private @Nullable Input<ScoringConfigArgs> scoringConfig;
-        private @Nullable Input<List<SourceConfigArgs>> sourceConfig;
+        private @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
+        private @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
+        private @Nullable Output<SortOptionsArgs> defaultSortOptions;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<Boolean> enableAuditLog;
+        private @Nullable Output<String> name;
+        private @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
+        private @Nullable Output<Boolean> returnResultThumbnailUrls;
+        private @Nullable Output<ScoringConfigArgs> scoringConfig;
+        private @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
         public Builder() {
     	      // Empty
@@ -206,103 +206,103 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     	      this.sourceConfig = defaults.sourceConfig;
         }
 
-        public Builder dataSourceRestrictions(@Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
+        public Builder dataSourceRestrictions(@Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
             this.dataSourceRestrictions = dataSourceRestrictions;
             return this;
         }
 
         public Builder dataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
-            this.dataSourceRestrictions = Input.ofNullable(dataSourceRestrictions);
+            this.dataSourceRestrictions = Output.ofNullable(dataSourceRestrictions);
             return this;
         }
 
-        public Builder defaultFacetOptions(@Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions) {
+        public Builder defaultFacetOptions(@Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions) {
             this.defaultFacetOptions = defaultFacetOptions;
             return this;
         }
 
         public Builder defaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
-            this.defaultFacetOptions = Input.ofNullable(defaultFacetOptions);
+            this.defaultFacetOptions = Output.ofNullable(defaultFacetOptions);
             return this;
         }
 
-        public Builder defaultSortOptions(@Nullable Input<SortOptionsArgs> defaultSortOptions) {
+        public Builder defaultSortOptions(@Nullable Output<SortOptionsArgs> defaultSortOptions) {
             this.defaultSortOptions = defaultSortOptions;
             return this;
         }
 
         public Builder defaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
-            this.defaultSortOptions = Input.ofNullable(defaultSortOptions);
+            this.defaultSortOptions = Output.ofNullable(defaultSortOptions);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder enableAuditLog(@Nullable Input<Boolean> enableAuditLog) {
+        public Builder enableAuditLog(@Nullable Output<Boolean> enableAuditLog) {
             this.enableAuditLog = enableAuditLog;
             return this;
         }
 
         public Builder enableAuditLog(@Nullable Boolean enableAuditLog) {
-            this.enableAuditLog = Input.ofNullable(enableAuditLog);
+            this.enableAuditLog = Output.ofNullable(enableAuditLog);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder queryInterpretationConfig(@Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig) {
+        public Builder queryInterpretationConfig(@Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig) {
             this.queryInterpretationConfig = queryInterpretationConfig;
             return this;
         }
 
         public Builder queryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
-            this.queryInterpretationConfig = Input.ofNullable(queryInterpretationConfig);
+            this.queryInterpretationConfig = Output.ofNullable(queryInterpretationConfig);
             return this;
         }
 
-        public Builder returnResultThumbnailUrls(@Nullable Input<Boolean> returnResultThumbnailUrls) {
+        public Builder returnResultThumbnailUrls(@Nullable Output<Boolean> returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = returnResultThumbnailUrls;
             return this;
         }
 
         public Builder returnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
-            this.returnResultThumbnailUrls = Input.ofNullable(returnResultThumbnailUrls);
+            this.returnResultThumbnailUrls = Output.ofNullable(returnResultThumbnailUrls);
             return this;
         }
 
-        public Builder scoringConfig(@Nullable Input<ScoringConfigArgs> scoringConfig) {
+        public Builder scoringConfig(@Nullable Output<ScoringConfigArgs> scoringConfig) {
             this.scoringConfig = scoringConfig;
             return this;
         }
 
         public Builder scoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Input.ofNullable(scoringConfig);
+            this.scoringConfig = Output.ofNullable(scoringConfig);
             return this;
         }
 
-        public Builder sourceConfig(@Nullable Input<List<SourceConfigArgs>> sourceConfig) {
+        public Builder sourceConfig(@Nullable Output<List<SourceConfigArgs>> sourceConfig) {
             this.sourceConfig = sourceConfig;
             return this;
         }
 
         public Builder sourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
-            this.sourceConfig = Input.ofNullable(sourceConfig);
+            this.sourceConfig = Output.ofNullable(sourceConfig);
             return this;
         }
         public SearchApplicationArgs build() {

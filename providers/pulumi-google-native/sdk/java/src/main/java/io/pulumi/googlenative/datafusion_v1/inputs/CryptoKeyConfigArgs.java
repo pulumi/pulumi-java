@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyReference")
-      private final @Nullable Input<String> keyReference;
+      private final @Nullable Output<String> keyReference;
 
-    public Input<String> getKeyReference() {
-        return this.keyReference == null ? Input.empty() : this.keyReference;
+    public Output<String> getKeyReference() {
+        return this.keyReference == null ? Output.empty() : this.keyReference;
     }
 
-    public CryptoKeyConfigArgs(@Nullable Input<String> keyReference) {
+    public CryptoKeyConfigArgs(@Nullable Output<String> keyReference) {
         this.keyReference = keyReference;
     }
 
     private CryptoKeyConfigArgs() {
-        this.keyReference = Input.empty();
+        this.keyReference = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyReference;
+        private @Nullable Output<String> keyReference;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.keyReference = defaults.keyReference;
         }
 
-        public Builder keyReference(@Nullable Input<String> keyReference) {
+        public Builder keyReference(@Nullable Output<String> keyReference) {
             this.keyReference = keyReference;
             return this;
         }
 
         public Builder keyReference(@Nullable String keyReference) {
-            this.keyReference = Input.ofNullable(keyReference);
+            this.keyReference = Output.ofNullable(keyReference);
             return this;
         }
         public CryptoKeyConfigArgs build() {

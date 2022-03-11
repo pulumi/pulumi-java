@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      * 
      */
     @InputImport(name="recentSentencesCount")
-      private final @Nullable Input<Integer> recentSentencesCount;
+      private final @Nullable Output<Integer> recentSentencesCount;
 
-    public Input<Integer> getRecentSentencesCount() {
-        return this.recentSentencesCount == null ? Input.empty() : this.recentSentencesCount;
+    public Output<Integer> getRecentSentencesCount() {
+        return this.recentSentencesCount == null ? Output.empty() : this.recentSentencesCount;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(@Nullable Input<Integer> recentSentencesCount) {
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs(@Nullable Output<Integer> recentSentencesCount) {
         this.recentSentencesCount = recentSentencesCount;
     }
 
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs() {
-        this.recentSentencesCount = Input.empty();
+        this.recentSentencesCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> recentSentencesCount;
+        private @Nullable Output<Integer> recentSentencesCount;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     	      this.recentSentencesCount = defaults.recentSentencesCount;
         }
 
-        public Builder recentSentencesCount(@Nullable Input<Integer> recentSentencesCount) {
+        public Builder recentSentencesCount(@Nullable Output<Integer> recentSentencesCount) {
             this.recentSentencesCount = recentSentencesCount;
             return this;
         }
 
         public Builder recentSentencesCount(@Nullable Integer recentSentencesCount) {
-            this.recentSentencesCount = Input.ofNullable(recentSentencesCount);
+            this.recentSentencesCount = Output.ofNullable(recentSentencesCount);
             return this;
         }
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigArgs build() {

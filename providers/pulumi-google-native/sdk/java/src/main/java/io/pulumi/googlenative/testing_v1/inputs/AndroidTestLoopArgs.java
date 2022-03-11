@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
@@ -27,10 +27,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appApk")
-      private final @Nullable Input<FileReferenceArgs> appApk;
+      private final @Nullable Output<FileReferenceArgs> appApk;
 
-    public Input<FileReferenceArgs> getAppApk() {
-        return this.appApk == null ? Input.empty() : this.appApk;
+    public Output<FileReferenceArgs> getAppApk() {
+        return this.appApk == null ? Output.empty() : this.appApk;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appBundle")
-      private final @Nullable Input<AppBundleArgs> appBundle;
+      private final @Nullable Output<AppBundleArgs> appBundle;
 
-    public Input<AppBundleArgs> getAppBundle() {
-        return this.appBundle == null ? Input.empty() : this.appBundle;
+    public Output<AppBundleArgs> getAppBundle() {
+        return this.appBundle == null ? Output.empty() : this.appBundle;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appPackageId")
-      private final @Nullable Input<String> appPackageId;
+      private final @Nullable Output<String> appPackageId;
 
-    public Input<String> getAppPackageId() {
-        return this.appPackageId == null ? Input.empty() : this.appPackageId;
+    public Output<String> getAppPackageId() {
+        return this.appPackageId == null ? Output.empty() : this.appPackageId;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scenarioLabels")
-      private final @Nullable Input<List<String>> scenarioLabels;
+      private final @Nullable Output<List<String>> scenarioLabels;
 
-    public Input<List<String>> getScenarioLabels() {
-        return this.scenarioLabels == null ? Input.empty() : this.scenarioLabels;
+    public Output<List<String>> getScenarioLabels() {
+        return this.scenarioLabels == null ? Output.empty() : this.scenarioLabels;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scenarios")
-      private final @Nullable Input<List<Integer>> scenarios;
+      private final @Nullable Output<List<Integer>> scenarios;
 
-    public Input<List<Integer>> getScenarios() {
-        return this.scenarios == null ? Input.empty() : this.scenarios;
+    public Output<List<Integer>> getScenarios() {
+        return this.scenarios == null ? Output.empty() : this.scenarios;
     }
 
     public AndroidTestLoopArgs(
-        @Nullable Input<FileReferenceArgs> appApk,
-        @Nullable Input<AppBundleArgs> appBundle,
-        @Nullable Input<String> appPackageId,
-        @Nullable Input<List<String>> scenarioLabels,
-        @Nullable Input<List<Integer>> scenarios) {
+        @Nullable Output<FileReferenceArgs> appApk,
+        @Nullable Output<AppBundleArgs> appBundle,
+        @Nullable Output<String> appPackageId,
+        @Nullable Output<List<String>> scenarioLabels,
+        @Nullable Output<List<Integer>> scenarios) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;
@@ -91,11 +91,11 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AndroidTestLoopArgs() {
-        this.appApk = Input.empty();
-        this.appBundle = Input.empty();
-        this.appPackageId = Input.empty();
-        this.scenarioLabels = Input.empty();
-        this.scenarios = Input.empty();
+        this.appApk = Output.empty();
+        this.appBundle = Output.empty();
+        this.appPackageId = Output.empty();
+        this.scenarioLabels = Output.empty();
+        this.scenarios = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<FileReferenceArgs> appApk;
-        private @Nullable Input<AppBundleArgs> appBundle;
-        private @Nullable Input<String> appPackageId;
-        private @Nullable Input<List<String>> scenarioLabels;
-        private @Nullable Input<List<Integer>> scenarios;
+        private @Nullable Output<FileReferenceArgs> appApk;
+        private @Nullable Output<AppBundleArgs> appBundle;
+        private @Nullable Output<String> appPackageId;
+        private @Nullable Output<List<String>> scenarioLabels;
+        private @Nullable Output<List<Integer>> scenarios;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder appApk(@Nullable Input<FileReferenceArgs> appApk) {
+        public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
             this.appApk = appApk;
             return this;
         }
 
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Input.ofNullable(appApk);
+            this.appApk = Output.ofNullable(appApk);
             return this;
         }
 
-        public Builder appBundle(@Nullable Input<AppBundleArgs> appBundle) {
+        public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
 
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Input.ofNullable(appBundle);
+            this.appBundle = Output.ofNullable(appBundle);
             return this;
         }
 
-        public Builder appPackageId(@Nullable Input<String> appPackageId) {
+        public Builder appPackageId(@Nullable Output<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
 
         public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Input.ofNullable(appPackageId);
+            this.appPackageId = Output.ofNullable(appPackageId);
             return this;
         }
 
-        public Builder scenarioLabels(@Nullable Input<List<String>> scenarioLabels) {
+        public Builder scenarioLabels(@Nullable Output<List<String>> scenarioLabels) {
             this.scenarioLabels = scenarioLabels;
             return this;
         }
 
         public Builder scenarioLabels(@Nullable List<String> scenarioLabels) {
-            this.scenarioLabels = Input.ofNullable(scenarioLabels);
+            this.scenarioLabels = Output.ofNullable(scenarioLabels);
             return this;
         }
 
-        public Builder scenarios(@Nullable Input<List<Integer>> scenarios) {
+        public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
             this.scenarios = scenarios;
             return this;
         }
 
         public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Input.ofNullable(scenarios);
+            this.scenarios = Output.ofNullable(scenarios);
             return this;
         }
         public AndroidTestLoopArgs build() {

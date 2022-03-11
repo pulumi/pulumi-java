@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.GSuitePrincipalArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableModifications")
-      private final @Nullable Input<Boolean> disableModifications;
+      private final @Nullable Output<Boolean> disableModifications;
 
-    public Input<Boolean> getDisableModifications() {
-        return this.disableModifications == null ? Input.empty() : this.disableModifications;
+    public Output<Boolean> getDisableModifications() {
+        return this.disableModifications == null ? Output.empty() : this.disableModifications;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableServing")
-      private final @Nullable Input<Boolean> disableServing;
+      private final @Nullable Output<Boolean> disableServing;
 
-    public Input<Boolean> getDisableServing() {
-        return this.disableServing == null ? Input.empty() : this.disableServing;
+    public Output<Boolean> getDisableServing() {
+        return this.disableServing == null ? Output.empty() : this.disableServing;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -55,10 +55,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexingServiceAccounts")
-      private final @Nullable Input<List<String>> indexingServiceAccounts;
+      private final @Nullable Output<List<String>> indexingServiceAccounts;
 
-    public Input<List<String>> getIndexingServiceAccounts() {
-        return this.indexingServiceAccounts == null ? Input.empty() : this.indexingServiceAccounts;
+    public Output<List<String>> getIndexingServiceAccounts() {
+        return this.indexingServiceAccounts == null ? Output.empty() : this.indexingServiceAccounts;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemsVisibility")
-      private final @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility;
+      private final @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
 
-    public Input<List<GSuitePrincipalArgs>> getItemsVisibility() {
-        return this.itemsVisibility == null ? Input.empty() : this.itemsVisibility;
+    public Output<List<GSuitePrincipalArgs>> getItemsVisibility() {
+        return this.itemsVisibility == null ? Output.empty() : this.itemsVisibility;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationIds")
-      private final @Nullable Input<List<String>> operationIds;
+      private final @Nullable Output<List<String>> operationIds;
 
-    public Input<List<String>> getOperationIds() {
-        return this.operationIds == null ? Input.empty() : this.operationIds;
+    public Output<List<String>> getOperationIds() {
+        return this.operationIds == null ? Output.empty() : this.operationIds;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnThumbnailUrls")
-      private final @Nullable Input<Boolean> returnThumbnailUrls;
+      private final @Nullable Output<Boolean> returnThumbnailUrls;
 
-    public Input<Boolean> getReturnThumbnailUrls() {
-        return this.returnThumbnailUrls == null ? Input.empty() : this.returnThumbnailUrls;
+    public Output<Boolean> getReturnThumbnailUrls() {
+        return this.returnThumbnailUrls == null ? Output.empty() : this.returnThumbnailUrls;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-      private final @Nullable Input<String> shortName;
+      private final @Nullable Output<String> shortName;
 
-    public Input<String> getShortName() {
-        return this.shortName == null ? Input.empty() : this.shortName;
+    public Output<String> getShortName() {
+        return this.shortName == null ? Output.empty() : this.shortName;
     }
 
     public DataSourceArgs(
-        @Nullable Input<Boolean> disableModifications,
-        @Nullable Input<Boolean> disableServing,
-        Input<String> displayName,
-        @Nullable Input<List<String>> indexingServiceAccounts,
-        @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> operationIds,
-        @Nullable Input<Boolean> returnThumbnailUrls,
-        @Nullable Input<String> shortName) {
+        @Nullable Output<Boolean> disableModifications,
+        @Nullable Output<Boolean> disableServing,
+        Output<String> displayName,
+        @Nullable Output<List<String>> indexingServiceAccounts,
+        @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> operationIds,
+        @Nullable Output<Boolean> returnThumbnailUrls,
+        @Nullable Output<String> shortName) {
         this.disableModifications = disableModifications;
         this.disableServing = disableServing;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
@@ -138,15 +138,15 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.disableModifications = Input.empty();
-        this.disableServing = Input.empty();
-        this.displayName = Input.empty();
-        this.indexingServiceAccounts = Input.empty();
-        this.itemsVisibility = Input.empty();
-        this.name = Input.empty();
-        this.operationIds = Input.empty();
-        this.returnThumbnailUrls = Input.empty();
-        this.shortName = Input.empty();
+        this.disableModifications = Output.empty();
+        this.disableServing = Output.empty();
+        this.displayName = Output.empty();
+        this.indexingServiceAccounts = Output.empty();
+        this.itemsVisibility = Output.empty();
+        this.name = Output.empty();
+        this.operationIds = Output.empty();
+        this.returnThumbnailUrls = Output.empty();
+        this.shortName = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableModifications;
-        private @Nullable Input<Boolean> disableServing;
-        private Input<String> displayName;
-        private @Nullable Input<List<String>> indexingServiceAccounts;
-        private @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> operationIds;
-        private @Nullable Input<Boolean> returnThumbnailUrls;
-        private @Nullable Input<String> shortName;
+        private @Nullable Output<Boolean> disableModifications;
+        private @Nullable Output<Boolean> disableServing;
+        private Output<String> displayName;
+        private @Nullable Output<List<String>> indexingServiceAccounts;
+        private @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> operationIds;
+        private @Nullable Output<Boolean> returnThumbnailUrls;
+        private @Nullable Output<String> shortName;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder disableModifications(@Nullable Input<Boolean> disableModifications) {
+        public Builder disableModifications(@Nullable Output<Boolean> disableModifications) {
             this.disableModifications = disableModifications;
             return this;
         }
 
         public Builder disableModifications(@Nullable Boolean disableModifications) {
-            this.disableModifications = Input.ofNullable(disableModifications);
+            this.disableModifications = Output.ofNullable(disableModifications);
             return this;
         }
 
-        public Builder disableServing(@Nullable Input<Boolean> disableServing) {
+        public Builder disableServing(@Nullable Output<Boolean> disableServing) {
             this.disableServing = disableServing;
             return this;
         }
 
         public Builder disableServing(@Nullable Boolean disableServing) {
-            this.disableServing = Input.ofNullable(disableServing);
+            this.disableServing = Output.ofNullable(disableServing);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder indexingServiceAccounts(@Nullable Input<List<String>> indexingServiceAccounts) {
+        public Builder indexingServiceAccounts(@Nullable Output<List<String>> indexingServiceAccounts) {
             this.indexingServiceAccounts = indexingServiceAccounts;
             return this;
         }
 
         public Builder indexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
-            this.indexingServiceAccounts = Input.ofNullable(indexingServiceAccounts);
+            this.indexingServiceAccounts = Output.ofNullable(indexingServiceAccounts);
             return this;
         }
 
-        public Builder itemsVisibility(@Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility) {
+        public Builder itemsVisibility(@Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility) {
             this.itemsVisibility = itemsVisibility;
             return this;
         }
 
         public Builder itemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
-            this.itemsVisibility = Input.ofNullable(itemsVisibility);
+            this.itemsVisibility = Output.ofNullable(itemsVisibility);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder operationIds(@Nullable Input<List<String>> operationIds) {
+        public Builder operationIds(@Nullable Output<List<String>> operationIds) {
             this.operationIds = operationIds;
             return this;
         }
 
         public Builder operationIds(@Nullable List<String> operationIds) {
-            this.operationIds = Input.ofNullable(operationIds);
+            this.operationIds = Output.ofNullable(operationIds);
             return this;
         }
 
-        public Builder returnThumbnailUrls(@Nullable Input<Boolean> returnThumbnailUrls) {
+        public Builder returnThumbnailUrls(@Nullable Output<Boolean> returnThumbnailUrls) {
             this.returnThumbnailUrls = returnThumbnailUrls;
             return this;
         }
 
         public Builder returnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
-            this.returnThumbnailUrls = Input.ofNullable(returnThumbnailUrls);
+            this.returnThumbnailUrls = Output.ofNullable(returnThumbnailUrls);
             return this;
         }
 
-        public Builder shortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Output<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Input.ofNullable(shortName);
+            this.shortName = Output.ofNullable(shortName);
             return this;
         }
         public DataSourceArgs build() {

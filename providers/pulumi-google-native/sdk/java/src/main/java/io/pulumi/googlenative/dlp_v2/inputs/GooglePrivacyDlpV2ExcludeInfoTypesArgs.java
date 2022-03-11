@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="infoTypes")
-      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+      private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Input<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Input.empty() : this.infoTypes;
+    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
+        return this.infoTypes == null ? Output.empty() : this.infoTypes;
     }
 
-    public GooglePrivacyDlpV2ExcludeInfoTypesArgs(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+    public GooglePrivacyDlpV2ExcludeInfoTypesArgs(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
         this.infoTypes = infoTypes;
     }
 
     private GooglePrivacyDlpV2ExcludeInfoTypesArgs() {
-        this.infoTypes = Input.empty();
+        this.infoTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+        private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder infoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
         public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Input.ofNullable(infoTypes);
+            this.infoTypes = Output.ofNullable(infoTypes);
             return this;
         }
         public GooglePrivacyDlpV2ExcludeInfoTypesArgs build() {

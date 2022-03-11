@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs;
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dictionary")
-      private final @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+      private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
-    public Input<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Input.empty() : this.dictionary;
+    public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
+        return this.dictionary == null ? Output.empty() : this.dictionary;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="largeCustomDictionary")
-      private final @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
+      private final @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
 
-    public Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
-        return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
+    public Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> getLargeCustomDictionary() {
+        return this.largeCustomDictionary == null ? Output.empty() : this.largeCustomDictionary;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+      private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
-    public Input<GooglePrivacyDlpV2RegexArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     public GooglePrivacyDlpV2StoredInfoTypeConfigArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary,
-        @Nullable Input<String> displayName,
-        @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary,
-        @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        @Nullable Output<String> description,
+        @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary,
+        @Nullable Output<String> displayName,
+        @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary,
+        @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
         this.description = description;
         this.dictionary = dictionary;
         this.displayName = displayName;
@@ -90,11 +90,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     }
 
     private GooglePrivacyDlpV2StoredInfoTypeConfigArgs() {
-        this.description = Input.empty();
-        this.dictionary = Input.empty();
-        this.displayName = Input.empty();
-        this.largeCustomDictionary = Input.empty();
-        this.regex = Input.empty();
+        this.description = Output.empty();
+        this.dictionary = Output.empty();
+        this.displayName = Output.empty();
+        this.largeCustomDictionary = Output.empty();
+        this.regex = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
-        private @Nullable Input<GooglePrivacyDlpV2RegexArgs> regex;
+        private @Nullable Output<String> description;
+        private @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary;
+        private @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     	      this.regex = defaults.regex;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder dictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
-            this.dictionary = Input.ofNullable(dictionary);
+            this.dictionary = Output.ofNullable(dictionary);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder largeCustomDictionary(@Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable Output<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
         public Builder largeCustomDictionary(@Nullable GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs largeCustomDictionary) {
-            this.largeCustomDictionary = Input.ofNullable(largeCustomDictionary);
+            this.largeCustomDictionary = Output.ofNullable(largeCustomDictionary);
             return this;
         }
 
-        public Builder regex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
         public GooglePrivacyDlpV2StoredInfoTypeConfigArgs build() {

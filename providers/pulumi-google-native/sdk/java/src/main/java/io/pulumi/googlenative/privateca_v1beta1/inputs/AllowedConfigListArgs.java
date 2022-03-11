@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigWrapperArgs;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="allowedConfigValues", required=true)
-      private final Input<List<ReusableConfigWrapperArgs>> allowedConfigValues;
+      private final Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
-    public Input<List<ReusableConfigWrapperArgs>> getAllowedConfigValues() {
+    public Output<List<ReusableConfigWrapperArgs>> getAllowedConfigValues() {
         return this.allowedConfigValues;
     }
 
-    public AllowedConfigListArgs(Input<List<ReusableConfigWrapperArgs>> allowedConfigValues) {
+    public AllowedConfigListArgs(Output<List<ReusableConfigWrapperArgs>> allowedConfigValues) {
         this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues, "expected parameter 'allowedConfigValues' to be non-null");
     }
 
     private AllowedConfigListArgs() {
-        this.allowedConfigValues = Input.empty();
+        this.allowedConfigValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<List<ReusableConfigWrapperArgs>> allowedConfigValues;
+        private Output<List<ReusableConfigWrapperArgs>> allowedConfigValues;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AllowedConfigListArgs extends io.pulumi.resources.ResourceArg
     	      this.allowedConfigValues = defaults.allowedConfigValues;
         }
 
-        public Builder allowedConfigValues(Input<List<ReusableConfigWrapperArgs>> allowedConfigValues) {
+        public Builder allowedConfigValues(Output<List<ReusableConfigWrapperArgs>> allowedConfigValues) {
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }
 
         public Builder allowedConfigValues(List<ReusableConfigWrapperArgs> allowedConfigValues) {
-            this.allowedConfigValues = Input.of(Objects.requireNonNull(allowedConfigValues));
+            this.allowedConfigValues = Output.of(Objects.requireNonNull(allowedConfigValues));
             return this;
         }
         public AllowedConfigListArgs build() {

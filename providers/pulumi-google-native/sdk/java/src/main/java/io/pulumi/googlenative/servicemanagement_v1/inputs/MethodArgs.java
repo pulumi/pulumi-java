@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MethodSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -27,10 +27,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<List<OptionArgs>> options;
+      private final @Nullable Output<List<OptionArgs>> options;
 
-    public Input<List<OptionArgs>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<OptionArgs>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestStreaming")
-      private final @Nullable Input<Boolean> requestStreaming;
+      private final @Nullable Output<Boolean> requestStreaming;
 
-    public Input<Boolean> getRequestStreaming() {
-        return this.requestStreaming == null ? Input.empty() : this.requestStreaming;
+    public Output<Boolean> getRequestStreaming() {
+        return this.requestStreaming == null ? Output.empty() : this.requestStreaming;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestTypeUrl")
-      private final @Nullable Input<String> requestTypeUrl;
+      private final @Nullable Output<String> requestTypeUrl;
 
-    public Input<String> getRequestTypeUrl() {
-        return this.requestTypeUrl == null ? Input.empty() : this.requestTypeUrl;
+    public Output<String> getRequestTypeUrl() {
+        return this.requestTypeUrl == null ? Output.empty() : this.requestTypeUrl;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseStreaming")
-      private final @Nullable Input<Boolean> responseStreaming;
+      private final @Nullable Output<Boolean> responseStreaming;
 
-    public Input<Boolean> getResponseStreaming() {
-        return this.responseStreaming == null ? Input.empty() : this.responseStreaming;
+    public Output<Boolean> getResponseStreaming() {
+        return this.responseStreaming == null ? Output.empty() : this.responseStreaming;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseTypeUrl")
-      private final @Nullable Input<String> responseTypeUrl;
+      private final @Nullable Output<String> responseTypeUrl;
 
-    public Input<String> getResponseTypeUrl() {
-        return this.responseTypeUrl == null ? Input.empty() : this.responseTypeUrl;
+    public Output<String> getResponseTypeUrl() {
+        return this.responseTypeUrl == null ? Output.empty() : this.responseTypeUrl;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntax")
-      private final @Nullable Input<MethodSyntax> syntax;
+      private final @Nullable Output<MethodSyntax> syntax;
 
-    public Input<MethodSyntax> getSyntax() {
-        return this.syntax == null ? Input.empty() : this.syntax;
+    public Output<MethodSyntax> getSyntax() {
+        return this.syntax == null ? Output.empty() : this.syntax;
     }
 
     public MethodArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<OptionArgs>> options,
-        @Nullable Input<Boolean> requestStreaming,
-        @Nullable Input<String> requestTypeUrl,
-        @Nullable Input<Boolean> responseStreaming,
-        @Nullable Input<String> responseTypeUrl,
-        @Nullable Input<MethodSyntax> syntax) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<OptionArgs>> options,
+        @Nullable Output<Boolean> requestStreaming,
+        @Nullable Output<String> requestTypeUrl,
+        @Nullable Output<Boolean> responseStreaming,
+        @Nullable Output<String> responseTypeUrl,
+        @Nullable Output<MethodSyntax> syntax) {
         this.name = name;
         this.options = options;
         this.requestStreaming = requestStreaming;
@@ -117,13 +117,13 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodArgs() {
-        this.name = Input.empty();
-        this.options = Input.empty();
-        this.requestStreaming = Input.empty();
-        this.requestTypeUrl = Input.empty();
-        this.responseStreaming = Input.empty();
-        this.responseTypeUrl = Input.empty();
-        this.syntax = Input.empty();
+        this.name = Output.empty();
+        this.options = Output.empty();
+        this.requestStreaming = Output.empty();
+        this.requestTypeUrl = Output.empty();
+        this.responseStreaming = Output.empty();
+        this.responseTypeUrl = Output.empty();
+        this.syntax = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<OptionArgs>> options;
-        private @Nullable Input<Boolean> requestStreaming;
-        private @Nullable Input<String> requestTypeUrl;
-        private @Nullable Input<Boolean> responseStreaming;
-        private @Nullable Input<String> responseTypeUrl;
-        private @Nullable Input<MethodSyntax> syntax;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<OptionArgs>> options;
+        private @Nullable Output<Boolean> requestStreaming;
+        private @Nullable Output<String> requestTypeUrl;
+        private @Nullable Output<Boolean> responseStreaming;
+        private @Nullable Output<String> responseTypeUrl;
+        private @Nullable Output<MethodSyntax> syntax;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder options(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Output<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder requestStreaming(@Nullable Input<Boolean> requestStreaming) {
+        public Builder requestStreaming(@Nullable Output<Boolean> requestStreaming) {
             this.requestStreaming = requestStreaming;
             return this;
         }
 
         public Builder requestStreaming(@Nullable Boolean requestStreaming) {
-            this.requestStreaming = Input.ofNullable(requestStreaming);
+            this.requestStreaming = Output.ofNullable(requestStreaming);
             return this;
         }
 
-        public Builder requestTypeUrl(@Nullable Input<String> requestTypeUrl) {
+        public Builder requestTypeUrl(@Nullable Output<String> requestTypeUrl) {
             this.requestTypeUrl = requestTypeUrl;
             return this;
         }
 
         public Builder requestTypeUrl(@Nullable String requestTypeUrl) {
-            this.requestTypeUrl = Input.ofNullable(requestTypeUrl);
+            this.requestTypeUrl = Output.ofNullable(requestTypeUrl);
             return this;
         }
 
-        public Builder responseStreaming(@Nullable Input<Boolean> responseStreaming) {
+        public Builder responseStreaming(@Nullable Output<Boolean> responseStreaming) {
             this.responseStreaming = responseStreaming;
             return this;
         }
 
         public Builder responseStreaming(@Nullable Boolean responseStreaming) {
-            this.responseStreaming = Input.ofNullable(responseStreaming);
+            this.responseStreaming = Output.ofNullable(responseStreaming);
             return this;
         }
 
-        public Builder responseTypeUrl(@Nullable Input<String> responseTypeUrl) {
+        public Builder responseTypeUrl(@Nullable Output<String> responseTypeUrl) {
             this.responseTypeUrl = responseTypeUrl;
             return this;
         }
 
         public Builder responseTypeUrl(@Nullable String responseTypeUrl) {
-            this.responseTypeUrl = Input.ofNullable(responseTypeUrl);
+            this.responseTypeUrl = Output.ofNullable(responseTypeUrl);
             return this;
         }
 
-        public Builder syntax(@Nullable Input<MethodSyntax> syntax) {
+        public Builder syntax(@Nullable Output<MethodSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
         public Builder syntax(@Nullable MethodSyntax syntax) {
-            this.syntax = Input.ofNullable(syntax);
+            this.syntax = Output.ofNullable(syntax);
             return this;
         }
         public MethodArgs build() {

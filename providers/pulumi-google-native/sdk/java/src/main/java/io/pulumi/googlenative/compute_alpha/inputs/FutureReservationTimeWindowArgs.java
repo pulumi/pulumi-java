@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.String;
@@ -16,17 +16,17 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     public static final FutureReservationTimeWindowArgs Empty = new FutureReservationTimeWindowArgs();
 
     @InputImport(name="duration")
-      private final @Nullable Input<DurationArgs> duration;
+      private final @Nullable Output<DurationArgs> duration;
 
-    public Input<DurationArgs> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<DurationArgs> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -34,25 +34,25 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public FutureReservationTimeWindowArgs(
-        @Nullable Input<DurationArgs> duration,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<DurationArgs> duration,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> startTime) {
         this.duration = duration;
         this.endTime = endTime;
         this.startTime = startTime;
     }
 
     private FutureReservationTimeWindowArgs() {
-        this.duration = Input.empty();
-        this.endTime = Input.empty();
-        this.startTime = Input.empty();
+        this.duration = Output.empty();
+        this.endTime = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<DurationArgs> duration;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<DurationArgs> duration;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class FutureReservationTimeWindowArgs extends io.pulumi.resources.R
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder duration(@Nullable Input<DurationArgs> duration) {
+        public Builder duration(@Nullable Output<DurationArgs> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable DurationArgs duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public FutureReservationTimeWindowArgs build() {

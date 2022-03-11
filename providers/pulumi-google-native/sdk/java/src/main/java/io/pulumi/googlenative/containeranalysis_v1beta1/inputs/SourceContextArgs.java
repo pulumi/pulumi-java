@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.CloudRepoSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GerritSourceContextArgs;
@@ -27,10 +27,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudRepo")
-      private final @Nullable Input<CloudRepoSourceContextArgs> cloudRepo;
+      private final @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
 
-    public Input<CloudRepoSourceContextArgs> getCloudRepo() {
-        return this.cloudRepo == null ? Input.empty() : this.cloudRepo;
+    public Output<CloudRepoSourceContextArgs> getCloudRepo() {
+        return this.cloudRepo == null ? Output.empty() : this.cloudRepo;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gerrit")
-      private final @Nullable Input<GerritSourceContextArgs> gerrit;
+      private final @Nullable Output<GerritSourceContextArgs> gerrit;
 
-    public Input<GerritSourceContextArgs> getGerrit() {
-        return this.gerrit == null ? Input.empty() : this.gerrit;
+    public Output<GerritSourceContextArgs> getGerrit() {
+        return this.gerrit == null ? Output.empty() : this.gerrit;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="git")
-      private final @Nullable Input<GitSourceContextArgs> git;
+      private final @Nullable Output<GitSourceContextArgs> git;
 
-    public Input<GitSourceContextArgs> getGit() {
-        return this.git == null ? Input.empty() : this.git;
+    public Output<GitSourceContextArgs> getGit() {
+        return this.git == null ? Output.empty() : this.git;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public SourceContextArgs(
-        @Nullable Input<CloudRepoSourceContextArgs> cloudRepo,
-        @Nullable Input<GerritSourceContextArgs> gerrit,
-        @Nullable Input<GitSourceContextArgs> git,
-        @Nullable Input<Map<String,String>> labels) {
+        @Nullable Output<CloudRepoSourceContextArgs> cloudRepo,
+        @Nullable Output<GerritSourceContextArgs> gerrit,
+        @Nullable Output<GitSourceContextArgs> git,
+        @Nullable Output<Map<String,String>> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;
@@ -78,10 +78,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceContextArgs() {
-        this.cloudRepo = Input.empty();
-        this.gerrit = Input.empty();
-        this.git = Input.empty();
-        this.labels = Input.empty();
+        this.cloudRepo = Output.empty();
+        this.gerrit = Output.empty();
+        this.git = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CloudRepoSourceContextArgs> cloudRepo;
-        private @Nullable Input<GerritSourceContextArgs> gerrit;
-        private @Nullable Input<GitSourceContextArgs> git;
-        private @Nullable Input<Map<String,String>> labels;
+        private @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
+        private @Nullable Output<GerritSourceContextArgs> gerrit;
+        private @Nullable Output<GitSourceContextArgs> git;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder cloudRepo(@Nullable Input<CloudRepoSourceContextArgs> cloudRepo) {
+        public Builder cloudRepo(@Nullable Output<CloudRepoSourceContextArgs> cloudRepo) {
             this.cloudRepo = cloudRepo;
             return this;
         }
 
         public Builder cloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
-            this.cloudRepo = Input.ofNullable(cloudRepo);
+            this.cloudRepo = Output.ofNullable(cloudRepo);
             return this;
         }
 
-        public Builder gerrit(@Nullable Input<GerritSourceContextArgs> gerrit) {
+        public Builder gerrit(@Nullable Output<GerritSourceContextArgs> gerrit) {
             this.gerrit = gerrit;
             return this;
         }
 
         public Builder gerrit(@Nullable GerritSourceContextArgs gerrit) {
-            this.gerrit = Input.ofNullable(gerrit);
+            this.gerrit = Output.ofNullable(gerrit);
             return this;
         }
 
-        public Builder git(@Nullable Input<GitSourceContextArgs> git) {
+        public Builder git(@Nullable Output<GitSourceContextArgs> git) {
             this.git = git;
             return this;
         }
 
         public Builder git(@Nullable GitSourceContextArgs git) {
-            this.git = Input.ofNullable(git);
+            this.git = Output.ofNullable(git);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public SourceContextArgs build() {

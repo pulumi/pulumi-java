@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<String> range;
+      private final @Nullable Output<String> range;
 
-    public Input<String> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<String> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="skipLeadingRows")
-      private final @Nullable Input<String> skipLeadingRows;
+      private final @Nullable Output<String> skipLeadingRows;
 
-    public Input<String> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
+    public Output<String> getSkipLeadingRows() {
+        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
     }
 
     public GoogleSheetsOptionsArgs(
-        @Nullable Input<String> range,
-        @Nullable Input<String> skipLeadingRows) {
+        @Nullable Output<String> range,
+        @Nullable Output<String> skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }
 
     private GoogleSheetsOptionsArgs() {
-        this.range = Input.empty();
-        this.skipLeadingRows = Input.empty();
+        this.range = Output.empty();
+        this.skipLeadingRows = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> range;
-        private @Nullable Input<String> skipLeadingRows;
+        private @Nullable Output<String> range;
+        private @Nullable Output<String> skipLeadingRows;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class GoogleSheetsOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder range(@Nullable Input<String> range) {
+        public Builder range(@Nullable Output<String> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable String range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder skipLeadingRows(@Nullable Input<String> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
         public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
-            this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
         }
         public GoogleSheetsOptionsArgs build() {

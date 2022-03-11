@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DatabaseConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
-    public DatabaseConfigArgs(@Nullable Input<String> machineType) {
+    public DatabaseConfigArgs(@Nullable Output<String> machineType) {
         this.machineType = machineType;
     }
 
     private DatabaseConfigArgs() {
-        this.machineType = Input.empty();
+        this.machineType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DatabaseConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> machineType;
+        private @Nullable Output<String> machineType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DatabaseConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
         public DatabaseConfigArgs build() {

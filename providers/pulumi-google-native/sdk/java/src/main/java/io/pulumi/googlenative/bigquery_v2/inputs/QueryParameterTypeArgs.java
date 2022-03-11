@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeStructTypesItemArgs;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arrayType")
-      private final @Nullable Input<QueryParameterTypeArgs> arrayType;
+      private final @Nullable Output<QueryParameterTypeArgs> arrayType;
 
-    public Input<QueryParameterTypeArgs> getArrayType() {
-        return this.arrayType == null ? Input.empty() : this.arrayType;
+    public Output<QueryParameterTypeArgs> getArrayType() {
+        return this.arrayType == null ? Output.empty() : this.arrayType;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="structTypes")
-      private final @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
+      private final @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
-    public Input<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
-        return this.structTypes == null ? Input.empty() : this.structTypes;
+    public Output<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
+        return this.structTypes == null ? Output.empty() : this.structTypes;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public QueryParameterTypeArgs(
-        @Nullable Input<QueryParameterTypeArgs> arrayType,
-        @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes,
-        @Nullable Input<String> type) {
+        @Nullable Output<QueryParameterTypeArgs> arrayType,
+        @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes,
+        @Nullable Output<String> type) {
         this.arrayType = arrayType;
         this.structTypes = structTypes;
         this.type = type;
     }
 
     private QueryParameterTypeArgs() {
-        this.arrayType = Input.empty();
-        this.structTypes = Input.empty();
-        this.type = Input.empty();
+        this.arrayType = Output.empty();
+        this.structTypes = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<QueryParameterTypeArgs> arrayType;
-        private @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
-        private @Nullable Input<String> type;
+        private @Nullable Output<QueryParameterTypeArgs> arrayType;
+        private @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder arrayType(@Nullable Input<QueryParameterTypeArgs> arrayType) {
+        public Builder arrayType(@Nullable Output<QueryParameterTypeArgs> arrayType) {
             this.arrayType = arrayType;
             return this;
         }
 
         public Builder arrayType(@Nullable QueryParameterTypeArgs arrayType) {
-            this.arrayType = Input.ofNullable(arrayType);
+            this.arrayType = Output.ofNullable(arrayType);
             return this;
         }
 
-        public Builder structTypes(@Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes) {
+        public Builder structTypes(@Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes) {
             this.structTypes = structTypes;
             return this;
         }
 
         public Builder structTypes(@Nullable List<QueryParameterTypeStructTypesItemArgs> structTypes) {
-            this.structTypes = Input.ofNullable(structTypes);
+            this.structTypes = Output.ofNullable(structTypes);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public QueryParameterTypeArgs build() {

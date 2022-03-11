@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CategoryArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.IdentityArgs;
@@ -26,10 +26,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories")
-      private final @Nullable Input<List<CategoryArgs>> categories;
+      private final @Nullable Output<List<CategoryArgs>> categories;
 
-    public Input<List<CategoryArgs>> getCategories() {
-        return this.categories == null ? Input.empty() : this.categories;
+    public Output<List<CategoryArgs>> getCategories() {
+        return this.categories == null ? Output.empty() : this.categories;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kbArticleIds")
-      private final @Nullable Input<List<String>> kbArticleIds;
+      private final @Nullable Output<List<String>> kbArticleIds;
 
-    public Input<List<String>> getKbArticleIds() {
-        return this.kbArticleIds == null ? Input.empty() : this.kbArticleIds;
+    public Output<List<String>> getKbArticleIds() {
+        return this.kbArticleIds == null ? Output.empty() : this.kbArticleIds;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastPublishedTimestamp")
-      private final @Nullable Input<String> lastPublishedTimestamp;
+      private final @Nullable Output<String> lastPublishedTimestamp;
 
-    public Input<String> getLastPublishedTimestamp() {
-        return this.lastPublishedTimestamp == null ? Input.empty() : this.lastPublishedTimestamp;
+    public Output<String> getLastPublishedTimestamp() {
+        return this.lastPublishedTimestamp == null ? Output.empty() : this.lastPublishedTimestamp;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportUrl")
-      private final @Nullable Input<String> supportUrl;
+      private final @Nullable Output<String> supportUrl;
 
-    public Input<String> getSupportUrl() {
-        return this.supportUrl == null ? Input.empty() : this.supportUrl;
+    public Output<String> getSupportUrl() {
+        return this.supportUrl == null ? Output.empty() : this.supportUrl;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public WindowsUpdateArgs(
-        @Nullable Input<List<CategoryArgs>> categories,
-        @Nullable Input<String> description,
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<List<String>> kbArticleIds,
-        @Nullable Input<String> lastPublishedTimestamp,
-        @Nullable Input<String> supportUrl,
-        @Nullable Input<String> title) {
+        @Nullable Output<List<CategoryArgs>> categories,
+        @Nullable Output<String> description,
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<List<String>> kbArticleIds,
+        @Nullable Output<String> lastPublishedTimestamp,
+        @Nullable Output<String> supportUrl,
+        @Nullable Output<String> title) {
         this.categories = categories;
         this.description = description;
         this.identity = identity;
@@ -116,13 +116,13 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsUpdateArgs() {
-        this.categories = Input.empty();
-        this.description = Input.empty();
-        this.identity = Input.empty();
-        this.kbArticleIds = Input.empty();
-        this.lastPublishedTimestamp = Input.empty();
-        this.supportUrl = Input.empty();
-        this.title = Input.empty();
+        this.categories = Output.empty();
+        this.description = Output.empty();
+        this.identity = Output.empty();
+        this.kbArticleIds = Output.empty();
+        this.lastPublishedTimestamp = Output.empty();
+        this.supportUrl = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CategoryArgs>> categories;
-        private @Nullable Input<String> description;
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<List<String>> kbArticleIds;
-        private @Nullable Input<String> lastPublishedTimestamp;
-        private @Nullable Input<String> supportUrl;
-        private @Nullable Input<String> title;
+        private @Nullable Output<List<CategoryArgs>> categories;
+        private @Nullable Output<String> description;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<List<String>> kbArticleIds;
+        private @Nullable Output<String> lastPublishedTimestamp;
+        private @Nullable Output<String> supportUrl;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder categories(@Nullable Input<List<CategoryArgs>> categories) {
+        public Builder categories(@Nullable Output<List<CategoryArgs>> categories) {
             this.categories = categories;
             return this;
         }
 
         public Builder categories(@Nullable List<CategoryArgs> categories) {
-            this.categories = Input.ofNullable(categories);
+            this.categories = Output.ofNullable(categories);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kbArticleIds(@Nullable Input<List<String>> kbArticleIds) {
+        public Builder kbArticleIds(@Nullable Output<List<String>> kbArticleIds) {
             this.kbArticleIds = kbArticleIds;
             return this;
         }
 
         public Builder kbArticleIds(@Nullable List<String> kbArticleIds) {
-            this.kbArticleIds = Input.ofNullable(kbArticleIds);
+            this.kbArticleIds = Output.ofNullable(kbArticleIds);
             return this;
         }
 
-        public Builder lastPublishedTimestamp(@Nullable Input<String> lastPublishedTimestamp) {
+        public Builder lastPublishedTimestamp(@Nullable Output<String> lastPublishedTimestamp) {
             this.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
 
         public Builder lastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
-            this.lastPublishedTimestamp = Input.ofNullable(lastPublishedTimestamp);
+            this.lastPublishedTimestamp = Output.ofNullable(lastPublishedTimestamp);
             return this;
         }
 
-        public Builder supportUrl(@Nullable Input<String> supportUrl) {
+        public Builder supportUrl(@Nullable Output<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
 
         public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Input.ofNullable(supportUrl);
+            this.supportUrl = Output.ofNullable(supportUrl);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public WindowsUpdateArgs build() {

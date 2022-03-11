@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
+      private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
 
-    public Input<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> getItems() {
         return this.items;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(Input<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
+    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs(Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
     }
 
     public static final class Builder {
-        private Input<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
+        private Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs e
     	      this.items = defaults.items;
         }
 
-        public Builder items(Input<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
+        public Builder items(Output<List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectArgs build() {

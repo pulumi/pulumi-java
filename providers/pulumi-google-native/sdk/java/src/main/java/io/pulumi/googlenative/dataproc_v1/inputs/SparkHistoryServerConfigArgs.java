@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dataprocCluster")
-      private final @Nullable Input<String> dataprocCluster;
+      private final @Nullable Output<String> dataprocCluster;
 
-    public Input<String> getDataprocCluster() {
-        return this.dataprocCluster == null ? Input.empty() : this.dataprocCluster;
+    public Output<String> getDataprocCluster() {
+        return this.dataprocCluster == null ? Output.empty() : this.dataprocCluster;
     }
 
-    public SparkHistoryServerConfigArgs(@Nullable Input<String> dataprocCluster) {
+    public SparkHistoryServerConfigArgs(@Nullable Output<String> dataprocCluster) {
         this.dataprocCluster = dataprocCluster;
     }
 
     private SparkHistoryServerConfigArgs() {
-        this.dataprocCluster = Input.empty();
+        this.dataprocCluster = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dataprocCluster;
+        private @Nullable Output<String> dataprocCluster;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
     	      this.dataprocCluster = defaults.dataprocCluster;
         }
 
-        public Builder dataprocCluster(@Nullable Input<String> dataprocCluster) {
+        public Builder dataprocCluster(@Nullable Output<String> dataprocCluster) {
             this.dataprocCluster = dataprocCluster;
             return this;
         }
 
         public Builder dataprocCluster(@Nullable String dataprocCluster) {
-            this.dataprocCluster = Input.ofNullable(dataprocCluster);
+            this.dataprocCluster = Output.ofNullable(dataprocCluster);
             return this;
         }
         public SparkHistoryServerConfigArgs build() {

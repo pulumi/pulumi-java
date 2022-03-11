@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minGuestCpuCount")
-      private final @Nullable Input<Integer> minGuestCpuCount;
+      private final @Nullable Output<Integer> minGuestCpuCount;
 
-    public Input<Integer> getMinGuestCpuCount() {
-        return this.minGuestCpuCount == null ? Input.empty() : this.minGuestCpuCount;
+    public Output<Integer> getMinGuestCpuCount() {
+        return this.minGuestCpuCount == null ? Output.empty() : this.minGuestCpuCount;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="minMemoryMb")
-      private final @Nullable Input<Integer> minMemoryMb;
+      private final @Nullable Output<Integer> minMemoryMb;
 
-    public Input<Integer> getMinMemoryMb() {
-        return this.minMemoryMb == null ? Input.empty() : this.minMemoryMb;
+    public Output<Integer> getMinMemoryMb() {
+        return this.minMemoryMb == null ? Output.empty() : this.minMemoryMb;
     }
 
     public LicenseResourceRequirementsArgs(
-        @Nullable Input<Integer> minGuestCpuCount,
-        @Nullable Input<Integer> minMemoryMb) {
+        @Nullable Output<Integer> minGuestCpuCount,
+        @Nullable Output<Integer> minMemoryMb) {
         this.minGuestCpuCount = minGuestCpuCount;
         this.minMemoryMb = minMemoryMb;
     }
 
     private LicenseResourceRequirementsArgs() {
-        this.minGuestCpuCount = Input.empty();
-        this.minMemoryMb = Input.empty();
+        this.minGuestCpuCount = Output.empty();
+        this.minMemoryMb = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minGuestCpuCount;
-        private @Nullable Input<Integer> minMemoryMb;
+        private @Nullable Output<Integer> minGuestCpuCount;
+        private @Nullable Output<Integer> minMemoryMb;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
     	      this.minMemoryMb = defaults.minMemoryMb;
         }
 
-        public Builder minGuestCpuCount(@Nullable Input<Integer> minGuestCpuCount) {
+        public Builder minGuestCpuCount(@Nullable Output<Integer> minGuestCpuCount) {
             this.minGuestCpuCount = minGuestCpuCount;
             return this;
         }
 
         public Builder minGuestCpuCount(@Nullable Integer minGuestCpuCount) {
-            this.minGuestCpuCount = Input.ofNullable(minGuestCpuCount);
+            this.minGuestCpuCount = Output.ofNullable(minGuestCpuCount);
             return this;
         }
 
-        public Builder minMemoryMb(@Nullable Input<Integer> minMemoryMb) {
+        public Builder minMemoryMb(@Nullable Output<Integer> minMemoryMb) {
             this.minMemoryMb = minMemoryMb;
             return this;
         }
 
         public Builder minMemoryMb(@Nullable Integer minMemoryMb) {
-            this.minMemoryMb = Input.ofNullable(minMemoryMb);
+            this.minMemoryMb = Output.ofNullable(minMemoryMb);
             return this;
         }
         public LicenseResourceRequirementsArgs build() {

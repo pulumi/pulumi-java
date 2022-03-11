@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomStreamConfigArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
@@ -19,17 +19,17 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final DicomStoreArgs Empty = new DicomStoreArgs();
 
     @InputImport(name="datasetId", required=true)
-      private final Input<String> datasetId;
+      private final Output<String> datasetId;
 
-    public Input<String> getDatasetId() {
+    public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="dicomStoreId")
-      private final @Nullable Input<String> dicomStoreId;
+      private final @Nullable Output<String> dicomStoreId;
 
-    public Input<String> getDicomStoreId() {
-        return this.dicomStoreId == null ? Input.empty() : this.dicomStoreId;
+    public Output<String> getDicomStoreId() {
+        return this.dicomStoreId == null ? Output.empty() : this.dicomStoreId;
     }
 
     /**
@@ -37,17 +37,17 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,17 +66,17 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationConfig")
-      private final @Nullable Input<NotificationConfigArgs> notificationConfig;
+      private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
-    public Input<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Input.empty() : this.notificationConfig;
+    public Output<NotificationConfigArgs> getNotificationConfig() {
+        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -84,21 +84,21 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamConfigs")
-      private final @Nullable Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
+      private final @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
-    public Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Input.empty() : this.streamConfigs;
+    public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> getStreamConfigs() {
+        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
     }
 
     public DicomStoreArgs(
-        Input<String> datasetId,
-        @Nullable Input<String> dicomStoreId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<NotificationConfigArgs> notificationConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
+        Output<String> datasetId,
+        @Nullable Output<String> dicomStoreId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<NotificationConfigArgs> notificationConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
         this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
         this.dicomStoreId = dicomStoreId;
         this.labels = labels;
@@ -110,14 +110,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomStoreArgs() {
-        this.datasetId = Input.empty();
-        this.dicomStoreId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.notificationConfig = Input.empty();
-        this.project = Input.empty();
-        this.streamConfigs = Input.empty();
+        this.datasetId = Output.empty();
+        this.dicomStoreId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.notificationConfig = Output.empty();
+        this.project = Output.empty();
+        this.streamConfigs = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,14 +129,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> datasetId;
-        private @Nullable Input<String> dicomStoreId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<NotificationConfigArgs> notificationConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
+        private Output<String> datasetId;
+        private @Nullable Output<String> dicomStoreId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<NotificationConfigArgs> notificationConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
         public Builder() {
     	      // Empty
@@ -154,83 +154,83 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamConfigs = defaults.streamConfigs;
         }
 
-        public Builder datasetId(Input<String> datasetId) {
+        public Builder datasetId(Output<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Input.of(Objects.requireNonNull(datasetId));
+            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder dicomStoreId(@Nullable Input<String> dicomStoreId) {
+        public Builder dicomStoreId(@Nullable Output<String> dicomStoreId) {
             this.dicomStoreId = dicomStoreId;
             return this;
         }
 
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Input.ofNullable(dicomStoreId);
+            this.dicomStoreId = Output.ofNullable(dicomStoreId);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder notificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Input.ofNullable(notificationConfig);
+            this.notificationConfig = Output.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder streamConfigs(@Nullable Input<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
         public Builder streamConfigs(@Nullable List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Input.ofNullable(streamConfigs);
+            this.streamConfigs = Output.ofNullable(streamConfigs);
             return this;
         }
         public DicomStoreArgs build() {

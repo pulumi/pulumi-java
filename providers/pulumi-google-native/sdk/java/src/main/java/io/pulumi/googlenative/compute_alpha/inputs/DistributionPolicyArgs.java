@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.DistributionPolicyTargetShape;
 import io.pulumi.googlenative.compute_alpha.inputs.DistributionPolicyZoneConfigurationArgs;
@@ -21,10 +21,10 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetShape")
-      private final @Nullable Input<DistributionPolicyTargetShape> targetShape;
+      private final @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
-    public Input<DistributionPolicyTargetShape> getTargetShape() {
-        return this.targetShape == null ? Input.empty() : this.targetShape;
+    public Output<DistributionPolicyTargetShape> getTargetShape() {
+        return this.targetShape == null ? Output.empty() : this.targetShape;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones;
+      private final @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
-    public Input<List<DistributionPolicyZoneConfigurationArgs>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<DistributionPolicyZoneConfigurationArgs>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public DistributionPolicyArgs(
-        @Nullable Input<DistributionPolicyTargetShape> targetShape,
-        @Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones) {
+        @Nullable Output<DistributionPolicyTargetShape> targetShape,
+        @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
         this.targetShape = targetShape;
         this.zones = zones;
     }
 
     private DistributionPolicyArgs() {
-        this.targetShape = Input.empty();
-        this.zones = Input.empty();
+        this.targetShape = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DistributionPolicyTargetShape> targetShape;
-        private @Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones;
+        private @Nullable Output<DistributionPolicyTargetShape> targetShape;
+        private @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder targetShape(@Nullable Input<DistributionPolicyTargetShape> targetShape) {
+        public Builder targetShape(@Nullable Output<DistributionPolicyTargetShape> targetShape) {
             this.targetShape = targetShape;
             return this;
         }
 
         public Builder targetShape(@Nullable DistributionPolicyTargetShape targetShape) {
-            this.targetShape = Input.ofNullable(targetShape);
+            this.targetShape = Output.ofNullable(targetShape);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones) {
+        public Builder zones(@Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<DistributionPolicyZoneConfigurationArgs> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public DistributionPolicyArgs build() {

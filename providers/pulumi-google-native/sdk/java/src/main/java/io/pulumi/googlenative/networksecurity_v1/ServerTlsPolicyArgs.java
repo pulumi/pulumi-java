@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleCloudNetworksecurityV1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.MTLSPolicyArgs;
@@ -23,10 +23,10 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allowOpen")
-      private final @Nullable Input<Boolean> allowOpen;
+      private final @Nullable Output<Boolean> allowOpen;
 
-    public Input<Boolean> getAllowOpen() {
-        return this.allowOpen == null ? Input.empty() : this.allowOpen;
+    public Output<Boolean> getAllowOpen() {
+        return this.allowOpen == null ? Output.empty() : this.allowOpen;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mtlsPolicy")
-      private final @Nullable Input<MTLSPolicyArgs> mtlsPolicy;
+      private final @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
 
-    public Input<MTLSPolicyArgs> getMtlsPolicy() {
-        return this.mtlsPolicy == null ? Input.empty() : this.mtlsPolicy;
+    public Output<MTLSPolicyArgs> getMtlsPolicy() {
+        return this.mtlsPolicy == null ? Output.empty() : this.mtlsPolicy;
     }
 
     /**
@@ -74,17 +74,17 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -92,29 +92,29 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serverCertificate")
-      private final @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate;
+      private final @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate;
 
-    public Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> getServerCertificate() {
-        return this.serverCertificate == null ? Input.empty() : this.serverCertificate;
+    public Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> getServerCertificate() {
+        return this.serverCertificate == null ? Output.empty() : this.serverCertificate;
     }
 
     @InputImport(name="serverTlsPolicyId", required=true)
-      private final Input<String> serverTlsPolicyId;
+      private final Output<String> serverTlsPolicyId;
 
-    public Input<String> getServerTlsPolicyId() {
+    public Output<String> getServerTlsPolicyId() {
         return this.serverTlsPolicyId;
     }
 
     public ServerTlsPolicyArgs(
-        @Nullable Input<Boolean> allowOpen,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<MTLSPolicyArgs> mtlsPolicy,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate,
-        Input<String> serverTlsPolicyId) {
+        @Nullable Output<Boolean> allowOpen,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<MTLSPolicyArgs> mtlsPolicy,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate,
+        Output<String> serverTlsPolicyId) {
         this.allowOpen = allowOpen;
         this.description = description;
         this.labels = labels;
@@ -127,15 +127,15 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServerTlsPolicyArgs() {
-        this.allowOpen = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.mtlsPolicy = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serverCertificate = Input.empty();
-        this.serverTlsPolicyId = Input.empty();
+        this.allowOpen = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.mtlsPolicy = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serverCertificate = Output.empty();
+        this.serverTlsPolicyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,15 +147,15 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowOpen;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MTLSPolicyArgs> mtlsPolicy;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate;
-        private Input<String> serverTlsPolicyId;
+        private @Nullable Output<Boolean> allowOpen;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MTLSPolicyArgs> mtlsPolicy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate;
+        private Output<String> serverTlsPolicyId;
 
         public Builder() {
     	      // Empty
@@ -174,93 +174,93 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serverTlsPolicyId = defaults.serverTlsPolicyId;
         }
 
-        public Builder allowOpen(@Nullable Input<Boolean> allowOpen) {
+        public Builder allowOpen(@Nullable Output<Boolean> allowOpen) {
             this.allowOpen = allowOpen;
             return this;
         }
 
         public Builder allowOpen(@Nullable Boolean allowOpen) {
-            this.allowOpen = Input.ofNullable(allowOpen);
+            this.allowOpen = Output.ofNullable(allowOpen);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mtlsPolicy(@Nullable Input<MTLSPolicyArgs> mtlsPolicy) {
+        public Builder mtlsPolicy(@Nullable Output<MTLSPolicyArgs> mtlsPolicy) {
             this.mtlsPolicy = mtlsPolicy;
             return this;
         }
 
         public Builder mtlsPolicy(@Nullable MTLSPolicyArgs mtlsPolicy) {
-            this.mtlsPolicy = Input.ofNullable(mtlsPolicy);
+            this.mtlsPolicy = Output.ofNullable(mtlsPolicy);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serverCertificate(@Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate) {
+        public Builder serverCertificate(@Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
 
         public Builder serverCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs serverCertificate) {
-            this.serverCertificate = Input.ofNullable(serverCertificate);
+            this.serverCertificate = Output.ofNullable(serverCertificate);
             return this;
         }
 
-        public Builder serverTlsPolicyId(Input<String> serverTlsPolicyId) {
+        public Builder serverTlsPolicyId(Output<String> serverTlsPolicyId) {
             this.serverTlsPolicyId = Objects.requireNonNull(serverTlsPolicyId);
             return this;
         }
 
         public Builder serverTlsPolicyId(String serverTlsPolicyId) {
-            this.serverTlsPolicyId = Input.of(Objects.requireNonNull(serverTlsPolicyId));
+            this.serverTlsPolicyId = Output.of(Objects.requireNonNull(serverTlsPolicyId));
             return this;
         }
         public ServerTlsPolicyArgs build() {

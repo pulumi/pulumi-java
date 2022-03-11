@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterNatLogConfigFilter;
 import java.lang.Boolean;
@@ -24,10 +24,10 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<RouterNatLogConfigFilter> filter;
+      private final @Nullable Output<RouterNatLogConfigFilter> filter;
 
-    public Input<RouterNatLogConfigFilter> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<RouterNatLogConfigFilter> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     public RouterNatLogConfigArgs(
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<RouterNatLogConfigFilter> filter) {
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<RouterNatLogConfigFilter> filter) {
         this.enable = enable;
         this.filter = filter;
     }
 
     private RouterNatLogConfigArgs() {
-        this.enable = Input.empty();
-        this.filter = Input.empty();
+        this.enable = Output.empty();
+        this.filter = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<RouterNatLogConfigFilter> filter;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<RouterNatLogConfigFilter> filter;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RouterNatLogConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.filter = defaults.filter;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder filter(@Nullable Input<RouterNatLogConfigFilter> filter) {
+        public Builder filter(@Nullable Output<RouterNatLogConfigFilter> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable RouterNatLogConfigFilter filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
         public RouterNatLogConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertyArgs;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="property")
-      private final @Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property;
+      private final @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
-    public Input<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {
-        return this.property == null ? Input.empty() : this.property;
+    public Output<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {
+        return this.property == null ? Output.empty() : this.property;
     }
 
-    public GoogleCloudApigeeV1PropertiesArgs(@Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property) {
+    public GoogleCloudApigeeV1PropertiesArgs(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
         this.property = property;
     }
 
     private GoogleCloudApigeeV1PropertiesArgs() {
-        this.property = Input.empty();
+        this.property = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property;
+        private @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
     	      this.property = defaults.property;
         }
 
-        public Builder property(@Nullable Input<List<GoogleCloudApigeeV1PropertyArgs>> property) {
+        public Builder property(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
             this.property = property;
             return this;
         }
 
         public Builder property(@Nullable List<GoogleCloudApigeeV1PropertyArgs> property) {
-            this.property = Input.ofNullable(property);
+            this.property = Output.ofNullable(property);
             return this;
         }
         public GoogleCloudApigeeV1PropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.InputMappingLocation;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldName")
-      private final @Nullable Input<String> fieldName;
+      private final @Nullable Output<String> fieldName;
 
-    public Input<String> getFieldName() {
-        return this.fieldName == null ? Input.empty() : this.fieldName;
+    public Output<String> getFieldName() {
+        return this.fieldName == null ? Output.empty() : this.fieldName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<InputMappingLocation> location;
+      private final @Nullable Output<InputMappingLocation> location;
 
-    public Input<InputMappingLocation> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<InputMappingLocation> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodMatch")
-      private final @Nullable Input<String> methodMatch;
+      private final @Nullable Output<String> methodMatch;
 
-    public Input<String> getMethodMatch() {
-        return this.methodMatch == null ? Input.empty() : this.methodMatch;
+    public Output<String> getMethodMatch() {
+        return this.methodMatch == null ? Output.empty() : this.methodMatch;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public InputMappingArgs(
-        @Nullable Input<String> fieldName,
-        @Nullable Input<InputMappingLocation> location,
-        @Nullable Input<String> methodMatch,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> fieldName,
+        @Nullable Output<InputMappingLocation> location,
+        @Nullable Output<String> methodMatch,
+        @Nullable Output<String> value) {
         this.fieldName = fieldName;
         this.location = location;
         this.methodMatch = methodMatch;
@@ -75,10 +75,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputMappingArgs() {
-        this.fieldName = Input.empty();
-        this.location = Input.empty();
-        this.methodMatch = Input.empty();
-        this.value = Input.empty();
+        this.fieldName = Output.empty();
+        this.location = Output.empty();
+        this.methodMatch = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fieldName;
-        private @Nullable Input<InputMappingLocation> location;
-        private @Nullable Input<String> methodMatch;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> fieldName;
+        private @Nullable Output<InputMappingLocation> location;
+        private @Nullable Output<String> methodMatch;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder fieldName(@Nullable Input<String> fieldName) {
+        public Builder fieldName(@Nullable Output<String> fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Input.ofNullable(fieldName);
+            this.fieldName = Output.ofNullable(fieldName);
             return this;
         }
 
-        public Builder location(@Nullable Input<InputMappingLocation> location) {
+        public Builder location(@Nullable Output<InputMappingLocation> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable InputMappingLocation location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder methodMatch(@Nullable Input<String> methodMatch) {
+        public Builder methodMatch(@Nullable Output<String> methodMatch) {
             this.methodMatch = methodMatch;
             return this;
         }
 
         public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Input.ofNullable(methodMatch);
+            this.methodMatch = Output.ofNullable(methodMatch);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public InputMappingArgs build() {

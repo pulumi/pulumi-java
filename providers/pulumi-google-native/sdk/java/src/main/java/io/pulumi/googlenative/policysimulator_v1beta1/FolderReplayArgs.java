@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs;
 import java.lang.String;
@@ -20,39 +20,39 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+      private final Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
-    public Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> getConfig() {
+    public Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="folderId", required=true)
-      private final Input<String> folderId;
+      private final Output<String> folderId;
 
-    public Input<String> getFolderId() {
+    public Output<String> getFolderId() {
         return this.folderId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     public FolderReplayArgs(
-        Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config,
-        Input<String> folderId,
-        @Nullable Input<String> location) {
+        Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config,
+        Output<String> folderId,
+        @Nullable Output<String> location) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
         this.location = location;
     }
 
     private FolderReplayArgs() {
-        this.config = Input.empty();
-        this.folderId = Input.empty();
-        this.location = Input.empty();
+        this.config = Output.empty();
+        this.folderId = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,9 +64,9 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
-        private Input<String> folderId;
-        private @Nullable Input<String> location;
+        private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+        private Output<String> folderId;
+        private @Nullable Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -79,33 +79,33 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder config(Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config) {
+        public Builder config(Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder folderId(Input<String> folderId) {
+        public Builder folderId(Output<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
         public Builder folderId(String folderId) {
-            this.folderId = Input.of(Objects.requireNonNull(folderId));
+            this.folderId = Output.of(Objects.requireNonNull(folderId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
         public FolderReplayArgs build() {

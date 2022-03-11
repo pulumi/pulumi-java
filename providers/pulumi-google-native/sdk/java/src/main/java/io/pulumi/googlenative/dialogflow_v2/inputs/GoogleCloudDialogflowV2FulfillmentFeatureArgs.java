@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2FulfillmentFeatureType;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
+      private final @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
-    public Input<GoogleCloudDialogflowV2FulfillmentFeatureType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<GoogleCloudDialogflowV2FulfillmentFeatureType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public GoogleCloudDialogflowV2FulfillmentFeatureArgs(@Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
+    public GoogleCloudDialogflowV2FulfillmentFeatureArgs(@Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
         this.type = type;
     }
 
     private GoogleCloudDialogflowV2FulfillmentFeatureArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
+        private @Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
+        public Builder type(@Nullable Output<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable GoogleCloudDialogflowV2FulfillmentFeatureType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GoogleCloudDialogflowV2FulfillmentFeatureArgs build() {

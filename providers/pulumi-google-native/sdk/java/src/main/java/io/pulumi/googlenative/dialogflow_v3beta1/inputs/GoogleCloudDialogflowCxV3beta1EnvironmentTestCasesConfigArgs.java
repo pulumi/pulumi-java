@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * 
      */
     @InputImport(name="enableContinuousRun")
-      private final @Nullable Input<Boolean> enableContinuousRun;
+      private final @Nullable Output<Boolean> enableContinuousRun;
 
-    public Input<Boolean> getEnableContinuousRun() {
-        return this.enableContinuousRun == null ? Input.empty() : this.enableContinuousRun;
+    public Output<Boolean> getEnableContinuousRun() {
+        return this.enableContinuousRun == null ? Output.empty() : this.enableContinuousRun;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * 
      */
     @InputImport(name="enablePredeploymentRun")
-      private final @Nullable Input<Boolean> enablePredeploymentRun;
+      private final @Nullable Output<Boolean> enablePredeploymentRun;
 
-    public Input<Boolean> getEnablePredeploymentRun() {
-        return this.enablePredeploymentRun == null ? Input.empty() : this.enablePredeploymentRun;
+    public Output<Boolean> getEnablePredeploymentRun() {
+        return this.enablePredeploymentRun == null ? Output.empty() : this.enablePredeploymentRun;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
      * 
      */
     @InputImport(name="testCases")
-      private final @Nullable Input<List<String>> testCases;
+      private final @Nullable Output<List<String>> testCases;
 
-    public Input<List<String>> getTestCases() {
-        return this.testCases == null ? Input.empty() : this.testCases;
+    public Output<List<String>> getTestCases() {
+        return this.testCases == null ? Output.empty() : this.testCases;
     }
 
     public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs(
-        @Nullable Input<Boolean> enableContinuousRun,
-        @Nullable Input<Boolean> enablePredeploymentRun,
-        @Nullable Input<List<String>> testCases) {
+        @Nullable Output<Boolean> enableContinuousRun,
+        @Nullable Output<Boolean> enablePredeploymentRun,
+        @Nullable Output<List<String>> testCases) {
         this.enableContinuousRun = enableContinuousRun;
         this.enablePredeploymentRun = enablePredeploymentRun;
         this.testCases = testCases;
     }
 
     private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs() {
-        this.enableContinuousRun = Input.empty();
-        this.enablePredeploymentRun = Input.empty();
-        this.testCases = Input.empty();
+        this.enableContinuousRun = Output.empty();
+        this.enablePredeploymentRun = Output.empty();
+        this.testCases = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableContinuousRun;
-        private @Nullable Input<Boolean> enablePredeploymentRun;
-        private @Nullable Input<List<String>> testCases;
+        private @Nullable Output<Boolean> enableContinuousRun;
+        private @Nullable Output<Boolean> enablePredeploymentRun;
+        private @Nullable Output<List<String>> testCases;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs 
     	      this.testCases = defaults.testCases;
         }
 
-        public Builder enableContinuousRun(@Nullable Input<Boolean> enableContinuousRun) {
+        public Builder enableContinuousRun(@Nullable Output<Boolean> enableContinuousRun) {
             this.enableContinuousRun = enableContinuousRun;
             return this;
         }
 
         public Builder enableContinuousRun(@Nullable Boolean enableContinuousRun) {
-            this.enableContinuousRun = Input.ofNullable(enableContinuousRun);
+            this.enableContinuousRun = Output.ofNullable(enableContinuousRun);
             return this;
         }
 
-        public Builder enablePredeploymentRun(@Nullable Input<Boolean> enablePredeploymentRun) {
+        public Builder enablePredeploymentRun(@Nullable Output<Boolean> enablePredeploymentRun) {
             this.enablePredeploymentRun = enablePredeploymentRun;
             return this;
         }
 
         public Builder enablePredeploymentRun(@Nullable Boolean enablePredeploymentRun) {
-            this.enablePredeploymentRun = Input.ofNullable(enablePredeploymentRun);
+            this.enablePredeploymentRun = Output.ofNullable(enablePredeploymentRun);
             return this;
         }
 
-        public Builder testCases(@Nullable Input<List<String>> testCases) {
+        public Builder testCases(@Nullable Output<List<String>> testCases) {
             this.testCases = testCases;
             return this;
         }
 
         public Builder testCases(@Nullable List<String> testCases) {
-            this.testCases = Input.ofNullable(testCases);
+            this.testCases = Output.ofNullable(testCases);
             return this;
         }
         public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.BasicPerfSampleSeriesArgs;
 import java.lang.String;
@@ -20,46 +20,46 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="basicPerfSampleSeries")
-      private final @Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
+      private final @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
 
-    public Input<BasicPerfSampleSeriesArgs> getBasicPerfSampleSeries() {
-        return this.basicPerfSampleSeries == null ? Input.empty() : this.basicPerfSampleSeries;
+    public Output<BasicPerfSampleSeriesArgs> getBasicPerfSampleSeries() {
+        return this.basicPerfSampleSeries == null ? Output.empty() : this.basicPerfSampleSeries;
     }
 
     @InputImport(name="executionId", required=true)
-      private final Input<String> executionId;
+      private final Output<String> executionId;
 
-    public Input<String> getExecutionId() {
+    public Output<String> getExecutionId() {
         return this.executionId;
     }
 
     @InputImport(name="historyId", required=true)
-      private final Input<String> historyId;
+      private final Output<String> historyId;
 
-    public Input<String> getHistoryId() {
+    public Output<String> getHistoryId() {
         return this.historyId;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="stepId", required=true)
-      private final Input<String> stepId;
+      private final Output<String> stepId;
 
-    public Input<String> getStepId() {
+    public Output<String> getStepId() {
         return this.stepId;
     }
 
     public PerfSampleSeriesArgs(
-        @Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries,
-        Input<String> executionId,
-        Input<String> historyId,
-        @Nullable Input<String> project,
-        Input<String> stepId) {
+        @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries,
+        Output<String> executionId,
+        Output<String> historyId,
+        @Nullable Output<String> project,
+        Output<String> stepId) {
         this.basicPerfSampleSeries = basicPerfSampleSeries;
         this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
         this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
@@ -68,11 +68,11 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PerfSampleSeriesArgs() {
-        this.basicPerfSampleSeries = Input.empty();
-        this.executionId = Input.empty();
-        this.historyId = Input.empty();
-        this.project = Input.empty();
-        this.stepId = Input.empty();
+        this.basicPerfSampleSeries = Output.empty();
+        this.executionId = Output.empty();
+        this.historyId = Output.empty();
+        this.project = Output.empty();
+        this.stepId = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,11 +84,11 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
-        private Input<String> executionId;
-        private Input<String> historyId;
-        private @Nullable Input<String> project;
-        private Input<String> stepId;
+        private @Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries;
+        private Output<String> executionId;
+        private Output<String> historyId;
+        private @Nullable Output<String> project;
+        private Output<String> stepId;
 
         public Builder() {
     	      // Empty
@@ -103,53 +103,53 @@ public final class PerfSampleSeriesArgs extends io.pulumi.resources.ResourceArgs
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder basicPerfSampleSeries(@Nullable Input<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
+        public Builder basicPerfSampleSeries(@Nullable Output<BasicPerfSampleSeriesArgs> basicPerfSampleSeries) {
             this.basicPerfSampleSeries = basicPerfSampleSeries;
             return this;
         }
 
         public Builder basicPerfSampleSeries(@Nullable BasicPerfSampleSeriesArgs basicPerfSampleSeries) {
-            this.basicPerfSampleSeries = Input.ofNullable(basicPerfSampleSeries);
+            this.basicPerfSampleSeries = Output.ofNullable(basicPerfSampleSeries);
             return this;
         }
 
-        public Builder executionId(Input<String> executionId) {
+        public Builder executionId(Output<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Input.of(Objects.requireNonNull(executionId));
+            this.executionId = Output.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder historyId(Input<String> historyId) {
+        public Builder historyId(Output<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
         public Builder historyId(String historyId) {
-            this.historyId = Input.of(Objects.requireNonNull(historyId));
+            this.historyId = Output.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder stepId(Input<String> stepId) {
+        public Builder stepId(Output<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
         public Builder stepId(String stepId) {
-            this.stepId = Input.of(Objects.requireNonNull(stepId));
+            this.stepId = Output.of(Objects.requireNonNull(stepId));
             return this;
         }
         public PerfSampleSeriesArgs build() {

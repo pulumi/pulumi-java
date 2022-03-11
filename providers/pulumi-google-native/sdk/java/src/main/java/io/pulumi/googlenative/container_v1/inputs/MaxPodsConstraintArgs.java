@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxPodsPerNode")
-      private final @Nullable Input<String> maxPodsPerNode;
+      private final @Nullable Output<String> maxPodsPerNode;
 
-    public Input<String> getMaxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
+    public Output<String> getMaxPodsPerNode() {
+        return this.maxPodsPerNode == null ? Output.empty() : this.maxPodsPerNode;
     }
 
-    public MaxPodsConstraintArgs(@Nullable Input<String> maxPodsPerNode) {
+    public MaxPodsConstraintArgs(@Nullable Output<String> maxPodsPerNode) {
         this.maxPodsPerNode = maxPodsPerNode;
     }
 
     private MaxPodsConstraintArgs() {
-        this.maxPodsPerNode = Input.empty();
+        this.maxPodsPerNode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> maxPodsPerNode;
+        private @Nullable Output<String> maxPodsPerNode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
     	      this.maxPodsPerNode = defaults.maxPodsPerNode;
         }
 
-        public Builder maxPodsPerNode(@Nullable Input<String> maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Output<String> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
         public Builder maxPodsPerNode(@Nullable String maxPodsPerNode) {
-            this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
+            this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
             return this;
         }
         public MaxPodsConstraintArgs build() {

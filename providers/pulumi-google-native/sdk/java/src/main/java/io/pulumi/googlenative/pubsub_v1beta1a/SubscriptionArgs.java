@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1beta1a.inputs.PushConfigArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ackDeadlineSeconds")
-      private final @Nullable Input<Integer> ackDeadlineSeconds;
+      private final @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Input<Integer> getAckDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Input.empty() : this.ackDeadlineSeconds;
+    public Output<Integer> getAckDeadlineSeconds() {
+        return this.ackDeadlineSeconds == null ? Output.empty() : this.ackDeadlineSeconds;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pushConfig")
-      private final @Nullable Input<PushConfigArgs> pushConfig;
+      private final @Nullable Output<PushConfigArgs> pushConfig;
 
-    public Input<PushConfigArgs> getPushConfig() {
-        return this.pushConfig == null ? Input.empty() : this.pushConfig;
+    public Output<PushConfigArgs> getPushConfig() {
+        return this.pushConfig == null ? Output.empty() : this.pushConfig;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topic")
-      private final @Nullable Input<String> topic;
+      private final @Nullable Output<String> topic;
 
-    public Input<String> getTopic() {
-        return this.topic == null ? Input.empty() : this.topic;
+    public Output<String> getTopic() {
+        return this.topic == null ? Output.empty() : this.topic;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<Integer> ackDeadlineSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<PushConfigArgs> pushConfig,
-        @Nullable Input<String> topic) {
+        @Nullable Output<Integer> ackDeadlineSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<PushConfigArgs> pushConfig,
+        @Nullable Output<String> topic) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.name = name;
         this.pushConfig = pushConfig;
@@ -72,10 +72,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Input.empty();
-        this.name = Input.empty();
-        this.pushConfig = Input.empty();
-        this.topic = Input.empty();
+        this.ackDeadlineSeconds = Output.empty();
+        this.name = Output.empty();
+        this.pushConfig = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> ackDeadlineSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PushConfigArgs> pushConfig;
-        private @Nullable Input<String> topic;
+        private @Nullable Output<Integer> ackDeadlineSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PushConfigArgs> pushConfig;
+        private @Nullable Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder ackDeadlineSeconds(@Nullable Input<Integer> ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Input.ofNullable(ackDeadlineSeconds);
+            this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pushConfig(@Nullable Input<PushConfigArgs> pushConfig) {
+        public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
 
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Input.ofNullable(pushConfig);
+            this.pushConfig = Output.ofNullable(pushConfig);
             return this;
         }
 
-        public Builder topic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Output<String> topic) {
             this.topic = topic;
             return this;
         }
 
         public Builder topic(@Nullable String topic) {
-            this.topic = Input.ofNullable(topic);
+            this.topic = Output.ofNullable(topic);
             return this;
         }
         public SubscriptionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.enums.AndroidRoboTestRoboMode;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleArgs;
@@ -29,10 +29,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appApk")
-      private final @Nullable Input<FileReferenceArgs> appApk;
+      private final @Nullable Output<FileReferenceArgs> appApk;
 
-    public Input<FileReferenceArgs> getAppApk() {
-        return this.appApk == null ? Input.empty() : this.appApk;
+    public Output<FileReferenceArgs> getAppApk() {
+        return this.appApk == null ? Output.empty() : this.appApk;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appBundle")
-      private final @Nullable Input<AppBundleArgs> appBundle;
+      private final @Nullable Output<AppBundleArgs> appBundle;
 
-    public Input<AppBundleArgs> getAppBundle() {
-        return this.appBundle == null ? Input.empty() : this.appBundle;
+    public Output<AppBundleArgs> getAppBundle() {
+        return this.appBundle == null ? Output.empty() : this.appBundle;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appInitialActivity")
-      private final @Nullable Input<String> appInitialActivity;
+      private final @Nullable Output<String> appInitialActivity;
 
-    public Input<String> getAppInitialActivity() {
-        return this.appInitialActivity == null ? Input.empty() : this.appInitialActivity;
+    public Output<String> getAppInitialActivity() {
+        return this.appInitialActivity == null ? Output.empty() : this.appInitialActivity;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="appPackageId")
-      private final @Nullable Input<String> appPackageId;
+      private final @Nullable Output<String> appPackageId;
 
-    public Input<String> getAppPackageId() {
-        return this.appPackageId == null ? Input.empty() : this.appPackageId;
+    public Output<String> getAppPackageId() {
+        return this.appPackageId == null ? Output.empty() : this.appPackageId;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roboDirectives")
-      private final @Nullable Input<List<RoboDirectiveArgs>> roboDirectives;
+      private final @Nullable Output<List<RoboDirectiveArgs>> roboDirectives;
 
-    public Input<List<RoboDirectiveArgs>> getRoboDirectives() {
-        return this.roboDirectives == null ? Input.empty() : this.roboDirectives;
+    public Output<List<RoboDirectiveArgs>> getRoboDirectives() {
+        return this.roboDirectives == null ? Output.empty() : this.roboDirectives;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roboMode")
-      private final @Nullable Input<AndroidRoboTestRoboMode> roboMode;
+      private final @Nullable Output<AndroidRoboTestRoboMode> roboMode;
 
-    public Input<AndroidRoboTestRoboMode> getRoboMode() {
-        return this.roboMode == null ? Input.empty() : this.roboMode;
+    public Output<AndroidRoboTestRoboMode> getRoboMode() {
+        return this.roboMode == null ? Output.empty() : this.roboMode;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="roboScript")
-      private final @Nullable Input<FileReferenceArgs> roboScript;
+      private final @Nullable Output<FileReferenceArgs> roboScript;
 
-    public Input<FileReferenceArgs> getRoboScript() {
-        return this.roboScript == null ? Input.empty() : this.roboScript;
+    public Output<FileReferenceArgs> getRoboScript() {
+        return this.roboScript == null ? Output.empty() : this.roboScript;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startingIntents")
-      private final @Nullable Input<List<RoboStartingIntentArgs>> startingIntents;
+      private final @Nullable Output<List<RoboStartingIntentArgs>> startingIntents;
 
-    public Input<List<RoboStartingIntentArgs>> getStartingIntents() {
-        return this.startingIntents == null ? Input.empty() : this.startingIntents;
+    public Output<List<RoboStartingIntentArgs>> getStartingIntents() {
+        return this.startingIntents == null ? Output.empty() : this.startingIntents;
     }
 
     public AndroidRoboTestArgs(
-        @Nullable Input<FileReferenceArgs> appApk,
-        @Nullable Input<AppBundleArgs> appBundle,
-        @Nullable Input<String> appInitialActivity,
-        @Nullable Input<String> appPackageId,
-        @Nullable Input<List<RoboDirectiveArgs>> roboDirectives,
-        @Nullable Input<AndroidRoboTestRoboMode> roboMode,
-        @Nullable Input<FileReferenceArgs> roboScript,
-        @Nullable Input<List<RoboStartingIntentArgs>> startingIntents) {
+        @Nullable Output<FileReferenceArgs> appApk,
+        @Nullable Output<AppBundleArgs> appBundle,
+        @Nullable Output<String> appInitialActivity,
+        @Nullable Output<String> appPackageId,
+        @Nullable Output<List<RoboDirectiveArgs>> roboDirectives,
+        @Nullable Output<AndroidRoboTestRoboMode> roboMode,
+        @Nullable Output<FileReferenceArgs> roboScript,
+        @Nullable Output<List<RoboStartingIntentArgs>> startingIntents) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appInitialActivity = appInitialActivity;
@@ -132,14 +132,14 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AndroidRoboTestArgs() {
-        this.appApk = Input.empty();
-        this.appBundle = Input.empty();
-        this.appInitialActivity = Input.empty();
-        this.appPackageId = Input.empty();
-        this.roboDirectives = Input.empty();
-        this.roboMode = Input.empty();
-        this.roboScript = Input.empty();
-        this.startingIntents = Input.empty();
+        this.appApk = Output.empty();
+        this.appBundle = Output.empty();
+        this.appInitialActivity = Output.empty();
+        this.appPackageId = Output.empty();
+        this.roboDirectives = Output.empty();
+        this.roboMode = Output.empty();
+        this.roboScript = Output.empty();
+        this.startingIntents = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<FileReferenceArgs> appApk;
-        private @Nullable Input<AppBundleArgs> appBundle;
-        private @Nullable Input<String> appInitialActivity;
-        private @Nullable Input<String> appPackageId;
-        private @Nullable Input<List<RoboDirectiveArgs>> roboDirectives;
-        private @Nullable Input<AndroidRoboTestRoboMode> roboMode;
-        private @Nullable Input<FileReferenceArgs> roboScript;
-        private @Nullable Input<List<RoboStartingIntentArgs>> startingIntents;
+        private @Nullable Output<FileReferenceArgs> appApk;
+        private @Nullable Output<AppBundleArgs> appBundle;
+        private @Nullable Output<String> appInitialActivity;
+        private @Nullable Output<String> appPackageId;
+        private @Nullable Output<List<RoboDirectiveArgs>> roboDirectives;
+        private @Nullable Output<AndroidRoboTestRoboMode> roboMode;
+        private @Nullable Output<FileReferenceArgs> roboScript;
+        private @Nullable Output<List<RoboStartingIntentArgs>> startingIntents;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     	      this.startingIntents = defaults.startingIntents;
         }
 
-        public Builder appApk(@Nullable Input<FileReferenceArgs> appApk) {
+        public Builder appApk(@Nullable Output<FileReferenceArgs> appApk) {
             this.appApk = appApk;
             return this;
         }
 
         public Builder appApk(@Nullable FileReferenceArgs appApk) {
-            this.appApk = Input.ofNullable(appApk);
+            this.appApk = Output.ofNullable(appApk);
             return this;
         }
 
-        public Builder appBundle(@Nullable Input<AppBundleArgs> appBundle) {
+        public Builder appBundle(@Nullable Output<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
 
         public Builder appBundle(@Nullable AppBundleArgs appBundle) {
-            this.appBundle = Input.ofNullable(appBundle);
+            this.appBundle = Output.ofNullable(appBundle);
             return this;
         }
 
-        public Builder appInitialActivity(@Nullable Input<String> appInitialActivity) {
+        public Builder appInitialActivity(@Nullable Output<String> appInitialActivity) {
             this.appInitialActivity = appInitialActivity;
             return this;
         }
 
         public Builder appInitialActivity(@Nullable String appInitialActivity) {
-            this.appInitialActivity = Input.ofNullable(appInitialActivity);
+            this.appInitialActivity = Output.ofNullable(appInitialActivity);
             return this;
         }
 
-        public Builder appPackageId(@Nullable Input<String> appPackageId) {
+        public Builder appPackageId(@Nullable Output<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
 
         public Builder appPackageId(@Nullable String appPackageId) {
-            this.appPackageId = Input.ofNullable(appPackageId);
+            this.appPackageId = Output.ofNullable(appPackageId);
             return this;
         }
 
-        public Builder roboDirectives(@Nullable Input<List<RoboDirectiveArgs>> roboDirectives) {
+        public Builder roboDirectives(@Nullable Output<List<RoboDirectiveArgs>> roboDirectives) {
             this.roboDirectives = roboDirectives;
             return this;
         }
 
         public Builder roboDirectives(@Nullable List<RoboDirectiveArgs> roboDirectives) {
-            this.roboDirectives = Input.ofNullable(roboDirectives);
+            this.roboDirectives = Output.ofNullable(roboDirectives);
             return this;
         }
 
-        public Builder roboMode(@Nullable Input<AndroidRoboTestRoboMode> roboMode) {
+        public Builder roboMode(@Nullable Output<AndroidRoboTestRoboMode> roboMode) {
             this.roboMode = roboMode;
             return this;
         }
 
         public Builder roboMode(@Nullable AndroidRoboTestRoboMode roboMode) {
-            this.roboMode = Input.ofNullable(roboMode);
+            this.roboMode = Output.ofNullable(roboMode);
             return this;
         }
 
-        public Builder roboScript(@Nullable Input<FileReferenceArgs> roboScript) {
+        public Builder roboScript(@Nullable Output<FileReferenceArgs> roboScript) {
             this.roboScript = roboScript;
             return this;
         }
 
         public Builder roboScript(@Nullable FileReferenceArgs roboScript) {
-            this.roboScript = Input.ofNullable(roboScript);
+            this.roboScript = Output.ofNullable(roboScript);
             return this;
         }
 
-        public Builder startingIntents(@Nullable Input<List<RoboStartingIntentArgs>> startingIntents) {
+        public Builder startingIntents(@Nullable Output<List<RoboStartingIntentArgs>> startingIntents) {
             this.startingIntents = startingIntents;
             return this;
         }
 
         public Builder startingIntents(@Nullable List<RoboStartingIntentArgs> startingIntents) {
-            this.startingIntents = Input.ofNullable(startingIntents);
+            this.startingIntents = Output.ofNullable(startingIntents);
             return this;
         }
         public AndroidRoboTestArgs build() {

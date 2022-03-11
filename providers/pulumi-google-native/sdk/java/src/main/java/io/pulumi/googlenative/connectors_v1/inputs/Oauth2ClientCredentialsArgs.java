@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<SecretArgs> clientSecret;
+      private final @Nullable Output<SecretArgs> clientSecret;
 
-    public Input<SecretArgs> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<SecretArgs> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     public Oauth2ClientCredentialsArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<SecretArgs> clientSecret) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<SecretArgs> clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }
 
     private Oauth2ClientCredentialsArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<SecretArgs> clientSecret;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<SecretArgs> clientSecret;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class Oauth2ClientCredentialsArgs extends io.pulumi.resources.Resou
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<SecretArgs> clientSecret) {
+        public Builder clientSecret(@Nullable Output<SecretArgs> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable SecretArgs clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
         public Oauth2ClientCredentialsArgs build() {

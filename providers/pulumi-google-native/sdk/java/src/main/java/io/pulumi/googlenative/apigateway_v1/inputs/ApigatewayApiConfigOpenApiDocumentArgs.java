@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="document")
-      private final @Nullable Input<ApigatewayApiConfigFileArgs> document;
+      private final @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
-    public Input<ApigatewayApiConfigFileArgs> getDocument() {
-        return this.document == null ? Input.empty() : this.document;
+    public Output<ApigatewayApiConfigFileArgs> getDocument() {
+        return this.document == null ? Output.empty() : this.document;
     }
 
-    public ApigatewayApiConfigOpenApiDocumentArgs(@Nullable Input<ApigatewayApiConfigFileArgs> document) {
+    public ApigatewayApiConfigOpenApiDocumentArgs(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
         this.document = document;
     }
 
     private ApigatewayApiConfigOpenApiDocumentArgs() {
-        this.document = Input.empty();
+        this.document = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ApigatewayApiConfigFileArgs> document;
+        private @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends io.pulumi.reso
     	      this.document = defaults.document;
         }
 
-        public Builder document(@Nullable Input<ApigatewayApiConfigFileArgs> document) {
+        public Builder document(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
             this.document = document;
             return this;
         }
 
         public Builder document(@Nullable ApigatewayApiConfigFileArgs document) {
-            this.document = Input.ofNullable(document);
+            this.document = Output.ofNullable(document);
             return this;
         }
         public ApigatewayApiConfigOpenApiDocumentArgs build() {

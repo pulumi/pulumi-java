@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopic")
-      private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
+    public Output<String> getPubsubTopic() {
+        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
     }
 
     public Hl7V2NotificationConfigArgs(
-        @Nullable Input<String> filter,
-        @Nullable Input<String> pubsubTopic) {
+        @Nullable Output<String> filter,
+        @Nullable Output<String> pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }
 
     private Hl7V2NotificationConfigArgs() {
-        this.filter = Input.empty();
-        this.pubsubTopic = Input.empty();
+        this.filter = Output.empty();
+        this.pubsubTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> pubsubTopic;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> pubsubTopic;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Input.ofNullable(pubsubTopic);
+            this.pubsubTopic = Output.ofNullable(pubsubTopic);
             return this;
         }
         public Hl7V2NotificationConfigArgs build() {

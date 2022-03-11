@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.TextFormat;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<TextFormat> format;
+      private final @Nullable Output<TextFormat> format;
 
-    public Input<TextFormat> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<TextFormat> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     public TextArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<TextFormat> format) {
+        @Nullable Output<String> content,
+        @Nullable Output<TextFormat> format) {
         this.content = content;
         this.format = format;
     }
 
     private TextArgs() {
-        this.content = Input.empty();
-        this.format = Input.empty();
+        this.content = Output.empty();
+        this.format = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<TextFormat> format;
+        private @Nullable Output<String> content;
+        private @Nullable Output<TextFormat> format;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.format = defaults.format;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder format(@Nullable Input<TextFormat> format) {
+        public Builder format(@Nullable Output<TextFormat> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable TextFormat format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
         public TextArgs build() {

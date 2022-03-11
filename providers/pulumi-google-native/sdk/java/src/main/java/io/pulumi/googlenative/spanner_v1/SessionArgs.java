@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -16,16 +16,16 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     public static final SessionArgs Empty = new SessionArgs();
 
     @InputImport(name="databaseId", required=true)
-      private final Input<String> databaseId;
+      private final Output<String> databaseId;
 
-    public Input<String> getDatabaseId() {
+    public Output<String> getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -34,24 +34,24 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public SessionArgs(
-        Input<String> databaseId,
-        Input<String> instanceId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> project) {
+        Output<String> databaseId,
+        Output<String> instanceId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> project) {
         this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
         this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
         this.labels = labels;
@@ -59,10 +59,10 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SessionArgs() {
-        this.databaseId = Input.empty();
-        this.instanceId = Input.empty();
-        this.labels = Input.empty();
-        this.project = Input.empty();
+        this.databaseId = Output.empty();
+        this.instanceId = Output.empty();
+        this.labels = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> databaseId;
-        private Input<String> instanceId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> project;
+        private Output<String> databaseId;
+        private Output<String> instanceId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class SessionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder databaseId(Input<String> databaseId) {
+        public Builder databaseId(Output<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Input.of(Objects.requireNonNull(databaseId));
+            this.databaseId = Output.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public SessionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.AuthConfigArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
@@ -25,10 +25,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authConfig")
-      private final @Nullable Input<AuthConfigArgs> authConfig;
+      private final @Nullable Output<AuthConfigArgs> authConfig;
 
-    public Input<AuthConfigArgs> getAuthConfig() {
-        return this.authConfig == null ? Input.empty() : this.authConfig;
+    public Output<AuthConfigArgs> getAuthConfig() {
+        return this.authConfig == null ? Output.empty() : this.authConfig;
     }
 
     /**
@@ -36,16 +36,16 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configVariables")
-      private final @Nullable Input<List<ConfigVariableArgs>> configVariables;
+      private final @Nullable Output<List<ConfigVariableArgs>> configVariables;
 
-    public Input<List<ConfigVariableArgs>> getConfigVariables() {
-        return this.configVariables == null ? Input.empty() : this.configVariables;
+    public Output<List<ConfigVariableArgs>> getConfigVariables() {
+        return this.configVariables == null ? Output.empty() : this.configVariables;
     }
 
     @InputImport(name="connectionId", required=true)
-      private final Input<String> connectionId;
+      private final Output<String> connectionId;
 
-    public Input<String> getConnectionId() {
+    public Output<String> getConnectionId() {
         return this.connectionId;
     }
 
@@ -54,9 +54,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorVersion", required=true)
-      private final Input<String> connectorVersion;
+      private final Output<String> connectorVersion;
 
-    public Input<String> getConnectorVersion() {
+    public Output<String> getConnectorVersion() {
         return this.connectorVersion;
     }
 
@@ -65,10 +65,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -76,17 +76,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -94,17 +94,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lockConfig")
-      private final @Nullable Input<LockConfigArgs> lockConfig;
+      private final @Nullable Output<LockConfigArgs> lockConfig;
 
-    public Input<LockConfigArgs> getLockConfig() {
-        return this.lockConfig == null ? Input.empty() : this.lockConfig;
+    public Output<LockConfigArgs> getLockConfig() {
+        return this.lockConfig == null ? Output.empty() : this.lockConfig;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -123,24 +123,24 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suspended")
-      private final @Nullable Input<Boolean> suspended;
+      private final @Nullable Output<Boolean> suspended;
 
-    public Input<Boolean> getSuspended() {
-        return this.suspended == null ? Input.empty() : this.suspended;
+    public Output<Boolean> getSuspended() {
+        return this.suspended == null ? Output.empty() : this.suspended;
     }
 
     public ConnectionArgs(
-        @Nullable Input<AuthConfigArgs> authConfig,
-        @Nullable Input<List<ConfigVariableArgs>> configVariables,
-        Input<String> connectionId,
-        Input<String> connectorVersion,
-        @Nullable Input<String> description,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<LockConfigArgs> lockConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<Boolean> suspended) {
+        @Nullable Output<AuthConfigArgs> authConfig,
+        @Nullable Output<List<ConfigVariableArgs>> configVariables,
+        Output<String> connectionId,
+        Output<String> connectorVersion,
+        @Nullable Output<String> description,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<LockConfigArgs> lockConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<Boolean> suspended) {
         this.authConfig = authConfig;
         this.configVariables = configVariables;
         this.connectionId = Objects.requireNonNull(connectionId, "expected parameter 'connectionId' to be non-null");
@@ -155,17 +155,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.authConfig = Input.empty();
-        this.configVariables = Input.empty();
-        this.connectionId = Input.empty();
-        this.connectorVersion = Input.empty();
-        this.description = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.lockConfig = Input.empty();
-        this.project = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.suspended = Input.empty();
+        this.authConfig = Output.empty();
+        this.configVariables = Output.empty();
+        this.connectionId = Output.empty();
+        this.connectorVersion = Output.empty();
+        this.description = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.lockConfig = Output.empty();
+        this.project = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.suspended = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,17 +177,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AuthConfigArgs> authConfig;
-        private @Nullable Input<List<ConfigVariableArgs>> configVariables;
-        private Input<String> connectionId;
-        private Input<String> connectorVersion;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<LockConfigArgs> lockConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<Boolean> suspended;
+        private @Nullable Output<AuthConfigArgs> authConfig;
+        private @Nullable Output<List<ConfigVariableArgs>> configVariables;
+        private Output<String> connectionId;
+        private Output<String> connectorVersion;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<LockConfigArgs> lockConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<Boolean> suspended;
 
         public Builder() {
     	      // Empty
@@ -208,113 +208,113 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspended = defaults.suspended;
         }
 
-        public Builder authConfig(@Nullable Input<AuthConfigArgs> authConfig) {
+        public Builder authConfig(@Nullable Output<AuthConfigArgs> authConfig) {
             this.authConfig = authConfig;
             return this;
         }
 
         public Builder authConfig(@Nullable AuthConfigArgs authConfig) {
-            this.authConfig = Input.ofNullable(authConfig);
+            this.authConfig = Output.ofNullable(authConfig);
             return this;
         }
 
-        public Builder configVariables(@Nullable Input<List<ConfigVariableArgs>> configVariables) {
+        public Builder configVariables(@Nullable Output<List<ConfigVariableArgs>> configVariables) {
             this.configVariables = configVariables;
             return this;
         }
 
         public Builder configVariables(@Nullable List<ConfigVariableArgs> configVariables) {
-            this.configVariables = Input.ofNullable(configVariables);
+            this.configVariables = Output.ofNullable(configVariables);
             return this;
         }
 
-        public Builder connectionId(Input<String> connectionId) {
+        public Builder connectionId(Output<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
         public Builder connectionId(String connectionId) {
-            this.connectionId = Input.of(Objects.requireNonNull(connectionId));
+            this.connectionId = Output.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder connectorVersion(Input<String> connectorVersion) {
+        public Builder connectorVersion(Output<String> connectorVersion) {
             this.connectorVersion = Objects.requireNonNull(connectorVersion);
             return this;
         }
 
         public Builder connectorVersion(String connectorVersion) {
-            this.connectorVersion = Input.of(Objects.requireNonNull(connectorVersion));
+            this.connectorVersion = Output.of(Objects.requireNonNull(connectorVersion));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder lockConfig(@Nullable Input<LockConfigArgs> lockConfig) {
+        public Builder lockConfig(@Nullable Output<LockConfigArgs> lockConfig) {
             this.lockConfig = lockConfig;
             return this;
         }
 
         public Builder lockConfig(@Nullable LockConfigArgs lockConfig) {
-            this.lockConfig = Input.ofNullable(lockConfig);
+            this.lockConfig = Output.ofNullable(lockConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder suspended(@Nullable Input<Boolean> suspended) {
+        public Builder suspended(@Nullable Output<Boolean> suspended) {
             this.suspended = suspended;
             return this;
         }
 
         public Builder suspended(@Nullable Boolean suspended) {
-            this.suspended = Input.ofNullable(suspended);
+            this.suspended = Output.ofNullable(suspended);
             return this;
         }
         public ConnectionArgs build() {

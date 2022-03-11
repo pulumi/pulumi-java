@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,24 +15,24 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     public static final DatacenterConnectorArgs Empty = new DatacenterConnectorArgs();
 
     @InputImport(name="datacenterConnectorId", required=true)
-      private final Input<String> datacenterConnectorId;
+      private final Output<String> datacenterConnectorId;
 
-    public Input<String> getDatacenterConnectorId() {
+    public Output<String> getDatacenterConnectorId() {
         return this.datacenterConnectorId;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registrationId")
-      private final @Nullable Input<String> registrationId;
+      private final @Nullable Output<String> registrationId;
 
-    public Input<String> getRegistrationId() {
-        return this.registrationId == null ? Input.empty() : this.registrationId;
+    public Output<String> getRegistrationId() {
+        return this.registrationId == null ? Output.empty() : this.registrationId;
     }
 
     @InputImport(name="requestId")
-      private final @Nullable Input<String> requestId;
+      private final @Nullable Output<String> requestId;
 
-    public Input<String> getRequestId() {
-        return this.requestId == null ? Input.empty() : this.requestId;
+    public Output<String> getRequestId() {
+        return this.requestId == null ? Output.empty() : this.requestId;
     }
 
     /**
@@ -58,16 +58,16 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     @InputImport(name="sourceId", required=true)
-      private final Input<String> sourceId;
+      private final Output<String> sourceId;
 
-    public Input<String> getSourceId() {
+    public Output<String> getSourceId() {
         return this.sourceId;
     }
 
@@ -76,21 +76,21 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public DatacenterConnectorArgs(
-        Input<String> datacenterConnectorId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> project,
-        @Nullable Input<String> registrationId,
-        @Nullable Input<String> requestId,
-        @Nullable Input<String> serviceAccount,
-        Input<String> sourceId,
-        @Nullable Input<String> version) {
+        Output<String> datacenterConnectorId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> project,
+        @Nullable Output<String> registrationId,
+        @Nullable Output<String> requestId,
+        @Nullable Output<String> serviceAccount,
+        Output<String> sourceId,
+        @Nullable Output<String> version) {
         this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId, "expected parameter 'datacenterConnectorId' to be non-null");
         this.location = location;
         this.project = project;
@@ -102,14 +102,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     }
 
     private DatacenterConnectorArgs() {
-        this.datacenterConnectorId = Input.empty();
-        this.location = Input.empty();
-        this.project = Input.empty();
-        this.registrationId = Input.empty();
-        this.requestId = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.sourceId = Input.empty();
-        this.version = Input.empty();
+        this.datacenterConnectorId = Output.empty();
+        this.location = Output.empty();
+        this.project = Output.empty();
+        this.registrationId = Output.empty();
+        this.requestId = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.sourceId = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -121,14 +121,14 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> datacenterConnectorId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> registrationId;
-        private @Nullable Input<String> requestId;
-        private @Nullable Input<String> serviceAccount;
-        private Input<String> sourceId;
-        private @Nullable Input<String> version;
+        private Output<String> datacenterConnectorId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> registrationId;
+        private @Nullable Output<String> requestId;
+        private @Nullable Output<String> serviceAccount;
+        private Output<String> sourceId;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -146,83 +146,83 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder datacenterConnectorId(Input<String> datacenterConnectorId) {
+        public Builder datacenterConnectorId(Output<String> datacenterConnectorId) {
             this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
             return this;
         }
 
         public Builder datacenterConnectorId(String datacenterConnectorId) {
-            this.datacenterConnectorId = Input.of(Objects.requireNonNull(datacenterConnectorId));
+            this.datacenterConnectorId = Output.of(Objects.requireNonNull(datacenterConnectorId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder registrationId(@Nullable Input<String> registrationId) {
+        public Builder registrationId(@Nullable Output<String> registrationId) {
             this.registrationId = registrationId;
             return this;
         }
 
         public Builder registrationId(@Nullable String registrationId) {
-            this.registrationId = Input.ofNullable(registrationId);
+            this.registrationId = Output.ofNullable(registrationId);
             return this;
         }
 
-        public Builder requestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Output<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Input.ofNullable(requestId);
+            this.requestId = Output.ofNullable(requestId);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder sourceId(Input<String> sourceId) {
+        public Builder sourceId(Output<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
         public Builder sourceId(String sourceId) {
-            this.sourceId = Input.of(Objects.requireNonNull(sourceId));
+            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public DatacenterConnectorArgs build() {

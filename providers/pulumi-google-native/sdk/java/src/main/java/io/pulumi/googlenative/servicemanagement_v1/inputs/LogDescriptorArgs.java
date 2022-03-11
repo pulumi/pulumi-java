@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<LabelDescriptorArgs>> labels;
+      private final @Nullable Output<List<LabelDescriptorArgs>> labels;
 
-    public Input<List<LabelDescriptorArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<LabelDescriptorArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public LogDescriptorArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<LabelDescriptorArgs>> labels,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<LabelDescriptorArgs>> labels,
+        @Nullable Output<String> name) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;
@@ -76,10 +76,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogDescriptorArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<LabelDescriptorArgs>> labels;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<LabelDescriptorArgs>> labels;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class LogDescriptorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<LabelDescriptorArgs>> labels) {
+        public Builder labels(@Nullable Output<List<LabelDescriptorArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public LogDescriptorArgs build() {

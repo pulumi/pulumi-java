@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultMetricArgs;
 import java.lang.Integer;
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
+      private final @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
 
-    public Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
      * 
      */
     @InputImport(name="sessionCount")
-      private final @Nullable Input<Integer> sessionCount;
+      private final @Nullable Output<Integer> sessionCount;
 
-    public Input<Integer> getSessionCount() {
-        return this.sessionCount == null ? Input.empty() : this.sessionCount;
+    public Output<Integer> getSessionCount() {
+        return this.sessionCount == null ? Output.empty() : this.sessionCount;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs(
-        @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics,
-        @Nullable Input<Integer> sessionCount,
-        @Nullable Input<String> version) {
+        @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics,
+        @Nullable Output<Integer> sessionCount,
+        @Nullable Output<String> version) {
         this.metrics = metrics;
         this.sessionCount = sessionCount;
         this.version = version;
     }
 
     private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs() {
-        this.metrics = Input.empty();
-        this.sessionCount = Input.empty();
-        this.version = Input.empty();
+        this.metrics = Output.empty();
+        this.sessionCount = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
-        private @Nullable Input<Integer> sessionCount;
-        private @Nullable Input<String> version;
+        private @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
+        private @Nullable Output<Integer> sessionCount;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
     	      this.version = defaults.version;
         }
 
-        public Builder metrics(@Nullable Input<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder sessionCount(@Nullable Input<Integer> sessionCount) {
+        public Builder sessionCount(@Nullable Output<Integer> sessionCount) {
             this.sessionCount = sessionCount;
             return this;
         }
 
         public Builder sessionCount(@Nullable Integer sessionCount) {
-            this.sessionCount = Input.ofNullable(sessionCount);
+            this.sessionCount = Output.ofNullable(sessionCount);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs build() {

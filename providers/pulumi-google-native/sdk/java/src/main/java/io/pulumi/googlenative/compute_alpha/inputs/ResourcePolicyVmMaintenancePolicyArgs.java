@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs;
@@ -16,10 +16,10 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     public static final ResourcePolicyVmMaintenancePolicyArgs Empty = new ResourcePolicyVmMaintenancePolicyArgs();
 
     @InputImport(name="concurrencyControlGroup")
-      private final @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
+      private final @Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
 
-    public Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> getConcurrencyControlGroup() {
-        return this.concurrencyControlGroup == null ? Input.empty() : this.concurrencyControlGroup;
+    public Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> getConcurrencyControlGroup() {
+        return this.concurrencyControlGroup == null ? Output.empty() : this.concurrencyControlGroup;
     }
 
     /**
@@ -27,22 +27,22 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
-    public Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     public ResourcePolicyVmMaintenancePolicyArgs(
-        @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup,
-        @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
+        @Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup,
+        @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
         this.concurrencyControlGroup = concurrencyControlGroup;
         this.maintenanceWindow = maintenanceWindow;
     }
 
     private ResourcePolicyVmMaintenancePolicyArgs() {
-        this.concurrencyControlGroup = Input.empty();
-        this.maintenanceWindow = Input.empty();
+        this.concurrencyControlGroup = Output.empty();
+        this.maintenanceWindow = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
-        private @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
+        private @Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
+        private @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     	      this.maintenanceWindow = defaults.maintenanceWindow;
         }
 
-        public Builder concurrencyControlGroup(@Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup) {
+        public Builder concurrencyControlGroup(@Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup) {
             this.concurrencyControlGroup = concurrencyControlGroup;
             return this;
         }
 
         public Builder concurrencyControlGroup(@Nullable ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs concurrencyControlGroup) {
-            this.concurrencyControlGroup = Input.ofNullable(concurrencyControlGroup);
+            this.concurrencyControlGroup = Output.ofNullable(concurrencyControlGroup);
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
         public ResourcePolicyVmMaintenancePolicyArgs build() {

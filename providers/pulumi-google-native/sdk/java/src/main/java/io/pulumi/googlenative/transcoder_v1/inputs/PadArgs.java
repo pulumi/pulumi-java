@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bottomPixels")
-      private final @Nullable Input<Integer> bottomPixels;
+      private final @Nullable Output<Integer> bottomPixels;
 
-    public Input<Integer> getBottomPixels() {
-        return this.bottomPixels == null ? Input.empty() : this.bottomPixels;
+    public Output<Integer> getBottomPixels() {
+        return this.bottomPixels == null ? Output.empty() : this.bottomPixels;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leftPixels")
-      private final @Nullable Input<Integer> leftPixels;
+      private final @Nullable Output<Integer> leftPixels;
 
-    public Input<Integer> getLeftPixels() {
-        return this.leftPixels == null ? Input.empty() : this.leftPixels;
+    public Output<Integer> getLeftPixels() {
+        return this.leftPixels == null ? Output.empty() : this.leftPixels;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rightPixels")
-      private final @Nullable Input<Integer> rightPixels;
+      private final @Nullable Output<Integer> rightPixels;
 
-    public Input<Integer> getRightPixels() {
-        return this.rightPixels == null ? Input.empty() : this.rightPixels;
+    public Output<Integer> getRightPixels() {
+        return this.rightPixels == null ? Output.empty() : this.rightPixels;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topPixels")
-      private final @Nullable Input<Integer> topPixels;
+      private final @Nullable Output<Integer> topPixels;
 
-    public Input<Integer> getTopPixels() {
-        return this.topPixels == null ? Input.empty() : this.topPixels;
+    public Output<Integer> getTopPixels() {
+        return this.topPixels == null ? Output.empty() : this.topPixels;
     }
 
     public PadArgs(
-        @Nullable Input<Integer> bottomPixels,
-        @Nullable Input<Integer> leftPixels,
-        @Nullable Input<Integer> rightPixels,
-        @Nullable Input<Integer> topPixels) {
+        @Nullable Output<Integer> bottomPixels,
+        @Nullable Output<Integer> leftPixels,
+        @Nullable Output<Integer> rightPixels,
+        @Nullable Output<Integer> topPixels) {
         this.bottomPixels = bottomPixels;
         this.leftPixels = leftPixels;
         this.rightPixels = rightPixels;
@@ -74,10 +74,10 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PadArgs() {
-        this.bottomPixels = Input.empty();
-        this.leftPixels = Input.empty();
-        this.rightPixels = Input.empty();
-        this.topPixels = Input.empty();
+        this.bottomPixels = Output.empty();
+        this.leftPixels = Output.empty();
+        this.rightPixels = Output.empty();
+        this.topPixels = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bottomPixels;
-        private @Nullable Input<Integer> leftPixels;
-        private @Nullable Input<Integer> rightPixels;
-        private @Nullable Input<Integer> topPixels;
+        private @Nullable Output<Integer> bottomPixels;
+        private @Nullable Output<Integer> leftPixels;
+        private @Nullable Output<Integer> rightPixels;
+        private @Nullable Output<Integer> topPixels;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topPixels = defaults.topPixels;
         }
 
-        public Builder bottomPixels(@Nullable Input<Integer> bottomPixels) {
+        public Builder bottomPixels(@Nullable Output<Integer> bottomPixels) {
             this.bottomPixels = bottomPixels;
             return this;
         }
 
         public Builder bottomPixels(@Nullable Integer bottomPixels) {
-            this.bottomPixels = Input.ofNullable(bottomPixels);
+            this.bottomPixels = Output.ofNullable(bottomPixels);
             return this;
         }
 
-        public Builder leftPixels(@Nullable Input<Integer> leftPixels) {
+        public Builder leftPixels(@Nullable Output<Integer> leftPixels) {
             this.leftPixels = leftPixels;
             return this;
         }
 
         public Builder leftPixels(@Nullable Integer leftPixels) {
-            this.leftPixels = Input.ofNullable(leftPixels);
+            this.leftPixels = Output.ofNullable(leftPixels);
             return this;
         }
 
-        public Builder rightPixels(@Nullable Input<Integer> rightPixels) {
+        public Builder rightPixels(@Nullable Output<Integer> rightPixels) {
             this.rightPixels = rightPixels;
             return this;
         }
 
         public Builder rightPixels(@Nullable Integer rightPixels) {
-            this.rightPixels = Input.ofNullable(rightPixels);
+            this.rightPixels = Output.ofNullable(rightPixels);
             return this;
         }
 
-        public Builder topPixels(@Nullable Input<Integer> topPixels) {
+        public Builder topPixels(@Nullable Output<Integer> topPixels) {
             this.topPixels = topPixels;
             return this;
         }
 
         public Builder topPixels(@Nullable Integer topPixels) {
-            this.topPixels = Input.ofNullable(topPixels);
+            this.topPixels = Output.ofNullable(topPixels);
             return this;
         }
         public PadArgs build() {

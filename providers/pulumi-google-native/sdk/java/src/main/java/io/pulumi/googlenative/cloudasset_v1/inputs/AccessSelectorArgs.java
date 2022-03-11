@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-      private final @Nullable Input<List<String>> roles;
+      private final @Nullable Output<List<String>> roles;
 
-    public Input<List<String>> getRoles() {
-        return this.roles == null ? Input.empty() : this.roles;
+    public Output<List<String>> getRoles() {
+        return this.roles == null ? Output.empty() : this.roles;
     }
 
     public AccessSelectorArgs(
-        @Nullable Input<List<String>> permissions,
-        @Nullable Input<List<String>> roles) {
+        @Nullable Output<List<String>> permissions,
+        @Nullable Output<List<String>> roles) {
         this.permissions = permissions;
         this.roles = roles;
     }
 
     private AccessSelectorArgs() {
-        this.permissions = Input.empty();
-        this.roles = Input.empty();
+        this.permissions = Output.empty();
+        this.roles = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> permissions;
-        private @Nullable Input<List<String>> roles;
+        private @Nullable Output<List<String>> permissions;
+        private @Nullable Output<List<String>> roles;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AccessSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder permissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder roles(@Nullable Input<List<String>> roles) {
+        public Builder roles(@Nullable Output<List<String>> roles) {
             this.roles = roles;
             return this;
         }
 
         public Builder roles(@Nullable List<String> roles) {
-            this.roles = Input.ofNullable(roles);
+            this.roles = Output.ofNullable(roles);
             return this;
         }
         public AccessSelectorArgs build() {

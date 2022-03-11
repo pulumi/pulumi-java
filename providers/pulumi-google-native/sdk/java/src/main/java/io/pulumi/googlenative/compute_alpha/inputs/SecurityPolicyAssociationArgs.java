@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attachmentId")
-      private final @Nullable Input<String> attachmentId;
+      private final @Nullable Output<String> attachmentId;
 
-    public Input<String> getAttachmentId() {
-        return this.attachmentId == null ? Input.empty() : this.attachmentId;
+    public Output<String> getAttachmentId() {
+        return this.attachmentId == null ? Output.empty() : this.attachmentId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public SecurityPolicyAssociationArgs(
-        @Nullable Input<String> attachmentId,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> attachmentId,
+        @Nullable Output<String> name) {
         this.attachmentId = attachmentId;
         this.name = name;
     }
 
     private SecurityPolicyAssociationArgs() {
-        this.attachmentId = Input.empty();
-        this.name = Input.empty();
+        this.attachmentId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attachmentId;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> attachmentId;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder attachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Output<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Input.ofNullable(attachmentId);
+            this.attachmentId = Output.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SecurityPolicyAssociationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MonitoringDestinationArgs;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerDestinations")
-      private final @Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations;
+      private final @Nullable Output<List<MonitoringDestinationArgs>> consumerDestinations;
 
-    public Input<List<MonitoringDestinationArgs>> getConsumerDestinations() {
-        return this.consumerDestinations == null ? Input.empty() : this.consumerDestinations;
+    public Output<List<MonitoringDestinationArgs>> getConsumerDestinations() {
+        return this.consumerDestinations == null ? Output.empty() : this.consumerDestinations;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerDestinations")
-      private final @Nullable Input<List<MonitoringDestinationArgs>> producerDestinations;
+      private final @Nullable Output<List<MonitoringDestinationArgs>> producerDestinations;
 
-    public Input<List<MonitoringDestinationArgs>> getProducerDestinations() {
-        return this.producerDestinations == null ? Input.empty() : this.producerDestinations;
+    public Output<List<MonitoringDestinationArgs>> getProducerDestinations() {
+        return this.producerDestinations == null ? Output.empty() : this.producerDestinations;
     }
 
     public MonitoringArgs(
-        @Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations,
-        @Nullable Input<List<MonitoringDestinationArgs>> producerDestinations) {
+        @Nullable Output<List<MonitoringDestinationArgs>> consumerDestinations,
+        @Nullable Output<List<MonitoringDestinationArgs>> producerDestinations) {
         this.consumerDestinations = consumerDestinations;
         this.producerDestinations = producerDestinations;
     }
 
     private MonitoringArgs() {
-        this.consumerDestinations = Input.empty();
-        this.producerDestinations = Input.empty();
+        this.consumerDestinations = Output.empty();
+        this.producerDestinations = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations;
-        private @Nullable Input<List<MonitoringDestinationArgs>> producerDestinations;
+        private @Nullable Output<List<MonitoringDestinationArgs>> consumerDestinations;
+        private @Nullable Output<List<MonitoringDestinationArgs>> producerDestinations;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder consumerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable Output<List<MonitoringDestinationArgs>> consumerDestinations) {
             this.consumerDestinations = consumerDestinations;
             return this;
         }
 
         public Builder consumerDestinations(@Nullable List<MonitoringDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Input.ofNullable(consumerDestinations);
+            this.consumerDestinations = Output.ofNullable(consumerDestinations);
             return this;
         }
 
-        public Builder producerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> producerDestinations) {
+        public Builder producerDestinations(@Nullable Output<List<MonitoringDestinationArgs>> producerDestinations) {
             this.producerDestinations = producerDestinations;
             return this;
         }
 
         public Builder producerDestinations(@Nullable List<MonitoringDestinationArgs> producerDestinations) {
-            this.producerDestinations = Input.ofNullable(producerDestinations);
+            this.producerDestinations = Output.ofNullable(producerDestinations);
             return this;
         }
         public MonitoringArgs build() {

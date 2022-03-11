@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="amount")
-      private final @Nullable Input<String> amount;
+      private final @Nullable Output<String> amount;
 
-    public Input<String> getAmount() {
-        return this.amount == null ? Input.empty() : this.amount;
+    public Output<String> getAmount() {
+        return this.amount == null ? Output.empty() : this.amount;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="coresPerLicense")
-      private final @Nullable Input<String> coresPerLicense;
+      private final @Nullable Output<String> coresPerLicense;
 
-    public Input<String> getCoresPerLicense() {
-        return this.coresPerLicense == null ? Input.empty() : this.coresPerLicense;
+    public Output<String> getCoresPerLicense() {
+        return this.coresPerLicense == null ? Output.empty() : this.coresPerLicense;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="license")
-      private final @Nullable Input<String> license;
+      private final @Nullable Output<String> license;
 
-    public Input<String> getLicense() {
-        return this.license == null ? Input.empty() : this.license;
+    public Output<String> getLicense() {
+        return this.license == null ? Output.empty() : this.license;
     }
 
     public LicenseResourceCommitmentArgs(
-        @Nullable Input<String> amount,
-        @Nullable Input<String> coresPerLicense,
-        @Nullable Input<String> license) {
+        @Nullable Output<String> amount,
+        @Nullable Output<String> coresPerLicense,
+        @Nullable Output<String> license) {
         this.amount = amount;
         this.coresPerLicense = coresPerLicense;
         this.license = license;
     }
 
     private LicenseResourceCommitmentArgs() {
-        this.amount = Input.empty();
-        this.coresPerLicense = Input.empty();
-        this.license = Input.empty();
+        this.amount = Output.empty();
+        this.coresPerLicense = Output.empty();
+        this.license = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> amount;
-        private @Nullable Input<String> coresPerLicense;
-        private @Nullable Input<String> license;
+        private @Nullable Output<String> amount;
+        private @Nullable Output<String> coresPerLicense;
+        private @Nullable Output<String> license;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     	      this.license = defaults.license;
         }
 
-        public Builder amount(@Nullable Input<String> amount) {
+        public Builder amount(@Nullable Output<String> amount) {
             this.amount = amount;
             return this;
         }
 
         public Builder amount(@Nullable String amount) {
-            this.amount = Input.ofNullable(amount);
+            this.amount = Output.ofNullable(amount);
             return this;
         }
 
-        public Builder coresPerLicense(@Nullable Input<String> coresPerLicense) {
+        public Builder coresPerLicense(@Nullable Output<String> coresPerLicense) {
             this.coresPerLicense = coresPerLicense;
             return this;
         }
 
         public Builder coresPerLicense(@Nullable String coresPerLicense) {
-            this.coresPerLicense = Input.ofNullable(coresPerLicense);
+            this.coresPerLicense = Output.ofNullable(coresPerLicense);
             return this;
         }
 
-        public Builder license(@Nullable Input<String> license) {
+        public Builder license(@Nullable Output<String> license) {
             this.license = license;
             return this;
         }
 
         public Builder license(@Nullable String license) {
-            this.license = Input.ofNullable(license);
+            this.license = Output.ofNullable(license);
             return this;
         }
         public LicenseResourceCommitmentArgs build() {

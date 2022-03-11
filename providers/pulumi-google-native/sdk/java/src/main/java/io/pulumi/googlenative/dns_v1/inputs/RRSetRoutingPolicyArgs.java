@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyGeoPolicyArgs;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyWrrPolicyArgs;
@@ -21,39 +21,39 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     public static final RRSetRoutingPolicyArgs Empty = new RRSetRoutingPolicyArgs();
 
     @InputImport(name="geo")
-      private final @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
+      private final @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
 
-    public Input<RRSetRoutingPolicyGeoPolicyArgs> getGeo() {
-        return this.geo == null ? Input.empty() : this.geo;
+    public Output<RRSetRoutingPolicyGeoPolicyArgs> getGeo() {
+        return this.geo == null ? Output.empty() : this.geo;
     }
 
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="wrr")
-      private final @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
+      private final @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
-    public Input<RRSetRoutingPolicyWrrPolicyArgs> getWrr() {
-        return this.wrr == null ? Input.empty() : this.wrr;
+    public Output<RRSetRoutingPolicyWrrPolicyArgs> getWrr() {
+        return this.wrr == null ? Output.empty() : this.wrr;
     }
 
     public RRSetRoutingPolicyArgs(
-        @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo,
-        @Nullable Input<String> kind,
-        @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
+        @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo,
+        @Nullable Output<String> kind,
+        @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
         this.geo = geo;
         this.kind = kind;
         this.wrr = wrr;
     }
 
     private RRSetRoutingPolicyArgs() {
-        this.geo = Input.empty();
-        this.kind = Input.empty();
-        this.wrr = Input.empty();
+        this.geo = Output.empty();
+        this.kind = Output.empty();
+        this.wrr = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,9 +65,9 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr;
+        private @Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr;
 
         public Builder() {
     	      // Empty
@@ -80,33 +80,33 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.wrr = defaults.wrr;
         }
 
-        public Builder geo(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo) {
+        public Builder geo(@Nullable Output<RRSetRoutingPolicyGeoPolicyArgs> geo) {
             this.geo = geo;
             return this;
         }
 
         public Builder geo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
-            this.geo = Input.ofNullable(geo);
+            this.geo = Output.ofNullable(geo);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder wrr(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
+        public Builder wrr(@Nullable Output<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
             this.wrr = wrr;
             return this;
         }
 
         public Builder wrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
-            this.wrr = Input.ofNullable(wrr);
+            this.wrr = Output.ofNullable(wrr);
             return this;
         }
         public RRSetRoutingPolicyArgs build() {

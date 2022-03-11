@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,16 +19,16 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiproduct")
-      private final @Nullable Input<String> apiproduct;
+      private final @Nullable Output<String> apiproduct;
 
-    public Input<String> getApiproduct() {
-        return this.apiproduct == null ? Input.empty() : this.apiproduct;
+    public Output<String> getApiproduct() {
+        return this.apiproduct == null ? Output.empty() : this.apiproduct;
     }
 
     @InputImport(name="developerId", required=true)
-      private final Input<String> developerId;
+      private final Output<String> developerId;
 
-    public Input<String> getDeveloperId() {
+    public Output<String> getDeveloperId() {
         return this.developerId;
     }
 
@@ -37,16 +37,16 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
@@ -55,18 +55,18 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public SubscriptionArgs(
-        @Nullable Input<String> apiproduct,
-        Input<String> developerId,
-        @Nullable Input<String> endTime,
-        Input<String> organizationId,
-        @Nullable Input<String> startTime) {
+        @Nullable Output<String> apiproduct,
+        Output<String> developerId,
+        @Nullable Output<String> endTime,
+        Output<String> organizationId,
+        @Nullable Output<String> startTime) {
         this.apiproduct = apiproduct;
         this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
         this.endTime = endTime;
@@ -75,11 +75,11 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.apiproduct = Input.empty();
-        this.developerId = Input.empty();
-        this.endTime = Input.empty();
-        this.organizationId = Input.empty();
-        this.startTime = Input.empty();
+        this.apiproduct = Output.empty();
+        this.developerId = Output.empty();
+        this.endTime = Output.empty();
+        this.organizationId = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,11 +91,11 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiproduct;
-        private Input<String> developerId;
-        private @Nullable Input<String> endTime;
-        private Input<String> organizationId;
-        private @Nullable Input<String> startTime;
+        private @Nullable Output<String> apiproduct;
+        private Output<String> developerId;
+        private @Nullable Output<String> endTime;
+        private Output<String> organizationId;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -110,53 +110,53 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder apiproduct(@Nullable Input<String> apiproduct) {
+        public Builder apiproduct(@Nullable Output<String> apiproduct) {
             this.apiproduct = apiproduct;
             return this;
         }
 
         public Builder apiproduct(@Nullable String apiproduct) {
-            this.apiproduct = Input.ofNullable(apiproduct);
+            this.apiproduct = Output.ofNullable(apiproduct);
             return this;
         }
 
-        public Builder developerId(Input<String> developerId) {
+        public Builder developerId(Output<String> developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
         public Builder developerId(String developerId) {
-            this.developerId = Input.of(Objects.requireNonNull(developerId));
+            this.developerId = Output.of(Objects.requireNonNull(developerId));
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public SubscriptionArgs build() {

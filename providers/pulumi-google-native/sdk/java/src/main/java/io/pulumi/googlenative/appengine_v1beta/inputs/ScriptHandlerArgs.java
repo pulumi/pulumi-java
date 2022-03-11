@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptPath")
-      private final @Nullable Input<String> scriptPath;
+      private final @Nullable Output<String> scriptPath;
 
-    public Input<String> getScriptPath() {
-        return this.scriptPath == null ? Input.empty() : this.scriptPath;
+    public Output<String> getScriptPath() {
+        return this.scriptPath == null ? Output.empty() : this.scriptPath;
     }
 
-    public ScriptHandlerArgs(@Nullable Input<String> scriptPath) {
+    public ScriptHandlerArgs(@Nullable Output<String> scriptPath) {
         this.scriptPath = scriptPath;
     }
 
     private ScriptHandlerArgs() {
-        this.scriptPath = Input.empty();
+        this.scriptPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> scriptPath;
+        private @Nullable Output<String> scriptPath;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder scriptPath(@Nullable Input<String> scriptPath) {
+        public Builder scriptPath(@Nullable Output<String> scriptPath) {
             this.scriptPath = scriptPath;
             return this;
         }
 
         public Builder scriptPath(@Nullable String scriptPath) {
-            this.scriptPath = Input.ofNullable(scriptPath);
+            this.scriptPath = Output.ofNullable(scriptPath);
             return this;
         }
         public ScriptHandlerArgs build() {

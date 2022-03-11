@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="threadsPerCore")
-      private final @Nullable Input<String> threadsPerCore;
+      private final @Nullable Output<String> threadsPerCore;
 
-    public Input<String> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
+    public Output<String> getThreadsPerCore() {
+        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
     }
 
-    public AdvancedMachineFeaturesArgs(@Nullable Input<String> threadsPerCore) {
+    public AdvancedMachineFeaturesArgs(@Nullable Output<String> threadsPerCore) {
         this.threadsPerCore = threadsPerCore;
     }
 
     private AdvancedMachineFeaturesArgs() {
-        this.threadsPerCore = Input.empty();
+        this.threadsPerCore = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> threadsPerCore;
+        private @Nullable Output<String> threadsPerCore;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder threadsPerCore(@Nullable Input<String> threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Output<String> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
 
         public Builder threadsPerCore(@Nullable String threadsPerCore) {
-            this.threadsPerCore = Input.ofNullable(threadsPerCore);
+            this.threadsPerCore = Output.ofNullable(threadsPerCore);
             return this;
         }
         public AdvancedMachineFeaturesArgs build() {

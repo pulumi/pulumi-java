@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlIterationResultArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunTrainingOptionsArgs;
@@ -22,10 +22,10 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="iterationResults")
-      private final @Nullable Input<List<BqmlIterationResultArgs>> iterationResults;
+      private final @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
 
-    public Input<List<BqmlIterationResultArgs>> getIterationResults() {
-        return this.iterationResults == null ? Input.empty() : this.iterationResults;
+    public Output<List<BqmlIterationResultArgs>> getIterationResults() {
+        return this.iterationResults == null ? Output.empty() : this.iterationResults;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trainingOptions")
-      private final @Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
+      private final @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
-    public Input<BqmlTrainingRunTrainingOptionsArgs> getTrainingOptions() {
-        return this.trainingOptions == null ? Input.empty() : this.trainingOptions;
+    public Output<BqmlTrainingRunTrainingOptionsArgs> getTrainingOptions() {
+        return this.trainingOptions == null ? Output.empty() : this.trainingOptions;
     }
 
     public BqmlTrainingRunArgs(
-        @Nullable Input<List<BqmlIterationResultArgs>> iterationResults,
-        @Nullable Input<String> startTime,
-        @Nullable Input<String> state,
-        @Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
+        @Nullable Output<List<BqmlIterationResultArgs>> iterationResults,
+        @Nullable Output<String> startTime,
+        @Nullable Output<String> state,
+        @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
         this.iterationResults = iterationResults;
         this.startTime = startTime;
         this.state = state;
@@ -73,10 +73,10 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BqmlTrainingRunArgs() {
-        this.iterationResults = Input.empty();
-        this.startTime = Input.empty();
-        this.state = Input.empty();
-        this.trainingOptions = Input.empty();
+        this.iterationResults = Output.empty();
+        this.startTime = Output.empty();
+        this.state = Output.empty();
+        this.trainingOptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<BqmlIterationResultArgs>> iterationResults;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<String> state;
-        private @Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
+        private @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<String> state;
+        private @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trainingOptions = defaults.trainingOptions;
         }
 
-        public Builder iterationResults(@Nullable Input<List<BqmlIterationResultArgs>> iterationResults) {
+        public Builder iterationResults(@Nullable Output<List<BqmlIterationResultArgs>> iterationResults) {
             this.iterationResults = iterationResults;
             return this;
         }
 
         public Builder iterationResults(@Nullable List<BqmlIterationResultArgs> iterationResults) {
-            this.iterationResults = Input.ofNullable(iterationResults);
+            this.iterationResults = Output.ofNullable(iterationResults);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder trainingOptions(@Nullable Input<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
+        public Builder trainingOptions(@Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions) {
             this.trainingOptions = trainingOptions;
             return this;
         }
 
         public Builder trainingOptions(@Nullable BqmlTrainingRunTrainingOptionsArgs trainingOptions) {
-            this.trainingOptions = Input.ofNullable(trainingOptions);
+            this.trainingOptions = Output.ofNullable(trainingOptions);
             return this;
         }
         public BqmlTrainingRunArgs build() {

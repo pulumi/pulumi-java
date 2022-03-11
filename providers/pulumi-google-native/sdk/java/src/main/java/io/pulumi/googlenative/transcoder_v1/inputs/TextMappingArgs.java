@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomKey", required=true)
-      private final Input<String> atomKey;
+      private final Output<String> atomKey;
 
-    public Input<String> getAtomKey() {
+    public Output<String> getAtomKey() {
         return this.atomKey;
     }
 
@@ -34,9 +34,9 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputKey", required=true)
-      private final Input<String> inputKey;
+      private final Output<String> inputKey;
 
-    public Input<String> getInputKey() {
+    public Output<String> getInputKey() {
         return this.inputKey;
     }
 
@@ -45,25 +45,25 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputTrack", required=true)
-      private final Input<Integer> inputTrack;
+      private final Output<Integer> inputTrack;
 
-    public Input<Integer> getInputTrack() {
+    public Output<Integer> getInputTrack() {
         return this.inputTrack;
     }
 
     public TextMappingArgs(
-        Input<String> atomKey,
-        Input<String> inputKey,
-        Input<Integer> inputTrack) {
+        Output<String> atomKey,
+        Output<String> inputKey,
+        Output<Integer> inputTrack) {
         this.atomKey = Objects.requireNonNull(atomKey, "expected parameter 'atomKey' to be non-null");
         this.inputKey = Objects.requireNonNull(inputKey, "expected parameter 'inputKey' to be non-null");
         this.inputTrack = Objects.requireNonNull(inputTrack, "expected parameter 'inputTrack' to be non-null");
     }
 
     private TextMappingArgs() {
-        this.atomKey = Input.empty();
-        this.inputKey = Input.empty();
-        this.inputTrack = Input.empty();
+        this.atomKey = Output.empty();
+        this.inputKey = Output.empty();
+        this.inputTrack = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> atomKey;
-        private Input<String> inputKey;
-        private Input<Integer> inputTrack;
+        private Output<String> atomKey;
+        private Output<String> inputKey;
+        private Output<Integer> inputTrack;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.inputTrack = defaults.inputTrack;
         }
 
-        public Builder atomKey(Input<String> atomKey) {
+        public Builder atomKey(Output<String> atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
         public Builder atomKey(String atomKey) {
-            this.atomKey = Input.of(Objects.requireNonNull(atomKey));
+            this.atomKey = Output.of(Objects.requireNonNull(atomKey));
             return this;
         }
 
-        public Builder inputKey(Input<String> inputKey) {
+        public Builder inputKey(Output<String> inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
         public Builder inputKey(String inputKey) {
-            this.inputKey = Input.of(Objects.requireNonNull(inputKey));
+            this.inputKey = Output.of(Objects.requireNonNull(inputKey));
             return this;
         }
 
-        public Builder inputTrack(Input<Integer> inputTrack) {
+        public Builder inputTrack(Output<Integer> inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
 
         public Builder inputTrack(Integer inputTrack) {
-            this.inputTrack = Input.of(Objects.requireNonNull(inputTrack));
+            this.inputTrack = Output.of(Objects.requireNonNull(inputTrack));
             return this;
         }
         public TextMappingArgs build() {

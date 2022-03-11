@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="externalIp")
-      private final @Nullable Input<String> externalIp;
+      private final @Nullable Output<String> externalIp;
 
-    public Input<String> getExternalIp() {
-        return this.externalIp == null ? Input.empty() : this.externalIp;
+    public Output<String> getExternalIp() {
+        return this.externalIp == null ? Output.empty() : this.externalIp;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="internalIp")
-      private final @Nullable Input<String> internalIp;
+      private final @Nullable Output<String> internalIp;
 
-    public Input<String> getInternalIp() {
-        return this.internalIp == null ? Input.empty() : this.internalIp;
+    public Output<String> getInternalIp() {
+        return this.internalIp == null ? Output.empty() : this.internalIp;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     public NetworkInterfaceArgs(
-        @Nullable Input<String> externalIp,
-        @Nullable Input<String> internalIp,
-        @Nullable Input<String> network,
-        @Nullable Input<String> subnetwork) {
+        @Nullable Output<String> externalIp,
+        @Nullable Output<String> internalIp,
+        @Nullable Output<String> network,
+        @Nullable Output<String> subnetwork) {
         this.externalIp = externalIp;
         this.internalIp = internalIp;
         this.network = network;
@@ -74,10 +74,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkInterfaceArgs() {
-        this.externalIp = Input.empty();
-        this.internalIp = Input.empty();
-        this.network = Input.empty();
-        this.subnetwork = Input.empty();
+        this.externalIp = Output.empty();
+        this.internalIp = Output.empty();
+        this.network = Output.empty();
+        this.subnetwork = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> externalIp;
-        private @Nullable Input<String> internalIp;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> subnetwork;
+        private @Nullable Output<String> externalIp;
+        private @Nullable Output<String> internalIp;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> subnetwork;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder externalIp(@Nullable Input<String> externalIp) {
+        public Builder externalIp(@Nullable Output<String> externalIp) {
             this.externalIp = externalIp;
             return this;
         }
 
         public Builder externalIp(@Nullable String externalIp) {
-            this.externalIp = Input.ofNullable(externalIp);
+            this.externalIp = Output.ofNullable(externalIp);
             return this;
         }
 
-        public Builder internalIp(@Nullable Input<String> internalIp) {
+        public Builder internalIp(@Nullable Output<String> internalIp) {
             this.internalIp = internalIp;
             return this;
         }
 
         public Builder internalIp(@Nullable String internalIp) {
-            this.internalIp = Input.ofNullable(internalIp);
+            this.internalIp = Output.ofNullable(internalIp);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
         public NetworkInterfaceArgs build() {

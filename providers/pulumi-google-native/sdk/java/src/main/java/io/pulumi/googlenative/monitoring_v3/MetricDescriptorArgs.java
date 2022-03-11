@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorLaunchStage;
 import io.pulumi.googlenative.monitoring_v3.enums.MetricDescriptorMetricKind;
@@ -25,10 +25,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<LabelDescriptorArgs>> labels;
+      private final @Nullable Output<List<LabelDescriptorArgs>> labels;
 
-    public Input<List<LabelDescriptorArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<LabelDescriptorArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="launchStage")
-      private final @Nullable Input<MetricDescriptorLaunchStage> launchStage;
+      private final @Nullable Output<MetricDescriptorLaunchStage> launchStage;
 
-    public Input<MetricDescriptorLaunchStage> getLaunchStage() {
-        return this.launchStage == null ? Input.empty() : this.launchStage;
+    public Output<MetricDescriptorLaunchStage> getLaunchStage() {
+        return this.launchStage == null ? Output.empty() : this.launchStage;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<MetricDescriptorMetadataArgs> metadata;
+      private final @Nullable Output<MetricDescriptorMetadataArgs> metadata;
 
-    public Input<MetricDescriptorMetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<MetricDescriptorMetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricKind")
-      private final @Nullable Input<MetricDescriptorMetricKind> metricKind;
+      private final @Nullable Output<MetricDescriptorMetricKind> metricKind;
 
-    public Input<MetricDescriptorMetricKind> getMetricKind() {
-        return this.metricKind == null ? Input.empty() : this.metricKind;
+    public Output<MetricDescriptorMetricKind> getMetricKind() {
+        return this.metricKind == null ? Output.empty() : this.metricKind;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="monitoredResourceTypes")
-      private final @Nullable Input<List<String>> monitoredResourceTypes;
+      private final @Nullable Output<List<String>> monitoredResourceTypes;
 
-    public Input<List<String>> getMonitoredResourceTypes() {
-        return this.monitoredResourceTypes == null ? Input.empty() : this.monitoredResourceTypes;
+    public Output<List<String>> getMonitoredResourceTypes() {
+        return this.monitoredResourceTypes == null ? Output.empty() : this.monitoredResourceTypes;
     }
 
     /**
@@ -102,17 +102,17 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unit")
-      private final @Nullable Input<String> unit;
+      private final @Nullable Output<String> unit;
 
-    public Input<String> getUnit() {
-        return this.unit == null ? Input.empty() : this.unit;
+    public Output<String> getUnit() {
+        return this.unit == null ? Output.empty() : this.unit;
     }
 
     /**
@@ -142,25 +142,25 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="valueType")
-      private final @Nullable Input<MetricDescriptorValueType> valueType;
+      private final @Nullable Output<MetricDescriptorValueType> valueType;
 
-    public Input<MetricDescriptorValueType> getValueType() {
-        return this.valueType == null ? Input.empty() : this.valueType;
+    public Output<MetricDescriptorValueType> getValueType() {
+        return this.valueType == null ? Output.empty() : this.valueType;
     }
 
     public MetricDescriptorArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<LabelDescriptorArgs>> labels,
-        @Nullable Input<MetricDescriptorLaunchStage> launchStage,
-        @Nullable Input<MetricDescriptorMetadataArgs> metadata,
-        @Nullable Input<MetricDescriptorMetricKind> metricKind,
-        @Nullable Input<List<String>> monitoredResourceTypes,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> type,
-        @Nullable Input<String> unit,
-        @Nullable Input<MetricDescriptorValueType> valueType) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<LabelDescriptorArgs>> labels,
+        @Nullable Output<MetricDescriptorLaunchStage> launchStage,
+        @Nullable Output<MetricDescriptorMetadataArgs> metadata,
+        @Nullable Output<MetricDescriptorMetricKind> metricKind,
+        @Nullable Output<List<String>> monitoredResourceTypes,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> type,
+        @Nullable Output<String> unit,
+        @Nullable Output<MetricDescriptorValueType> valueType) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;
@@ -176,18 +176,18 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MetricDescriptorArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.labels = Input.empty();
-        this.launchStage = Input.empty();
-        this.metadata = Input.empty();
-        this.metricKind = Input.empty();
-        this.monitoredResourceTypes = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.type = Input.empty();
-        this.unit = Input.empty();
-        this.valueType = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.labels = Output.empty();
+        this.launchStage = Output.empty();
+        this.metadata = Output.empty();
+        this.metricKind = Output.empty();
+        this.monitoredResourceTypes = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.type = Output.empty();
+        this.unit = Output.empty();
+        this.valueType = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,18 +199,18 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<LabelDescriptorArgs>> labels;
-        private @Nullable Input<MetricDescriptorLaunchStage> launchStage;
-        private @Nullable Input<MetricDescriptorMetadataArgs> metadata;
-        private @Nullable Input<MetricDescriptorMetricKind> metricKind;
-        private @Nullable Input<List<String>> monitoredResourceTypes;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> unit;
-        private @Nullable Input<MetricDescriptorValueType> valueType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<LabelDescriptorArgs>> labels;
+        private @Nullable Output<MetricDescriptorLaunchStage> launchStage;
+        private @Nullable Output<MetricDescriptorMetadataArgs> metadata;
+        private @Nullable Output<MetricDescriptorMetricKind> metricKind;
+        private @Nullable Output<List<String>> monitoredResourceTypes;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> unit;
+        private @Nullable Output<MetricDescriptorValueType> valueType;
 
         public Builder() {
     	      // Empty
@@ -232,123 +232,123 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<LabelDescriptorArgs>> labels) {
+        public Builder labels(@Nullable Output<List<LabelDescriptorArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder launchStage(@Nullable Input<MetricDescriptorLaunchStage> launchStage) {
+        public Builder launchStage(@Nullable Output<MetricDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
 
         public Builder launchStage(@Nullable MetricDescriptorLaunchStage launchStage) {
-            this.launchStage = Input.ofNullable(launchStage);
+            this.launchStage = Output.ofNullable(launchStage);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<MetricDescriptorMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<MetricDescriptorMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable MetricDescriptorMetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder metricKind(@Nullable Input<MetricDescriptorMetricKind> metricKind) {
+        public Builder metricKind(@Nullable Output<MetricDescriptorMetricKind> metricKind) {
             this.metricKind = metricKind;
             return this;
         }
 
         public Builder metricKind(@Nullable MetricDescriptorMetricKind metricKind) {
-            this.metricKind = Input.ofNullable(metricKind);
+            this.metricKind = Output.ofNullable(metricKind);
             return this;
         }
 
-        public Builder monitoredResourceTypes(@Nullable Input<List<String>> monitoredResourceTypes) {
+        public Builder monitoredResourceTypes(@Nullable Output<List<String>> monitoredResourceTypes) {
             this.monitoredResourceTypes = monitoredResourceTypes;
             return this;
         }
 
         public Builder monitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
-            this.monitoredResourceTypes = Input.ofNullable(monitoredResourceTypes);
+            this.monitoredResourceTypes = Output.ofNullable(monitoredResourceTypes);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder unit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Output<String> unit) {
             this.unit = unit;
             return this;
         }
 
         public Builder unit(@Nullable String unit) {
-            this.unit = Input.ofNullable(unit);
+            this.unit = Output.ofNullable(unit);
             return this;
         }
 
-        public Builder valueType(@Nullable Input<MetricDescriptorValueType> valueType) {
+        public Builder valueType(@Nullable Output<MetricDescriptorValueType> valueType) {
             this.valueType = valueType;
             return this;
         }
 
         public Builder valueType(@Nullable MetricDescriptorValueType valueType) {
-            this.valueType = Input.ofNullable(valueType);
+            this.valueType = Output.ofNullable(valueType);
             return this;
         }
         public MetricDescriptorArgs build() {

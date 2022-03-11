@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="quasiIds")
-      private final @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
+      private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Input<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
-        return this.quasiIds == null ? Input.empty() : this.quasiIds;
+    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
+        return this.quasiIds == null ? Output.empty() : this.quasiIds;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sensitiveAttribute")
-      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
+      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
-    public Input<GooglePrivacyDlpV2FieldIdArgs> getSensitiveAttribute() {
-        return this.sensitiveAttribute == null ? Input.empty() : this.sensitiveAttribute;
+    public Output<GooglePrivacyDlpV2FieldIdArgs> getSensitiveAttribute() {
+        return this.sensitiveAttribute == null ? Output.empty() : this.sensitiveAttribute;
     }
 
     public GooglePrivacyDlpV2LDiversityConfigArgs(
-        @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds,
-        @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
+        @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds,
+        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
         this.quasiIds = quasiIds;
         this.sensitiveAttribute = sensitiveAttribute;
     }
 
     private GooglePrivacyDlpV2LDiversityConfigArgs() {
-        this.quasiIds = Input.empty();
-        this.sensitiveAttribute = Input.empty();
+        this.quasiIds = Output.empty();
+        this.sensitiveAttribute = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
-        private @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
+        private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
+        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     	      this.sensitiveAttribute = defaults.sensitiveAttribute;
         }
 
-        public Builder quasiIds(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
+        public Builder quasiIds(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
             this.quasiIds = quasiIds;
             return this;
         }
 
         public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
-            this.quasiIds = Input.ofNullable(quasiIds);
+            this.quasiIds = Output.ofNullable(quasiIds);
             return this;
         }
 
-        public Builder sensitiveAttribute(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
+        public Builder sensitiveAttribute(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
             this.sensitiveAttribute = sensitiveAttribute;
             return this;
         }
 
         public Builder sensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
-            this.sensitiveAttribute = Input.ofNullable(sensitiveAttribute);
+            this.sensitiveAttribute = Output.ofNullable(sensitiveAttribute);
             return this;
         }
         public GooglePrivacyDlpV2LDiversityConfigArgs build() {

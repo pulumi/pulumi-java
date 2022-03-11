@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,17 +20,17 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreIdleSlots")
-      private final @Nullable Input<Boolean> ignoreIdleSlots;
+      private final @Nullable Output<Boolean> ignoreIdleSlots;
 
-    public Input<Boolean> getIgnoreIdleSlots() {
-        return this.ignoreIdleSlots == null ? Input.empty() : this.ignoreIdleSlots;
+    public Output<Boolean> getIgnoreIdleSlots() {
+        return this.ignoreIdleSlots == null ? Output.empty() : this.ignoreIdleSlots;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -38,24 +38,24 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="reservationId")
-      private final @Nullable Input<String> reservationId;
+      private final @Nullable Output<String> reservationId;
 
-    public Input<String> getReservationId() {
-        return this.reservationId == null ? Input.empty() : this.reservationId;
+    public Output<String> getReservationId() {
+        return this.reservationId == null ? Output.empty() : this.reservationId;
     }
 
     /**
@@ -63,19 +63,19 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="slotCapacity")
-      private final @Nullable Input<String> slotCapacity;
+      private final @Nullable Output<String> slotCapacity;
 
-    public Input<String> getSlotCapacity() {
-        return this.slotCapacity == null ? Input.empty() : this.slotCapacity;
+    public Output<String> getSlotCapacity() {
+        return this.slotCapacity == null ? Output.empty() : this.slotCapacity;
     }
 
     public ReservationArgs(
-        @Nullable Input<Boolean> ignoreIdleSlots,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> reservationId,
-        @Nullable Input<String> slotCapacity) {
+        @Nullable Output<Boolean> ignoreIdleSlots,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> reservationId,
+        @Nullable Output<String> slotCapacity) {
         this.ignoreIdleSlots = ignoreIdleSlots;
         this.location = location;
         this.name = name;
@@ -85,12 +85,12 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReservationArgs() {
-        this.ignoreIdleSlots = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.reservationId = Input.empty();
-        this.slotCapacity = Input.empty();
+        this.ignoreIdleSlots = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.reservationId = Output.empty();
+        this.slotCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,12 +102,12 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> ignoreIdleSlots;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> reservationId;
-        private @Nullable Input<String> slotCapacity;
+        private @Nullable Output<Boolean> ignoreIdleSlots;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> reservationId;
+        private @Nullable Output<String> slotCapacity;
 
         public Builder() {
     	      // Empty
@@ -123,63 +123,63 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slotCapacity = defaults.slotCapacity;
         }
 
-        public Builder ignoreIdleSlots(@Nullable Input<Boolean> ignoreIdleSlots) {
+        public Builder ignoreIdleSlots(@Nullable Output<Boolean> ignoreIdleSlots) {
             this.ignoreIdleSlots = ignoreIdleSlots;
             return this;
         }
 
         public Builder ignoreIdleSlots(@Nullable Boolean ignoreIdleSlots) {
-            this.ignoreIdleSlots = Input.ofNullable(ignoreIdleSlots);
+            this.ignoreIdleSlots = Output.ofNullable(ignoreIdleSlots);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservationId(@Nullable Input<String> reservationId) {
+        public Builder reservationId(@Nullable Output<String> reservationId) {
             this.reservationId = reservationId;
             return this;
         }
 
         public Builder reservationId(@Nullable String reservationId) {
-            this.reservationId = Input.ofNullable(reservationId);
+            this.reservationId = Output.ofNullable(reservationId);
             return this;
         }
 
-        public Builder slotCapacity(@Nullable Input<String> slotCapacity) {
+        public Builder slotCapacity(@Nullable Output<String> slotCapacity) {
             this.slotCapacity = slotCapacity;
             return this;
         }
 
         public Builder slotCapacity(@Nullable String slotCapacity) {
-            this.slotCapacity = Input.ofNullable(slotCapacity);
+            this.slotCapacity = Output.ofNullable(slotCapacity);
             return this;
         }
         public ReservationArgs build() {

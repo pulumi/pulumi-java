@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1beta1.enums.EndpointPolicyType;
 import io.pulumi.googlenative.networkservices_v1beta1.inputs.EndpointMatcherArgs;
@@ -23,10 +23,10 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationPolicy")
-      private final @Nullable Input<String> authorizationPolicy;
+      private final @Nullable Output<String> authorizationPolicy;
 
-    public Input<String> getAuthorizationPolicy() {
-        return this.authorizationPolicy == null ? Input.empty() : this.authorizationPolicy;
+    public Output<String> getAuthorizationPolicy() {
+        return this.authorizationPolicy == null ? Output.empty() : this.authorizationPolicy;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientTlsPolicy")
-      private final @Nullable Input<String> clientTlsPolicy;
+      private final @Nullable Output<String> clientTlsPolicy;
 
-    public Input<String> getClientTlsPolicy() {
-        return this.clientTlsPolicy == null ? Input.empty() : this.clientTlsPolicy;
+    public Output<String> getClientTlsPolicy() {
+        return this.clientTlsPolicy == null ? Output.empty() : this.clientTlsPolicy;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,16 +56,16 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointMatcher", required=true)
-      private final Input<EndpointMatcherArgs> endpointMatcher;
+      private final Output<EndpointMatcherArgs> endpointMatcher;
 
-    public Input<EndpointMatcherArgs> getEndpointMatcher() {
+    public Output<EndpointMatcherArgs> getEndpointMatcher() {
         return this.endpointMatcher;
     }
 
     @InputImport(name="endpointPolicyId", required=true)
-      private final Input<String> endpointPolicyId;
+      private final Output<String> endpointPolicyId;
 
-    public Input<String> getEndpointPolicyId() {
+    public Output<String> getEndpointPolicyId() {
         return this.endpointPolicyId;
     }
 
@@ -74,17 +74,17 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,17 +92,17 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverTlsPolicy")
-      private final @Nullable Input<String> serverTlsPolicy;
+      private final @Nullable Output<String> serverTlsPolicy;
 
-    public Input<String> getServerTlsPolicy() {
-        return this.serverTlsPolicy == null ? Input.empty() : this.serverTlsPolicy;
+    public Output<String> getServerTlsPolicy() {
+        return this.serverTlsPolicy == null ? Output.empty() : this.serverTlsPolicy;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficPortSelector")
-      private final @Nullable Input<TrafficPortSelectorArgs> trafficPortSelector;
+      private final @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
 
-    public Input<TrafficPortSelectorArgs> getTrafficPortSelector() {
-        return this.trafficPortSelector == null ? Input.empty() : this.trafficPortSelector;
+    public Output<TrafficPortSelectorArgs> getTrafficPortSelector() {
+        return this.trafficPortSelector == null ? Output.empty() : this.trafficPortSelector;
     }
 
     /**
@@ -132,25 +132,25 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<EndpointPolicyType> type;
+      private final Output<EndpointPolicyType> type;
 
-    public Input<EndpointPolicyType> getType() {
+    public Output<EndpointPolicyType> getType() {
         return this.type;
     }
 
     public EndpointPolicyArgs(
-        @Nullable Input<String> authorizationPolicy,
-        @Nullable Input<String> clientTlsPolicy,
-        @Nullable Input<String> description,
-        Input<EndpointMatcherArgs> endpointMatcher,
-        Input<String> endpointPolicyId,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serverTlsPolicy,
-        @Nullable Input<TrafficPortSelectorArgs> trafficPortSelector,
-        Input<EndpointPolicyType> type) {
+        @Nullable Output<String> authorizationPolicy,
+        @Nullable Output<String> clientTlsPolicy,
+        @Nullable Output<String> description,
+        Output<EndpointMatcherArgs> endpointMatcher,
+        Output<String> endpointPolicyId,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serverTlsPolicy,
+        @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector,
+        Output<EndpointPolicyType> type) {
         this.authorizationPolicy = authorizationPolicy;
         this.clientTlsPolicy = clientTlsPolicy;
         this.description = description;
@@ -166,18 +166,18 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointPolicyArgs() {
-        this.authorizationPolicy = Input.empty();
-        this.clientTlsPolicy = Input.empty();
-        this.description = Input.empty();
-        this.endpointMatcher = Input.empty();
-        this.endpointPolicyId = Input.empty();
-        this.labels = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.serverTlsPolicy = Input.empty();
-        this.trafficPortSelector = Input.empty();
-        this.type = Input.empty();
+        this.authorizationPolicy = Output.empty();
+        this.clientTlsPolicy = Output.empty();
+        this.description = Output.empty();
+        this.endpointMatcher = Output.empty();
+        this.endpointPolicyId = Output.empty();
+        this.labels = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.serverTlsPolicy = Output.empty();
+        this.trafficPortSelector = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,18 +189,18 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationPolicy;
-        private @Nullable Input<String> clientTlsPolicy;
-        private @Nullable Input<String> description;
-        private Input<EndpointMatcherArgs> endpointMatcher;
-        private Input<String> endpointPolicyId;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serverTlsPolicy;
-        private @Nullable Input<TrafficPortSelectorArgs> trafficPortSelector;
-        private Input<EndpointPolicyType> type;
+        private @Nullable Output<String> authorizationPolicy;
+        private @Nullable Output<String> clientTlsPolicy;
+        private @Nullable Output<String> description;
+        private Output<EndpointMatcherArgs> endpointMatcher;
+        private Output<String> endpointPolicyId;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serverTlsPolicy;
+        private @Nullable Output<TrafficPortSelectorArgs> trafficPortSelector;
+        private Output<EndpointPolicyType> type;
 
         public Builder() {
     	      // Empty
@@ -222,123 +222,123 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder authorizationPolicy(@Nullable Input<String> authorizationPolicy) {
+        public Builder authorizationPolicy(@Nullable Output<String> authorizationPolicy) {
             this.authorizationPolicy = authorizationPolicy;
             return this;
         }
 
         public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
-            this.authorizationPolicy = Input.ofNullable(authorizationPolicy);
+            this.authorizationPolicy = Output.ofNullable(authorizationPolicy);
             return this;
         }
 
-        public Builder clientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable Output<String> clientTlsPolicy) {
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
 
         public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
-            this.clientTlsPolicy = Input.ofNullable(clientTlsPolicy);
+            this.clientTlsPolicy = Output.ofNullable(clientTlsPolicy);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder endpointMatcher(Input<EndpointMatcherArgs> endpointMatcher) {
+        public Builder endpointMatcher(Output<EndpointMatcherArgs> endpointMatcher) {
             this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
             return this;
         }
 
         public Builder endpointMatcher(EndpointMatcherArgs endpointMatcher) {
-            this.endpointMatcher = Input.of(Objects.requireNonNull(endpointMatcher));
+            this.endpointMatcher = Output.of(Objects.requireNonNull(endpointMatcher));
             return this;
         }
 
-        public Builder endpointPolicyId(Input<String> endpointPolicyId) {
+        public Builder endpointPolicyId(Output<String> endpointPolicyId) {
             this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
             return this;
         }
 
         public Builder endpointPolicyId(String endpointPolicyId) {
-            this.endpointPolicyId = Input.of(Objects.requireNonNull(endpointPolicyId));
+            this.endpointPolicyId = Output.of(Objects.requireNonNull(endpointPolicyId));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serverTlsPolicy(@Nullable Input<String> serverTlsPolicy) {
+        public Builder serverTlsPolicy(@Nullable Output<String> serverTlsPolicy) {
             this.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
 
         public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
-            this.serverTlsPolicy = Input.ofNullable(serverTlsPolicy);
+            this.serverTlsPolicy = Output.ofNullable(serverTlsPolicy);
             return this;
         }
 
-        public Builder trafficPortSelector(@Nullable Input<TrafficPortSelectorArgs> trafficPortSelector) {
+        public Builder trafficPortSelector(@Nullable Output<TrafficPortSelectorArgs> trafficPortSelector) {
             this.trafficPortSelector = trafficPortSelector;
             return this;
         }
 
         public Builder trafficPortSelector(@Nullable TrafficPortSelectorArgs trafficPortSelector) {
-            this.trafficPortSelector = Input.ofNullable(trafficPortSelector);
+            this.trafficPortSelector = Output.ofNullable(trafficPortSelector);
             return this;
         }
 
-        public Builder type(Input<EndpointPolicyType> type) {
+        public Builder type(Output<EndpointPolicyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(EndpointPolicyType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public EndpointPolicyArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.enums.TriggerEventType;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ApprovalConfigArgs;
@@ -32,10 +32,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalConfig")
-      private final @Nullable Input<ApprovalConfigArgs> approvalConfig;
+      private final @Nullable Output<ApprovalConfigArgs> approvalConfig;
 
-    public Input<ApprovalConfigArgs> getApprovalConfig() {
-        return this.approvalConfig == null ? Input.empty() : this.approvalConfig;
+    public Output<ApprovalConfigArgs> getApprovalConfig() {
+        return this.approvalConfig == null ? Output.empty() : this.approvalConfig;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autodetect")
-      private final @Nullable Input<Boolean> autodetect;
+      private final @Nullable Output<Boolean> autodetect;
 
-    public Input<Boolean> getAutodetect() {
-        return this.autodetect == null ? Input.empty() : this.autodetect;
+    public Output<Boolean> getAutodetect() {
+        return this.autodetect == null ? Output.empty() : this.autodetect;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bitbucketServerTriggerConfig")
-      private final @Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
+      private final @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
 
-    public Input<BitbucketServerTriggerConfigArgs> getBitbucketServerTriggerConfig() {
-        return this.bitbucketServerTriggerConfig == null ? Input.empty() : this.bitbucketServerTriggerConfig;
+    public Output<BitbucketServerTriggerConfigArgs> getBitbucketServerTriggerConfig() {
+        return this.bitbucketServerTriggerConfig == null ? Output.empty() : this.bitbucketServerTriggerConfig;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="build")
-      private final @Nullable Input<BuildArgs> build;
+      private final @Nullable Output<BuildArgs> build;
 
-    public Input<BuildArgs> getBuild() {
-        return this.build == null ? Input.empty() : this.build;
+    public Output<BuildArgs> getBuild() {
+        return this.build == null ? Output.empty() : this.build;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType")
-      private final @Nullable Input<TriggerEventType> eventType;
+      private final @Nullable Output<TriggerEventType> eventType;
 
-    public Input<TriggerEventType> getEventType() {
-        return this.eventType == null ? Input.empty() : this.eventType;
+    public Output<TriggerEventType> getEventType() {
+        return this.eventType == null ? Output.empty() : this.eventType;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filename")
-      private final @Nullable Input<String> filename;
+      private final @Nullable Output<String> filename;
 
-    public Input<String> getFilename() {
-        return this.filename == null ? Input.empty() : this.filename;
+    public Output<String> getFilename() {
+        return this.filename == null ? Output.empty() : this.filename;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gitFileSource")
-      private final @Nullable Input<GitFileSourceArgs> gitFileSource;
+      private final @Nullable Output<GitFileSourceArgs> gitFileSource;
 
-    public Input<GitFileSourceArgs> getGitFileSource() {
-        return this.gitFileSource == null ? Input.empty() : this.gitFileSource;
+    public Output<GitFileSourceArgs> getGitFileSource() {
+        return this.gitFileSource == null ? Output.empty() : this.gitFileSource;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="github")
-      private final @Nullable Input<GitHubEventsConfigArgs> github;
+      private final @Nullable Output<GitHubEventsConfigArgs> github;
 
-    public Input<GitHubEventsConfigArgs> getGithub() {
-        return this.github == null ? Input.empty() : this.github;
+    public Output<GitHubEventsConfigArgs> getGithub() {
+        return this.github == null ? Output.empty() : this.github;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoredFiles")
-      private final @Nullable Input<List<String>> ignoredFiles;
+      private final @Nullable Output<List<String>> ignoredFiles;
 
-    public Input<List<String>> getIgnoredFiles() {
-        return this.ignoredFiles == null ? Input.empty() : this.ignoredFiles;
+    public Output<List<String>> getIgnoredFiles() {
+        return this.ignoredFiles == null ? Output.empty() : this.ignoredFiles;
     }
 
     /**
@@ -164,17 +164,17 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedFiles")
-      private final @Nullable Input<List<String>> includedFiles;
+      private final @Nullable Output<List<String>> includedFiles;
 
-    public Input<List<String>> getIncludedFiles() {
-        return this.includedFiles == null ? Input.empty() : this.includedFiles;
+    public Output<List<String>> getIncludedFiles() {
+        return this.includedFiles == null ? Output.empty() : this.includedFiles;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -182,23 +182,23 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
@@ -207,10 +207,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfig")
-      private final @Nullable Input<PubsubConfigArgs> pubsubConfig;
+      private final @Nullable Output<PubsubConfigArgs> pubsubConfig;
 
-    public Input<PubsubConfigArgs> getPubsubConfig() {
-        return this.pubsubConfig == null ? Input.empty() : this.pubsubConfig;
+    public Output<PubsubConfigArgs> getPubsubConfig() {
+        return this.pubsubConfig == null ? Output.empty() : this.pubsubConfig;
     }
 
     /**
@@ -218,10 +218,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -229,10 +229,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-      private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Output<String> serviceAccount;
 
-    public Input<String> getServiceAccount() {
-        return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
+    public Output<String> getServiceAccount() {
+        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
     /**
@@ -240,10 +240,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceToBuild")
-      private final @Nullable Input<GitRepoSourceArgs> sourceToBuild;
+      private final @Nullable Output<GitRepoSourceArgs> sourceToBuild;
 
-    public Input<GitRepoSourceArgs> getSourceToBuild() {
-        return this.sourceToBuild == null ? Input.empty() : this.sourceToBuild;
+    public Output<GitRepoSourceArgs> getSourceToBuild() {
+        return this.sourceToBuild == null ? Output.empty() : this.sourceToBuild;
     }
 
     /**
@@ -251,10 +251,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="substitutions")
-      private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Input<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Input.empty() : this.substitutions;
+    public Output<Map<String,String>> getSubstitutions() {
+        return this.substitutions == null ? Output.empty() : this.substitutions;
     }
 
     /**
@@ -262,10 +262,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -273,10 +273,10 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerTemplate")
-      private final @Nullable Input<RepoSourceArgs> triggerTemplate;
+      private final @Nullable Output<RepoSourceArgs> triggerTemplate;
 
-    public Input<RepoSourceArgs> getTriggerTemplate() {
-        return this.triggerTemplate == null ? Input.empty() : this.triggerTemplate;
+    public Output<RepoSourceArgs> getTriggerTemplate() {
+        return this.triggerTemplate == null ? Output.empty() : this.triggerTemplate;
     }
 
     /**
@@ -284,38 +284,38 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookConfig")
-      private final @Nullable Input<WebhookConfigArgs> webhookConfig;
+      private final @Nullable Output<WebhookConfigArgs> webhookConfig;
 
-    public Input<WebhookConfigArgs> getWebhookConfig() {
-        return this.webhookConfig == null ? Input.empty() : this.webhookConfig;
+    public Output<WebhookConfigArgs> getWebhookConfig() {
+        return this.webhookConfig == null ? Output.empty() : this.webhookConfig;
     }
 
     public TriggerArgs(
-        @Nullable Input<ApprovalConfigArgs> approvalConfig,
-        @Nullable Input<Boolean> autodetect,
-        @Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig,
-        @Nullable Input<BuildArgs> build,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<TriggerEventType> eventType,
-        @Nullable Input<String> filename,
-        @Nullable Input<String> filter,
-        @Nullable Input<GitFileSourceArgs> gitFileSource,
-        @Nullable Input<GitHubEventsConfigArgs> github,
-        @Nullable Input<List<String>> ignoredFiles,
-        @Nullable Input<List<String>> includedFiles,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        Input<String> projectId,
-        @Nullable Input<PubsubConfigArgs> pubsubConfig,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<String> serviceAccount,
-        @Nullable Input<GitRepoSourceArgs> sourceToBuild,
-        @Nullable Input<Map<String,String>> substitutions,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<RepoSourceArgs> triggerTemplate,
-        @Nullable Input<WebhookConfigArgs> webhookConfig) {
+        @Nullable Output<ApprovalConfigArgs> approvalConfig,
+        @Nullable Output<Boolean> autodetect,
+        @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig,
+        @Nullable Output<BuildArgs> build,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<TriggerEventType> eventType,
+        @Nullable Output<String> filename,
+        @Nullable Output<String> filter,
+        @Nullable Output<GitFileSourceArgs> gitFileSource,
+        @Nullable Output<GitHubEventsConfigArgs> github,
+        @Nullable Output<List<String>> ignoredFiles,
+        @Nullable Output<List<String>> includedFiles,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        Output<String> projectId,
+        @Nullable Output<PubsubConfigArgs> pubsubConfig,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<String> serviceAccount,
+        @Nullable Output<GitRepoSourceArgs> sourceToBuild,
+        @Nullable Output<Map<String,String>> substitutions,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<RepoSourceArgs> triggerTemplate,
+        @Nullable Output<WebhookConfigArgs> webhookConfig) {
         this.approvalConfig = approvalConfig;
         this.autodetect = autodetect;
         this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
@@ -344,31 +344,31 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.approvalConfig = Input.empty();
-        this.autodetect = Input.empty();
-        this.bitbucketServerTriggerConfig = Input.empty();
-        this.build = Input.empty();
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.eventType = Input.empty();
-        this.filename = Input.empty();
-        this.filter = Input.empty();
-        this.gitFileSource = Input.empty();
-        this.github = Input.empty();
-        this.ignoredFiles = Input.empty();
-        this.includedFiles = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.projectId = Input.empty();
-        this.pubsubConfig = Input.empty();
-        this.resourceName = Input.empty();
-        this.serviceAccount = Input.empty();
-        this.sourceToBuild = Input.empty();
-        this.substitutions = Input.empty();
-        this.tags = Input.empty();
-        this.triggerTemplate = Input.empty();
-        this.webhookConfig = Input.empty();
+        this.approvalConfig = Output.empty();
+        this.autodetect = Output.empty();
+        this.bitbucketServerTriggerConfig = Output.empty();
+        this.build = Output.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.eventType = Output.empty();
+        this.filename = Output.empty();
+        this.filter = Output.empty();
+        this.gitFileSource = Output.empty();
+        this.github = Output.empty();
+        this.ignoredFiles = Output.empty();
+        this.includedFiles = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.projectId = Output.empty();
+        this.pubsubConfig = Output.empty();
+        this.resourceName = Output.empty();
+        this.serviceAccount = Output.empty();
+        this.sourceToBuild = Output.empty();
+        this.substitutions = Output.empty();
+        this.tags = Output.empty();
+        this.triggerTemplate = Output.empty();
+        this.webhookConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -380,31 +380,31 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ApprovalConfigArgs> approvalConfig;
-        private @Nullable Input<Boolean> autodetect;
-        private @Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
-        private @Nullable Input<BuildArgs> build;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<TriggerEventType> eventType;
-        private @Nullable Input<String> filename;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<GitFileSourceArgs> gitFileSource;
-        private @Nullable Input<GitHubEventsConfigArgs> github;
-        private @Nullable Input<List<String>> ignoredFiles;
-        private @Nullable Input<List<String>> includedFiles;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<String> projectId;
-        private @Nullable Input<PubsubConfigArgs> pubsubConfig;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<String> serviceAccount;
-        private @Nullable Input<GitRepoSourceArgs> sourceToBuild;
-        private @Nullable Input<Map<String,String>> substitutions;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<RepoSourceArgs> triggerTemplate;
-        private @Nullable Input<WebhookConfigArgs> webhookConfig;
+        private @Nullable Output<ApprovalConfigArgs> approvalConfig;
+        private @Nullable Output<Boolean> autodetect;
+        private @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
+        private @Nullable Output<BuildArgs> build;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<TriggerEventType> eventType;
+        private @Nullable Output<String> filename;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<GitFileSourceArgs> gitFileSource;
+        private @Nullable Output<GitHubEventsConfigArgs> github;
+        private @Nullable Output<List<String>> ignoredFiles;
+        private @Nullable Output<List<String>> includedFiles;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<String> projectId;
+        private @Nullable Output<PubsubConfigArgs> pubsubConfig;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<String> serviceAccount;
+        private @Nullable Output<GitRepoSourceArgs> sourceToBuild;
+        private @Nullable Output<Map<String,String>> substitutions;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<RepoSourceArgs> triggerTemplate;
+        private @Nullable Output<WebhookConfigArgs> webhookConfig;
 
         public Builder() {
     	      // Empty
@@ -439,253 +439,253 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookConfig = defaults.webhookConfig;
         }
 
-        public Builder approvalConfig(@Nullable Input<ApprovalConfigArgs> approvalConfig) {
+        public Builder approvalConfig(@Nullable Output<ApprovalConfigArgs> approvalConfig) {
             this.approvalConfig = approvalConfig;
             return this;
         }
 
         public Builder approvalConfig(@Nullable ApprovalConfigArgs approvalConfig) {
-            this.approvalConfig = Input.ofNullable(approvalConfig);
+            this.approvalConfig = Output.ofNullable(approvalConfig);
             return this;
         }
 
-        public Builder autodetect(@Nullable Input<Boolean> autodetect) {
+        public Builder autodetect(@Nullable Output<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
 
         public Builder autodetect(@Nullable Boolean autodetect) {
-            this.autodetect = Input.ofNullable(autodetect);
+            this.autodetect = Output.ofNullable(autodetect);
             return this;
         }
 
-        public Builder bitbucketServerTriggerConfig(@Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
+        public Builder bitbucketServerTriggerConfig(@Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
             return this;
         }
 
         public Builder bitbucketServerTriggerConfig(@Nullable BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
-            this.bitbucketServerTriggerConfig = Input.ofNullable(bitbucketServerTriggerConfig);
+            this.bitbucketServerTriggerConfig = Output.ofNullable(bitbucketServerTriggerConfig);
             return this;
         }
 
-        public Builder build(@Nullable Input<BuildArgs> build) {
+        public Builder build(@Nullable Output<BuildArgs> build) {
             this.build = build;
             return this;
         }
 
         public Builder build(@Nullable BuildArgs build) {
-            this.build = Input.ofNullable(build);
+            this.build = Output.ofNullable(build);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder eventType(@Nullable Input<TriggerEventType> eventType) {
+        public Builder eventType(@Nullable Output<TriggerEventType> eventType) {
             this.eventType = eventType;
             return this;
         }
 
         public Builder eventType(@Nullable TriggerEventType eventType) {
-            this.eventType = Input.ofNullable(eventType);
+            this.eventType = Output.ofNullable(eventType);
             return this;
         }
 
-        public Builder filename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Output<String> filename) {
             this.filename = filename;
             return this;
         }
 
         public Builder filename(@Nullable String filename) {
-            this.filename = Input.ofNullable(filename);
+            this.filename = Output.ofNullable(filename);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder gitFileSource(@Nullable Input<GitFileSourceArgs> gitFileSource) {
+        public Builder gitFileSource(@Nullable Output<GitFileSourceArgs> gitFileSource) {
             this.gitFileSource = gitFileSource;
             return this;
         }
 
         public Builder gitFileSource(@Nullable GitFileSourceArgs gitFileSource) {
-            this.gitFileSource = Input.ofNullable(gitFileSource);
+            this.gitFileSource = Output.ofNullable(gitFileSource);
             return this;
         }
 
-        public Builder github(@Nullable Input<GitHubEventsConfigArgs> github) {
+        public Builder github(@Nullable Output<GitHubEventsConfigArgs> github) {
             this.github = github;
             return this;
         }
 
         public Builder github(@Nullable GitHubEventsConfigArgs github) {
-            this.github = Input.ofNullable(github);
+            this.github = Output.ofNullable(github);
             return this;
         }
 
-        public Builder ignoredFiles(@Nullable Input<List<String>> ignoredFiles) {
+        public Builder ignoredFiles(@Nullable Output<List<String>> ignoredFiles) {
             this.ignoredFiles = ignoredFiles;
             return this;
         }
 
         public Builder ignoredFiles(@Nullable List<String> ignoredFiles) {
-            this.ignoredFiles = Input.ofNullable(ignoredFiles);
+            this.ignoredFiles = Output.ofNullable(ignoredFiles);
             return this;
         }
 
-        public Builder includedFiles(@Nullable Input<List<String>> includedFiles) {
+        public Builder includedFiles(@Nullable Output<List<String>> includedFiles) {
             this.includedFiles = includedFiles;
             return this;
         }
 
         public Builder includedFiles(@Nullable List<String> includedFiles) {
-            this.includedFiles = Input.ofNullable(includedFiles);
+            this.includedFiles = Output.ofNullable(includedFiles);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder pubsubConfig(@Nullable Input<PubsubConfigArgs> pubsubConfig) {
+        public Builder pubsubConfig(@Nullable Output<PubsubConfigArgs> pubsubConfig) {
             this.pubsubConfig = pubsubConfig;
             return this;
         }
 
         public Builder pubsubConfig(@Nullable PubsubConfigArgs pubsubConfig) {
-            this.pubsubConfig = Input.ofNullable(pubsubConfig);
+            this.pubsubConfig = Output.ofNullable(pubsubConfig);
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Input.ofNullable(serviceAccount);
+            this.serviceAccount = Output.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder sourceToBuild(@Nullable Input<GitRepoSourceArgs> sourceToBuild) {
+        public Builder sourceToBuild(@Nullable Output<GitRepoSourceArgs> sourceToBuild) {
             this.sourceToBuild = sourceToBuild;
             return this;
         }
 
         public Builder sourceToBuild(@Nullable GitRepoSourceArgs sourceToBuild) {
-            this.sourceToBuild = Input.ofNullable(sourceToBuild);
+            this.sourceToBuild = Output.ofNullable(sourceToBuild);
             return this;
         }
 
-        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Input.ofNullable(substitutions);
+            this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder triggerTemplate(@Nullable Input<RepoSourceArgs> triggerTemplate) {
+        public Builder triggerTemplate(@Nullable Output<RepoSourceArgs> triggerTemplate) {
             this.triggerTemplate = triggerTemplate;
             return this;
         }
 
         public Builder triggerTemplate(@Nullable RepoSourceArgs triggerTemplate) {
-            this.triggerTemplate = Input.ofNullable(triggerTemplate);
+            this.triggerTemplate = Output.ofNullable(triggerTemplate);
             return this;
         }
 
-        public Builder webhookConfig(@Nullable Input<WebhookConfigArgs> webhookConfig) {
+        public Builder webhookConfig(@Nullable Output<WebhookConfigArgs> webhookConfig) {
             this.webhookConfig = webhookConfig;
             return this;
         }
 
         public Builder webhookConfig(@Nullable WebhookConfigArgs webhookConfig) {
-            this.webhookConfig = Input.ofNullable(webhookConfig);
+            this.webhookConfig = Output.ofNullable(webhookConfig);
             return this;
         }
         public TriggerArgs build() {

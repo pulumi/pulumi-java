@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InstancePropertiesKeyRevocationActionType;
 import io.pulumi.googlenative.compute_alpha.enums.InstancePropertiesPostKeyRevocationActionType;
@@ -39,10 +39,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="advancedMachineFeatures")
-      private final @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
+      private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Input<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Input.empty() : this.advancedMachineFeatures;
+    public Output<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
+        return this.advancedMachineFeatures == null ? Output.empty() : this.advancedMachineFeatures;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="canIpForward")
-      private final @Nullable Input<Boolean> canIpForward;
+      private final @Nullable Output<Boolean> canIpForward;
 
-    public Input<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Input.empty() : this.canIpForward;
+    public Output<Boolean> getCanIpForward() {
+        return this.canIpForward == null ? Output.empty() : this.canIpForward;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="confidentialInstanceConfig")
-      private final @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+      private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Input<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Input.empty() : this.confidentialInstanceConfig;
+    public Output<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
+        return this.confidentialInstanceConfig == null ? Output.empty() : this.confidentialInstanceConfig;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<AttachedDiskArgs>> disks;
+      private final @Nullable Output<List<AttachedDiskArgs>> disks;
 
-    public Input<List<AttachedDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<AttachedDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayDevice")
-      private final @Nullable Input<DisplayDeviceArgs> displayDevice;
+      private final @Nullable Output<DisplayDeviceArgs> displayDevice;
 
-    public Input<DisplayDeviceArgs> getDisplayDevice() {
-        return this.displayDevice == null ? Input.empty() : this.displayDevice;
+    public Output<DisplayDeviceArgs> getDisplayDevice() {
+        return this.displayDevice == null ? Output.empty() : this.displayDevice;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="guestAccelerators")
-      private final @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
+      private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Input<List<AcceleratorConfigArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Input.empty() : this.guestAccelerators;
+    public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
+        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyRevocationActionType")
-      private final @Nullable Input<InstancePropertiesKeyRevocationActionType> keyRevocationActionType;
+      private final @Nullable Output<InstancePropertiesKeyRevocationActionType> keyRevocationActionType;
 
-    public Input<InstancePropertiesKeyRevocationActionType> getKeyRevocationActionType() {
-        return this.keyRevocationActionType == null ? Input.empty() : this.keyRevocationActionType;
+    public Output<InstancePropertiesKeyRevocationActionType> getKeyRevocationActionType() {
+        return this.keyRevocationActionType == null ? Output.empty() : this.keyRevocationActionType;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<MetadataArgs> metadata;
+      private final @Nullable Output<MetadataArgs> metadata;
 
-    public Input<MetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<MetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="networkPerformanceConfig")
-      private final @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig;
+      private final @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Input<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Input.empty() : this.networkPerformanceConfig;
+    public Output<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
+        return this.networkPerformanceConfig == null ? Output.empty() : this.networkPerformanceConfig;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="postKeyRevocationActionType")
-      private final @Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
+      private final @Nullable Output<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
 
-    public Input<InstancePropertiesPostKeyRevocationActionType> getPostKeyRevocationActionType() {
-        return this.postKeyRevocationActionType == null ? Input.empty() : this.postKeyRevocationActionType;
+    public Output<InstancePropertiesPostKeyRevocationActionType> getPostKeyRevocationActionType() {
+        return this.postKeyRevocationActionType == null ? Output.empty() : this.postKeyRevocationActionType;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateIpv6GoogleAccess")
-      private final @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+      private final @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Input<InstancePropertiesPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Input.empty() : this.privateIpv6GoogleAccess;
+    public Output<InstancePropertiesPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="reservationAffinity")
-      private final @Nullable Input<ReservationAffinityArgs> reservationAffinity;
+      private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Input<ReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Input.empty() : this.reservationAffinity;
+    public Output<ReservationAffinityArgs> getReservationAffinity() {
+        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceManagerTags")
-      private final @Nullable Input<Map<String,String>> resourceManagerTags;
+      private final @Nullable Output<Map<String,String>> resourceManagerTags;
 
-    public Input<Map<String,String>> getResourceManagerTags() {
-        return this.resourceManagerTags == null ? Input.empty() : this.resourceManagerTags;
+    public Output<Map<String,String>> getResourceManagerTags() {
+        return this.resourceManagerTags == null ? Output.empty() : this.resourceManagerTags;
     }
 
     /**
@@ -237,10 +237,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Input<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<List<String>> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -248,10 +248,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scheduling")
-      private final @Nullable Input<SchedulingArgs> scheduling;
+      private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Input<SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Input.empty() : this.scheduling;
+    public Output<SchedulingArgs> getScheduling() {
+        return this.scheduling == null ? Output.empty() : this.scheduling;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secureTags")
-      private final @Nullable Input<List<String>> secureTags;
+      private final @Nullable Output<List<String>> secureTags;
 
-    public Input<List<String>> getSecureTags() {
-        return this.secureTags == null ? Input.empty() : this.secureTags;
+    public Output<List<String>> getSecureTags() {
+        return this.secureTags == null ? Output.empty() : this.secureTags;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceAccounts")
-      private final @Nullable Input<List<ServiceAccountArgs>> serviceAccounts;
+      private final @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
-    public Input<List<ServiceAccountArgs>> getServiceAccounts() {
-        return this.serviceAccounts == null ? Input.empty() : this.serviceAccounts;
+    public Output<List<ServiceAccountArgs>> getServiceAccounts() {
+        return this.serviceAccounts == null ? Output.empty() : this.serviceAccounts;
     }
 
     /**
@@ -281,10 +281,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
+    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -292,10 +292,10 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shieldedVmConfig")
-      private final @Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig;
+      private final @Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig;
 
-    public Input<ShieldedVmConfigArgs> getShieldedVmConfig() {
-        return this.shieldedVmConfig == null ? Input.empty() : this.shieldedVmConfig;
+    public Output<ShieldedVmConfigArgs> getShieldedVmConfig() {
+        return this.shieldedVmConfig == null ? Output.empty() : this.shieldedVmConfig;
     }
 
     /**
@@ -303,38 +303,38 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<TagsArgs> tags;
+      private final @Nullable Output<TagsArgs> tags;
 
-    public Input<TagsArgs> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<TagsArgs> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public InstancePropertiesArgs(
-        @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures,
-        @Nullable Input<Boolean> canIpForward,
-        @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Input<String> description,
-        @Nullable Input<List<AttachedDiskArgs>> disks,
-        @Nullable Input<DisplayDeviceArgs> displayDevice,
-        @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators,
-        @Nullable Input<InstancePropertiesKeyRevocationActionType> keyRevocationActionType,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> machineType,
-        @Nullable Input<MetadataArgs> metadata,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces,
-        @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig,
-        @Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType,
-        @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
-        @Nullable Input<ReservationAffinityArgs> reservationAffinity,
-        @Nullable Input<Map<String,String>> resourceManagerTags,
-        @Nullable Input<List<String>> resourcePolicies,
-        @Nullable Input<SchedulingArgs> scheduling,
-        @Nullable Input<List<String>> secureTags,
-        @Nullable Input<List<ServiceAccountArgs>> serviceAccounts,
-        @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig,
-        @Nullable Input<TagsArgs> tags) {
+        @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures,
+        @Nullable Output<Boolean> canIpForward,
+        @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig,
+        @Nullable Output<String> description,
+        @Nullable Output<List<AttachedDiskArgs>> disks,
+        @Nullable Output<DisplayDeviceArgs> displayDevice,
+        @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators,
+        @Nullable Output<InstancePropertiesKeyRevocationActionType> keyRevocationActionType,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> machineType,
+        @Nullable Output<MetadataArgs> metadata,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces,
+        @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig,
+        @Nullable Output<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType,
+        @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
+        @Nullable Output<ReservationAffinityArgs> reservationAffinity,
+        @Nullable Output<Map<String,String>> resourceManagerTags,
+        @Nullable Output<List<String>> resourcePolicies,
+        @Nullable Output<SchedulingArgs> scheduling,
+        @Nullable Output<List<String>> secureTags,
+        @Nullable Output<List<ServiceAccountArgs>> serviceAccounts,
+        @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
+        @Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig,
+        @Nullable Output<TagsArgs> tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;
@@ -363,31 +363,31 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstancePropertiesArgs() {
-        this.advancedMachineFeatures = Input.empty();
-        this.canIpForward = Input.empty();
-        this.confidentialInstanceConfig = Input.empty();
-        this.description = Input.empty();
-        this.disks = Input.empty();
-        this.displayDevice = Input.empty();
-        this.guestAccelerators = Input.empty();
-        this.keyRevocationActionType = Input.empty();
-        this.labels = Input.empty();
-        this.machineType = Input.empty();
-        this.metadata = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.networkPerformanceConfig = Input.empty();
-        this.postKeyRevocationActionType = Input.empty();
-        this.privateIpv6GoogleAccess = Input.empty();
-        this.reservationAffinity = Input.empty();
-        this.resourceManagerTags = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.scheduling = Input.empty();
-        this.secureTags = Input.empty();
-        this.serviceAccounts = Input.empty();
-        this.shieldedInstanceConfig = Input.empty();
-        this.shieldedVmConfig = Input.empty();
-        this.tags = Input.empty();
+        this.advancedMachineFeatures = Output.empty();
+        this.canIpForward = Output.empty();
+        this.confidentialInstanceConfig = Output.empty();
+        this.description = Output.empty();
+        this.disks = Output.empty();
+        this.displayDevice = Output.empty();
+        this.guestAccelerators = Output.empty();
+        this.keyRevocationActionType = Output.empty();
+        this.labels = Output.empty();
+        this.machineType = Output.empty();
+        this.metadata = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.networkPerformanceConfig = Output.empty();
+        this.postKeyRevocationActionType = Output.empty();
+        this.privateIpv6GoogleAccess = Output.empty();
+        this.reservationAffinity = Output.empty();
+        this.resourceManagerTags = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.scheduling = Output.empty();
+        this.secureTags = Output.empty();
+        this.serviceAccounts = Output.empty();
+        this.shieldedInstanceConfig = Output.empty();
+        this.shieldedVmConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -399,31 +399,31 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
-        private @Nullable Input<Boolean> canIpForward;
-        private @Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<AttachedDiskArgs>> disks;
-        private @Nullable Input<DisplayDeviceArgs> displayDevice;
-        private @Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators;
-        private @Nullable Input<InstancePropertiesKeyRevocationActionType> keyRevocationActionType;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<MetadataArgs> metadata;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
-        private @Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig;
-        private @Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
-        private @Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
-        private @Nullable Input<ReservationAffinityArgs> reservationAffinity;
-        private @Nullable Input<Map<String,String>> resourceManagerTags;
-        private @Nullable Input<List<String>> resourcePolicies;
-        private @Nullable Input<SchedulingArgs> scheduling;
-        private @Nullable Input<List<String>> secureTags;
-        private @Nullable Input<List<ServiceAccountArgs>> serviceAccounts;
-        private @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig;
-        private @Nullable Input<TagsArgs> tags;
+        private @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
+        private @Nullable Output<Boolean> canIpForward;
+        private @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<AttachedDiskArgs>> disks;
+        private @Nullable Output<DisplayDeviceArgs> displayDevice;
+        private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
+        private @Nullable Output<InstancePropertiesKeyRevocationActionType> keyRevocationActionType;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<MetadataArgs> metadata;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
+        private @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
+        private @Nullable Output<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType;
+        private @Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+        private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
+        private @Nullable Output<Map<String,String>> resourceManagerTags;
+        private @Nullable Output<List<String>> resourcePolicies;
+        private @Nullable Output<SchedulingArgs> scheduling;
+        private @Nullable Output<List<String>> secureTags;
+        private @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
+        private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private @Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig;
+        private @Nullable Output<TagsArgs> tags;
 
         public Builder() {
     	      // Empty
@@ -458,253 +458,253 @@ public final class InstancePropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder advancedMachineFeatures(@Nullable Input<AdvancedMachineFeaturesArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures) {
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
         public Builder advancedMachineFeatures(@Nullable AdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Input.ofNullable(advancedMachineFeatures);
+            this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
             return this;
         }
 
-        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Input.ofNullable(canIpForward);
+            this.canIpForward = Output.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder confidentialInstanceConfig(@Nullable Input<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
         public Builder confidentialInstanceConfig(@Nullable ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Input.ofNullable(confidentialInstanceConfig);
+            this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disks(@Nullable Input<List<AttachedDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<AttachedDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<AttachedDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder displayDevice(@Nullable Input<DisplayDeviceArgs> displayDevice) {
+        public Builder displayDevice(@Nullable Output<DisplayDeviceArgs> displayDevice) {
             this.displayDevice = displayDevice;
             return this;
         }
 
         public Builder displayDevice(@Nullable DisplayDeviceArgs displayDevice) {
-            this.displayDevice = Input.ofNullable(displayDevice);
+            this.displayDevice = Output.ofNullable(displayDevice);
             return this;
         }
 
-        public Builder guestAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
         public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
-            this.guestAccelerators = Input.ofNullable(guestAccelerators);
+            this.guestAccelerators = Output.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder keyRevocationActionType(@Nullable Input<InstancePropertiesKeyRevocationActionType> keyRevocationActionType) {
+        public Builder keyRevocationActionType(@Nullable Output<InstancePropertiesKeyRevocationActionType> keyRevocationActionType) {
             this.keyRevocationActionType = keyRevocationActionType;
             return this;
         }
 
         public Builder keyRevocationActionType(@Nullable InstancePropertiesKeyRevocationActionType keyRevocationActionType) {
-            this.keyRevocationActionType = Input.ofNullable(keyRevocationActionType);
+            this.keyRevocationActionType = Output.ofNullable(keyRevocationActionType);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<MetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable MetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder networkPerformanceConfig(@Nullable Input<NetworkPerformanceConfigArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
         public Builder networkPerformanceConfig(@Nullable NetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Input.ofNullable(networkPerformanceConfig);
+            this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
             return this;
         }
 
-        public Builder postKeyRevocationActionType(@Nullable Input<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType) {
+        public Builder postKeyRevocationActionType(@Nullable Output<InstancePropertiesPostKeyRevocationActionType> postKeyRevocationActionType) {
             this.postKeyRevocationActionType = postKeyRevocationActionType;
             return this;
         }
 
         public Builder postKeyRevocationActionType(@Nullable InstancePropertiesPostKeyRevocationActionType postKeyRevocationActionType) {
-            this.postKeyRevocationActionType = Input.ofNullable(postKeyRevocationActionType);
+            this.postKeyRevocationActionType = Output.ofNullable(postKeyRevocationActionType);
             return this;
         }
 
-        public Builder privateIpv6GoogleAccess(@Nullable Input<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Output<InstancePropertiesPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
         public Builder privateIpv6GoogleAccess(@Nullable InstancePropertiesPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder reservationAffinity(@Nullable Input<ReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
         public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Input.ofNullable(reservationAffinity);
+            this.reservationAffinity = Output.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder resourceManagerTags(@Nullable Input<Map<String,String>> resourceManagerTags) {
+        public Builder resourceManagerTags(@Nullable Output<Map<String,String>> resourceManagerTags) {
             this.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
         public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
-            this.resourceManagerTags = Input.ofNullable(resourceManagerTags);
+            this.resourceManagerTags = Output.ofNullable(resourceManagerTags);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder scheduling(@Nullable Input<SchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Input.ofNullable(scheduling);
+            this.scheduling = Output.ofNullable(scheduling);
             return this;
         }
 
-        public Builder secureTags(@Nullable Input<List<String>> secureTags) {
+        public Builder secureTags(@Nullable Output<List<String>> secureTags) {
             this.secureTags = secureTags;
             return this;
         }
 
         public Builder secureTags(@Nullable List<String> secureTags) {
-            this.secureTags = Input.ofNullable(secureTags);
+            this.secureTags = Output.ofNullable(secureTags);
             return this;
         }
 
-        public Builder serviceAccounts(@Nullable Input<List<ServiceAccountArgs>> serviceAccounts) {
+        public Builder serviceAccounts(@Nullable Output<List<ServiceAccountArgs>> serviceAccounts) {
             this.serviceAccounts = serviceAccounts;
             return this;
         }
 
         public Builder serviceAccounts(@Nullable List<ServiceAccountArgs> serviceAccounts) {
-            this.serviceAccounts = Input.ofNullable(serviceAccounts);
+            this.serviceAccounts = Output.ofNullable(serviceAccounts);
             return this;
         }
 
-        public Builder shieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder shieldedVmConfig(@Nullable Input<ShieldedVmConfigArgs> shieldedVmConfig) {
+        public Builder shieldedVmConfig(@Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig) {
             this.shieldedVmConfig = shieldedVmConfig;
             return this;
         }
 
         public Builder shieldedVmConfig(@Nullable ShieldedVmConfigArgs shieldedVmConfig) {
-            this.shieldedVmConfig = Input.ofNullable(shieldedVmConfig);
+            this.shieldedVmConfig = Output.ofNullable(shieldedVmConfig);
             return this;
         }
 
-        public Builder tags(@Nullable Input<TagsArgs> tags) {
+        public Builder tags(@Nullable Output<TagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable TagsArgs tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public InstancePropertiesArgs build() {

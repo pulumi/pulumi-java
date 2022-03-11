@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     public static final EnvgroupAttachmentArgs Empty = new EnvgroupAttachmentArgs();
 
     @InputImport(name="envgroupId", required=true)
-      private final Input<String> envgroupId;
+      private final Output<String> envgroupId;
 
-    public Input<String> getEnvgroupId() {
+    public Output<String> getEnvgroupId() {
         return this.envgroupId;
     }
 
@@ -26,9 +26,9 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="environment", required=true)
-      private final Input<String> environment;
+      private final Output<String> environment;
 
-    public Input<String> getEnvironment() {
+    public Output<String> getEnvironment() {
         return this.environment;
     }
 
@@ -37,24 +37,24 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-      private final Input<String> organizationId;
+      private final Output<String> organizationId;
 
-    public Input<String> getOrganizationId() {
+    public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
     public EnvgroupAttachmentArgs(
-        Input<String> envgroupId,
-        Input<String> environment,
-        @Nullable Input<String> name,
-        Input<String> organizationId) {
+        Output<String> envgroupId,
+        Output<String> environment,
+        @Nullable Output<String> name,
+        Output<String> organizationId) {
         this.envgroupId = Objects.requireNonNull(envgroupId, "expected parameter 'envgroupId' to be non-null");
         this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
         this.name = name;
@@ -62,10 +62,10 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EnvgroupAttachmentArgs() {
-        this.envgroupId = Input.empty();
-        this.environment = Input.empty();
-        this.name = Input.empty();
-        this.organizationId = Input.empty();
+        this.envgroupId = Output.empty();
+        this.environment = Output.empty();
+        this.name = Output.empty();
+        this.organizationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> envgroupId;
-        private Input<String> environment;
-        private @Nullable Input<String> name;
-        private Input<String> organizationId;
+        private Output<String> envgroupId;
+        private Output<String> environment;
+        private @Nullable Output<String> name;
+        private Output<String> organizationId;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder envgroupId(Input<String> envgroupId) {
+        public Builder envgroupId(Output<String> envgroupId) {
             this.envgroupId = Objects.requireNonNull(envgroupId);
             return this;
         }
 
         public Builder envgroupId(String envgroupId) {
-            this.envgroupId = Input.of(Objects.requireNonNull(envgroupId));
+            this.envgroupId = Output.of(Objects.requireNonNull(envgroupId));
             return this;
         }
 
-        public Builder environment(Input<String> environment) {
+        public Builder environment(Output<String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
         public Builder environment(String environment) {
-            this.environment = Input.of(Objects.requireNonNull(environment));
+            this.environment = Output.of(Objects.requireNonNull(environment));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder organizationId(Input<String> organizationId) {
+        public Builder organizationId(Output<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Input.of(Objects.requireNonNull(organizationId));
+            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
             return this;
         }
         public EnvgroupAttachmentArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowedServices")
-      private final @Nullable Input<List<String>> allowedServices;
+      private final @Nullable Output<List<String>> allowedServices;
 
-    public Input<List<String>> getAllowedServices() {
-        return this.allowedServices == null ? Input.empty() : this.allowedServices;
+    public Output<List<String>> getAllowedServices() {
+        return this.allowedServices == null ? Output.empty() : this.allowedServices;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableRestriction")
-      private final @Nullable Input<Boolean> enableRestriction;
+      private final @Nullable Output<Boolean> enableRestriction;
 
-    public Input<Boolean> getEnableRestriction() {
-        return this.enableRestriction == null ? Input.empty() : this.enableRestriction;
+    public Output<Boolean> getEnableRestriction() {
+        return this.enableRestriction == null ? Output.empty() : this.enableRestriction;
     }
 
     public VpcAccessibleServicesArgs(
-        @Nullable Input<List<String>> allowedServices,
-        @Nullable Input<Boolean> enableRestriction) {
+        @Nullable Output<List<String>> allowedServices,
+        @Nullable Output<Boolean> enableRestriction) {
         this.allowedServices = allowedServices;
         this.enableRestriction = enableRestriction;
     }
 
     private VpcAccessibleServicesArgs() {
-        this.allowedServices = Input.empty();
-        this.enableRestriction = Input.empty();
+        this.allowedServices = Output.empty();
+        this.enableRestriction = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedServices;
-        private @Nullable Input<Boolean> enableRestriction;
+        private @Nullable Output<List<String>> allowedServices;
+        private @Nullable Output<Boolean> enableRestriction;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
     	      this.enableRestriction = defaults.enableRestriction;
         }
 
-        public Builder allowedServices(@Nullable Input<List<String>> allowedServices) {
+        public Builder allowedServices(@Nullable Output<List<String>> allowedServices) {
             this.allowedServices = allowedServices;
             return this;
         }
 
         public Builder allowedServices(@Nullable List<String> allowedServices) {
-            this.allowedServices = Input.ofNullable(allowedServices);
+            this.allowedServices = Output.ofNullable(allowedServices);
             return this;
         }
 
-        public Builder enableRestriction(@Nullable Input<Boolean> enableRestriction) {
+        public Builder enableRestriction(@Nullable Output<Boolean> enableRestriction) {
             this.enableRestriction = enableRestriction;
             return this;
         }
 
         public Builder enableRestriction(@Nullable Boolean enableRestriction) {
-            this.enableRestriction = Input.ofNullable(enableRestriction);
+            this.enableRestriction = Output.ofNullable(enableRestriction);
             return this;
         }
         public VpcAccessibleServicesArgs build() {

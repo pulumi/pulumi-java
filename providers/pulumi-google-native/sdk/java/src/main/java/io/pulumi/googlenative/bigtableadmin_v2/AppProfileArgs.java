@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.MultiClusterRoutingUseAnyArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.SingleClusterRoutingArgs;
@@ -17,9 +17,9 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppProfileArgs Empty = new AppProfileArgs();
 
     @InputImport(name="appProfileId", required=true)
-      private final Input<String> appProfileId;
+      private final Output<String> appProfileId;
 
-    public Input<String> getAppProfileId() {
+    public Output<String> getAppProfileId() {
         return this.appProfileId;
     }
 
@@ -28,10 +28,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -39,23 +39,23 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="ignoreWarnings")
-      private final @Nullable Input<String> ignoreWarnings;
+      private final @Nullable Output<String> ignoreWarnings;
 
-    public Input<String> getIgnoreWarnings() {
-        return this.ignoreWarnings == null ? Input.empty() : this.ignoreWarnings;
+    public Output<String> getIgnoreWarnings() {
+        return this.ignoreWarnings == null ? Output.empty() : this.ignoreWarnings;
     }
 
     @InputImport(name="instanceId", required=true)
-      private final Input<String> instanceId;
+      private final Output<String> instanceId;
 
-    public Input<String> getInstanceId() {
+    public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
@@ -64,10 +64,10 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiClusterRoutingUseAny")
-      private final @Nullable Input<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
+      private final @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
 
-    public Input<MultiClusterRoutingUseAnyArgs> getMultiClusterRoutingUseAny() {
-        return this.multiClusterRoutingUseAny == null ? Input.empty() : this.multiClusterRoutingUseAny;
+    public Output<MultiClusterRoutingUseAnyArgs> getMultiClusterRoutingUseAny() {
+        return this.multiClusterRoutingUseAny == null ? Output.empty() : this.multiClusterRoutingUseAny;
     }
 
     /**
@@ -75,17 +75,17 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -93,22 +93,22 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="singleClusterRouting")
-      private final @Nullable Input<SingleClusterRoutingArgs> singleClusterRouting;
+      private final @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;
 
-    public Input<SingleClusterRoutingArgs> getSingleClusterRouting() {
-        return this.singleClusterRouting == null ? Input.empty() : this.singleClusterRouting;
+    public Output<SingleClusterRoutingArgs> getSingleClusterRouting() {
+        return this.singleClusterRouting == null ? Output.empty() : this.singleClusterRouting;
     }
 
     public AppProfileArgs(
-        Input<String> appProfileId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> ignoreWarnings,
-        Input<String> instanceId,
-        @Nullable Input<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<SingleClusterRoutingArgs> singleClusterRouting) {
+        Output<String> appProfileId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> ignoreWarnings,
+        Output<String> instanceId,
+        @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting) {
         this.appProfileId = Objects.requireNonNull(appProfileId, "expected parameter 'appProfileId' to be non-null");
         this.description = description;
         this.etag = etag;
@@ -121,15 +121,15 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppProfileArgs() {
-        this.appProfileId = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.ignoreWarnings = Input.empty();
-        this.instanceId = Input.empty();
-        this.multiClusterRoutingUseAny = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.singleClusterRouting = Input.empty();
+        this.appProfileId = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.ignoreWarnings = Output.empty();
+        this.instanceId = Output.empty();
+        this.multiClusterRoutingUseAny = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.singleClusterRouting = Output.empty();
     }
 
     public static Builder builder() {
@@ -141,15 +141,15 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appProfileId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> ignoreWarnings;
-        private Input<String> instanceId;
-        private @Nullable Input<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SingleClusterRoutingArgs> singleClusterRouting;
+        private Output<String> appProfileId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> ignoreWarnings;
+        private Output<String> instanceId;
+        private @Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SingleClusterRoutingArgs> singleClusterRouting;
 
         public Builder() {
     	      // Empty
@@ -168,93 +168,93 @@ public final class AppProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.singleClusterRouting = defaults.singleClusterRouting;
         }
 
-        public Builder appProfileId(Input<String> appProfileId) {
+        public Builder appProfileId(Output<String> appProfileId) {
             this.appProfileId = Objects.requireNonNull(appProfileId);
             return this;
         }
 
         public Builder appProfileId(String appProfileId) {
-            this.appProfileId = Input.of(Objects.requireNonNull(appProfileId));
+            this.appProfileId = Output.of(Objects.requireNonNull(appProfileId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder ignoreWarnings(@Nullable Input<String> ignoreWarnings) {
+        public Builder ignoreWarnings(@Nullable Output<String> ignoreWarnings) {
             this.ignoreWarnings = ignoreWarnings;
             return this;
         }
 
         public Builder ignoreWarnings(@Nullable String ignoreWarnings) {
-            this.ignoreWarnings = Input.ofNullable(ignoreWarnings);
+            this.ignoreWarnings = Output.ofNullable(ignoreWarnings);
             return this;
         }
 
-        public Builder instanceId(Input<String> instanceId) {
+        public Builder instanceId(Output<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Input.of(Objects.requireNonNull(instanceId));
+            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder multiClusterRoutingUseAny(@Nullable Input<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny) {
+        public Builder multiClusterRoutingUseAny(@Nullable Output<MultiClusterRoutingUseAnyArgs> multiClusterRoutingUseAny) {
             this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
             return this;
         }
 
         public Builder multiClusterRoutingUseAny(@Nullable MultiClusterRoutingUseAnyArgs multiClusterRoutingUseAny) {
-            this.multiClusterRoutingUseAny = Input.ofNullable(multiClusterRoutingUseAny);
+            this.multiClusterRoutingUseAny = Output.ofNullable(multiClusterRoutingUseAny);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder singleClusterRouting(@Nullable Input<SingleClusterRoutingArgs> singleClusterRouting) {
+        public Builder singleClusterRouting(@Nullable Output<SingleClusterRoutingArgs> singleClusterRouting) {
             this.singleClusterRouting = singleClusterRouting;
             return this;
         }
 
         public Builder singleClusterRouting(@Nullable SingleClusterRoutingArgs singleClusterRouting) {
-            this.singleClusterRouting = Input.ofNullable(singleClusterRouting);
+            this.singleClusterRouting = Output.ofNullable(singleClusterRouting);
             return this;
         }
         public AppProfileArgs build() {

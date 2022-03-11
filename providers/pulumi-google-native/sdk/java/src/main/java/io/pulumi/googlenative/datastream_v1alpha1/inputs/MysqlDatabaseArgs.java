@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlTableArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-      private final @Nullable Input<String> databaseName;
+      private final @Nullable Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
-        return this.databaseName == null ? Input.empty() : this.databaseName;
+    public Output<String> getDatabaseName() {
+        return this.databaseName == null ? Output.empty() : this.databaseName;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mysqlTables")
-      private final @Nullable Input<List<MysqlTableArgs>> mysqlTables;
+      private final @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
-    public Input<List<MysqlTableArgs>> getMysqlTables() {
-        return this.mysqlTables == null ? Input.empty() : this.mysqlTables;
+    public Output<List<MysqlTableArgs>> getMysqlTables() {
+        return this.mysqlTables == null ? Output.empty() : this.mysqlTables;
     }
 
     public MysqlDatabaseArgs(
-        @Nullable Input<String> databaseName,
-        @Nullable Input<List<MysqlTableArgs>> mysqlTables) {
+        @Nullable Output<String> databaseName,
+        @Nullable Output<List<MysqlTableArgs>> mysqlTables) {
         this.databaseName = databaseName;
         this.mysqlTables = mysqlTables;
     }
 
     private MysqlDatabaseArgs() {
-        this.databaseName = Input.empty();
-        this.mysqlTables = Input.empty();
+        this.databaseName = Output.empty();
+        this.mysqlTables = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseName;
-        private @Nullable Input<List<MysqlTableArgs>> mysqlTables;
+        private @Nullable Output<String> databaseName;
+        private @Nullable Output<List<MysqlTableArgs>> mysqlTables;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class MysqlDatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mysqlTables = defaults.mysqlTables;
         }
 
-        public Builder databaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Output<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Input.ofNullable(databaseName);
+            this.databaseName = Output.ofNullable(databaseName);
             return this;
         }
 
-        public Builder mysqlTables(@Nullable Input<List<MysqlTableArgs>> mysqlTables) {
+        public Builder mysqlTables(@Nullable Output<List<MysqlTableArgs>> mysqlTables) {
             this.mysqlTables = mysqlTables;
             return this;
         }
 
         public Builder mysqlTables(@Nullable List<MysqlTableArgs> mysqlTables) {
-            this.mysqlTables = Input.ofNullable(mysqlTables);
+            this.mysqlTables = Output.ofNullable(mysqlTables);
             return this;
         }
         public MysqlDatabaseArgs build() {

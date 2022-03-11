@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.BackupRetentionSettingsArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupRetentionSettings")
-      private final @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings;
+      private final @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings;
 
-    public Input<BackupRetentionSettingsArgs> getBackupRetentionSettings() {
-        return this.backupRetentionSettings == null ? Input.empty() : this.backupRetentionSettings;
+    public Output<BackupRetentionSettingsArgs> getBackupRetentionSettings() {
+        return this.backupRetentionSettings == null ? Output.empty() : this.backupRetentionSettings;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="binaryLogEnabled")
-      private final @Nullable Input<Boolean> binaryLogEnabled;
+      private final @Nullable Output<Boolean> binaryLogEnabled;
 
-    public Input<Boolean> getBinaryLogEnabled() {
-        return this.binaryLogEnabled == null ? Input.empty() : this.binaryLogEnabled;
+    public Output<Boolean> getBinaryLogEnabled() {
+        return this.binaryLogEnabled == null ? Output.empty() : this.binaryLogEnabled;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Input<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="replicationLogArchivingEnabled")
-      private final @Nullable Input<Boolean> replicationLogArchivingEnabled;
+      private final @Nullable Output<Boolean> replicationLogArchivingEnabled;
 
-    public Input<Boolean> getReplicationLogArchivingEnabled() {
-        return this.replicationLogArchivingEnabled == null ? Input.empty() : this.replicationLogArchivingEnabled;
+    public Output<Boolean> getReplicationLogArchivingEnabled() {
+        return this.replicationLogArchivingEnabled == null ? Output.empty() : this.replicationLogArchivingEnabled;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionLogRetentionDays")
-      private final @Nullable Input<Integer> transactionLogRetentionDays;
+      private final @Nullable Output<Integer> transactionLogRetentionDays;
 
-    public Input<Integer> getTransactionLogRetentionDays() {
-        return this.transactionLogRetentionDays == null ? Input.empty() : this.transactionLogRetentionDays;
+    public Output<Integer> getTransactionLogRetentionDays() {
+        return this.transactionLogRetentionDays == null ? Output.empty() : this.transactionLogRetentionDays;
     }
 
     public BackupConfigurationArgs(
-        @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings,
-        @Nullable Input<Boolean> binaryLogEnabled,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<Boolean> pointInTimeRecoveryEnabled,
-        @Nullable Input<Boolean> replicationLogArchivingEnabled,
-        @Nullable Input<String> startTime,
-        @Nullable Input<Integer> transactionLogRetentionDays) {
+        @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings,
+        @Nullable Output<Boolean> binaryLogEnabled,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<Boolean> pointInTimeRecoveryEnabled,
+        @Nullable Output<Boolean> replicationLogArchivingEnabled,
+        @Nullable Output<String> startTime,
+        @Nullable Output<Integer> transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;
@@ -142,15 +142,15 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private BackupConfigurationArgs() {
-        this.backupRetentionSettings = Input.empty();
-        this.binaryLogEnabled = Input.empty();
-        this.enabled = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.pointInTimeRecoveryEnabled = Input.empty();
-        this.replicationLogArchivingEnabled = Input.empty();
-        this.startTime = Input.empty();
-        this.transactionLogRetentionDays = Input.empty();
+        this.backupRetentionSettings = Output.empty();
+        this.binaryLogEnabled = Output.empty();
+        this.enabled = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.pointInTimeRecoveryEnabled = Output.empty();
+        this.replicationLogArchivingEnabled = Output.empty();
+        this.startTime = Output.empty();
+        this.transactionLogRetentionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings;
-        private @Nullable Input<Boolean> binaryLogEnabled;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
-        private @Nullable Input<Boolean> replicationLogArchivingEnabled;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<Integer> transactionLogRetentionDays;
+        private @Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings;
+        private @Nullable Output<Boolean> binaryLogEnabled;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
+        private @Nullable Output<Boolean> replicationLogArchivingEnabled;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<Integer> transactionLogRetentionDays;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
         }
 
-        public Builder backupRetentionSettings(@Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings) {
+        public Builder backupRetentionSettings(@Nullable Output<BackupRetentionSettingsArgs> backupRetentionSettings) {
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
         public Builder backupRetentionSettings(@Nullable BackupRetentionSettingsArgs backupRetentionSettings) {
-            this.backupRetentionSettings = Input.ofNullable(backupRetentionSettings);
+            this.backupRetentionSettings = Output.ofNullable(backupRetentionSettings);
             return this;
         }
 
-        public Builder binaryLogEnabled(@Nullable Input<Boolean> binaryLogEnabled) {
+        public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
         public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
-            this.binaryLogEnabled = Input.ofNullable(binaryLogEnabled);
+            this.binaryLogEnabled = Output.ofNullable(binaryLogEnabled);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
 
-        public Builder replicationLogArchivingEnabled(@Nullable Input<Boolean> replicationLogArchivingEnabled) {
+        public Builder replicationLogArchivingEnabled(@Nullable Output<Boolean> replicationLogArchivingEnabled) {
             this.replicationLogArchivingEnabled = replicationLogArchivingEnabled;
             return this;
         }
 
         public Builder replicationLogArchivingEnabled(@Nullable Boolean replicationLogArchivingEnabled) {
-            this.replicationLogArchivingEnabled = Input.ofNullable(replicationLogArchivingEnabled);
+            this.replicationLogArchivingEnabled = Output.ofNullable(replicationLogArchivingEnabled);
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder transactionLogRetentionDays(@Nullable Input<Integer> transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
 
         public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
-            this.transactionLogRetentionDays = Input.ofNullable(transactionLogRetentionDays);
+            this.transactionLogRetentionDays = Output.ofNullable(transactionLogRetentionDays);
             return this;
         }
         public BackupConfigurationArgs build() {

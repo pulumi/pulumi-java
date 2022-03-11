@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,22 +34,22 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     public InterconnectMacsecPreSharedKeyArgs(
-        Input<String> name,
-        @Nullable Input<String> startTime) {
+        Output<String> name,
+        @Nullable Output<String> startTime) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.startTime = startTime;
     }
 
     private InterconnectMacsecPreSharedKeyArgs() {
-        this.name = Input.empty();
-        this.startTime = Input.empty();
+        this.name = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> startTime;
+        private Output<String> name;
+        private @Nullable Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
         public InterconnectMacsecPreSharedKeyArgs build() {

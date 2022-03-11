@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,17 +30,17 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -48,33 +48,33 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentPolicyTag")
-      private final @Nullable Input<String> parentPolicyTag;
+      private final @Nullable Output<String> parentPolicyTag;
 
-    public Input<String> getParentPolicyTag() {
-        return this.parentPolicyTag == null ? Input.empty() : this.parentPolicyTag;
+    public Output<String> getParentPolicyTag() {
+        return this.parentPolicyTag == null ? Output.empty() : this.parentPolicyTag;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="taxonomyId", required=true)
-      private final Input<String> taxonomyId;
+      private final Output<String> taxonomyId;
 
-    public Input<String> getTaxonomyId() {
+    public Output<String> getTaxonomyId() {
         return this.taxonomyId;
     }
 
     public PolicyTagArgs(
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> parentPolicyTag,
-        @Nullable Input<String> project,
-        Input<String> taxonomyId) {
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> parentPolicyTag,
+        @Nullable Output<String> project,
+        Output<String> taxonomyId) {
         this.description = description;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.location = location;
@@ -84,12 +84,12 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyTagArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.location = Input.empty();
-        this.parentPolicyTag = Input.empty();
-        this.project = Input.empty();
-        this.taxonomyId = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.location = Output.empty();
+        this.parentPolicyTag = Output.empty();
+        this.project = Output.empty();
+        this.taxonomyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,12 +101,12 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> parentPolicyTag;
-        private @Nullable Input<String> project;
-        private Input<String> taxonomyId;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> parentPolicyTag;
+        private @Nullable Output<String> project;
+        private Output<String> taxonomyId;
 
         public Builder() {
     	      // Empty
@@ -122,63 +122,63 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taxonomyId = defaults.taxonomyId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder parentPolicyTag(@Nullable Input<String> parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
 
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
-            this.parentPolicyTag = Input.ofNullable(parentPolicyTag);
+            this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder taxonomyId(Input<String> taxonomyId) {
+        public Builder taxonomyId(Output<String> taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
         }
 
         public Builder taxonomyId(String taxonomyId) {
-            this.taxonomyId = Input.of(Objects.requireNonNull(taxonomyId));
+            this.taxonomyId = Output.of(Objects.requireNonNull(taxonomyId));
             return this;
         }
         public PolicyTagArgs build() {

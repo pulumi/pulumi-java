@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<String>> values;
+      private final Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
+    public Output<List<String>> getValues() {
         return this.values;
     }
 
-    public ValueValidationArgs(Input<List<String>> values) {
+    public ValueValidationArgs(Output<List<String>> values) {
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private ValueValidationArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<List<String>> values;
+        private Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.values = defaults.values;
         }
 
-        public Builder values(Input<List<String>> values) {
+        public Builder values(Output<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<String> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public ValueValidationArgs build() {

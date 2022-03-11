@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-      private final Input<String> phoneNumber;
+      private final Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
+    public Output<String> getPhoneNumber() {
         return this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(Input<String> phoneNumber) {
+    public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs(Output<String> phoneNumber) {
         this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs() {
-        this.phoneNumber = Input.empty();
+        this.phoneNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     }
 
     public static final class Builder {
-        private Input<String> phoneNumber;
+        private Output<String> phoneNumber;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder phoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Output<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
+            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
         public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.enums.GoogleDomainsDnsDsState;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dsState", required=true)
-      private final Input<GoogleDomainsDnsDsState> dsState;
+      private final Output<GoogleDomainsDnsDsState> dsState;
 
-    public Input<GoogleDomainsDnsDsState> getDsState() {
+    public Output<GoogleDomainsDnsDsState> getDsState() {
         return this.dsState;
     }
 
-    public GoogleDomainsDnsArgs(Input<GoogleDomainsDnsDsState> dsState) {
+    public GoogleDomainsDnsArgs(Output<GoogleDomainsDnsDsState> dsState) {
         this.dsState = Objects.requireNonNull(dsState, "expected parameter 'dsState' to be non-null");
     }
 
     private GoogleDomainsDnsArgs() {
-        this.dsState = Input.empty();
+        this.dsState = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<GoogleDomainsDnsDsState> dsState;
+        private Output<GoogleDomainsDnsDsState> dsState;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GoogleDomainsDnsArgs extends io.pulumi.resources.ResourceArgs
     	      this.dsState = defaults.dsState;
         }
 
-        public Builder dsState(Input<GoogleDomainsDnsDsState> dsState) {
+        public Builder dsState(Output<GoogleDomainsDnsDsState> dsState) {
             this.dsState = Objects.requireNonNull(dsState);
             return this;
         }
 
         public Builder dsState(GoogleDomainsDnsDsState dsState) {
-            this.dsState = Input.of(Objects.requireNonNull(dsState));
+            this.dsState = Output.of(Objects.requireNonNull(dsState));
             return this;
         }
         public GoogleDomainsDnsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.WindowsUpdateSettingsClassificationsItem;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="classifications")
-      private final @Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications;
+      private final @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
 
-    public Input<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
-        return this.classifications == null ? Input.empty() : this.classifications;
+    public Output<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
+        return this.classifications == null ? Output.empty() : this.classifications;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="excludes")
-      private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Output<List<String>> excludes;
 
-    public Input<List<String>> getExcludes() {
-        return this.excludes == null ? Input.empty() : this.excludes;
+    public Output<List<String>> getExcludes() {
+        return this.excludes == null ? Output.empty() : this.excludes;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="exclusivePatches")
-      private final @Nullable Input<List<String>> exclusivePatches;
+      private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Input<List<String>> getExclusivePatches() {
-        return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
+    public Output<List<String>> getExclusivePatches() {
+        return this.exclusivePatches == null ? Output.empty() : this.exclusivePatches;
     }
 
     public WindowsUpdateSettingsArgs(
-        @Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications,
-        @Nullable Input<List<String>> excludes,
-        @Nullable Input<List<String>> exclusivePatches) {
+        @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications,
+        @Nullable Output<List<String>> excludes,
+        @Nullable Output<List<String>> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;
     }
 
     private WindowsUpdateSettingsArgs() {
-        this.classifications = Input.empty();
-        this.excludes = Input.empty();
-        this.exclusivePatches = Input.empty();
+        this.classifications = Output.empty();
+        this.excludes = Output.empty();
+        this.exclusivePatches = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications;
-        private @Nullable Input<List<String>> excludes;
-        private @Nullable Input<List<String>> exclusivePatches;
+        private @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
+        private @Nullable Output<List<String>> excludes;
+        private @Nullable Output<List<String>> exclusivePatches;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     	      this.exclusivePatches = defaults.exclusivePatches;
         }
 
-        public Builder classifications(@Nullable Input<List<WindowsUpdateSettingsClassificationsItem>> classifications) {
+        public Builder classifications(@Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications) {
             this.classifications = classifications;
             return this;
         }
 
         public Builder classifications(@Nullable List<WindowsUpdateSettingsClassificationsItem> classifications) {
-            this.classifications = Input.ofNullable(classifications);
+            this.classifications = Output.ofNullable(classifications);
             return this;
         }
 
-        public Builder excludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Output<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Input.ofNullable(excludes);
+            this.excludes = Output.ofNullable(excludes);
             return this;
         }
 
-        public Builder exclusivePatches(@Nullable Input<List<String>> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable Output<List<String>> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
 
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Input.ofNullable(exclusivePatches);
+            this.exclusivePatches = Output.ofNullable(exclusivePatches);
             return this;
         }
         public WindowsUpdateSettingsArgs build() {

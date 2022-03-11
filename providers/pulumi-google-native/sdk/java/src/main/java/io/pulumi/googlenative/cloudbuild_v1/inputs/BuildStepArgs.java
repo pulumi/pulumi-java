@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.VolumeArgs;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dir")
-      private final @Nullable Input<String> dir;
+      private final @Nullable Output<String> dir;
 
-    public Input<String> getDir() {
-        return this.dir == null ? Input.empty() : this.dir;
+    public Output<String> getDir() {
+        return this.dir == null ? Output.empty() : this.dir;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entrypoint")
-      private final @Nullable Input<String> entrypoint;
+      private final @Nullable Output<String> entrypoint;
 
-    public Input<String> getEntrypoint() {
-        return this.entrypoint == null ? Input.empty() : this.entrypoint;
+    public Output<String> getEntrypoint() {
+        return this.entrypoint == null ? Output.empty() : this.entrypoint;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-      private final @Nullable Input<List<String>> env;
+      private final @Nullable Output<List<String>> env;
 
-    public Input<List<String>> getEnv() {
-        return this.env == null ? Input.empty() : this.env;
+    public Output<List<String>> getEnv() {
+        return this.env == null ? Output.empty() : this.env;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -91,10 +91,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretEnv")
-      private final @Nullable Input<List<String>> secretEnv;
+      private final @Nullable Output<List<String>> secretEnv;
 
-    public Input<List<String>> getSecretEnv() {
-        return this.secretEnv == null ? Input.empty() : this.secretEnv;
+    public Output<List<String>> getSecretEnv() {
+        return this.secretEnv == null ? Output.empty() : this.secretEnv;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     /**
@@ -135,24 +135,24 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitFor")
-      private final @Nullable Input<List<String>> waitFor;
+      private final @Nullable Output<List<String>> waitFor;
 
-    public Input<List<String>> getWaitFor() {
-        return this.waitFor == null ? Input.empty() : this.waitFor;
+    public Output<List<String>> getWaitFor() {
+        return this.waitFor == null ? Output.empty() : this.waitFor;
     }
 
     public BuildStepArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<String> dir,
-        @Nullable Input<String> entrypoint,
-        @Nullable Input<List<String>> env,
-        @Nullable Input<String> id,
-        Input<String> name,
-        @Nullable Input<String> script,
-        @Nullable Input<List<String>> secretEnv,
-        @Nullable Input<String> timeout,
-        @Nullable Input<List<VolumeArgs>> volumes,
-        @Nullable Input<List<String>> waitFor) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<String> dir,
+        @Nullable Output<String> entrypoint,
+        @Nullable Output<List<String>> env,
+        @Nullable Output<String> id,
+        Output<String> name,
+        @Nullable Output<String> script,
+        @Nullable Output<List<String>> secretEnv,
+        @Nullable Output<String> timeout,
+        @Nullable Output<List<VolumeArgs>> volumes,
+        @Nullable Output<List<String>> waitFor) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;
@@ -167,17 +167,17 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildStepArgs() {
-        this.args = Input.empty();
-        this.dir = Input.empty();
-        this.entrypoint = Input.empty();
-        this.env = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.script = Input.empty();
-        this.secretEnv = Input.empty();
-        this.timeout = Input.empty();
-        this.volumes = Input.empty();
-        this.waitFor = Input.empty();
+        this.args = Output.empty();
+        this.dir = Output.empty();
+        this.entrypoint = Output.empty();
+        this.env = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.script = Output.empty();
+        this.secretEnv = Output.empty();
+        this.timeout = Output.empty();
+        this.volumes = Output.empty();
+        this.waitFor = Output.empty();
     }
 
     public static Builder builder() {
@@ -189,17 +189,17 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<String> dir;
-        private @Nullable Input<String> entrypoint;
-        private @Nullable Input<List<String>> env;
-        private @Nullable Input<String> id;
-        private Input<String> name;
-        private @Nullable Input<String> script;
-        private @Nullable Input<List<String>> secretEnv;
-        private @Nullable Input<String> timeout;
-        private @Nullable Input<List<VolumeArgs>> volumes;
-        private @Nullable Input<List<String>> waitFor;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<String> dir;
+        private @Nullable Output<String> entrypoint;
+        private @Nullable Output<List<String>> env;
+        private @Nullable Output<String> id;
+        private Output<String> name;
+        private @Nullable Output<String> script;
+        private @Nullable Output<List<String>> secretEnv;
+        private @Nullable Output<String> timeout;
+        private @Nullable Output<List<VolumeArgs>> volumes;
+        private @Nullable Output<List<String>> waitFor;
 
         public Builder() {
     	      // Empty
@@ -220,113 +220,113 @@ public final class BuildStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitFor = defaults.waitFor;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder dir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Output<String> dir) {
             this.dir = dir;
             return this;
         }
 
         public Builder dir(@Nullable String dir) {
-            this.dir = Input.ofNullable(dir);
+            this.dir = Output.ofNullable(dir);
             return this;
         }
 
-        public Builder entrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Output<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Input.ofNullable(entrypoint);
+            this.entrypoint = Output.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder env(@Nullable Input<List<String>> env) {
+        public Builder env(@Nullable Output<List<String>> env) {
             this.env = env;
             return this;
         }
 
         public Builder env(@Nullable List<String> env) {
-            this.env = Input.ofNullable(env);
+            this.env = Output.ofNullable(env);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
 
-        public Builder secretEnv(@Nullable Input<List<String>> secretEnv) {
+        public Builder secretEnv(@Nullable Output<List<String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
 
         public Builder secretEnv(@Nullable List<String> secretEnv) {
-            this.secretEnv = Input.ofNullable(secretEnv);
+            this.secretEnv = Output.ofNullable(secretEnv);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
 
-        public Builder waitFor(@Nullable Input<List<String>> waitFor) {
+        public Builder waitFor(@Nullable Output<List<String>> waitFor) {
             this.waitFor = waitFor;
             return this;
         }
 
         public Builder waitFor(@Nullable List<String> waitFor) {
-            this.waitFor = Input.ofNullable(waitFor);
+            this.waitFor = Output.ofNullable(waitFor);
             return this;
         }
         public BuildStepArgs build() {

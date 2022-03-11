@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-      private final Input<String> humanReadableName;
+      private final Output<String> humanReadableName;
 
-    public Input<String> getHumanReadableName() {
+    public Output<String> getHumanReadableName() {
         return this.humanReadableName;
     }
 
-    public DSSEHintArgs(Input<String> humanReadableName) {
+    public DSSEHintArgs(Output<String> humanReadableName) {
         this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
     }
 
     private DSSEHintArgs() {
-        this.humanReadableName = Input.empty();
+        this.humanReadableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> humanReadableName;
+        private Output<String> humanReadableName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder humanReadableName(Input<String> humanReadableName) {
+        public Builder humanReadableName(Output<String> humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
 
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
+            this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
             return this;
         }
         public DSSEHintArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="privateConnection", required=true)
-      private final Input<String> privateConnection;
+      private final Output<String> privateConnection;
 
-    public Input<String> getPrivateConnection() {
+    public Output<String> getPrivateConnection() {
         return this.privateConnection;
     }
 
-    public PrivateConnectivityArgs(Input<String> privateConnection) {
+    public PrivateConnectivityArgs(Output<String> privateConnection) {
         this.privateConnection = Objects.requireNonNull(privateConnection, "expected parameter 'privateConnection' to be non-null");
     }
 
     private PrivateConnectivityArgs() {
-        this.privateConnection = Input.empty();
+        this.privateConnection = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> privateConnection;
+        private Output<String> privateConnection;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     	      this.privateConnection = defaults.privateConnection;
         }
 
-        public Builder privateConnection(Input<String> privateConnection) {
+        public Builder privateConnection(Output<String> privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }
 
         public Builder privateConnection(String privateConnection) {
-            this.privateConnection = Input.of(Objects.requireNonNull(privateConnection));
+            this.privateConnection = Output.of(Objects.requireNonNull(privateConnection));
             return this;
         }
         public PrivateConnectivityArgs build() {

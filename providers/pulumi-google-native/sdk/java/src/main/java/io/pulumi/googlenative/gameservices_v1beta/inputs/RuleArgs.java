@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.enums.RuleAction;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.ConditionArgs;
@@ -27,10 +27,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<RuleAction> action;
+      private final @Nullable Output<RuleAction> action;
 
-    public Input<RuleAction> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<RuleAction> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-      private final @Nullable Input<List<ConditionArgs>> conditions;
+      private final @Nullable Output<List<ConditionArgs>> conditions;
 
-    public Input<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Input.empty() : this.conditions;
+    public Output<List<ConditionArgs>> getConditions() {
+        return this.conditions == null ? Output.empty() : this.conditions;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="in")
-      private final @Nullable Input<List<String>> in;
+      private final @Nullable Output<List<String>> in;
 
-    public Input<List<String>> getIn() {
-        return this.in == null ? Input.empty() : this.in;
+    public Output<List<String>> getIn() {
+        return this.in == null ? Output.empty() : this.in;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<List<LogConfigArgs>> logConfig;
+      private final @Nullable Output<List<LogConfigArgs>> logConfig;
 
-    public Input<List<LogConfigArgs>> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<List<LogConfigArgs>> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notIn")
-      private final @Nullable Input<List<String>> notIn;
+      private final @Nullable Output<List<String>> notIn;
 
-    public Input<List<String>> getNotIn() {
-        return this.notIn == null ? Input.empty() : this.notIn;
+    public Output<List<String>> getNotIn() {
+        return this.notIn == null ? Output.empty() : this.notIn;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<String>> permissions;
+      private final @Nullable Output<List<String>> permissions;
 
-    public Input<List<String>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<String>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     public RuleArgs(
-        @Nullable Input<RuleAction> action,
-        @Nullable Input<List<ConditionArgs>> conditions,
-        @Nullable Input<String> description,
-        @Nullable Input<List<String>> in,
-        @Nullable Input<List<LogConfigArgs>> logConfig,
-        @Nullable Input<List<String>> notIn,
-        @Nullable Input<List<String>> permissions) {
+        @Nullable Output<RuleAction> action,
+        @Nullable Output<List<ConditionArgs>> conditions,
+        @Nullable Output<String> description,
+        @Nullable Output<List<String>> in,
+        @Nullable Output<List<LogConfigArgs>> logConfig,
+        @Nullable Output<List<String>> notIn,
+        @Nullable Output<List<String>> permissions) {
         this.action = action;
         this.conditions = conditions;
         this.description = description;
@@ -117,13 +117,13 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.action = Input.empty();
-        this.conditions = Input.empty();
-        this.description = Input.empty();
-        this.in = Input.empty();
-        this.logConfig = Input.empty();
-        this.notIn = Input.empty();
-        this.permissions = Input.empty();
+        this.action = Output.empty();
+        this.conditions = Output.empty();
+        this.description = Output.empty();
+        this.in = Output.empty();
+        this.logConfig = Output.empty();
+        this.notIn = Output.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RuleAction> action;
-        private @Nullable Input<List<ConditionArgs>> conditions;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<String>> in;
-        private @Nullable Input<List<LogConfigArgs>> logConfig;
-        private @Nullable Input<List<String>> notIn;
-        private @Nullable Input<List<String>> permissions;
+        private @Nullable Output<RuleAction> action;
+        private @Nullable Output<List<ConditionArgs>> conditions;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<String>> in;
+        private @Nullable Output<List<LogConfigArgs>> logConfig;
+        private @Nullable Output<List<String>> notIn;
+        private @Nullable Output<List<String>> permissions;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder action(@Nullable Input<RuleAction> action) {
+        public Builder action(@Nullable Output<RuleAction> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable RuleAction action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Output<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Input.ofNullable(conditions);
+            this.conditions = Output.ofNullable(conditions);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder in(@Nullable Input<List<String>> in) {
+        public Builder in(@Nullable Output<List<String>> in) {
             this.in = in;
             return this;
         }
 
         public Builder in(@Nullable List<String> in) {
-            this.in = Input.ofNullable(in);
+            this.in = Output.ofNullable(in);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<List<LogConfigArgs>> logConfig) {
+        public Builder logConfig(@Nullable Output<List<LogConfigArgs>> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable List<LogConfigArgs> logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder notIn(@Nullable Input<List<String>> notIn) {
+        public Builder notIn(@Nullable Output<List<String>> notIn) {
             this.notIn = notIn;
             return this;
         }
 
         public Builder notIn(@Nullable List<String> notIn) {
-            this.notIn = Input.ofNullable(notIn);
+            this.notIn = Output.ofNullable(notIn);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Output<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
         public RuleArgs build() {

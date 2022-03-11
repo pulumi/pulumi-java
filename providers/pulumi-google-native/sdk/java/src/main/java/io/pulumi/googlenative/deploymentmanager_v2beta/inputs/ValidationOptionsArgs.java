@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsSchemaValidation;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsUndeclaredProperties;
@@ -24,10 +24,10 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schemaValidation")
-      private final @Nullable Input<ValidationOptionsSchemaValidation> schemaValidation;
+      private final @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
 
-    public Input<ValidationOptionsSchemaValidation> getSchemaValidation() {
-        return this.schemaValidation == null ? Input.empty() : this.schemaValidation;
+    public Output<ValidationOptionsSchemaValidation> getSchemaValidation() {
+        return this.schemaValidation == null ? Output.empty() : this.schemaValidation;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="undeclaredProperties")
-      private final @Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties;
+      private final @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
-    public Input<ValidationOptionsUndeclaredProperties> getUndeclaredProperties() {
-        return this.undeclaredProperties == null ? Input.empty() : this.undeclaredProperties;
+    public Output<ValidationOptionsUndeclaredProperties> getUndeclaredProperties() {
+        return this.undeclaredProperties == null ? Output.empty() : this.undeclaredProperties;
     }
 
     public ValidationOptionsArgs(
-        @Nullable Input<ValidationOptionsSchemaValidation> schemaValidation,
-        @Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
+        @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation,
+        @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
         this.schemaValidation = schemaValidation;
         this.undeclaredProperties = undeclaredProperties;
     }
 
     private ValidationOptionsArgs() {
-        this.schemaValidation = Input.empty();
-        this.undeclaredProperties = Input.empty();
+        this.schemaValidation = Output.empty();
+        this.undeclaredProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<ValidationOptionsSchemaValidation> schemaValidation;
-        private @Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties;
+        private @Nullable Output<ValidationOptionsSchemaValidation> schemaValidation;
+        private @Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.undeclaredProperties = defaults.undeclaredProperties;
         }
 
-        public Builder schemaValidation(@Nullable Input<ValidationOptionsSchemaValidation> schemaValidation) {
+        public Builder schemaValidation(@Nullable Output<ValidationOptionsSchemaValidation> schemaValidation) {
             this.schemaValidation = schemaValidation;
             return this;
         }
 
         public Builder schemaValidation(@Nullable ValidationOptionsSchemaValidation schemaValidation) {
-            this.schemaValidation = Input.ofNullable(schemaValidation);
+            this.schemaValidation = Output.ofNullable(schemaValidation);
             return this;
         }
 
-        public Builder undeclaredProperties(@Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
+        public Builder undeclaredProperties(@Nullable Output<ValidationOptionsUndeclaredProperties> undeclaredProperties) {
             this.undeclaredProperties = undeclaredProperties;
             return this;
         }
 
         public Builder undeclaredProperties(@Nullable ValidationOptionsUndeclaredProperties undeclaredProperties) {
-            this.undeclaredProperties = Input.ofNullable(undeclaredProperties);
+            this.undeclaredProperties = Output.ofNullable(undeclaredProperties);
             return this;
         }
         public ValidationOptionsArgs build() {

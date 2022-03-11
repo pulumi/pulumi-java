@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.UserDefinedFunctionResourceArgs;
 import java.lang.Boolean;
@@ -22,10 +22,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<String> query;
+      private final @Nullable Output<String> query;
 
-    public Input<String> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<String> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useExplicitColumnNames")
-      private final @Nullable Input<Boolean> useExplicitColumnNames;
+      private final @Nullable Output<Boolean> useExplicitColumnNames;
 
-    public Input<Boolean> getUseExplicitColumnNames() {
-        return this.useExplicitColumnNames == null ? Input.empty() : this.useExplicitColumnNames;
+    public Output<Boolean> getUseExplicitColumnNames() {
+        return this.useExplicitColumnNames == null ? Output.empty() : this.useExplicitColumnNames;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-      private final @Nullable Input<Boolean> useLegacySql;
+      private final @Nullable Output<Boolean> useLegacySql;
 
-    public Input<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
+    public Output<Boolean> getUseLegacySql() {
+        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userDefinedFunctionResources")
-      private final @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+      private final @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
-    public Input<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
-        return this.userDefinedFunctionResources == null ? Input.empty() : this.userDefinedFunctionResources;
+    public Output<List<UserDefinedFunctionResourceArgs>> getUserDefinedFunctionResources() {
+        return this.userDefinedFunctionResources == null ? Output.empty() : this.userDefinedFunctionResources;
     }
 
     public ViewDefinitionArgs(
-        @Nullable Input<String> query,
-        @Nullable Input<Boolean> useExplicitColumnNames,
-        @Nullable Input<Boolean> useLegacySql,
-        @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        @Nullable Output<String> query,
+        @Nullable Output<Boolean> useExplicitColumnNames,
+        @Nullable Output<Boolean> useLegacySql,
+        @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
         this.query = query;
         this.useExplicitColumnNames = useExplicitColumnNames;
         this.useLegacySql = useLegacySql;
@@ -73,10 +73,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ViewDefinitionArgs() {
-        this.query = Input.empty();
-        this.useExplicitColumnNames = Input.empty();
-        this.useLegacySql = Input.empty();
-        this.userDefinedFunctionResources = Input.empty();
+        this.query = Output.empty();
+        this.useExplicitColumnNames = Output.empty();
+        this.useLegacySql = Output.empty();
+        this.userDefinedFunctionResources = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> query;
-        private @Nullable Input<Boolean> useExplicitColumnNames;
-        private @Nullable Input<Boolean> useLegacySql;
-        private @Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
+        private @Nullable Output<String> query;
+        private @Nullable Output<Boolean> useExplicitColumnNames;
+        private @Nullable Output<Boolean> useLegacySql;
+        private @Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
         }
 
-        public Builder query(@Nullable Input<String> query) {
+        public Builder query(@Nullable Output<String> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable String query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
 
-        public Builder useExplicitColumnNames(@Nullable Input<Boolean> useExplicitColumnNames) {
+        public Builder useExplicitColumnNames(@Nullable Output<Boolean> useExplicitColumnNames) {
             this.useExplicitColumnNames = useExplicitColumnNames;
             return this;
         }
 
         public Builder useExplicitColumnNames(@Nullable Boolean useExplicitColumnNames) {
-            this.useExplicitColumnNames = Input.ofNullable(useExplicitColumnNames);
+            this.useExplicitColumnNames = Output.ofNullable(useExplicitColumnNames);
             return this;
         }
 
-        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Output<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Input.ofNullable(useLegacySql);
+            this.useLegacySql = Output.ofNullable(useLegacySql);
             return this;
         }
 
-        public Builder userDefinedFunctionResources(@Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable Output<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
         public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
-            this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
+            this.userDefinedFunctionResources = Output.ofNullable(userDefinedFunctionResources);
             return this;
         }
         public ViewDefinitionArgs build() {

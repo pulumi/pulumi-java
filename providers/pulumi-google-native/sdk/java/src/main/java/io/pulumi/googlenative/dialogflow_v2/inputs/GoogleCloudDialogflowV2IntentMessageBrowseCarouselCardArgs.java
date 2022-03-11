@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
      * 
      */
     @InputImport(name="imageDisplayOptions")
-      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
+      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
-    public Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
-        return this.imageDisplayOptions == null ? Input.empty() : this.imageDisplayOptions;
+    public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
+        return this.imageDisplayOptions == null ? Output.empty() : this.imageDisplayOptions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
      * 
      */
     @InputImport(name="items", required=true)
-      private final Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+      private final Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
-    public Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {
+    public Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {
         return this.items;
     }
 
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs(
-        @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions,
-        Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
+        @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions,
+        Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
         this.imageDisplayOptions = imageDisplayOptions;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
     }
 
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs() {
-        this.imageDisplayOptions = Input.empty();
-        this.items = Input.empty();
+        this.imageDisplayOptions = Output.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
-        private Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
+        private Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
     	      this.items = defaults.items;
         }
 
-        public Builder imageDisplayOptions(@Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions) {
+        public Builder imageDisplayOptions(@Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions) {
             this.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
 
         public Builder imageDisplayOptions(@Nullable GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
-            this.imageDisplayOptions = Input.ofNullable(imageDisplayOptions);
+            this.imageDisplayOptions = Output.ofNullable(imageDisplayOptions);
             return this;
         }
 
-        public Builder items(Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
+        public Builder items(Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs build() {

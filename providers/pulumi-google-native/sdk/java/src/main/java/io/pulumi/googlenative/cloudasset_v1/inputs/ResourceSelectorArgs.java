@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fullResourceName", required=true)
-      private final Input<String> fullResourceName;
+      private final Output<String> fullResourceName;
 
-    public Input<String> getFullResourceName() {
+    public Output<String> getFullResourceName() {
         return this.fullResourceName;
     }
 
-    public ResourceSelectorArgs(Input<String> fullResourceName) {
+    public ResourceSelectorArgs(Output<String> fullResourceName) {
         this.fullResourceName = Objects.requireNonNull(fullResourceName, "expected parameter 'fullResourceName' to be non-null");
     }
 
     private ResourceSelectorArgs() {
-        this.fullResourceName = Input.empty();
+        this.fullResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> fullResourceName;
+        private Output<String> fullResourceName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     	      this.fullResourceName = defaults.fullResourceName;
         }
 
-        public Builder fullResourceName(Input<String> fullResourceName) {
+        public Builder fullResourceName(Output<String> fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
 
         public Builder fullResourceName(String fullResourceName) {
-            this.fullResourceName = Input.of(Objects.requireNonNull(fullResourceName));
+            this.fullResourceName = Output.of(Objects.requireNonNull(fullResourceName));
             return this;
         }
         public ResourceSelectorArgs build() {

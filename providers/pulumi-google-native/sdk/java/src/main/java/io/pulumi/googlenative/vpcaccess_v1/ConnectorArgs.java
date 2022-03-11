@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vpcaccess_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vpcaccess_v1.inputs.SubnetArgs;
 import java.lang.Integer;
@@ -17,9 +17,9 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
     @InputImport(name="connectorId", required=true)
-      private final Input<String> connectorId;
+      private final Output<String> connectorId;
 
-    public Input<String> getConnectorId() {
+    public Output<String> getConnectorId() {
         return this.connectorId;
     }
 
@@ -28,17 +28,17 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipCidrRange")
-      private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Output<String> ipCidrRange;
 
-    public Input<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
+    public Output<String> getIpCidrRange() {
+        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstances")
-      private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Output<Integer> maxInstances;
 
-    public Input<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Input.empty() : this.maxInstances;
+    public Output<Integer> getMaxInstances() {
+        return this.maxInstances == null ? Output.empty() : this.maxInstances;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxThroughput")
-      private final @Nullable Input<Integer> maxThroughput;
+      private final @Nullable Output<Integer> maxThroughput;
 
-    public Input<Integer> getMaxThroughput() {
-        return this.maxThroughput == null ? Input.empty() : this.maxThroughput;
+    public Output<Integer> getMaxThroughput() {
+        return this.maxThroughput == null ? Output.empty() : this.maxThroughput;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstances")
-      private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Output<Integer> minInstances;
 
-    public Input<Integer> getMinInstances() {
-        return this.minInstances == null ? Input.empty() : this.minInstances;
+    public Output<Integer> getMinInstances() {
+        return this.minInstances == null ? Output.empty() : this.minInstances;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minThroughput")
-      private final @Nullable Input<Integer> minThroughput;
+      private final @Nullable Output<Integer> minThroughput;
 
-    public Input<Integer> getMinThroughput() {
-        return this.minThroughput == null ? Input.empty() : this.minThroughput;
+    public Output<Integer> getMinThroughput() {
+        return this.minThroughput == null ? Output.empty() : this.minThroughput;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -112,17 +112,17 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -130,25 +130,25 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<SubnetArgs> subnet;
+      private final @Nullable Output<SubnetArgs> subnet;
 
-    public Input<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<SubnetArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public ConnectorArgs(
-        Input<String> connectorId,
-        @Nullable Input<String> ipCidrRange,
-        @Nullable Input<String> location,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Integer> maxInstances,
-        @Nullable Input<Integer> maxThroughput,
-        @Nullable Input<Integer> minInstances,
-        @Nullable Input<Integer> minThroughput,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> project,
-        @Nullable Input<SubnetArgs> subnet) {
+        Output<String> connectorId,
+        @Nullable Output<String> ipCidrRange,
+        @Nullable Output<String> location,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Integer> maxInstances,
+        @Nullable Output<Integer> maxThroughput,
+        @Nullable Output<Integer> minInstances,
+        @Nullable Output<Integer> minThroughput,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> project,
+        @Nullable Output<SubnetArgs> subnet) {
         this.connectorId = Objects.requireNonNull(connectorId, "expected parameter 'connectorId' to be non-null");
         this.ipCidrRange = ipCidrRange;
         this.location = location;
@@ -164,18 +164,18 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectorArgs() {
-        this.connectorId = Input.empty();
-        this.ipCidrRange = Input.empty();
-        this.location = Input.empty();
-        this.machineType = Input.empty();
-        this.maxInstances = Input.empty();
-        this.maxThroughput = Input.empty();
-        this.minInstances = Input.empty();
-        this.minThroughput = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.project = Input.empty();
-        this.subnet = Input.empty();
+        this.connectorId = Output.empty();
+        this.ipCidrRange = Output.empty();
+        this.location = Output.empty();
+        this.machineType = Output.empty();
+        this.maxInstances = Output.empty();
+        this.maxThroughput = Output.empty();
+        this.minInstances = Output.empty();
+        this.minThroughput = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.project = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,18 +187,18 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> connectorId;
-        private @Nullable Input<String> ipCidrRange;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Integer> maxInstances;
-        private @Nullable Input<Integer> maxThroughput;
-        private @Nullable Input<Integer> minInstances;
-        private @Nullable Input<Integer> minThroughput;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> project;
-        private @Nullable Input<SubnetArgs> subnet;
+        private Output<String> connectorId;
+        private @Nullable Output<String> ipCidrRange;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Integer> maxInstances;
+        private @Nullable Output<Integer> maxThroughput;
+        private @Nullable Output<Integer> minInstances;
+        private @Nullable Output<Integer> minThroughput;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> project;
+        private @Nullable Output<SubnetArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -220,123 +220,123 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder connectorId(Input<String> connectorId) {
+        public Builder connectorId(Output<String> connectorId) {
             this.connectorId = Objects.requireNonNull(connectorId);
             return this;
         }
 
         public Builder connectorId(String connectorId) {
-            this.connectorId = Input.of(Objects.requireNonNull(connectorId));
+            this.connectorId = Output.of(Objects.requireNonNull(connectorId));
             return this;
         }
 
-        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Input.ofNullable(ipCidrRange);
+            this.ipCidrRange = Output.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Input.ofNullable(maxInstances);
+            this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder maxThroughput(@Nullable Input<Integer> maxThroughput) {
+        public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
             this.maxThroughput = maxThroughput;
             return this;
         }
 
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = Input.ofNullable(maxThroughput);
+            this.maxThroughput = Output.ofNullable(maxThroughput);
             return this;
         }
 
-        public Builder minInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Input.ofNullable(minInstances);
+            this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
 
-        public Builder minThroughput(@Nullable Input<Integer> minThroughput) {
+        public Builder minThroughput(@Nullable Output<Integer> minThroughput) {
             this.minThroughput = minThroughput;
             return this;
         }
 
         public Builder minThroughput(@Nullable Integer minThroughput) {
-            this.minThroughput = Input.ofNullable(minThroughput);
+            this.minThroughput = Output.ofNullable(minThroughput);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public ConnectorArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentInstanceFilterInventoryArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentLabelSetArgs;
@@ -26,10 +26,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="all")
-      private final @Nullable Input<Boolean> all;
+      private final @Nullable Output<Boolean> all;
 
-    public Input<Boolean> getAll() {
-        return this.all == null ? Input.empty() : this.all;
+    public Output<Boolean> getAll() {
+        return this.all == null ? Output.empty() : this.all;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusionLabels")
-      private final @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
+      private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
 
-    public Input<List<OSPolicyAssignmentLabelSetArgs>> getExclusionLabels() {
-        return this.exclusionLabels == null ? Input.empty() : this.exclusionLabels;
+    public Output<List<OSPolicyAssignmentLabelSetArgs>> getExclusionLabels() {
+        return this.exclusionLabels == null ? Output.empty() : this.exclusionLabels;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inclusionLabels")
-      private final @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
+      private final @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
 
-    public Input<List<OSPolicyAssignmentLabelSetArgs>> getInclusionLabels() {
-        return this.inclusionLabels == null ? Input.empty() : this.inclusionLabels;
+    public Output<List<OSPolicyAssignmentLabelSetArgs>> getInclusionLabels() {
+        return this.inclusionLabels == null ? Output.empty() : this.inclusionLabels;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="inventories")
-      private final @Nullable Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+      private final @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
-    public Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {
-        return this.inventories == null ? Input.empty() : this.inventories;
+    public Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {
+        return this.inventories == null ? Output.empty() : this.inventories;
     }
 
     public OSPolicyAssignmentInstanceFilterArgs(
-        @Nullable Input<Boolean> all,
-        @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels,
-        @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels,
-        @Nullable Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
+        @Nullable Output<Boolean> all,
+        @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels,
+        @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels,
+        @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;
@@ -77,10 +77,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     }
 
     private OSPolicyAssignmentInstanceFilterArgs() {
-        this.all = Input.empty();
-        this.exclusionLabels = Input.empty();
-        this.inclusionLabels = Input.empty();
-        this.inventories = Input.empty();
+        this.all = Output.empty();
+        this.exclusionLabels = Output.empty();
+        this.inclusionLabels = Output.empty();
+        this.inventories = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> all;
-        private @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
-        private @Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
-        private @Nullable Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+        private @Nullable Output<Boolean> all;
+        private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels;
+        private @Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels;
+        private @Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class OSPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
     	      this.inventories = defaults.inventories;
         }
 
-        public Builder all(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Output<Boolean> all) {
             this.all = all;
             return this;
         }
 
         public Builder all(@Nullable Boolean all) {
-            this.all = Input.ofNullable(all);
+            this.all = Output.ofNullable(all);
             return this;
         }
 
-        public Builder exclusionLabels(@Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels) {
+        public Builder exclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> exclusionLabels) {
             this.exclusionLabels = exclusionLabels;
             return this;
         }
 
         public Builder exclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> exclusionLabels) {
-            this.exclusionLabels = Input.ofNullable(exclusionLabels);
+            this.exclusionLabels = Output.ofNullable(exclusionLabels);
             return this;
         }
 
-        public Builder inclusionLabels(@Nullable Input<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels) {
+        public Builder inclusionLabels(@Nullable Output<List<OSPolicyAssignmentLabelSetArgs>> inclusionLabels) {
             this.inclusionLabels = inclusionLabels;
             return this;
         }
 
         public Builder inclusionLabels(@Nullable List<OSPolicyAssignmentLabelSetArgs> inclusionLabels) {
-            this.inclusionLabels = Input.ofNullable(inclusionLabels);
+            this.inclusionLabels = Output.ofNullable(inclusionLabels);
             return this;
         }
 
-        public Builder inventories(@Nullable Input<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
+        public Builder inventories(@Nullable Output<List<OSPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
             this.inventories = inventories;
             return this;
         }
 
         public Builder inventories(@Nullable List<OSPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
-            this.inventories = Input.ofNullable(inventories);
+            this.inventories = Output.ofNullable(inventories);
             return this;
         }
         public OSPolicyAssignmentInstanceFilterArgs build() {

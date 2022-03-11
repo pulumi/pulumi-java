@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,18 +20,18 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="params")
-      private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Output<Map<String,String>> params;
 
-    public Input<Map<String,String>> getParams() {
-        return this.params == null ? Input.empty() : this.params;
+    public Output<Map<String,String>> getParams() {
+        return this.params == null ? Output.empty() : this.params;
     }
 
-    public MemcacheParametersArgs(@Nullable Input<Map<String,String>> params) {
+    public MemcacheParametersArgs(@Nullable Output<Map<String,String>> params) {
         this.params = params;
     }
 
     private MemcacheParametersArgs() {
-        this.params = Input.empty();
+        this.params = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> params;
+        private @Nullable Output<Map<String,String>> params;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
     	      this.params = defaults.params;
         }
 
-        public Builder params(@Nullable Input<Map<String,String>> params) {
+        public Builder params(@Nullable Output<Map<String,String>> params) {
             this.params = params;
             return this;
         }
 
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Input.ofNullable(params);
+            this.params = Output.ofNullable(params);
             return this;
         }
         public MemcacheParametersArgs build() {

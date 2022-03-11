@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
-    public ResourceAnnotationArgs(@Nullable Input<String> label) {
+    public ResourceAnnotationArgs(@Nullable Output<String> label) {
         this.label = label;
     }
 
     private ResourceAnnotationArgs() {
-        this.label = Input.empty();
+        this.label = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> label;
+        private @Nullable Output<String> label;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
     	      this.label = defaults.label;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
         public ResourceAnnotationArgs build() {

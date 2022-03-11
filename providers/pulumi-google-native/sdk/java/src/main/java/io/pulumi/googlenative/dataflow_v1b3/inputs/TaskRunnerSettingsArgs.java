@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.WorkerSettingsArgs;
 import java.lang.Boolean;
@@ -26,10 +26,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="alsologtostderr")
-      private final @Nullable Input<Boolean> alsologtostderr;
+      private final @Nullable Output<Boolean> alsologtostderr;
 
-    public Input<Boolean> getAlsologtostderr() {
-        return this.alsologtostderr == null ? Input.empty() : this.alsologtostderr;
+    public Output<Boolean> getAlsologtostderr() {
+        return this.alsologtostderr == null ? Output.empty() : this.alsologtostderr;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="baseTaskDir")
-      private final @Nullable Input<String> baseTaskDir;
+      private final @Nullable Output<String> baseTaskDir;
 
-    public Input<String> getBaseTaskDir() {
-        return this.baseTaskDir == null ? Input.empty() : this.baseTaskDir;
+    public Output<String> getBaseTaskDir() {
+        return this.baseTaskDir == null ? Output.empty() : this.baseTaskDir;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="baseUrl")
-      private final @Nullable Input<String> baseUrl;
+      private final @Nullable Output<String> baseUrl;
 
-    public Input<String> getBaseUrl() {
-        return this.baseUrl == null ? Input.empty() : this.baseUrl;
+    public Output<String> getBaseUrl() {
+        return this.baseUrl == null ? Output.empty() : this.baseUrl;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="commandlinesFileName")
-      private final @Nullable Input<String> commandlinesFileName;
+      private final @Nullable Output<String> commandlinesFileName;
 
-    public Input<String> getCommandlinesFileName() {
-        return this.commandlinesFileName == null ? Input.empty() : this.commandlinesFileName;
+    public Output<String> getCommandlinesFileName() {
+        return this.commandlinesFileName == null ? Output.empty() : this.commandlinesFileName;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="continueOnException")
-      private final @Nullable Input<Boolean> continueOnException;
+      private final @Nullable Output<Boolean> continueOnException;
 
-    public Input<Boolean> getContinueOnException() {
-        return this.continueOnException == null ? Input.empty() : this.continueOnException;
+    public Output<Boolean> getContinueOnException() {
+        return this.continueOnException == null ? Output.empty() : this.continueOnException;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataflowApiVersion")
-      private final @Nullable Input<String> dataflowApiVersion;
+      private final @Nullable Output<String> dataflowApiVersion;
 
-    public Input<String> getDataflowApiVersion() {
-        return this.dataflowApiVersion == null ? Input.empty() : this.dataflowApiVersion;
+    public Output<String> getDataflowApiVersion() {
+        return this.dataflowApiVersion == null ? Output.empty() : this.dataflowApiVersion;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="harnessCommand")
-      private final @Nullable Input<String> harnessCommand;
+      private final @Nullable Output<String> harnessCommand;
 
-    public Input<String> getHarnessCommand() {
-        return this.harnessCommand == null ? Input.empty() : this.harnessCommand;
+    public Output<String> getHarnessCommand() {
+        return this.harnessCommand == null ? Output.empty() : this.harnessCommand;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="languageHint")
-      private final @Nullable Input<String> languageHint;
+      private final @Nullable Output<String> languageHint;
 
-    public Input<String> getLanguageHint() {
-        return this.languageHint == null ? Input.empty() : this.languageHint;
+    public Output<String> getLanguageHint() {
+        return this.languageHint == null ? Output.empty() : this.languageHint;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logDir")
-      private final @Nullable Input<String> logDir;
+      private final @Nullable Output<String> logDir;
 
-    public Input<String> getLogDir() {
-        return this.logDir == null ? Input.empty() : this.logDir;
+    public Output<String> getLogDir() {
+        return this.logDir == null ? Output.empty() : this.logDir;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logToSerialconsole")
-      private final @Nullable Input<Boolean> logToSerialconsole;
+      private final @Nullable Output<Boolean> logToSerialconsole;
 
-    public Input<Boolean> getLogToSerialconsole() {
-        return this.logToSerialconsole == null ? Input.empty() : this.logToSerialconsole;
+    public Output<Boolean> getLogToSerialconsole() {
+        return this.logToSerialconsole == null ? Output.empty() : this.logToSerialconsole;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logUploadLocation")
-      private final @Nullable Input<String> logUploadLocation;
+      private final @Nullable Output<String> logUploadLocation;
 
-    public Input<String> getLogUploadLocation() {
-        return this.logUploadLocation == null ? Input.empty() : this.logUploadLocation;
+    public Output<String> getLogUploadLocation() {
+        return this.logUploadLocation == null ? Output.empty() : this.logUploadLocation;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="oauthScopes")
-      private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Output<List<String>> oauthScopes;
 
-    public Input<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
+    public Output<List<String>> getOauthScopes() {
+        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parallelWorkerSettings")
-      private final @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings;
+      private final @Nullable Output<WorkerSettingsArgs> parallelWorkerSettings;
 
-    public Input<WorkerSettingsArgs> getParallelWorkerSettings() {
-        return this.parallelWorkerSettings == null ? Input.empty() : this.parallelWorkerSettings;
+    public Output<WorkerSettingsArgs> getParallelWorkerSettings() {
+        return this.parallelWorkerSettings == null ? Output.empty() : this.parallelWorkerSettings;
     }
 
     /**
@@ -169,10 +169,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="streamingWorkerMainClass")
-      private final @Nullable Input<String> streamingWorkerMainClass;
+      private final @Nullable Output<String> streamingWorkerMainClass;
 
-    public Input<String> getStreamingWorkerMainClass() {
-        return this.streamingWorkerMainClass == null ? Input.empty() : this.streamingWorkerMainClass;
+    public Output<String> getStreamingWorkerMainClass() {
+        return this.streamingWorkerMainClass == null ? Output.empty() : this.streamingWorkerMainClass;
     }
 
     /**
@@ -180,10 +180,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskGroup")
-      private final @Nullable Input<String> taskGroup;
+      private final @Nullable Output<String> taskGroup;
 
-    public Input<String> getTaskGroup() {
-        return this.taskGroup == null ? Input.empty() : this.taskGroup;
+    public Output<String> getTaskGroup() {
+        return this.taskGroup == null ? Output.empty() : this.taskGroup;
     }
 
     /**
@@ -191,10 +191,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskUser")
-      private final @Nullable Input<String> taskUser;
+      private final @Nullable Output<String> taskUser;
 
-    public Input<String> getTaskUser() {
-        return this.taskUser == null ? Input.empty() : this.taskUser;
+    public Output<String> getTaskUser() {
+        return this.taskUser == null ? Output.empty() : this.taskUser;
     }
 
     /**
@@ -202,10 +202,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tempStoragePrefix")
-      private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Output<String> tempStoragePrefix;
 
-    public Input<String> getTempStoragePrefix() {
-        return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
+    public Output<String> getTempStoragePrefix() {
+        return this.tempStoragePrefix == null ? Output.empty() : this.tempStoragePrefix;
     }
 
     /**
@@ -213,10 +213,10 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vmId")
-      private final @Nullable Input<String> vmId;
+      private final @Nullable Output<String> vmId;
 
-    public Input<String> getVmId() {
-        return this.vmId == null ? Input.empty() : this.vmId;
+    public Output<String> getVmId() {
+        return this.vmId == null ? Output.empty() : this.vmId;
     }
 
     /**
@@ -224,32 +224,32 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="workflowFileName")
-      private final @Nullable Input<String> workflowFileName;
+      private final @Nullable Output<String> workflowFileName;
 
-    public Input<String> getWorkflowFileName() {
-        return this.workflowFileName == null ? Input.empty() : this.workflowFileName;
+    public Output<String> getWorkflowFileName() {
+        return this.workflowFileName == null ? Output.empty() : this.workflowFileName;
     }
 
     public TaskRunnerSettingsArgs(
-        @Nullable Input<Boolean> alsologtostderr,
-        @Nullable Input<String> baseTaskDir,
-        @Nullable Input<String> baseUrl,
-        @Nullable Input<String> commandlinesFileName,
-        @Nullable Input<Boolean> continueOnException,
-        @Nullable Input<String> dataflowApiVersion,
-        @Nullable Input<String> harnessCommand,
-        @Nullable Input<String> languageHint,
-        @Nullable Input<String> logDir,
-        @Nullable Input<Boolean> logToSerialconsole,
-        @Nullable Input<String> logUploadLocation,
-        @Nullable Input<List<String>> oauthScopes,
-        @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings,
-        @Nullable Input<String> streamingWorkerMainClass,
-        @Nullable Input<String> taskGroup,
-        @Nullable Input<String> taskUser,
-        @Nullable Input<String> tempStoragePrefix,
-        @Nullable Input<String> vmId,
-        @Nullable Input<String> workflowFileName) {
+        @Nullable Output<Boolean> alsologtostderr,
+        @Nullable Output<String> baseTaskDir,
+        @Nullable Output<String> baseUrl,
+        @Nullable Output<String> commandlinesFileName,
+        @Nullable Output<Boolean> continueOnException,
+        @Nullable Output<String> dataflowApiVersion,
+        @Nullable Output<String> harnessCommand,
+        @Nullable Output<String> languageHint,
+        @Nullable Output<String> logDir,
+        @Nullable Output<Boolean> logToSerialconsole,
+        @Nullable Output<String> logUploadLocation,
+        @Nullable Output<List<String>> oauthScopes,
+        @Nullable Output<WorkerSettingsArgs> parallelWorkerSettings,
+        @Nullable Output<String> streamingWorkerMainClass,
+        @Nullable Output<String> taskGroup,
+        @Nullable Output<String> taskUser,
+        @Nullable Output<String> tempStoragePrefix,
+        @Nullable Output<String> vmId,
+        @Nullable Output<String> workflowFileName) {
         this.alsologtostderr = alsologtostderr;
         this.baseTaskDir = baseTaskDir;
         this.baseUrl = baseUrl;
@@ -272,25 +272,25 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TaskRunnerSettingsArgs() {
-        this.alsologtostderr = Input.empty();
-        this.baseTaskDir = Input.empty();
-        this.baseUrl = Input.empty();
-        this.commandlinesFileName = Input.empty();
-        this.continueOnException = Input.empty();
-        this.dataflowApiVersion = Input.empty();
-        this.harnessCommand = Input.empty();
-        this.languageHint = Input.empty();
-        this.logDir = Input.empty();
-        this.logToSerialconsole = Input.empty();
-        this.logUploadLocation = Input.empty();
-        this.oauthScopes = Input.empty();
-        this.parallelWorkerSettings = Input.empty();
-        this.streamingWorkerMainClass = Input.empty();
-        this.taskGroup = Input.empty();
-        this.taskUser = Input.empty();
-        this.tempStoragePrefix = Input.empty();
-        this.vmId = Input.empty();
-        this.workflowFileName = Input.empty();
+        this.alsologtostderr = Output.empty();
+        this.baseTaskDir = Output.empty();
+        this.baseUrl = Output.empty();
+        this.commandlinesFileName = Output.empty();
+        this.continueOnException = Output.empty();
+        this.dataflowApiVersion = Output.empty();
+        this.harnessCommand = Output.empty();
+        this.languageHint = Output.empty();
+        this.logDir = Output.empty();
+        this.logToSerialconsole = Output.empty();
+        this.logUploadLocation = Output.empty();
+        this.oauthScopes = Output.empty();
+        this.parallelWorkerSettings = Output.empty();
+        this.streamingWorkerMainClass = Output.empty();
+        this.taskGroup = Output.empty();
+        this.taskUser = Output.empty();
+        this.tempStoragePrefix = Output.empty();
+        this.vmId = Output.empty();
+        this.workflowFileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -302,25 +302,25 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> alsologtostderr;
-        private @Nullable Input<String> baseTaskDir;
-        private @Nullable Input<String> baseUrl;
-        private @Nullable Input<String> commandlinesFileName;
-        private @Nullable Input<Boolean> continueOnException;
-        private @Nullable Input<String> dataflowApiVersion;
-        private @Nullable Input<String> harnessCommand;
-        private @Nullable Input<String> languageHint;
-        private @Nullable Input<String> logDir;
-        private @Nullable Input<Boolean> logToSerialconsole;
-        private @Nullable Input<String> logUploadLocation;
-        private @Nullable Input<List<String>> oauthScopes;
-        private @Nullable Input<WorkerSettingsArgs> parallelWorkerSettings;
-        private @Nullable Input<String> streamingWorkerMainClass;
-        private @Nullable Input<String> taskGroup;
-        private @Nullable Input<String> taskUser;
-        private @Nullable Input<String> tempStoragePrefix;
-        private @Nullable Input<String> vmId;
-        private @Nullable Input<String> workflowFileName;
+        private @Nullable Output<Boolean> alsologtostderr;
+        private @Nullable Output<String> baseTaskDir;
+        private @Nullable Output<String> baseUrl;
+        private @Nullable Output<String> commandlinesFileName;
+        private @Nullable Output<Boolean> continueOnException;
+        private @Nullable Output<String> dataflowApiVersion;
+        private @Nullable Output<String> harnessCommand;
+        private @Nullable Output<String> languageHint;
+        private @Nullable Output<String> logDir;
+        private @Nullable Output<Boolean> logToSerialconsole;
+        private @Nullable Output<String> logUploadLocation;
+        private @Nullable Output<List<String>> oauthScopes;
+        private @Nullable Output<WorkerSettingsArgs> parallelWorkerSettings;
+        private @Nullable Output<String> streamingWorkerMainClass;
+        private @Nullable Output<String> taskGroup;
+        private @Nullable Output<String> taskUser;
+        private @Nullable Output<String> tempStoragePrefix;
+        private @Nullable Output<String> vmId;
+        private @Nullable Output<String> workflowFileName;
 
         public Builder() {
     	      // Empty
@@ -349,193 +349,193 @@ public final class TaskRunnerSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.workflowFileName = defaults.workflowFileName;
         }
 
-        public Builder alsologtostderr(@Nullable Input<Boolean> alsologtostderr) {
+        public Builder alsologtostderr(@Nullable Output<Boolean> alsologtostderr) {
             this.alsologtostderr = alsologtostderr;
             return this;
         }
 
         public Builder alsologtostderr(@Nullable Boolean alsologtostderr) {
-            this.alsologtostderr = Input.ofNullable(alsologtostderr);
+            this.alsologtostderr = Output.ofNullable(alsologtostderr);
             return this;
         }
 
-        public Builder baseTaskDir(@Nullable Input<String> baseTaskDir) {
+        public Builder baseTaskDir(@Nullable Output<String> baseTaskDir) {
             this.baseTaskDir = baseTaskDir;
             return this;
         }
 
         public Builder baseTaskDir(@Nullable String baseTaskDir) {
-            this.baseTaskDir = Input.ofNullable(baseTaskDir);
+            this.baseTaskDir = Output.ofNullable(baseTaskDir);
             return this;
         }
 
-        public Builder baseUrl(@Nullable Input<String> baseUrl) {
+        public Builder baseUrl(@Nullable Output<String> baseUrl) {
             this.baseUrl = baseUrl;
             return this;
         }
 
         public Builder baseUrl(@Nullable String baseUrl) {
-            this.baseUrl = Input.ofNullable(baseUrl);
+            this.baseUrl = Output.ofNullable(baseUrl);
             return this;
         }
 
-        public Builder commandlinesFileName(@Nullable Input<String> commandlinesFileName) {
+        public Builder commandlinesFileName(@Nullable Output<String> commandlinesFileName) {
             this.commandlinesFileName = commandlinesFileName;
             return this;
         }
 
         public Builder commandlinesFileName(@Nullable String commandlinesFileName) {
-            this.commandlinesFileName = Input.ofNullable(commandlinesFileName);
+            this.commandlinesFileName = Output.ofNullable(commandlinesFileName);
             return this;
         }
 
-        public Builder continueOnException(@Nullable Input<Boolean> continueOnException) {
+        public Builder continueOnException(@Nullable Output<Boolean> continueOnException) {
             this.continueOnException = continueOnException;
             return this;
         }
 
         public Builder continueOnException(@Nullable Boolean continueOnException) {
-            this.continueOnException = Input.ofNullable(continueOnException);
+            this.continueOnException = Output.ofNullable(continueOnException);
             return this;
         }
 
-        public Builder dataflowApiVersion(@Nullable Input<String> dataflowApiVersion) {
+        public Builder dataflowApiVersion(@Nullable Output<String> dataflowApiVersion) {
             this.dataflowApiVersion = dataflowApiVersion;
             return this;
         }
 
         public Builder dataflowApiVersion(@Nullable String dataflowApiVersion) {
-            this.dataflowApiVersion = Input.ofNullable(dataflowApiVersion);
+            this.dataflowApiVersion = Output.ofNullable(dataflowApiVersion);
             return this;
         }
 
-        public Builder harnessCommand(@Nullable Input<String> harnessCommand) {
+        public Builder harnessCommand(@Nullable Output<String> harnessCommand) {
             this.harnessCommand = harnessCommand;
             return this;
         }
 
         public Builder harnessCommand(@Nullable String harnessCommand) {
-            this.harnessCommand = Input.ofNullable(harnessCommand);
+            this.harnessCommand = Output.ofNullable(harnessCommand);
             return this;
         }
 
-        public Builder languageHint(@Nullable Input<String> languageHint) {
+        public Builder languageHint(@Nullable Output<String> languageHint) {
             this.languageHint = languageHint;
             return this;
         }
 
         public Builder languageHint(@Nullable String languageHint) {
-            this.languageHint = Input.ofNullable(languageHint);
+            this.languageHint = Output.ofNullable(languageHint);
             return this;
         }
 
-        public Builder logDir(@Nullable Input<String> logDir) {
+        public Builder logDir(@Nullable Output<String> logDir) {
             this.logDir = logDir;
             return this;
         }
 
         public Builder logDir(@Nullable String logDir) {
-            this.logDir = Input.ofNullable(logDir);
+            this.logDir = Output.ofNullable(logDir);
             return this;
         }
 
-        public Builder logToSerialconsole(@Nullable Input<Boolean> logToSerialconsole) {
+        public Builder logToSerialconsole(@Nullable Output<Boolean> logToSerialconsole) {
             this.logToSerialconsole = logToSerialconsole;
             return this;
         }
 
         public Builder logToSerialconsole(@Nullable Boolean logToSerialconsole) {
-            this.logToSerialconsole = Input.ofNullable(logToSerialconsole);
+            this.logToSerialconsole = Output.ofNullable(logToSerialconsole);
             return this;
         }
 
-        public Builder logUploadLocation(@Nullable Input<String> logUploadLocation) {
+        public Builder logUploadLocation(@Nullable Output<String> logUploadLocation) {
             this.logUploadLocation = logUploadLocation;
             return this;
         }
 
         public Builder logUploadLocation(@Nullable String logUploadLocation) {
-            this.logUploadLocation = Input.ofNullable(logUploadLocation);
+            this.logUploadLocation = Output.ofNullable(logUploadLocation);
             return this;
         }
 
-        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Input.ofNullable(oauthScopes);
+            this.oauthScopes = Output.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder parallelWorkerSettings(@Nullable Input<WorkerSettingsArgs> parallelWorkerSettings) {
+        public Builder parallelWorkerSettings(@Nullable Output<WorkerSettingsArgs> parallelWorkerSettings) {
             this.parallelWorkerSettings = parallelWorkerSettings;
             return this;
         }
 
         public Builder parallelWorkerSettings(@Nullable WorkerSettingsArgs parallelWorkerSettings) {
-            this.parallelWorkerSettings = Input.ofNullable(parallelWorkerSettings);
+            this.parallelWorkerSettings = Output.ofNullable(parallelWorkerSettings);
             return this;
         }
 
-        public Builder streamingWorkerMainClass(@Nullable Input<String> streamingWorkerMainClass) {
+        public Builder streamingWorkerMainClass(@Nullable Output<String> streamingWorkerMainClass) {
             this.streamingWorkerMainClass = streamingWorkerMainClass;
             return this;
         }
 
         public Builder streamingWorkerMainClass(@Nullable String streamingWorkerMainClass) {
-            this.streamingWorkerMainClass = Input.ofNullable(streamingWorkerMainClass);
+            this.streamingWorkerMainClass = Output.ofNullable(streamingWorkerMainClass);
             return this;
         }
 
-        public Builder taskGroup(@Nullable Input<String> taskGroup) {
+        public Builder taskGroup(@Nullable Output<String> taskGroup) {
             this.taskGroup = taskGroup;
             return this;
         }
 
         public Builder taskGroup(@Nullable String taskGroup) {
-            this.taskGroup = Input.ofNullable(taskGroup);
+            this.taskGroup = Output.ofNullable(taskGroup);
             return this;
         }
 
-        public Builder taskUser(@Nullable Input<String> taskUser) {
+        public Builder taskUser(@Nullable Output<String> taskUser) {
             this.taskUser = taskUser;
             return this;
         }
 
         public Builder taskUser(@Nullable String taskUser) {
-            this.taskUser = Input.ofNullable(taskUser);
+            this.taskUser = Output.ofNullable(taskUser);
             return this;
         }
 
-        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Output<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
         public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
-            this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
+            this.tempStoragePrefix = Output.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder vmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Output<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Input.ofNullable(vmId);
+            this.vmId = Output.ofNullable(vmId);
             return this;
         }
 
-        public Builder workflowFileName(@Nullable Input<String> workflowFileName) {
+        public Builder workflowFileName(@Nullable Output<String> workflowFileName) {
             this.workflowFileName = workflowFileName;
             return this;
         }
 
         public Builder workflowFileName(@Nullable String workflowFileName) {
-            this.workflowFileName = Input.ofNullable(workflowFileName);
+            this.workflowFileName = Output.ofNullable(workflowFileName);
             return this;
         }
         public TaskRunnerSettingsArgs build() {

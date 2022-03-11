@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
      * 
      */
     @InputImport(name="gcsFileUri")
-      private final @Nullable Input<String> gcsFileUri;
+      private final @Nullable Output<String> gcsFileUri;
 
-    public Input<String> getGcsFileUri() {
-        return this.gcsFileUri == null ? Input.empty() : this.gcsFileUri;
+    public Output<String> getGcsFileUri() {
+        return this.gcsFileUri == null ? Output.empty() : this.gcsFileUri;
     }
 
-    public GoogleCloudDatalabelingV1beta1PdfInstructionArgs(@Nullable Input<String> gcsFileUri) {
+    public GoogleCloudDatalabelingV1beta1PdfInstructionArgs(@Nullable Output<String> gcsFileUri) {
         this.gcsFileUri = gcsFileUri;
     }
 
     private GoogleCloudDatalabelingV1beta1PdfInstructionArgs() {
-        this.gcsFileUri = Input.empty();
+        this.gcsFileUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<String> gcsFileUri;
+        private @Nullable Output<String> gcsFileUri;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
     	      this.gcsFileUri = defaults.gcsFileUri;
         }
 
-        public Builder gcsFileUri(@Nullable Input<String> gcsFileUri) {
+        public Builder gcsFileUri(@Nullable Output<String> gcsFileUri) {
             this.gcsFileUri = gcsFileUri;
             return this;
         }
 
         public Builder gcsFileUri(@Nullable String gcsFileUri) {
-            this.gcsFileUri = Input.ofNullable(gcsFileUri);
+            this.gcsFileUri = Output.ofNullable(gcsFileUri);
             return this;
         }
         public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {

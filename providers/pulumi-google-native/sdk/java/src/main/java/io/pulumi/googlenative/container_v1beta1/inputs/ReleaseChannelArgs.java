@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.enums.ReleaseChannelChannel;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channel")
-      private final @Nullable Input<ReleaseChannelChannel> channel;
+      private final @Nullable Output<ReleaseChannelChannel> channel;
 
-    public Input<ReleaseChannelChannel> getChannel() {
-        return this.channel == null ? Input.empty() : this.channel;
+    public Output<ReleaseChannelChannel> getChannel() {
+        return this.channel == null ? Output.empty() : this.channel;
     }
 
-    public ReleaseChannelArgs(@Nullable Input<ReleaseChannelChannel> channel) {
+    public ReleaseChannelArgs(@Nullable Output<ReleaseChannelChannel> channel) {
         this.channel = channel;
     }
 
     private ReleaseChannelArgs() {
-        this.channel = Input.empty();
+        this.channel = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ReleaseChannelChannel> channel;
+        private @Nullable Output<ReleaseChannelChannel> channel;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.channel = defaults.channel;
         }
 
-        public Builder channel(@Nullable Input<ReleaseChannelChannel> channel) {
+        public Builder channel(@Nullable Output<ReleaseChannelChannel> channel) {
             this.channel = channel;
             return this;
         }
 
         public Builder channel(@Nullable ReleaseChannelChannel channel) {
-            this.channel = Input.ofNullable(channel);
+            this.channel = Output.ofNullable(channel);
             return this;
         }
         public ReleaseChannelArgs build() {

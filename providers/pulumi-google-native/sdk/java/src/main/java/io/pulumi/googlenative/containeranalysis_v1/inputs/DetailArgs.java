@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.Boolean;
@@ -25,9 +25,9 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-      private final Input<String> affectedCpeUri;
+      private final Output<String> affectedCpeUri;
 
-    public Input<String> getAffectedCpeUri() {
+    public Output<String> getAffectedCpeUri() {
         return this.affectedCpeUri;
     }
 
@@ -36,9 +36,9 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-      private final Input<String> affectedPackage;
+      private final Output<String> affectedPackage;
 
-    public Input<String> getAffectedPackage() {
+    public Output<String> getAffectedPackage() {
         return this.affectedPackage;
     }
 
@@ -47,10 +47,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersionEnd")
-      private final @Nullable Input<VersionArgs> affectedVersionEnd;
+      private final @Nullable Output<VersionArgs> affectedVersionEnd;
 
-    public Input<VersionArgs> getAffectedVersionEnd() {
-        return this.affectedVersionEnd == null ? Input.empty() : this.affectedVersionEnd;
+    public Output<VersionArgs> getAffectedVersionEnd() {
+        return this.affectedVersionEnd == null ? Output.empty() : this.affectedVersionEnd;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedVersionStart")
-      private final @Nullable Input<VersionArgs> affectedVersionStart;
+      private final @Nullable Output<VersionArgs> affectedVersionStart;
 
-    public Input<VersionArgs> getAffectedVersionStart() {
-        return this.affectedVersionStart == null ? Input.empty() : this.affectedVersionStart;
+    public Output<VersionArgs> getAffectedVersionStart() {
+        return this.affectedVersionStart == null ? Output.empty() : this.affectedVersionStart;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedCpeUri")
-      private final @Nullable Input<String> fixedCpeUri;
+      private final @Nullable Output<String> fixedCpeUri;
 
-    public Input<String> getFixedCpeUri() {
-        return this.fixedCpeUri == null ? Input.empty() : this.fixedCpeUri;
+    public Output<String> getFixedCpeUri() {
+        return this.fixedCpeUri == null ? Output.empty() : this.fixedCpeUri;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedPackage")
-      private final @Nullable Input<String> fixedPackage;
+      private final @Nullable Output<String> fixedPackage;
 
-    public Input<String> getFixedPackage() {
-        return this.fixedPackage == null ? Input.empty() : this.fixedPackage;
+    public Output<String> getFixedPackage() {
+        return this.fixedPackage == null ? Output.empty() : this.fixedPackage;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedVersion")
-      private final @Nullable Input<VersionArgs> fixedVersion;
+      private final @Nullable Output<VersionArgs> fixedVersion;
 
-    public Input<VersionArgs> getFixedVersion() {
-        return this.fixedVersion == null ? Input.empty() : this.fixedVersion;
+    public Output<VersionArgs> getFixedVersion() {
+        return this.fixedVersion == null ? Output.empty() : this.fixedVersion;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isObsolete")
-      private final @Nullable Input<Boolean> isObsolete;
+      private final @Nullable Output<Boolean> isObsolete;
 
-    public Input<Boolean> getIsObsolete() {
-        return this.isObsolete == null ? Input.empty() : this.isObsolete;
+    public Output<Boolean> getIsObsolete() {
+        return this.isObsolete == null ? Output.empty() : this.isObsolete;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<String> packageType;
+      private final @Nullable Output<String> packageType;
 
-    public Input<String> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<String> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severityName")
-      private final @Nullable Input<String> severityName;
+      private final @Nullable Output<String> severityName;
 
-    public Input<String> getSeverityName() {
-        return this.severityName == null ? Input.empty() : this.severityName;
+    public Output<String> getSeverityName() {
+        return this.severityName == null ? Output.empty() : this.severityName;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -157,10 +157,10 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUpdateTime")
-      private final @Nullable Input<String> sourceUpdateTime;
+      private final @Nullable Output<String> sourceUpdateTime;
 
-    public Input<String> getSourceUpdateTime() {
-        return this.sourceUpdateTime == null ? Input.empty() : this.sourceUpdateTime;
+    public Output<String> getSourceUpdateTime() {
+        return this.sourceUpdateTime == null ? Output.empty() : this.sourceUpdateTime;
     }
 
     /**
@@ -168,27 +168,27 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendor")
-      private final @Nullable Input<String> vendor;
+      private final @Nullable Output<String> vendor;
 
-    public Input<String> getVendor() {
-        return this.vendor == null ? Input.empty() : this.vendor;
+    public Output<String> getVendor() {
+        return this.vendor == null ? Output.empty() : this.vendor;
     }
 
     public DetailArgs(
-        Input<String> affectedCpeUri,
-        Input<String> affectedPackage,
-        @Nullable Input<VersionArgs> affectedVersionEnd,
-        @Nullable Input<VersionArgs> affectedVersionStart,
-        @Nullable Input<String> description,
-        @Nullable Input<String> fixedCpeUri,
-        @Nullable Input<String> fixedPackage,
-        @Nullable Input<VersionArgs> fixedVersion,
-        @Nullable Input<Boolean> isObsolete,
-        @Nullable Input<String> packageType,
-        @Nullable Input<String> severityName,
-        @Nullable Input<String> source,
-        @Nullable Input<String> sourceUpdateTime,
-        @Nullable Input<String> vendor) {
+        Output<String> affectedCpeUri,
+        Output<String> affectedPackage,
+        @Nullable Output<VersionArgs> affectedVersionEnd,
+        @Nullable Output<VersionArgs> affectedVersionStart,
+        @Nullable Output<String> description,
+        @Nullable Output<String> fixedCpeUri,
+        @Nullable Output<String> fixedPackage,
+        @Nullable Output<VersionArgs> fixedVersion,
+        @Nullable Output<Boolean> isObsolete,
+        @Nullable Output<String> packageType,
+        @Nullable Output<String> severityName,
+        @Nullable Output<String> source,
+        @Nullable Output<String> sourceUpdateTime,
+        @Nullable Output<String> vendor) {
         this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
         this.affectedPackage = Objects.requireNonNull(affectedPackage, "expected parameter 'affectedPackage' to be non-null");
         this.affectedVersionEnd = affectedVersionEnd;
@@ -206,20 +206,20 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetailArgs() {
-        this.affectedCpeUri = Input.empty();
-        this.affectedPackage = Input.empty();
-        this.affectedVersionEnd = Input.empty();
-        this.affectedVersionStart = Input.empty();
-        this.description = Input.empty();
-        this.fixedCpeUri = Input.empty();
-        this.fixedPackage = Input.empty();
-        this.fixedVersion = Input.empty();
-        this.isObsolete = Input.empty();
-        this.packageType = Input.empty();
-        this.severityName = Input.empty();
-        this.source = Input.empty();
-        this.sourceUpdateTime = Input.empty();
-        this.vendor = Input.empty();
+        this.affectedCpeUri = Output.empty();
+        this.affectedPackage = Output.empty();
+        this.affectedVersionEnd = Output.empty();
+        this.affectedVersionStart = Output.empty();
+        this.description = Output.empty();
+        this.fixedCpeUri = Output.empty();
+        this.fixedPackage = Output.empty();
+        this.fixedVersion = Output.empty();
+        this.isObsolete = Output.empty();
+        this.packageType = Output.empty();
+        this.severityName = Output.empty();
+        this.source = Output.empty();
+        this.sourceUpdateTime = Output.empty();
+        this.vendor = Output.empty();
     }
 
     public static Builder builder() {
@@ -231,20 +231,20 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> affectedCpeUri;
-        private Input<String> affectedPackage;
-        private @Nullable Input<VersionArgs> affectedVersionEnd;
-        private @Nullable Input<VersionArgs> affectedVersionStart;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> fixedCpeUri;
-        private @Nullable Input<String> fixedPackage;
-        private @Nullable Input<VersionArgs> fixedVersion;
-        private @Nullable Input<Boolean> isObsolete;
-        private @Nullable Input<String> packageType;
-        private @Nullable Input<String> severityName;
-        private @Nullable Input<String> source;
-        private @Nullable Input<String> sourceUpdateTime;
-        private @Nullable Input<String> vendor;
+        private Output<String> affectedCpeUri;
+        private Output<String> affectedPackage;
+        private @Nullable Output<VersionArgs> affectedVersionEnd;
+        private @Nullable Output<VersionArgs> affectedVersionStart;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> fixedCpeUri;
+        private @Nullable Output<String> fixedPackage;
+        private @Nullable Output<VersionArgs> fixedVersion;
+        private @Nullable Output<Boolean> isObsolete;
+        private @Nullable Output<String> packageType;
+        private @Nullable Output<String> severityName;
+        private @Nullable Output<String> source;
+        private @Nullable Output<String> sourceUpdateTime;
+        private @Nullable Output<String> vendor;
 
         public Builder() {
     	      // Empty
@@ -268,143 +268,143 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder affectedCpeUri(Input<String> affectedCpeUri) {
+        public Builder affectedCpeUri(Output<String> affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
         public Builder affectedCpeUri(String affectedCpeUri) {
-            this.affectedCpeUri = Input.of(Objects.requireNonNull(affectedCpeUri));
+            this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
             return this;
         }
 
-        public Builder affectedPackage(Input<String> affectedPackage) {
+        public Builder affectedPackage(Output<String> affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
         public Builder affectedPackage(String affectedPackage) {
-            this.affectedPackage = Input.of(Objects.requireNonNull(affectedPackage));
+            this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
             return this;
         }
 
-        public Builder affectedVersionEnd(@Nullable Input<VersionArgs> affectedVersionEnd) {
+        public Builder affectedVersionEnd(@Nullable Output<VersionArgs> affectedVersionEnd) {
             this.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
 
         public Builder affectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
-            this.affectedVersionEnd = Input.ofNullable(affectedVersionEnd);
+            this.affectedVersionEnd = Output.ofNullable(affectedVersionEnd);
             return this;
         }
 
-        public Builder affectedVersionStart(@Nullable Input<VersionArgs> affectedVersionStart) {
+        public Builder affectedVersionStart(@Nullable Output<VersionArgs> affectedVersionStart) {
             this.affectedVersionStart = affectedVersionStart;
             return this;
         }
 
         public Builder affectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
-            this.affectedVersionStart = Input.ofNullable(affectedVersionStart);
+            this.affectedVersionStart = Output.ofNullable(affectedVersionStart);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fixedCpeUri(@Nullable Input<String> fixedCpeUri) {
+        public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
             this.fixedCpeUri = fixedCpeUri;
             return this;
         }
 
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Input.ofNullable(fixedCpeUri);
+            this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
             return this;
         }
 
-        public Builder fixedPackage(@Nullable Input<String> fixedPackage) {
+        public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
             this.fixedPackage = fixedPackage;
             return this;
         }
 
         public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Input.ofNullable(fixedPackage);
+            this.fixedPackage = Output.ofNullable(fixedPackage);
             return this;
         }
 
-        public Builder fixedVersion(@Nullable Input<VersionArgs> fixedVersion) {
+        public Builder fixedVersion(@Nullable Output<VersionArgs> fixedVersion) {
             this.fixedVersion = fixedVersion;
             return this;
         }
 
         public Builder fixedVersion(@Nullable VersionArgs fixedVersion) {
-            this.fixedVersion = Input.ofNullable(fixedVersion);
+            this.fixedVersion = Output.ofNullable(fixedVersion);
             return this;
         }
 
-        public Builder isObsolete(@Nullable Input<Boolean> isObsolete) {
+        public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
             this.isObsolete = isObsolete;
             return this;
         }
 
         public Builder isObsolete(@Nullable Boolean isObsolete) {
-            this.isObsolete = Input.ofNullable(isObsolete);
+            this.isObsolete = Output.ofNullable(isObsolete);
             return this;
         }
 
-        public Builder packageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
 
-        public Builder severityName(@Nullable Input<String> severityName) {
+        public Builder severityName(@Nullable Output<String> severityName) {
             this.severityName = severityName;
             return this;
         }
 
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Input.ofNullable(severityName);
+            this.severityName = Output.ofNullable(severityName);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder sourceUpdateTime(@Nullable Input<String> sourceUpdateTime) {
+        public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
             this.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
 
         public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
-            this.sourceUpdateTime = Input.ofNullable(sourceUpdateTime);
+            this.sourceUpdateTime = Output.ofNullable(sourceUpdateTime);
             return this;
         }
 
-        public Builder vendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Input.ofNullable(vendor);
+            this.vendor = Output.ofNullable(vendor);
             return this;
         }
         public DetailArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.CallCredentialsCallCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataCredentialsFromPluginArgs;
@@ -24,10 +24,10 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="callCredentialType")
-      private final @Nullable Input<CallCredentialsCallCredentialType> callCredentialType;
+      private final @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
 
-    public Input<CallCredentialsCallCredentialType> getCallCredentialType() {
-        return this.callCredentialType == null ? Input.empty() : this.callCredentialType;
+    public Output<CallCredentialsCallCredentialType> getCallCredentialType() {
+        return this.callCredentialType == null ? Output.empty() : this.callCredentialType;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fromPlugin")
-      private final @Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin;
+      private final @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
 
-    public Input<MetadataCredentialsFromPluginArgs> getFromPlugin() {
-        return this.fromPlugin == null ? Input.empty() : this.fromPlugin;
+    public Output<MetadataCredentialsFromPluginArgs> getFromPlugin() {
+        return this.fromPlugin == null ? Output.empty() : this.fromPlugin;
     }
 
     public CallCredentialsArgs(
-        @Nullable Input<CallCredentialsCallCredentialType> callCredentialType,
-        @Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin) {
+        @Nullable Output<CallCredentialsCallCredentialType> callCredentialType,
+        @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin) {
         this.callCredentialType = callCredentialType;
         this.fromPlugin = fromPlugin;
     }
 
     private CallCredentialsArgs() {
-        this.callCredentialType = Input.empty();
-        this.fromPlugin = Input.empty();
+        this.callCredentialType = Output.empty();
+        this.fromPlugin = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<CallCredentialsCallCredentialType> callCredentialType;
-        private @Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin;
+        private @Nullable Output<CallCredentialsCallCredentialType> callCredentialType;
+        private @Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CallCredentialsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.fromPlugin = defaults.fromPlugin;
         }
 
-        public Builder callCredentialType(@Nullable Input<CallCredentialsCallCredentialType> callCredentialType) {
+        public Builder callCredentialType(@Nullable Output<CallCredentialsCallCredentialType> callCredentialType) {
             this.callCredentialType = callCredentialType;
             return this;
         }
 
         public Builder callCredentialType(@Nullable CallCredentialsCallCredentialType callCredentialType) {
-            this.callCredentialType = Input.ofNullable(callCredentialType);
+            this.callCredentialType = Output.ofNullable(callCredentialType);
             return this;
         }
 
-        public Builder fromPlugin(@Nullable Input<MetadataCredentialsFromPluginArgs> fromPlugin) {
+        public Builder fromPlugin(@Nullable Output<MetadataCredentialsFromPluginArgs> fromPlugin) {
             this.fromPlugin = fromPlugin;
             return this;
         }
 
         public Builder fromPlugin(@Nullable MetadataCredentialsFromPluginArgs fromPlugin) {
-            this.fromPlugin = Input.ofNullable(fromPlugin);
+            this.fromPlugin = Output.ofNullable(fromPlugin);
             return this;
         }
         public CallCredentialsArgs build() {

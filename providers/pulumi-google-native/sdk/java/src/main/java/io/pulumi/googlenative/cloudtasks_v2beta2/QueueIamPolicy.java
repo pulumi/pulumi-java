@@ -3,7 +3,6 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -104,14 +103,14 @@ public class QueueIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public QueueIamPolicy(String name, QueueIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudtasks/v2beta2:QueueIamPolicy", name, args == null ? QueueIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("google-native:cloudtasks/v2beta2:QueueIamPolicy", name, args == null ? QueueIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private QueueIamPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private QueueIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("google-native:cloudtasks/v2beta2:QueueIamPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -126,7 +125,7 @@ public class QueueIamPolicy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QueueIamPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static QueueIamPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new QueueIamPolicy(name, id, options);
     }
 }

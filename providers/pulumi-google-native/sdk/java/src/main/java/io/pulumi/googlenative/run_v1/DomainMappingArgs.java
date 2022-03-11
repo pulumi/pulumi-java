@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingSpecArgs;
 import io.pulumi.googlenative.run_v1.inputs.DomainMappingStatusArgs;
@@ -22,17 +22,17 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-      private final @Nullable Input<String> apiVersion;
+      private final @Nullable Output<String> apiVersion;
 
-    public Input<String> getApiVersion() {
-        return this.apiVersion == null ? Input.empty() : this.apiVersion;
+    public Output<String> getApiVersion() {
+        return this.apiVersion == null ? Output.empty() : this.apiVersion;
     }
 
     @InputImport(name="dryRun")
-      private final @Nullable Input<String> dryRun;
+      private final @Nullable Output<String> dryRun;
 
-    public Input<String> getDryRun() {
-        return this.dryRun == null ? Input.empty() : this.dryRun;
+    public Output<String> getDryRun() {
+        return this.dryRun == null ? Output.empty() : this.dryRun;
     }
 
     /**
@@ -40,17 +40,17 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Input<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ObjectMetaArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-      private final @Nullable Input<DomainMappingSpecArgs> spec;
+      private final @Nullable Output<DomainMappingSpecArgs> spec;
 
-    public Input<DomainMappingSpecArgs> getSpec() {
-        return this.spec == null ? Input.empty() : this.spec;
+    public Output<DomainMappingSpecArgs> getSpec() {
+        return this.spec == null ? Output.empty() : this.spec;
     }
 
     /**
@@ -87,21 +87,21 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<DomainMappingStatusArgs> status;
+      private final @Nullable Output<DomainMappingStatusArgs> status;
 
-    public Input<DomainMappingStatusArgs> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<DomainMappingStatusArgs> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public DomainMappingArgs(
-        @Nullable Input<String> apiVersion,
-        @Nullable Input<String> dryRun,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<ObjectMetaArgs> metadata,
-        @Nullable Input<String> project,
-        @Nullable Input<DomainMappingSpecArgs> spec,
-        @Nullable Input<DomainMappingStatusArgs> status) {
+        @Nullable Output<String> apiVersion,
+        @Nullable Output<String> dryRun,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<ObjectMetaArgs> metadata,
+        @Nullable Output<String> project,
+        @Nullable Output<DomainMappingSpecArgs> spec,
+        @Nullable Output<DomainMappingStatusArgs> status) {
         this.apiVersion = apiVersion;
         this.dryRun = dryRun;
         this.kind = kind;
@@ -113,14 +113,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingArgs() {
-        this.apiVersion = Input.empty();
-        this.dryRun = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.project = Input.empty();
-        this.spec = Input.empty();
-        this.status = Input.empty();
+        this.apiVersion = Output.empty();
+        this.dryRun = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.project = Output.empty();
+        this.spec = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,14 +132,14 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiVersion;
-        private @Nullable Input<String> dryRun;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ObjectMetaArgs> metadata;
-        private @Nullable Input<String> project;
-        private @Nullable Input<DomainMappingSpecArgs> spec;
-        private @Nullable Input<DomainMappingStatusArgs> status;
+        private @Nullable Output<String> apiVersion;
+        private @Nullable Output<String> dryRun;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ObjectMetaArgs> metadata;
+        private @Nullable Output<String> project;
+        private @Nullable Output<DomainMappingSpecArgs> spec;
+        private @Nullable Output<DomainMappingStatusArgs> status;
 
         public Builder() {
     	      // Empty
@@ -157,83 +157,83 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder apiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Output<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Input.ofNullable(apiVersion);
+            this.apiVersion = Output.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder dryRun(@Nullable Input<String> dryRun) {
+        public Builder dryRun(@Nullable Output<String> dryRun) {
             this.dryRun = dryRun;
             return this;
         }
 
         public Builder dryRun(@Nullable String dryRun) {
-            this.dryRun = Input.ofNullable(dryRun);
+            this.dryRun = Output.ofNullable(dryRun);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder spec(@Nullable Input<DomainMappingSpecArgs> spec) {
+        public Builder spec(@Nullable Output<DomainMappingSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
         public Builder spec(@Nullable DomainMappingSpecArgs spec) {
-            this.spec = Input.ofNullable(spec);
+            this.spec = Output.ofNullable(spec);
             return this;
         }
 
-        public Builder status(@Nullable Input<DomainMappingStatusArgs> status) {
+        public Builder status(@Nullable Output<DomainMappingStatusArgs> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable DomainMappingStatusArgs status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public DomainMappingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="affectedLocation")
-      private final @Nullable Input<VulnerabilityLocationArgs> affectedLocation;
+      private final @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
 
-    public Input<VulnerabilityLocationArgs> getAffectedLocation() {
-        return this.affectedLocation == null ? Input.empty() : this.affectedLocation;
+    public Output<VulnerabilityLocationArgs> getAffectedLocation() {
+        return this.affectedLocation == null ? Output.empty() : this.affectedLocation;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedLocation")
-      private final @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
+      private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Input<VulnerabilityLocationArgs> getFixedLocation() {
-        return this.fixedLocation == null ? Input.empty() : this.fixedLocation;
+    public Output<VulnerabilityLocationArgs> getFixedLocation() {
+        return this.fixedLocation == null ? Output.empty() : this.fixedLocation;
     }
 
     /**
@@ -46,24 +46,24 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageType")
-      private final @Nullable Input<String> packageType;
+      private final @Nullable Output<String> packageType;
 
-    public Input<String> getPackageType() {
-        return this.packageType == null ? Input.empty() : this.packageType;
+    public Output<String> getPackageType() {
+        return this.packageType == null ? Output.empty() : this.packageType;
     }
 
     @InputImport(name="severityName")
-      private final @Nullable Input<String> severityName;
+      private final @Nullable Output<String> severityName;
 
-    public Input<String> getSeverityName() {
-        return this.severityName == null ? Input.empty() : this.severityName;
+    public Output<String> getSeverityName() {
+        return this.severityName == null ? Output.empty() : this.severityName;
     }
 
     public PackageIssueArgs(
-        @Nullable Input<VulnerabilityLocationArgs> affectedLocation,
-        @Nullable Input<VulnerabilityLocationArgs> fixedLocation,
-        @Nullable Input<String> packageType,
-        @Nullable Input<String> severityName) {
+        @Nullable Output<VulnerabilityLocationArgs> affectedLocation,
+        @Nullable Output<VulnerabilityLocationArgs> fixedLocation,
+        @Nullable Output<String> packageType,
+        @Nullable Output<String> severityName) {
         this.affectedLocation = affectedLocation;
         this.fixedLocation = fixedLocation;
         this.packageType = packageType;
@@ -71,10 +71,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageIssueArgs() {
-        this.affectedLocation = Input.empty();
-        this.fixedLocation = Input.empty();
-        this.packageType = Input.empty();
-        this.severityName = Input.empty();
+        this.affectedLocation = Output.empty();
+        this.fixedLocation = Output.empty();
+        this.packageType = Output.empty();
+        this.severityName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<VulnerabilityLocationArgs> affectedLocation;
-        private @Nullable Input<VulnerabilityLocationArgs> fixedLocation;
-        private @Nullable Input<String> packageType;
-        private @Nullable Input<String> severityName;
+        private @Nullable Output<VulnerabilityLocationArgs> affectedLocation;
+        private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
+        private @Nullable Output<String> packageType;
+        private @Nullable Output<String> severityName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.severityName = defaults.severityName;
         }
 
-        public Builder affectedLocation(@Nullable Input<VulnerabilityLocationArgs> affectedLocation) {
+        public Builder affectedLocation(@Nullable Output<VulnerabilityLocationArgs> affectedLocation) {
             this.affectedLocation = affectedLocation;
             return this;
         }
 
         public Builder affectedLocation(@Nullable VulnerabilityLocationArgs affectedLocation) {
-            this.affectedLocation = Input.ofNullable(affectedLocation);
+            this.affectedLocation = Output.ofNullable(affectedLocation);
             return this;
         }
 
-        public Builder fixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
+        public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
             this.fixedLocation = fixedLocation;
             return this;
         }
 
         public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Input.ofNullable(fixedLocation);
+            this.fixedLocation = Output.ofNullable(fixedLocation);
             return this;
         }
 
-        public Builder packageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Output<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Input.ofNullable(packageType);
+            this.packageType = Output.ofNullable(packageType);
             return this;
         }
 
-        public Builder severityName(@Nullable Input<String> severityName) {
+        public Builder severityName(@Nullable Output<String> severityName) {
             this.severityName = severityName;
             return this;
         }
 
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Input.ofNullable(severityName);
+            this.severityName = Output.ofNullable(severityName);
             return this;
         }
         public PackageIssueArgs build() {
