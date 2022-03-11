@@ -56,25 +56,16 @@ jobs:
       ###
       - name: Build pulumi-random JVM SDK
         run: |
-          make provider.random.build && make provider.random.install &
-          make provider.azure-native.build && make provider.azure-native.install &
-          make provider.google-native.build && make provider.google-native.install &
-          wait;
-          make provider.gcp.build && make provider.gcp.install &
-          make provider.aws.build && make provider.aws.install &
-          make provider.aws-native.build && make provider.aws-native.install &
-          wait;
-          make provider.kubernetes.build && make provider.kubernetes.install &
-          make provider.docker.build && make provider.docker.install &
-          wait;
-      - name: Integration tests
-        run: make integration_tests
+          make provider.random.build && make provider.random.install &&
+          make provider.azure-native.build && make provider.azure-native.install &&
+          make provider.google-native.build && make provider.google-native.install &&
+          make provider.gcp.build && make provider.gcp.install &&
+          make provider.aws.build && make provider.aws.install &&
+          make provider.aws-native.build && make provider.aws-native.install &&
+          make provider.kubernetes.build && make provider.kubernetes.install &&
+          make provider.docker.build && make provider.docker.install &&
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{matrix.pythonversion}}
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -122,10 +113,10 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install
-            pulumi config set minimal:name foo
             pulumi destroy -s dev --yes;
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi config set minimal:name foo
             pulumi preview;
             pulumi stack rm dev --yes;";
       - name: run example aws-native-java-s3-folder
@@ -158,6 +149,8 @@ jobs:
             pulumi stack init dev;
             pulumi preview;
             pulumi stack rm dev --yes;";
+      - name: Integration tests
+        run: make integration_tests
     strategy:
       fail-fast: true
   go-lint:
