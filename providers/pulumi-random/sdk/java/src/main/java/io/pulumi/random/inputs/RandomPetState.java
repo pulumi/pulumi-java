@@ -3,14 +3,12 @@
 
 package io.pulumi.random.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
-import java.lang.Integer;
-import java.lang.Object;
-import java.lang.String;
+
+import javax.annotation.Nullable;
 import java.util.Map;
 import java.util.Objects;
-import javax.annotation.Nullable;
 
 
 public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
@@ -22,10 +20,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keepers")
-      private final @Nullable Input<Map<String,Object>> keepers;
+      private final @Nullable Output<Map<String,Object>> keepers;
 
-    public Input<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Input.empty() : this.keepers;
+    public Output<Map<String,Object>> getKeepers() {
+        return this.keepers == null ? Output.empty() : this.keepers;
     }
 
     /**
@@ -33,10 +31,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="length")
-      private final @Nullable Input<Integer> length;
+      private final @Nullable Output<Integer> length;
 
-    public Input<Integer> getLength() {
-        return this.length == null ? Input.empty() : this.length;
+    public Output<Integer> getLength() {
+        return this.length == null ? Output.empty() : this.length;
     }
 
     /**
@@ -44,10 +42,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     /**
@@ -55,17 +53,17 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="separator")
-      private final @Nullable Input<String> separator;
+      private final @Nullable Output<String> separator;
 
-    public Input<String> getSeparator() {
-        return this.separator == null ? Input.empty() : this.separator;
+    public Output<String> getSeparator() {
+        return this.separator == null ? Output.empty() : this.separator;
     }
 
     public RandomPetState(
-        @Nullable Input<Map<String,Object>> keepers,
-        @Nullable Input<Integer> length,
-        @Nullable Input<String> prefix,
-        @Nullable Input<String> separator) {
+        @Nullable Output<Map<String,Object>> keepers,
+        @Nullable Output<Integer> length,
+        @Nullable Output<String> prefix,
+        @Nullable Output<String> separator) {
         this.keepers = keepers;
         this.length = length;
         this.prefix = prefix;
@@ -73,10 +71,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomPetState() {
-        this.keepers = Input.empty();
-        this.length = Input.empty();
-        this.prefix = Input.empty();
-        this.separator = Input.empty();
+        this.keepers = Output.empty();
+        this.length = Output.empty();
+        this.prefix = Output.empty();
+        this.separator = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +86,10 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,Object>> keepers;
-        private @Nullable Input<Integer> length;
-        private @Nullable Input<String> prefix;
-        private @Nullable Input<String> separator;
+        private @Nullable Output<Map<String,Object>> keepers;
+        private @Nullable Output<Integer> length;
+        private @Nullable Output<String> prefix;
+        private @Nullable Output<String> separator;
 
         public Builder() {
     	      // Empty
@@ -105,43 +103,43 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     	      this.separator = defaults.separator;
         }
 
-        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Input.ofNullable(keepers);
+            this.keepers = Output.ofNullable(keepers);
             return this;
         }
 
-        public Builder length(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Output<Integer> length) {
             this.length = length;
             return this;
         }
 
         public Builder length(@Nullable Integer length) {
-            this.length = Input.ofNullable(length);
+            this.length = Output.ofNullable(length);
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder separator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Output<String> separator) {
             this.separator = separator;
             return this;
         }
 
         public Builder separator(@Nullable String separator) {
-            this.separator = Input.ofNullable(separator);
+            this.separator = Output.ofNullable(separator);
             return this;
         }
         public RandomPetState build() {
