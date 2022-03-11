@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="behavior", required=true)
-      private final Input<LoggingConfigurationFilterBehavior> behavior;
+      private final Output<LoggingConfigurationFilterBehavior> behavior;
 
-    public Input<LoggingConfigurationFilterBehavior> getBehavior() {
+    public Output<LoggingConfigurationFilterBehavior> getBehavior() {
         return this.behavior;
     }
 
@@ -32,9 +32,9 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="conditions", required=true)
-      private final Input<List<LoggingConfigurationConditionArgs>> conditions;
+      private final Output<List<LoggingConfigurationConditionArgs>> conditions;
 
-    public Input<List<LoggingConfigurationConditionArgs>> getConditions() {
+    public Output<List<LoggingConfigurationConditionArgs>> getConditions() {
         return this.conditions;
     }
 
@@ -43,25 +43,25 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requirement", required=true)
-      private final Input<LoggingConfigurationFilterRequirement> requirement;
+      private final Output<LoggingConfigurationFilterRequirement> requirement;
 
-    public Input<LoggingConfigurationFilterRequirement> getRequirement() {
+    public Output<LoggingConfigurationFilterRequirement> getRequirement() {
         return this.requirement;
     }
 
     public LoggingConfigurationFilterArgs(
-        Input<LoggingConfigurationFilterBehavior> behavior,
-        Input<List<LoggingConfigurationConditionArgs>> conditions,
-        Input<LoggingConfigurationFilterRequirement> requirement) {
+        Output<LoggingConfigurationFilterBehavior> behavior,
+        Output<List<LoggingConfigurationConditionArgs>> conditions,
+        Output<LoggingConfigurationFilterRequirement> requirement) {
         this.behavior = Objects.requireNonNull(behavior, "expected parameter 'behavior' to be non-null");
         this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
         this.requirement = Objects.requireNonNull(requirement, "expected parameter 'requirement' to be non-null");
     }
 
     private LoggingConfigurationFilterArgs() {
-        this.behavior = Input.empty();
-        this.conditions = Input.empty();
-        this.requirement = Input.empty();
+        this.behavior = Output.empty();
+        this.conditions = Output.empty();
+        this.requirement = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<LoggingConfigurationFilterBehavior> behavior;
-        private Input<List<LoggingConfigurationConditionArgs>> conditions;
-        private Input<LoggingConfigurationFilterRequirement> requirement;
+        private Output<LoggingConfigurationFilterBehavior> behavior;
+        private Output<List<LoggingConfigurationConditionArgs>> conditions;
+        private Output<LoggingConfigurationFilterRequirement> requirement;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder behavior(Input<LoggingConfigurationFilterBehavior> behavior) {
+        public Builder behavior(Output<LoggingConfigurationFilterBehavior> behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
         public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
-            this.behavior = Input.of(Objects.requireNonNull(behavior));
+            this.behavior = Output.of(Objects.requireNonNull(behavior));
             return this;
         }
 
-        public Builder conditions(Input<List<LoggingConfigurationConditionArgs>> conditions) {
+        public Builder conditions(Output<List<LoggingConfigurationConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
         public Builder conditions(List<LoggingConfigurationConditionArgs> conditions) {
-            this.conditions = Input.of(Objects.requireNonNull(conditions));
+            this.conditions = Output.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder requirement(Input<LoggingConfigurationFilterRequirement> requirement) {
+        public Builder requirement(Output<LoggingConfigurationFilterRequirement> requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
 
         public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
-            this.requirement = Input.of(Objects.requireNonNull(requirement));
+            this.requirement = Output.of(Objects.requireNonNull(requirement));
             return this;
         }
         public LoggingConfigurationFilterArgs build() {

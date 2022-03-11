@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="customerGatewayArn", required=true)
-      private final Input<String> customerGatewayArn;
+      private final Output<String> customerGatewayArn;
 
-    public Input<String> getCustomerGatewayArn() {
+    public Output<String> getCustomerGatewayArn() {
         return this.customerGatewayArn;
     }
 
@@ -30,9 +30,9 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="deviceId", required=true)
-      private final Input<String> deviceId;
+      private final Output<String> deviceId;
 
-    public Input<String> getDeviceId() {
+    public Output<String> getDeviceId() {
         return this.deviceId;
     }
 
@@ -41,9 +41,9 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -52,17 +52,17 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="linkId")
-      private final @Nullable Input<String> linkId;
+      private final @Nullable Output<String> linkId;
 
-    public Input<String> getLinkId() {
-        return this.linkId == null ? Input.empty() : this.linkId;
+    public Output<String> getLinkId() {
+        return this.linkId == null ? Output.empty() : this.linkId;
     }
 
     public CustomerGatewayAssociationArgs(
-        Input<String> customerGatewayArn,
-        Input<String> deviceId,
-        Input<String> globalNetworkId,
-        @Nullable Input<String> linkId) {
+        Output<String> customerGatewayArn,
+        Output<String> deviceId,
+        Output<String> globalNetworkId,
+        @Nullable Output<String> linkId) {
         this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn, "expected parameter 'customerGatewayArn' to be non-null");
         this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
@@ -70,10 +70,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     }
 
     private CustomerGatewayAssociationArgs() {
-        this.customerGatewayArn = Input.empty();
-        this.deviceId = Input.empty();
-        this.globalNetworkId = Input.empty();
-        this.linkId = Input.empty();
+        this.customerGatewayArn = Output.empty();
+        this.deviceId = Output.empty();
+        this.globalNetworkId = Output.empty();
+        this.linkId = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> customerGatewayArn;
-        private Input<String> deviceId;
-        private Input<String> globalNetworkId;
-        private @Nullable Input<String> linkId;
+        private Output<String> customerGatewayArn;
+        private Output<String> deviceId;
+        private Output<String> globalNetworkId;
+        private @Nullable Output<String> linkId;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder customerGatewayArn(Input<String> customerGatewayArn) {
+        public Builder customerGatewayArn(Output<String> customerGatewayArn) {
             this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
             return this;
         }
 
         public Builder customerGatewayArn(String customerGatewayArn) {
-            this.customerGatewayArn = Input.of(Objects.requireNonNull(customerGatewayArn));
+            this.customerGatewayArn = Output.of(Objects.requireNonNull(customerGatewayArn));
             return this;
         }
 
-        public Builder deviceId(Input<String> deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Input.of(Objects.requireNonNull(deviceId));
+            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder linkId(@Nullable Input<String> linkId) {
+        public Builder linkId(@Nullable Output<String> linkId) {
             this.linkId = linkId;
             return this;
         }
 
         public Builder linkId(@Nullable String linkId) {
-            this.linkId = Input.ofNullable(linkId);
+            this.linkId = Output.ofNullable(linkId);
             return this;
         }
         public CustomerGatewayAssociationArgs build() {

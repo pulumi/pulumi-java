@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="magneticStoreRetentionPeriodInDays")
-      private final @Nullable Input<String> magneticStoreRetentionPeriodInDays;
+      private final @Nullable Output<String> magneticStoreRetentionPeriodInDays;
 
-    public Input<String> getMagneticStoreRetentionPeriodInDays() {
-        return this.magneticStoreRetentionPeriodInDays == null ? Input.empty() : this.magneticStoreRetentionPeriodInDays;
+    public Output<String> getMagneticStoreRetentionPeriodInDays() {
+        return this.magneticStoreRetentionPeriodInDays == null ? Output.empty() : this.magneticStoreRetentionPeriodInDays;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="memoryStoreRetentionPeriodInHours")
-      private final @Nullable Input<String> memoryStoreRetentionPeriodInHours;
+      private final @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
-    public Input<String> getMemoryStoreRetentionPeriodInHours() {
-        return this.memoryStoreRetentionPeriodInHours == null ? Input.empty() : this.memoryStoreRetentionPeriodInHours;
+    public Output<String> getMemoryStoreRetentionPeriodInHours() {
+        return this.memoryStoreRetentionPeriodInHours == null ? Output.empty() : this.memoryStoreRetentionPeriodInHours;
     }
 
     public RetentionPropertiesPropertiesArgs(
-        @Nullable Input<String> magneticStoreRetentionPeriodInDays,
-        @Nullable Input<String> memoryStoreRetentionPeriodInHours) {
+        @Nullable Output<String> magneticStoreRetentionPeriodInDays,
+        @Nullable Output<String> memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }
 
     private RetentionPropertiesPropertiesArgs() {
-        this.magneticStoreRetentionPeriodInDays = Input.empty();
-        this.memoryStoreRetentionPeriodInHours = Input.empty();
+        this.magneticStoreRetentionPeriodInDays = Output.empty();
+        this.memoryStoreRetentionPeriodInHours = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> magneticStoreRetentionPeriodInDays;
-        private @Nullable Input<String> memoryStoreRetentionPeriodInHours;
+        private @Nullable Output<String> magneticStoreRetentionPeriodInDays;
+        private @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
     	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
         }
 
-        public Builder magneticStoreRetentionPeriodInDays(@Nullable Input<String> magneticStoreRetentionPeriodInDays) {
+        public Builder magneticStoreRetentionPeriodInDays(@Nullable Output<String> magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
 
         public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = Input.ofNullable(magneticStoreRetentionPeriodInDays);
+            this.magneticStoreRetentionPeriodInDays = Output.ofNullable(magneticStoreRetentionPeriodInDays);
             return this;
         }
 
-        public Builder memoryStoreRetentionPeriodInHours(@Nullable Input<String> memoryStoreRetentionPeriodInHours) {
+        public Builder memoryStoreRetentionPeriodInHours(@Nullable Output<String> memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }
 
         public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = Input.ofNullable(memoryStoreRetentionPeriodInHours);
+            this.memoryStoreRetentionPeriodInHours = Output.ofNullable(memoryStoreRetentionPeriodInHours);
             return this;
         }
         public RetentionPropertiesPropertiesArgs build() {

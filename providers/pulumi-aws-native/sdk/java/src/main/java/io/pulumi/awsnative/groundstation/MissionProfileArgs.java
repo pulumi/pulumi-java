@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation;
 
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileDataflowEdgeArgs;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPostPassDurationSeconds")
-      private final @Nullable Input<Integer> contactPostPassDurationSeconds;
+      private final @Nullable Output<Integer> contactPostPassDurationSeconds;
 
-    public Input<Integer> getContactPostPassDurationSeconds() {
-        return this.contactPostPassDurationSeconds == null ? Input.empty() : this.contactPostPassDurationSeconds;
+    public Output<Integer> getContactPostPassDurationSeconds() {
+        return this.contactPostPassDurationSeconds == null ? Output.empty() : this.contactPostPassDurationSeconds;
     }
 
     /**
@@ -34,16 +34,16 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactPrePassDurationSeconds")
-      private final @Nullable Input<Integer> contactPrePassDurationSeconds;
+      private final @Nullable Output<Integer> contactPrePassDurationSeconds;
 
-    public Input<Integer> getContactPrePassDurationSeconds() {
-        return this.contactPrePassDurationSeconds == null ? Input.empty() : this.contactPrePassDurationSeconds;
+    public Output<Integer> getContactPrePassDurationSeconds() {
+        return this.contactPrePassDurationSeconds == null ? Output.empty() : this.contactPrePassDurationSeconds;
     }
 
     @InputImport(name="dataflowEdges", required=true)
-      private final Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
+      private final Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
 
-    public Input<List<MissionProfileDataflowEdgeArgs>> getDataflowEdges() {
+    public Output<List<MissionProfileDataflowEdgeArgs>> getDataflowEdges() {
         return this.dataflowEdges;
     }
 
@@ -52,9 +52,9 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumViableContactDurationSeconds", required=true)
-      private final Input<Integer> minimumViableContactDurationSeconds;
+      private final Output<Integer> minimumViableContactDurationSeconds;
 
-    public Input<Integer> getMinimumViableContactDurationSeconds() {
+    public Output<Integer> getMinimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
 
@@ -63,34 +63,34 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<MissionProfileTagArgs>> tags;
+      private final @Nullable Output<List<MissionProfileTagArgs>> tags;
 
-    public Input<List<MissionProfileTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<MissionProfileTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="trackingConfigArn", required=true)
-      private final Input<String> trackingConfigArn;
+      private final Output<String> trackingConfigArn;
 
-    public Input<String> getTrackingConfigArn() {
+    public Output<String> getTrackingConfigArn() {
         return this.trackingConfigArn;
     }
 
     public MissionProfileArgs(
-        @Nullable Input<Integer> contactPostPassDurationSeconds,
-        @Nullable Input<Integer> contactPrePassDurationSeconds,
-        Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges,
-        Input<Integer> minimumViableContactDurationSeconds,
-        @Nullable Input<String> name,
-        @Nullable Input<List<MissionProfileTagArgs>> tags,
-        Input<String> trackingConfigArn) {
+        @Nullable Output<Integer> contactPostPassDurationSeconds,
+        @Nullable Output<Integer> contactPrePassDurationSeconds,
+        Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges,
+        Output<Integer> minimumViableContactDurationSeconds,
+        @Nullable Output<String> name,
+        @Nullable Output<List<MissionProfileTagArgs>> tags,
+        Output<String> trackingConfigArn) {
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
         this.dataflowEdges = Objects.requireNonNull(dataflowEdges, "expected parameter 'dataflowEdges' to be non-null");
@@ -101,13 +101,13 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MissionProfileArgs() {
-        this.contactPostPassDurationSeconds = Input.empty();
-        this.contactPrePassDurationSeconds = Input.empty();
-        this.dataflowEdges = Input.empty();
-        this.minimumViableContactDurationSeconds = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
-        this.trackingConfigArn = Input.empty();
+        this.contactPostPassDurationSeconds = Output.empty();
+        this.contactPrePassDurationSeconds = Output.empty();
+        this.dataflowEdges = Output.empty();
+        this.minimumViableContactDurationSeconds = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
+        this.trackingConfigArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,13 +119,13 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> contactPostPassDurationSeconds;
-        private @Nullable Input<Integer> contactPrePassDurationSeconds;
-        private Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
-        private Input<Integer> minimumViableContactDurationSeconds;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<MissionProfileTagArgs>> tags;
-        private Input<String> trackingConfigArn;
+        private @Nullable Output<Integer> contactPostPassDurationSeconds;
+        private @Nullable Output<Integer> contactPrePassDurationSeconds;
+        private Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
+        private Output<Integer> minimumViableContactDurationSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<MissionProfileTagArgs>> tags;
+        private Output<String> trackingConfigArn;
 
         public Builder() {
     	      // Empty
@@ -142,73 +142,73 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackingConfigArn = defaults.trackingConfigArn;
         }
 
-        public Builder contactPostPassDurationSeconds(@Nullable Input<Integer> contactPostPassDurationSeconds) {
+        public Builder contactPostPassDurationSeconds(@Nullable Output<Integer> contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
 
         public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
-            this.contactPostPassDurationSeconds = Input.ofNullable(contactPostPassDurationSeconds);
+            this.contactPostPassDurationSeconds = Output.ofNullable(contactPostPassDurationSeconds);
             return this;
         }
 
-        public Builder contactPrePassDurationSeconds(@Nullable Input<Integer> contactPrePassDurationSeconds) {
+        public Builder contactPrePassDurationSeconds(@Nullable Output<Integer> contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
 
         public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
-            this.contactPrePassDurationSeconds = Input.ofNullable(contactPrePassDurationSeconds);
+            this.contactPrePassDurationSeconds = Output.ofNullable(contactPrePassDurationSeconds);
             return this;
         }
 
-        public Builder dataflowEdges(Input<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
+        public Builder dataflowEdges(Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
             this.dataflowEdges = Objects.requireNonNull(dataflowEdges);
             return this;
         }
 
         public Builder dataflowEdges(List<MissionProfileDataflowEdgeArgs> dataflowEdges) {
-            this.dataflowEdges = Input.of(Objects.requireNonNull(dataflowEdges));
+            this.dataflowEdges = Output.of(Objects.requireNonNull(dataflowEdges));
             return this;
         }
 
-        public Builder minimumViableContactDurationSeconds(Input<Integer> minimumViableContactDurationSeconds) {
+        public Builder minimumViableContactDurationSeconds(Output<Integer> minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = Objects.requireNonNull(minimumViableContactDurationSeconds);
             return this;
         }
 
         public Builder minimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
-            this.minimumViableContactDurationSeconds = Input.of(Objects.requireNonNull(minimumViableContactDurationSeconds));
+            this.minimumViableContactDurationSeconds = Output.of(Objects.requireNonNull(minimumViableContactDurationSeconds));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<MissionProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<MissionProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<MissionProfileTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder trackingConfigArn(Input<String> trackingConfigArn) {
+        public Builder trackingConfigArn(Output<String> trackingConfigArn) {
             this.trackingConfigArn = Objects.requireNonNull(trackingConfigArn);
             return this;
         }
 
         public Builder trackingConfigArn(String trackingConfigArn) {
-            this.trackingConfigArn = Input.of(Objects.requireNonNull(trackingConfigArn));
+            this.trackingConfigArn = Output.of(Objects.requireNonNull(trackingConfigArn));
             return this;
         }
         public MissionProfileArgs build() {

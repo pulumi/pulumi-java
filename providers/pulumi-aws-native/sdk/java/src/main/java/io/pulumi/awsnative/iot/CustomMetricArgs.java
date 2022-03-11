@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import io.pulumi.awsnative.iot.inputs.CustomMetricTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-      private final @Nullable Input<String> metricName;
+      private final @Nullable Output<String> metricName;
 
-    public Input<String> getMetricName() {
-        return this.metricName == null ? Input.empty() : this.metricName;
+    public Output<String> getMetricName() {
+        return this.metricName == null ? Output.empty() : this.metricName;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricType", required=true)
-      private final Input<CustomMetricMetricType> metricType;
+      private final Output<CustomMetricMetricType> metricType;
 
-    public Input<CustomMetricMetricType> getMetricType() {
+    public Output<CustomMetricMetricType> getMetricType() {
         return this.metricType;
     }
 
@@ -55,17 +55,17 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<CustomMetricTagArgs>> tags;
+      private final @Nullable Output<List<CustomMetricTagArgs>> tags;
 
-    public Input<List<CustomMetricTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<CustomMetricTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CustomMetricArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> metricName,
-        Input<CustomMetricMetricType> metricType,
-        @Nullable Input<List<CustomMetricTagArgs>> tags) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> metricName,
+        Output<CustomMetricMetricType> metricType,
+        @Nullable Output<List<CustomMetricTagArgs>> tags) {
         this.displayName = displayName;
         this.metricName = metricName;
         this.metricType = Objects.requireNonNull(metricType, "expected parameter 'metricType' to be non-null");
@@ -73,10 +73,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomMetricArgs() {
-        this.displayName = Input.empty();
-        this.metricName = Input.empty();
-        this.metricType = Input.empty();
-        this.tags = Input.empty();
+        this.displayName = Output.empty();
+        this.metricName = Output.empty();
+        this.metricType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> metricName;
-        private Input<CustomMetricMetricType> metricType;
-        private @Nullable Input<List<CustomMetricTagArgs>> tags;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> metricName;
+        private Output<CustomMetricMetricType> metricType;
+        private @Nullable Output<List<CustomMetricTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder metricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Output<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Input.ofNullable(metricName);
+            this.metricName = Output.ofNullable(metricName);
             return this;
         }
 
-        public Builder metricType(Input<CustomMetricMetricType> metricType) {
+        public Builder metricType(Output<CustomMetricMetricType> metricType) {
             this.metricType = Objects.requireNonNull(metricType);
             return this;
         }
 
         public Builder metricType(CustomMetricMetricType metricType) {
-            this.metricType = Input.of(Objects.requireNonNull(metricType));
+            this.metricType = Output.of(Objects.requireNonNull(metricType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<CustomMetricTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<CustomMetricTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<CustomMetricTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CustomMetricArgs build() {

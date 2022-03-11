@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.TrackerPositionFiltering;
 import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,54 +17,54 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     public static final TrackerArgs Empty = new TrackerArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="positionFiltering")
-      private final @Nullable Input<TrackerPositionFiltering> positionFiltering;
+      private final @Nullable Output<TrackerPositionFiltering> positionFiltering;
 
-    public Input<TrackerPositionFiltering> getPositionFiltering() {
-        return this.positionFiltering == null ? Input.empty() : this.positionFiltering;
+    public Output<TrackerPositionFiltering> getPositionFiltering() {
+        return this.positionFiltering == null ? Output.empty() : this.positionFiltering;
     }
 
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<TrackerPricingPlan> pricingPlan;
+      private final @Nullable Output<TrackerPricingPlan> pricingPlan;
 
-    public Input<TrackerPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<TrackerPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     @InputImport(name="pricingPlanDataSource")
-      private final @Nullable Input<String> pricingPlanDataSource;
+      private final @Nullable Output<String> pricingPlanDataSource;
 
-    public Input<String> getPricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Input.empty() : this.pricingPlanDataSource;
+    public Output<String> getPricingPlanDataSource() {
+        return this.pricingPlanDataSource == null ? Output.empty() : this.pricingPlanDataSource;
     }
 
     @InputImport(name="trackerName")
-      private final @Nullable Input<String> trackerName;
+      private final @Nullable Output<String> trackerName;
 
-    public Input<String> getTrackerName() {
-        return this.trackerName == null ? Input.empty() : this.trackerName;
+    public Output<String> getTrackerName() {
+        return this.trackerName == null ? Output.empty() : this.trackerName;
     }
 
     public TrackerArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<TrackerPositionFiltering> positionFiltering,
-        @Nullable Input<TrackerPricingPlan> pricingPlan,
-        @Nullable Input<String> pricingPlanDataSource,
-        @Nullable Input<String> trackerName) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<TrackerPositionFiltering> positionFiltering,
+        @Nullable Output<TrackerPricingPlan> pricingPlan,
+        @Nullable Output<String> pricingPlanDataSource,
+        @Nullable Output<String> trackerName) {
         this.description = description;
         this.kmsKeyId = kmsKeyId;
         this.positionFiltering = positionFiltering;
@@ -74,12 +74,12 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrackerArgs() {
-        this.description = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.positionFiltering = Input.empty();
-        this.pricingPlan = Input.empty();
-        this.pricingPlanDataSource = Input.empty();
-        this.trackerName = Input.empty();
+        this.description = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.positionFiltering = Output.empty();
+        this.pricingPlan = Output.empty();
+        this.pricingPlanDataSource = Output.empty();
+        this.trackerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<TrackerPositionFiltering> positionFiltering;
-        private @Nullable Input<TrackerPricingPlan> pricingPlan;
-        private @Nullable Input<String> pricingPlanDataSource;
-        private @Nullable Input<String> trackerName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<TrackerPositionFiltering> positionFiltering;
+        private @Nullable Output<TrackerPricingPlan> pricingPlan;
+        private @Nullable Output<String> pricingPlanDataSource;
+        private @Nullable Output<String> trackerName;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackerName = defaults.trackerName;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder positionFiltering(@Nullable Input<TrackerPositionFiltering> positionFiltering) {
+        public Builder positionFiltering(@Nullable Output<TrackerPositionFiltering> positionFiltering) {
             this.positionFiltering = positionFiltering;
             return this;
         }
 
         public Builder positionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
-            this.positionFiltering = Input.ofNullable(positionFiltering);
+            this.positionFiltering = Output.ofNullable(positionFiltering);
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<TrackerPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<TrackerPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder pricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
 
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Input.ofNullable(pricingPlanDataSource);
+            this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
             return this;
         }
 
-        public Builder trackerName(@Nullable Input<String> trackerName) {
+        public Builder trackerName(@Nullable Output<String> trackerName) {
             this.trackerName = trackerName;
             return this;
         }
 
         public Builder trackerName(@Nullable String trackerName) {
-            this.trackerName = Input.ofNullable(trackerName);
+            this.trackerName = Output.ofNullable(trackerName);
             return this;
         }
         public TrackerArgs build() {

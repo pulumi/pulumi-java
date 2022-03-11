@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kafkaBootstrapServers")
-      private final @Nullable Input<List<String>> kafkaBootstrapServers;
+      private final @Nullable Output<List<String>> kafkaBootstrapServers;
 
-    public Input<List<String>> getKafkaBootstrapServers() {
-        return this.kafkaBootstrapServers == null ? Input.empty() : this.kafkaBootstrapServers;
+    public Output<List<String>> getKafkaBootstrapServers() {
+        return this.kafkaBootstrapServers == null ? Output.empty() : this.kafkaBootstrapServers;
     }
 
-    public EventSourceMappingEndpointsArgs(@Nullable Input<List<String>> kafkaBootstrapServers) {
+    public EventSourceMappingEndpointsArgs(@Nullable Output<List<String>> kafkaBootstrapServers) {
         this.kafkaBootstrapServers = kafkaBootstrapServers;
     }
 
     private EventSourceMappingEndpointsArgs() {
-        this.kafkaBootstrapServers = Input.empty();
+        this.kafkaBootstrapServers = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> kafkaBootstrapServers;
+        private @Nullable Output<List<String>> kafkaBootstrapServers;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     	      this.kafkaBootstrapServers = defaults.kafkaBootstrapServers;
         }
 
-        public Builder kafkaBootstrapServers(@Nullable Input<List<String>> kafkaBootstrapServers) {
+        public Builder kafkaBootstrapServers(@Nullable Output<List<String>> kafkaBootstrapServers) {
             this.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
 
         public Builder kafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
-            this.kafkaBootstrapServers = Input.ofNullable(kafkaBootstrapServers);
+            this.kafkaBootstrapServers = Output.ofNullable(kafkaBootstrapServers);
             return this;
         }
         public EventSourceMappingEndpointsArgs build() {

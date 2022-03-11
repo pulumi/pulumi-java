@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     public static final SecurityProfileBehaviorArgs Empty = new SecurityProfileBehaviorArgs();
 
     @InputImport(name="criteria")
-      private final @Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria;
+      private final @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
 
-    public Input<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
-        return this.criteria == null ? Input.empty() : this.criteria;
+    public Output<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
+        return this.criteria == null ? Output.empty() : this.criteria;
     }
 
     /**
@@ -33,17 +33,17 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metric")
-      private final @Nullable Input<String> metric;
+      private final @Nullable Output<String> metric;
 
-    public Input<String> getMetric() {
-        return this.metric == null ? Input.empty() : this.metric;
+    public Output<String> getMetric() {
+        return this.metric == null ? Output.empty() : this.metric;
     }
 
     @InputImport(name="metricDimension")
-      private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+      private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Input<SecurityProfileMetricDimensionArgs> getMetricDimension() {
-        return this.metricDimension == null ? Input.empty() : this.metricDimension;
+    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
+        return this.metricDimension == null ? Output.empty() : this.metricDimension;
     }
 
     /**
@@ -51,9 +51,9 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -62,18 +62,18 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="suppressAlerts")
-      private final @Nullable Input<Boolean> suppressAlerts;
+      private final @Nullable Output<Boolean> suppressAlerts;
 
-    public Input<Boolean> getSuppressAlerts() {
-        return this.suppressAlerts == null ? Input.empty() : this.suppressAlerts;
+    public Output<Boolean> getSuppressAlerts() {
+        return this.suppressAlerts == null ? Output.empty() : this.suppressAlerts;
     }
 
     public SecurityProfileBehaviorArgs(
-        @Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria,
-        @Nullable Input<String> metric,
-        @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension,
-        Input<String> name,
-        @Nullable Input<Boolean> suppressAlerts) {
+        @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria,
+        @Nullable Output<String> metric,
+        @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension,
+        Output<String> name,
+        @Nullable Output<Boolean> suppressAlerts) {
         this.criteria = criteria;
         this.metric = metric;
         this.metricDimension = metricDimension;
@@ -82,11 +82,11 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     }
 
     private SecurityProfileBehaviorArgs() {
-        this.criteria = Input.empty();
-        this.metric = Input.empty();
-        this.metricDimension = Input.empty();
-        this.name = Input.empty();
-        this.suppressAlerts = Input.empty();
+        this.criteria = Output.empty();
+        this.metric = Output.empty();
+        this.metricDimension = Output.empty();
+        this.name = Output.empty();
+        this.suppressAlerts = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria;
-        private @Nullable Input<String> metric;
-        private @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
-        private Input<String> name;
-        private @Nullable Input<Boolean> suppressAlerts;
+        private @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
+        private @Nullable Output<String> metric;
+        private @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
+        private Output<String> name;
+        private @Nullable Output<Boolean> suppressAlerts;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     	      this.suppressAlerts = defaults.suppressAlerts;
         }
 
-        public Builder criteria(@Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria) {
+        public Builder criteria(@Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria) {
             this.criteria = criteria;
             return this;
         }
 
         public Builder criteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
-            this.criteria = Input.ofNullable(criteria);
+            this.criteria = Output.ofNullable(criteria);
             return this;
         }
 
-        public Builder metric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Output<String> metric) {
             this.metric = metric;
             return this;
         }
 
         public Builder metric(@Nullable String metric) {
-            this.metric = Input.ofNullable(metric);
+            this.metric = Output.ofNullable(metric);
             return this;
         }
 
-        public Builder metricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
+        public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
         public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Input.ofNullable(metricDimension);
+            this.metricDimension = Output.ofNullable(metricDimension);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder suppressAlerts(@Nullable Input<Boolean> suppressAlerts) {
+        public Builder suppressAlerts(@Nullable Output<Boolean> suppressAlerts) {
             this.suppressAlerts = suppressAlerts;
             return this;
         }
 
         public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
-            this.suppressAlerts = Input.ofNullable(suppressAlerts);
+            this.suppressAlerts = Output.ofNullable(suppressAlerts);
             return this;
         }
         public SecurityProfileBehaviorArgs build() {

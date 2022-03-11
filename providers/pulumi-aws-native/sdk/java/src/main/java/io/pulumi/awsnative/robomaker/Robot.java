@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.robomaker.RobotArgs;
 import io.pulumi.awsnative.robomaker.enums.RobotArchitecture;
 import io.pulumi.awsnative.robomaker.outputs.RobotTags;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,14 +126,14 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Robot(String name, RobotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Robot(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Robot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:robomaker:Robot", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -149,7 +148,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Robot get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Robot get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Robot(name, id, options);
     }
 }

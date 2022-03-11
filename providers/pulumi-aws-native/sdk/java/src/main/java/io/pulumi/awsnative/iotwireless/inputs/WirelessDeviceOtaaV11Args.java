@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class WirelessDeviceOtaaV11Args extends io.pulumi.resources.Resourc
     public static final WirelessDeviceOtaaV11Args Empty = new WirelessDeviceOtaaV11Args();
 
     @InputImport(name="appKey", required=true)
-      private final Input<String> appKey;
+      private final Output<String> appKey;
 
-    public Input<String> getAppKey() {
+    public Output<String> getAppKey() {
         return this.appKey;
     }
 
     @InputImport(name="joinEui", required=true)
-      private final Input<String> joinEui;
+      private final Output<String> joinEui;
 
-    public Input<String> getJoinEui() {
+    public Output<String> getJoinEui() {
         return this.joinEui;
     }
 
     @InputImport(name="nwkKey", required=true)
-      private final Input<String> nwkKey;
+      private final Output<String> nwkKey;
 
-    public Input<String> getNwkKey() {
+    public Output<String> getNwkKey() {
         return this.nwkKey;
     }
 
     public WirelessDeviceOtaaV11Args(
-        Input<String> appKey,
-        Input<String> joinEui,
-        Input<String> nwkKey) {
+        Output<String> appKey,
+        Output<String> joinEui,
+        Output<String> nwkKey) {
         this.appKey = Objects.requireNonNull(appKey, "expected parameter 'appKey' to be non-null");
         this.joinEui = Objects.requireNonNull(joinEui, "expected parameter 'joinEui' to be non-null");
         this.nwkKey = Objects.requireNonNull(nwkKey, "expected parameter 'nwkKey' to be non-null");
     }
 
     private WirelessDeviceOtaaV11Args() {
-        this.appKey = Input.empty();
-        this.joinEui = Input.empty();
-        this.nwkKey = Input.empty();
+        this.appKey = Output.empty();
+        this.joinEui = Output.empty();
+        this.nwkKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class WirelessDeviceOtaaV11Args extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> appKey;
-        private Input<String> joinEui;
-        private Input<String> nwkKey;
+        private Output<String> appKey;
+        private Output<String> joinEui;
+        private Output<String> nwkKey;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class WirelessDeviceOtaaV11Args extends io.pulumi.resources.Resourc
     	      this.nwkKey = defaults.nwkKey;
         }
 
-        public Builder appKey(Input<String> appKey) {
+        public Builder appKey(Output<String> appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
         public Builder appKey(String appKey) {
-            this.appKey = Input.of(Objects.requireNonNull(appKey));
+            this.appKey = Output.of(Objects.requireNonNull(appKey));
             return this;
         }
 
-        public Builder joinEui(Input<String> joinEui) {
+        public Builder joinEui(Output<String> joinEui) {
             this.joinEui = Objects.requireNonNull(joinEui);
             return this;
         }
 
         public Builder joinEui(String joinEui) {
-            this.joinEui = Input.of(Objects.requireNonNull(joinEui));
+            this.joinEui = Output.of(Objects.requireNonNull(joinEui));
             return this;
         }
 
-        public Builder nwkKey(Input<String> nwkKey) {
+        public Builder nwkKey(Output<String> nwkKey) {
             this.nwkKey = Objects.requireNonNull(nwkKey);
             return this;
         }
 
         public Builder nwkKey(String nwkKey) {
-            this.nwkKey = Input.of(Objects.requireNonNull(nwkKey));
+            this.nwkKey = Output.of(Objects.requireNonNull(nwkKey));
             return this;
         }
         public WirelessDeviceOtaaV11Args build() {

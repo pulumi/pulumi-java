@@ -11,7 +11,6 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorEventType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorModel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorRule;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -216,14 +215,14 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Detector(String name, DetectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:frauddetector:Detector", name, args == null ? DetectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:frauddetector:Detector", name, args == null ? DetectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Detector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Detector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:frauddetector:Detector", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -238,7 +237,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Detector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Detector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Detector(name, id, options);
     }
 }

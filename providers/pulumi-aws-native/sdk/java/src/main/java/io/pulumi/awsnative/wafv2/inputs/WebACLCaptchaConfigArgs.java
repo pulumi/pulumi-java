@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLImmunityTimePropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
     public static final WebACLCaptchaConfigArgs Empty = new WebACLCaptchaConfigArgs();
 
     @InputImport(name="immunityTimeProperty")
-      private final @Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
+      private final @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
 
-    public Input<WebACLImmunityTimePropertyArgs> getImmunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Input.empty() : this.immunityTimeProperty;
+    public Output<WebACLImmunityTimePropertyArgs> getImmunityTimeProperty() {
+        return this.immunityTimeProperty == null ? Output.empty() : this.immunityTimeProperty;
     }
 
-    public WebACLCaptchaConfigArgs(@Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
+    public WebACLCaptchaConfigArgs(@Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
     private WebACLCaptchaConfigArgs() {
-        this.immunityTimeProperty = Input.empty();
+        this.immunityTimeProperty = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
+        private @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder immunityTimeProperty(@Nullable Input<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }
 
         public Builder immunityTimeProperty(@Nullable WebACLImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Input.ofNullable(immunityTimeProperty);
+            this.immunityTimeProperty = Output.ofNullable(immunityTimeProperty);
             return this;
         }
         public WebACLCaptchaConfigArgs build() {

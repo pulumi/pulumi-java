@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     public static final DistributionOriginGroupsArgs Empty = new DistributionOriginGroupsArgs();
 
     @InputImport(name="items")
-      private final @Nullable Input<List<DistributionOriginGroupArgs>> items;
+      private final @Nullable Output<List<DistributionOriginGroupArgs>> items;
 
-    public Input<List<DistributionOriginGroupArgs>> getItems() {
-        return this.items == null ? Input.empty() : this.items;
+    public Output<List<DistributionOriginGroupArgs>> getItems() {
+        return this.items == null ? Output.empty() : this.items;
     }
 
     @InputImport(name="quantity", required=true)
-      private final Input<Integer> quantity;
+      private final Output<Integer> quantity;
 
-    public Input<Integer> getQuantity() {
+    public Output<Integer> getQuantity() {
         return this.quantity;
     }
 
     public DistributionOriginGroupsArgs(
-        @Nullable Input<List<DistributionOriginGroupArgs>> items,
-        Input<Integer> quantity) {
+        @Nullable Output<List<DistributionOriginGroupArgs>> items,
+        Output<Integer> quantity) {
         this.items = items;
         this.quantity = Objects.requireNonNull(quantity, "expected parameter 'quantity' to be non-null");
     }
 
     private DistributionOriginGroupsArgs() {
-        this.items = Input.empty();
-        this.quantity = Input.empty();
+        this.items = Output.empty();
+        this.quantity = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DistributionOriginGroupArgs>> items;
-        private Input<Integer> quantity;
+        private @Nullable Output<List<DistributionOriginGroupArgs>> items;
+        private Output<Integer> quantity;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DistributionOriginGroupsArgs extends io.pulumi.resources.Reso
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder items(@Nullable Input<List<DistributionOriginGroupArgs>> items) {
+        public Builder items(@Nullable Output<List<DistributionOriginGroupArgs>> items) {
             this.items = items;
             return this;
         }
 
         public Builder items(@Nullable List<DistributionOriginGroupArgs> items) {
-            this.items = Input.ofNullable(items);
+            this.items = Output.ofNullable(items);
             return this;
         }
 
-        public Builder quantity(Input<Integer> quantity) {
+        public Builder quantity(Output<Integer> quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
 
         public Builder quantity(Integer quantity) {
-            this.quantity = Input.of(Objects.requireNonNull(quantity));
+            this.quantity = Output.of(Objects.requireNonNull(quantity));
             return this;
         }
         public DistributionOriginGroupsArgs build() {

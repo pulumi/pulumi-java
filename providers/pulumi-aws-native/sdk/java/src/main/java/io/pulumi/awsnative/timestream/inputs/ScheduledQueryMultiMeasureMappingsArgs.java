@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryMultiMeasureAttributeMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,29 +21,29 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     public static final ScheduledQueryMultiMeasureMappingsArgs Empty = new ScheduledQueryMultiMeasureMappingsArgs();
 
     @InputImport(name="multiMeasureAttributeMappings", required=true)
-      private final Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
+      private final Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
 
-    public Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
+    public Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> getMultiMeasureAttributeMappings() {
         return this.multiMeasureAttributeMappings;
     }
 
     @InputImport(name="targetMultiMeasureName")
-      private final @Nullable Input<String> targetMultiMeasureName;
+      private final @Nullable Output<String> targetMultiMeasureName;
 
-    public Input<String> getTargetMultiMeasureName() {
-        return this.targetMultiMeasureName == null ? Input.empty() : this.targetMultiMeasureName;
+    public Output<String> getTargetMultiMeasureName() {
+        return this.targetMultiMeasureName == null ? Output.empty() : this.targetMultiMeasureName;
     }
 
     public ScheduledQueryMultiMeasureMappingsArgs(
-        Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings,
-        @Nullable Input<String> targetMultiMeasureName) {
+        Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings,
+        @Nullable Output<String> targetMultiMeasureName) {
         this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings, "expected parameter 'multiMeasureAttributeMappings' to be non-null");
         this.targetMultiMeasureName = targetMultiMeasureName;
     }
 
     private ScheduledQueryMultiMeasureMappingsArgs() {
-        this.multiMeasureAttributeMappings = Input.empty();
-        this.targetMultiMeasureName = Input.empty();
+        this.multiMeasureAttributeMappings = Output.empty();
+        this.targetMultiMeasureName = Output.empty();
     }
 
     public static Builder builder() {
@@ -55,8 +55,8 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
-        private @Nullable Input<String> targetMultiMeasureName;
+        private Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings;
+        private @Nullable Output<String> targetMultiMeasureName;
 
         public Builder() {
     	      // Empty
@@ -68,23 +68,23 @@ public final class ScheduledQueryMultiMeasureMappingsArgs extends io.pulumi.reso
     	      this.targetMultiMeasureName = defaults.targetMultiMeasureName;
         }
 
-        public Builder multiMeasureAttributeMappings(Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(Output<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
             return this;
         }
 
         public Builder multiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
-            this.multiMeasureAttributeMappings = Input.of(Objects.requireNonNull(multiMeasureAttributeMappings));
+            this.multiMeasureAttributeMappings = Output.of(Objects.requireNonNull(multiMeasureAttributeMappings));
             return this;
         }
 
-        public Builder targetMultiMeasureName(@Nullable Input<String> targetMultiMeasureName) {
+        public Builder targetMultiMeasureName(@Nullable Output<String> targetMultiMeasureName) {
             this.targetMultiMeasureName = targetMultiMeasureName;
             return this;
         }
 
         public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
-            this.targetMultiMeasureName = Input.ofNullable(targetMultiMeasureName);
+            this.targetMultiMeasureName = Output.ofNullable(targetMultiMeasureName);
             return this;
         }
         public ScheduledQueryMultiMeasureMappingsArgs build() {

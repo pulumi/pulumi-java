@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.IndexOrder;
 import io.pulumi.awsnative.kendra.inputs.IndexValueImportanceItemArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -20,46 +20,46 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexRelevanceArgs Empty = new IndexRelevanceArgs();
 
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     @InputImport(name="freshness")
-      private final @Nullable Input<Boolean> freshness;
+      private final @Nullable Output<Boolean> freshness;
 
-    public Input<Boolean> getFreshness() {
-        return this.freshness == null ? Input.empty() : this.freshness;
+    public Output<Boolean> getFreshness() {
+        return this.freshness == null ? Output.empty() : this.freshness;
     }
 
     @InputImport(name="importance")
-      private final @Nullable Input<Integer> importance;
+      private final @Nullable Output<Integer> importance;
 
-    public Input<Integer> getImportance() {
-        return this.importance == null ? Input.empty() : this.importance;
+    public Output<Integer> getImportance() {
+        return this.importance == null ? Output.empty() : this.importance;
     }
 
     @InputImport(name="rankOrder")
-      private final @Nullable Input<IndexOrder> rankOrder;
+      private final @Nullable Output<IndexOrder> rankOrder;
 
-    public Input<IndexOrder> getRankOrder() {
-        return this.rankOrder == null ? Input.empty() : this.rankOrder;
+    public Output<IndexOrder> getRankOrder() {
+        return this.rankOrder == null ? Output.empty() : this.rankOrder;
     }
 
     @InputImport(name="valueImportanceItems")
-      private final @Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems;
+      private final @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
-    public Input<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {
-        return this.valueImportanceItems == null ? Input.empty() : this.valueImportanceItems;
+    public Output<List<IndexValueImportanceItemArgs>> getValueImportanceItems() {
+        return this.valueImportanceItems == null ? Output.empty() : this.valueImportanceItems;
     }
 
     public IndexRelevanceArgs(
-        @Nullable Input<String> duration,
-        @Nullable Input<Boolean> freshness,
-        @Nullable Input<Integer> importance,
-        @Nullable Input<IndexOrder> rankOrder,
-        @Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
+        @Nullable Output<String> duration,
+        @Nullable Output<Boolean> freshness,
+        @Nullable Output<Integer> importance,
+        @Nullable Output<IndexOrder> rankOrder,
+        @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
         this.duration = duration;
         this.freshness = freshness;
         this.importance = importance;
@@ -68,11 +68,11 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexRelevanceArgs() {
-        this.duration = Input.empty();
-        this.freshness = Input.empty();
-        this.importance = Input.empty();
-        this.rankOrder = Input.empty();
-        this.valueImportanceItems = Input.empty();
+        this.duration = Output.empty();
+        this.freshness = Output.empty();
+        this.importance = Output.empty();
+        this.rankOrder = Output.empty();
+        this.valueImportanceItems = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,11 +84,11 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> duration;
-        private @Nullable Input<Boolean> freshness;
-        private @Nullable Input<Integer> importance;
-        private @Nullable Input<IndexOrder> rankOrder;
-        private @Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems;
+        private @Nullable Output<String> duration;
+        private @Nullable Output<Boolean> freshness;
+        private @Nullable Output<Integer> importance;
+        private @Nullable Output<IndexOrder> rankOrder;
+        private @Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems;
 
         public Builder() {
     	      // Empty
@@ -103,53 +103,53 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueImportanceItems = defaults.valueImportanceItems;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder freshness(@Nullable Input<Boolean> freshness) {
+        public Builder freshness(@Nullable Output<Boolean> freshness) {
             this.freshness = freshness;
             return this;
         }
 
         public Builder freshness(@Nullable Boolean freshness) {
-            this.freshness = Input.ofNullable(freshness);
+            this.freshness = Output.ofNullable(freshness);
             return this;
         }
 
-        public Builder importance(@Nullable Input<Integer> importance) {
+        public Builder importance(@Nullable Output<Integer> importance) {
             this.importance = importance;
             return this;
         }
 
         public Builder importance(@Nullable Integer importance) {
-            this.importance = Input.ofNullable(importance);
+            this.importance = Output.ofNullable(importance);
             return this;
         }
 
-        public Builder rankOrder(@Nullable Input<IndexOrder> rankOrder) {
+        public Builder rankOrder(@Nullable Output<IndexOrder> rankOrder) {
             this.rankOrder = rankOrder;
             return this;
         }
 
         public Builder rankOrder(@Nullable IndexOrder rankOrder) {
-            this.rankOrder = Input.ofNullable(rankOrder);
+            this.rankOrder = Output.ofNullable(rankOrder);
             return this;
         }
 
-        public Builder valueImportanceItems(@Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
+        public Builder valueImportanceItems(@Nullable Output<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
 
         public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
-            this.valueImportanceItems = Input.ofNullable(valueImportanceItems);
+            this.valueImportanceItems = Output.ofNullable(valueImportanceItems);
             return this;
         }
         public IndexRelevanceArgs build() {

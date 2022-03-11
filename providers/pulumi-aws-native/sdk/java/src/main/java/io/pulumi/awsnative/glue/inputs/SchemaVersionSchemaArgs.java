@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registryName")
-      private final @Nullable Input<String> registryName;
+      private final @Nullable Output<String> registryName;
 
-    public Input<String> getRegistryName() {
-        return this.registryName == null ? Input.empty() : this.registryName;
+    public Output<String> getRegistryName() {
+        return this.registryName == null ? Output.empty() : this.registryName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaArn")
-      private final @Nullable Input<String> schemaArn;
+      private final @Nullable Output<String> schemaArn;
 
-    public Input<String> getSchemaArn() {
-        return this.schemaArn == null ? Input.empty() : this.schemaArn;
+    public Output<String> getSchemaArn() {
+        return this.schemaArn == null ? Output.empty() : this.schemaArn;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     public SchemaVersionSchemaArgs(
-        @Nullable Input<String> registryName,
-        @Nullable Input<String> schemaArn,
-        @Nullable Input<String> schemaName) {
+        @Nullable Output<String> registryName,
+        @Nullable Output<String> schemaArn,
+        @Nullable Output<String> schemaName) {
         this.registryName = registryName;
         this.schemaArn = schemaArn;
         this.schemaName = schemaName;
     }
 
     private SchemaVersionSchemaArgs() {
-        this.registryName = Input.empty();
-        this.schemaArn = Input.empty();
-        this.schemaName = Input.empty();
+        this.registryName = Output.empty();
+        this.schemaArn = Output.empty();
+        this.schemaName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> registryName;
-        private @Nullable Input<String> schemaArn;
-        private @Nullable Input<String> schemaName;
+        private @Nullable Output<String> registryName;
+        private @Nullable Output<String> schemaArn;
+        private @Nullable Output<String> schemaName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
     	      this.schemaName = defaults.schemaName;
         }
 
-        public Builder registryName(@Nullable Input<String> registryName) {
+        public Builder registryName(@Nullable Output<String> registryName) {
             this.registryName = registryName;
             return this;
         }
 
         public Builder registryName(@Nullable String registryName) {
-            this.registryName = Input.ofNullable(registryName);
+            this.registryName = Output.ofNullable(registryName);
             return this;
         }
 
-        public Builder schemaArn(@Nullable Input<String> schemaArn) {
+        public Builder schemaArn(@Nullable Output<String> schemaArn) {
             this.schemaArn = schemaArn;
             return this;
         }
 
         public Builder schemaArn(@Nullable String schemaArn) {
-            this.schemaArn = Input.ofNullable(schemaArn);
+            this.schemaArn = Output.ofNullable(schemaArn);
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
         public SchemaVersionSchemaArgs build() {

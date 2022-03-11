@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="hostPort")
-      private final @Nullable Input<String> hostPort;
+      private final @Nullable Output<String> hostPort;
 
-    public Input<String> getHostPort() {
-        return this.hostPort == null ? Input.empty() : this.hostPort;
+    public Output<String> getHostPort() {
+        return this.hostPort == null ? Output.empty() : this.hostPort;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jMXURL")
-      private final @Nullable Input<String> jMXURL;
+      private final @Nullable Output<String> jMXURL;
 
-    public Input<String> getJMXURL() {
-        return this.jMXURL == null ? Input.empty() : this.jMXURL;
+    public Output<String> getJMXURL() {
+        return this.jMXURL == null ? Output.empty() : this.jMXURL;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="prometheusPort")
-      private final @Nullable Input<String> prometheusPort;
+      private final @Nullable Output<String> prometheusPort;
 
-    public Input<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
+    public Output<String> getPrometheusPort() {
+        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
     }
 
     public ApplicationJMXPrometheusExporterArgs(
-        @Nullable Input<String> hostPort,
-        @Nullable Input<String> jMXURL,
-        @Nullable Input<String> prometheusPort) {
+        @Nullable Output<String> hostPort,
+        @Nullable Output<String> jMXURL,
+        @Nullable Output<String> prometheusPort) {
         this.hostPort = hostPort;
         this.jMXURL = jMXURL;
         this.prometheusPort = prometheusPort;
     }
 
     private ApplicationJMXPrometheusExporterArgs() {
-        this.hostPort = Input.empty();
-        this.jMXURL = Input.empty();
-        this.prometheusPort = Input.empty();
+        this.hostPort = Output.empty();
+        this.jMXURL = Output.empty();
+        this.prometheusPort = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostPort;
-        private @Nullable Input<String> jMXURL;
-        private @Nullable Input<String> prometheusPort;
+        private @Nullable Output<String> hostPort;
+        private @Nullable Output<String> jMXURL;
+        private @Nullable Output<String> prometheusPort;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder hostPort(@Nullable Input<String> hostPort) {
+        public Builder hostPort(@Nullable Output<String> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
         public Builder hostPort(@Nullable String hostPort) {
-            this.hostPort = Input.ofNullable(hostPort);
+            this.hostPort = Output.ofNullable(hostPort);
             return this;
         }
 
-        public Builder jMXURL(@Nullable Input<String> jMXURL) {
+        public Builder jMXURL(@Nullable Output<String> jMXURL) {
             this.jMXURL = jMXURL;
             return this;
         }
 
         public Builder jMXURL(@Nullable String jMXURL) {
-            this.jMXURL = Input.ofNullable(jMXURL);
+            this.jMXURL = Output.ofNullable(jMXURL);
             return this;
         }
 
-        public Builder prometheusPort(@Nullable Input<String> prometheusPort) {
+        public Builder prometheusPort(@Nullable Output<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
 
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Input.ofNullable(prometheusPort);
+            this.prometheusPort = Output.ofNullable(prometheusPort);
             return this;
         }
         public ApplicationJMXPrometheusExporterArgs build() {

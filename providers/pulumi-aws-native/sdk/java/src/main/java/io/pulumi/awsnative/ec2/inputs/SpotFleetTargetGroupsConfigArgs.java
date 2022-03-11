@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     public static final SpotFleetTargetGroupsConfigArgs Empty = new SpotFleetTargetGroupsConfigArgs();
 
     @InputImport(name="targetGroups", required=true)
-      private final Input<List<SpotFleetTargetGroupArgs>> targetGroups;
+      private final Output<List<SpotFleetTargetGroupArgs>> targetGroups;
 
-    public Input<List<SpotFleetTargetGroupArgs>> getTargetGroups() {
+    public Output<List<SpotFleetTargetGroupArgs>> getTargetGroups() {
         return this.targetGroups;
     }
 
-    public SpotFleetTargetGroupsConfigArgs(Input<List<SpotFleetTargetGroupArgs>> targetGroups) {
+    public SpotFleetTargetGroupsConfigArgs(Output<List<SpotFleetTargetGroupArgs>> targetGroups) {
         this.targetGroups = Objects.requireNonNull(targetGroups, "expected parameter 'targetGroups' to be non-null");
     }
 
     private SpotFleetTargetGroupsConfigArgs() {
-        this.targetGroups = Input.empty();
+        this.targetGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<SpotFleetTargetGroupArgs>> targetGroups;
+        private Output<List<SpotFleetTargetGroupArgs>> targetGroups;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class SpotFleetTargetGroupsConfigArgs extends io.pulumi.resources.R
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder targetGroups(Input<List<SpotFleetTargetGroupArgs>> targetGroups) {
+        public Builder targetGroups(Output<List<SpotFleetTargetGroupArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
         public Builder targetGroups(List<SpotFleetTargetGroupArgs> targetGroups) {
-            this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
+            this.targetGroups = Output.of(Objects.requireNonNull(targetGroups));
             return this;
         }
         public SpotFleetTargetGroupsConfigArgs build() {

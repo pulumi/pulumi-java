@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3InputFileLocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     public static final WorkflowInputFileLocationArgs Empty = new WorkflowInputFileLocationArgs();
 
     @InputImport(name="s3FileLocation")
-      private final @Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation;
+      private final @Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
-    public Input<WorkflowS3InputFileLocationArgs> getS3FileLocation() {
-        return this.s3FileLocation == null ? Input.empty() : this.s3FileLocation;
+    public Output<WorkflowS3InputFileLocationArgs> getS3FileLocation() {
+        return this.s3FileLocation == null ? Output.empty() : this.s3FileLocation;
     }
 
-    public WorkflowInputFileLocationArgs(@Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation) {
+    public WorkflowInputFileLocationArgs(@Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation) {
         this.s3FileLocation = s3FileLocation;
     }
 
     private WorkflowInputFileLocationArgs() {
-        this.s3FileLocation = Input.empty();
+        this.s3FileLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation;
+        private @Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     	      this.s3FileLocation = defaults.s3FileLocation;
         }
 
-        public Builder s3FileLocation(@Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation) {
+        public Builder s3FileLocation(@Nullable Output<WorkflowS3InputFileLocationArgs> s3FileLocation) {
             this.s3FileLocation = s3FileLocation;
             return this;
         }
 
         public Builder s3FileLocation(@Nullable WorkflowS3InputFileLocationArgs s3FileLocation) {
-            this.s3FileLocation = Input.ofNullable(s3FileLocation);
+            this.s3FileLocation = Output.ofNullable(s3FileLocation);
             return this;
         }
         public WorkflowInputFileLocationArgs build() {

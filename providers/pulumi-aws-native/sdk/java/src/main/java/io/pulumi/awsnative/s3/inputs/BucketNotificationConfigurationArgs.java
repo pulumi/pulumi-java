@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketEventBridgeConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketLambdaConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,38 +23,38 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     public static final BucketNotificationConfigurationArgs Empty = new BucketNotificationConfigurationArgs();
 
     @InputImport(name="eventBridgeConfiguration")
-      private final @Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
+      private final @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
-    public Input<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
-        return this.eventBridgeConfiguration == null ? Input.empty() : this.eventBridgeConfiguration;
+    public Output<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
+        return this.eventBridgeConfiguration == null ? Output.empty() : this.eventBridgeConfiguration;
     }
 
     @InputImport(name="lambdaConfigurations")
-      private final @Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
+      private final @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
-    public Input<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
-        return this.lambdaConfigurations == null ? Input.empty() : this.lambdaConfigurations;
+    public Output<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
+        return this.lambdaConfigurations == null ? Output.empty() : this.lambdaConfigurations;
     }
 
     @InputImport(name="queueConfigurations")
-      private final @Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations;
+      private final @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
-    public Input<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
-        return this.queueConfigurations == null ? Input.empty() : this.queueConfigurations;
+    public Output<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
+        return this.queueConfigurations == null ? Output.empty() : this.queueConfigurations;
     }
 
     @InputImport(name="topicConfigurations")
-      private final @Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations;
+      private final @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
-    public Input<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {
-        return this.topicConfigurations == null ? Input.empty() : this.topicConfigurations;
+    public Output<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {
+        return this.topicConfigurations == null ? Output.empty() : this.topicConfigurations;
     }
 
     public BucketNotificationConfigurationArgs(
-        @Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration,
-        @Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations,
-        @Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations,
-        @Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations) {
+        @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration,
+        @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations,
+        @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations,
+        @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations) {
         this.eventBridgeConfiguration = eventBridgeConfiguration;
         this.lambdaConfigurations = lambdaConfigurations;
         this.queueConfigurations = queueConfigurations;
@@ -62,10 +62,10 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     }
 
     private BucketNotificationConfigurationArgs() {
-        this.eventBridgeConfiguration = Input.empty();
-        this.lambdaConfigurations = Input.empty();
-        this.queueConfigurations = Input.empty();
-        this.topicConfigurations = Input.empty();
+        this.eventBridgeConfiguration = Output.empty();
+        this.lambdaConfigurations = Output.empty();
+        this.queueConfigurations = Output.empty();
+        this.topicConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,10 +77,10 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
-        private @Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
-        private @Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations;
-        private @Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations;
+        private @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
+        private @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
+        private @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
+        private @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
         public Builder() {
     	      // Empty
@@ -94,43 +94,43 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     	      this.topicConfigurations = defaults.topicConfigurations;
         }
 
-        public Builder eventBridgeConfiguration(@Nullable Input<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration) {
+        public Builder eventBridgeConfiguration(@Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration) {
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
 
         public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
-            this.eventBridgeConfiguration = Input.ofNullable(eventBridgeConfiguration);
+            this.eventBridgeConfiguration = Output.ofNullable(eventBridgeConfiguration);
             return this;
         }
 
-        public Builder lambdaConfigurations(@Nullable Input<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
+        public Builder lambdaConfigurations(@Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
 
         public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
-            this.lambdaConfigurations = Input.ofNullable(lambdaConfigurations);
+            this.lambdaConfigurations = Output.ofNullable(lambdaConfigurations);
             return this;
         }
 
-        public Builder queueConfigurations(@Nullable Input<List<BucketQueueConfigurationArgs>> queueConfigurations) {
+        public Builder queueConfigurations(@Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
 
         public Builder queueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
-            this.queueConfigurations = Input.ofNullable(queueConfigurations);
+            this.queueConfigurations = Output.ofNullable(queueConfigurations);
             return this;
         }
 
-        public Builder topicConfigurations(@Nullable Input<List<BucketTopicConfigurationArgs>> topicConfigurations) {
+        public Builder topicConfigurations(@Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }
 
         public Builder topicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
-            this.topicConfigurations = Input.ofNullable(topicConfigurations);
+            this.topicConfigurations = Output.ofNullable(topicConfigurations);
             return this;
         }
         public BucketNotificationConfigurationArgs build() {

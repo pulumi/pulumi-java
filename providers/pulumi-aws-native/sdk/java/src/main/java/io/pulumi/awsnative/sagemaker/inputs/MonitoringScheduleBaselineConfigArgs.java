@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConstraintsResourceArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStatisticsResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     public static final MonitoringScheduleBaselineConfigArgs Empty = new MonitoringScheduleBaselineConfigArgs();
 
     @InputImport(name="constraintsResource")
-      private final @Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
+      private final @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
 
-    public Input<MonitoringScheduleConstraintsResourceArgs> getConstraintsResource() {
-        return this.constraintsResource == null ? Input.empty() : this.constraintsResource;
+    public Output<MonitoringScheduleConstraintsResourceArgs> getConstraintsResource() {
+        return this.constraintsResource == null ? Output.empty() : this.constraintsResource;
     }
 
     @InputImport(name="statisticsResource")
-      private final @Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
+      private final @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
 
-    public Input<MonitoringScheduleStatisticsResourceArgs> getStatisticsResource() {
-        return this.statisticsResource == null ? Input.empty() : this.statisticsResource;
+    public Output<MonitoringScheduleStatisticsResourceArgs> getStatisticsResource() {
+        return this.statisticsResource == null ? Output.empty() : this.statisticsResource;
     }
 
     public MonitoringScheduleBaselineConfigArgs(
-        @Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource,
-        @Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
+        @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource,
+        @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;
     }
 
     private MonitoringScheduleBaselineConfigArgs() {
-        this.constraintsResource = Input.empty();
-        this.statisticsResource = Input.empty();
+        this.constraintsResource = Output.empty();
+        this.statisticsResource = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
-        private @Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
+        private @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
+        private @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder constraintsResource(@Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource) {
+        public Builder constraintsResource(@Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
         public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Input.ofNullable(constraintsResource);
+            this.constraintsResource = Output.ofNullable(constraintsResource);
             return this;
         }
 
-        public Builder statisticsResource(@Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
+        public Builder statisticsResource(@Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }
 
         public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResourceArgs statisticsResource) {
-            this.statisticsResource = Input.ofNullable(statisticsResource);
+            this.statisticsResource = Output.ofNullable(statisticsResource);
             return this;
         }
         public MonitoringScheduleBaselineConfigArgs build() {

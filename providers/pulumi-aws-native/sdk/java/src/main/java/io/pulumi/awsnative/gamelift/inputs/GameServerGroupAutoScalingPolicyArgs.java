@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.inputs.GameServerGroupTargetTrackingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     public static final GameServerGroupAutoScalingPolicyArgs Empty = new GameServerGroupAutoScalingPolicyArgs();
 
     @InputImport(name="estimatedInstanceWarmup")
-      private final @Nullable Input<Double> estimatedInstanceWarmup;
+      private final @Nullable Output<Double> estimatedInstanceWarmup;
 
-    public Input<Double> getEstimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup == null ? Input.empty() : this.estimatedInstanceWarmup;
+    public Output<Double> getEstimatedInstanceWarmup() {
+        return this.estimatedInstanceWarmup == null ? Output.empty() : this.estimatedInstanceWarmup;
     }
 
     @InputImport(name="targetTrackingConfiguration", required=true)
-      private final Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
+      private final Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
-    public Input<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
+    public Output<GameServerGroupTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 
     public GameServerGroupAutoScalingPolicyArgs(
-        @Nullable Input<Double> estimatedInstanceWarmup,
-        Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
+        @Nullable Output<Double> estimatedInstanceWarmup,
+        Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
         this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration, "expected parameter 'targetTrackingConfiguration' to be non-null");
     }
 
     private GameServerGroupAutoScalingPolicyArgs() {
-        this.estimatedInstanceWarmup = Input.empty();
-        this.targetTrackingConfiguration = Input.empty();
+        this.estimatedInstanceWarmup = Output.empty();
+        this.targetTrackingConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> estimatedInstanceWarmup;
-        private Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
+        private @Nullable Output<Double> estimatedInstanceWarmup;
+        private Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class GameServerGroupAutoScalingPolicyArgs extends io.pulumi.resour
     	      this.targetTrackingConfiguration = defaults.targetTrackingConfiguration;
         }
 
-        public Builder estimatedInstanceWarmup(@Nullable Input<Double> estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Output<Double> estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
         public Builder estimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = Input.ofNullable(estimatedInstanceWarmup);
+            this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
             return this;
         }
 
-        public Builder targetTrackingConfiguration(Input<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(Output<GameServerGroupTargetTrackingConfigurationArgs> targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration);
             return this;
         }
 
         public Builder targetTrackingConfiguration(GameServerGroupTargetTrackingConfigurationArgs targetTrackingConfiguration) {
-            this.targetTrackingConfiguration = Input.of(Objects.requireNonNull(targetTrackingConfiguration));
+            this.targetTrackingConfiguration = Output.of(Objects.requireNonNull(targetTrackingConfiguration));
             return this;
         }
         public GameServerGroupAutoScalingPolicyArgs build() {

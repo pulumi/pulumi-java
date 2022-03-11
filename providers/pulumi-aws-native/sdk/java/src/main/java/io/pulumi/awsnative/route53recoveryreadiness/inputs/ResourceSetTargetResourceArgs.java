@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetNLBResourceArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetR53ResourceRecordArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     public static final ResourceSetTargetResourceArgs Empty = new ResourceSetTargetResourceArgs();
 
     @InputImport(name="nLBResource")
-      private final @Nullable Input<ResourceSetNLBResourceArgs> nLBResource;
+      private final @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
 
-    public Input<ResourceSetNLBResourceArgs> getNLBResource() {
-        return this.nLBResource == null ? Input.empty() : this.nLBResource;
+    public Output<ResourceSetNLBResourceArgs> getNLBResource() {
+        return this.nLBResource == null ? Output.empty() : this.nLBResource;
     }
 
     @InputImport(name="r53Resource")
-      private final @Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource;
+      private final @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
 
-    public Input<ResourceSetR53ResourceRecordArgs> getR53Resource() {
-        return this.r53Resource == null ? Input.empty() : this.r53Resource;
+    public Output<ResourceSetR53ResourceRecordArgs> getR53Resource() {
+        return this.r53Resource == null ? Output.empty() : this.r53Resource;
     }
 
     public ResourceSetTargetResourceArgs(
-        @Nullable Input<ResourceSetNLBResourceArgs> nLBResource,
-        @Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource) {
+        @Nullable Output<ResourceSetNLBResourceArgs> nLBResource,
+        @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource) {
         this.nLBResource = nLBResource;
         this.r53Resource = r53Resource;
     }
 
     private ResourceSetTargetResourceArgs() {
-        this.nLBResource = Input.empty();
-        this.r53Resource = Input.empty();
+        this.nLBResource = Output.empty();
+        this.r53Resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceSetNLBResourceArgs> nLBResource;
-        private @Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource;
+        private @Nullable Output<ResourceSetNLBResourceArgs> nLBResource;
+        private @Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder nLBResource(@Nullable Input<ResourceSetNLBResourceArgs> nLBResource) {
+        public Builder nLBResource(@Nullable Output<ResourceSetNLBResourceArgs> nLBResource) {
             this.nLBResource = nLBResource;
             return this;
         }
 
         public Builder nLBResource(@Nullable ResourceSetNLBResourceArgs nLBResource) {
-            this.nLBResource = Input.ofNullable(nLBResource);
+            this.nLBResource = Output.ofNullable(nLBResource);
             return this;
         }
 
-        public Builder r53Resource(@Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource) {
+        public Builder r53Resource(@Nullable Output<ResourceSetR53ResourceRecordArgs> r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }
 
         public Builder r53Resource(@Nullable ResourceSetR53ResourceRecordArgs r53Resource) {
-            this.r53Resource = Input.ofNullable(r53Resource);
+            this.r53Resource = Output.ofNullable(r53Resource);
             return this;
         }
         public ResourceSetTargetResourceArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="event", required=true)
-      private final Input<String> event;
+      private final Output<String> event;
 
-    public Input<String> getEvent() {
+    public Output<String> getEvent() {
         return this.event;
     }
 
@@ -35,10 +35,10 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BucketNotificationFilterArgs> filter;
+      private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Input<BucketNotificationFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BucketNotificationFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public BucketTopicConfigurationArgs(
-        Input<String> event,
-        @Nullable Input<BucketNotificationFilterArgs> filter,
-        Input<String> topic) {
+        Output<String> event,
+        @Nullable Output<BucketNotificationFilterArgs> filter,
+        Output<String> topic) {
         this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
         this.filter = filter;
         this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
     }
 
     private BucketTopicConfigurationArgs() {
-        this.event = Input.empty();
-        this.filter = Input.empty();
-        this.topic = Input.empty();
+        this.event = Output.empty();
+        this.filter = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> event;
-        private @Nullable Input<BucketNotificationFilterArgs> filter;
-        private Input<String> topic;
+        private Output<String> event;
+        private @Nullable Output<BucketNotificationFilterArgs> filter;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
     	      this.topic = defaults.topic;
         }
 
-        public Builder event(Input<String> event) {
+        public Builder event(Output<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
         public Builder event(String event) {
-            this.event = Input.of(Objects.requireNonNull(event));
+            this.event = Output.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Output<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public BucketTopicConfigurationArgs build() {

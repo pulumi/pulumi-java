@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
     public static final DatasetOutputFileUriValueArgs Empty = new DatasetOutputFileUriValueArgs();
 
     @InputImport(name="fileName", required=true)
-      private final Input<String> fileName;
+      private final Output<String> fileName;
 
-    public Input<String> getFileName() {
+    public Output<String> getFileName() {
         return this.fileName;
     }
 
-    public DatasetOutputFileUriValueArgs(Input<String> fileName) {
+    public DatasetOutputFileUriValueArgs(Output<String> fileName) {
         this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
     }
 
     private DatasetOutputFileUriValueArgs() {
-        this.fileName = Input.empty();
+        this.fileName = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> fileName;
+        private Output<String> fileName;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DatasetOutputFileUriValueArgs extends io.pulumi.resources.Res
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder fileName(Input<String> fileName) {
+        public Builder fileName(Output<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
         public Builder fileName(String fileName) {
-            this.fileName = Input.of(Objects.requireNonNull(fileName));
+            this.fileName = Output.of(Objects.requireNonNull(fileName));
             return this;
         }
         public DatasetOutputFileUriValueArgs build() {

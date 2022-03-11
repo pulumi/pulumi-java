@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.TemplateDataSetReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,9 +24,9 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -36,22 +36,22 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataSetReferences", required=true)
-      private final Input<List<TemplateDataSetReferenceArgs>> dataSetReferences;
+      private final Output<List<TemplateDataSetReferenceArgs>> dataSetReferences;
 
-    public Input<List<TemplateDataSetReferenceArgs>> getDataSetReferences() {
+    public Output<List<TemplateDataSetReferenceArgs>> getDataSetReferences() {
         return this.dataSetReferences;
     }
 
     public TemplateSourceAnalysisArgs(
-        Input<String> arn,
-        Input<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
+        Output<String> arn,
+        Output<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.dataSetReferences = Objects.requireNonNull(dataSetReferences, "expected parameter 'dataSetReferences' to be non-null");
     }
 
     private TemplateSourceAnalysisArgs() {
-        this.arn = Input.empty();
-        this.dataSetReferences = Input.empty();
+        this.arn = Output.empty();
+        this.dataSetReferences = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<List<TemplateDataSetReferenceArgs>> dataSetReferences;
+        private Output<String> arn;
+        private Output<List<TemplateDataSetReferenceArgs>> dataSetReferences;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder dataSetReferences(Input<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
+        public Builder dataSetReferences(Output<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
 
         public Builder dataSetReferences(List<TemplateDataSetReferenceArgs> dataSetReferences) {
-            this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
+            this.dataSetReferences = Output.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }
         public TemplateSourceAnalysisArgs build() {

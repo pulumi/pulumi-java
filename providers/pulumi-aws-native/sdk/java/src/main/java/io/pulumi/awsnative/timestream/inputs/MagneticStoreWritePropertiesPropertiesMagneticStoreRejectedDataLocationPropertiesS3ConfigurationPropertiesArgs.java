@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -34,9 +34,9 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="encryptionOption", required=true)
-      private final Input<String> encryptionOption;
+      private final Output<String> encryptionOption;
 
-    public Input<String> getEncryptionOption() {
+    public Output<String> getEncryptionOption() {
         return this.encryptionOption;
     }
 
@@ -45,10 +45,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @InputImport(name="objectKeyPrefix")
-      private final @Nullable Input<String> objectKeyPrefix;
+      private final @Nullable Output<String> objectKeyPrefix;
 
-    public Input<String> getObjectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;
+    public Output<String> getObjectKeyPrefix() {
+        return this.objectKeyPrefix == null ? Output.empty() : this.objectKeyPrefix;
     }
 
     public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs(
-        Input<String> bucketName,
-        Input<String> encryptionOption,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<String> objectKeyPrefix) {
+        Output<String> bucketName,
+        Output<String> encryptionOption,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<String> objectKeyPrefix) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
         this.kmsKeyId = kmsKeyId;
@@ -74,10 +74,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     }
 
     private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs() {
-        this.bucketName = Input.empty();
-        this.encryptionOption = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.objectKeyPrefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.encryptionOption = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.objectKeyPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private Input<String> encryptionOption;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<String> objectKeyPrefix;
+        private Output<String> bucketName;
+        private Output<String> encryptionOption;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<String> objectKeyPrefix;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder encryptionOption(Input<String> encryptionOption) {
+        public Builder encryptionOption(Output<String> encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
         public Builder encryptionOption(String encryptionOption) {
-            this.encryptionOption = Input.of(Objects.requireNonNull(encryptionOption));
+            this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder objectKeyPrefix(@Nullable Input<String> objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
 
         public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Input.ofNullable(objectKeyPrefix);
+            this.objectKeyPrefix = Output.ofNullable(objectKeyPrefix);
             return this;
         }
         public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationPropertiesArgs build() {

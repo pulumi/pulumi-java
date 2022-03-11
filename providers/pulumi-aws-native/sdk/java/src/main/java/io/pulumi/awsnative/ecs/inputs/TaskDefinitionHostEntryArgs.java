@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     public static final TaskDefinitionHostEntryArgs Empty = new TaskDefinitionHostEntryArgs();
 
     @InputImport(name="hostname")
-      private final @Nullable Input<String> hostname;
+      private final @Nullable Output<String> hostname;
 
-    public Input<String> getHostname() {
-        return this.hostname == null ? Input.empty() : this.hostname;
+    public Output<String> getHostname() {
+        return this.hostname == null ? Output.empty() : this.hostname;
     }
 
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     public TaskDefinitionHostEntryArgs(
-        @Nullable Input<String> hostname,
-        @Nullable Input<String> ipAddress) {
+        @Nullable Output<String> hostname,
+        @Nullable Output<String> ipAddress) {
         this.hostname = hostname;
         this.ipAddress = ipAddress;
     }
 
     private TaskDefinitionHostEntryArgs() {
-        this.hostname = Input.empty();
-        this.ipAddress = Input.empty();
+        this.hostname = Output.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hostname;
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<String> hostname;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class TaskDefinitionHostEntryArgs extends io.pulumi.resources.Resou
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder hostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Output<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Input.ofNullable(hostname);
+            this.hostname = Output.ofNullable(hostname);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public TaskDefinitionHostEntryArgs build() {

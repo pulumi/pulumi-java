@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds;
 
 import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.inputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,24 +18,24 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     public static final DBProxyTargetGroupArgs Empty = new DBProxyTargetGroupArgs();
 
     @InputImport(name="connectionPoolConfigurationInfo")
-      private final @Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
+      private final @Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
 
-    public Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> getConnectionPoolConfigurationInfo() {
-        return this.connectionPoolConfigurationInfo == null ? Input.empty() : this.connectionPoolConfigurationInfo;
+    public Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> getConnectionPoolConfigurationInfo() {
+        return this.connectionPoolConfigurationInfo == null ? Output.empty() : this.connectionPoolConfigurationInfo;
     }
 
     @InputImport(name="dBClusterIdentifiers")
-      private final @Nullable Input<List<String>> dBClusterIdentifiers;
+      private final @Nullable Output<List<String>> dBClusterIdentifiers;
 
-    public Input<List<String>> getDBClusterIdentifiers() {
-        return this.dBClusterIdentifiers == null ? Input.empty() : this.dBClusterIdentifiers;
+    public Output<List<String>> getDBClusterIdentifiers() {
+        return this.dBClusterIdentifiers == null ? Output.empty() : this.dBClusterIdentifiers;
     }
 
     @InputImport(name="dBInstanceIdentifiers")
-      private final @Nullable Input<List<String>> dBInstanceIdentifiers;
+      private final @Nullable Output<List<String>> dBInstanceIdentifiers;
 
-    public Input<List<String>> getDBInstanceIdentifiers() {
-        return this.dBInstanceIdentifiers == null ? Input.empty() : this.dBInstanceIdentifiers;
+    public Output<List<String>> getDBInstanceIdentifiers() {
+        return this.dBInstanceIdentifiers == null ? Output.empty() : this.dBInstanceIdentifiers;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dBProxyName", required=true)
-      private final Input<String> dBProxyName;
+      private final Output<String> dBProxyName;
 
-    public Input<String> getDBProxyName() {
+    public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
 
@@ -54,18 +54,18 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-      private final Input<DBProxyTargetGroupTargetGroupName> targetGroupName;
+      private final Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
-    public Input<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
+    public Output<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
         return this.targetGroupName;
     }
 
     public DBProxyTargetGroupArgs(
-        @Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo,
-        @Nullable Input<List<String>> dBClusterIdentifiers,
-        @Nullable Input<List<String>> dBInstanceIdentifiers,
-        Input<String> dBProxyName,
-        Input<DBProxyTargetGroupTargetGroupName> targetGroupName) {
+        @Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo,
+        @Nullable Output<List<String>> dBClusterIdentifiers,
+        @Nullable Output<List<String>> dBInstanceIdentifiers,
+        Output<String> dBProxyName,
+        Output<DBProxyTargetGroupTargetGroupName> targetGroupName) {
         this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
         this.dBClusterIdentifiers = dBClusterIdentifiers;
         this.dBInstanceIdentifiers = dBInstanceIdentifiers;
@@ -74,11 +74,11 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DBProxyTargetGroupArgs() {
-        this.connectionPoolConfigurationInfo = Input.empty();
-        this.dBClusterIdentifiers = Input.empty();
-        this.dBInstanceIdentifiers = Input.empty();
-        this.dBProxyName = Input.empty();
-        this.targetGroupName = Input.empty();
+        this.connectionPoolConfigurationInfo = Output.empty();
+        this.dBClusterIdentifiers = Output.empty();
+        this.dBInstanceIdentifiers = Output.empty();
+        this.dBProxyName = Output.empty();
+        this.targetGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,11 +90,11 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
-        private @Nullable Input<List<String>> dBClusterIdentifiers;
-        private @Nullable Input<List<String>> dBInstanceIdentifiers;
-        private Input<String> dBProxyName;
-        private Input<DBProxyTargetGroupTargetGroupName> targetGroupName;
+        private @Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
+        private @Nullable Output<List<String>> dBClusterIdentifiers;
+        private @Nullable Output<List<String>> dBInstanceIdentifiers;
+        private Output<String> dBProxyName;
+        private Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
         public Builder() {
     	      // Empty
@@ -109,53 +109,53 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder connectionPoolConfigurationInfo(@Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo) {
+        public Builder connectionPoolConfigurationInfo(@Nullable Output<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo) {
             this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
             return this;
         }
 
         public Builder connectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs connectionPoolConfigurationInfo) {
-            this.connectionPoolConfigurationInfo = Input.ofNullable(connectionPoolConfigurationInfo);
+            this.connectionPoolConfigurationInfo = Output.ofNullable(connectionPoolConfigurationInfo);
             return this;
         }
 
-        public Builder dBClusterIdentifiers(@Nullable Input<List<String>> dBClusterIdentifiers) {
+        public Builder dBClusterIdentifiers(@Nullable Output<List<String>> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = dBClusterIdentifiers;
             return this;
         }
 
         public Builder dBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
-            this.dBClusterIdentifiers = Input.ofNullable(dBClusterIdentifiers);
+            this.dBClusterIdentifiers = Output.ofNullable(dBClusterIdentifiers);
             return this;
         }
 
-        public Builder dBInstanceIdentifiers(@Nullable Input<List<String>> dBInstanceIdentifiers) {
+        public Builder dBInstanceIdentifiers(@Nullable Output<List<String>> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = dBInstanceIdentifiers;
             return this;
         }
 
         public Builder dBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
-            this.dBInstanceIdentifiers = Input.ofNullable(dBInstanceIdentifiers);
+            this.dBInstanceIdentifiers = Output.ofNullable(dBInstanceIdentifiers);
             return this;
         }
 
-        public Builder dBProxyName(Input<String> dBProxyName) {
+        public Builder dBProxyName(Output<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
 
         public Builder dBProxyName(String dBProxyName) {
-            this.dBProxyName = Input.of(Objects.requireNonNull(dBProxyName));
+            this.dBProxyName = Output.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
 
-        public Builder targetGroupName(Input<DBProxyTargetGroupTargetGroupName> targetGroupName) {
+        public Builder targetGroupName(Output<DBProxyTargetGroupTargetGroupName> targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
 
         public Builder targetGroupName(DBProxyTargetGroupTargetGroupName targetGroupName) {
-            this.targetGroupName = Input.of(Objects.requireNonNull(targetGroupName));
+            this.targetGroupName = Output.of(Objects.requireNonNull(targetGroupName));
             return this;
         }
         public DBProxyTargetGroupArgs build() {

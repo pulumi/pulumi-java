@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     public static final DistributionArgs Empty = new DistributionArgs();
 
     @InputImport(name="distributionConfig", required=true)
-      private final Input<DistributionConfigArgs> distributionConfig;
+      private final Output<DistributionConfigArgs> distributionConfig;
 
-    public Input<DistributionConfigArgs> getDistributionConfig() {
+    public Output<DistributionConfigArgs> getDistributionConfig() {
         return this.distributionConfig;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<DistributionTagArgs>> tags;
+      private final @Nullable Output<List<DistributionTagArgs>> tags;
 
-    public Input<List<DistributionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DistributionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DistributionArgs(
-        Input<DistributionConfigArgs> distributionConfig,
-        @Nullable Input<List<DistributionTagArgs>> tags) {
+        Output<DistributionConfigArgs> distributionConfig,
+        @Nullable Output<List<DistributionTagArgs>> tags) {
         this.distributionConfig = Objects.requireNonNull(distributionConfig, "expected parameter 'distributionConfig' to be non-null");
         this.tags = tags;
     }
 
     private DistributionArgs() {
-        this.distributionConfig = Input.empty();
-        this.tags = Input.empty();
+        this.distributionConfig = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DistributionConfigArgs> distributionConfig;
-        private @Nullable Input<List<DistributionTagArgs>> tags;
+        private Output<DistributionConfigArgs> distributionConfig;
+        private @Nullable Output<List<DistributionTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder distributionConfig(Input<DistributionConfigArgs> distributionConfig) {
+        public Builder distributionConfig(Output<DistributionConfigArgs> distributionConfig) {
             this.distributionConfig = Objects.requireNonNull(distributionConfig);
             return this;
         }
 
         public Builder distributionConfig(DistributionConfigArgs distributionConfig) {
-            this.distributionConfig = Input.of(Objects.requireNonNull(distributionConfig));
+            this.distributionConfig = Output.of(Objects.requireNonNull(distributionConfig));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DistributionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DistributionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DistributionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DistributionArgs build() {

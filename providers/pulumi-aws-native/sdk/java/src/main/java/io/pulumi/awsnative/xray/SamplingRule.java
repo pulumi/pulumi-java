@@ -8,7 +8,6 @@ import io.pulumi.awsnative.xray.SamplingRuleArgs;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleRecord;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleUpdate;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -99,14 +98,14 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SamplingRule(String name, @Nullable SamplingRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:xray:SamplingRule", name, args == null ? SamplingRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:xray:SamplingRule", name, args == null ? SamplingRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SamplingRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SamplingRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:xray:SamplingRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SamplingRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SamplingRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SamplingRule(name, id, options);
     }
 }

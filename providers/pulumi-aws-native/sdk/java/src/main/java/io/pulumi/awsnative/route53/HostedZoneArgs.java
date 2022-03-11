@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53.inputs.HostedZoneConfigArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneQueryLoggingConfigArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneTagArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneVPCArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     public static final HostedZoneArgs Empty = new HostedZoneArgs();
 
     @InputImport(name="hostedZoneConfig")
-      private final @Nullable Input<HostedZoneConfigArgs> hostedZoneConfig;
+      private final @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
 
-    public Input<HostedZoneConfigArgs> getHostedZoneConfig() {
-        return this.hostedZoneConfig == null ? Input.empty() : this.hostedZoneConfig;
+    public Output<HostedZoneConfigArgs> getHostedZoneConfig() {
+        return this.hostedZoneConfig == null ? Output.empty() : this.hostedZoneConfig;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneTags")
-      private final @Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags;
+      private final @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
 
-    public Input<List<HostedZoneTagArgs>> getHostedZoneTags() {
-        return this.hostedZoneTags == null ? Input.empty() : this.hostedZoneTags;
+    public Output<List<HostedZoneTagArgs>> getHostedZoneTags() {
+        return this.hostedZoneTags == null ? Output.empty() : this.hostedZoneTags;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="queryLoggingConfig")
-      private final @Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
+      private final @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
-    public Input<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
-        return this.queryLoggingConfig == null ? Input.empty() : this.queryLoggingConfig;
+    public Output<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
+        return this.queryLoggingConfig == null ? Output.empty() : this.queryLoggingConfig;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCs")
-      private final @Nullable Input<List<HostedZoneVPCArgs>> vPCs;
+      private final @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
-    public Input<List<HostedZoneVPCArgs>> getVPCs() {
-        return this.vPCs == null ? Input.empty() : this.vPCs;
+    public Output<List<HostedZoneVPCArgs>> getVPCs() {
+        return this.vPCs == null ? Output.empty() : this.vPCs;
     }
 
     public HostedZoneArgs(
-        @Nullable Input<HostedZoneConfigArgs> hostedZoneConfig,
-        @Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags,
-        @Nullable Input<String> name,
-        @Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig,
-        @Nullable Input<List<HostedZoneVPCArgs>> vPCs) {
+        @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig,
+        @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags,
+        @Nullable Output<String> name,
+        @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig,
+        @Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
         this.hostedZoneConfig = hostedZoneConfig;
         this.hostedZoneTags = hostedZoneTags;
         this.name = name;
@@ -84,11 +84,11 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostedZoneArgs() {
-        this.hostedZoneConfig = Input.empty();
-        this.hostedZoneTags = Input.empty();
-        this.name = Input.empty();
-        this.queryLoggingConfig = Input.empty();
-        this.vPCs = Input.empty();
+        this.hostedZoneConfig = Output.empty();
+        this.hostedZoneTags = Output.empty();
+        this.name = Output.empty();
+        this.queryLoggingConfig = Output.empty();
+        this.vPCs = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HostedZoneConfigArgs> hostedZoneConfig;
-        private @Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags;
-        private @Nullable Input<String> name;
-        private @Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
-        private @Nullable Input<List<HostedZoneVPCArgs>> vPCs;
+        private @Nullable Output<HostedZoneConfigArgs> hostedZoneConfig;
+        private @Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
+        private @Nullable Output<List<HostedZoneVPCArgs>> vPCs;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vPCs = defaults.vPCs;
         }
 
-        public Builder hostedZoneConfig(@Nullable Input<HostedZoneConfigArgs> hostedZoneConfig) {
+        public Builder hostedZoneConfig(@Nullable Output<HostedZoneConfigArgs> hostedZoneConfig) {
             this.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
 
         public Builder hostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
-            this.hostedZoneConfig = Input.ofNullable(hostedZoneConfig);
+            this.hostedZoneConfig = Output.ofNullable(hostedZoneConfig);
             return this;
         }
 
-        public Builder hostedZoneTags(@Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags) {
+        public Builder hostedZoneTags(@Nullable Output<List<HostedZoneTagArgs>> hostedZoneTags) {
             this.hostedZoneTags = hostedZoneTags;
             return this;
         }
 
         public Builder hostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
-            this.hostedZoneTags = Input.ofNullable(hostedZoneTags);
+            this.hostedZoneTags = Output.ofNullable(hostedZoneTags);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder queryLoggingConfig(@Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
+        public Builder queryLoggingConfig(@Nullable Output<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
             this.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
 
         public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
-            this.queryLoggingConfig = Input.ofNullable(queryLoggingConfig);
+            this.queryLoggingConfig = Output.ofNullable(queryLoggingConfig);
             return this;
         }
 
-        public Builder vPCs(@Nullable Input<List<HostedZoneVPCArgs>> vPCs) {
+        public Builder vPCs(@Nullable Output<List<HostedZoneVPCArgs>> vPCs) {
             this.vPCs = vPCs;
             return this;
         }
 
         public Builder vPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
-            this.vPCs = Input.ofNullable(vPCs);
+            this.vPCs = Output.ofNullable(vPCs);
             return this;
         }
         public HostedZoneArgs build() {

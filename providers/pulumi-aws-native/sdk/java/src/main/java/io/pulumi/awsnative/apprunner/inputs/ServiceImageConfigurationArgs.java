@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,17 +25,17 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<String> port;
+      private final @Nullable Output<String> port;
 
-    public Input<String> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<String> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     @InputImport(name="runtimeEnvironmentVariables")
-      private final @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
+      private final @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
-    public Input<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
-        return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
+    public Output<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
+        return this.runtimeEnvironmentVariables == null ? Output.empty() : this.runtimeEnvironmentVariables;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="startCommand")
-      private final @Nullable Input<String> startCommand;
+      private final @Nullable Output<String> startCommand;
 
-    public Input<String> getStartCommand() {
-        return this.startCommand == null ? Input.empty() : this.startCommand;
+    public Output<String> getStartCommand() {
+        return this.startCommand == null ? Output.empty() : this.startCommand;
     }
 
     public ServiceImageConfigurationArgs(
-        @Nullable Input<String> port,
-        @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables,
-        @Nullable Input<String> startCommand) {
+        @Nullable Output<String> port,
+        @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables,
+        @Nullable Output<String> startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;
     }
 
     private ServiceImageConfigurationArgs() {
-        this.port = Input.empty();
-        this.runtimeEnvironmentVariables = Input.empty();
-        this.startCommand = Input.empty();
+        this.port = Output.empty();
+        this.runtimeEnvironmentVariables = Output.empty();
+        this.startCommand = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> port;
-        private @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
-        private @Nullable Input<String> startCommand;
+        private @Nullable Output<String> port;
+        private @Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
+        private @Nullable Output<String> startCommand;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder port(@Nullable Input<String> port) {
+        public Builder port(@Nullable Output<String> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable String port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder runtimeEnvironmentVariables(@Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Output<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
         public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
-            this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
+            this.runtimeEnvironmentVariables = Output.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder startCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Output<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
         public Builder startCommand(@Nullable String startCommand) {
-            this.startCommand = Input.ofNullable(startCommand);
+            this.startCommand = Output.ofNullable(startCommand);
             return this;
         }
         public ServiceImageConfigurationArgs build() {

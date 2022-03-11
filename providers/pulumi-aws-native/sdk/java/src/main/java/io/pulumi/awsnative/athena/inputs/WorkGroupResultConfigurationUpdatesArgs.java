@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,38 +21,38 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     public static final WorkGroupResultConfigurationUpdatesArgs Empty = new WorkGroupResultConfigurationUpdatesArgs();
 
     @InputImport(name="encryptionConfiguration")
-      private final @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+      private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Input<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
+    public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="outputLocation")
-      private final @Nullable Input<String> outputLocation;
+      private final @Nullable Output<String> outputLocation;
 
-    public Input<String> getOutputLocation() {
-        return this.outputLocation == null ? Input.empty() : this.outputLocation;
+    public Output<String> getOutputLocation() {
+        return this.outputLocation == null ? Output.empty() : this.outputLocation;
     }
 
     @InputImport(name="removeEncryptionConfiguration")
-      private final @Nullable Input<Boolean> removeEncryptionConfiguration;
+      private final @Nullable Output<Boolean> removeEncryptionConfiguration;
 
-    public Input<Boolean> getRemoveEncryptionConfiguration() {
-        return this.removeEncryptionConfiguration == null ? Input.empty() : this.removeEncryptionConfiguration;
+    public Output<Boolean> getRemoveEncryptionConfiguration() {
+        return this.removeEncryptionConfiguration == null ? Output.empty() : this.removeEncryptionConfiguration;
     }
 
     @InputImport(name="removeOutputLocation")
-      private final @Nullable Input<Boolean> removeOutputLocation;
+      private final @Nullable Output<Boolean> removeOutputLocation;
 
-    public Input<Boolean> getRemoveOutputLocation() {
-        return this.removeOutputLocation == null ? Input.empty() : this.removeOutputLocation;
+    public Output<Boolean> getRemoveOutputLocation() {
+        return this.removeOutputLocation == null ? Output.empty() : this.removeOutputLocation;
     }
 
     public WorkGroupResultConfigurationUpdatesArgs(
-        @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
-        @Nullable Input<String> outputLocation,
-        @Nullable Input<Boolean> removeEncryptionConfiguration,
-        @Nullable Input<Boolean> removeOutputLocation) {
+        @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration,
+        @Nullable Output<String> outputLocation,
+        @Nullable Output<Boolean> removeEncryptionConfiguration,
+        @Nullable Output<Boolean> removeOutputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
         this.removeEncryptionConfiguration = removeEncryptionConfiguration;
@@ -60,10 +60,10 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     }
 
     private WorkGroupResultConfigurationUpdatesArgs() {
-        this.encryptionConfiguration = Input.empty();
-        this.outputLocation = Input.empty();
-        this.removeEncryptionConfiguration = Input.empty();
-        this.removeOutputLocation = Input.empty();
+        this.encryptionConfiguration = Output.empty();
+        this.outputLocation = Output.empty();
+        this.removeEncryptionConfiguration = Output.empty();
+        this.removeOutputLocation = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,10 +75,10 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
-        private @Nullable Input<String> outputLocation;
-        private @Nullable Input<Boolean> removeEncryptionConfiguration;
-        private @Nullable Input<Boolean> removeOutputLocation;
+        private @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
+        private @Nullable Output<String> outputLocation;
+        private @Nullable Output<Boolean> removeEncryptionConfiguration;
+        private @Nullable Output<Boolean> removeOutputLocation;
 
         public Builder() {
     	      // Empty
@@ -92,43 +92,43 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     	      this.removeOutputLocation = defaults.removeOutputLocation;
         }
 
-        public Builder encryptionConfiguration(@Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder outputLocation(@Nullable Input<String> outputLocation) {
+        public Builder outputLocation(@Nullable Output<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Input.ofNullable(outputLocation);
+            this.outputLocation = Output.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder removeEncryptionConfiguration(@Nullable Input<Boolean> removeEncryptionConfiguration) {
+        public Builder removeEncryptionConfiguration(@Nullable Output<Boolean> removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
 
         public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
-            this.removeEncryptionConfiguration = Input.ofNullable(removeEncryptionConfiguration);
+            this.removeEncryptionConfiguration = Output.ofNullable(removeEncryptionConfiguration);
             return this;
         }
 
-        public Builder removeOutputLocation(@Nullable Input<Boolean> removeOutputLocation) {
+        public Builder removeOutputLocation(@Nullable Output<Boolean> removeOutputLocation) {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }
 
         public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
-            this.removeOutputLocation = Input.ofNullable(removeOutputLocation);
+            this.removeOutputLocation = Output.ofNullable(removeOutputLocation);
             return this;
         }
         public WorkGroupResultConfigurationUpdatesArgs build() {

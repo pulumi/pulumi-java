@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moduleName", required=true)
-      private final Input<String> moduleName;
+      private final Output<String> moduleName;
 
-    public Input<String> getModuleName() {
+    public Output<String> getModuleName() {
         return this.moduleName;
     }
 
@@ -31,22 +31,22 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="modulePackage", required=true)
-      private final Input<String> modulePackage;
+      private final Output<String> modulePackage;
 
-    public Input<String> getModulePackage() {
+    public Output<String> getModulePackage() {
         return this.modulePackage;
     }
 
     public ModuleVersionArgs(
-        Input<String> moduleName,
-        Input<String> modulePackage) {
+        Output<String> moduleName,
+        Output<String> modulePackage) {
         this.moduleName = Objects.requireNonNull(moduleName, "expected parameter 'moduleName' to be non-null");
         this.modulePackage = Objects.requireNonNull(modulePackage, "expected parameter 'modulePackage' to be non-null");
     }
 
     private ModuleVersionArgs() {
-        this.moduleName = Input.empty();
-        this.modulePackage = Input.empty();
+        this.moduleName = Output.empty();
+        this.modulePackage = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> moduleName;
-        private Input<String> modulePackage;
+        private Output<String> moduleName;
+        private Output<String> modulePackage;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.modulePackage = defaults.modulePackage;
         }
 
-        public Builder moduleName(Input<String> moduleName) {
+        public Builder moduleName(Output<String> moduleName) {
             this.moduleName = Objects.requireNonNull(moduleName);
             return this;
         }
 
         public Builder moduleName(String moduleName) {
-            this.moduleName = Input.of(Objects.requireNonNull(moduleName));
+            this.moduleName = Output.of(Objects.requireNonNull(moduleName));
             return this;
         }
 
-        public Builder modulePackage(Input<String> modulePackage) {
+        public Builder modulePackage(Output<String> modulePackage) {
             this.modulePackage = Objects.requireNonNull(modulePackage);
             return this;
         }
 
         public Builder modulePackage(String modulePackage) {
-            this.modulePackage = Input.of(Objects.requireNonNull(modulePackage));
+            this.modulePackage = Output.of(Objects.requireNonNull(modulePackage));
             return this;
         }
         public ModuleVersionArgs build() {

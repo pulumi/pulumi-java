@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,29 +20,29 @@ public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.r
     public static final CertificateAuthorityOcspConfigurationArgs Empty = new CertificateAuthorityOcspConfigurationArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     @InputImport(name="ocspCustomCname")
-      private final @Nullable Input<String> ocspCustomCname;
+      private final @Nullable Output<String> ocspCustomCname;
 
-    public Input<String> getOcspCustomCname() {
-        return this.ocspCustomCname == null ? Input.empty() : this.ocspCustomCname;
+    public Output<String> getOcspCustomCname() {
+        return this.ocspCustomCname == null ? Output.empty() : this.ocspCustomCname;
     }
 
     public CertificateAuthorityOcspConfigurationArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> ocspCustomCname) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> ocspCustomCname) {
         this.enabled = enabled;
         this.ocspCustomCname = ocspCustomCname;
     }
 
     private CertificateAuthorityOcspConfigurationArgs() {
-        this.enabled = Input.empty();
-        this.ocspCustomCname = Input.empty();
+        this.enabled = Output.empty();
+        this.ocspCustomCname = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> ocspCustomCname;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> ocspCustomCname;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class CertificateAuthorityOcspConfigurationArgs extends io.pulumi.r
     	      this.ocspCustomCname = defaults.ocspCustomCname;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder ocspCustomCname(@Nullable Input<String> ocspCustomCname) {
+        public Builder ocspCustomCname(@Nullable Output<String> ocspCustomCname) {
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }
 
         public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
-            this.ocspCustomCname = Input.ofNullable(ocspCustomCname);
+            this.ocspCustomCname = Output.ofNullable(ocspCustomCname);
             return this;
         }
         public CertificateAuthorityOcspConfigurationArgs build() {

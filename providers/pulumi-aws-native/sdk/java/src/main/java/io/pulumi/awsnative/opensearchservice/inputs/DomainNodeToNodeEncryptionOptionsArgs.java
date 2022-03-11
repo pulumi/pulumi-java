@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
     public static final DomainNodeToNodeEncryptionOptionsArgs Empty = new DomainNodeToNodeEncryptionOptionsArgs();
 
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    public DomainNodeToNodeEncryptionOptionsArgs(@Nullable Input<Boolean> enabled) {
+    public DomainNodeToNodeEncryptionOptionsArgs(@Nullable Output<Boolean> enabled) {
         this.enabled = enabled;
     }
 
     private DomainNodeToNodeEncryptionOptionsArgs() {
-        this.enabled = Input.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
+        private @Nullable Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
         public DomainNodeToNodeEncryptionOptionsArgs build() {

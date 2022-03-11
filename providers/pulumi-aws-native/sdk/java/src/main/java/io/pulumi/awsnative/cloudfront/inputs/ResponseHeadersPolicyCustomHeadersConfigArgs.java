@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeaderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     public static final ResponseHeadersPolicyCustomHeadersConfigArgs Empty = new ResponseHeadersPolicyCustomHeadersConfigArgs();
 
     @InputImport(name="items", required=true)
-      private final Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
+      private final Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
 
-    public Input<List<ResponseHeadersPolicyCustomHeaderArgs>> getItems() {
+    public Output<List<ResponseHeadersPolicyCustomHeaderArgs>> getItems() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyCustomHeadersConfigArgs(Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
+    public ResponseHeadersPolicyCustomHeadersConfigArgs(Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
     }
 
     private ResponseHeadersPolicyCustomHeadersConfigArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
+        private Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ResponseHeadersPolicyCustomHeadersConfigArgs extends io.pulum
     	      this.items = defaults.items;
         }
 
-        public Builder items(Input<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
+        public Builder items(Output<List<ResponseHeadersPolicyCustomHeaderArgs>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<ResponseHeadersPolicyCustomHeaderArgs> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
         public ResponseHeadersPolicyCustomHeadersConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autodefinedReverseFlag", required=true)
-      private final Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
+      private final Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
-    public Input<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
+    public Output<ResolverConfigAutodefinedReverseFlag> getAutodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
     }
 
@@ -30,22 +30,22 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
     public ResolverConfigArgs(
-        Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag,
-        Input<String> resourceId) {
+        Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag,
+        Output<String> resourceId) {
         this.autodefinedReverseFlag = Objects.requireNonNull(autodefinedReverseFlag, "expected parameter 'autodefinedReverseFlag' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
     }
 
     private ResolverConfigArgs() {
-        this.autodefinedReverseFlag = Input.empty();
-        this.resourceId = Input.empty();
+        this.autodefinedReverseFlag = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
-        private Input<String> resourceId;
+        private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
+        private Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ResolverConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder autodefinedReverseFlag(Input<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag) {
+        public Builder autodefinedReverseFlag(Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag) {
             this.autodefinedReverseFlag = Objects.requireNonNull(autodefinedReverseFlag);
             return this;
         }
 
         public Builder autodefinedReverseFlag(ResolverConfigAutodefinedReverseFlag autodefinedReverseFlag) {
-            this.autodefinedReverseFlag = Input.of(Objects.requireNonNull(autodefinedReverseFlag));
+            this.autodefinedReverseFlag = Output.of(Objects.requireNonNull(autodefinedReverseFlag));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
         public ResolverConfigArgs build() {

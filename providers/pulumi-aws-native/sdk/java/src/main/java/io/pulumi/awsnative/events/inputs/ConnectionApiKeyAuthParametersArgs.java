@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
     public static final ConnectionApiKeyAuthParametersArgs Empty = new ConnectionApiKeyAuthParametersArgs();
 
     @InputImport(name="apiKeyName", required=true)
-      private final Input<String> apiKeyName;
+      private final Output<String> apiKeyName;
 
-    public Input<String> getApiKeyName() {
+    public Output<String> getApiKeyName() {
         return this.apiKeyName;
     }
 
     @InputImport(name="apiKeyValue", required=true)
-      private final Input<String> apiKeyValue;
+      private final Output<String> apiKeyValue;
 
-    public Input<String> getApiKeyValue() {
+    public Output<String> getApiKeyValue() {
         return this.apiKeyValue;
     }
 
     public ConnectionApiKeyAuthParametersArgs(
-        Input<String> apiKeyName,
-        Input<String> apiKeyValue) {
+        Output<String> apiKeyName,
+        Output<String> apiKeyValue) {
         this.apiKeyName = Objects.requireNonNull(apiKeyName, "expected parameter 'apiKeyName' to be non-null");
         this.apiKeyValue = Objects.requireNonNull(apiKeyValue, "expected parameter 'apiKeyValue' to be non-null");
     }
 
     private ConnectionApiKeyAuthParametersArgs() {
-        this.apiKeyName = Input.empty();
-        this.apiKeyValue = Input.empty();
+        this.apiKeyName = Output.empty();
+        this.apiKeyValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> apiKeyName;
-        private Input<String> apiKeyValue;
+        private Output<String> apiKeyName;
+        private Output<String> apiKeyValue;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ConnectionApiKeyAuthParametersArgs extends io.pulumi.resource
     	      this.apiKeyValue = defaults.apiKeyValue;
         }
 
-        public Builder apiKeyName(Input<String> apiKeyName) {
+        public Builder apiKeyName(Output<String> apiKeyName) {
             this.apiKeyName = Objects.requireNonNull(apiKeyName);
             return this;
         }
 
         public Builder apiKeyName(String apiKeyName) {
-            this.apiKeyName = Input.of(Objects.requireNonNull(apiKeyName));
+            this.apiKeyName = Output.of(Objects.requireNonNull(apiKeyName));
             return this;
         }
 
-        public Builder apiKeyValue(Input<String> apiKeyValue) {
+        public Builder apiKeyValue(Output<String> apiKeyValue) {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }
 
         public Builder apiKeyValue(String apiKeyValue) {
-            this.apiKeyValue = Input.of(Objects.requireNonNull(apiKeyValue));
+            this.apiKeyValue = Output.of(Objects.requireNonNull(apiKeyValue));
             return this;
         }
         public ConnectionApiKeyAuthParametersArgs build() {

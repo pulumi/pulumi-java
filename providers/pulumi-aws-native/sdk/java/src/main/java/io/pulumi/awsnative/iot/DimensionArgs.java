@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.DimensionType;
 import io.pulumi.awsnative.iot.inputs.DimensionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stringValues", required=true)
-      private final Input<List<String>> stringValues;
+      private final Output<List<String>> stringValues;
 
-    public Input<List<String>> getStringValues() {
+    public Output<List<String>> getStringValues() {
         return this.stringValues;
     }
 
@@ -44,10 +44,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DimensionTagArgs>> tags;
+      private final @Nullable Output<List<DimensionTagArgs>> tags;
 
-    public Input<List<DimensionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DimensionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<DimensionType> type;
+      private final Output<DimensionType> type;
 
-    public Input<DimensionType> getType() {
+    public Output<DimensionType> getType() {
         return this.type;
     }
 
     public DimensionArgs(
-        @Nullable Input<String> name,
-        Input<List<String>> stringValues,
-        @Nullable Input<List<DimensionTagArgs>> tags,
-        Input<DimensionType> type) {
+        @Nullable Output<String> name,
+        Output<List<String>> stringValues,
+        @Nullable Output<List<DimensionTagArgs>> tags,
+        Output<DimensionType> type) {
         this.name = name;
         this.stringValues = Objects.requireNonNull(stringValues, "expected parameter 'stringValues' to be non-null");
         this.tags = tags;
@@ -73,10 +73,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DimensionArgs() {
-        this.name = Input.empty();
-        this.stringValues = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.stringValues = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<List<String>> stringValues;
-        private @Nullable Input<List<DimensionTagArgs>> tags;
-        private Input<DimensionType> type;
+        private @Nullable Output<String> name;
+        private Output<List<String>> stringValues;
+        private @Nullable Output<List<DimensionTagArgs>> tags;
+        private Output<DimensionType> type;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder stringValues(Input<List<String>> stringValues) {
+        public Builder stringValues(Output<List<String>> stringValues) {
             this.stringValues = Objects.requireNonNull(stringValues);
             return this;
         }
 
         public Builder stringValues(List<String> stringValues) {
-            this.stringValues = Input.of(Objects.requireNonNull(stringValues));
+            this.stringValues = Output.of(Objects.requireNonNull(stringValues));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DimensionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DimensionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DimensionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(Input<DimensionType> type) {
+        public Builder type(Output<DimensionType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(DimensionType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DimensionArgs build() {

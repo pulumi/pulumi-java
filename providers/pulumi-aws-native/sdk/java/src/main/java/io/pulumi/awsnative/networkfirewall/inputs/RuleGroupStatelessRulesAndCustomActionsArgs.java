@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupCustomActionArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupStatelessRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
     public static final RuleGroupStatelessRulesAndCustomActionsArgs Empty = new RuleGroupStatelessRulesAndCustomActionsArgs();
 
     @InputImport(name="customActions")
-      private final @Nullable Input<List<RuleGroupCustomActionArgs>> customActions;
+      private final @Nullable Output<List<RuleGroupCustomActionArgs>> customActions;
 
-    public Input<List<RuleGroupCustomActionArgs>> getCustomActions() {
-        return this.customActions == null ? Input.empty() : this.customActions;
+    public Output<List<RuleGroupCustomActionArgs>> getCustomActions() {
+        return this.customActions == null ? Output.empty() : this.customActions;
     }
 
     @InputImport(name="statelessRules", required=true)
-      private final Input<List<RuleGroupStatelessRuleArgs>> statelessRules;
+      private final Output<List<RuleGroupStatelessRuleArgs>> statelessRules;
 
-    public Input<List<RuleGroupStatelessRuleArgs>> getStatelessRules() {
+    public Output<List<RuleGroupStatelessRuleArgs>> getStatelessRules() {
         return this.statelessRules;
     }
 
     public RuleGroupStatelessRulesAndCustomActionsArgs(
-        @Nullable Input<List<RuleGroupCustomActionArgs>> customActions,
-        Input<List<RuleGroupStatelessRuleArgs>> statelessRules) {
+        @Nullable Output<List<RuleGroupCustomActionArgs>> customActions,
+        Output<List<RuleGroupStatelessRuleArgs>> statelessRules) {
         this.customActions = customActions;
         this.statelessRules = Objects.requireNonNull(statelessRules, "expected parameter 'statelessRules' to be non-null");
     }
 
     private RuleGroupStatelessRulesAndCustomActionsArgs() {
-        this.customActions = Input.empty();
-        this.statelessRules = Input.empty();
+        this.customActions = Output.empty();
+        this.statelessRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RuleGroupCustomActionArgs>> customActions;
-        private Input<List<RuleGroupStatelessRuleArgs>> statelessRules;
+        private @Nullable Output<List<RuleGroupCustomActionArgs>> customActions;
+        private Output<List<RuleGroupStatelessRuleArgs>> statelessRules;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class RuleGroupStatelessRulesAndCustomActionsArgs extends io.pulumi
     	      this.statelessRules = defaults.statelessRules;
         }
 
-        public Builder customActions(@Nullable Input<List<RuleGroupCustomActionArgs>> customActions) {
+        public Builder customActions(@Nullable Output<List<RuleGroupCustomActionArgs>> customActions) {
             this.customActions = customActions;
             return this;
         }
 
         public Builder customActions(@Nullable List<RuleGroupCustomActionArgs> customActions) {
-            this.customActions = Input.ofNullable(customActions);
+            this.customActions = Output.ofNullable(customActions);
             return this;
         }
 
-        public Builder statelessRules(Input<List<RuleGroupStatelessRuleArgs>> statelessRules) {
+        public Builder statelessRules(Output<List<RuleGroupStatelessRuleArgs>> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
 
         public Builder statelessRules(List<RuleGroupStatelessRuleArgs> statelessRules) {
-            this.statelessRules = Input.of(Objects.requireNonNull(statelessRules));
+            this.statelessRules = Output.of(Objects.requireNonNull(statelessRules));
             return this;
         }
         public RuleGroupStatelessRulesAndCustomActionsArgs build() {

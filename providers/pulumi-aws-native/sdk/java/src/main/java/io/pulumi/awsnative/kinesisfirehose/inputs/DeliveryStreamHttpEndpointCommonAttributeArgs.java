@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     public static final DeliveryStreamHttpEndpointCommonAttributeArgs Empty = new DeliveryStreamHttpEndpointCommonAttributeArgs();
 
     @InputImport(name="attributeName", required=true)
-      private final Input<String> attributeName;
+      private final Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
+    public Output<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeValue", required=true)
-      private final Input<String> attributeValue;
+      private final Output<String> attributeValue;
 
-    public Input<String> getAttributeValue() {
+    public Output<String> getAttributeValue() {
         return this.attributeValue;
     }
 
     public DeliveryStreamHttpEndpointCommonAttributeArgs(
-        Input<String> attributeName,
-        Input<String> attributeValue) {
+        Output<String> attributeName,
+        Output<String> attributeValue) {
         this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
         this.attributeValue = Objects.requireNonNull(attributeValue, "expected parameter 'attributeValue' to be non-null");
     }
 
     private DeliveryStreamHttpEndpointCommonAttributeArgs() {
-        this.attributeName = Input.empty();
-        this.attributeValue = Input.empty();
+        this.attributeName = Output.empty();
+        this.attributeValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> attributeName;
-        private Input<String> attributeValue;
+        private Output<String> attributeName;
+        private Output<String> attributeValue;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder attributeName(Input<String> attributeName) {
+        public Builder attributeName(Output<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
         public Builder attributeName(String attributeName) {
-            this.attributeName = Input.of(Objects.requireNonNull(attributeName));
+            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder attributeValue(Input<String> attributeValue) {
+        public Builder attributeValue(Output<String> attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }
 
         public Builder attributeValue(String attributeValue) {
-            this.attributeValue = Input.of(Objects.requireNonNull(attributeValue));
+            this.attributeValue = Output.of(Objects.requireNonNull(attributeValue));
             return this;
         }
         public DeliveryStreamHttpEndpointCommonAttributeArgs build() {

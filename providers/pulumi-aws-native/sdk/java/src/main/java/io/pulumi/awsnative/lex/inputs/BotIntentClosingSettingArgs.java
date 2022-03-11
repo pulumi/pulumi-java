@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     public static final BotIntentClosingSettingArgs Empty = new BotIntentClosingSettingArgs();
 
     @InputImport(name="closingResponse", required=true)
-      private final Input<BotResponseSpecificationArgs> closingResponse;
+      private final Output<BotResponseSpecificationArgs> closingResponse;
 
-    public Input<BotResponseSpecificationArgs> getClosingResponse() {
+    public Output<BotResponseSpecificationArgs> getClosingResponse() {
         return this.closingResponse;
     }
 
     @InputImport(name="isActive")
-      private final @Nullable Input<Boolean> isActive;
+      private final @Nullable Output<Boolean> isActive;
 
-    public Input<Boolean> getIsActive() {
-        return this.isActive == null ? Input.empty() : this.isActive;
+    public Output<Boolean> getIsActive() {
+        return this.isActive == null ? Output.empty() : this.isActive;
     }
 
     public BotIntentClosingSettingArgs(
-        Input<BotResponseSpecificationArgs> closingResponse,
-        @Nullable Input<Boolean> isActive) {
+        Output<BotResponseSpecificationArgs> closingResponse,
+        @Nullable Output<Boolean> isActive) {
         this.closingResponse = Objects.requireNonNull(closingResponse, "expected parameter 'closingResponse' to be non-null");
         this.isActive = isActive;
     }
 
     private BotIntentClosingSettingArgs() {
-        this.closingResponse = Input.empty();
-        this.isActive = Input.empty();
+        this.closingResponse = Output.empty();
+        this.isActive = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<BotResponseSpecificationArgs> closingResponse;
-        private @Nullable Input<Boolean> isActive;
+        private Output<BotResponseSpecificationArgs> closingResponse;
+        private @Nullable Output<Boolean> isActive;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     	      this.isActive = defaults.isActive;
         }
 
-        public Builder closingResponse(Input<BotResponseSpecificationArgs> closingResponse) {
+        public Builder closingResponse(Output<BotResponseSpecificationArgs> closingResponse) {
             this.closingResponse = Objects.requireNonNull(closingResponse);
             return this;
         }
 
         public Builder closingResponse(BotResponseSpecificationArgs closingResponse) {
-            this.closingResponse = Input.of(Objects.requireNonNull(closingResponse));
+            this.closingResponse = Output.of(Objects.requireNonNull(closingResponse));
             return this;
         }
 
-        public Builder isActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Input.ofNullable(isActive);
+            this.isActive = Output.ofNullable(isActive);
             return this;
         }
         public BotIntentClosingSettingArgs build() {

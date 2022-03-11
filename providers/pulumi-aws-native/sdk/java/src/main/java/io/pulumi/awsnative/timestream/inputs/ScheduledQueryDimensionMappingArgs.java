@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     public static final ScheduledQueryDimensionMappingArgs Empty = new ScheduledQueryDimensionMappingArgs();
 
     @InputImport(name="dimensionValueType", required=true)
-      private final Input<ScheduledQueryDimensionValueType> dimensionValueType;
+      private final Output<ScheduledQueryDimensionValueType> dimensionValueType;
 
-    public Input<ScheduledQueryDimensionValueType> getDimensionValueType() {
+    public Output<ScheduledQueryDimensionValueType> getDimensionValueType() {
         return this.dimensionValueType;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public ScheduledQueryDimensionMappingArgs(
-        Input<ScheduledQueryDimensionValueType> dimensionValueType,
-        Input<String> name) {
+        Output<ScheduledQueryDimensionValueType> dimensionValueType,
+        Output<String> name) {
         this.dimensionValueType = Objects.requireNonNull(dimensionValueType, "expected parameter 'dimensionValueType' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private ScheduledQueryDimensionMappingArgs() {
-        this.dimensionValueType = Input.empty();
-        this.name = Input.empty();
+        this.dimensionValueType = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<ScheduledQueryDimensionValueType> dimensionValueType;
-        private Input<String> name;
+        private Output<ScheduledQueryDimensionValueType> dimensionValueType;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     	      this.name = defaults.name;
         }
 
-        public Builder dimensionValueType(Input<ScheduledQueryDimensionValueType> dimensionValueType) {
+        public Builder dimensionValueType(Output<ScheduledQueryDimensionValueType> dimensionValueType) {
             this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
             return this;
         }
 
         public Builder dimensionValueType(ScheduledQueryDimensionValueType dimensionValueType) {
-            this.dimensionValueType = Input.of(Objects.requireNonNull(dimensionValueType));
+            this.dimensionValueType = Output.of(Objects.requireNonNull(dimensionValueType));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public ScheduledQueryDimensionMappingArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     public static final ObjectTypeKeyMapArgs Empty = new ObjectTypeKeyMapArgs();
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="objectTypeKeyList")
-      private final @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+      private final @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
-    public Input<List<ObjectTypeKeyArgs>> getObjectTypeKeyList() {
-        return this.objectTypeKeyList == null ? Input.empty() : this.objectTypeKeyList;
+    public Output<List<ObjectTypeKeyArgs>> getObjectTypeKeyList() {
+        return this.objectTypeKeyList == null ? Output.empty() : this.objectTypeKeyList;
     }
 
     public ObjectTypeKeyMapArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
         this.name = name;
         this.objectTypeKeyList = objectTypeKeyList;
     }
 
     private ObjectTypeKeyMapArgs() {
-        this.name = Input.empty();
-        this.objectTypeKeyList = Input.empty();
+        this.name = Output.empty();
+        this.objectTypeKeyList = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     	      this.objectTypeKeyList = defaults.objectTypeKeyList;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder objectTypeKeyList(@Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
+        public Builder objectTypeKeyList(@Nullable Output<List<ObjectTypeKeyArgs>> objectTypeKeyList) {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
 
         public Builder objectTypeKeyList(@Nullable List<ObjectTypeKeyArgs> objectTypeKeyList) {
-            this.objectTypeKeyList = Input.ofNullable(objectTypeKeyList);
+            this.objectTypeKeyList = Output.ofNullable(objectTypeKeyList);
             return this;
         }
         public ObjectTypeKeyMapArgs build() {

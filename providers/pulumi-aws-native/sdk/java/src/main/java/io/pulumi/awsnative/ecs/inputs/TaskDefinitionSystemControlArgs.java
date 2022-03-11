@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     public static final TaskDefinitionSystemControlArgs Empty = new TaskDefinitionSystemControlArgs();
 
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public TaskDefinitionSystemControlArgs(
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> value) {
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> value) {
         this.namespace = namespace;
         this.value = value;
     }
 
     private TaskDefinitionSystemControlArgs() {
-        this.namespace = Input.empty();
-        this.value = Input.empty();
+        this.namespace = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> value;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class TaskDefinitionSystemControlArgs extends io.pulumi.resources.R
     	      this.value = defaults.value;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public TaskDefinitionSystemControlArgs build() {

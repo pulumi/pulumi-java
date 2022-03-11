@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
      * 
      */
     @InputImport(name="instanceUrl", required=true)
-      private final Input<String> instanceUrl;
+      private final Output<String> instanceUrl;
 
-    public Input<String> getInstanceUrl() {
+    public Output<String> getInstanceUrl() {
         return this.instanceUrl;
     }
 
-    public ConnectorProfileSlackConnectorProfilePropertiesArgs(Input<String> instanceUrl) {
+    public ConnectorProfileSlackConnectorProfilePropertiesArgs(Output<String> instanceUrl) {
         this.instanceUrl = Objects.requireNonNull(instanceUrl, "expected parameter 'instanceUrl' to be non-null");
     }
 
     private ConnectorProfileSlackConnectorProfilePropertiesArgs() {
-        this.instanceUrl = Input.empty();
+        this.instanceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> instanceUrl;
+        private Output<String> instanceUrl;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends i
     	      this.instanceUrl = defaults.instanceUrl;
         }
 
-        public Builder instanceUrl(Input<String> instanceUrl) {
+        public Builder instanceUrl(Output<String> instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
 
         public Builder instanceUrl(String instanceUrl) {
-            this.instanceUrl = Input.of(Objects.requireNonNull(instanceUrl));
+            this.instanceUrl = Output.of(Objects.requireNonNull(instanceUrl));
             return this;
         }
         public ConnectorProfileSlackConnectorProfilePropertiesArgs build() {

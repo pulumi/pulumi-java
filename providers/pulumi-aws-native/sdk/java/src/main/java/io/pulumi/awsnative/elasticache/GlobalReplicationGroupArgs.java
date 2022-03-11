@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache;
 
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupMemberArgs;
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupRegionalConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="automaticFailoverEnabled")
-      private final @Nullable Input<Boolean> automaticFailoverEnabled;
+      private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
-    public Input<Boolean> getAutomaticFailoverEnabled() {
-        return this.automaticFailoverEnabled == null ? Input.empty() : this.automaticFailoverEnabled;
+    public Output<Boolean> getAutomaticFailoverEnabled() {
+        return this.automaticFailoverEnabled == null ? Output.empty() : this.automaticFailoverEnabled;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheNodeType")
-      private final @Nullable Input<String> cacheNodeType;
+      private final @Nullable Output<String> cacheNodeType;
 
-    public Input<String> getCacheNodeType() {
-        return this.cacheNodeType == null ? Input.empty() : this.cacheNodeType;
+    public Output<String> getCacheNodeType() {
+        return this.cacheNodeType == null ? Output.empty() : this.cacheNodeType;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cacheParameterGroupName")
-      private final @Nullable Input<String> cacheParameterGroupName;
+      private final @Nullable Output<String> cacheParameterGroupName;
 
-    public Input<String> getCacheParameterGroupName() {
-        return this.cacheParameterGroupName == null ? Input.empty() : this.cacheParameterGroupName;
+    public Output<String> getCacheParameterGroupName() {
+        return this.cacheParameterGroupName == null ? Output.empty() : this.cacheParameterGroupName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="engineVersion")
-      private final @Nullable Input<String> engineVersion;
+      private final @Nullable Output<String> engineVersion;
 
-    public Input<String> getEngineVersion() {
-        return this.engineVersion == null ? Input.empty() : this.engineVersion;
+    public Output<String> getEngineVersion() {
+        return this.engineVersion == null ? Output.empty() : this.engineVersion;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalNodeGroupCount")
-      private final @Nullable Input<Integer> globalNodeGroupCount;
+      private final @Nullable Output<Integer> globalNodeGroupCount;
 
-    public Input<Integer> getGlobalNodeGroupCount() {
-        return this.globalNodeGroupCount == null ? Input.empty() : this.globalNodeGroupCount;
+    public Output<Integer> getGlobalNodeGroupCount() {
+        return this.globalNodeGroupCount == null ? Output.empty() : this.globalNodeGroupCount;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupDescription")
-      private final @Nullable Input<String> globalReplicationGroupDescription;
+      private final @Nullable Output<String> globalReplicationGroupDescription;
 
-    public Input<String> getGlobalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription == null ? Input.empty() : this.globalReplicationGroupDescription;
+    public Output<String> getGlobalReplicationGroupDescription() {
+        return this.globalReplicationGroupDescription == null ? Output.empty() : this.globalReplicationGroupDescription;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="globalReplicationGroupIdSuffix")
-      private final @Nullable Input<String> globalReplicationGroupIdSuffix;
+      private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
-    public Input<String> getGlobalReplicationGroupIdSuffix() {
-        return this.globalReplicationGroupIdSuffix == null ? Input.empty() : this.globalReplicationGroupIdSuffix;
+    public Output<String> getGlobalReplicationGroupIdSuffix() {
+        return this.globalReplicationGroupIdSuffix == null ? Output.empty() : this.globalReplicationGroupIdSuffix;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="members", required=true)
-      private final Input<List<GlobalReplicationGroupMemberArgs>> members;
+      private final Output<List<GlobalReplicationGroupMemberArgs>> members;
 
-    public Input<List<GlobalReplicationGroupMemberArgs>> getMembers() {
+    public Output<List<GlobalReplicationGroupMemberArgs>> getMembers() {
         return this.members;
     }
 
@@ -112,22 +112,22 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regionalConfigurations")
-      private final @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
+      private final @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
-    public Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> getRegionalConfigurations() {
-        return this.regionalConfigurations == null ? Input.empty() : this.regionalConfigurations;
+    public Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> getRegionalConfigurations() {
+        return this.regionalConfigurations == null ? Output.empty() : this.regionalConfigurations;
     }
 
     public GlobalReplicationGroupArgs(
-        @Nullable Input<Boolean> automaticFailoverEnabled,
-        @Nullable Input<String> cacheNodeType,
-        @Nullable Input<String> cacheParameterGroupName,
-        @Nullable Input<String> engineVersion,
-        @Nullable Input<Integer> globalNodeGroupCount,
-        @Nullable Input<String> globalReplicationGroupDescription,
-        @Nullable Input<String> globalReplicationGroupIdSuffix,
-        Input<List<GlobalReplicationGroupMemberArgs>> members,
-        @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
+        @Nullable Output<Boolean> automaticFailoverEnabled,
+        @Nullable Output<String> cacheNodeType,
+        @Nullable Output<String> cacheParameterGroupName,
+        @Nullable Output<String> engineVersion,
+        @Nullable Output<Integer> globalNodeGroupCount,
+        @Nullable Output<String> globalReplicationGroupDescription,
+        @Nullable Output<String> globalReplicationGroupIdSuffix,
+        Output<List<GlobalReplicationGroupMemberArgs>> members,
+        @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
         this.automaticFailoverEnabled = automaticFailoverEnabled;
         this.cacheNodeType = cacheNodeType;
         this.cacheParameterGroupName = cacheParameterGroupName;
@@ -140,15 +140,15 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     }
 
     private GlobalReplicationGroupArgs() {
-        this.automaticFailoverEnabled = Input.empty();
-        this.cacheNodeType = Input.empty();
-        this.cacheParameterGroupName = Input.empty();
-        this.engineVersion = Input.empty();
-        this.globalNodeGroupCount = Input.empty();
-        this.globalReplicationGroupDescription = Input.empty();
-        this.globalReplicationGroupIdSuffix = Input.empty();
-        this.members = Input.empty();
-        this.regionalConfigurations = Input.empty();
+        this.automaticFailoverEnabled = Output.empty();
+        this.cacheNodeType = Output.empty();
+        this.cacheParameterGroupName = Output.empty();
+        this.engineVersion = Output.empty();
+        this.globalNodeGroupCount = Output.empty();
+        this.globalReplicationGroupDescription = Output.empty();
+        this.globalReplicationGroupIdSuffix = Output.empty();
+        this.members = Output.empty();
+        this.regionalConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> automaticFailoverEnabled;
-        private @Nullable Input<String> cacheNodeType;
-        private @Nullable Input<String> cacheParameterGroupName;
-        private @Nullable Input<String> engineVersion;
-        private @Nullable Input<Integer> globalNodeGroupCount;
-        private @Nullable Input<String> globalReplicationGroupDescription;
-        private @Nullable Input<String> globalReplicationGroupIdSuffix;
-        private Input<List<GlobalReplicationGroupMemberArgs>> members;
-        private @Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
+        private @Nullable Output<Boolean> automaticFailoverEnabled;
+        private @Nullable Output<String> cacheNodeType;
+        private @Nullable Output<String> cacheParameterGroupName;
+        private @Nullable Output<String> engineVersion;
+        private @Nullable Output<Integer> globalNodeGroupCount;
+        private @Nullable Output<String> globalReplicationGroupDescription;
+        private @Nullable Output<String> globalReplicationGroupIdSuffix;
+        private Output<List<GlobalReplicationGroupMemberArgs>> members;
+        private @Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
     	      this.regionalConfigurations = defaults.regionalConfigurations;
         }
 
-        public Builder automaticFailoverEnabled(@Nullable Input<Boolean> automaticFailoverEnabled) {
+        public Builder automaticFailoverEnabled(@Nullable Output<Boolean> automaticFailoverEnabled) {
             this.automaticFailoverEnabled = automaticFailoverEnabled;
             return this;
         }
 
         public Builder automaticFailoverEnabled(@Nullable Boolean automaticFailoverEnabled) {
-            this.automaticFailoverEnabled = Input.ofNullable(automaticFailoverEnabled);
+            this.automaticFailoverEnabled = Output.ofNullable(automaticFailoverEnabled);
             return this;
         }
 
-        public Builder cacheNodeType(@Nullable Input<String> cacheNodeType) {
+        public Builder cacheNodeType(@Nullable Output<String> cacheNodeType) {
             this.cacheNodeType = cacheNodeType;
             return this;
         }
 
         public Builder cacheNodeType(@Nullable String cacheNodeType) {
-            this.cacheNodeType = Input.ofNullable(cacheNodeType);
+            this.cacheNodeType = Output.ofNullable(cacheNodeType);
             return this;
         }
 
-        public Builder cacheParameterGroupName(@Nullable Input<String> cacheParameterGroupName) {
+        public Builder cacheParameterGroupName(@Nullable Output<String> cacheParameterGroupName) {
             this.cacheParameterGroupName = cacheParameterGroupName;
             return this;
         }
 
         public Builder cacheParameterGroupName(@Nullable String cacheParameterGroupName) {
-            this.cacheParameterGroupName = Input.ofNullable(cacheParameterGroupName);
+            this.cacheParameterGroupName = Output.ofNullable(cacheParameterGroupName);
             return this;
         }
 
-        public Builder engineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Output<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Input.ofNullable(engineVersion);
+            this.engineVersion = Output.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder globalNodeGroupCount(@Nullable Input<Integer> globalNodeGroupCount) {
+        public Builder globalNodeGroupCount(@Nullable Output<Integer> globalNodeGroupCount) {
             this.globalNodeGroupCount = globalNodeGroupCount;
             return this;
         }
 
         public Builder globalNodeGroupCount(@Nullable Integer globalNodeGroupCount) {
-            this.globalNodeGroupCount = Input.ofNullable(globalNodeGroupCount);
+            this.globalNodeGroupCount = Output.ofNullable(globalNodeGroupCount);
             return this;
         }
 
-        public Builder globalReplicationGroupDescription(@Nullable Input<String> globalReplicationGroupDescription) {
+        public Builder globalReplicationGroupDescription(@Nullable Output<String> globalReplicationGroupDescription) {
             this.globalReplicationGroupDescription = globalReplicationGroupDescription;
             return this;
         }
 
         public Builder globalReplicationGroupDescription(@Nullable String globalReplicationGroupDescription) {
-            this.globalReplicationGroupDescription = Input.ofNullable(globalReplicationGroupDescription);
+            this.globalReplicationGroupDescription = Output.ofNullable(globalReplicationGroupDescription);
             return this;
         }
 
-        public Builder globalReplicationGroupIdSuffix(@Nullable Input<String> globalReplicationGroupIdSuffix) {
+        public Builder globalReplicationGroupIdSuffix(@Nullable Output<String> globalReplicationGroupIdSuffix) {
             this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
             return this;
         }
 
         public Builder globalReplicationGroupIdSuffix(@Nullable String globalReplicationGroupIdSuffix) {
-            this.globalReplicationGroupIdSuffix = Input.ofNullable(globalReplicationGroupIdSuffix);
+            this.globalReplicationGroupIdSuffix = Output.ofNullable(globalReplicationGroupIdSuffix);
             return this;
         }
 
-        public Builder members(Input<List<GlobalReplicationGroupMemberArgs>> members) {
+        public Builder members(Output<List<GlobalReplicationGroupMemberArgs>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<GlobalReplicationGroupMemberArgs> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder regionalConfigurations(@Nullable Input<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
+        public Builder regionalConfigurations(@Nullable Output<List<GlobalReplicationGroupRegionalConfigurationArgs>> regionalConfigurations) {
             this.regionalConfigurations = regionalConfigurations;
             return this;
         }
 
         public Builder regionalConfigurations(@Nullable List<GlobalReplicationGroupRegionalConfigurationArgs> regionalConfigurations) {
-            this.regionalConfigurations = Input.ofNullable(regionalConfigurations);
+            this.regionalConfigurations = Output.ofNullable(regionalConfigurations);
             return this;
         }
         public GlobalReplicationGroupArgs build() {

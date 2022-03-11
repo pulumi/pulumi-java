@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     public static final BotVersionLocaleDetailsArgs Empty = new BotVersionLocaleDetailsArgs();
 
     @InputImport(name="sourceBotVersion", required=true)
-      private final Input<String> sourceBotVersion;
+      private final Output<String> sourceBotVersion;
 
-    public Input<String> getSourceBotVersion() {
+    public Output<String> getSourceBotVersion() {
         return this.sourceBotVersion;
     }
 
-    public BotVersionLocaleDetailsArgs(Input<String> sourceBotVersion) {
+    public BotVersionLocaleDetailsArgs(Output<String> sourceBotVersion) {
         this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion, "expected parameter 'sourceBotVersion' to be non-null");
     }
 
     private BotVersionLocaleDetailsArgs() {
-        this.sourceBotVersion = Input.empty();
+        this.sourceBotVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> sourceBotVersion;
+        private Output<String> sourceBotVersion;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     	      this.sourceBotVersion = defaults.sourceBotVersion;
         }
 
-        public Builder sourceBotVersion(Input<String> sourceBotVersion) {
+        public Builder sourceBotVersion(Output<String> sourceBotVersion) {
             this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
             return this;
         }
 
         public Builder sourceBotVersion(String sourceBotVersion) {
-            this.sourceBotVersion = Input.of(Objects.requireNonNull(sourceBotVersion));
+            this.sourceBotVersion = Output.of(Objects.requireNonNull(sourceBotVersion));
             return this;
         }
         public BotVersionLocaleDetailsArgs build() {

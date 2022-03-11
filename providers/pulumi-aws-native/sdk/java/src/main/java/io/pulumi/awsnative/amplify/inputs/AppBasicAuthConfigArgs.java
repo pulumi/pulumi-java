@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
     public static final AppBasicAuthConfigArgs Empty = new AppBasicAuthConfigArgs();
 
     @InputImport(name="enableBasicAuth")
-      private final @Nullable Input<Boolean> enableBasicAuth;
+      private final @Nullable Output<Boolean> enableBasicAuth;
 
-    public Input<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Input.empty() : this.enableBasicAuth;
+    public Output<Boolean> getEnableBasicAuth() {
+        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
     }
 
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public AppBasicAuthConfigArgs(
-        @Nullable Input<Boolean> enableBasicAuth,
-        @Nullable Input<String> password,
-        @Nullable Input<String> username) {
+        @Nullable Output<Boolean> enableBasicAuth,
+        @Nullable Output<String> password,
+        @Nullable Output<String> username) {
         this.enableBasicAuth = enableBasicAuth;
         this.password = password;
         this.username = username;
     }
 
     private AppBasicAuthConfigArgs() {
-        this.enableBasicAuth = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.enableBasicAuth = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableBasicAuth;
-        private @Nullable Input<String> password;
-        private @Nullable Input<String> username;
+        private @Nullable Output<Boolean> enableBasicAuth;
+        private @Nullable Output<String> password;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class AppBasicAuthConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.username = defaults.username;
         }
 
-        public Builder enableBasicAuth(@Nullable Input<Boolean> enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Input.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public AppBasicAuthConfigArgs build() {

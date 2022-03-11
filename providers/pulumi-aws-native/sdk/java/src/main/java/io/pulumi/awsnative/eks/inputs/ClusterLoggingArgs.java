@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,18 +22,18 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterLogging")
-      private final @Nullable Input<ClusterLoggingArgs> clusterLogging;
+      private final @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
-    public Input<ClusterLoggingArgs> getClusterLogging() {
-        return this.clusterLogging == null ? Input.empty() : this.clusterLogging;
+    public Output<ClusterLoggingArgs> getClusterLogging() {
+        return this.clusterLogging == null ? Output.empty() : this.clusterLogging;
     }
 
-    public ClusterLoggingArgs(@Nullable Input<ClusterLoggingArgs> clusterLogging) {
+    public ClusterLoggingArgs(@Nullable Output<ClusterLoggingArgs> clusterLogging) {
         this.clusterLogging = clusterLogging;
     }
 
     private ClusterLoggingArgs() {
-        this.clusterLogging = Input.empty();
+        this.clusterLogging = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterLoggingArgs> clusterLogging;
+        private @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterLogging = defaults.clusterLogging;
         }
 
-        public Builder clusterLogging(@Nullable Input<ClusterLoggingArgs> clusterLogging) {
+        public Builder clusterLogging(@Nullable Output<ClusterLoggingArgs> clusterLogging) {
             this.clusterLogging = clusterLogging;
             return this;
         }
 
         public Builder clusterLogging(@Nullable ClusterLoggingArgs clusterLogging) {
-            this.clusterLogging = Input.ofNullable(clusterLogging);
+            this.clusterLogging = Output.ofNullable(clusterLogging);
             return this;
         }
         public ClusterLoggingArgs build() {

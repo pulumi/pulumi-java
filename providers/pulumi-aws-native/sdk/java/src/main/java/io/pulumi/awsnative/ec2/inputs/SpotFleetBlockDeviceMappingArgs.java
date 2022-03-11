@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetEbsBlockDeviceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,38 +16,38 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     public static final SpotFleetBlockDeviceMappingArgs Empty = new SpotFleetBlockDeviceMappingArgs();
 
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="ebs")
-      private final @Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs;
+      private final @Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs;
 
-    public Input<SpotFleetEbsBlockDeviceArgs> getEbs() {
-        return this.ebs == null ? Input.empty() : this.ebs;
+    public Output<SpotFleetEbsBlockDeviceArgs> getEbs() {
+        return this.ebs == null ? Output.empty() : this.ebs;
     }
 
     @InputImport(name="noDevice")
-      private final @Nullable Input<String> noDevice;
+      private final @Nullable Output<String> noDevice;
 
-    public Input<String> getNoDevice() {
-        return this.noDevice == null ? Input.empty() : this.noDevice;
+    public Output<String> getNoDevice() {
+        return this.noDevice == null ? Output.empty() : this.noDevice;
     }
 
     @InputImport(name="virtualName")
-      private final @Nullable Input<String> virtualName;
+      private final @Nullable Output<String> virtualName;
 
-    public Input<String> getVirtualName() {
-        return this.virtualName == null ? Input.empty() : this.virtualName;
+    public Output<String> getVirtualName() {
+        return this.virtualName == null ? Output.empty() : this.virtualName;
     }
 
     public SpotFleetBlockDeviceMappingArgs(
-        Input<String> deviceName,
-        @Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs,
-        @Nullable Input<String> noDevice,
-        @Nullable Input<String> virtualName) {
+        Output<String> deviceName,
+        @Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs,
+        @Nullable Output<String> noDevice,
+        @Nullable Output<String> virtualName) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -55,10 +55,10 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     }
 
     private SpotFleetBlockDeviceMappingArgs() {
-        this.deviceName = Input.empty();
-        this.ebs = Input.empty();
-        this.noDevice = Input.empty();
-        this.virtualName = Input.empty();
+        this.deviceName = Output.empty();
+        this.ebs = Output.empty();
+        this.noDevice = Output.empty();
+        this.virtualName = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private @Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs;
-        private @Nullable Input<String> noDevice;
-        private @Nullable Input<String> virtualName;
+        private Output<String> deviceName;
+        private @Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs;
+        private @Nullable Output<String> noDevice;
+        private @Nullable Output<String> virtualName;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder ebs(@Nullable Input<SpotFleetEbsBlockDeviceArgs> ebs) {
+        public Builder ebs(@Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
         public Builder ebs(@Nullable SpotFleetEbsBlockDeviceArgs ebs) {
-            this.ebs = Input.ofNullable(ebs);
+            this.ebs = Output.ofNullable(ebs);
             return this;
         }
 
-        public Builder noDevice(@Nullable Input<String> noDevice) {
+        public Builder noDevice(@Nullable Output<String> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
         public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = Input.ofNullable(noDevice);
+            this.noDevice = Output.ofNullable(noDevice);
             return this;
         }
 
-        public Builder virtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Output<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Input.ofNullable(virtualName);
+            this.virtualName = Output.ofNullable(virtualName);
             return this;
         }
         public SpotFleetBlockDeviceMappingArgs build() {

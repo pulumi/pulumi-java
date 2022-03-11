@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.accessanalyzer.inputs;
 
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,9 +20,9 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
     public static final AnalyzerArchiveRuleArgs Empty = new AnalyzerArchiveRuleArgs();
 
     @InputImport(name="filter", required=true)
-      private final Input<List<AnalyzerFilterArgs>> filter;
+      private final Output<List<AnalyzerFilterArgs>> filter;
 
-    public Input<List<AnalyzerFilterArgs>> getFilter() {
+    public Output<List<AnalyzerFilterArgs>> getFilter() {
         return this.filter;
     }
 
@@ -31,22 +31,22 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleName", required=true)
-      private final Input<String> ruleName;
+      private final Output<String> ruleName;
 
-    public Input<String> getRuleName() {
+    public Output<String> getRuleName() {
         return this.ruleName;
     }
 
     public AnalyzerArchiveRuleArgs(
-        Input<List<AnalyzerFilterArgs>> filter,
-        Input<String> ruleName) {
+        Output<List<AnalyzerFilterArgs>> filter,
+        Output<String> ruleName) {
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
         this.ruleName = Objects.requireNonNull(ruleName, "expected parameter 'ruleName' to be non-null");
     }
 
     private AnalyzerArchiveRuleArgs() {
-        this.filter = Input.empty();
-        this.ruleName = Input.empty();
+        this.filter = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<List<AnalyzerFilterArgs>> filter;
-        private Input<String> ruleName;
+        private Output<List<AnalyzerFilterArgs>> filter;
+        private Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder filter(Input<List<AnalyzerFilterArgs>> filter) {
+        public Builder filter(Output<List<AnalyzerFilterArgs>> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(List<AnalyzerFilterArgs> filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder ruleName(Input<String> ruleName) {
+        public Builder ruleName(Output<String> ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
         public Builder ruleName(String ruleName) {
-            this.ruleName = Input.of(Objects.requireNonNull(ruleName));
+            this.ruleName = Output.of(Objects.requireNonNull(ruleName));
             return this;
         }
         public AnalyzerArchiveRuleArgs build() {

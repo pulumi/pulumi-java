@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableMode;
 import io.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     public static final TableBillingModeArgs Empty = new TableBillingModeArgs();
 
     @InputImport(name="mode", required=true)
-      private final Input<TableMode> mode;
+      private final Output<TableMode> mode;
 
-    public Input<TableMode> getMode() {
+    public Output<TableMode> getMode() {
         return this.mode;
     }
 
     @InputImport(name="provisionedThroughput")
-      private final @Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput;
+      private final @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
 
-    public Input<TableProvisionedThroughputArgs> getProvisionedThroughput() {
-        return this.provisionedThroughput == null ? Input.empty() : this.provisionedThroughput;
+    public Output<TableProvisionedThroughputArgs> getProvisionedThroughput() {
+        return this.provisionedThroughput == null ? Output.empty() : this.provisionedThroughput;
     }
 
     public TableBillingModeArgs(
-        Input<TableMode> mode,
-        @Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput) {
+        Output<TableMode> mode,
+        @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput) {
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
         this.provisionedThroughput = provisionedThroughput;
     }
 
     private TableBillingModeArgs() {
-        this.mode = Input.empty();
-        this.provisionedThroughput = Input.empty();
+        this.mode = Output.empty();
+        this.provisionedThroughput = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<TableMode> mode;
-        private @Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput;
+        private Output<TableMode> mode;
+        private @Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     	      this.provisionedThroughput = defaults.provisionedThroughput;
         }
 
-        public Builder mode(Input<TableMode> mode) {
+        public Builder mode(Output<TableMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(TableMode mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder provisionedThroughput(@Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput) {
+        public Builder provisionedThroughput(@Nullable Output<TableProvisionedThroughputArgs> provisionedThroughput) {
             this.provisionedThroughput = provisionedThroughput;
             return this;
         }
 
         public Builder provisionedThroughput(@Nullable TableProvisionedThroughputArgs provisionedThroughput) {
-            this.provisionedThroughput = Input.ofNullable(provisionedThroughput);
+            this.provisionedThroughput = Output.ofNullable(provisionedThroughput);
             return this;
         }
         public TableBillingModeArgs build() {

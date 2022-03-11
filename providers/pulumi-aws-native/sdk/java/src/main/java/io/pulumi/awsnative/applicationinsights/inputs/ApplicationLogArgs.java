@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<ApplicationLogEncoding> encoding;
+      private final @Nullable Output<ApplicationLogEncoding> encoding;
 
-    public Input<ApplicationLogEncoding> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<ApplicationLogEncoding> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logGroupName")
-      private final @Nullable Input<String> logGroupName;
+      private final @Nullable Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
-        return this.logGroupName == null ? Input.empty() : this.logGroupName;
+    public Output<String> getLogGroupName() {
+        return this.logGroupName == null ? Output.empty() : this.logGroupName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPath")
-      private final @Nullable Input<String> logPath;
+      private final @Nullable Output<String> logPath;
 
-    public Input<String> getLogPath() {
-        return this.logPath == null ? Input.empty() : this.logPath;
+    public Output<String> getLogPath() {
+        return this.logPath == null ? Output.empty() : this.logPath;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logType", required=true)
-      private final Input<String> logType;
+      private final Output<String> logType;
 
-    public Input<String> getLogType() {
+    public Output<String> getLogType() {
         return this.logType;
     }
 
@@ -68,18 +68,18 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternSet")
-      private final @Nullable Input<String> patternSet;
+      private final @Nullable Output<String> patternSet;
 
-    public Input<String> getPatternSet() {
-        return this.patternSet == null ? Input.empty() : this.patternSet;
+    public Output<String> getPatternSet() {
+        return this.patternSet == null ? Output.empty() : this.patternSet;
     }
 
     public ApplicationLogArgs(
-        @Nullable Input<ApplicationLogEncoding> encoding,
-        @Nullable Input<String> logGroupName,
-        @Nullable Input<String> logPath,
-        Input<String> logType,
-        @Nullable Input<String> patternSet) {
+        @Nullable Output<ApplicationLogEncoding> encoding,
+        @Nullable Output<String> logGroupName,
+        @Nullable Output<String> logPath,
+        Output<String> logType,
+        @Nullable Output<String> patternSet) {
         this.encoding = encoding;
         this.logGroupName = logGroupName;
         this.logPath = logPath;
@@ -88,11 +88,11 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationLogArgs() {
-        this.encoding = Input.empty();
-        this.logGroupName = Input.empty();
-        this.logPath = Input.empty();
-        this.logType = Input.empty();
-        this.patternSet = Input.empty();
+        this.encoding = Output.empty();
+        this.logGroupName = Output.empty();
+        this.logPath = Output.empty();
+        this.logType = Output.empty();
+        this.patternSet = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationLogEncoding> encoding;
-        private @Nullable Input<String> logGroupName;
-        private @Nullable Input<String> logPath;
-        private Input<String> logType;
-        private @Nullable Input<String> patternSet;
+        private @Nullable Output<ApplicationLogEncoding> encoding;
+        private @Nullable Output<String> logGroupName;
+        private @Nullable Output<String> logPath;
+        private Output<String> logType;
+        private @Nullable Output<String> patternSet;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder encoding(@Nullable Input<ApplicationLogEncoding> encoding) {
+        public Builder encoding(@Nullable Output<ApplicationLogEncoding> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder logGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Output<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Input.ofNullable(logGroupName);
+            this.logGroupName = Output.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder logPath(@Nullable Input<String> logPath) {
+        public Builder logPath(@Nullable Output<String> logPath) {
             this.logPath = logPath;
             return this;
         }
 
         public Builder logPath(@Nullable String logPath) {
-            this.logPath = Input.ofNullable(logPath);
+            this.logPath = Output.ofNullable(logPath);
             return this;
         }
 
-        public Builder logType(Input<String> logType) {
+        public Builder logType(Output<String> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
         public Builder logType(String logType) {
-            this.logType = Input.of(Objects.requireNonNull(logType));
+            this.logType = Output.of(Objects.requireNonNull(logType));
             return this;
         }
 
-        public Builder patternSet(@Nullable Input<String> patternSet) {
+        public Builder patternSet(@Nullable Output<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
 
         public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = Input.ofNullable(patternSet);
+            this.patternSet = Output.ofNullable(patternSet);
             return this;
         }
         public ApplicationLogArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends io.pulumi.resour
     public static final DeliveryStreamSplunkRetryOptionsArgs Empty = new DeliveryStreamSplunkRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-      private final @Nullable Input<Integer> durationInSeconds;
+      private final @Nullable Output<Integer> durationInSeconds;
 
-    public Input<Integer> getDurationInSeconds() {
-        return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
+    public Output<Integer> getDurationInSeconds() {
+        return this.durationInSeconds == null ? Output.empty() : this.durationInSeconds;
     }
 
-    public DeliveryStreamSplunkRetryOptionsArgs(@Nullable Input<Integer> durationInSeconds) {
+    public DeliveryStreamSplunkRetryOptionsArgs(@Nullable Output<Integer> durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
     }
 
     private DeliveryStreamSplunkRetryOptionsArgs() {
-        this.durationInSeconds = Input.empty();
+        this.durationInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> durationInSeconds;
+        private @Nullable Output<Integer> durationInSeconds;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DeliveryStreamSplunkRetryOptionsArgs extends io.pulumi.resour
     	      this.durationInSeconds = defaults.durationInSeconds;
         }
 
-        public Builder durationInSeconds(@Nullable Input<Integer> durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Output<Integer> durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
 
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Input.ofNullable(durationInSeconds);
+            this.durationInSeconds = Output.ofNullable(durationInSeconds);
             return this;
         }
         public DeliveryStreamSplunkRetryOptionsArgs build() {

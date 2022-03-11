@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupOnlineStoreSecurityConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
     public static final OnlineStoreConfigPropertiesArgs Empty = new OnlineStoreConfigPropertiesArgs();
 
     @InputImport(name="enableOnlineStore")
-      private final @Nullable Input<Boolean> enableOnlineStore;
+      private final @Nullable Output<Boolean> enableOnlineStore;
 
-    public Input<Boolean> getEnableOnlineStore() {
-        return this.enableOnlineStore == null ? Input.empty() : this.enableOnlineStore;
+    public Output<Boolean> getEnableOnlineStore() {
+        return this.enableOnlineStore == null ? Output.empty() : this.enableOnlineStore;
     }
 
     @InputImport(name="securityConfig")
-      private final @Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
+      private final @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
-    public Input<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {
-        return this.securityConfig == null ? Input.empty() : this.securityConfig;
+    public Output<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {
+        return this.securityConfig == null ? Output.empty() : this.securityConfig;
     }
 
     public OnlineStoreConfigPropertiesArgs(
-        @Nullable Input<Boolean> enableOnlineStore,
-        @Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
+        @Nullable Output<Boolean> enableOnlineStore,
+        @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
         this.enableOnlineStore = enableOnlineStore;
         this.securityConfig = securityConfig;
     }
 
     private OnlineStoreConfigPropertiesArgs() {
-        this.enableOnlineStore = Input.empty();
-        this.securityConfig = Input.empty();
+        this.enableOnlineStore = Output.empty();
+        this.securityConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableOnlineStore;
-        private @Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
+        private @Nullable Output<Boolean> enableOnlineStore;
+        private @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
     	      this.securityConfig = defaults.securityConfig;
         }
 
-        public Builder enableOnlineStore(@Nullable Input<Boolean> enableOnlineStore) {
+        public Builder enableOnlineStore(@Nullable Output<Boolean> enableOnlineStore) {
             this.enableOnlineStore = enableOnlineStore;
             return this;
         }
 
         public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
-            this.enableOnlineStore = Input.ofNullable(enableOnlineStore);
+            this.enableOnlineStore = Output.ofNullable(enableOnlineStore);
             return this;
         }
 
-        public Builder securityConfig(@Nullable Input<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
+        public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
         public Builder securityConfig(@Nullable FeatureGroupOnlineStoreSecurityConfigArgs securityConfig) {
-            this.securityConfig = Input.ofNullable(securityConfig);
+            this.securityConfig = Output.ofNullable(securityConfig);
             return this;
         }
         public OnlineStoreConfigPropertiesArgs build() {

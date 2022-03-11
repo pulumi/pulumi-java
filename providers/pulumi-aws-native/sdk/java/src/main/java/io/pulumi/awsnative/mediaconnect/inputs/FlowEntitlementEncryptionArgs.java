@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionKeyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<FlowEntitlementEncryptionAlgorithm> algorithm;
+      private final Output<FlowEntitlementEncryptionAlgorithm> algorithm;
 
-    public Input<FlowEntitlementEncryptionAlgorithm> getAlgorithm() {
+    public Output<FlowEntitlementEncryptionAlgorithm> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -36,10 +36,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="constantInitializationVector")
-      private final @Nullable Input<String> constantInitializationVector;
+      private final @Nullable Output<String> constantInitializationVector;
 
-    public Input<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
+    public Output<String> getConstantInitializationVector() {
+        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deviceId")
-      private final @Nullable Input<String> deviceId;
+      private final @Nullable Output<String> deviceId;
 
-    public Input<String> getDeviceId() {
-        return this.deviceId == null ? Input.empty() : this.deviceId;
+    public Output<String> getDeviceId() {
+        return this.deviceId == null ? Output.empty() : this.deviceId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyType")
-      private final @Nullable Input<FlowEntitlementEncryptionKeyType> keyType;
+      private final @Nullable Output<FlowEntitlementEncryptionKeyType> keyType;
 
-    public Input<FlowEntitlementEncryptionKeyType> getKeyType() {
-        return this.keyType == null ? Input.empty() : this.keyType;
+    public Output<FlowEntitlementEncryptionKeyType> getKeyType() {
+        return this.keyType == null ? Output.empty() : this.keyType;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -102,10 +102,10 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="secretArn")
-      private final @Nullable Input<String> secretArn;
+      private final @Nullable Output<String> secretArn;
 
-    public Input<String> getSecretArn() {
-        return this.secretArn == null ? Input.empty() : this.secretArn;
+    public Output<String> getSecretArn() {
+        return this.secretArn == null ? Output.empty() : this.secretArn;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="url")
-      private final @Nullable Input<String> url;
+      private final @Nullable Output<String> url;
 
-    public Input<String> getUrl() {
-        return this.url == null ? Input.empty() : this.url;
+    public Output<String> getUrl() {
+        return this.url == null ? Output.empty() : this.url;
     }
 
     public FlowEntitlementEncryptionArgs(
-        Input<FlowEntitlementEncryptionAlgorithm> algorithm,
-        @Nullable Input<String> constantInitializationVector,
-        @Nullable Input<String> deviceId,
-        @Nullable Input<FlowEntitlementEncryptionKeyType> keyType,
-        @Nullable Input<String> region,
-        @Nullable Input<String> resourceId,
-        Input<String> roleArn,
-        @Nullable Input<String> secretArn,
-        @Nullable Input<String> url) {
+        Output<FlowEntitlementEncryptionAlgorithm> algorithm,
+        @Nullable Output<String> constantInitializationVector,
+        @Nullable Output<String> deviceId,
+        @Nullable Output<FlowEntitlementEncryptionKeyType> keyType,
+        @Nullable Output<String> region,
+        @Nullable Output<String> resourceId,
+        Output<String> roleArn,
+        @Nullable Output<String> secretArn,
+        @Nullable Output<String> url) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.constantInitializationVector = constantInitializationVector;
         this.deviceId = deviceId;
@@ -141,15 +141,15 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
     }
 
     private FlowEntitlementEncryptionArgs() {
-        this.algorithm = Input.empty();
-        this.constantInitializationVector = Input.empty();
-        this.deviceId = Input.empty();
-        this.keyType = Input.empty();
-        this.region = Input.empty();
-        this.resourceId = Input.empty();
-        this.roleArn = Input.empty();
-        this.secretArn = Input.empty();
-        this.url = Input.empty();
+        this.algorithm = Output.empty();
+        this.constantInitializationVector = Output.empty();
+        this.deviceId = Output.empty();
+        this.keyType = Output.empty();
+        this.region = Output.empty();
+        this.resourceId = Output.empty();
+        this.roleArn = Output.empty();
+        this.secretArn = Output.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<FlowEntitlementEncryptionAlgorithm> algorithm;
-        private @Nullable Input<String> constantInitializationVector;
-        private @Nullable Input<String> deviceId;
-        private @Nullable Input<FlowEntitlementEncryptionKeyType> keyType;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> resourceId;
-        private Input<String> roleArn;
-        private @Nullable Input<String> secretArn;
-        private @Nullable Input<String> url;
+        private Output<FlowEntitlementEncryptionAlgorithm> algorithm;
+        private @Nullable Output<String> constantInitializationVector;
+        private @Nullable Output<String> deviceId;
+        private @Nullable Output<FlowEntitlementEncryptionKeyType> keyType;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> resourceId;
+        private Output<String> roleArn;
+        private @Nullable Output<String> secretArn;
+        private @Nullable Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class FlowEntitlementEncryptionArgs extends io.pulumi.resources.Res
     	      this.url = defaults.url;
         }
 
-        public Builder algorithm(Input<FlowEntitlementEncryptionAlgorithm> algorithm) {
+        public Builder algorithm(Output<FlowEntitlementEncryptionAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(FlowEntitlementEncryptionAlgorithm algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder deviceId(@Nullable Input<String> deviceId) {
+        public Builder deviceId(@Nullable Output<String> deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = Input.ofNullable(deviceId);
+            this.deviceId = Output.ofNullable(deviceId);
             return this;
         }
 
-        public Builder keyType(@Nullable Input<FlowEntitlementEncryptionKeyType> keyType) {
+        public Builder keyType(@Nullable Output<FlowEntitlementEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
         public Builder keyType(@Nullable FlowEntitlementEncryptionKeyType keyType) {
-            this.keyType = Input.ofNullable(keyType);
+            this.keyType = Output.ofNullable(keyType);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder secretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Output<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Input.ofNullable(secretArn);
+            this.secretArn = Output.ofNullable(secretArn);
             return this;
         }
 
-        public Builder url(@Nullable Input<String> url) {
+        public Builder url(@Nullable Output<String> url) {
             this.url = url;
             return this;
         }
 
         public Builder url(@Nullable String url) {
-            this.url = Input.ofNullable(url);
+            this.url = Output.ofNullable(url);
             return this;
         }
         public FlowEntitlementEncryptionArgs build() {

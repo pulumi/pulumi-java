@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargetsArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     public static final StackSetStackInstancesArgs Empty = new StackSetStackInstancesArgs();
 
     @InputImport(name="deploymentTargets", required=true)
-      private final Input<StackSetDeploymentTargetsArgs> deploymentTargets;
+      private final Output<StackSetDeploymentTargetsArgs> deploymentTargets;
 
-    public Input<StackSetDeploymentTargetsArgs> getDeploymentTargets() {
+    public Output<StackSetDeploymentTargetsArgs> getDeploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -33,10 +33,10 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameterOverrides")
-      private final @Nullable Input<List<StackSetParameterArgs>> parameterOverrides;
+      private final @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
 
-    public Input<List<StackSetParameterArgs>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Input.empty() : this.parameterOverrides;
+    public Output<List<StackSetParameterArgs>> getParameterOverrides() {
+        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="regions", required=true)
-      private final Input<List<String>> regions;
+      private final Output<List<String>> regions;
 
-    public Input<List<String>> getRegions() {
+    public Output<List<String>> getRegions() {
         return this.regions;
     }
 
     public StackSetStackInstancesArgs(
-        Input<StackSetDeploymentTargetsArgs> deploymentTargets,
-        @Nullable Input<List<StackSetParameterArgs>> parameterOverrides,
-        Input<List<String>> regions) {
+        Output<StackSetDeploymentTargetsArgs> deploymentTargets,
+        @Nullable Output<List<StackSetParameterArgs>> parameterOverrides,
+        Output<List<String>> regions) {
         this.deploymentTargets = Objects.requireNonNull(deploymentTargets, "expected parameter 'deploymentTargets' to be non-null");
         this.parameterOverrides = parameterOverrides;
         this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
     }
 
     private StackSetStackInstancesArgs() {
-        this.deploymentTargets = Input.empty();
-        this.parameterOverrides = Input.empty();
-        this.regions = Input.empty();
+        this.deploymentTargets = Output.empty();
+        this.parameterOverrides = Output.empty();
+        this.regions = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<StackSetDeploymentTargetsArgs> deploymentTargets;
-        private @Nullable Input<List<StackSetParameterArgs>> parameterOverrides;
-        private Input<List<String>> regions;
+        private Output<StackSetDeploymentTargetsArgs> deploymentTargets;
+        private @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
+        private Output<List<String>> regions;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     	      this.regions = defaults.regions;
         }
 
-        public Builder deploymentTargets(Input<StackSetDeploymentTargetsArgs> deploymentTargets) {
+        public Builder deploymentTargets(Output<StackSetDeploymentTargetsArgs> deploymentTargets) {
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
 
         public Builder deploymentTargets(StackSetDeploymentTargetsArgs deploymentTargets) {
-            this.deploymentTargets = Input.of(Objects.requireNonNull(deploymentTargets));
+            this.deploymentTargets = Output.of(Objects.requireNonNull(deploymentTargets));
             return this;
         }
 
-        public Builder parameterOverrides(@Nullable Input<List<StackSetParameterArgs>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Output<List<StackSetParameterArgs>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
         public Builder parameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
-            this.parameterOverrides = Input.ofNullable(parameterOverrides);
+            this.parameterOverrides = Output.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder regions(Input<List<String>> regions) {
+        public Builder regions(Output<List<String>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
         public Builder regions(List<String> regions) {
-            this.regions = Input.of(Objects.requireNonNull(regions));
+            this.regions = Output.of(Objects.requireNonNull(regions));
             return this;
         }
         public StackSetStackInstancesArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationDashPackage
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssPackageArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="cmafPackage")
-      private final @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage;
+      private final @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
 
-    public Input<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
-        return this.cmafPackage == null ? Input.empty() : this.cmafPackage;
+    public Output<PackagingConfigurationCmafPackageArgs> getCmafPackage() {
+        return this.cmafPackage == null ? Output.empty() : this.cmafPackage;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dashPackage")
-      private final @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage;
+      private final @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
 
-    public Input<PackagingConfigurationDashPackageArgs> getDashPackage() {
-        return this.dashPackage == null ? Input.empty() : this.dashPackage;
+    public Output<PackagingConfigurationDashPackageArgs> getDashPackage() {
+        return this.dashPackage == null ? Output.empty() : this.dashPackage;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hlsPackage")
-      private final @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage;
+      private final @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
 
-    public Input<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
-        return this.hlsPackage == null ? Input.empty() : this.hlsPackage;
+    public Output<PackagingConfigurationHlsPackageArgs> getHlsPackage() {
+        return this.hlsPackage == null ? Output.empty() : this.hlsPackage;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mssPackage")
-      private final @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage;
+      private final @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
 
-    public Input<PackagingConfigurationMssPackageArgs> getMssPackage() {
-        return this.mssPackage == null ? Input.empty() : this.mssPackage;
+    public Output<PackagingConfigurationMssPackageArgs> getMssPackage() {
+        return this.mssPackage == null ? Output.empty() : this.mssPackage;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="packagingGroupId", required=true)
-      private final Input<String> packagingGroupId;
+      private final Output<String> packagingGroupId;
 
-    public Input<String> getPackagingGroupId() {
+    public Output<String> getPackagingGroupId() {
         return this.packagingGroupId;
     }
 
@@ -80,19 +80,19 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<PackagingConfigurationTagArgs>> tags;
+      private final @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
-    public Input<List<PackagingConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PackagingConfigurationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PackagingConfigurationArgs(
-        @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage,
-        @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage,
-        @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage,
-        @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage,
-        Input<String> packagingGroupId,
-        @Nullable Input<List<PackagingConfigurationTagArgs>> tags) {
+        @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage,
+        @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage,
+        @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage,
+        @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage,
+        Output<String> packagingGroupId,
+        @Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
         this.cmafPackage = cmafPackage;
         this.dashPackage = dashPackage;
         this.hlsPackage = hlsPackage;
@@ -102,12 +102,12 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private PackagingConfigurationArgs() {
-        this.cmafPackage = Input.empty();
-        this.dashPackage = Input.empty();
-        this.hlsPackage = Input.empty();
-        this.mssPackage = Input.empty();
-        this.packagingGroupId = Input.empty();
-        this.tags = Input.empty();
+        this.cmafPackage = Output.empty();
+        this.dashPackage = Output.empty();
+        this.hlsPackage = Output.empty();
+        this.mssPackage = Output.empty();
+        this.packagingGroupId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage;
-        private @Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage;
-        private @Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage;
-        private @Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage;
-        private Input<String> packagingGroupId;
-        private @Nullable Input<List<PackagingConfigurationTagArgs>> tags;
+        private @Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage;
+        private @Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage;
+        private @Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage;
+        private @Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage;
+        private Output<String> packagingGroupId;
+        private @Nullable Output<List<PackagingConfigurationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder cmafPackage(@Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage) {
+        public Builder cmafPackage(@Nullable Output<PackagingConfigurationCmafPackageArgs> cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
         public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
-            this.cmafPackage = Input.ofNullable(cmafPackage);
+            this.cmafPackage = Output.ofNullable(cmafPackage);
             return this;
         }
 
-        public Builder dashPackage(@Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage) {
+        public Builder dashPackage(@Nullable Output<PackagingConfigurationDashPackageArgs> dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
         public Builder dashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
-            this.dashPackage = Input.ofNullable(dashPackage);
+            this.dashPackage = Output.ofNullable(dashPackage);
             return this;
         }
 
-        public Builder hlsPackage(@Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage) {
+        public Builder hlsPackage(@Nullable Output<PackagingConfigurationHlsPackageArgs> hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
         public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
-            this.hlsPackage = Input.ofNullable(hlsPackage);
+            this.hlsPackage = Output.ofNullable(hlsPackage);
             return this;
         }
 
-        public Builder mssPackage(@Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage) {
+        public Builder mssPackage(@Nullable Output<PackagingConfigurationMssPackageArgs> mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
         public Builder mssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
-            this.mssPackage = Input.ofNullable(mssPackage);
+            this.mssPackage = Output.ofNullable(mssPackage);
             return this;
         }
 
-        public Builder packagingGroupId(Input<String> packagingGroupId) {
+        public Builder packagingGroupId(Output<String> packagingGroupId) {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
 
         public Builder packagingGroupId(String packagingGroupId) {
-            this.packagingGroupId = Input.of(Objects.requireNonNull(packagingGroupId));
+            this.packagingGroupId = Output.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PackagingConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PackagingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PackagingConfigurationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PackagingConfigurationArgs build() {

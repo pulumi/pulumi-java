@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     public static final DatastoreCustomerManagedS3StorageArgs Empty = new DatastoreCustomerManagedS3StorageArgs();
 
     @InputImport(name="bucket", required=true)
-      private final Input<String> bucket;
+      private final Output<String> bucket;
 
-    public Input<String> getBucket() {
+    public Output<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="keyPrefix")
-      private final @Nullable Input<String> keyPrefix;
+      private final @Nullable Output<String> keyPrefix;
 
-    public Input<String> getKeyPrefix() {
-        return this.keyPrefix == null ? Input.empty() : this.keyPrefix;
+    public Output<String> getKeyPrefix() {
+        return this.keyPrefix == null ? Output.empty() : this.keyPrefix;
     }
 
     public DatastoreCustomerManagedS3StorageArgs(
-        Input<String> bucket,
-        @Nullable Input<String> keyPrefix) {
+        Output<String> bucket,
+        @Nullable Output<String> keyPrefix) {
         this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
         this.keyPrefix = keyPrefix;
     }
 
     private DatastoreCustomerManagedS3StorageArgs() {
-        this.bucket = Input.empty();
-        this.keyPrefix = Input.empty();
+        this.bucket = Output.empty();
+        this.keyPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> bucket;
-        private @Nullable Input<String> keyPrefix;
+        private Output<String> bucket;
+        private @Nullable Output<String> keyPrefix;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     	      this.keyPrefix = defaults.keyPrefix;
         }
 
-        public Builder bucket(Input<String> bucket) {
+        public Builder bucket(Output<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Input.of(Objects.requireNonNull(bucket));
+            this.bucket = Output.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder keyPrefix(@Nullable Input<String> keyPrefix) {
+        public Builder keyPrefix(@Nullable Output<String> keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
 
         public Builder keyPrefix(@Nullable String keyPrefix) {
-            this.keyPrefix = Input.ofNullable(keyPrefix);
+            this.keyPrefix = Output.ofNullable(keyPrefix);
             return this;
         }
         public DatastoreCustomerManagedS3StorageArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -29,22 +29,22 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="transitGatewayArn", required=true)
-      private final Input<String> transitGatewayArn;
+      private final Output<String> transitGatewayArn;
 
-    public Input<String> getTransitGatewayArn() {
+    public Output<String> getTransitGatewayArn() {
         return this.transitGatewayArn;
     }
 
     public TransitGatewayRegistrationArgs(
-        Input<String> globalNetworkId,
-        Input<String> transitGatewayArn) {
+        Output<String> globalNetworkId,
+        Output<String> transitGatewayArn) {
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
         this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn, "expected parameter 'transitGatewayArn' to be non-null");
     }
 
     private TransitGatewayRegistrationArgs() {
-        this.globalNetworkId = Input.empty();
-        this.transitGatewayArn = Input.empty();
+        this.globalNetworkId = Output.empty();
+        this.transitGatewayArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> globalNetworkId;
-        private Input<String> transitGatewayArn;
+        private Output<String> globalNetworkId;
+        private Output<String> transitGatewayArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TransitGatewayRegistrationArgs extends io.pulumi.resources.Re
     	      this.transitGatewayArn = defaults.transitGatewayArn;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder transitGatewayArn(Input<String> transitGatewayArn) {
+        public Builder transitGatewayArn(Output<String> transitGatewayArn) {
             this.transitGatewayArn = Objects.requireNonNull(transitGatewayArn);
             return this;
         }
 
         public Builder transitGatewayArn(String transitGatewayArn) {
-            this.transitGatewayArn = Input.of(Objects.requireNonNull(transitGatewayArn));
+            this.transitGatewayArn = Output.of(Objects.requireNonNull(transitGatewayArn));
             return this;
         }
         public TransitGatewayRegistrationArgs build() {

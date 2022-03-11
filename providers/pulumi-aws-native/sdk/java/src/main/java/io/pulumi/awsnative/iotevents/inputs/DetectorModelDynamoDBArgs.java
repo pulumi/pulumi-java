@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hashKeyField", required=true)
-      private final Input<String> hashKeyField;
+      private final Output<String> hashKeyField;
 
-    public Input<String> getHashKeyField() {
+    public Output<String> getHashKeyField() {
         return this.hashKeyField;
     }
 
@@ -41,10 +41,10 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hashKeyType")
-      private final @Nullable Input<String> hashKeyType;
+      private final @Nullable Output<String> hashKeyType;
 
-    public Input<String> getHashKeyType() {
-        return this.hashKeyType == null ? Input.empty() : this.hashKeyType;
+    public Output<String> getHashKeyType() {
+        return this.hashKeyType == null ? Output.empty() : this.hashKeyType;
     }
 
     /**
@@ -52,9 +52,9 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="hashKeyValue", required=true)
-      private final Input<String> hashKeyValue;
+      private final Output<String> hashKeyValue;
 
-    public Input<String> getHashKeyValue() {
+    public Output<String> getHashKeyValue() {
         return this.hashKeyValue;
     }
 
@@ -71,17 +71,17 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="operation")
-      private final @Nullable Input<String> operation;
+      private final @Nullable Output<String> operation;
 
-    public Input<String> getOperation() {
-        return this.operation == null ? Input.empty() : this.operation;
+    public Output<String> getOperation() {
+        return this.operation == null ? Output.empty() : this.operation;
     }
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="payloadField")
-      private final @Nullable Input<String> payloadField;
+      private final @Nullable Output<String> payloadField;
 
-    public Input<String> getPayloadField() {
-        return this.payloadField == null ? Input.empty() : this.payloadField;
+    public Output<String> getPayloadField() {
+        return this.payloadField == null ? Output.empty() : this.payloadField;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rangeKeyField")
-      private final @Nullable Input<String> rangeKeyField;
+      private final @Nullable Output<String> rangeKeyField;
 
-    public Input<String> getRangeKeyField() {
-        return this.rangeKeyField == null ? Input.empty() : this.rangeKeyField;
+    public Output<String> getRangeKeyField() {
+        return this.rangeKeyField == null ? Output.empty() : this.rangeKeyField;
     }
 
     /**
@@ -119,10 +119,10 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rangeKeyType")
-      private final @Nullable Input<String> rangeKeyType;
+      private final @Nullable Output<String> rangeKeyType;
 
-    public Input<String> getRangeKeyType() {
-        return this.rangeKeyType == null ? Input.empty() : this.rangeKeyType;
+    public Output<String> getRangeKeyType() {
+        return this.rangeKeyType == null ? Output.empty() : this.rangeKeyType;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rangeKeyValue")
-      private final @Nullable Input<String> rangeKeyValue;
+      private final @Nullable Output<String> rangeKeyValue;
 
-    public Input<String> getRangeKeyValue() {
-        return this.rangeKeyValue == null ? Input.empty() : this.rangeKeyValue;
+    public Output<String> getRangeKeyValue() {
+        return this.rangeKeyValue == null ? Output.empty() : this.rangeKeyValue;
     }
 
     /**
@@ -141,23 +141,23 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public DetectorModelDynamoDBArgs(
-        Input<String> hashKeyField,
-        @Nullable Input<String> hashKeyType,
-        Input<String> hashKeyValue,
-        @Nullable Input<String> operation,
-        @Nullable Input<DetectorModelPayloadArgs> payload,
-        @Nullable Input<String> payloadField,
-        @Nullable Input<String> rangeKeyField,
-        @Nullable Input<String> rangeKeyType,
-        @Nullable Input<String> rangeKeyValue,
-        Input<String> tableName) {
+        Output<String> hashKeyField,
+        @Nullable Output<String> hashKeyType,
+        Output<String> hashKeyValue,
+        @Nullable Output<String> operation,
+        @Nullable Output<DetectorModelPayloadArgs> payload,
+        @Nullable Output<String> payloadField,
+        @Nullable Output<String> rangeKeyField,
+        @Nullable Output<String> rangeKeyType,
+        @Nullable Output<String> rangeKeyValue,
+        Output<String> tableName) {
         this.hashKeyField = Objects.requireNonNull(hashKeyField, "expected parameter 'hashKeyField' to be non-null");
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = Objects.requireNonNull(hashKeyValue, "expected parameter 'hashKeyValue' to be non-null");
@@ -171,16 +171,16 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
     }
 
     private DetectorModelDynamoDBArgs() {
-        this.hashKeyField = Input.empty();
-        this.hashKeyType = Input.empty();
-        this.hashKeyValue = Input.empty();
-        this.operation = Input.empty();
-        this.payload = Input.empty();
-        this.payloadField = Input.empty();
-        this.rangeKeyField = Input.empty();
-        this.rangeKeyType = Input.empty();
-        this.rangeKeyValue = Input.empty();
-        this.tableName = Input.empty();
+        this.hashKeyField = Output.empty();
+        this.hashKeyType = Output.empty();
+        this.hashKeyValue = Output.empty();
+        this.operation = Output.empty();
+        this.payload = Output.empty();
+        this.payloadField = Output.empty();
+        this.rangeKeyField = Output.empty();
+        this.rangeKeyType = Output.empty();
+        this.rangeKeyValue = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -192,16 +192,16 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> hashKeyField;
-        private @Nullable Input<String> hashKeyType;
-        private Input<String> hashKeyValue;
-        private @Nullable Input<String> operation;
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
-        private @Nullable Input<String> payloadField;
-        private @Nullable Input<String> rangeKeyField;
-        private @Nullable Input<String> rangeKeyType;
-        private @Nullable Input<String> rangeKeyValue;
-        private Input<String> tableName;
+        private Output<String> hashKeyField;
+        private @Nullable Output<String> hashKeyType;
+        private Output<String> hashKeyValue;
+        private @Nullable Output<String> operation;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private @Nullable Output<String> payloadField;
+        private @Nullable Output<String> rangeKeyField;
+        private @Nullable Output<String> rangeKeyType;
+        private @Nullable Output<String> rangeKeyValue;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -221,103 +221,103 @@ public final class DetectorModelDynamoDBArgs extends io.pulumi.resources.Resourc
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder hashKeyField(Input<String> hashKeyField) {
+        public Builder hashKeyField(Output<String> hashKeyField) {
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
 
         public Builder hashKeyField(String hashKeyField) {
-            this.hashKeyField = Input.of(Objects.requireNonNull(hashKeyField));
+            this.hashKeyField = Output.of(Objects.requireNonNull(hashKeyField));
             return this;
         }
 
-        public Builder hashKeyType(@Nullable Input<String> hashKeyType) {
+        public Builder hashKeyType(@Nullable Output<String> hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
 
         public Builder hashKeyType(@Nullable String hashKeyType) {
-            this.hashKeyType = Input.ofNullable(hashKeyType);
+            this.hashKeyType = Output.ofNullable(hashKeyType);
             return this;
         }
 
-        public Builder hashKeyValue(Input<String> hashKeyValue) {
+        public Builder hashKeyValue(Output<String> hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
 
         public Builder hashKeyValue(String hashKeyValue) {
-            this.hashKeyValue = Input.of(Objects.requireNonNull(hashKeyValue));
+            this.hashKeyValue = Output.of(Objects.requireNonNull(hashKeyValue));
             return this;
         }
 
-        public Builder operation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Output<String> operation) {
             this.operation = operation;
             return this;
         }
 
         public Builder operation(@Nullable String operation) {
-            this.operation = Input.ofNullable(operation);
+            this.operation = Output.ofNullable(operation);
             return this;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder payloadField(@Nullable Input<String> payloadField) {
+        public Builder payloadField(@Nullable Output<String> payloadField) {
             this.payloadField = payloadField;
             return this;
         }
 
         public Builder payloadField(@Nullable String payloadField) {
-            this.payloadField = Input.ofNullable(payloadField);
+            this.payloadField = Output.ofNullable(payloadField);
             return this;
         }
 
-        public Builder rangeKeyField(@Nullable Input<String> rangeKeyField) {
+        public Builder rangeKeyField(@Nullable Output<String> rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
 
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
-            this.rangeKeyField = Input.ofNullable(rangeKeyField);
+            this.rangeKeyField = Output.ofNullable(rangeKeyField);
             return this;
         }
 
-        public Builder rangeKeyType(@Nullable Input<String> rangeKeyType) {
+        public Builder rangeKeyType(@Nullable Output<String> rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
 
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
-            this.rangeKeyType = Input.ofNullable(rangeKeyType);
+            this.rangeKeyType = Output.ofNullable(rangeKeyType);
             return this;
         }
 
-        public Builder rangeKeyValue(@Nullable Input<String> rangeKeyValue) {
+        public Builder rangeKeyValue(@Nullable Output<String> rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
 
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
-            this.rangeKeyValue = Input.ofNullable(rangeKeyValue);
+            this.rangeKeyValue = Output.ofNullable(rangeKeyValue);
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public DetectorModelDynamoDBArgs build() {

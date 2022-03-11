@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceSessionKeysAbpV11Args;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
     public static final WirelessDeviceAbpV11Args Empty = new WirelessDeviceAbpV11Args();
 
     @InputImport(name="devAddr", required=true)
-      private final Input<String> devAddr;
+      private final Output<String> devAddr;
 
-    public Input<String> getDevAddr() {
+    public Output<String> getDevAddr() {
         return this.devAddr;
     }
 
     @InputImport(name="sessionKeys", required=true)
-      private final Input<WirelessDeviceSessionKeysAbpV11Args> sessionKeys;
+      private final Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys;
 
-    public Input<WirelessDeviceSessionKeysAbpV11Args> getSessionKeys() {
+    public Output<WirelessDeviceSessionKeysAbpV11Args> getSessionKeys() {
         return this.sessionKeys;
     }
 
     public WirelessDeviceAbpV11Args(
-        Input<String> devAddr,
-        Input<WirelessDeviceSessionKeysAbpV11Args> sessionKeys) {
+        Output<String> devAddr,
+        Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys) {
         this.devAddr = Objects.requireNonNull(devAddr, "expected parameter 'devAddr' to be non-null");
         this.sessionKeys = Objects.requireNonNull(sessionKeys, "expected parameter 'sessionKeys' to be non-null");
     }
 
     private WirelessDeviceAbpV11Args() {
-        this.devAddr = Input.empty();
-        this.sessionKeys = Input.empty();
+        this.devAddr = Output.empty();
+        this.sessionKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> devAddr;
-        private Input<WirelessDeviceSessionKeysAbpV11Args> sessionKeys;
+        private Output<String> devAddr;
+        private Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
     	      this.sessionKeys = defaults.sessionKeys;
         }
 
-        public Builder devAddr(Input<String> devAddr) {
+        public Builder devAddr(Output<String> devAddr) {
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
 
         public Builder devAddr(String devAddr) {
-            this.devAddr = Input.of(Objects.requireNonNull(devAddr));
+            this.devAddr = Output.of(Objects.requireNonNull(devAddr));
             return this;
         }
 
-        public Builder sessionKeys(Input<WirelessDeviceSessionKeysAbpV11Args> sessionKeys) {
+        public Builder sessionKeys(Output<WirelessDeviceSessionKeysAbpV11Args> sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
         }
 
         public Builder sessionKeys(WirelessDeviceSessionKeysAbpV11Args sessionKeys) {
-            this.sessionKeys = Input.of(Objects.requireNonNull(sessionKeys));
+            this.sessionKeys = Output.of(Objects.requireNonNull(sessionKeys));
             return this;
         }
         public WirelessDeviceAbpV11Args build() {

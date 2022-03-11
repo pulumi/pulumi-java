@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensBucketLevelArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class StorageLensAccountLevelArgs extends io.pulumi.resources.Resou
     public static final StorageLensAccountLevelArgs Empty = new StorageLensAccountLevelArgs();
 
     @InputImport(name="activityMetrics")
-      private final @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
+      private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Input<StorageLensActivityMetricsArgs> getActivityMetrics() {
-        return this.activityMetrics == null ? Input.empty() : this.activityMetrics;
+    public Output<StorageLensActivityMetricsArgs> getActivityMetrics() {
+        return this.activityMetrics == null ? Output.empty() : this.activityMetrics;
     }
 
     @InputImport(name="bucketLevel", required=true)
-      private final Input<StorageLensBucketLevelArgs> bucketLevel;
+      private final Output<StorageLensBucketLevelArgs> bucketLevel;
 
-    public Input<StorageLensBucketLevelArgs> getBucketLevel() {
+    public Output<StorageLensBucketLevelArgs> getBucketLevel() {
         return this.bucketLevel;
     }
 
     public StorageLensAccountLevelArgs(
-        @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics,
-        Input<StorageLensBucketLevelArgs> bucketLevel) {
+        @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics,
+        Output<StorageLensBucketLevelArgs> bucketLevel) {
         this.activityMetrics = activityMetrics;
         this.bucketLevel = Objects.requireNonNull(bucketLevel, "expected parameter 'bucketLevel' to be non-null");
     }
 
     private StorageLensAccountLevelArgs() {
-        this.activityMetrics = Input.empty();
-        this.bucketLevel = Input.empty();
+        this.activityMetrics = Output.empty();
+        this.bucketLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class StorageLensAccountLevelArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<StorageLensActivityMetricsArgs> activityMetrics;
-        private Input<StorageLensBucketLevelArgs> bucketLevel;
+        private @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
+        private Output<StorageLensBucketLevelArgs> bucketLevel;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class StorageLensAccountLevelArgs extends io.pulumi.resources.Resou
     	      this.bucketLevel = defaults.bucketLevel;
         }
 
-        public Builder activityMetrics(@Nullable Input<StorageLensActivityMetricsArgs> activityMetrics) {
+        public Builder activityMetrics(@Nullable Output<StorageLensActivityMetricsArgs> activityMetrics) {
             this.activityMetrics = activityMetrics;
             return this;
         }
 
         public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
-            this.activityMetrics = Input.ofNullable(activityMetrics);
+            this.activityMetrics = Output.ofNullable(activityMetrics);
             return this;
         }
 
-        public Builder bucketLevel(Input<StorageLensBucketLevelArgs> bucketLevel) {
+        public Builder bucketLevel(Output<StorageLensBucketLevelArgs> bucketLevel) {
             this.bucketLevel = Objects.requireNonNull(bucketLevel);
             return this;
         }
 
         public Builder bucketLevel(StorageLensBucketLevelArgs bucketLevel) {
-            this.bucketLevel = Input.of(Objects.requireNonNull(bucketLevel));
+            this.bucketLevel = Output.of(Objects.requireNonNull(bucketLevel));
             return this;
         }
         public StorageLensAccountLevelArgs build() {

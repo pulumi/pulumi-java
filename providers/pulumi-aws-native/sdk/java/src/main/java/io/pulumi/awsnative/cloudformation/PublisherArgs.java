@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptTermsAndConditions", required=true)
-      private final Input<Boolean> acceptTermsAndConditions;
+      private final Output<Boolean> acceptTermsAndConditions;
 
-    public Input<Boolean> getAcceptTermsAndConditions() {
+    public Output<Boolean> getAcceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
     }
 
@@ -31,22 +31,22 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionArn")
-      private final @Nullable Input<String> connectionArn;
+      private final @Nullable Output<String> connectionArn;
 
-    public Input<String> getConnectionArn() {
-        return this.connectionArn == null ? Input.empty() : this.connectionArn;
+    public Output<String> getConnectionArn() {
+        return this.connectionArn == null ? Output.empty() : this.connectionArn;
     }
 
     public PublisherArgs(
-        Input<Boolean> acceptTermsAndConditions,
-        @Nullable Input<String> connectionArn) {
+        Output<Boolean> acceptTermsAndConditions,
+        @Nullable Output<String> connectionArn) {
         this.acceptTermsAndConditions = Objects.requireNonNull(acceptTermsAndConditions, "expected parameter 'acceptTermsAndConditions' to be non-null");
         this.connectionArn = connectionArn;
     }
 
     private PublisherArgs() {
-        this.acceptTermsAndConditions = Input.empty();
-        this.connectionArn = Input.empty();
+        this.acceptTermsAndConditions = Output.empty();
+        this.connectionArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Boolean> acceptTermsAndConditions;
-        private @Nullable Input<String> connectionArn;
+        private Output<Boolean> acceptTermsAndConditions;
+        private @Nullable Output<String> connectionArn;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder acceptTermsAndConditions(Input<Boolean> acceptTermsAndConditions) {
+        public Builder acceptTermsAndConditions(Output<Boolean> acceptTermsAndConditions) {
             this.acceptTermsAndConditions = Objects.requireNonNull(acceptTermsAndConditions);
             return this;
         }
 
         public Builder acceptTermsAndConditions(Boolean acceptTermsAndConditions) {
-            this.acceptTermsAndConditions = Input.of(Objects.requireNonNull(acceptTermsAndConditions));
+            this.acceptTermsAndConditions = Output.of(Objects.requireNonNull(acceptTermsAndConditions));
             return this;
         }
 
-        public Builder connectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Output<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Input.ofNullable(connectionArn);
+            this.connectionArn = Output.ofNullable(connectionArn);
             return this;
         }
         public PublisherArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.awsnative.eks.inputs.ClusterEncryptionConfigProviderPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider;
+      private final @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
 
-    public Input<ClusterEncryptionConfigProviderPropertiesArgs> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<ClusterEncryptionConfigProviderPropertiesArgs> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<List<String>> resources;
+      private final @Nullable Output<List<String>> resources;
 
-    public Input<List<String>> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<List<String>> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     public ClusterEncryptionConfigArgs(
-        @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider,
-        @Nullable Input<List<String>> resources) {
+        @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider,
+        @Nullable Output<List<String>> resources) {
         this.provider = provider;
         this.resources = resources;
     }
 
     private ClusterEncryptionConfigArgs() {
-        this.provider = Input.empty();
-        this.resources = Input.empty();
+        this.provider = Output.empty();
+        this.resources = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider;
-        private @Nullable Input<List<String>> resources;
+        private @Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider;
+        private @Nullable Output<List<String>> resources;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     	      this.resources = defaults.resources;
         }
 
-        public Builder provider(@Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
+        public Builder provider(@Nullable Output<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable ClusterEncryptionConfigProviderPropertiesArgs provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
 
-        public Builder resources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Output<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
         public ClusterEncryptionConfigArgs build() {

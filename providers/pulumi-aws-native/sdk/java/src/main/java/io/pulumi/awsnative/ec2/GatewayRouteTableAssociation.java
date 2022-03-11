@@ -5,7 +5,6 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.GatewayRouteTableAssociationArgs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -99,14 +98,14 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayRouteTableAssociation(String name, GatewayRouteTableAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:GatewayRouteTableAssociation", name, args == null ? GatewayRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:ec2:GatewayRouteTableAssociation", name, args == null ? GatewayRouteTableAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GatewayRouteTableAssociation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GatewayRouteTableAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:GatewayRouteTableAssociation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -121,7 +120,7 @@ public class GatewayRouteTableAssociation extends io.pulumi.resources.CustomReso
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GatewayRouteTableAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GatewayRouteTableAssociation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GatewayRouteTableAssociation(name, id, options);
     }
 }

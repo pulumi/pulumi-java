@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="constantInitializationVector")
-      private final @Nullable Input<String> constantInitializationVector;
+      private final @Nullable Output<String> constantInitializationVector;
 
-    public Input<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
+    public Output<String> getConstantInitializationVector() {
+        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -36,32 +36,32 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptionMethod")
-      private final @Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
+      private final @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 
-    public Input<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
-        return this.encryptionMethod == null ? Input.empty() : this.encryptionMethod;
+    public Output<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
+        return this.encryptionMethod == null ? Output.empty() : this.encryptionMethod;
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-      private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+      private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
     public PackagingConfigurationHlsEncryptionArgs(
-        @Nullable Input<String> constantInitializationVector,
-        @Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod,
-        Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+        @Nullable Output<String> constantInitializationVector,
+        @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod,
+        Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
     }
 
     private PackagingConfigurationHlsEncryptionArgs() {
-        this.constantInitializationVector = Input.empty();
-        this.encryptionMethod = Input.empty();
-        this.spekeKeyProvider = Input.empty();
+        this.constantInitializationVector = Output.empty();
+        this.encryptionMethod = Output.empty();
+        this.spekeKeyProvider = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> constantInitializationVector;
-        private @Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
-        private Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private @Nullable Output<String> constantInitializationVector;
+        private @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
+        private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Output<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder encryptionMethod(@Nullable Input<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
+        public Builder encryptionMethod(@Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
         public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = Input.ofNullable(encryptionMethod);
+            this.encryptionMethod = Output.ofNullable(encryptionMethod);
             return this;
         }
 
-        public Builder spekeKeyProvider(Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
+            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
         public PackagingConfigurationHlsEncryptionArgs build() {

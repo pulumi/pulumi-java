@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetLateDataRuleConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     public static final DatasetLateDataRuleArgs Empty = new DatasetLateDataRuleArgs();
 
     @InputImport(name="ruleConfiguration", required=true)
-      private final Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
+      private final Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
-    public Input<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
+    public Output<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     public DatasetLateDataRuleArgs(
-        Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration,
-        @Nullable Input<String> ruleName) {
+        Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration,
+        @Nullable Output<String> ruleName) {
         this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration, "expected parameter 'ruleConfiguration' to be non-null");
         this.ruleName = ruleName;
     }
 
     private DatasetLateDataRuleArgs() {
-        this.ruleConfiguration = Input.empty();
-        this.ruleName = Input.empty();
+        this.ruleConfiguration = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
-        private @Nullable Input<String> ruleName;
+        private Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
+        private @Nullable Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder ruleConfiguration(Input<DatasetLateDataRuleConfigurationArgs> ruleConfiguration) {
+        public Builder ruleConfiguration(Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration) {
             this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
             return this;
         }
 
         public Builder ruleConfiguration(DatasetLateDataRuleConfigurationArgs ruleConfiguration) {
-            this.ruleConfiguration = Input.of(Objects.requireNonNull(ruleConfiguration));
+            this.ruleConfiguration = Output.of(Objects.requireNonNull(ruleConfiguration));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
         public DatasetLateDataRuleArgs build() {

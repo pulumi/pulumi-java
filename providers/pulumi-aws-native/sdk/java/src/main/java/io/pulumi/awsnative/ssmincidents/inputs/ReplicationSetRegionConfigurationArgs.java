@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmincidents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     public static final ReplicationSetRegionConfigurationArgs Empty = new ReplicationSetRegionConfigurationArgs();
 
     @InputImport(name="sseKmsKeyId", required=true)
-      private final Input<String> sseKmsKeyId;
+      private final Output<String> sseKmsKeyId;
 
-    public Input<String> getSseKmsKeyId() {
+    public Output<String> getSseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 
-    public ReplicationSetRegionConfigurationArgs(Input<String> sseKmsKeyId) {
+    public ReplicationSetRegionConfigurationArgs(Output<String> sseKmsKeyId) {
         this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId, "expected parameter 'sseKmsKeyId' to be non-null");
     }
 
     private ReplicationSetRegionConfigurationArgs() {
-        this.sseKmsKeyId = Input.empty();
+        this.sseKmsKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> sseKmsKeyId;
+        private Output<String> sseKmsKeyId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     	      this.sseKmsKeyId = defaults.sseKmsKeyId;
         }
 
-        public Builder sseKmsKeyId(Input<String> sseKmsKeyId) {
+        public Builder sseKmsKeyId(Output<String> sseKmsKeyId) {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
         }
 
         public Builder sseKmsKeyId(String sseKmsKeyId) {
-            this.sseKmsKeyId = Input.of(Objects.requireNonNull(sseKmsKeyId));
+            this.sseKmsKeyId = Output.of(Objects.requireNonNull(sseKmsKeyId));
             return this;
         }
         public ReplicationSetRegionConfigurationArgs build() {

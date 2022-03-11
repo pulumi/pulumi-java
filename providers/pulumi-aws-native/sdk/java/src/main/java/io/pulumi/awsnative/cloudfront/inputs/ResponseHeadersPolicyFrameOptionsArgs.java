@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,29 +15,29 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     public static final ResponseHeadersPolicyFrameOptionsArgs Empty = new ResponseHeadersPolicyFrameOptionsArgs();
 
     @InputImport(name="frameOption", required=true)
-      private final Input<String> frameOption;
+      private final Output<String> frameOption;
 
-    public Input<String> getFrameOption() {
+    public Output<String> getFrameOption() {
         return this.frameOption;
     }
 
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
     public ResponseHeadersPolicyFrameOptionsArgs(
-        Input<String> frameOption,
-        Input<Boolean> override) {
+        Output<String> frameOption,
+        Output<Boolean> override) {
         this.frameOption = Objects.requireNonNull(frameOption, "expected parameter 'frameOption' to be non-null");
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
     }
 
     private ResponseHeadersPolicyFrameOptionsArgs() {
-        this.frameOption = Input.empty();
-        this.override = Input.empty();
+        this.frameOption = Output.empty();
+        this.override = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> frameOption;
-        private Input<Boolean> override;
+        private Output<String> frameOption;
+        private Output<Boolean> override;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     	      this.override = defaults.override;
         }
 
-        public Builder frameOption(Input<String> frameOption) {
+        public Builder frameOption(Output<String> frameOption) {
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
 
         public Builder frameOption(String frameOption) {
-            this.frameOption = Input.of(Objects.requireNonNull(frameOption));
+            this.frameOption = Output.of(Objects.requireNonNull(frameOption));
             return this;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
         public ResponseHeadersPolicyFrameOptionsArgs build() {

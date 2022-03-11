@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAccessScopePathRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,39 +17,39 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     public static final NetworkInsightsAccessScopeArgs Empty = new NetworkInsightsAccessScopeArgs();
 
     @InputImport(name="excludePaths")
-      private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
+      private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
 
-    public Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getExcludePaths() {
-        return this.excludePaths == null ? Input.empty() : this.excludePaths;
+    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getExcludePaths() {
+        return this.excludePaths == null ? Output.empty() : this.excludePaths;
     }
 
     @InputImport(name="matchPaths")
-      private final @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
+      private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
 
-    public Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getMatchPaths() {
-        return this.matchPaths == null ? Input.empty() : this.matchPaths;
+    public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getMatchPaths() {
+        return this.matchPaths == null ? Output.empty() : this.matchPaths;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags;
+      private final @Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags;
 
-    public Input<List<NetworkInsightsAccessScopeTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<NetworkInsightsAccessScopeTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkInsightsAccessScopeArgs(
-        @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths,
-        @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths,
-        @Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags) {
+        @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths,
+        @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths,
+        @Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags) {
         this.excludePaths = excludePaths;
         this.matchPaths = matchPaths;
         this.tags = tags;
     }
 
     private NetworkInsightsAccessScopeArgs() {
-        this.excludePaths = Input.empty();
-        this.matchPaths = Input.empty();
-        this.tags = Input.empty();
+        this.excludePaths = Output.empty();
+        this.matchPaths = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
-        private @Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
-        private @Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags;
+        private @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
+        private @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
+        private @Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     	      this.tags = defaults.tags;
         }
 
-        public Builder excludePaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths) {
+        public Builder excludePaths(@Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths) {
             this.excludePaths = excludePaths;
             return this;
         }
 
         public Builder excludePaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> excludePaths) {
-            this.excludePaths = Input.ofNullable(excludePaths);
+            this.excludePaths = Output.ofNullable(excludePaths);
             return this;
         }
 
-        public Builder matchPaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths) {
+        public Builder matchPaths(@Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths) {
             this.matchPaths = matchPaths;
             return this;
         }
 
         public Builder matchPaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> matchPaths) {
-            this.matchPaths = Input.ofNullable(matchPaths);
+            this.matchPaths = Output.ofNullable(matchPaths);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<NetworkInsightsAccessScopeTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkInsightsAccessScopeArgs build() {

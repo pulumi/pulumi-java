@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateOverridesRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetFleetLaunchTemplateSpecificationRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
     public static final EC2FleetFleetLaunchTemplateConfigRequestArgs Empty = new EC2FleetFleetLaunchTemplateConfigRequestArgs();
 
     @InputImport(name="launchTemplateSpecification")
-      private final @Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
+      private final @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
 
-    public Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> getLaunchTemplateSpecification() {
-        return this.launchTemplateSpecification == null ? Input.empty() : this.launchTemplateSpecification;
+    public Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> getLaunchTemplateSpecification() {
+        return this.launchTemplateSpecification == null ? Output.empty() : this.launchTemplateSpecification;
     }
 
     @InputImport(name="overrides")
-      private final @Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
+      private final @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
 
-    public Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> getOverrides() {
-        return this.overrides == null ? Input.empty() : this.overrides;
+    public Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> getOverrides() {
+        return this.overrides == null ? Output.empty() : this.overrides;
     }
 
     public EC2FleetFleetLaunchTemplateConfigRequestArgs(
-        @Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification,
-        @Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
+        @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification,
+        @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
 
     private EC2FleetFleetLaunchTemplateConfigRequestArgs() {
-        this.launchTemplateSpecification = Input.empty();
-        this.overrides = Input.empty();
+        this.launchTemplateSpecification = Output.empty();
+        this.overrides = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
-        private @Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
+        private @Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification;
+        private @Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class EC2FleetFleetLaunchTemplateConfigRequestArgs extends io.pulum
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder launchTemplateSpecification(@Nullable Input<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable Output<EC2FleetFleetLaunchTemplateSpecificationRequestArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
         public Builder launchTemplateSpecification(@Nullable EC2FleetFleetLaunchTemplateSpecificationRequestArgs launchTemplateSpecification) {
-            this.launchTemplateSpecification = Input.ofNullable(launchTemplateSpecification);
+            this.launchTemplateSpecification = Output.ofNullable(launchTemplateSpecification);
             return this;
         }
 
-        public Builder overrides(@Nullable Input<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
+        public Builder overrides(@Nullable Output<List<EC2FleetFleetLaunchTemplateOverridesRequestArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
         public Builder overrides(@Nullable List<EC2FleetFleetLaunchTemplateOverridesRequestArgs> overrides) {
-            this.overrides = Input.ofNullable(overrides);
+            this.overrides = Output.ofNullable(overrides);
             return this;
         }
         public EC2FleetFleetLaunchTemplateConfigRequestArgs build() {

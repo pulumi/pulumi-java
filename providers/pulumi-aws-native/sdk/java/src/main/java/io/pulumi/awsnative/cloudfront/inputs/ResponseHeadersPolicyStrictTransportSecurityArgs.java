@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -16,38 +16,38 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     public static final ResponseHeadersPolicyStrictTransportSecurityArgs Empty = new ResponseHeadersPolicyStrictTransportSecurityArgs();
 
     @InputImport(name="accessControlMaxAgeSec", required=true)
-      private final Input<Integer> accessControlMaxAgeSec;
+      private final Output<Integer> accessControlMaxAgeSec;
 
-    public Input<Integer> getAccessControlMaxAgeSec() {
+    public Output<Integer> getAccessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @InputImport(name="includeSubdomains")
-      private final @Nullable Input<Boolean> includeSubdomains;
+      private final @Nullable Output<Boolean> includeSubdomains;
 
-    public Input<Boolean> getIncludeSubdomains() {
-        return this.includeSubdomains == null ? Input.empty() : this.includeSubdomains;
+    public Output<Boolean> getIncludeSubdomains() {
+        return this.includeSubdomains == null ? Output.empty() : this.includeSubdomains;
     }
 
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="preload")
-      private final @Nullable Input<Boolean> preload;
+      private final @Nullable Output<Boolean> preload;
 
-    public Input<Boolean> getPreload() {
-        return this.preload == null ? Input.empty() : this.preload;
+    public Output<Boolean> getPreload() {
+        return this.preload == null ? Output.empty() : this.preload;
     }
 
     public ResponseHeadersPolicyStrictTransportSecurityArgs(
-        Input<Integer> accessControlMaxAgeSec,
-        @Nullable Input<Boolean> includeSubdomains,
-        Input<Boolean> override,
-        @Nullable Input<Boolean> preload) {
+        Output<Integer> accessControlMaxAgeSec,
+        @Nullable Output<Boolean> includeSubdomains,
+        Output<Boolean> override,
+        @Nullable Output<Boolean> preload) {
         this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec, "expected parameter 'accessControlMaxAgeSec' to be non-null");
         this.includeSubdomains = includeSubdomains;
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
@@ -55,10 +55,10 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     }
 
     private ResponseHeadersPolicyStrictTransportSecurityArgs() {
-        this.accessControlMaxAgeSec = Input.empty();
-        this.includeSubdomains = Input.empty();
-        this.override = Input.empty();
-        this.preload = Input.empty();
+        this.accessControlMaxAgeSec = Output.empty();
+        this.includeSubdomains = Output.empty();
+        this.override = Output.empty();
+        this.preload = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<Integer> accessControlMaxAgeSec;
-        private @Nullable Input<Boolean> includeSubdomains;
-        private Input<Boolean> override;
-        private @Nullable Input<Boolean> preload;
+        private Output<Integer> accessControlMaxAgeSec;
+        private @Nullable Output<Boolean> includeSubdomains;
+        private Output<Boolean> override;
+        private @Nullable Output<Boolean> preload;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     	      this.preload = defaults.preload;
         }
 
-        public Builder accessControlMaxAgeSec(Input<Integer> accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Output<Integer> accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
         public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Input.of(Objects.requireNonNull(accessControlMaxAgeSec));
+            this.accessControlMaxAgeSec = Output.of(Objects.requireNonNull(accessControlMaxAgeSec));
             return this;
         }
 
-        public Builder includeSubdomains(@Nullable Input<Boolean> includeSubdomains) {
+        public Builder includeSubdomains(@Nullable Output<Boolean> includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
 
         public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
-            this.includeSubdomains = Input.ofNullable(includeSubdomains);
+            this.includeSubdomains = Output.ofNullable(includeSubdomains);
             return this;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder preload(@Nullable Input<Boolean> preload) {
+        public Builder preload(@Nullable Output<Boolean> preload) {
             this.preload = preload;
             return this;
         }
 
         public Builder preload(@Nullable Boolean preload) {
-            this.preload = Input.ofNullable(preload);
+            this.preload = Output.ofNullable(preload);
             return this;
         }
         public ResponseHeadersPolicyStrictTransportSecurityArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="keyArn")
-      private final @Nullable Input<String> keyArn;
+      private final @Nullable Output<String> keyArn;
 
-    public Input<String> getKeyArn() {
-        return this.keyArn == null ? Input.empty() : this.keyArn;
+    public Output<String> getKeyArn() {
+        return this.keyArn == null ? Output.empty() : this.keyArn;
     }
 
     @InputImport(name="keyType", required=true)
-      private final Input<StudioEncryptionConfigurationKeyType> keyType;
+      private final Output<StudioEncryptionConfigurationKeyType> keyType;
 
-    public Input<StudioEncryptionConfigurationKeyType> getKeyType() {
+    public Output<StudioEncryptionConfigurationKeyType> getKeyType() {
         return this.keyType;
     }
 
     public StudioEncryptionConfigurationArgs(
-        @Nullable Input<String> keyArn,
-        Input<StudioEncryptionConfigurationKeyType> keyType) {
+        @Nullable Output<String> keyArn,
+        Output<StudioEncryptionConfigurationKeyType> keyType) {
         this.keyArn = keyArn;
         this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
     }
 
     private StudioEncryptionConfigurationArgs() {
-        this.keyArn = Input.empty();
-        this.keyType = Input.empty();
+        this.keyArn = Output.empty();
+        this.keyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyArn;
-        private Input<StudioEncryptionConfigurationKeyType> keyType;
+        private @Nullable Output<String> keyArn;
+        private Output<StudioEncryptionConfigurationKeyType> keyType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder keyArn(@Nullable Input<String> keyArn) {
+        public Builder keyArn(@Nullable Output<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Input.ofNullable(keyArn);
+            this.keyArn = Output.ofNullable(keyArn);
             return this;
         }
 
-        public Builder keyType(Input<StudioEncryptionConfigurationKeyType> keyType) {
+        public Builder keyType(Output<StudioEncryptionConfigurationKeyType> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
         public Builder keyType(StudioEncryptionConfigurationKeyType keyType) {
-            this.keyType = Input.of(Objects.requireNonNull(keyType));
+            this.keyType = Output.of(Objects.requireNonNull(keyType));
             return this;
         }
         public StudioEncryptionConfigurationArgs build() {

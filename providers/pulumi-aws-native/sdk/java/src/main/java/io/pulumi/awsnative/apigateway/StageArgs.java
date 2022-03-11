@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.StageAccessLogSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.StageTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -26,10 +26,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLogSetting")
-      private final @Nullable Input<StageAccessLogSettingArgs> accessLogSetting;
+      private final @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
 
-    public Input<StageAccessLogSettingArgs> getAccessLogSetting() {
-        return this.accessLogSetting == null ? Input.empty() : this.accessLogSetting;
+    public Output<StageAccessLogSettingArgs> getAccessLogSetting() {
+        return this.accessLogSetting == null ? Output.empty() : this.accessLogSetting;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterEnabled")
-      private final @Nullable Input<Boolean> cacheClusterEnabled;
+      private final @Nullable Output<Boolean> cacheClusterEnabled;
 
-    public Input<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
+    public Output<Boolean> getCacheClusterEnabled() {
+        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheClusterSize")
-      private final @Nullable Input<String> cacheClusterSize;
+      private final @Nullable Output<String> cacheClusterSize;
 
-    public Input<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
+    public Output<String> getCacheClusterSize() {
+        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="canarySetting")
-      private final @Nullable Input<StageCanarySettingArgs> canarySetting;
+      private final @Nullable Output<StageCanarySettingArgs> canarySetting;
 
-    public Input<StageCanarySettingArgs> getCanarySetting() {
-        return this.canarySetting == null ? Input.empty() : this.canarySetting;
+    public Output<StageCanarySettingArgs> getCanarySetting() {
+        return this.canarySetting == null ? Output.empty() : this.canarySetting;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateId")
-      private final @Nullable Input<String> clientCertificateId;
+      private final @Nullable Output<String> clientCertificateId;
 
-    public Input<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
+    public Output<String> getClientCertificateId() {
+        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deploymentId")
-      private final @Nullable Input<String> deploymentId;
+      private final @Nullable Output<String> deploymentId;
 
-    public Input<String> getDeploymentId() {
-        return this.deploymentId == null ? Input.empty() : this.deploymentId;
+    public Output<String> getDeploymentId() {
+        return this.deploymentId == null ? Output.empty() : this.deploymentId;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentationVersion")
-      private final @Nullable Input<String> documentationVersion;
+      private final @Nullable Output<String> documentationVersion;
 
-    public Input<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
+    public Output<String> getDocumentationVersion() {
+        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodSettings")
-      private final @Nullable Input<List<StageMethodSettingArgs>> methodSettings;
+      private final @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
 
-    public Input<List<StageMethodSettingArgs>> getMethodSettings() {
-        return this.methodSettings == null ? Input.empty() : this.methodSettings;
+    public Output<List<StageMethodSettingArgs>> getMethodSettings() {
+        return this.methodSettings == null ? Output.empty() : this.methodSettings;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-      private final Input<String> restApiId;
+      private final Output<String> restApiId;
 
-    public Input<String> getRestApiId() {
+    public Output<String> getRestApiId() {
         return this.restApiId;
     }
 
@@ -136,10 +136,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-      private final @Nullable Input<String> stageName;
+      private final @Nullable Output<String> stageName;
 
-    public Input<String> getStageName() {
-        return this.stageName == null ? Input.empty() : this.stageName;
+    public Output<String> getStageName() {
+        return this.stageName == null ? Output.empty() : this.stageName;
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StageTagArgs>> tags;
+      private final @Nullable Output<List<StageTagArgs>> tags;
 
-    public Input<List<StageTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StageTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -158,10 +158,10 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracingEnabled")
-      private final @Nullable Input<Boolean> tracingEnabled;
+      private final @Nullable Output<Boolean> tracingEnabled;
 
-    public Input<Boolean> getTracingEnabled() {
-        return this.tracingEnabled == null ? Input.empty() : this.tracingEnabled;
+    public Output<Boolean> getTracingEnabled() {
+        return this.tracingEnabled == null ? Output.empty() : this.tracingEnabled;
     }
 
     /**
@@ -169,27 +169,27 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-      private final @Nullable Input<Object> variables;
+      private final @Nullable Output<Object> variables;
 
-    public Input<Object> getVariables() {
-        return this.variables == null ? Input.empty() : this.variables;
+    public Output<Object> getVariables() {
+        return this.variables == null ? Output.empty() : this.variables;
     }
 
     public StageArgs(
-        @Nullable Input<StageAccessLogSettingArgs> accessLogSetting,
-        @Nullable Input<Boolean> cacheClusterEnabled,
-        @Nullable Input<String> cacheClusterSize,
-        @Nullable Input<StageCanarySettingArgs> canarySetting,
-        @Nullable Input<String> clientCertificateId,
-        @Nullable Input<String> deploymentId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> documentationVersion,
-        @Nullable Input<List<StageMethodSettingArgs>> methodSettings,
-        Input<String> restApiId,
-        @Nullable Input<String> stageName,
-        @Nullable Input<List<StageTagArgs>> tags,
-        @Nullable Input<Boolean> tracingEnabled,
-        @Nullable Input<Object> variables) {
+        @Nullable Output<StageAccessLogSettingArgs> accessLogSetting,
+        @Nullable Output<Boolean> cacheClusterEnabled,
+        @Nullable Output<String> cacheClusterSize,
+        @Nullable Output<StageCanarySettingArgs> canarySetting,
+        @Nullable Output<String> clientCertificateId,
+        @Nullable Output<String> deploymentId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> documentationVersion,
+        @Nullable Output<List<StageMethodSettingArgs>> methodSettings,
+        Output<String> restApiId,
+        @Nullable Output<String> stageName,
+        @Nullable Output<List<StageTagArgs>> tags,
+        @Nullable Output<Boolean> tracingEnabled,
+        @Nullable Output<Object> variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;
@@ -207,20 +207,20 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageArgs() {
-        this.accessLogSetting = Input.empty();
-        this.cacheClusterEnabled = Input.empty();
-        this.cacheClusterSize = Input.empty();
-        this.canarySetting = Input.empty();
-        this.clientCertificateId = Input.empty();
-        this.deploymentId = Input.empty();
-        this.description = Input.empty();
-        this.documentationVersion = Input.empty();
-        this.methodSettings = Input.empty();
-        this.restApiId = Input.empty();
-        this.stageName = Input.empty();
-        this.tags = Input.empty();
-        this.tracingEnabled = Input.empty();
-        this.variables = Input.empty();
+        this.accessLogSetting = Output.empty();
+        this.cacheClusterEnabled = Output.empty();
+        this.cacheClusterSize = Output.empty();
+        this.canarySetting = Output.empty();
+        this.clientCertificateId = Output.empty();
+        this.deploymentId = Output.empty();
+        this.description = Output.empty();
+        this.documentationVersion = Output.empty();
+        this.methodSettings = Output.empty();
+        this.restApiId = Output.empty();
+        this.stageName = Output.empty();
+        this.tags = Output.empty();
+        this.tracingEnabled = Output.empty();
+        this.variables = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,20 +232,20 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<StageAccessLogSettingArgs> accessLogSetting;
-        private @Nullable Input<Boolean> cacheClusterEnabled;
-        private @Nullable Input<String> cacheClusterSize;
-        private @Nullable Input<StageCanarySettingArgs> canarySetting;
-        private @Nullable Input<String> clientCertificateId;
-        private @Nullable Input<String> deploymentId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> documentationVersion;
-        private @Nullable Input<List<StageMethodSettingArgs>> methodSettings;
-        private Input<String> restApiId;
-        private @Nullable Input<String> stageName;
-        private @Nullable Input<List<StageTagArgs>> tags;
-        private @Nullable Input<Boolean> tracingEnabled;
-        private @Nullable Input<Object> variables;
+        private @Nullable Output<StageAccessLogSettingArgs> accessLogSetting;
+        private @Nullable Output<Boolean> cacheClusterEnabled;
+        private @Nullable Output<String> cacheClusterSize;
+        private @Nullable Output<StageCanarySettingArgs> canarySetting;
+        private @Nullable Output<String> clientCertificateId;
+        private @Nullable Output<String> deploymentId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> documentationVersion;
+        private @Nullable Output<List<StageMethodSettingArgs>> methodSettings;
+        private Output<String> restApiId;
+        private @Nullable Output<String> stageName;
+        private @Nullable Output<List<StageTagArgs>> tags;
+        private @Nullable Output<Boolean> tracingEnabled;
+        private @Nullable Output<Object> variables;
 
         public Builder() {
     	      // Empty
@@ -269,143 +269,143 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder accessLogSetting(@Nullable Input<StageAccessLogSettingArgs> accessLogSetting) {
+        public Builder accessLogSetting(@Nullable Output<StageAccessLogSettingArgs> accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
         public Builder accessLogSetting(@Nullable StageAccessLogSettingArgs accessLogSetting) {
-            this.accessLogSetting = Input.ofNullable(accessLogSetting);
+            this.accessLogSetting = Output.ofNullable(accessLogSetting);
             return this;
         }
 
-        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder canarySetting(@Nullable Input<StageCanarySettingArgs> canarySetting) {
+        public Builder canarySetting(@Nullable Output<StageCanarySettingArgs> canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
         public Builder canarySetting(@Nullable StageCanarySettingArgs canarySetting) {
-            this.canarySetting = Input.ofNullable(canarySetting);
+            this.canarySetting = Output.ofNullable(canarySetting);
             return this;
         }
 
-        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Input.ofNullable(clientCertificateId);
+            this.clientCertificateId = Output.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder deploymentId(@Nullable Input<String> deploymentId) {
+        public Builder deploymentId(@Nullable Output<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
         public Builder deploymentId(@Nullable String deploymentId) {
-            this.deploymentId = Input.ofNullable(deploymentId);
+            this.deploymentId = Output.ofNullable(deploymentId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Input.ofNullable(documentationVersion);
+            this.documentationVersion = Output.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder methodSettings(@Nullable Input<List<StageMethodSettingArgs>> methodSettings) {
+        public Builder methodSettings(@Nullable Output<List<StageMethodSettingArgs>> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
         public Builder methodSettings(@Nullable List<StageMethodSettingArgs> methodSettings) {
-            this.methodSettings = Input.ofNullable(methodSettings);
+            this.methodSettings = Output.ofNullable(methodSettings);
             return this;
         }
 
-        public Builder restApiId(Input<String> restApiId) {
+        public Builder restApiId(Output<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
         public Builder restApiId(String restApiId) {
-            this.restApiId = Input.of(Objects.requireNonNull(restApiId));
+            this.restApiId = Output.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder stageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Output<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Input.ofNullable(stageName);
+            this.stageName = Output.ofNullable(stageName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StageTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StageTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
-            this.tracingEnabled = Input.ofNullable(tracingEnabled);
+            this.tracingEnabled = Output.ofNullable(tracingEnabled);
             return this;
         }
 
-        public Builder variables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Output<Object> variables) {
             this.variables = variables;
             return this;
         }
 
         public Builder variables(@Nullable Object variables) {
-            this.variables = Input.ofNullable(variables);
+            this.variables = Output.ofNullable(variables);
             return this;
         }
         public StageArgs build() {

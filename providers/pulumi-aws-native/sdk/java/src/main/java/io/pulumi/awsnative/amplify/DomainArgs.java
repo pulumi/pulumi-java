@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplify;
 
 import io.pulumi.awsnative.amplify.inputs.DomainSubDomainSettingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,54 +18,54 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     public static final DomainArgs Empty = new DomainArgs();
 
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
     @InputImport(name="autoSubDomainCreationPatterns")
-      private final @Nullable Input<List<String>> autoSubDomainCreationPatterns;
+      private final @Nullable Output<List<String>> autoSubDomainCreationPatterns;
 
-    public Input<List<String>> getAutoSubDomainCreationPatterns() {
-        return this.autoSubDomainCreationPatterns == null ? Input.empty() : this.autoSubDomainCreationPatterns;
+    public Output<List<String>> getAutoSubDomainCreationPatterns() {
+        return this.autoSubDomainCreationPatterns == null ? Output.empty() : this.autoSubDomainCreationPatterns;
     }
 
     @InputImport(name="autoSubDomainIAMRole")
-      private final @Nullable Input<String> autoSubDomainIAMRole;
+      private final @Nullable Output<String> autoSubDomainIAMRole;
 
-    public Input<String> getAutoSubDomainIAMRole() {
-        return this.autoSubDomainIAMRole == null ? Input.empty() : this.autoSubDomainIAMRole;
+    public Output<String> getAutoSubDomainIAMRole() {
+        return this.autoSubDomainIAMRole == null ? Output.empty() : this.autoSubDomainIAMRole;
     }
 
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     @InputImport(name="enableAutoSubDomain")
-      private final @Nullable Input<Boolean> enableAutoSubDomain;
+      private final @Nullable Output<Boolean> enableAutoSubDomain;
 
-    public Input<Boolean> getEnableAutoSubDomain() {
-        return this.enableAutoSubDomain == null ? Input.empty() : this.enableAutoSubDomain;
+    public Output<Boolean> getEnableAutoSubDomain() {
+        return this.enableAutoSubDomain == null ? Output.empty() : this.enableAutoSubDomain;
     }
 
     @InputImport(name="subDomainSettings", required=true)
-      private final Input<List<DomainSubDomainSettingArgs>> subDomainSettings;
+      private final Output<List<DomainSubDomainSettingArgs>> subDomainSettings;
 
-    public Input<List<DomainSubDomainSettingArgs>> getSubDomainSettings() {
+    public Output<List<DomainSubDomainSettingArgs>> getSubDomainSettings() {
         return this.subDomainSettings;
     }
 
     public DomainArgs(
-        Input<String> appId,
-        @Nullable Input<List<String>> autoSubDomainCreationPatterns,
-        @Nullable Input<String> autoSubDomainIAMRole,
-        @Nullable Input<String> domainName,
-        @Nullable Input<Boolean> enableAutoSubDomain,
-        Input<List<DomainSubDomainSettingArgs>> subDomainSettings) {
+        Output<String> appId,
+        @Nullable Output<List<String>> autoSubDomainCreationPatterns,
+        @Nullable Output<String> autoSubDomainIAMRole,
+        @Nullable Output<String> domainName,
+        @Nullable Output<Boolean> enableAutoSubDomain,
+        Output<List<DomainSubDomainSettingArgs>> subDomainSettings) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
         this.autoSubDomainIAMRole = autoSubDomainIAMRole;
@@ -75,12 +75,12 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.appId = Input.empty();
-        this.autoSubDomainCreationPatterns = Input.empty();
-        this.autoSubDomainIAMRole = Input.empty();
-        this.domainName = Input.empty();
-        this.enableAutoSubDomain = Input.empty();
-        this.subDomainSettings = Input.empty();
+        this.appId = Output.empty();
+        this.autoSubDomainCreationPatterns = Output.empty();
+        this.autoSubDomainIAMRole = Output.empty();
+        this.domainName = Output.empty();
+        this.enableAutoSubDomain = Output.empty();
+        this.subDomainSettings = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,12 +92,12 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<List<String>> autoSubDomainCreationPatterns;
-        private @Nullable Input<String> autoSubDomainIAMRole;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<Boolean> enableAutoSubDomain;
-        private Input<List<DomainSubDomainSettingArgs>> subDomainSettings;
+        private Output<String> appId;
+        private @Nullable Output<List<String>> autoSubDomainCreationPatterns;
+        private @Nullable Output<String> autoSubDomainIAMRole;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<Boolean> enableAutoSubDomain;
+        private Output<List<DomainSubDomainSettingArgs>> subDomainSettings;
 
         public Builder() {
     	      // Empty
@@ -113,63 +113,63 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subDomainSettings = defaults.subDomainSettings;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder autoSubDomainCreationPatterns(@Nullable Input<List<String>> autoSubDomainCreationPatterns) {
+        public Builder autoSubDomainCreationPatterns(@Nullable Output<List<String>> autoSubDomainCreationPatterns) {
             this.autoSubDomainCreationPatterns = autoSubDomainCreationPatterns;
             return this;
         }
 
         public Builder autoSubDomainCreationPatterns(@Nullable List<String> autoSubDomainCreationPatterns) {
-            this.autoSubDomainCreationPatterns = Input.ofNullable(autoSubDomainCreationPatterns);
+            this.autoSubDomainCreationPatterns = Output.ofNullable(autoSubDomainCreationPatterns);
             return this;
         }
 
-        public Builder autoSubDomainIAMRole(@Nullable Input<String> autoSubDomainIAMRole) {
+        public Builder autoSubDomainIAMRole(@Nullable Output<String> autoSubDomainIAMRole) {
             this.autoSubDomainIAMRole = autoSubDomainIAMRole;
             return this;
         }
 
         public Builder autoSubDomainIAMRole(@Nullable String autoSubDomainIAMRole) {
-            this.autoSubDomainIAMRole = Input.ofNullable(autoSubDomainIAMRole);
+            this.autoSubDomainIAMRole = Output.ofNullable(autoSubDomainIAMRole);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder enableAutoSubDomain(@Nullable Input<Boolean> enableAutoSubDomain) {
+        public Builder enableAutoSubDomain(@Nullable Output<Boolean> enableAutoSubDomain) {
             this.enableAutoSubDomain = enableAutoSubDomain;
             return this;
         }
 
         public Builder enableAutoSubDomain(@Nullable Boolean enableAutoSubDomain) {
-            this.enableAutoSubDomain = Input.ofNullable(enableAutoSubDomain);
+            this.enableAutoSubDomain = Output.ofNullable(enableAutoSubDomain);
             return this;
         }
 
-        public Builder subDomainSettings(Input<List<DomainSubDomainSettingArgs>> subDomainSettings) {
+        public Builder subDomainSettings(Output<List<DomainSubDomainSettingArgs>> subDomainSettings) {
             this.subDomainSettings = Objects.requireNonNull(subDomainSettings);
             return this;
         }
 
         public Builder subDomainSettings(List<DomainSubDomainSettingArgs> subDomainSettings) {
-            this.subDomainSettings = Input.of(Objects.requireNonNull(subDomainSettings));
+            this.subDomainSettings = Output.of(Objects.requireNonNull(subDomainSettings));
             return this;
         }
         public DomainArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mcuCount")
-      private final @Nullable Input<Integer> mcuCount;
+      private final @Nullable Output<Integer> mcuCount;
 
-    public Input<Integer> getMcuCount() {
-        return this.mcuCount == null ? Input.empty() : this.mcuCount;
+    public Output<Integer> getMcuCount() {
+        return this.mcuCount == null ? Output.empty() : this.mcuCount;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workerCount", required=true)
-      private final Input<Integer> workerCount;
+      private final Output<Integer> workerCount;
 
-    public Input<Integer> getWorkerCount() {
+    public Output<Integer> getWorkerCount() {
         return this.workerCount;
     }
 
     public ConnectorProvisionedCapacityArgs(
-        @Nullable Input<Integer> mcuCount,
-        Input<Integer> workerCount) {
+        @Nullable Output<Integer> mcuCount,
+        Output<Integer> workerCount) {
         this.mcuCount = mcuCount;
         this.workerCount = Objects.requireNonNull(workerCount, "expected parameter 'workerCount' to be non-null");
     }
 
     private ConnectorProvisionedCapacityArgs() {
-        this.mcuCount = Input.empty();
-        this.workerCount = Input.empty();
+        this.mcuCount = Output.empty();
+        this.workerCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> mcuCount;
-        private Input<Integer> workerCount;
+        private @Nullable Output<Integer> mcuCount;
+        private Output<Integer> workerCount;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder mcuCount(@Nullable Input<Integer> mcuCount) {
+        public Builder mcuCount(@Nullable Output<Integer> mcuCount) {
             this.mcuCount = mcuCount;
             return this;
         }
 
         public Builder mcuCount(@Nullable Integer mcuCount) {
-            this.mcuCount = Input.ofNullable(mcuCount);
+            this.mcuCount = Output.ofNullable(mcuCount);
             return this;
         }
 
-        public Builder workerCount(Input<Integer> workerCount) {
+        public Builder workerCount(Output<Integer> workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
 
         public Builder workerCount(Integer workerCount) {
-            this.workerCount = Input.of(Objects.requireNonNull(workerCount));
+            this.workerCount = Output.of(Objects.requireNonNull(workerCount));
             return this;
         }
         public ConnectorProvisionedCapacityArgs build() {

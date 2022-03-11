@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileStatisticalThresholdStatistic;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="statistic")
-      private final @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
+      private final @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
-    public Input<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
-        return this.statistic == null ? Input.empty() : this.statistic;
+    public Output<SecurityProfileStatisticalThresholdStatistic> getStatistic() {
+        return this.statistic == null ? Output.empty() : this.statistic;
     }
 
-    public SecurityProfileStatisticalThresholdArgs(@Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic) {
+    public SecurityProfileStatisticalThresholdArgs(@Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic) {
         this.statistic = statistic;
     }
 
     private SecurityProfileStatisticalThresholdArgs() {
-        this.statistic = Input.empty();
+        this.statistic = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic;
+        private @Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecurityProfileStatisticalThresholdArgs extends io.pulumi.res
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder statistic(@Nullable Input<SecurityProfileStatisticalThresholdStatistic> statistic) {
+        public Builder statistic(@Nullable Output<SecurityProfileStatisticalThresholdStatistic> statistic) {
             this.statistic = statistic;
             return this;
         }
 
         public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
-            this.statistic = Input.ofNullable(statistic);
+            this.statistic = Output.ofNullable(statistic);
             return this;
         }
         public SecurityProfileStatisticalThresholdArgs build() {

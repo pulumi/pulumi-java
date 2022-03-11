@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-      private final @Nullable Input<List<String>> command;
+      private final @Nullable Output<List<String>> command;
 
-    public Input<List<String>> getCommand() {
-        return this.command == null ? Input.empty() : this.command;
+    public Output<List<String>> getCommand() {
+        return this.command == null ? Output.empty() : this.command;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment;
+      private final @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
 
-    public Input<List<ContainerEnvironmentVariableArgs>> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<List<ContainerEnvironmentVariableArgs>> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<ContainerPortInfoArgs>> ports;
+      private final @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
-    public Input<List<ContainerPortInfoArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ContainerPortInfoArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     public ContainerArgs(
-        @Nullable Input<List<String>> command,
-        @Nullable Input<String> containerName,
-        @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment,
-        @Nullable Input<String> image,
-        @Nullable Input<List<ContainerPortInfoArgs>> ports) {
+        @Nullable Output<List<String>> command,
+        @Nullable Output<String> containerName,
+        @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment,
+        @Nullable Output<String> image,
+        @Nullable Output<List<ContainerPortInfoArgs>> ports) {
         this.command = command;
         this.containerName = containerName;
         this.environment = environment;
@@ -90,11 +90,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.command = Input.empty();
-        this.containerName = Input.empty();
-        this.environment = Input.empty();
-        this.image = Input.empty();
-        this.ports = Input.empty();
+        this.command = Output.empty();
+        this.containerName = Output.empty();
+        this.environment = Output.empty();
+        this.image = Output.empty();
+        this.ports = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> command;
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment;
-        private @Nullable Input<String> image;
-        private @Nullable Input<List<ContainerPortInfoArgs>> ports;
+        private @Nullable Output<List<String>> command;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
+        private @Nullable Output<String> image;
+        private @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder command(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Output<List<String>> command) {
             this.command = command;
             return this;
         }
 
         public Builder command(@Nullable List<String> command) {
-            this.command = Input.ofNullable(command);
+            this.command = Output.ofNullable(command);
             return this;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder environment(@Nullable Input<List<ContainerEnvironmentVariableArgs>> environment) {
+        public Builder environment(@Nullable Output<List<ContainerEnvironmentVariableArgs>> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ContainerPortInfoArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ContainerPortInfoArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ContainerPortInfoArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
         public ContainerArgs build() {

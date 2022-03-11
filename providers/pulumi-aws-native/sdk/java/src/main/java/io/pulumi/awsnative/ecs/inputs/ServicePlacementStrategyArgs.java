@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementStrategyType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
     public static final ServicePlacementStrategyArgs Empty = new ServicePlacementStrategyArgs();
 
     @InputImport(name="field")
-      private final @Nullable Input<String> field;
+      private final @Nullable Output<String> field;
 
-    public Input<String> getField() {
-        return this.field == null ? Input.empty() : this.field;
+    public Output<String> getField() {
+        return this.field == null ? Output.empty() : this.field;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<ServicePlacementStrategyType> type;
+      private final Output<ServicePlacementStrategyType> type;
 
-    public Input<ServicePlacementStrategyType> getType() {
+    public Output<ServicePlacementStrategyType> getType() {
         return this.type;
     }
 
     public ServicePlacementStrategyArgs(
-        @Nullable Input<String> field,
-        Input<ServicePlacementStrategyType> type) {
+        @Nullable Output<String> field,
+        Output<ServicePlacementStrategyType> type) {
         this.field = field;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServicePlacementStrategyArgs() {
-        this.field = Input.empty();
-        this.type = Input.empty();
+        this.field = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> field;
-        private Input<ServicePlacementStrategyType> type;
+        private @Nullable Output<String> field;
+        private Output<ServicePlacementStrategyType> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder field(@Nullable Input<String> field) {
+        public Builder field(@Nullable Output<String> field) {
             this.field = field;
             return this;
         }
 
         public Builder field(@Nullable String field) {
-            this.field = Input.ofNullable(field);
+            this.field = Output.ofNullable(field);
             return this;
         }
 
-        public Builder type(Input<ServicePlacementStrategyType> type) {
+        public Builder type(Output<ServicePlacementStrategyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ServicePlacementStrategyType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ServicePlacementStrategyArgs build() {

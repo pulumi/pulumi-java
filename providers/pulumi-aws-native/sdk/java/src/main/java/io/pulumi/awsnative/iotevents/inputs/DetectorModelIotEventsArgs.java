@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputName", required=true)
-      private final Input<String> inputName;
+      private final Output<String> inputName;
 
-    public Input<String> getInputName() {
+    public Output<String> getInputName() {
         return this.inputName;
     }
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     public DetectorModelIotEventsArgs(
-        Input<String> inputName,
-        @Nullable Input<DetectorModelPayloadArgs> payload) {
+        Output<String> inputName,
+        @Nullable Output<DetectorModelPayloadArgs> payload) {
         this.inputName = Objects.requireNonNull(inputName, "expected parameter 'inputName' to be non-null");
         this.payload = payload;
     }
 
     private DetectorModelIotEventsArgs() {
-        this.inputName = Input.empty();
-        this.payload = Input.empty();
+        this.inputName = Output.empty();
+        this.payload = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> inputName;
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
+        private Output<String> inputName;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
     	      this.payload = defaults.payload;
         }
 
-        public Builder inputName(Input<String> inputName) {
+        public Builder inputName(Output<String> inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
         public Builder inputName(String inputName) {
-            this.inputName = Input.of(Objects.requireNonNull(inputName));
+            this.inputName = Output.of(Objects.requireNonNull(inputName));
             return this;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
         public DetectorModelIotEventsArgs build() {

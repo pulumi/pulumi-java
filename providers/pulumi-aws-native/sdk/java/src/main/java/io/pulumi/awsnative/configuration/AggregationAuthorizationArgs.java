@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.AggregationAuthorizationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authorizedAccountId", required=true)
-      private final Input<String> authorizedAccountId;
+      private final Output<String> authorizedAccountId;
 
-    public Input<String> getAuthorizedAccountId() {
+    public Output<String> getAuthorizedAccountId() {
         return this.authorizedAccountId;
     }
 
@@ -32,9 +32,9 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="authorizedAwsRegion", required=true)
-      private final Input<String> authorizedAwsRegion;
+      private final Output<String> authorizedAwsRegion;
 
-    public Input<String> getAuthorizedAwsRegion() {
+    public Output<String> getAuthorizedAwsRegion() {
         return this.authorizedAwsRegion;
     }
 
@@ -43,25 +43,25 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<AggregationAuthorizationTagArgs>> tags;
+      private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
-    public Input<List<AggregationAuthorizationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<AggregationAuthorizationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AggregationAuthorizationArgs(
-        Input<String> authorizedAccountId,
-        Input<String> authorizedAwsRegion,
-        @Nullable Input<List<AggregationAuthorizationTagArgs>> tags) {
+        Output<String> authorizedAccountId,
+        Output<String> authorizedAwsRegion,
+        @Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
         this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId, "expected parameter 'authorizedAccountId' to be non-null");
         this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion, "expected parameter 'authorizedAwsRegion' to be non-null");
         this.tags = tags;
     }
 
     private AggregationAuthorizationArgs() {
-        this.authorizedAccountId = Input.empty();
-        this.authorizedAwsRegion = Input.empty();
-        this.tags = Input.empty();
+        this.authorizedAccountId = Output.empty();
+        this.authorizedAwsRegion = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> authorizedAccountId;
-        private Input<String> authorizedAwsRegion;
-        private @Nullable Input<List<AggregationAuthorizationTagArgs>> tags;
+        private Output<String> authorizedAccountId;
+        private Output<String> authorizedAwsRegion;
+        private @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder authorizedAccountId(Input<String> authorizedAccountId) {
+        public Builder authorizedAccountId(Output<String> authorizedAccountId) {
             this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId);
             return this;
         }
 
         public Builder authorizedAccountId(String authorizedAccountId) {
-            this.authorizedAccountId = Input.of(Objects.requireNonNull(authorizedAccountId));
+            this.authorizedAccountId = Output.of(Objects.requireNonNull(authorizedAccountId));
             return this;
         }
 
-        public Builder authorizedAwsRegion(Input<String> authorizedAwsRegion) {
+        public Builder authorizedAwsRegion(Output<String> authorizedAwsRegion) {
             this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion);
             return this;
         }
 
         public Builder authorizedAwsRegion(String authorizedAwsRegion) {
-            this.authorizedAwsRegion = Input.of(Objects.requireNonNull(authorizedAwsRegion));
+            this.authorizedAwsRegion = Output.of(Objects.requireNonNull(authorizedAwsRegion));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<AggregationAuthorizationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<AggregationAuthorizationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AggregationAuthorizationArgs build() {

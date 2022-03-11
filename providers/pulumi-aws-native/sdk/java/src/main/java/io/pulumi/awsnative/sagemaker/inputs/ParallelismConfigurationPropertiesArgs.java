@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxParallelExecutionSteps", required=true)
-      private final Input<Integer> maxParallelExecutionSteps;
+      private final Output<Integer> maxParallelExecutionSteps;
 
-    public Input<Integer> getMaxParallelExecutionSteps() {
+    public Output<Integer> getMaxParallelExecutionSteps() {
         return this.maxParallelExecutionSteps;
     }
 
-    public ParallelismConfigurationPropertiesArgs(Input<Integer> maxParallelExecutionSteps) {
+    public ParallelismConfigurationPropertiesArgs(Output<Integer> maxParallelExecutionSteps) {
         this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps, "expected parameter 'maxParallelExecutionSteps' to be non-null");
     }
 
     private ParallelismConfigurationPropertiesArgs() {
-        this.maxParallelExecutionSteps = Input.empty();
+        this.maxParallelExecutionSteps = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Integer> maxParallelExecutionSteps;
+        private Output<Integer> maxParallelExecutionSteps;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
     	      this.maxParallelExecutionSteps = defaults.maxParallelExecutionSteps;
         }
 
-        public Builder maxParallelExecutionSteps(Input<Integer> maxParallelExecutionSteps) {
+        public Builder maxParallelExecutionSteps(Output<Integer> maxParallelExecutionSteps) {
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }
 
         public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
-            this.maxParallelExecutionSteps = Input.of(Objects.requireNonNull(maxParallelExecutionSteps));
+            this.maxParallelExecutionSteps = Output.of(Objects.requireNonNull(maxParallelExecutionSteps));
             return this;
         }
         public ParallelismConfigurationPropertiesArgs build() {

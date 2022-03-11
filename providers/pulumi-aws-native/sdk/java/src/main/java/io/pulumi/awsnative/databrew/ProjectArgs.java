@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew;
 
 import io.pulumi.awsnative.databrew.inputs.ProjectSampleArgs;
 import io.pulumi.awsnative.databrew.inputs.ProjectTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName", required=true)
-      private final Input<String> datasetName;
+      private final Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
+    public Output<String> getDatasetName() {
         return this.datasetName;
     }
 
@@ -33,10 +33,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipeName", required=true)
-      private final Input<String> recipeName;
+      private final Output<String> recipeName;
 
-    public Input<String> getRecipeName() {
+    public Output<String> getRecipeName() {
         return this.recipeName;
     }
 
@@ -55,9 +55,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -66,26 +66,26 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sample")
-      private final @Nullable Input<ProjectSampleArgs> sample;
+      private final @Nullable Output<ProjectSampleArgs> sample;
 
-    public Input<ProjectSampleArgs> getSample() {
-        return this.sample == null ? Input.empty() : this.sample;
+    public Output<ProjectSampleArgs> getSample() {
+        return this.sample == null ? Output.empty() : this.sample;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ProjectTagArgs>> tags;
+      private final @Nullable Output<List<ProjectTagArgs>> tags;
 
-    public Input<List<ProjectTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ProjectTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ProjectArgs(
-        Input<String> datasetName,
-        @Nullable Input<String> name,
-        Input<String> recipeName,
-        Input<String> roleArn,
-        @Nullable Input<ProjectSampleArgs> sample,
-        @Nullable Input<List<ProjectTagArgs>> tags) {
+        Output<String> datasetName,
+        @Nullable Output<String> name,
+        Output<String> recipeName,
+        Output<String> roleArn,
+        @Nullable Output<ProjectSampleArgs> sample,
+        @Nullable Output<List<ProjectTagArgs>> tags) {
         this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
         this.name = name;
         this.recipeName = Objects.requireNonNull(recipeName, "expected parameter 'recipeName' to be non-null");
@@ -95,12 +95,12 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.datasetName = Input.empty();
-        this.name = Input.empty();
-        this.recipeName = Input.empty();
-        this.roleArn = Input.empty();
-        this.sample = Input.empty();
-        this.tags = Input.empty();
+        this.datasetName = Output.empty();
+        this.name = Output.empty();
+        this.recipeName = Output.empty();
+        this.roleArn = Output.empty();
+        this.sample = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> datasetName;
-        private @Nullable Input<String> name;
-        private Input<String> recipeName;
-        private Input<String> roleArn;
-        private @Nullable Input<ProjectSampleArgs> sample;
-        private @Nullable Input<List<ProjectTagArgs>> tags;
+        private Output<String> datasetName;
+        private @Nullable Output<String> name;
+        private Output<String> recipeName;
+        private Output<String> roleArn;
+        private @Nullable Output<ProjectSampleArgs> sample;
+        private @Nullable Output<List<ProjectTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder datasetName(Input<String> datasetName) {
+        public Builder datasetName(Output<String> datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Input.of(Objects.requireNonNull(datasetName));
+            this.datasetName = Output.of(Objects.requireNonNull(datasetName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recipeName(Input<String> recipeName) {
+        public Builder recipeName(Output<String> recipeName) {
             this.recipeName = Objects.requireNonNull(recipeName);
             return this;
         }
 
         public Builder recipeName(String recipeName) {
-            this.recipeName = Input.of(Objects.requireNonNull(recipeName));
+            this.recipeName = Output.of(Objects.requireNonNull(recipeName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder sample(@Nullable Input<ProjectSampleArgs> sample) {
+        public Builder sample(@Nullable Output<ProjectSampleArgs> sample) {
             this.sample = sample;
             return this;
         }
 
         public Builder sample(@Nullable ProjectSampleArgs sample) {
-            this.sample = Input.ofNullable(sample);
+            this.sample = Output.ofNullable(sample);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ProjectTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ProjectArgs build() {

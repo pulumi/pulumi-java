@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.awsnative.synthetics.inputs.CanaryBaseScreenshotArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseCanaryRunId", required=true)
-      private final Input<String> baseCanaryRunId;
+      private final Output<String> baseCanaryRunId;
 
-    public Input<String> getBaseCanaryRunId() {
+    public Output<String> getBaseCanaryRunId() {
         return this.baseCanaryRunId;
     }
 
@@ -32,22 +32,22 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseScreenshots")
-      private final @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
+      private final @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
-    public Input<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {
-        return this.baseScreenshots == null ? Input.empty() : this.baseScreenshots;
+    public Output<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {
+        return this.baseScreenshots == null ? Output.empty() : this.baseScreenshots;
     }
 
     public CanaryVisualReferenceArgs(
-        Input<String> baseCanaryRunId,
-        @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
+        Output<String> baseCanaryRunId,
+        @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
         this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId, "expected parameter 'baseCanaryRunId' to be non-null");
         this.baseScreenshots = baseScreenshots;
     }
 
     private CanaryVisualReferenceArgs() {
-        this.baseCanaryRunId = Input.empty();
-        this.baseScreenshots = Input.empty();
+        this.baseCanaryRunId = Output.empty();
+        this.baseScreenshots = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> baseCanaryRunId;
-        private @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
+        private Output<String> baseCanaryRunId;
+        private @Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     	      this.baseScreenshots = defaults.baseScreenshots;
         }
 
-        public Builder baseCanaryRunId(Input<String> baseCanaryRunId) {
+        public Builder baseCanaryRunId(Output<String> baseCanaryRunId) {
             this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
             return this;
         }
 
         public Builder baseCanaryRunId(String baseCanaryRunId) {
-            this.baseCanaryRunId = Input.of(Objects.requireNonNull(baseCanaryRunId));
+            this.baseCanaryRunId = Output.of(Objects.requireNonNull(baseCanaryRunId));
             return this;
         }
 
-        public Builder baseScreenshots(@Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
+        public Builder baseScreenshots(@Nullable Output<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
             this.baseScreenshots = baseScreenshots;
             return this;
         }
 
         public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshotArgs> baseScreenshots) {
-            this.baseScreenshots = Input.ofNullable(baseScreenshots);
+            this.baseScreenshots = Output.ofNullable(baseScreenshots);
             return this;
         }
         public CanaryVisualReferenceArgs build() {

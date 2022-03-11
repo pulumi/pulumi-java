@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,24 +25,24 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="launchProfileProtocolVersion")
-      private final @Nullable Input<String> launchProfileProtocolVersion;
+      private final @Nullable Output<String> launchProfileProtocolVersion;
 
-    public Input<String> getLaunchProfileProtocolVersion() {
-        return this.launchProfileProtocolVersion == null ? Input.empty() : this.launchProfileProtocolVersion;
+    public Output<String> getLaunchProfileProtocolVersion() {
+        return this.launchProfileProtocolVersion == null ? Output.empty() : this.launchProfileProtocolVersion;
     }
 
     @InputImport(name="platform")
-      private final @Nullable Input<StudioComponentLaunchProfilePlatform> platform;
+      private final @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
 
-    public Input<StudioComponentLaunchProfilePlatform> getPlatform() {
-        return this.platform == null ? Input.empty() : this.platform;
+    public Output<StudioComponentLaunchProfilePlatform> getPlatform() {
+        return this.platform == null ? Output.empty() : this.platform;
     }
 
     @InputImport(name="runContext")
-      private final @Nullable Input<StudioComponentInitializationScriptRunContext> runContext;
+      private final @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
 
-    public Input<StudioComponentInitializationScriptRunContext> getRunContext() {
-        return this.runContext == null ? Input.empty() : this.runContext;
+    public Output<StudioComponentInitializationScriptRunContext> getRunContext() {
+        return this.runContext == null ? Output.empty() : this.runContext;
     }
 
     /**
@@ -50,17 +50,17 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="script")
-      private final @Nullable Input<String> script;
+      private final @Nullable Output<String> script;
 
-    public Input<String> getScript() {
-        return this.script == null ? Input.empty() : this.script;
+    public Output<String> getScript() {
+        return this.script == null ? Output.empty() : this.script;
     }
 
     public StudioComponentInitializationScriptArgs(
-        @Nullable Input<String> launchProfileProtocolVersion,
-        @Nullable Input<StudioComponentLaunchProfilePlatform> platform,
-        @Nullable Input<StudioComponentInitializationScriptRunContext> runContext,
-        @Nullable Input<String> script) {
+        @Nullable Output<String> launchProfileProtocolVersion,
+        @Nullable Output<StudioComponentLaunchProfilePlatform> platform,
+        @Nullable Output<StudioComponentInitializationScriptRunContext> runContext,
+        @Nullable Output<String> script) {
         this.launchProfileProtocolVersion = launchProfileProtocolVersion;
         this.platform = platform;
         this.runContext = runContext;
@@ -68,10 +68,10 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
     }
 
     private StudioComponentInitializationScriptArgs() {
-        this.launchProfileProtocolVersion = Input.empty();
-        this.platform = Input.empty();
-        this.runContext = Input.empty();
-        this.script = Input.empty();
+        this.launchProfileProtocolVersion = Output.empty();
+        this.platform = Output.empty();
+        this.runContext = Output.empty();
+        this.script = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> launchProfileProtocolVersion;
-        private @Nullable Input<StudioComponentLaunchProfilePlatform> platform;
-        private @Nullable Input<StudioComponentInitializationScriptRunContext> runContext;
-        private @Nullable Input<String> script;
+        private @Nullable Output<String> launchProfileProtocolVersion;
+        private @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
+        private @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
+        private @Nullable Output<String> script;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
     	      this.script = defaults.script;
         }
 
-        public Builder launchProfileProtocolVersion(@Nullable Input<String> launchProfileProtocolVersion) {
+        public Builder launchProfileProtocolVersion(@Nullable Output<String> launchProfileProtocolVersion) {
             this.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
 
         public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
-            this.launchProfileProtocolVersion = Input.ofNullable(launchProfileProtocolVersion);
+            this.launchProfileProtocolVersion = Output.ofNullable(launchProfileProtocolVersion);
             return this;
         }
 
-        public Builder platform(@Nullable Input<StudioComponentLaunchProfilePlatform> platform) {
+        public Builder platform(@Nullable Output<StudioComponentLaunchProfilePlatform> platform) {
             this.platform = platform;
             return this;
         }
 
         public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
-            this.platform = Input.ofNullable(platform);
+            this.platform = Output.ofNullable(platform);
             return this;
         }
 
-        public Builder runContext(@Nullable Input<StudioComponentInitializationScriptRunContext> runContext) {
+        public Builder runContext(@Nullable Output<StudioComponentInitializationScriptRunContext> runContext) {
             this.runContext = runContext;
             return this;
         }
 
         public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
-            this.runContext = Input.ofNullable(runContext);
+            this.runContext = Output.ofNullable(runContext);
             return this;
         }
 
-        public Builder script(@Nullable Input<String> script) {
+        public Builder script(@Nullable Output<String> script) {
             this.script = script;
             return this;
         }
 
         public Builder script(@Nullable String script) {
-            this.script = Input.ofNullable(script);
+            this.script = Output.ofNullable(script);
             return this;
         }
         public StudioComponentInitializationScriptArgs build() {

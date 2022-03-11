@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds;
 
 import io.pulumi.awsnative.rds.enums.DBProxyEndpointTargetRole;
 import io.pulumi.awsnative.rds.inputs.DBProxyEndpointTagFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dBProxyEndpointName")
-      private final @Nullable Input<String> dBProxyEndpointName;
+      private final @Nullable Output<String> dBProxyEndpointName;
 
-    public Input<String> getDBProxyEndpointName() {
-        return this.dBProxyEndpointName == null ? Input.empty() : this.dBProxyEndpointName;
+    public Output<String> getDBProxyEndpointName() {
+        return this.dBProxyEndpointName == null ? Output.empty() : this.dBProxyEndpointName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dBProxyName", required=true)
-      private final Input<String> dBProxyName;
+      private final Output<String> dBProxyName;
 
-    public Input<String> getDBProxyName() {
+    public Output<String> getDBProxyName() {
         return this.dBProxyName;
     }
 
@@ -44,10 +44,10 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags;
+      private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
 
-    public Input<List<DBProxyEndpointTagFormatArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DBProxyEndpointTagFormatArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetRole")
-      private final @Nullable Input<DBProxyEndpointTargetRole> targetRole;
+      private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
 
-    public Input<DBProxyEndpointTargetRole> getTargetRole() {
-        return this.targetRole == null ? Input.empty() : this.targetRole;
+    public Output<DBProxyEndpointTargetRole> getTargetRole() {
+        return this.targetRole == null ? Output.empty() : this.targetRole;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSecurityGroupIds")
-      private final @Nullable Input<List<String>> vpcSecurityGroupIds;
+      private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Input<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Input.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> getVpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vpcSubnetIds", required=true)
-      private final Input<List<String>> vpcSubnetIds;
+      private final Output<List<String>> vpcSubnetIds;
 
-    public Input<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> getVpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
     public DBProxyEndpointArgs(
-        @Nullable Input<String> dBProxyEndpointName,
-        Input<String> dBProxyName,
-        @Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags,
-        @Nullable Input<DBProxyEndpointTargetRole> targetRole,
-        @Nullable Input<List<String>> vpcSecurityGroupIds,
-        Input<List<String>> vpcSubnetIds) {
+        @Nullable Output<String> dBProxyEndpointName,
+        Output<String> dBProxyName,
+        @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags,
+        @Nullable Output<DBProxyEndpointTargetRole> targetRole,
+        @Nullable Output<List<String>> vpcSecurityGroupIds,
+        Output<List<String>> vpcSubnetIds) {
         this.dBProxyEndpointName = dBProxyEndpointName;
         this.dBProxyName = Objects.requireNonNull(dBProxyName, "expected parameter 'dBProxyName' to be non-null");
         this.tags = tags;
@@ -99,12 +99,12 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DBProxyEndpointArgs() {
-        this.dBProxyEndpointName = Input.empty();
-        this.dBProxyName = Input.empty();
-        this.tags = Input.empty();
-        this.targetRole = Input.empty();
-        this.vpcSecurityGroupIds = Input.empty();
-        this.vpcSubnetIds = Input.empty();
+        this.dBProxyEndpointName = Output.empty();
+        this.dBProxyName = Output.empty();
+        this.tags = Output.empty();
+        this.targetRole = Output.empty();
+        this.vpcSecurityGroupIds = Output.empty();
+        this.vpcSubnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dBProxyEndpointName;
-        private Input<String> dBProxyName;
-        private @Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags;
-        private @Nullable Input<DBProxyEndpointTargetRole> targetRole;
-        private @Nullable Input<List<String>> vpcSecurityGroupIds;
-        private Input<List<String>> vpcSubnetIds;
+        private @Nullable Output<String> dBProxyEndpointName;
+        private Output<String> dBProxyName;
+        private @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
+        private @Nullable Output<DBProxyEndpointTargetRole> targetRole;
+        private @Nullable Output<List<String>> vpcSecurityGroupIds;
+        private Output<List<String>> vpcSubnetIds;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder dBProxyEndpointName(@Nullable Input<String> dBProxyEndpointName) {
+        public Builder dBProxyEndpointName(@Nullable Output<String> dBProxyEndpointName) {
             this.dBProxyEndpointName = dBProxyEndpointName;
             return this;
         }
 
         public Builder dBProxyEndpointName(@Nullable String dBProxyEndpointName) {
-            this.dBProxyEndpointName = Input.ofNullable(dBProxyEndpointName);
+            this.dBProxyEndpointName = Output.ofNullable(dBProxyEndpointName);
             return this;
         }
 
-        public Builder dBProxyName(Input<String> dBProxyName) {
+        public Builder dBProxyName(Output<String> dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }
 
         public Builder dBProxyName(String dBProxyName) {
-            this.dBProxyName = Input.of(Objects.requireNonNull(dBProxyName));
+            this.dBProxyName = Output.of(Objects.requireNonNull(dBProxyName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DBProxyEndpointTagFormatArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetRole(@Nullable Input<DBProxyEndpointTargetRole> targetRole) {
+        public Builder targetRole(@Nullable Output<DBProxyEndpointTargetRole> targetRole) {
             this.targetRole = targetRole;
             return this;
         }
 
         public Builder targetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
-            this.targetRole = Input.ofNullable(targetRole);
+            this.targetRole = Output.ofNullable(targetRole);
             return this;
         }
 
-        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Output<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
         public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
-            this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
+            this.vpcSubnetIds = Output.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }
         public DBProxyEndpointArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
     public static final MissionProfileDataflowEdgeArgs Empty = new MissionProfileDataflowEdgeArgs();
 
     @InputImport(name="destination")
-      private final @Nullable Input<String> destination;
+      private final @Nullable Output<String> destination;
 
-    public Input<String> getDestination() {
-        return this.destination == null ? Input.empty() : this.destination;
+    public Output<String> getDestination() {
+        return this.destination == null ? Output.empty() : this.destination;
     }
 
     @InputImport(name="source")
-      private final @Nullable Input<String> source;
+      private final @Nullable Output<String> source;
 
-    public Input<String> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<String> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public MissionProfileDataflowEdgeArgs(
-        @Nullable Input<String> destination,
-        @Nullable Input<String> source) {
+        @Nullable Output<String> destination,
+        @Nullable Output<String> source) {
         this.destination = destination;
         this.source = source;
     }
 
     private MissionProfileDataflowEdgeArgs() {
-        this.destination = Input.empty();
-        this.source = Input.empty();
+        this.destination = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destination;
-        private @Nullable Input<String> source;
+        private @Nullable Output<String> destination;
+        private @Nullable Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class MissionProfileDataflowEdgeArgs extends io.pulumi.resources.Re
     	      this.source = defaults.source;
         }
 
-        public Builder destination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Output<String> destination) {
             this.destination = destination;
             return this;
         }
 
         public Builder destination(@Nullable String destination) {
-            this.destination = Input.ofNullable(destination);
+            this.destination = Output.ofNullable(destination);
             return this;
         }
 
-        public Builder source(@Nullable Input<String> source) {
+        public Builder source(@Nullable Output<String> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable String source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public MissionProfileDataflowEdgeArgs build() {

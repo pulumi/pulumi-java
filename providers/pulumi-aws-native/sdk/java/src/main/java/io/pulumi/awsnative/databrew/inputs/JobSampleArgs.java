@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.enums.JobSampleMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobSampleArgs Empty = new JobSampleArgs();
 
     @InputImport(name="mode")
-      private final @Nullable Input<JobSampleMode> mode;
+      private final @Nullable Output<JobSampleMode> mode;
 
-    public Input<JobSampleMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<JobSampleMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     public JobSampleArgs(
-        @Nullable Input<JobSampleMode> mode,
-        @Nullable Input<Integer> size) {
+        @Nullable Output<JobSampleMode> mode,
+        @Nullable Output<Integer> size) {
         this.mode = mode;
         this.size = size;
     }
 
     private JobSampleArgs() {
-        this.mode = Input.empty();
-        this.size = Input.empty();
+        this.mode = Output.empty();
+        this.size = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobSampleMode> mode;
-        private @Nullable Input<Integer> size;
+        private @Nullable Output<JobSampleMode> mode;
+        private @Nullable Output<Integer> size;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.size = defaults.size;
         }
 
-        public Builder mode(@Nullable Input<JobSampleMode> mode) {
+        public Builder mode(@Nullable Output<JobSampleMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable JobSampleMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
         public JobSampleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="revision", required=true)
-      private final Input<Integer> revision;
+      private final Output<Integer> revision;
 
-    public Input<Integer> getRevision() {
+    public Output<Integer> getRevision() {
         return this.revision;
     }
 
@@ -34,22 +34,22 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workerConfigurationArn", required=true)
-      private final Input<String> workerConfigurationArn;
+      private final Output<String> workerConfigurationArn;
 
-    public Input<String> getWorkerConfigurationArn() {
+    public Output<String> getWorkerConfigurationArn() {
         return this.workerConfigurationArn;
     }
 
     public ConnectorWorkerConfigurationArgs(
-        Input<Integer> revision,
-        Input<String> workerConfigurationArn) {
+        Output<Integer> revision,
+        Output<String> workerConfigurationArn) {
         this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
         this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn, "expected parameter 'workerConfigurationArn' to be non-null");
     }
 
     private ConnectorWorkerConfigurationArgs() {
-        this.revision = Input.empty();
-        this.workerConfigurationArn = Input.empty();
+        this.revision = Output.empty();
+        this.workerConfigurationArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Integer> revision;
-        private Input<String> workerConfigurationArn;
+        private Output<Integer> revision;
+        private Output<String> workerConfigurationArn;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     	      this.workerConfigurationArn = defaults.workerConfigurationArn;
         }
 
-        public Builder revision(Input<Integer> revision) {
+        public Builder revision(Output<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
         public Builder revision(Integer revision) {
-            this.revision = Input.of(Objects.requireNonNull(revision));
+            this.revision = Output.of(Objects.requireNonNull(revision));
             return this;
         }
 
-        public Builder workerConfigurationArn(Input<String> workerConfigurationArn) {
+        public Builder workerConfigurationArn(Output<String> workerConfigurationArn) {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }
 
         public Builder workerConfigurationArn(String workerConfigurationArn) {
-            this.workerConfigurationArn = Input.of(Objects.requireNonNull(workerConfigurationArn));
+            this.workerConfigurationArn = Output.of(Objects.requireNonNull(workerConfigurationArn));
             return this;
         }
         public ConnectorWorkerConfigurationArgs build() {

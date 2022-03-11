@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileOAuthPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,62 +17,62 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     public static final ConnectorProfileSAPODataConnectorProfilePropertiesArgs Empty = new ConnectorProfileSAPODataConnectorProfilePropertiesArgs();
 
     @InputImport(name="applicationHostUrl")
-      private final @Nullable Input<String> applicationHostUrl;
+      private final @Nullable Output<String> applicationHostUrl;
 
-    public Input<String> getApplicationHostUrl() {
-        return this.applicationHostUrl == null ? Input.empty() : this.applicationHostUrl;
+    public Output<String> getApplicationHostUrl() {
+        return this.applicationHostUrl == null ? Output.empty() : this.applicationHostUrl;
     }
 
     @InputImport(name="applicationServicePath")
-      private final @Nullable Input<String> applicationServicePath;
+      private final @Nullable Output<String> applicationServicePath;
 
-    public Input<String> getApplicationServicePath() {
-        return this.applicationServicePath == null ? Input.empty() : this.applicationServicePath;
+    public Output<String> getApplicationServicePath() {
+        return this.applicationServicePath == null ? Output.empty() : this.applicationServicePath;
     }
 
     @InputImport(name="clientNumber")
-      private final @Nullable Input<String> clientNumber;
+      private final @Nullable Output<String> clientNumber;
 
-    public Input<String> getClientNumber() {
-        return this.clientNumber == null ? Input.empty() : this.clientNumber;
+    public Output<String> getClientNumber() {
+        return this.clientNumber == null ? Output.empty() : this.clientNumber;
     }
 
     @InputImport(name="logonLanguage")
-      private final @Nullable Input<String> logonLanguage;
+      private final @Nullable Output<String> logonLanguage;
 
-    public Input<String> getLogonLanguage() {
-        return this.logonLanguage == null ? Input.empty() : this.logonLanguage;
+    public Output<String> getLogonLanguage() {
+        return this.logonLanguage == null ? Output.empty() : this.logonLanguage;
     }
 
     @InputImport(name="oAuthProperties")
-      private final @Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
+      private final @Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
 
-    public Input<ConnectorProfileOAuthPropertiesArgs> getOAuthProperties() {
-        return this.oAuthProperties == null ? Input.empty() : this.oAuthProperties;
+    public Output<ConnectorProfileOAuthPropertiesArgs> getOAuthProperties() {
+        return this.oAuthProperties == null ? Output.empty() : this.oAuthProperties;
     }
 
     @InputImport(name="portNumber")
-      private final @Nullable Input<Integer> portNumber;
+      private final @Nullable Output<Integer> portNumber;
 
-    public Input<Integer> getPortNumber() {
-        return this.portNumber == null ? Input.empty() : this.portNumber;
+    public Output<Integer> getPortNumber() {
+        return this.portNumber == null ? Output.empty() : this.portNumber;
     }
 
     @InputImport(name="privateLinkServiceName")
-      private final @Nullable Input<String> privateLinkServiceName;
+      private final @Nullable Output<String> privateLinkServiceName;
 
-    public Input<String> getPrivateLinkServiceName() {
-        return this.privateLinkServiceName == null ? Input.empty() : this.privateLinkServiceName;
+    public Output<String> getPrivateLinkServiceName() {
+        return this.privateLinkServiceName == null ? Output.empty() : this.privateLinkServiceName;
     }
 
     public ConnectorProfileSAPODataConnectorProfilePropertiesArgs(
-        @Nullable Input<String> applicationHostUrl,
-        @Nullable Input<String> applicationServicePath,
-        @Nullable Input<String> clientNumber,
-        @Nullable Input<String> logonLanguage,
-        @Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties,
-        @Nullable Input<Integer> portNumber,
-        @Nullable Input<String> privateLinkServiceName) {
+        @Nullable Output<String> applicationHostUrl,
+        @Nullable Output<String> applicationServicePath,
+        @Nullable Output<String> clientNumber,
+        @Nullable Output<String> logonLanguage,
+        @Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties,
+        @Nullable Output<Integer> portNumber,
+        @Nullable Output<String> privateLinkServiceName) {
         this.applicationHostUrl = applicationHostUrl;
         this.applicationServicePath = applicationServicePath;
         this.clientNumber = clientNumber;
@@ -83,13 +83,13 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     }
 
     private ConnectorProfileSAPODataConnectorProfilePropertiesArgs() {
-        this.applicationHostUrl = Input.empty();
-        this.applicationServicePath = Input.empty();
-        this.clientNumber = Input.empty();
-        this.logonLanguage = Input.empty();
-        this.oAuthProperties = Input.empty();
-        this.portNumber = Input.empty();
-        this.privateLinkServiceName = Input.empty();
+        this.applicationHostUrl = Output.empty();
+        this.applicationServicePath = Output.empty();
+        this.clientNumber = Output.empty();
+        this.logonLanguage = Output.empty();
+        this.oAuthProperties = Output.empty();
+        this.portNumber = Output.empty();
+        this.privateLinkServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,13 +101,13 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationHostUrl;
-        private @Nullable Input<String> applicationServicePath;
-        private @Nullable Input<String> clientNumber;
-        private @Nullable Input<String> logonLanguage;
-        private @Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
-        private @Nullable Input<Integer> portNumber;
-        private @Nullable Input<String> privateLinkServiceName;
+        private @Nullable Output<String> applicationHostUrl;
+        private @Nullable Output<String> applicationServicePath;
+        private @Nullable Output<String> clientNumber;
+        private @Nullable Output<String> logonLanguage;
+        private @Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties;
+        private @Nullable Output<Integer> portNumber;
+        private @Nullable Output<String> privateLinkServiceName;
 
         public Builder() {
     	      // Empty
@@ -124,73 +124,73 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     	      this.privateLinkServiceName = defaults.privateLinkServiceName;
         }
 
-        public Builder applicationHostUrl(@Nullable Input<String> applicationHostUrl) {
+        public Builder applicationHostUrl(@Nullable Output<String> applicationHostUrl) {
             this.applicationHostUrl = applicationHostUrl;
             return this;
         }
 
         public Builder applicationHostUrl(@Nullable String applicationHostUrl) {
-            this.applicationHostUrl = Input.ofNullable(applicationHostUrl);
+            this.applicationHostUrl = Output.ofNullable(applicationHostUrl);
             return this;
         }
 
-        public Builder applicationServicePath(@Nullable Input<String> applicationServicePath) {
+        public Builder applicationServicePath(@Nullable Output<String> applicationServicePath) {
             this.applicationServicePath = applicationServicePath;
             return this;
         }
 
         public Builder applicationServicePath(@Nullable String applicationServicePath) {
-            this.applicationServicePath = Input.ofNullable(applicationServicePath);
+            this.applicationServicePath = Output.ofNullable(applicationServicePath);
             return this;
         }
 
-        public Builder clientNumber(@Nullable Input<String> clientNumber) {
+        public Builder clientNumber(@Nullable Output<String> clientNumber) {
             this.clientNumber = clientNumber;
             return this;
         }
 
         public Builder clientNumber(@Nullable String clientNumber) {
-            this.clientNumber = Input.ofNullable(clientNumber);
+            this.clientNumber = Output.ofNullable(clientNumber);
             return this;
         }
 
-        public Builder logonLanguage(@Nullable Input<String> logonLanguage) {
+        public Builder logonLanguage(@Nullable Output<String> logonLanguage) {
             this.logonLanguage = logonLanguage;
             return this;
         }
 
         public Builder logonLanguage(@Nullable String logonLanguage) {
-            this.logonLanguage = Input.ofNullable(logonLanguage);
+            this.logonLanguage = Output.ofNullable(logonLanguage);
             return this;
         }
 
-        public Builder oAuthProperties(@Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties) {
+        public Builder oAuthProperties(@Nullable Output<ConnectorProfileOAuthPropertiesArgs> oAuthProperties) {
             this.oAuthProperties = oAuthProperties;
             return this;
         }
 
         public Builder oAuthProperties(@Nullable ConnectorProfileOAuthPropertiesArgs oAuthProperties) {
-            this.oAuthProperties = Input.ofNullable(oAuthProperties);
+            this.oAuthProperties = Output.ofNullable(oAuthProperties);
             return this;
         }
 
-        public Builder portNumber(@Nullable Input<Integer> portNumber) {
+        public Builder portNumber(@Nullable Output<Integer> portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
         public Builder portNumber(@Nullable Integer portNumber) {
-            this.portNumber = Input.ofNullable(portNumber);
+            this.portNumber = Output.ofNullable(portNumber);
             return this;
         }
 
-        public Builder privateLinkServiceName(@Nullable Input<String> privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable Output<String> privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
 
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
-            this.privateLinkServiceName = Input.ofNullable(privateLinkServiceName);
+            this.privateLinkServiceName = Output.ofNullable(privateLinkServiceName);
             return this;
         }
         public ConnectorProfileSAPODataConnectorProfilePropertiesArgs build() {

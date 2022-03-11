@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class WirelessDeviceSessionKeysAbpV10xArgs extends io.pulumi.resour
     public static final WirelessDeviceSessionKeysAbpV10xArgs Empty = new WirelessDeviceSessionKeysAbpV10xArgs();
 
     @InputImport(name="appSKey", required=true)
-      private final Input<String> appSKey;
+      private final Output<String> appSKey;
 
-    public Input<String> getAppSKey() {
+    public Output<String> getAppSKey() {
         return this.appSKey;
     }
 
     @InputImport(name="nwkSKey", required=true)
-      private final Input<String> nwkSKey;
+      private final Output<String> nwkSKey;
 
-    public Input<String> getNwkSKey() {
+    public Output<String> getNwkSKey() {
         return this.nwkSKey;
     }
 
     public WirelessDeviceSessionKeysAbpV10xArgs(
-        Input<String> appSKey,
-        Input<String> nwkSKey) {
+        Output<String> appSKey,
+        Output<String> nwkSKey) {
         this.appSKey = Objects.requireNonNull(appSKey, "expected parameter 'appSKey' to be non-null");
         this.nwkSKey = Objects.requireNonNull(nwkSKey, "expected parameter 'nwkSKey' to be non-null");
     }
 
     private WirelessDeviceSessionKeysAbpV10xArgs() {
-        this.appSKey = Input.empty();
-        this.nwkSKey = Input.empty();
+        this.appSKey = Output.empty();
+        this.nwkSKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class WirelessDeviceSessionKeysAbpV10xArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> appSKey;
-        private Input<String> nwkSKey;
+        private Output<String> appSKey;
+        private Output<String> nwkSKey;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class WirelessDeviceSessionKeysAbpV10xArgs extends io.pulumi.resour
     	      this.nwkSKey = defaults.nwkSKey;
         }
 
-        public Builder appSKey(Input<String> appSKey) {
+        public Builder appSKey(Output<String> appSKey) {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
 
         public Builder appSKey(String appSKey) {
-            this.appSKey = Input.of(Objects.requireNonNull(appSKey));
+            this.appSKey = Output.of(Objects.requireNonNull(appSKey));
             return this;
         }
 
-        public Builder nwkSKey(Input<String> nwkSKey) {
+        public Builder nwkSKey(Output<String> nwkSKey) {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
         }
 
         public Builder nwkSKey(String nwkSKey) {
-            this.nwkSKey = Input.of(Objects.requireNonNull(nwkSKey));
+            this.nwkSKey = Output.of(Objects.requireNonNull(nwkSKey));
             return this;
         }
         public WirelessDeviceSessionKeysAbpV10xArgs build() {

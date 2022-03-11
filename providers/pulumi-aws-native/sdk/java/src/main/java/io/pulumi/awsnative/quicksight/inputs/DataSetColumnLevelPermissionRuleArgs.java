@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
     public static final DataSetColumnLevelPermissionRuleArgs Empty = new DataSetColumnLevelPermissionRuleArgs();
 
     @InputImport(name="columnNames")
-      private final @Nullable Input<List<String>> columnNames;
+      private final @Nullable Output<List<String>> columnNames;
 
-    public Input<List<String>> getColumnNames() {
-        return this.columnNames == null ? Input.empty() : this.columnNames;
+    public Output<List<String>> getColumnNames() {
+        return this.columnNames == null ? Output.empty() : this.columnNames;
     }
 
     @InputImport(name="principals")
-      private final @Nullable Input<List<String>> principals;
+      private final @Nullable Output<List<String>> principals;
 
-    public Input<List<String>> getPrincipals() {
-        return this.principals == null ? Input.empty() : this.principals;
+    public Output<List<String>> getPrincipals() {
+        return this.principals == null ? Output.empty() : this.principals;
     }
 
     public DataSetColumnLevelPermissionRuleArgs(
-        @Nullable Input<List<String>> columnNames,
-        @Nullable Input<List<String>> principals) {
+        @Nullable Output<List<String>> columnNames,
+        @Nullable Output<List<String>> principals) {
         this.columnNames = columnNames;
         this.principals = principals;
     }
 
     private DataSetColumnLevelPermissionRuleArgs() {
-        this.columnNames = Input.empty();
-        this.principals = Input.empty();
+        this.columnNames = Output.empty();
+        this.principals = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> columnNames;
-        private @Nullable Input<List<String>> principals;
+        private @Nullable Output<List<String>> columnNames;
+        private @Nullable Output<List<String>> principals;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DataSetColumnLevelPermissionRuleArgs extends io.pulumi.resour
     	      this.principals = defaults.principals;
         }
 
-        public Builder columnNames(@Nullable Input<List<String>> columnNames) {
+        public Builder columnNames(@Nullable Output<List<String>> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
         public Builder columnNames(@Nullable List<String> columnNames) {
-            this.columnNames = Input.ofNullable(columnNames);
+            this.columnNames = Output.ofNullable(columnNames);
             return this;
         }
 
-        public Builder principals(@Nullable Input<List<String>> principals) {
+        public Builder principals(@Nullable Output<List<String>> principals) {
             this.principals = principals;
             return this;
         }
 
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Input.ofNullable(principals);
+            this.principals = Output.ofNullable(principals);
             return this;
         }
         public DataSetColumnLevelPermissionRuleArgs build() {

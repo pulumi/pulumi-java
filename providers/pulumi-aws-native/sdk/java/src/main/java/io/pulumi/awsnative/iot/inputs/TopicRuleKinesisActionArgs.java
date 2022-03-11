@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     public static final TopicRuleKinesisActionArgs Empty = new TopicRuleKinesisActionArgs();
 
     @InputImport(name="partitionKey")
-      private final @Nullable Input<String> partitionKey;
+      private final @Nullable Output<String> partitionKey;
 
-    public Input<String> getPartitionKey() {
-        return this.partitionKey == null ? Input.empty() : this.partitionKey;
+    public Output<String> getPartitionKey() {
+        return this.partitionKey == null ? Output.empty() : this.partitionKey;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="streamName", required=true)
-      private final Input<String> streamName;
+      private final Output<String> streamName;
 
-    public Input<String> getStreamName() {
+    public Output<String> getStreamName() {
         return this.streamName;
     }
 
     public TopicRuleKinesisActionArgs(
-        @Nullable Input<String> partitionKey,
-        Input<String> roleArn,
-        Input<String> streamName) {
+        @Nullable Output<String> partitionKey,
+        Output<String> roleArn,
+        Output<String> streamName) {
         this.partitionKey = partitionKey;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
         this.streamName = Objects.requireNonNull(streamName, "expected parameter 'streamName' to be non-null");
     }
 
     private TopicRuleKinesisActionArgs() {
-        this.partitionKey = Input.empty();
-        this.roleArn = Input.empty();
-        this.streamName = Input.empty();
+        this.partitionKey = Output.empty();
+        this.roleArn = Output.empty();
+        this.streamName = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> partitionKey;
-        private Input<String> roleArn;
-        private Input<String> streamName;
+        private @Nullable Output<String> partitionKey;
+        private Output<String> roleArn;
+        private Output<String> streamName;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder partitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Output<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Input.ofNullable(partitionKey);
+            this.partitionKey = Output.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder streamName(Input<String> streamName) {
+        public Builder streamName(Output<String> streamName) {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }
 
         public Builder streamName(String streamName) {
-            this.streamName = Input.of(Objects.requireNonNull(streamName));
+            this.streamName = Output.of(Objects.requireNonNull(streamName));
             return this;
         }
         public TopicRuleKinesisActionArgs build() {

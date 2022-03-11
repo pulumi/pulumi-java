@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cassandra.inputs.TableClusteringKeyColumnArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableEncryptionSpecificationArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     public static final TableArgs Empty = new TableArgs();
 
     @InputImport(name="billingMode")
-      private final @Nullable Input<TableBillingModeArgs> billingMode;
+      private final @Nullable Output<TableBillingModeArgs> billingMode;
 
-    public Input<TableBillingModeArgs> getBillingMode() {
-        return this.billingMode == null ? Input.empty() : this.billingMode;
+    public Output<TableBillingModeArgs> getBillingMode() {
+        return this.billingMode == null ? Output.empty() : this.billingMode;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusteringKeyColumns")
-      private final @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
+      private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
-    public Input<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
-        return this.clusteringKeyColumns == null ? Input.empty() : this.clusteringKeyColumns;
+    public Output<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
+        return this.clusteringKeyColumns == null ? Output.empty() : this.clusteringKeyColumns;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTimeToLive")
-      private final @Nullable Input<Integer> defaultTimeToLive;
+      private final @Nullable Output<Integer> defaultTimeToLive;
 
-    public Input<Integer> getDefaultTimeToLive() {
-        return this.defaultTimeToLive == null ? Input.empty() : this.defaultTimeToLive;
+    public Output<Integer> getDefaultTimeToLive() {
+        return this.defaultTimeToLive == null ? Output.empty() : this.defaultTimeToLive;
     }
 
     @InputImport(name="encryptionSpecification")
-      private final @Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification;
+      private final @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
 
-    public Input<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
-        return this.encryptionSpecification == null ? Input.empty() : this.encryptionSpecification;
+    public Output<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
+        return this.encryptionSpecification == null ? Output.empty() : this.encryptionSpecification;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-      private final Input<String> keyspaceName;
+      private final Output<String> keyspaceName;
 
-    public Input<String> getKeyspaceName() {
+    public Output<String> getKeyspaceName() {
         return this.keyspaceName;
     }
 
@@ -74,9 +74,9 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partitionKeyColumns", required=true)
-      private final Input<List<TableColumnArgs>> partitionKeyColumns;
+      private final Output<List<TableColumnArgs>> partitionKeyColumns;
 
-    public Input<List<TableColumnArgs>> getPartitionKeyColumns() {
+    public Output<List<TableColumnArgs>> getPartitionKeyColumns() {
         return this.partitionKeyColumns;
     }
 
@@ -85,10 +85,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Input<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="regularColumns")
-      private final @Nullable Input<List<TableColumnArgs>> regularColumns;
+      private final @Nullable Output<List<TableColumnArgs>> regularColumns;
 
-    public Input<List<TableColumnArgs>> getRegularColumns() {
-        return this.regularColumns == null ? Input.empty() : this.regularColumns;
+    public Output<List<TableColumnArgs>> getRegularColumns() {
+        return this.regularColumns == null ? Output.empty() : this.regularColumns;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     /**
@@ -118,23 +118,23 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<TableTagArgs>> tags;
+      private final @Nullable Output<List<TableTagArgs>> tags;
 
-    public Input<List<TableTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TableTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public TableArgs(
-        @Nullable Input<TableBillingModeArgs> billingMode,
-        @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns,
-        @Nullable Input<Integer> defaultTimeToLive,
-        @Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification,
-        Input<String> keyspaceName,
-        Input<List<TableColumnArgs>> partitionKeyColumns,
-        @Nullable Input<Boolean> pointInTimeRecoveryEnabled,
-        @Nullable Input<List<TableColumnArgs>> regularColumns,
-        @Nullable Input<String> tableName,
-        @Nullable Input<List<TableTagArgs>> tags) {
+        @Nullable Output<TableBillingModeArgs> billingMode,
+        @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns,
+        @Nullable Output<Integer> defaultTimeToLive,
+        @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification,
+        Output<String> keyspaceName,
+        Output<List<TableColumnArgs>> partitionKeyColumns,
+        @Nullable Output<Boolean> pointInTimeRecoveryEnabled,
+        @Nullable Output<List<TableColumnArgs>> regularColumns,
+        @Nullable Output<String> tableName,
+        @Nullable Output<List<TableTagArgs>> tags) {
         this.billingMode = billingMode;
         this.clusteringKeyColumns = clusteringKeyColumns;
         this.defaultTimeToLive = defaultTimeToLive;
@@ -148,16 +148,16 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.billingMode = Input.empty();
-        this.clusteringKeyColumns = Input.empty();
-        this.defaultTimeToLive = Input.empty();
-        this.encryptionSpecification = Input.empty();
-        this.keyspaceName = Input.empty();
-        this.partitionKeyColumns = Input.empty();
-        this.pointInTimeRecoveryEnabled = Input.empty();
-        this.regularColumns = Input.empty();
-        this.tableName = Input.empty();
-        this.tags = Input.empty();
+        this.billingMode = Output.empty();
+        this.clusteringKeyColumns = Output.empty();
+        this.defaultTimeToLive = Output.empty();
+        this.encryptionSpecification = Output.empty();
+        this.keyspaceName = Output.empty();
+        this.partitionKeyColumns = Output.empty();
+        this.pointInTimeRecoveryEnabled = Output.empty();
+        this.regularColumns = Output.empty();
+        this.tableName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -169,16 +169,16 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<TableBillingModeArgs> billingMode;
-        private @Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
-        private @Nullable Input<Integer> defaultTimeToLive;
-        private @Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification;
-        private Input<String> keyspaceName;
-        private Input<List<TableColumnArgs>> partitionKeyColumns;
-        private @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
-        private @Nullable Input<List<TableColumnArgs>> regularColumns;
-        private @Nullable Input<String> tableName;
-        private @Nullable Input<List<TableTagArgs>> tags;
+        private @Nullable Output<TableBillingModeArgs> billingMode;
+        private @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
+        private @Nullable Output<Integer> defaultTimeToLive;
+        private @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
+        private Output<String> keyspaceName;
+        private Output<List<TableColumnArgs>> partitionKeyColumns;
+        private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
+        private @Nullable Output<List<TableColumnArgs>> regularColumns;
+        private @Nullable Output<String> tableName;
+        private @Nullable Output<List<TableTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -198,103 +198,103 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder billingMode(@Nullable Input<TableBillingModeArgs> billingMode) {
+        public Builder billingMode(@Nullable Output<TableBillingModeArgs> billingMode) {
             this.billingMode = billingMode;
             return this;
         }
 
         public Builder billingMode(@Nullable TableBillingModeArgs billingMode) {
-            this.billingMode = Input.ofNullable(billingMode);
+            this.billingMode = Output.ofNullable(billingMode);
             return this;
         }
 
-        public Builder clusteringKeyColumns(@Nullable Input<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
+        public Builder clusteringKeyColumns(@Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns) {
             this.clusteringKeyColumns = clusteringKeyColumns;
             return this;
         }
 
         public Builder clusteringKeyColumns(@Nullable List<TableClusteringKeyColumnArgs> clusteringKeyColumns) {
-            this.clusteringKeyColumns = Input.ofNullable(clusteringKeyColumns);
+            this.clusteringKeyColumns = Output.ofNullable(clusteringKeyColumns);
             return this;
         }
 
-        public Builder defaultTimeToLive(@Nullable Input<Integer> defaultTimeToLive) {
+        public Builder defaultTimeToLive(@Nullable Output<Integer> defaultTimeToLive) {
             this.defaultTimeToLive = defaultTimeToLive;
             return this;
         }
 
         public Builder defaultTimeToLive(@Nullable Integer defaultTimeToLive) {
-            this.defaultTimeToLive = Input.ofNullable(defaultTimeToLive);
+            this.defaultTimeToLive = Output.ofNullable(defaultTimeToLive);
             return this;
         }
 
-        public Builder encryptionSpecification(@Nullable Input<TableEncryptionSpecificationArgs> encryptionSpecification) {
+        public Builder encryptionSpecification(@Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification) {
             this.encryptionSpecification = encryptionSpecification;
             return this;
         }
 
         public Builder encryptionSpecification(@Nullable TableEncryptionSpecificationArgs encryptionSpecification) {
-            this.encryptionSpecification = Input.ofNullable(encryptionSpecification);
+            this.encryptionSpecification = Output.ofNullable(encryptionSpecification);
             return this;
         }
 
-        public Builder keyspaceName(Input<String> keyspaceName) {
+        public Builder keyspaceName(Output<String> keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
         public Builder keyspaceName(String keyspaceName) {
-            this.keyspaceName = Input.of(Objects.requireNonNull(keyspaceName));
+            this.keyspaceName = Output.of(Objects.requireNonNull(keyspaceName));
             return this;
         }
 
-        public Builder partitionKeyColumns(Input<List<TableColumnArgs>> partitionKeyColumns) {
+        public Builder partitionKeyColumns(Output<List<TableColumnArgs>> partitionKeyColumns) {
             this.partitionKeyColumns = Objects.requireNonNull(partitionKeyColumns);
             return this;
         }
 
         public Builder partitionKeyColumns(List<TableColumnArgs> partitionKeyColumns) {
-            this.partitionKeyColumns = Input.of(Objects.requireNonNull(partitionKeyColumns));
+            this.partitionKeyColumns = Output.of(Objects.requireNonNull(partitionKeyColumns));
             return this;
         }
 
-        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
 
-        public Builder regularColumns(@Nullable Input<List<TableColumnArgs>> regularColumns) {
+        public Builder regularColumns(@Nullable Output<List<TableColumnArgs>> regularColumns) {
             this.regularColumns = regularColumns;
             return this;
         }
 
         public Builder regularColumns(@Nullable List<TableColumnArgs> regularColumns) {
-            this.regularColumns = Input.ofNullable(regularColumns);
+            this.regularColumns = Output.ofNullable(regularColumns);
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TableTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TableTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public TableArgs build() {

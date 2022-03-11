@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,29 +20,29 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     public static final PresignedUrlConfigPropertiesArgs Empty = new PresignedUrlConfigPropertiesArgs();
 
     @InputImport(name="expiresInSec")
-      private final @Nullable Input<Integer> expiresInSec;
+      private final @Nullable Output<Integer> expiresInSec;
 
-    public Input<Integer> getExpiresInSec() {
-        return this.expiresInSec == null ? Input.empty() : this.expiresInSec;
+    public Output<Integer> getExpiresInSec() {
+        return this.expiresInSec == null ? Output.empty() : this.expiresInSec;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public PresignedUrlConfigPropertiesArgs(
-        @Nullable Input<Integer> expiresInSec,
-        Input<String> roleArn) {
+        @Nullable Output<Integer> expiresInSec,
+        Output<String> roleArn) {
         this.expiresInSec = expiresInSec;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private PresignedUrlConfigPropertiesArgs() {
-        this.expiresInSec = Input.empty();
-        this.roleArn = Input.empty();
+        this.expiresInSec = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> expiresInSec;
-        private Input<String> roleArn;
+        private @Nullable Output<Integer> expiresInSec;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder expiresInSec(@Nullable Input<Integer> expiresInSec) {
+        public Builder expiresInSec(@Nullable Output<Integer> expiresInSec) {
             this.expiresInSec = expiresInSec;
             return this;
         }
 
         public Builder expiresInSec(@Nullable Integer expiresInSec) {
-            this.expiresInSec = Input.ofNullable(expiresInSec);
+            this.expiresInSec = Output.ofNullable(expiresInSec);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public PresignedUrlConfigPropertiesArgs build() {

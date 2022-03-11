@@ -5,7 +5,6 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.EnclaveCertificateIamRoleAssociationArgs;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -129,14 +128,14 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public EnclaveCertificateIamRoleAssociation(String name, EnclaveCertificateIamRoleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:EnclaveCertificateIamRoleAssociation", name, args == null ? EnclaveCertificateIamRoleAssociationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:ec2:EnclaveCertificateIamRoleAssociation", name, args == null ? EnclaveCertificateIamRoleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private EnclaveCertificateIamRoleAssociation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private EnclaveCertificateIamRoleAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:ec2:EnclaveCertificateIamRoleAssociation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -151,7 +150,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EnclaveCertificateIamRoleAssociation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static EnclaveCertificateIamRoleAssociation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new EnclaveCertificateIamRoleAssociation(name, id, options);
     }
 }

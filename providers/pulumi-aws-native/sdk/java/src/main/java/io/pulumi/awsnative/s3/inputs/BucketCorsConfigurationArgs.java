@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketCorsRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
     public static final BucketCorsConfigurationArgs Empty = new BucketCorsConfigurationArgs();
 
     @InputImport(name="corsRules", required=true)
-      private final Input<List<BucketCorsRuleArgs>> corsRules;
+      private final Output<List<BucketCorsRuleArgs>> corsRules;
 
-    public Input<List<BucketCorsRuleArgs>> getCorsRules() {
+    public Output<List<BucketCorsRuleArgs>> getCorsRules() {
         return this.corsRules;
     }
 
-    public BucketCorsConfigurationArgs(Input<List<BucketCorsRuleArgs>> corsRules) {
+    public BucketCorsConfigurationArgs(Output<List<BucketCorsRuleArgs>> corsRules) {
         this.corsRules = Objects.requireNonNull(corsRules, "expected parameter 'corsRules' to be non-null");
     }
 
     private BucketCorsConfigurationArgs() {
-        this.corsRules = Input.empty();
+        this.corsRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<BucketCorsRuleArgs>> corsRules;
+        private Output<List<BucketCorsRuleArgs>> corsRules;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder corsRules(Input<List<BucketCorsRuleArgs>> corsRules) {
+        public Builder corsRules(Output<List<BucketCorsRuleArgs>> corsRules) {
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }
 
         public Builder corsRules(List<BucketCorsRuleArgs> corsRules) {
-            this.corsRules = Input.of(Objects.requireNonNull(corsRules));
+            this.corsRules = Output.of(Objects.requireNonNull(corsRules));
             return this;
         }
         public BucketCorsConfigurationArgs build() {

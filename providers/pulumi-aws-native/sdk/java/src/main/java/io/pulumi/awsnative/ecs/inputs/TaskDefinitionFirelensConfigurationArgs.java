@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     public static final TaskDefinitionFirelensConfigurationArgs Empty = new TaskDefinitionFirelensConfigurationArgs();
 
     @InputImport(name="options")
-      private final @Nullable Input<Object> options;
+      private final @Nullable Output<Object> options;
 
-    public Input<Object> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<Object> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public TaskDefinitionFirelensConfigurationArgs(
-        @Nullable Input<Object> options,
-        @Nullable Input<String> type) {
+        @Nullable Output<Object> options,
+        @Nullable Output<String> type) {
         this.options = options;
         this.type = type;
     }
 
     private TaskDefinitionFirelensConfigurationArgs() {
-        this.options = Input.empty();
-        this.type = Input.empty();
+        this.options = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> options;
-        private @Nullable Input<String> type;
+        private @Nullable Output<Object> options;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder options(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Output<Object> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable Object options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public TaskDefinitionFirelensConfigurationArgs build() {

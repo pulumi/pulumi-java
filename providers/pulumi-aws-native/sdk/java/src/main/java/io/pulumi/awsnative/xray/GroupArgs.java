@@ -5,7 +5,7 @@ package io.pulumi.awsnative.xray;
 
 import io.pulumi.awsnative.xray.inputs.GroupInsightsConfigurationArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterExpression")
-      private final @Nullable Input<String> filterExpression;
+      private final @Nullable Output<String> filterExpression;
 
-    public Input<String> getFilterExpression() {
-        return this.filterExpression == null ? Input.empty() : this.filterExpression;
+    public Output<String> getFilterExpression() {
+        return this.filterExpression == null ? Output.empty() : this.filterExpression;
     }
 
     /**
@@ -33,31 +33,31 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     @InputImport(name="insightsConfiguration")
-      private final @Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration;
+      private final @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
 
-    public Input<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
-        return this.insightsConfiguration == null ? Input.empty() : this.insightsConfiguration;
+    public Output<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
+        return this.insightsConfiguration == null ? Output.empty() : this.insightsConfiguration;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+      private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Input<List<TagsItemPropertiesArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<TagsItemPropertiesArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public GroupArgs(
-        @Nullable Input<String> filterExpression,
-        @Nullable Input<String> groupName,
-        @Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration,
-        @Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        @Nullable Output<String> filterExpression,
+        @Nullable Output<String> groupName,
+        @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration,
+        @Nullable Output<List<TagsItemPropertiesArgs>> tags) {
         this.filterExpression = filterExpression;
         this.groupName = groupName;
         this.insightsConfiguration = insightsConfiguration;
@@ -65,10 +65,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.filterExpression = Input.empty();
-        this.groupName = Input.empty();
-        this.insightsConfiguration = Input.empty();
-        this.tags = Input.empty();
+        this.filterExpression = Output.empty();
+        this.groupName = Output.empty();
+        this.insightsConfiguration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filterExpression;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration;
-        private @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+        private @Nullable Output<String> filterExpression;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
+        private @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder filterExpression(@Nullable Input<String> filterExpression) {
+        public Builder filterExpression(@Nullable Output<String> filterExpression) {
             this.filterExpression = filterExpression;
             return this;
         }
 
         public Builder filterExpression(@Nullable String filterExpression) {
-            this.filterExpression = Input.ofNullable(filterExpression);
+            this.filterExpression = Output.ofNullable(filterExpression);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder insightsConfiguration(@Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration) {
+        public Builder insightsConfiguration(@Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration) {
             this.insightsConfiguration = insightsConfiguration;
             return this;
         }
 
         public Builder insightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
-            this.insightsConfiguration = Input.ofNullable(insightsConfiguration);
+            this.insightsConfiguration = Output.ofNullable(insightsConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<TagsItemPropertiesArgs>> tags) {
+        public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public GroupArgs build() {

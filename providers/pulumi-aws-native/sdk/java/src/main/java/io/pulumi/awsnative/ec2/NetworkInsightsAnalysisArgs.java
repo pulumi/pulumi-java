@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
     public static final NetworkInsightsAnalysisArgs Empty = new NetworkInsightsAnalysisArgs();
 
     @InputImport(name="filterInArns")
-      private final @Nullable Input<List<String>> filterInArns;
+      private final @Nullable Output<List<String>> filterInArns;
 
-    public Input<List<String>> getFilterInArns() {
-        return this.filterInArns == null ? Input.empty() : this.filterInArns;
+    public Output<List<String>> getFilterInArns() {
+        return this.filterInArns == null ? Output.empty() : this.filterInArns;
     }
 
     @InputImport(name="networkInsightsPathId", required=true)
-      private final Input<String> networkInsightsPathId;
+      private final Output<String> networkInsightsPathId;
 
-    public Input<String> getNetworkInsightsPathId() {
+    public Output<String> getNetworkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags;
+      private final @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
-    public Input<List<NetworkInsightsAnalysisTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<NetworkInsightsAnalysisTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public NetworkInsightsAnalysisArgs(
-        @Nullable Input<List<String>> filterInArns,
-        Input<String> networkInsightsPathId,
-        @Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags) {
+        @Nullable Output<List<String>> filterInArns,
+        Output<String> networkInsightsPathId,
+        @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags) {
         this.filterInArns = filterInArns;
         this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId, "expected parameter 'networkInsightsPathId' to be non-null");
         this.tags = tags;
     }
 
     private NetworkInsightsAnalysisArgs() {
-        this.filterInArns = Input.empty();
-        this.networkInsightsPathId = Input.empty();
-        this.tags = Input.empty();
+        this.filterInArns = Output.empty();
+        this.networkInsightsPathId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> filterInArns;
-        private Input<String> networkInsightsPathId;
-        private @Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags;
+        private @Nullable Output<List<String>> filterInArns;
+        private Output<String> networkInsightsPathId;
+        private @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder filterInArns(@Nullable Input<List<String>> filterInArns) {
+        public Builder filterInArns(@Nullable Output<List<String>> filterInArns) {
             this.filterInArns = filterInArns;
             return this;
         }
 
         public Builder filterInArns(@Nullable List<String> filterInArns) {
-            this.filterInArns = Input.ofNullable(filterInArns);
+            this.filterInArns = Output.ofNullable(filterInArns);
             return this;
         }
 
-        public Builder networkInsightsPathId(Input<String> networkInsightsPathId) {
+        public Builder networkInsightsPathId(Output<String> networkInsightsPathId) {
             this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
             return this;
         }
 
         public Builder networkInsightsPathId(String networkInsightsPathId) {
-            this.networkInsightsPathId = Input.of(Objects.requireNonNull(networkInsightsPathId));
+            this.networkInsightsPathId = Output.of(Objects.requireNonNull(networkInsightsPathId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public NetworkInsightsAnalysisArgs build() {

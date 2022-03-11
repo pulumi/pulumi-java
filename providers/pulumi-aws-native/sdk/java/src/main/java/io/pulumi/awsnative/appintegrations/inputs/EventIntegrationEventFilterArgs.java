@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appintegrations.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
-    public EventIntegrationEventFilterArgs(Input<String> source) {
+    public EventIntegrationEventFilterArgs(Output<String> source) {
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
     }
 
     private EventIntegrationEventFilterArgs() {
-        this.source = Input.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> source;
+        private Output<String> source;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
     	      this.source = defaults.source;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
         public EventIntegrationEventFilterArgs build() {

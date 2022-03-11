@@ -6,7 +6,6 @@ package io.pulumi.awsnative.route53resolver;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53resolver.ResolverDNSSECConfigArgs;
 import io.pulumi.awsnative.route53resolver.enums.ResolverDNSSECConfigValidationStatus;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -100,14 +99,14 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverDNSSECConfig(String name, @Nullable ResolverDNSSECConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:ResolverDNSSECConfig", name, args == null ? ResolverDNSSECConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53resolver:ResolverDNSSECConfig", name, args == null ? ResolverDNSSECConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResolverDNSSECConfig(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResolverDNSSECConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53resolver:ResolverDNSSECConfig", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -122,7 +121,7 @@ public class ResolverDNSSECConfig extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResolverDNSSECConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResolverDNSSECConfig get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResolverDNSSECConfig(name, id, options);
     }
 }

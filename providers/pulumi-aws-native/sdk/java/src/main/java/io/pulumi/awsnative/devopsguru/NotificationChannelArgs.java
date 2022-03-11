@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru;
 
 import io.pulumi.awsnative.devopsguru.inputs.NotificationChannelConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     public static final NotificationChannelArgs Empty = new NotificationChannelArgs();
 
     @InputImport(name="config", required=true)
-      private final Input<NotificationChannelConfigArgs> config;
+      private final Output<NotificationChannelConfigArgs> config;
 
-    public Input<NotificationChannelConfigArgs> getConfig() {
+    public Output<NotificationChannelConfigArgs> getConfig() {
         return this.config;
     }
 
-    public NotificationChannelArgs(Input<NotificationChannelConfigArgs> config) {
+    public NotificationChannelArgs(Output<NotificationChannelConfigArgs> config) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
     }
 
     private NotificationChannelArgs() {
-        this.config = Input.empty();
+        this.config = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<NotificationChannelConfigArgs> config;
+        private Output<NotificationChannelConfigArgs> config;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     	      this.config = defaults.config;
         }
 
-        public Builder config(Input<NotificationChannelConfigArgs> config) {
+        public Builder config(Output<NotificationChannelConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(NotificationChannelConfigArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
         public NotificationChannelArgs build() {

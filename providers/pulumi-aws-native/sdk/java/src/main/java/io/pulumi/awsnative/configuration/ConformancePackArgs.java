@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.ConformancePackInputParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conformancePackInputParameters")
-      private final @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
+      private final @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
 
-    public Input<List<ConformancePackInputParameterArgs>> getConformancePackInputParameters() {
-        return this.conformancePackInputParameters == null ? Input.empty() : this.conformancePackInputParameters;
+    public Output<List<ConformancePackInputParameterArgs>> getConformancePackInputParameters() {
+        return this.conformancePackInputParameters == null ? Output.empty() : this.conformancePackInputParameters;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conformancePackName")
-      private final @Nullable Input<String> conformancePackName;
+      private final @Nullable Output<String> conformancePackName;
 
-    public Input<String> getConformancePackName() {
-        return this.conformancePackName == null ? Input.empty() : this.conformancePackName;
+    public Output<String> getConformancePackName() {
+        return this.conformancePackName == null ? Output.empty() : this.conformancePackName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryS3Bucket")
-      private final @Nullable Input<String> deliveryS3Bucket;
+      private final @Nullable Output<String> deliveryS3Bucket;
 
-    public Input<String> getDeliveryS3Bucket() {
-        return this.deliveryS3Bucket == null ? Input.empty() : this.deliveryS3Bucket;
+    public Output<String> getDeliveryS3Bucket() {
+        return this.deliveryS3Bucket == null ? Output.empty() : this.deliveryS3Bucket;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deliveryS3KeyPrefix")
-      private final @Nullable Input<String> deliveryS3KeyPrefix;
+      private final @Nullable Output<String> deliveryS3KeyPrefix;
 
-    public Input<String> getDeliveryS3KeyPrefix() {
-        return this.deliveryS3KeyPrefix == null ? Input.empty() : this.deliveryS3KeyPrefix;
+    public Output<String> getDeliveryS3KeyPrefix() {
+        return this.deliveryS3KeyPrefix == null ? Output.empty() : this.deliveryS3KeyPrefix;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="templateBody")
-      private final @Nullable Input<String> templateBody;
+      private final @Nullable Output<String> templateBody;
 
-    public Input<String> getTemplateBody() {
-        return this.templateBody == null ? Input.empty() : this.templateBody;
+    public Output<String> getTemplateBody() {
+        return this.templateBody == null ? Output.empty() : this.templateBody;
     }
 
     /**
@@ -76,19 +76,19 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="templateS3Uri")
-      private final @Nullable Input<String> templateS3Uri;
+      private final @Nullable Output<String> templateS3Uri;
 
-    public Input<String> getTemplateS3Uri() {
-        return this.templateS3Uri == null ? Input.empty() : this.templateS3Uri;
+    public Output<String> getTemplateS3Uri() {
+        return this.templateS3Uri == null ? Output.empty() : this.templateS3Uri;
     }
 
     public ConformancePackArgs(
-        @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters,
-        @Nullable Input<String> conformancePackName,
-        @Nullable Input<String> deliveryS3Bucket,
-        @Nullable Input<String> deliveryS3KeyPrefix,
-        @Nullable Input<String> templateBody,
-        @Nullable Input<String> templateS3Uri) {
+        @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters,
+        @Nullable Output<String> conformancePackName,
+        @Nullable Output<String> deliveryS3Bucket,
+        @Nullable Output<String> deliveryS3KeyPrefix,
+        @Nullable Output<String> templateBody,
+        @Nullable Output<String> templateS3Uri) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         this.conformancePackName = conformancePackName;
         this.deliveryS3Bucket = deliveryS3Bucket;
@@ -98,12 +98,12 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConformancePackArgs() {
-        this.conformancePackInputParameters = Input.empty();
-        this.conformancePackName = Input.empty();
-        this.deliveryS3Bucket = Input.empty();
-        this.deliveryS3KeyPrefix = Input.empty();
-        this.templateBody = Input.empty();
-        this.templateS3Uri = Input.empty();
+        this.conformancePackInputParameters = Output.empty();
+        this.conformancePackName = Output.empty();
+        this.deliveryS3Bucket = Output.empty();
+        this.deliveryS3KeyPrefix = Output.empty();
+        this.templateBody = Output.empty();
+        this.templateS3Uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
-        private @Nullable Input<String> conformancePackName;
-        private @Nullable Input<String> deliveryS3Bucket;
-        private @Nullable Input<String> deliveryS3KeyPrefix;
-        private @Nullable Input<String> templateBody;
-        private @Nullable Input<String> templateS3Uri;
+        private @Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters;
+        private @Nullable Output<String> conformancePackName;
+        private @Nullable Output<String> deliveryS3Bucket;
+        private @Nullable Output<String> deliveryS3KeyPrefix;
+        private @Nullable Output<String> templateBody;
+        private @Nullable Output<String> templateS3Uri;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
     	      this.templateS3Uri = defaults.templateS3Uri;
         }
 
-        public Builder conformancePackInputParameters(@Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable Output<List<ConformancePackInputParameterArgs>> conformancePackInputParameters) {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
         public Builder conformancePackInputParameters(@Nullable List<ConformancePackInputParameterArgs> conformancePackInputParameters) {
-            this.conformancePackInputParameters = Input.ofNullable(conformancePackInputParameters);
+            this.conformancePackInputParameters = Output.ofNullable(conformancePackInputParameters);
             return this;
         }
 
-        public Builder conformancePackName(@Nullable Input<String> conformancePackName) {
+        public Builder conformancePackName(@Nullable Output<String> conformancePackName) {
             this.conformancePackName = conformancePackName;
             return this;
         }
 
         public Builder conformancePackName(@Nullable String conformancePackName) {
-            this.conformancePackName = Input.ofNullable(conformancePackName);
+            this.conformancePackName = Output.ofNullable(conformancePackName);
             return this;
         }
 
-        public Builder deliveryS3Bucket(@Nullable Input<String> deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable Output<String> deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
         public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
-            this.deliveryS3Bucket = Input.ofNullable(deliveryS3Bucket);
+            this.deliveryS3Bucket = Output.ofNullable(deliveryS3Bucket);
             return this;
         }
 
-        public Builder deliveryS3KeyPrefix(@Nullable Input<String> deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable Output<String> deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
         public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
-            this.deliveryS3KeyPrefix = Input.ofNullable(deliveryS3KeyPrefix);
+            this.deliveryS3KeyPrefix = Output.ofNullable(deliveryS3KeyPrefix);
             return this;
         }
 
-        public Builder templateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Output<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Input.ofNullable(templateBody);
+            this.templateBody = Output.ofNullable(templateBody);
             return this;
         }
 
-        public Builder templateS3Uri(@Nullable Input<String> templateS3Uri) {
+        public Builder templateS3Uri(@Nullable Output<String> templateS3Uri) {
             this.templateS3Uri = templateS3Uri;
             return this;
         }
 
         public Builder templateS3Uri(@Nullable String templateS3Uri) {
-            this.templateS3Uri = Input.ofNullable(templateS3Uri);
+            this.templateS3Uri = Output.ofNullable(templateS3Uri);
             return this;
         }
         public ConformancePackArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeName")
-      private final @Nullable Input<String> attributeName;
+      private final @Nullable Output<String> attributeName;
 
-    public Input<String> getAttributeName() {
-        return this.attributeName == null ? Input.empty() : this.attributeName;
+    public Output<String> getAttributeName() {
+        return this.attributeName == null ? Output.empty() : this.attributeName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeType")
-      private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
+      private final @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
-    public Input<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
-        return this.attributeType == null ? Input.empty() : this.attributeType;
+    public Output<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
+        return this.attributeType == null ? Output.empty() : this.attributeType;
     }
 
     public AttributesItemPropertiesArgs(
-        @Nullable Input<String> attributeName,
-        @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType) {
+        @Nullable Output<String> attributeName,
+        @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }
 
     private AttributesItemPropertiesArgs() {
-        this.attributeName = Input.empty();
-        this.attributeType = Input.empty();
+        this.attributeName = Output.empty();
+        this.attributeType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attributeName;
-        private @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
+        private @Nullable Output<String> attributeName;
+        private @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder attributeName(@Nullable Input<String> attributeName) {
+        public Builder attributeName(@Nullable Output<String> attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Input.ofNullable(attributeName);
+            this.attributeName = Output.ofNullable(attributeName);
             return this;
         }
 
-        public Builder attributeType(@Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType) {
+        public Builder attributeType(@Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
             this.attributeType = attributeType;
             return this;
         }
 
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
-            this.attributeType = Input.ofNullable(attributeType);
+            this.attributeType = Output.ofNullable(attributeType);
             return this;
         }
         public AttributesItemPropertiesArgs build() {

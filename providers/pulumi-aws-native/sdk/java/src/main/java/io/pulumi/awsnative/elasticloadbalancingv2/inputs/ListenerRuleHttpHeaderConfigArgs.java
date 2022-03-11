@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
     public static final ListenerRuleHttpHeaderConfigArgs Empty = new ListenerRuleHttpHeaderConfigArgs();
 
     @InputImport(name="httpHeaderName")
-      private final @Nullable Input<String> httpHeaderName;
+      private final @Nullable Output<String> httpHeaderName;
 
-    public Input<String> getHttpHeaderName() {
-        return this.httpHeaderName == null ? Input.empty() : this.httpHeaderName;
+    public Output<String> getHttpHeaderName() {
+        return this.httpHeaderName == null ? Output.empty() : this.httpHeaderName;
     }
 
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public ListenerRuleHttpHeaderConfigArgs(
-        @Nullable Input<String> httpHeaderName,
-        @Nullable Input<List<String>> values) {
+        @Nullable Output<String> httpHeaderName,
+        @Nullable Output<List<String>> values) {
         this.httpHeaderName = httpHeaderName;
         this.values = values;
     }
 
     private ListenerRuleHttpHeaderConfigArgs() {
-        this.httpHeaderName = Input.empty();
-        this.values = Input.empty();
+        this.httpHeaderName = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> httpHeaderName;
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<String> httpHeaderName;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
     	      this.values = defaults.values;
         }
 
-        public Builder httpHeaderName(@Nullable Input<String> httpHeaderName) {
+        public Builder httpHeaderName(@Nullable Output<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
-            this.httpHeaderName = Input.ofNullable(httpHeaderName);
+            this.httpHeaderName = Output.ofNullable(httpHeaderName);
             return this;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ListenerRuleHttpHeaderConfigArgs build() {

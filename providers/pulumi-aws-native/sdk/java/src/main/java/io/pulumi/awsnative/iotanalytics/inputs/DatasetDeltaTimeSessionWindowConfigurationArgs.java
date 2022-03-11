@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     public static final DatasetDeltaTimeSessionWindowConfigurationArgs Empty = new DatasetDeltaTimeSessionWindowConfigurationArgs();
 
     @InputImport(name="timeoutInMinutes", required=true)
-      private final Input<Integer> timeoutInMinutes;
+      private final Output<Integer> timeoutInMinutes;
 
-    public Input<Integer> getTimeoutInMinutes() {
+    public Output<Integer> getTimeoutInMinutes() {
         return this.timeoutInMinutes;
     }
 
-    public DatasetDeltaTimeSessionWindowConfigurationArgs(Input<Integer> timeoutInMinutes) {
+    public DatasetDeltaTimeSessionWindowConfigurationArgs(Output<Integer> timeoutInMinutes) {
         this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes, "expected parameter 'timeoutInMinutes' to be non-null");
     }
 
     private DatasetDeltaTimeSessionWindowConfigurationArgs() {
-        this.timeoutInMinutes = Input.empty();
+        this.timeoutInMinutes = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<Integer> timeoutInMinutes;
+        private Output<Integer> timeoutInMinutes;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     	      this.timeoutInMinutes = defaults.timeoutInMinutes;
         }
 
-        public Builder timeoutInMinutes(Input<Integer> timeoutInMinutes) {
+        public Builder timeoutInMinutes(Output<Integer> timeoutInMinutes) {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
         }
 
         public Builder timeoutInMinutes(Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Input.of(Objects.requireNonNull(timeoutInMinutes));
+            this.timeoutInMinutes = Output.of(Objects.requireNonNull(timeoutInMinutes));
             return this;
         }
         public DatasetDeltaTimeSessionWindowConfigurationArgs build() {

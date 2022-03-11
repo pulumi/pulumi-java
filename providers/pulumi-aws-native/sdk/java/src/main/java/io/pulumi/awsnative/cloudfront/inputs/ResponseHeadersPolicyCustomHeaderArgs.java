@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,39 +15,39 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends io.pulumi.resou
     public static final ResponseHeadersPolicyCustomHeaderArgs Empty = new ResponseHeadersPolicyCustomHeaderArgs();
 
     @InputImport(name="header", required=true)
-      private final Input<String> header;
+      private final Output<String> header;
 
-    public Input<String> getHeader() {
+    public Output<String> getHeader() {
         return this.header;
     }
 
     @InputImport(name="override", required=true)
-      private final Input<Boolean> override;
+      private final Output<Boolean> override;
 
-    public Input<Boolean> getOverride() {
+    public Output<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ResponseHeadersPolicyCustomHeaderArgs(
-        Input<String> header,
-        Input<Boolean> override,
-        Input<String> value) {
+        Output<String> header,
+        Output<Boolean> override,
+        Output<String> value) {
         this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
         this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ResponseHeadersPolicyCustomHeaderArgs() {
-        this.header = Input.empty();
-        this.override = Input.empty();
-        this.value = Input.empty();
+        this.header = Output.empty();
+        this.override = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> header;
-        private Input<Boolean> override;
-        private Input<String> value;
+        private Output<String> header;
+        private Output<Boolean> override;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ResponseHeadersPolicyCustomHeaderArgs extends io.pulumi.resou
     	      this.value = defaults.value;
         }
 
-        public Builder header(Input<String> header) {
+        public Builder header(Output<String> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
         public Builder header(String header) {
-            this.header = Input.of(Objects.requireNonNull(header));
+            this.header = Output.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder override(Input<Boolean> override) {
+        public Builder override(Output<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
         public Builder override(Boolean override) {
-            this.override = Input.of(Objects.requireNonNull(override));
+            this.override = Output.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ResponseHeadersPolicyCustomHeaderArgs build() {

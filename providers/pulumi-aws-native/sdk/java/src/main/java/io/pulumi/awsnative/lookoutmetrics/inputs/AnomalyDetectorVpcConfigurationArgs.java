@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,29 +15,29 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     public static final AnomalyDetectorVpcConfigurationArgs Empty = new AnomalyDetectorVpcConfigurationArgs();
 
     @InputImport(name="securityGroupIdList", required=true)
-      private final Input<List<String>> securityGroupIdList;
+      private final Output<List<String>> securityGroupIdList;
 
-    public Input<List<String>> getSecurityGroupIdList() {
+    public Output<List<String>> getSecurityGroupIdList() {
         return this.securityGroupIdList;
     }
 
     @InputImport(name="subnetIdList", required=true)
-      private final Input<List<String>> subnetIdList;
+      private final Output<List<String>> subnetIdList;
 
-    public Input<List<String>> getSubnetIdList() {
+    public Output<List<String>> getSubnetIdList() {
         return this.subnetIdList;
     }
 
     public AnomalyDetectorVpcConfigurationArgs(
-        Input<List<String>> securityGroupIdList,
-        Input<List<String>> subnetIdList) {
+        Output<List<String>> securityGroupIdList,
+        Output<List<String>> subnetIdList) {
         this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList, "expected parameter 'securityGroupIdList' to be non-null");
         this.subnetIdList = Objects.requireNonNull(subnetIdList, "expected parameter 'subnetIdList' to be non-null");
     }
 
     private AnomalyDetectorVpcConfigurationArgs() {
-        this.securityGroupIdList = Input.empty();
-        this.subnetIdList = Input.empty();
+        this.securityGroupIdList = Output.empty();
+        this.subnetIdList = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<List<String>> securityGroupIdList;
-        private Input<List<String>> subnetIdList;
+        private Output<List<String>> securityGroupIdList;
+        private Output<List<String>> subnetIdList;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class AnomalyDetectorVpcConfigurationArgs extends io.pulumi.resourc
     	      this.subnetIdList = defaults.subnetIdList;
         }
 
-        public Builder securityGroupIdList(Input<List<String>> securityGroupIdList) {
+        public Builder securityGroupIdList(Output<List<String>> securityGroupIdList) {
             this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
             return this;
         }
 
         public Builder securityGroupIdList(List<String> securityGroupIdList) {
-            this.securityGroupIdList = Input.of(Objects.requireNonNull(securityGroupIdList));
+            this.securityGroupIdList = Output.of(Objects.requireNonNull(securityGroupIdList));
             return this;
         }
 
-        public Builder subnetIdList(Input<List<String>> subnetIdList) {
+        public Builder subnetIdList(Output<List<String>> subnetIdList) {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }
 
         public Builder subnetIdList(List<String> subnetIdList) {
-            this.subnetIdList = Input.of(Objects.requireNonNull(subnetIdList));
+            this.subnetIdList = Output.of(Objects.requireNonNull(subnetIdList));
             return this;
         }
         public AnomalyDetectorVpcConfigurationArgs build() {

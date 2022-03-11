@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudformation;
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationType;
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
 import io.pulumi.awsnative.cloudformation.inputs.TypeActivationLoggingConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUpdate")
-      private final @Nullable Input<Boolean> autoUpdate;
+      private final @Nullable Output<Boolean> autoUpdate;
 
-    public Input<Boolean> getAutoUpdate() {
-        return this.autoUpdate == null ? Input.empty() : this.autoUpdate;
+    public Output<Boolean> getAutoUpdate() {
+        return this.autoUpdate == null ? Output.empty() : this.autoUpdate;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig;
 
-    public Input<TypeActivationLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<TypeActivationLoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="majorVersion")
-      private final @Nullable Input<String> majorVersion;
+      private final @Nullable Output<String> majorVersion;
 
-    public Input<String> getMajorVersion() {
-        return this.majorVersion == null ? Input.empty() : this.majorVersion;
+    public Output<String> getMajorVersion() {
+        return this.majorVersion == null ? Output.empty() : this.majorVersion;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicTypeArn")
-      private final @Nullable Input<String> publicTypeArn;
+      private final @Nullable Output<String> publicTypeArn;
 
-    public Input<String> getPublicTypeArn() {
-        return this.publicTypeArn == null ? Input.empty() : this.publicTypeArn;
+    public Output<String> getPublicTypeArn() {
+        return this.publicTypeArn == null ? Output.empty() : this.publicTypeArn;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisherId")
-      private final @Nullable Input<String> publisherId;
+      private final @Nullable Output<String> publisherId;
 
-    public Input<String> getPublisherId() {
-        return this.publisherId == null ? Input.empty() : this.publisherId;
+    public Output<String> getPublisherId() {
+        return this.publisherId == null ? Output.empty() : this.publisherId;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<TypeActivationType> type;
+      private final @Nullable Output<TypeActivationType> type;
 
-    public Input<TypeActivationType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<TypeActivationType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeNameAlias")
-      private final @Nullable Input<String> typeNameAlias;
+      private final @Nullable Output<String> typeNameAlias;
 
-    public Input<String> getTypeNameAlias() {
-        return this.typeNameAlias == null ? Input.empty() : this.typeNameAlias;
+    public Output<String> getTypeNameAlias() {
+        return this.typeNameAlias == null ? Output.empty() : this.typeNameAlias;
     }
 
     /**
@@ -124,23 +124,23 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionBump")
-      private final @Nullable Input<TypeActivationVersionBump> versionBump;
+      private final @Nullable Output<TypeActivationVersionBump> versionBump;
 
-    public Input<TypeActivationVersionBump> getVersionBump() {
-        return this.versionBump == null ? Input.empty() : this.versionBump;
+    public Output<TypeActivationVersionBump> getVersionBump() {
+        return this.versionBump == null ? Output.empty() : this.versionBump;
     }
 
     public TypeActivationArgs(
-        @Nullable Input<Boolean> autoUpdate,
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig,
-        @Nullable Input<String> majorVersion,
-        @Nullable Input<String> publicTypeArn,
-        @Nullable Input<String> publisherId,
-        @Nullable Input<TypeActivationType> type,
-        @Nullable Input<String> typeName,
-        @Nullable Input<String> typeNameAlias,
-        @Nullable Input<TypeActivationVersionBump> versionBump) {
+        @Nullable Output<Boolean> autoUpdate,
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig,
+        @Nullable Output<String> majorVersion,
+        @Nullable Output<String> publicTypeArn,
+        @Nullable Output<String> publisherId,
+        @Nullable Output<TypeActivationType> type,
+        @Nullable Output<String> typeName,
+        @Nullable Output<String> typeNameAlias,
+        @Nullable Output<TypeActivationVersionBump> versionBump) {
         this.autoUpdate = autoUpdate;
         this.executionRoleArn = executionRoleArn;
         this.loggingConfig = loggingConfig;
@@ -154,16 +154,16 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeActivationArgs() {
-        this.autoUpdate = Input.empty();
-        this.executionRoleArn = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.majorVersion = Input.empty();
-        this.publicTypeArn = Input.empty();
-        this.publisherId = Input.empty();
-        this.type = Input.empty();
-        this.typeName = Input.empty();
-        this.typeNameAlias = Input.empty();
-        this.versionBump = Input.empty();
+        this.autoUpdate = Output.empty();
+        this.executionRoleArn = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.majorVersion = Output.empty();
+        this.publicTypeArn = Output.empty();
+        this.publisherId = Output.empty();
+        this.type = Output.empty();
+        this.typeName = Output.empty();
+        this.typeNameAlias = Output.empty();
+        this.versionBump = Output.empty();
     }
 
     public static Builder builder() {
@@ -175,16 +175,16 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoUpdate;
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig;
-        private @Nullable Input<String> majorVersion;
-        private @Nullable Input<String> publicTypeArn;
-        private @Nullable Input<String> publisherId;
-        private @Nullable Input<TypeActivationType> type;
-        private @Nullable Input<String> typeName;
-        private @Nullable Input<String> typeNameAlias;
-        private @Nullable Input<TypeActivationVersionBump> versionBump;
+        private @Nullable Output<Boolean> autoUpdate;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig;
+        private @Nullable Output<String> majorVersion;
+        private @Nullable Output<String> publicTypeArn;
+        private @Nullable Output<String> publisherId;
+        private @Nullable Output<TypeActivationType> type;
+        private @Nullable Output<String> typeName;
+        private @Nullable Output<String> typeNameAlias;
+        private @Nullable Output<TypeActivationVersionBump> versionBump;
 
         public Builder() {
     	      // Empty
@@ -204,103 +204,103 @@ public final class TypeActivationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionBump = defaults.versionBump;
         }
 
-        public Builder autoUpdate(@Nullable Input<Boolean> autoUpdate) {
+        public Builder autoUpdate(@Nullable Output<Boolean> autoUpdate) {
             this.autoUpdate = autoUpdate;
             return this;
         }
 
         public Builder autoUpdate(@Nullable Boolean autoUpdate) {
-            this.autoUpdate = Input.ofNullable(autoUpdate);
+            this.autoUpdate = Output.ofNullable(autoUpdate);
             return this;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<TypeActivationLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<TypeActivationLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable TypeActivationLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder majorVersion(@Nullable Input<String> majorVersion) {
+        public Builder majorVersion(@Nullable Output<String> majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
 
         public Builder majorVersion(@Nullable String majorVersion) {
-            this.majorVersion = Input.ofNullable(majorVersion);
+            this.majorVersion = Output.ofNullable(majorVersion);
             return this;
         }
 
-        public Builder publicTypeArn(@Nullable Input<String> publicTypeArn) {
+        public Builder publicTypeArn(@Nullable Output<String> publicTypeArn) {
             this.publicTypeArn = publicTypeArn;
             return this;
         }
 
         public Builder publicTypeArn(@Nullable String publicTypeArn) {
-            this.publicTypeArn = Input.ofNullable(publicTypeArn);
+            this.publicTypeArn = Output.ofNullable(publicTypeArn);
             return this;
         }
 
-        public Builder publisherId(@Nullable Input<String> publisherId) {
+        public Builder publisherId(@Nullable Output<String> publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
         public Builder publisherId(@Nullable String publisherId) {
-            this.publisherId = Input.ofNullable(publisherId);
+            this.publisherId = Output.ofNullable(publisherId);
             return this;
         }
 
-        public Builder type(@Nullable Input<TypeActivationType> type) {
+        public Builder type(@Nullable Output<TypeActivationType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable TypeActivationType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
 
-        public Builder typeNameAlias(@Nullable Input<String> typeNameAlias) {
+        public Builder typeNameAlias(@Nullable Output<String> typeNameAlias) {
             this.typeNameAlias = typeNameAlias;
             return this;
         }
 
         public Builder typeNameAlias(@Nullable String typeNameAlias) {
-            this.typeNameAlias = Input.ofNullable(typeNameAlias);
+            this.typeNameAlias = Output.ofNullable(typeNameAlias);
             return this;
         }
 
-        public Builder versionBump(@Nullable Input<TypeActivationVersionBump> versionBump) {
+        public Builder versionBump(@Nullable Output<TypeActivationVersionBump> versionBump) {
             this.versionBump = versionBump;
             return this;
         }
 
         public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
-            this.versionBump = Input.ofNullable(versionBump);
+            this.versionBump = Output.ofNullable(versionBump);
             return this;
         }
         public TypeActivationArgs build() {

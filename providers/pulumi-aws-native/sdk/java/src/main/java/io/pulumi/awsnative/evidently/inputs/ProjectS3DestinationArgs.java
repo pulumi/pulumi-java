@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     public static final ProjectS3DestinationArgs Empty = new ProjectS3DestinationArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public ProjectS3DestinationArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> prefix) {
+        Output<String> bucketName,
+        @Nullable Output<String> prefix) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.prefix = prefix;
     }
 
     private ProjectS3DestinationArgs() {
-        this.bucketName = Input.empty();
-        this.prefix = Input.empty();
+        this.bucketName = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> prefix;
+        private Output<String> bucketName;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public ProjectS3DestinationArgs build() {

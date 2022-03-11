@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetMonitoringArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotPlacementArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,150 +26,150 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     public static final SpotFleetLaunchSpecificationArgs Empty = new SpotFleetLaunchSpecificationArgs();
 
     @InputImport(name="blockDeviceMappings")
-      private final @Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
+      private final @Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
 
-    public Input<List<SpotFleetBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
+    public Output<List<SpotFleetBlockDeviceMappingArgs>> getBlockDeviceMappings() {
+        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
     }
 
     @InputImport(name="ebsOptimized")
-      private final @Nullable Input<Boolean> ebsOptimized;
+      private final @Nullable Output<Boolean> ebsOptimized;
 
-    public Input<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
+    public Output<Boolean> getEbsOptimized() {
+        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
     }
 
     @InputImport(name="iamInstanceProfile")
-      private final @Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
+      private final @Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
 
-    public Input<SpotFleetIamInstanceProfileSpecificationArgs> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Input.empty() : this.iamInstanceProfile;
+    public Output<SpotFleetIamInstanceProfileSpecificationArgs> getIamInstanceProfile() {
+        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
     }
 
     @InputImport(name="imageId", required=true)
-      private final Input<String> imageId;
+      private final Output<String> imageId;
 
-    public Input<String> getImageId() {
+    public Output<String> getImageId() {
         return this.imageId;
     }
 
     @InputImport(name="instanceRequirements")
-      private final @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
+      private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
-    public Input<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
-        return this.instanceRequirements == null ? Input.empty() : this.instanceRequirements;
+    public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
+        return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
     }
 
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     @InputImport(name="kernelId")
-      private final @Nullable Input<String> kernelId;
+      private final @Nullable Output<String> kernelId;
 
-    public Input<String> getKernelId() {
-        return this.kernelId == null ? Input.empty() : this.kernelId;
+    public Output<String> getKernelId() {
+        return this.kernelId == null ? Output.empty() : this.kernelId;
     }
 
     @InputImport(name="keyName")
-      private final @Nullable Input<String> keyName;
+      private final @Nullable Output<String> keyName;
 
-    public Input<String> getKeyName() {
-        return this.keyName == null ? Input.empty() : this.keyName;
+    public Output<String> getKeyName() {
+        return this.keyName == null ? Output.empty() : this.keyName;
     }
 
     @InputImport(name="monitoring")
-      private final @Nullable Input<SpotFleetMonitoringArgs> monitoring;
+      private final @Nullable Output<SpotFleetMonitoringArgs> monitoring;
 
-    public Input<SpotFleetMonitoringArgs> getMonitoring() {
-        return this.monitoring == null ? Input.empty() : this.monitoring;
+    public Output<SpotFleetMonitoringArgs> getMonitoring() {
+        return this.monitoring == null ? Output.empty() : this.monitoring;
     }
 
     @InputImport(name="networkInterfaces")
-      private final @Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
+      private final @Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
 
-    public Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
+    public Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> getNetworkInterfaces() {
+        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
     }
 
     @InputImport(name="placement")
-      private final @Nullable Input<SpotFleetSpotPlacementArgs> placement;
+      private final @Nullable Output<SpotFleetSpotPlacementArgs> placement;
 
-    public Input<SpotFleetSpotPlacementArgs> getPlacement() {
-        return this.placement == null ? Input.empty() : this.placement;
+    public Output<SpotFleetSpotPlacementArgs> getPlacement() {
+        return this.placement == null ? Output.empty() : this.placement;
     }
 
     @InputImport(name="ramdiskId")
-      private final @Nullable Input<String> ramdiskId;
+      private final @Nullable Output<String> ramdiskId;
 
-    public Input<String> getRamdiskId() {
-        return this.ramdiskId == null ? Input.empty() : this.ramdiskId;
+    public Output<String> getRamdiskId() {
+        return this.ramdiskId == null ? Output.empty() : this.ramdiskId;
     }
 
     @InputImport(name="securityGroups")
-      private final @Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups;
+      private final @Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups;
 
-    public Input<List<SpotFleetGroupIdentifierArgs>> getSecurityGroups() {
-        return this.securityGroups == null ? Input.empty() : this.securityGroups;
+    public Output<List<SpotFleetGroupIdentifierArgs>> getSecurityGroups() {
+        return this.securityGroups == null ? Output.empty() : this.securityGroups;
     }
 
     @InputImport(name="spotPrice")
-      private final @Nullable Input<String> spotPrice;
+      private final @Nullable Output<String> spotPrice;
 
-    public Input<String> getSpotPrice() {
-        return this.spotPrice == null ? Input.empty() : this.spotPrice;
+    public Output<String> getSpotPrice() {
+        return this.spotPrice == null ? Output.empty() : this.spotPrice;
     }
 
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     @InputImport(name="tagSpecifications")
-      private final @Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
+      private final @Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
 
-    public Input<List<SpotFleetTagSpecificationArgs>> getTagSpecifications() {
-        return this.tagSpecifications == null ? Input.empty() : this.tagSpecifications;
+    public Output<List<SpotFleetTagSpecificationArgs>> getTagSpecifications() {
+        return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
     }
 
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     @InputImport(name="weightedCapacity")
-      private final @Nullable Input<Double> weightedCapacity;
+      private final @Nullable Output<Double> weightedCapacity;
 
-    public Input<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
+    public Output<Double> getWeightedCapacity() {
+        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
     }
 
     public SpotFleetLaunchSpecificationArgs(
-        @Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings,
-        @Nullable Input<Boolean> ebsOptimized,
-        @Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile,
-        Input<String> imageId,
-        @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> kernelId,
-        @Nullable Input<String> keyName,
-        @Nullable Input<SpotFleetMonitoringArgs> monitoring,
-        @Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces,
-        @Nullable Input<SpotFleetSpotPlacementArgs> placement,
-        @Nullable Input<String> ramdiskId,
-        @Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups,
-        @Nullable Input<String> spotPrice,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications,
-        @Nullable Input<String> userData,
-        @Nullable Input<Double> weightedCapacity) {
+        @Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings,
+        @Nullable Output<Boolean> ebsOptimized,
+        @Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile,
+        Output<String> imageId,
+        @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> kernelId,
+        @Nullable Output<String> keyName,
+        @Nullable Output<SpotFleetMonitoringArgs> monitoring,
+        @Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces,
+        @Nullable Output<SpotFleetSpotPlacementArgs> placement,
+        @Nullable Output<String> ramdiskId,
+        @Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups,
+        @Nullable Output<String> spotPrice,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications,
+        @Nullable Output<String> userData,
+        @Nullable Output<Double> weightedCapacity) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.ebsOptimized = ebsOptimized;
         this.iamInstanceProfile = iamInstanceProfile;
@@ -191,24 +191,24 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     }
 
     private SpotFleetLaunchSpecificationArgs() {
-        this.blockDeviceMappings = Input.empty();
-        this.ebsOptimized = Input.empty();
-        this.iamInstanceProfile = Input.empty();
-        this.imageId = Input.empty();
-        this.instanceRequirements = Input.empty();
-        this.instanceType = Input.empty();
-        this.kernelId = Input.empty();
-        this.keyName = Input.empty();
-        this.monitoring = Input.empty();
-        this.networkInterfaces = Input.empty();
-        this.placement = Input.empty();
-        this.ramdiskId = Input.empty();
-        this.securityGroups = Input.empty();
-        this.spotPrice = Input.empty();
-        this.subnetId = Input.empty();
-        this.tagSpecifications = Input.empty();
-        this.userData = Input.empty();
-        this.weightedCapacity = Input.empty();
+        this.blockDeviceMappings = Output.empty();
+        this.ebsOptimized = Output.empty();
+        this.iamInstanceProfile = Output.empty();
+        this.imageId = Output.empty();
+        this.instanceRequirements = Output.empty();
+        this.instanceType = Output.empty();
+        this.kernelId = Output.empty();
+        this.keyName = Output.empty();
+        this.monitoring = Output.empty();
+        this.networkInterfaces = Output.empty();
+        this.placement = Output.empty();
+        this.ramdiskId = Output.empty();
+        this.securityGroups = Output.empty();
+        this.spotPrice = Output.empty();
+        this.subnetId = Output.empty();
+        this.tagSpecifications = Output.empty();
+        this.userData = Output.empty();
+        this.weightedCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,24 +220,24 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
-        private @Nullable Input<Boolean> ebsOptimized;
-        private @Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
-        private Input<String> imageId;
-        private @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> kernelId;
-        private @Nullable Input<String> keyName;
-        private @Nullable Input<SpotFleetMonitoringArgs> monitoring;
-        private @Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
-        private @Nullable Input<SpotFleetSpotPlacementArgs> placement;
-        private @Nullable Input<String> ramdiskId;
-        private @Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups;
-        private @Nullable Input<String> spotPrice;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
-        private @Nullable Input<String> userData;
-        private @Nullable Input<Double> weightedCapacity;
+        private @Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
+        private @Nullable Output<Boolean> ebsOptimized;
+        private @Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
+        private Output<String> imageId;
+        private @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> kernelId;
+        private @Nullable Output<String> keyName;
+        private @Nullable Output<SpotFleetMonitoringArgs> monitoring;
+        private @Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
+        private @Nullable Output<SpotFleetSpotPlacementArgs> placement;
+        private @Nullable Output<String> ramdiskId;
+        private @Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups;
+        private @Nullable Output<String> spotPrice;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
+        private @Nullable Output<String> userData;
+        private @Nullable Output<Double> weightedCapacity;
 
         public Builder() {
     	      // Empty
@@ -265,183 +265,183 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder blockDeviceMappings(@Nullable Input<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
         public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Input.ofNullable(ebsOptimized);
+            this.ebsOptimized = Output.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder iamInstanceProfile(@Nullable Input<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
         public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecificationArgs iamInstanceProfile) {
-            this.iamInstanceProfile = Input.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
             return this;
         }
 
-        public Builder imageId(Input<String> imageId) {
+        public Builder imageId(Output<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
         public Builder imageId(String imageId) {
-            this.imageId = Input.of(Objects.requireNonNull(imageId));
+            this.imageId = Output.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder instanceRequirements(@Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
+        public Builder instanceRequirements(@Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequestArgs instanceRequirements) {
-            this.instanceRequirements = Input.ofNullable(instanceRequirements);
+            this.instanceRequirements = Output.ofNullable(instanceRequirements);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder kernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Output<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Input.ofNullable(kernelId);
+            this.kernelId = Output.ofNullable(kernelId);
             return this;
         }
 
-        public Builder keyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Output<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Input.ofNullable(keyName);
+            this.keyName = Output.ofNullable(keyName);
             return this;
         }
 
-        public Builder monitoring(@Nullable Input<SpotFleetMonitoringArgs> monitoring) {
+        public Builder monitoring(@Nullable Output<SpotFleetMonitoringArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
         public Builder monitoring(@Nullable SpotFleetMonitoringArgs monitoring) {
-            this.monitoring = Input.ofNullable(monitoring);
+            this.monitoring = Output.ofNullable(monitoring);
             return this;
         }
 
-        public Builder networkInterfaces(@Nullable Input<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
         public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecificationArgs> networkInterfaces) {
-            this.networkInterfaces = Input.ofNullable(networkInterfaces);
+            this.networkInterfaces = Output.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder placement(@Nullable Input<SpotFleetSpotPlacementArgs> placement) {
+        public Builder placement(@Nullable Output<SpotFleetSpotPlacementArgs> placement) {
             this.placement = placement;
             return this;
         }
 
         public Builder placement(@Nullable SpotFleetSpotPlacementArgs placement) {
-            this.placement = Input.ofNullable(placement);
+            this.placement = Output.ofNullable(placement);
             return this;
         }
 
-        public Builder ramdiskId(@Nullable Input<String> ramdiskId) {
+        public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
         public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = Input.ofNullable(ramdiskId);
+            this.ramdiskId = Output.ofNullable(ramdiskId);
             return this;
         }
 
-        public Builder securityGroups(@Nullable Input<List<SpotFleetGroupIdentifierArgs>> securityGroups) {
+        public Builder securityGroups(@Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
         public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifierArgs> securityGroups) {
-            this.securityGroups = Input.ofNullable(securityGroups);
+            this.securityGroups = Output.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder spotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Output<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Input.ofNullable(spotPrice);
+            this.spotPrice = Output.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tagSpecifications(@Nullable Input<List<SpotFleetTagSpecificationArgs>> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
         public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Input.ofNullable(tagSpecifications);
+            this.tagSpecifications = Output.ofNullable(tagSpecifications);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
 
-        public Builder weightedCapacity(@Nullable Input<Double> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Input.ofNullable(weightedCapacity);
+            this.weightedCapacity = Output.ofNullable(weightedCapacity);
             return this;
         }
         public SpotFleetLaunchSpecificationArgs build() {

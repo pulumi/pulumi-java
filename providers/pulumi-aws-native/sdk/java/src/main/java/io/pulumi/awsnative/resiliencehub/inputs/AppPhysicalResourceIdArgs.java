@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.resiliencehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     public static final AppPhysicalResourceIdArgs Empty = new AppPhysicalResourceIdArgs();
 
     @InputImport(name="awsAccountId")
-      private final @Nullable Input<String> awsAccountId;
+      private final @Nullable Output<String> awsAccountId;
 
-    public Input<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Input.empty() : this.awsAccountId;
+    public Output<String> getAwsAccountId() {
+        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
     @InputImport(name="awsRegion")
-      private final @Nullable Input<String> awsRegion;
+      private final @Nullable Output<String> awsRegion;
 
-    public Input<String> getAwsRegion() {
-        return this.awsRegion == null ? Input.empty() : this.awsRegion;
+    public Output<String> getAwsRegion() {
+        return this.awsRegion == null ? Output.empty() : this.awsRegion;
     }
 
     @InputImport(name="identifier", required=true)
-      private final Input<String> identifier;
+      private final Output<String> identifier;
 
-    public Input<String> getIdentifier() {
+    public Output<String> getIdentifier() {
         return this.identifier;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AppPhysicalResourceIdArgs(
-        @Nullable Input<String> awsAccountId,
-        @Nullable Input<String> awsRegion,
-        Input<String> identifier,
-        Input<String> type) {
+        @Nullable Output<String> awsAccountId,
+        @Nullable Output<String> awsRegion,
+        Output<String> identifier,
+        Output<String> type) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
         this.identifier = Objects.requireNonNull(identifier, "expected parameter 'identifier' to be non-null");
@@ -54,10 +54,10 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     }
 
     private AppPhysicalResourceIdArgs() {
-        this.awsAccountId = Input.empty();
-        this.awsRegion = Input.empty();
-        this.identifier = Input.empty();
-        this.type = Input.empty();
+        this.awsAccountId = Output.empty();
+        this.awsRegion = Output.empty();
+        this.identifier = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> awsAccountId;
-        private @Nullable Input<String> awsRegion;
-        private Input<String> identifier;
-        private Input<String> type;
+        private @Nullable Output<String> awsAccountId;
+        private @Nullable Output<String> awsRegion;
+        private Output<String> identifier;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Output<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Input.ofNullable(awsAccountId);
+            this.awsAccountId = Output.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder awsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Output<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Input.ofNullable(awsRegion);
+            this.awsRegion = Output.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder identifier(Input<String> identifier) {
+        public Builder identifier(Output<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
         public Builder identifier(String identifier) {
-            this.identifier = Input.of(Objects.requireNonNull(identifier));
+            this.identifier = Output.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AppPhysicalResourceIdArgs build() {

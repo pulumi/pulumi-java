@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValueArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -18,46 +18,46 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatasetVariableArgs Empty = new DatasetVariableArgs();
 
     @InputImport(name="datasetContentVersionValue")
-      private final @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
+      private final @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
-    public Input<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
-        return this.datasetContentVersionValue == null ? Input.empty() : this.datasetContentVersionValue;
+    public Output<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
+        return this.datasetContentVersionValue == null ? Output.empty() : this.datasetContentVersionValue;
     }
 
     @InputImport(name="doubleValue")
-      private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Output<Double> doubleValue;
 
-    public Input<Double> getDoubleValue() {
-        return this.doubleValue == null ? Input.empty() : this.doubleValue;
+    public Output<Double> getDoubleValue() {
+        return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
     @InputImport(name="outputFileUriValue")
-      private final @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
+      private final @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
-    public Input<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
-        return this.outputFileUriValue == null ? Input.empty() : this.outputFileUriValue;
+    public Output<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
+        return this.outputFileUriValue == null ? Output.empty() : this.outputFileUriValue;
     }
 
     @InputImport(name="stringValue")
-      private final @Nullable Input<String> stringValue;
+      private final @Nullable Output<String> stringValue;
 
-    public Input<String> getStringValue() {
-        return this.stringValue == null ? Input.empty() : this.stringValue;
+    public Output<String> getStringValue() {
+        return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
     @InputImport(name="variableName", required=true)
-      private final Input<String> variableName;
+      private final Output<String> variableName;
 
-    public Input<String> getVariableName() {
+    public Output<String> getVariableName() {
         return this.variableName;
     }
 
     public DatasetVariableArgs(
-        @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue,
-        @Nullable Input<Double> doubleValue,
-        @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue,
-        @Nullable Input<String> stringValue,
-        Input<String> variableName) {
+        @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue,
+        @Nullable Output<Double> doubleValue,
+        @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue,
+        @Nullable Output<String> stringValue,
+        Output<String> variableName) {
         this.datasetContentVersionValue = datasetContentVersionValue;
         this.doubleValue = doubleValue;
         this.outputFileUriValue = outputFileUriValue;
@@ -66,11 +66,11 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatasetVariableArgs() {
-        this.datasetContentVersionValue = Input.empty();
-        this.doubleValue = Input.empty();
-        this.outputFileUriValue = Input.empty();
-        this.stringValue = Input.empty();
-        this.variableName = Input.empty();
+        this.datasetContentVersionValue = Output.empty();
+        this.doubleValue = Output.empty();
+        this.outputFileUriValue = Output.empty();
+        this.stringValue = Output.empty();
+        this.variableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,11 +82,11 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
-        private @Nullable Input<Double> doubleValue;
-        private @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
-        private @Nullable Input<String> stringValue;
-        private Input<String> variableName;
+        private @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
+        private @Nullable Output<Double> doubleValue;
+        private @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
+        private @Nullable Output<String> stringValue;
+        private Output<String> variableName;
 
         public Builder() {
     	      // Empty
@@ -101,53 +101,53 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder datasetContentVersionValue(@Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue) {
+        public Builder datasetContentVersionValue(@Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue) {
             this.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
 
         public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValueArgs datasetContentVersionValue) {
-            this.datasetContentVersionValue = Input.ofNullable(datasetContentVersionValue);
+            this.datasetContentVersionValue = Output.ofNullable(datasetContentVersionValue);
             return this;
         }
 
-        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Output<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Input.ofNullable(doubleValue);
+            this.doubleValue = Output.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder outputFileUriValue(@Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue) {
+        public Builder outputFileUriValue(@Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue) {
             this.outputFileUriValue = outputFileUriValue;
             return this;
         }
 
         public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValueArgs outputFileUriValue) {
-            this.outputFileUriValue = Input.ofNullable(outputFileUriValue);
+            this.outputFileUriValue = Output.ofNullable(outputFileUriValue);
             return this;
         }
 
-        public Builder stringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Output<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Input.ofNullable(stringValue);
+            this.stringValue = Output.ofNullable(stringValue);
             return this;
         }
 
-        public Builder variableName(Input<String> variableName) {
+        public Builder variableName(Output<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
         public Builder variableName(String variableName) {
-            this.variableName = Input.of(Objects.requireNonNull(variableName));
+            this.variableName = Output.of(Objects.requireNonNull(variableName));
             return this;
         }
         public DatasetVariableArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,29 +20,29 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     public static final AccessPointTransformationConfigurationArgs Empty = new AccessPointTransformationConfigurationArgs();
 
     @InputImport(name="actions", required=true)
-      private final Input<List<String>> actions;
+      private final Output<List<String>> actions;
 
-    public Input<List<String>> getActions() {
+    public Output<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="contentTransformation", required=true)
-      private final Input<Object> contentTransformation;
+      private final Output<Object> contentTransformation;
 
-    public Input<Object> getContentTransformation() {
+    public Output<Object> getContentTransformation() {
         return this.contentTransformation;
     }
 
     public AccessPointTransformationConfigurationArgs(
-        Input<List<String>> actions,
-        Input<Object> contentTransformation) {
+        Output<List<String>> actions,
+        Output<Object> contentTransformation) {
         this.actions = Objects.requireNonNull(actions, "expected parameter 'actions' to be non-null");
         this.contentTransformation = Objects.requireNonNull(contentTransformation, "expected parameter 'contentTransformation' to be non-null");
     }
 
     private AccessPointTransformationConfigurationArgs() {
-        this.actions = Input.empty();
-        this.contentTransformation = Input.empty();
+        this.actions = Output.empty();
+        this.contentTransformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private Input<List<String>> actions;
-        private Input<Object> contentTransformation;
+        private Output<List<String>> actions;
+        private Output<Object> contentTransformation;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder actions(Input<List<String>> actions) {
+        public Builder actions(Output<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
         public Builder actions(List<String> actions) {
-            this.actions = Input.of(Objects.requireNonNull(actions));
+            this.actions = Output.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder contentTransformation(Input<Object> contentTransformation) {
+        public Builder contentTransformation(Output<Object> contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }
 
         public Builder contentTransformation(Object contentTransformation) {
-            this.contentTransformation = Input.of(Objects.requireNonNull(contentTransformation));
+            this.contentTransformation = Output.of(Objects.requireNonNull(contentTransformation));
             return this;
         }
         public AccessPointTransformationConfigurationArgs build() {

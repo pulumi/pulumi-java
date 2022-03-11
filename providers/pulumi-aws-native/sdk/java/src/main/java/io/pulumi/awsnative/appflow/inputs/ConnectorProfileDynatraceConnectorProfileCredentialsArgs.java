@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
      * 
      */
     @InputImport(name="apiToken", required=true)
-      private final Input<String> apiToken;
+      private final Output<String> apiToken;
 
-    public Input<String> getApiToken() {
+    public Output<String> getApiToken() {
         return this.apiToken;
     }
 
-    public ConnectorProfileDynatraceConnectorProfileCredentialsArgs(Input<String> apiToken) {
+    public ConnectorProfileDynatraceConnectorProfileCredentialsArgs(Output<String> apiToken) {
         this.apiToken = Objects.requireNonNull(apiToken, "expected parameter 'apiToken' to be non-null");
     }
 
     private ConnectorProfileDynatraceConnectorProfileCredentialsArgs() {
-        this.apiToken = Input.empty();
+        this.apiToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     }
 
     public static final class Builder {
-        private Input<String> apiToken;
+        private Output<String> apiToken;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     	      this.apiToken = defaults.apiToken;
         }
 
-        public Builder apiToken(Input<String> apiToken) {
+        public Builder apiToken(Output<String> apiToken) {
             this.apiToken = Objects.requireNonNull(apiToken);
             return this;
         }
 
         public Builder apiToken(String apiToken) {
-            this.apiToken = Input.of(Objects.requireNonNull(apiToken));
+            this.apiToken = Output.of(Objects.requireNonNull(apiToken));
             return this;
         }
         public ConnectorProfileDynatraceConnectorProfileCredentialsArgs build() {

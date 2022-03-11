@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="configUri", required=true)
-      private final Input<String> configUri;
+      private final Output<String> configUri;
 
-    public Input<String> getConfigUri() {
+    public Output<String> getConfigUri() {
         return this.configUri;
     }
 
@@ -35,10 +35,10 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<Object> environment;
+      private final @Nullable Output<Object> environment;
 
-    public Input<Object> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<Object> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * 
      */
     @InputImport(name="imageUri", required=true)
-      private final Input<String> imageUri;
+      private final Output<String> imageUri;
 
-    public Input<String> getImageUri() {
+    public Output<String> getImageUri() {
         return this.imageUri;
     }
 
     public ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs(
-        Input<String> configUri,
-        @Nullable Input<Object> environment,
-        Input<String> imageUri) {
+        Output<String> configUri,
+        @Nullable Output<Object> environment,
+        Output<String> imageUri) {
         this.configUri = Objects.requireNonNull(configUri, "expected parameter 'configUri' to be non-null");
         this.environment = environment;
         this.imageUri = Objects.requireNonNull(imageUri, "expected parameter 'imageUri' to be non-null");
     }
 
     private ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs() {
-        this.configUri = Input.empty();
-        this.environment = Input.empty();
-        this.imageUri = Input.empty();
+        this.configUri = Output.empty();
+        this.environment = Output.empty();
+        this.imageUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
     }
 
     public static final class Builder {
-        private Input<String> configUri;
-        private @Nullable Input<Object> environment;
-        private Input<String> imageUri;
+        private Output<String> configUri;
+        private @Nullable Output<Object> environment;
+        private Output<String> imageUri;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder configUri(Input<String> configUri) {
+        public Builder configUri(Output<String> configUri) {
             this.configUri = Objects.requireNonNull(configUri);
             return this;
         }
 
         public Builder configUri(String configUri) {
-            this.configUri = Input.of(Objects.requireNonNull(configUri));
+            this.configUri = Output.of(Objects.requireNonNull(configUri));
             return this;
         }
 
-        public Builder environment(@Nullable Input<Object> environment) {
+        public Builder environment(@Nullable Output<Object> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable Object environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder imageUri(Input<String> imageUri) {
+        public Builder imageUri(Output<String> imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
         public Builder imageUri(String imageUri) {
-            this.imageUri = Input.of(Objects.requireNonNull(imageUri));
+            this.imageUri = Output.of(Objects.requireNonNull(imageUri));
             return this;
         }
         public ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs build() {

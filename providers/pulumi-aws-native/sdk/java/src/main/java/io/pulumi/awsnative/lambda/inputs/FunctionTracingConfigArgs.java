@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<FunctionTracingConfigMode> mode;
+      private final @Nullable Output<FunctionTracingConfigMode> mode;
 
-    public Input<FunctionTracingConfigMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<FunctionTracingConfigMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
-    public FunctionTracingConfigArgs(@Nullable Input<FunctionTracingConfigMode> mode) {
+    public FunctionTracingConfigArgs(@Nullable Output<FunctionTracingConfigMode> mode) {
         this.mode = mode;
     }
 
     private FunctionTracingConfigArgs() {
-        this.mode = Input.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<FunctionTracingConfigMode> mode;
+        private @Nullable Output<FunctionTracingConfigMode> mode;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
     	      this.mode = defaults.mode;
         }
 
-        public Builder mode(@Nullable Input<FunctionTracingConfigMode> mode) {
+        public Builder mode(@Nullable Output<FunctionTracingConfigMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable FunctionTracingConfigMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
         public FunctionTracingConfigArgs build() {

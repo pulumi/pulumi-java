@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensAccountLevelArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensAwsOrgArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensBucketsAndRegionsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensDataExportArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,45 +24,45 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     public static final StorageLensConfigurationArgs Empty = new StorageLensConfigurationArgs();
 
     @InputImport(name="accountLevel", required=true)
-      private final Input<StorageLensAccountLevelArgs> accountLevel;
+      private final Output<StorageLensAccountLevelArgs> accountLevel;
 
-    public Input<StorageLensAccountLevelArgs> getAccountLevel() {
+    public Output<StorageLensAccountLevelArgs> getAccountLevel() {
         return this.accountLevel;
     }
 
     @InputImport(name="awsOrg")
-      private final @Nullable Input<StorageLensAwsOrgArgs> awsOrg;
+      private final @Nullable Output<StorageLensAwsOrgArgs> awsOrg;
 
-    public Input<StorageLensAwsOrgArgs> getAwsOrg() {
-        return this.awsOrg == null ? Input.empty() : this.awsOrg;
+    public Output<StorageLensAwsOrgArgs> getAwsOrg() {
+        return this.awsOrg == null ? Output.empty() : this.awsOrg;
     }
 
     @InputImport(name="dataExport")
-      private final @Nullable Input<StorageLensDataExportArgs> dataExport;
+      private final @Nullable Output<StorageLensDataExportArgs> dataExport;
 
-    public Input<StorageLensDataExportArgs> getDataExport() {
-        return this.dataExport == null ? Input.empty() : this.dataExport;
+    public Output<StorageLensDataExportArgs> getDataExport() {
+        return this.dataExport == null ? Output.empty() : this.dataExport;
     }
 
     @InputImport(name="exclude")
-      private final @Nullable Input<StorageLensBucketsAndRegionsArgs> exclude;
+      private final @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude;
 
-    public Input<StorageLensBucketsAndRegionsArgs> getExclude() {
-        return this.exclude == null ? Input.empty() : this.exclude;
+    public Output<StorageLensBucketsAndRegionsArgs> getExclude() {
+        return this.exclude == null ? Output.empty() : this.exclude;
     }
 
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
     @InputImport(name="include")
-      private final @Nullable Input<StorageLensBucketsAndRegionsArgs> include;
+      private final @Nullable Output<StorageLensBucketsAndRegionsArgs> include;
 
-    public Input<StorageLensBucketsAndRegionsArgs> getInclude() {
-        return this.include == null ? Input.empty() : this.include;
+    public Output<StorageLensBucketsAndRegionsArgs> getInclude() {
+        return this.include == null ? Output.empty() : this.include;
     }
 
     /**
@@ -70,9 +70,9 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -81,21 +81,21 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageLensArn")
-      private final @Nullable Input<String> storageLensArn;
+      private final @Nullable Output<String> storageLensArn;
 
-    public Input<String> getStorageLensArn() {
-        return this.storageLensArn == null ? Input.empty() : this.storageLensArn;
+    public Output<String> getStorageLensArn() {
+        return this.storageLensArn == null ? Output.empty() : this.storageLensArn;
     }
 
     public StorageLensConfigurationArgs(
-        Input<StorageLensAccountLevelArgs> accountLevel,
-        @Nullable Input<StorageLensAwsOrgArgs> awsOrg,
-        @Nullable Input<StorageLensDataExportArgs> dataExport,
-        @Nullable Input<StorageLensBucketsAndRegionsArgs> exclude,
-        Input<String> id,
-        @Nullable Input<StorageLensBucketsAndRegionsArgs> include,
-        Input<Boolean> isEnabled,
-        @Nullable Input<String> storageLensArn) {
+        Output<StorageLensAccountLevelArgs> accountLevel,
+        @Nullable Output<StorageLensAwsOrgArgs> awsOrg,
+        @Nullable Output<StorageLensDataExportArgs> dataExport,
+        @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude,
+        Output<String> id,
+        @Nullable Output<StorageLensBucketsAndRegionsArgs> include,
+        Output<Boolean> isEnabled,
+        @Nullable Output<String> storageLensArn) {
         this.accountLevel = Objects.requireNonNull(accountLevel, "expected parameter 'accountLevel' to be non-null");
         this.awsOrg = awsOrg;
         this.dataExport = dataExport;
@@ -107,14 +107,14 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private StorageLensConfigurationArgs() {
-        this.accountLevel = Input.empty();
-        this.awsOrg = Input.empty();
-        this.dataExport = Input.empty();
-        this.exclude = Input.empty();
-        this.id = Input.empty();
-        this.include = Input.empty();
-        this.isEnabled = Input.empty();
-        this.storageLensArn = Input.empty();
+        this.accountLevel = Output.empty();
+        this.awsOrg = Output.empty();
+        this.dataExport = Output.empty();
+        this.exclude = Output.empty();
+        this.id = Output.empty();
+        this.include = Output.empty();
+        this.isEnabled = Output.empty();
+        this.storageLensArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -126,14 +126,14 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<StorageLensAccountLevelArgs> accountLevel;
-        private @Nullable Input<StorageLensAwsOrgArgs> awsOrg;
-        private @Nullable Input<StorageLensDataExportArgs> dataExport;
-        private @Nullable Input<StorageLensBucketsAndRegionsArgs> exclude;
-        private Input<String> id;
-        private @Nullable Input<StorageLensBucketsAndRegionsArgs> include;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<String> storageLensArn;
+        private Output<StorageLensAccountLevelArgs> accountLevel;
+        private @Nullable Output<StorageLensAwsOrgArgs> awsOrg;
+        private @Nullable Output<StorageLensDataExportArgs> dataExport;
+        private @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude;
+        private Output<String> id;
+        private @Nullable Output<StorageLensBucketsAndRegionsArgs> include;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<String> storageLensArn;
 
         public Builder() {
     	      // Empty
@@ -151,83 +151,83 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     	      this.storageLensArn = defaults.storageLensArn;
         }
 
-        public Builder accountLevel(Input<StorageLensAccountLevelArgs> accountLevel) {
+        public Builder accountLevel(Output<StorageLensAccountLevelArgs> accountLevel) {
             this.accountLevel = Objects.requireNonNull(accountLevel);
             return this;
         }
 
         public Builder accountLevel(StorageLensAccountLevelArgs accountLevel) {
-            this.accountLevel = Input.of(Objects.requireNonNull(accountLevel));
+            this.accountLevel = Output.of(Objects.requireNonNull(accountLevel));
             return this;
         }
 
-        public Builder awsOrg(@Nullable Input<StorageLensAwsOrgArgs> awsOrg) {
+        public Builder awsOrg(@Nullable Output<StorageLensAwsOrgArgs> awsOrg) {
             this.awsOrg = awsOrg;
             return this;
         }
 
         public Builder awsOrg(@Nullable StorageLensAwsOrgArgs awsOrg) {
-            this.awsOrg = Input.ofNullable(awsOrg);
+            this.awsOrg = Output.ofNullable(awsOrg);
             return this;
         }
 
-        public Builder dataExport(@Nullable Input<StorageLensDataExportArgs> dataExport) {
+        public Builder dataExport(@Nullable Output<StorageLensDataExportArgs> dataExport) {
             this.dataExport = dataExport;
             return this;
         }
 
         public Builder dataExport(@Nullable StorageLensDataExportArgs dataExport) {
-            this.dataExport = Input.ofNullable(dataExport);
+            this.dataExport = Output.ofNullable(dataExport);
             return this;
         }
 
-        public Builder exclude(@Nullable Input<StorageLensBucketsAndRegionsArgs> exclude) {
+        public Builder exclude(@Nullable Output<StorageLensBucketsAndRegionsArgs> exclude) {
             this.exclude = exclude;
             return this;
         }
 
         public Builder exclude(@Nullable StorageLensBucketsAndRegionsArgs exclude) {
-            this.exclude = Input.ofNullable(exclude);
+            this.exclude = Output.ofNullable(exclude);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder include(@Nullable Input<StorageLensBucketsAndRegionsArgs> include) {
+        public Builder include(@Nullable Output<StorageLensBucketsAndRegionsArgs> include) {
             this.include = include;
             return this;
         }
 
         public Builder include(@Nullable StorageLensBucketsAndRegionsArgs include) {
-            this.include = Input.ofNullable(include);
+            this.include = Output.ofNullable(include);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder storageLensArn(@Nullable Input<String> storageLensArn) {
+        public Builder storageLensArn(@Nullable Output<String> storageLensArn) {
             this.storageLensArn = storageLensArn;
             return this;
         }
 
         public Builder storageLensArn(@Nullable String storageLensArn) {
-            this.storageLensArn = Input.ofNullable(storageLensArn);
+            this.storageLensArn = Output.ofNullable(storageLensArn);
             return this;
         }
         public StorageLensConfigurationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceArn", required=true)
-      private final Input<String> instanceArn;
+      private final Output<String> instanceArn;
 
-    public Input<String> getInstanceArn() {
+    public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
 
@@ -30,10 +30,10 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -41,25 +41,25 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentGroupArn")
-      private final @Nullable Input<String> parentGroupArn;
+      private final @Nullable Output<String> parentGroupArn;
 
-    public Input<String> getParentGroupArn() {
-        return this.parentGroupArn == null ? Input.empty() : this.parentGroupArn;
+    public Output<String> getParentGroupArn() {
+        return this.parentGroupArn == null ? Output.empty() : this.parentGroupArn;
     }
 
     public UserHierarchyGroupArgs(
-        Input<String> instanceArn,
-        @Nullable Input<String> name,
-        @Nullable Input<String> parentGroupArn) {
+        Output<String> instanceArn,
+        @Nullable Output<String> name,
+        @Nullable Output<String> parentGroupArn) {
         this.instanceArn = Objects.requireNonNull(instanceArn, "expected parameter 'instanceArn' to be non-null");
         this.name = name;
         this.parentGroupArn = parentGroupArn;
     }
 
     private UserHierarchyGroupArgs() {
-        this.instanceArn = Input.empty();
-        this.name = Input.empty();
-        this.parentGroupArn = Input.empty();
+        this.instanceArn = Output.empty();
+        this.name = Output.empty();
+        this.parentGroupArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> instanceArn;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> parentGroupArn;
+        private Output<String> instanceArn;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> parentGroupArn;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.parentGroupArn = defaults.parentGroupArn;
         }
 
-        public Builder instanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Output<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
         public Builder instanceArn(String instanceArn) {
-            this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
+            this.instanceArn = Output.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parentGroupArn(@Nullable Input<String> parentGroupArn) {
+        public Builder parentGroupArn(@Nullable Output<String> parentGroupArn) {
             this.parentGroupArn = parentGroupArn;
             return this;
         }
 
         public Builder parentGroupArn(@Nullable String parentGroupArn) {
-            this.parentGroupArn = Input.ofNullable(parentGroupArn);
+            this.parentGroupArn = Output.ofNullable(parentGroupArn);
             return this;
         }
         public UserHierarchyGroupArgs build() {

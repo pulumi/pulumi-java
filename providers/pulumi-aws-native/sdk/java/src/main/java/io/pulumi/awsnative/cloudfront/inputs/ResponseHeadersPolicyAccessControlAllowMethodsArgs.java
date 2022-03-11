@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class ResponseHeadersPolicyAccessControlAllowMethodsArgs extends io
     public static final ResponseHeadersPolicyAccessControlAllowMethodsArgs Empty = new ResponseHeadersPolicyAccessControlAllowMethodsArgs();
 
     @InputImport(name="items", required=true)
-      private final Input<List<String>> items;
+      private final Output<List<String>> items;
 
-    public Input<List<String>> getItems() {
+    public Output<List<String>> getItems() {
         return this.items;
     }
 
-    public ResponseHeadersPolicyAccessControlAllowMethodsArgs(Input<List<String>> items) {
+    public ResponseHeadersPolicyAccessControlAllowMethodsArgs(Output<List<String>> items) {
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
     }
 
     private ResponseHeadersPolicyAccessControlAllowMethodsArgs() {
-        this.items = Input.empty();
+        this.items = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ResponseHeadersPolicyAccessControlAllowMethodsArgs extends io
     }
 
     public static final class Builder {
-        private Input<List<String>> items;
+        private Output<List<String>> items;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ResponseHeadersPolicyAccessControlAllowMethodsArgs extends io
     	      this.items = defaults.items;
         }
 
-        public Builder items(Input<List<String>> items) {
+        public Builder items(Output<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<String> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
         public ResponseHeadersPolicyAccessControlAllowMethodsArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorEventTypeArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorModelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorRuleArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associatedModels")
-      private final @Nullable Input<List<DetectorModelArgs>> associatedModels;
+      private final @Nullable Output<List<DetectorModelArgs>> associatedModels;
 
-    public Input<List<DetectorModelArgs>> getAssociatedModels() {
-        return this.associatedModels == null ? Input.empty() : this.associatedModels;
+    public Output<List<DetectorModelArgs>> getAssociatedModels() {
+        return this.associatedModels == null ? Output.empty() : this.associatedModels;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorId", required=true)
-      private final Input<String> detectorId;
+      private final Output<String> detectorId;
 
-    public Input<String> getDetectorId() {
+    public Output<String> getDetectorId() {
         return this.detectorId;
     }
 
@@ -59,10 +59,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detectorVersionStatus")
-      private final @Nullable Input<DetectorVersionStatus> detectorVersionStatus;
+      private final @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
 
-    public Input<DetectorVersionStatus> getDetectorVersionStatus() {
-        return this.detectorVersionStatus == null ? Input.empty() : this.detectorVersionStatus;
+    public Output<DetectorVersionStatus> getDetectorVersionStatus() {
+        return this.detectorVersionStatus == null ? Output.empty() : this.detectorVersionStatus;
     }
 
     /**
@@ -70,23 +70,23 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType", required=true)
-      private final Input<DetectorEventTypeArgs> eventType;
+      private final Output<DetectorEventTypeArgs> eventType;
 
-    public Input<DetectorEventTypeArgs> getEventType() {
+    public Output<DetectorEventTypeArgs> getEventType() {
         return this.eventType;
     }
 
     @InputImport(name="ruleExecutionMode")
-      private final @Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode;
+      private final @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
 
-    public Input<DetectorRuleExecutionMode> getRuleExecutionMode() {
-        return this.ruleExecutionMode == null ? Input.empty() : this.ruleExecutionMode;
+    public Output<DetectorRuleExecutionMode> getRuleExecutionMode() {
+        return this.ruleExecutionMode == null ? Output.empty() : this.ruleExecutionMode;
     }
 
     @InputImport(name="rules", required=true)
-      private final Input<List<DetectorRuleArgs>> rules;
+      private final Output<List<DetectorRuleArgs>> rules;
 
-    public Input<List<DetectorRuleArgs>> getRules() {
+    public Output<List<DetectorRuleArgs>> getRules() {
         return this.rules;
     }
 
@@ -95,21 +95,21 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DetectorTagArgs>> tags;
+      private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Input<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DetectorArgs(
-        @Nullable Input<List<DetectorModelArgs>> associatedModels,
-        @Nullable Input<String> description,
-        Input<String> detectorId,
-        @Nullable Input<DetectorVersionStatus> detectorVersionStatus,
-        Input<DetectorEventTypeArgs> eventType,
-        @Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode,
-        Input<List<DetectorRuleArgs>> rules,
-        @Nullable Input<List<DetectorTagArgs>> tags) {
+        @Nullable Output<List<DetectorModelArgs>> associatedModels,
+        @Nullable Output<String> description,
+        Output<String> detectorId,
+        @Nullable Output<DetectorVersionStatus> detectorVersionStatus,
+        Output<DetectorEventTypeArgs> eventType,
+        @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode,
+        Output<List<DetectorRuleArgs>> rules,
+        @Nullable Output<List<DetectorTagArgs>> tags) {
         this.associatedModels = associatedModels;
         this.description = description;
         this.detectorId = Objects.requireNonNull(detectorId, "expected parameter 'detectorId' to be non-null");
@@ -121,14 +121,14 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.associatedModels = Input.empty();
-        this.description = Input.empty();
-        this.detectorId = Input.empty();
-        this.detectorVersionStatus = Input.empty();
-        this.eventType = Input.empty();
-        this.ruleExecutionMode = Input.empty();
-        this.rules = Input.empty();
-        this.tags = Input.empty();
+        this.associatedModels = Output.empty();
+        this.description = Output.empty();
+        this.detectorId = Output.empty();
+        this.detectorVersionStatus = Output.empty();
+        this.eventType = Output.empty();
+        this.ruleExecutionMode = Output.empty();
+        this.rules = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -140,14 +140,14 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DetectorModelArgs>> associatedModels;
-        private @Nullable Input<String> description;
-        private Input<String> detectorId;
-        private @Nullable Input<DetectorVersionStatus> detectorVersionStatus;
-        private Input<DetectorEventTypeArgs> eventType;
-        private @Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode;
-        private Input<List<DetectorRuleArgs>> rules;
-        private @Nullable Input<List<DetectorTagArgs>> tags;
+        private @Nullable Output<List<DetectorModelArgs>> associatedModels;
+        private @Nullable Output<String> description;
+        private Output<String> detectorId;
+        private @Nullable Output<DetectorVersionStatus> detectorVersionStatus;
+        private Output<DetectorEventTypeArgs> eventType;
+        private @Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode;
+        private Output<List<DetectorRuleArgs>> rules;
+        private @Nullable Output<List<DetectorTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -165,83 +165,83 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder associatedModels(@Nullable Input<List<DetectorModelArgs>> associatedModels) {
+        public Builder associatedModels(@Nullable Output<List<DetectorModelArgs>> associatedModels) {
             this.associatedModels = associatedModels;
             return this;
         }
 
         public Builder associatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
-            this.associatedModels = Input.ofNullable(associatedModels);
+            this.associatedModels = Output.ofNullable(associatedModels);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder detectorId(Input<String> detectorId) {
+        public Builder detectorId(Output<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
         public Builder detectorId(String detectorId) {
-            this.detectorId = Input.of(Objects.requireNonNull(detectorId));
+            this.detectorId = Output.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder detectorVersionStatus(@Nullable Input<DetectorVersionStatus> detectorVersionStatus) {
+        public Builder detectorVersionStatus(@Nullable Output<DetectorVersionStatus> detectorVersionStatus) {
             this.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
 
         public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
-            this.detectorVersionStatus = Input.ofNullable(detectorVersionStatus);
+            this.detectorVersionStatus = Output.ofNullable(detectorVersionStatus);
             return this;
         }
 
-        public Builder eventType(Input<DetectorEventTypeArgs> eventType) {
+        public Builder eventType(Output<DetectorEventTypeArgs> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
         public Builder eventType(DetectorEventTypeArgs eventType) {
-            this.eventType = Input.of(Objects.requireNonNull(eventType));
+            this.eventType = Output.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder ruleExecutionMode(@Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode) {
+        public Builder ruleExecutionMode(@Nullable Output<DetectorRuleExecutionMode> ruleExecutionMode) {
             this.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
 
         public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
-            this.ruleExecutionMode = Input.ofNullable(ruleExecutionMode);
+            this.ruleExecutionMode = Output.ofNullable(ruleExecutionMode);
             return this;
         }
 
-        public Builder rules(Input<List<DetectorRuleArgs>> rules) {
+        public Builder rules(Output<List<DetectorRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(List<DetectorRuleArgs> rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DetectorArgs build() {

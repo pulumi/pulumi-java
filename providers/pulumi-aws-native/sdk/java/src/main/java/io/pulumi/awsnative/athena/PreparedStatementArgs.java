@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.athena;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="queryStatement", required=true)
-      private final Input<String> queryStatement;
+      private final Output<String> queryStatement;
 
-    public Input<String> getQueryStatement() {
+    public Output<String> getQueryStatement() {
         return this.queryStatement;
     }
 
@@ -41,9 +41,9 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="statementName", required=true)
-      private final Input<String> statementName;
+      private final Output<String> statementName;
 
-    public Input<String> getStatementName() {
+    public Output<String> getStatementName() {
         return this.statementName;
     }
 
@@ -52,17 +52,17 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workGroup", required=true)
-      private final Input<String> workGroup;
+      private final Output<String> workGroup;
 
-    public Input<String> getWorkGroup() {
+    public Output<String> getWorkGroup() {
         return this.workGroup;
     }
 
     public PreparedStatementArgs(
-        @Nullable Input<String> description,
-        Input<String> queryStatement,
-        Input<String> statementName,
-        Input<String> workGroup) {
+        @Nullable Output<String> description,
+        Output<String> queryStatement,
+        Output<String> statementName,
+        Output<String> workGroup) {
         this.description = description;
         this.queryStatement = Objects.requireNonNull(queryStatement, "expected parameter 'queryStatement' to be non-null");
         this.statementName = Objects.requireNonNull(statementName, "expected parameter 'statementName' to be non-null");
@@ -70,10 +70,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PreparedStatementArgs() {
-        this.description = Input.empty();
-        this.queryStatement = Input.empty();
-        this.statementName = Input.empty();
-        this.workGroup = Input.empty();
+        this.description = Output.empty();
+        this.queryStatement = Output.empty();
+        this.statementName = Output.empty();
+        this.workGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> queryStatement;
-        private Input<String> statementName;
-        private Input<String> workGroup;
+        private @Nullable Output<String> description;
+        private Output<String> queryStatement;
+        private Output<String> statementName;
+        private Output<String> workGroup;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder queryStatement(Input<String> queryStatement) {
+        public Builder queryStatement(Output<String> queryStatement) {
             this.queryStatement = Objects.requireNonNull(queryStatement);
             return this;
         }
 
         public Builder queryStatement(String queryStatement) {
-            this.queryStatement = Input.of(Objects.requireNonNull(queryStatement));
+            this.queryStatement = Output.of(Objects.requireNonNull(queryStatement));
             return this;
         }
 
-        public Builder statementName(Input<String> statementName) {
+        public Builder statementName(Output<String> statementName) {
             this.statementName = Objects.requireNonNull(statementName);
             return this;
         }
 
         public Builder statementName(String statementName) {
-            this.statementName = Input.of(Objects.requireNonNull(statementName));
+            this.statementName = Output.of(Objects.requireNonNull(statementName));
             return this;
         }
 
-        public Builder workGroup(Input<String> workGroup) {
+        public Builder workGroup(Output<String> workGroup) {
             this.workGroup = Objects.requireNonNull(workGroup);
             return this;
         }
 
         public Builder workGroup(String workGroup) {
-            this.workGroup = Input.of(Objects.requireNonNull(workGroup));
+            this.workGroup = Output.of(Objects.requireNonNull(workGroup));
             return this;
         }
         public PreparedStatementArgs build() {

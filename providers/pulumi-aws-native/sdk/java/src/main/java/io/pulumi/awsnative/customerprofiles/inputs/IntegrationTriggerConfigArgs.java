@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     public static final IntegrationTriggerConfigArgs Empty = new IntegrationTriggerConfigArgs();
 
     @InputImport(name="triggerProperties")
-      private final @Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties;
+      private final @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
 
-    public Input<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
-        return this.triggerProperties == null ? Input.empty() : this.triggerProperties;
+    public Output<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
+        return this.triggerProperties == null ? Output.empty() : this.triggerProperties;
     }
 
     @InputImport(name="triggerType", required=true)
-      private final Input<IntegrationTriggerType> triggerType;
+      private final Output<IntegrationTriggerType> triggerType;
 
-    public Input<IntegrationTriggerType> getTriggerType() {
+    public Output<IntegrationTriggerType> getTriggerType() {
         return this.triggerType;
     }
 
     public IntegrationTriggerConfigArgs(
-        @Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties,
-        Input<IntegrationTriggerType> triggerType) {
+        @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties,
+        Output<IntegrationTriggerType> triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = Objects.requireNonNull(triggerType, "expected parameter 'triggerType' to be non-null");
     }
 
     private IntegrationTriggerConfigArgs() {
-        this.triggerProperties = Input.empty();
-        this.triggerType = Input.empty();
+        this.triggerProperties = Output.empty();
+        this.triggerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties;
-        private Input<IntegrationTriggerType> triggerType;
+        private @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
+        private Output<IntegrationTriggerType> triggerType;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder triggerProperties(@Nullable Input<IntegrationTriggerPropertiesArgs> triggerProperties) {
+        public Builder triggerProperties(@Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
         public Builder triggerProperties(@Nullable IntegrationTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Input.ofNullable(triggerProperties);
+            this.triggerProperties = Output.ofNullable(triggerProperties);
             return this;
         }
 
-        public Builder triggerType(Input<IntegrationTriggerType> triggerType) {
+        public Builder triggerType(Output<IntegrationTriggerType> triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
 
         public Builder triggerType(IntegrationTriggerType triggerType) {
-            this.triggerType = Input.of(Objects.requireNonNull(triggerType));
+            this.triggerType = Output.of(Objects.requireNonNull(triggerType));
             return this;
         }
         public IntegrationTriggerConfigArgs build() {

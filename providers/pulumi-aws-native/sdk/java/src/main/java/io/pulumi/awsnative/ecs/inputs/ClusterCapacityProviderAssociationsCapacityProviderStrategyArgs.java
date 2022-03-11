@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacityProvider;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,39 +18,39 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs();
 
     @InputImport(name="base")
-      private final @Nullable Input<Integer> base;
+      private final @Nullable Output<Integer> base;
 
-    public Input<Integer> getBase() {
-        return this.base == null ? Input.empty() : this.base;
+    public Output<Integer> getBase() {
+        return this.base == null ? Output.empty() : this.base;
     }
 
     @InputImport(name="capacityProvider", required=true)
-      private final Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
+      private final Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
 
-    public Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> getCapacityProvider() {
+    public Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> getCapacityProvider() {
         return this.capacityProvider;
     }
 
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs(
-        @Nullable Input<Integer> base,
-        Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<Integer> base,
+        Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider,
+        @Nullable Output<Integer> weight) {
         this.base = base;
         this.capacityProvider = Objects.requireNonNull(capacityProvider, "expected parameter 'capacityProvider' to be non-null");
         this.weight = weight;
     }
 
     private ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs() {
-        this.base = Input.empty();
-        this.capacityProvider = Input.empty();
-        this.weight = Input.empty();
+        this.base = Output.empty();
+        this.capacityProvider = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> base;
-        private Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Integer> base;
+        private Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     	      this.weight = defaults.weight;
         }
 
-        public Builder base(@Nullable Input<Integer> base) {
+        public Builder base(@Nullable Output<Integer> base) {
             this.base = base;
             return this;
         }
 
         public Builder base(@Nullable Integer base) {
-            this.base = Input.ofNullable(base);
+            this.base = Output.ofNullable(base);
             return this;
         }
 
-        public Builder capacityProvider(Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
+        public Builder capacityProvider(Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
         public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
-            this.capacityProvider = Input.of(Objects.requireNonNull(capacityProvider));
+            this.capacityProvider = Output.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseRenderingConfigurationArgs
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseServerSideEncryptionConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseSourceConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,62 +21,62 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     public static final KnowledgeBaseArgs Empty = new KnowledgeBaseArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="knowledgeBaseType", required=true)
-      private final Input<KnowledgeBaseType> knowledgeBaseType;
+      private final Output<KnowledgeBaseType> knowledgeBaseType;
 
-    public Input<KnowledgeBaseType> getKnowledgeBaseType() {
+    public Output<KnowledgeBaseType> getKnowledgeBaseType() {
         return this.knowledgeBaseType;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="renderingConfiguration")
-      private final @Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
+      private final @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
 
-    public Input<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
-        return this.renderingConfiguration == null ? Input.empty() : this.renderingConfiguration;
+    public Output<KnowledgeBaseRenderingConfigurationArgs> getRenderingConfiguration() {
+        return this.renderingConfiguration == null ? Output.empty() : this.renderingConfiguration;
     }
 
     @InputImport(name="serverSideEncryptionConfiguration")
-      private final @Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+      private final @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
+    public Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
+        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
     }
 
     @InputImport(name="sourceConfiguration")
-      private final @Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
+      private final @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
 
-    public Input<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
-        return this.sourceConfiguration == null ? Input.empty() : this.sourceConfiguration;
+    public Output<KnowledgeBaseSourceConfigurationArgs> getSourceConfiguration() {
+        return this.sourceConfiguration == null ? Output.empty() : this.sourceConfiguration;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<KnowledgeBaseTagArgs>> tags;
+      private final @Nullable Output<List<KnowledgeBaseTagArgs>> tags;
 
-    public Input<List<KnowledgeBaseTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<KnowledgeBaseTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public KnowledgeBaseArgs(
-        @Nullable Input<String> description,
-        Input<KnowledgeBaseType> knowledgeBaseType,
-        @Nullable Input<String> name,
-        @Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration,
-        @Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
-        @Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration,
-        @Nullable Input<List<KnowledgeBaseTagArgs>> tags) {
+        @Nullable Output<String> description,
+        Output<KnowledgeBaseType> knowledgeBaseType,
+        @Nullable Output<String> name,
+        @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration,
+        @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
+        @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration,
+        @Nullable Output<List<KnowledgeBaseTagArgs>> tags) {
         this.description = description;
         this.knowledgeBaseType = Objects.requireNonNull(knowledgeBaseType, "expected parameter 'knowledgeBaseType' to be non-null");
         this.name = name;
@@ -87,13 +87,13 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KnowledgeBaseArgs() {
-        this.description = Input.empty();
-        this.knowledgeBaseType = Input.empty();
-        this.name = Input.empty();
-        this.renderingConfiguration = Input.empty();
-        this.serverSideEncryptionConfiguration = Input.empty();
-        this.sourceConfiguration = Input.empty();
-        this.tags = Input.empty();
+        this.description = Output.empty();
+        this.knowledgeBaseType = Output.empty();
+        this.name = Output.empty();
+        this.renderingConfiguration = Output.empty();
+        this.serverSideEncryptionConfiguration = Output.empty();
+        this.sourceConfiguration = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,13 +105,13 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<KnowledgeBaseType> knowledgeBaseType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
-        private @Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
-        private @Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
-        private @Nullable Input<List<KnowledgeBaseTagArgs>> tags;
+        private @Nullable Output<String> description;
+        private Output<KnowledgeBaseType> knowledgeBaseType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration;
+        private @Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+        private @Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration;
+        private @Nullable Output<List<KnowledgeBaseTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -128,73 +128,73 @@ public final class KnowledgeBaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder knowledgeBaseType(Input<KnowledgeBaseType> knowledgeBaseType) {
+        public Builder knowledgeBaseType(Output<KnowledgeBaseType> knowledgeBaseType) {
             this.knowledgeBaseType = Objects.requireNonNull(knowledgeBaseType);
             return this;
         }
 
         public Builder knowledgeBaseType(KnowledgeBaseType knowledgeBaseType) {
-            this.knowledgeBaseType = Input.of(Objects.requireNonNull(knowledgeBaseType));
+            this.knowledgeBaseType = Output.of(Objects.requireNonNull(knowledgeBaseType));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder renderingConfiguration(@Nullable Input<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration) {
+        public Builder renderingConfiguration(@Nullable Output<KnowledgeBaseRenderingConfigurationArgs> renderingConfiguration) {
             this.renderingConfiguration = renderingConfiguration;
             return this;
         }
 
         public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfigurationArgs renderingConfiguration) {
-            this.renderingConfiguration = Input.ofNullable(renderingConfiguration);
+            this.renderingConfiguration = Output.ofNullable(renderingConfiguration);
             return this;
         }
 
-        public Builder serverSideEncryptionConfiguration(@Nullable Input<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Output<KnowledgeBaseServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
         public Builder serverSideEncryptionConfiguration(@Nullable KnowledgeBaseServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder sourceConfiguration(@Nullable Input<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration) {
+        public Builder sourceConfiguration(@Nullable Output<KnowledgeBaseSourceConfigurationArgs> sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
 
         public Builder sourceConfiguration(@Nullable KnowledgeBaseSourceConfigurationArgs sourceConfiguration) {
-            this.sourceConfiguration = Input.ofNullable(sourceConfiguration);
+            this.sourceConfiguration = Output.ofNullable(sourceConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<KnowledgeBaseTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<KnowledgeBaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<KnowledgeBaseTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public KnowledgeBaseArgs build() {

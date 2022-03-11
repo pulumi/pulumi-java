@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alarmMetricName", required=true)
-      private final Input<String> alarmMetricName;
+      private final Output<String> alarmMetricName;
 
-    public Input<String> getAlarmMetricName() {
+    public Output<String> getAlarmMetricName() {
         return this.alarmMetricName;
     }
 
-    public ApplicationAlarmMetricArgs(Input<String> alarmMetricName) {
+    public ApplicationAlarmMetricArgs(Output<String> alarmMetricName) {
         this.alarmMetricName = Objects.requireNonNull(alarmMetricName, "expected parameter 'alarmMetricName' to be non-null");
     }
 
     private ApplicationAlarmMetricArgs() {
-        this.alarmMetricName = Input.empty();
+        this.alarmMetricName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> alarmMetricName;
+        private Output<String> alarmMetricName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
     	      this.alarmMetricName = defaults.alarmMetricName;
         }
 
-        public Builder alarmMetricName(Input<String> alarmMetricName) {
+        public Builder alarmMetricName(Output<String> alarmMetricName) {
             this.alarmMetricName = Objects.requireNonNull(alarmMetricName);
             return this;
         }
 
         public Builder alarmMetricName(String alarmMetricName) {
-            this.alarmMetricName = Input.of(Objects.requireNonNull(alarmMetricName));
+            this.alarmMetricName = Output.of(Objects.requireNonNull(alarmMetricName));
             return this;
         }
         public ApplicationAlarmMetricArgs build() {

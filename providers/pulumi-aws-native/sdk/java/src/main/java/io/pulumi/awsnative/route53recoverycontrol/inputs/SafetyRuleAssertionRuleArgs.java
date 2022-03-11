@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="assertedControls", required=true)
-      private final Input<List<String>> assertedControls;
+      private final Output<List<String>> assertedControls;
 
-    public Input<List<String>> getAssertedControls() {
+    public Output<List<String>> getAssertedControls() {
         return this.assertedControls;
     }
 
@@ -35,22 +35,22 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-      private final Input<Integer> waitPeriodMs;
+      private final Output<Integer> waitPeriodMs;
 
-    public Input<Integer> getWaitPeriodMs() {
+    public Output<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs;
     }
 
     public SafetyRuleAssertionRuleArgs(
-        Input<List<String>> assertedControls,
-        Input<Integer> waitPeriodMs) {
+        Output<List<String>> assertedControls,
+        Output<Integer> waitPeriodMs) {
         this.assertedControls = Objects.requireNonNull(assertedControls, "expected parameter 'assertedControls' to be non-null");
         this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs, "expected parameter 'waitPeriodMs' to be non-null");
     }
 
     private SafetyRuleAssertionRuleArgs() {
-        this.assertedControls = Input.empty();
-        this.waitPeriodMs = Input.empty();
+        this.assertedControls = Output.empty();
+        this.waitPeriodMs = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<String>> assertedControls;
-        private Input<Integer> waitPeriodMs;
+        private Output<List<String>> assertedControls;
+        private Output<Integer> waitPeriodMs;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder assertedControls(Input<List<String>> assertedControls) {
+        public Builder assertedControls(Output<List<String>> assertedControls) {
             this.assertedControls = Objects.requireNonNull(assertedControls);
             return this;
         }
 
         public Builder assertedControls(List<String> assertedControls) {
-            this.assertedControls = Input.of(Objects.requireNonNull(assertedControls));
+            this.assertedControls = Output.of(Objects.requireNonNull(assertedControls));
             return this;
         }
 
-        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Output<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
         public Builder waitPeriodMs(Integer waitPeriodMs) {
-            this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
+            this.waitPeriodMs = Output.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }
         public SafetyRuleAssertionRuleArgs build() {

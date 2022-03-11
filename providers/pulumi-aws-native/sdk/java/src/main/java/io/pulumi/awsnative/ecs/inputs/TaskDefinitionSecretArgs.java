@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionSecretArgs Empty = new TaskDefinitionSecretArgs();
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="valueFrom", required=true)
-      private final Input<String> valueFrom;
+      private final Output<String> valueFrom;
 
-    public Input<String> getValueFrom() {
+    public Output<String> getValueFrom() {
         return this.valueFrom;
     }
 
     public TaskDefinitionSecretArgs(
-        Input<String> name,
-        Input<String> valueFrom) {
+        Output<String> name,
+        Output<String> valueFrom) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.valueFrom = Objects.requireNonNull(valueFrom, "expected parameter 'valueFrom' to be non-null");
     }
 
     private TaskDefinitionSecretArgs() {
-        this.name = Input.empty();
-        this.valueFrom = Input.empty();
+        this.name = Output.empty();
+        this.valueFrom = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> valueFrom;
+        private Output<String> name;
+        private Output<String> valueFrom;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder valueFrom(Input<String> valueFrom) {
+        public Builder valueFrom(Output<String> valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
 
         public Builder valueFrom(String valueFrom) {
-            this.valueFrom = Input.of(Objects.requireNonNull(valueFrom));
+            this.valueFrom = Output.of(Objects.requireNonNull(valueFrom));
             return this;
         }
         public TaskDefinitionSecretArgs build() {

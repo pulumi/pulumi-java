@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorConfigArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorConfig", required=true)
-      private final Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
+      private final Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
 
-    public Input<AnomalyDetectorConfigArgs> getAnomalyDetectorConfig() {
+    public Output<AnomalyDetectorConfigArgs> getAnomalyDetectorConfig() {
         return this.anomalyDetectorConfig;
     }
 
@@ -33,10 +33,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorDescription")
-      private final @Nullable Input<String> anomalyDetectorDescription;
+      private final @Nullable Output<String> anomalyDetectorDescription;
 
-    public Input<String> getAnomalyDetectorDescription() {
-        return this.anomalyDetectorDescription == null ? Input.empty() : this.anomalyDetectorDescription;
+    public Output<String> getAnomalyDetectorDescription() {
+        return this.anomalyDetectorDescription == null ? Output.empty() : this.anomalyDetectorDescription;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="anomalyDetectorName")
-      private final @Nullable Input<String> anomalyDetectorName;
+      private final @Nullable Output<String> anomalyDetectorName;
 
-    public Input<String> getAnomalyDetectorName() {
-        return this.anomalyDetectorName == null ? Input.empty() : this.anomalyDetectorName;
+    public Output<String> getAnomalyDetectorName() {
+        return this.anomalyDetectorName == null ? Output.empty() : this.anomalyDetectorName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metricSetList", required=true)
-      private final Input<List<AnomalyDetectorMetricSetArgs>> metricSetList;
+      private final Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
-    public Input<List<AnomalyDetectorMetricSetArgs>> getMetricSetList() {
+    public Output<List<AnomalyDetectorMetricSetArgs>> getMetricSetList() {
         return this.metricSetList;
     }
 
     public AnomalyDetectorArgs(
-        Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig,
-        @Nullable Input<String> anomalyDetectorDescription,
-        @Nullable Input<String> anomalyDetectorName,
-        @Nullable Input<String> kmsKeyArn,
-        Input<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
+        Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig,
+        @Nullable Output<String> anomalyDetectorDescription,
+        @Nullable Output<String> anomalyDetectorName,
+        @Nullable Output<String> kmsKeyArn,
+        Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
         this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig, "expected parameter 'anomalyDetectorConfig' to be non-null");
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         this.anomalyDetectorName = anomalyDetectorName;
@@ -86,11 +86,11 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AnomalyDetectorArgs() {
-        this.anomalyDetectorConfig = Input.empty();
-        this.anomalyDetectorDescription = Input.empty();
-        this.anomalyDetectorName = Input.empty();
-        this.kmsKeyArn = Input.empty();
-        this.metricSetList = Input.empty();
+        this.anomalyDetectorConfig = Output.empty();
+        this.anomalyDetectorDescription = Output.empty();
+        this.anomalyDetectorName = Output.empty();
+        this.kmsKeyArn = Output.empty();
+        this.metricSetList = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
-        private @Nullable Input<String> anomalyDetectorDescription;
-        private @Nullable Input<String> anomalyDetectorName;
-        private @Nullable Input<String> kmsKeyArn;
-        private Input<List<AnomalyDetectorMetricSetArgs>> metricSetList;
+        private Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig;
+        private @Nullable Output<String> anomalyDetectorDescription;
+        private @Nullable Output<String> anomalyDetectorName;
+        private @Nullable Output<String> kmsKeyArn;
+        private Output<List<AnomalyDetectorMetricSetArgs>> metricSetList;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.metricSetList = defaults.metricSetList;
         }
 
-        public Builder anomalyDetectorConfig(Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
+        public Builder anomalyDetectorConfig(Output<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
             this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig);
             return this;
         }
 
         public Builder anomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
-            this.anomalyDetectorConfig = Input.of(Objects.requireNonNull(anomalyDetectorConfig));
+            this.anomalyDetectorConfig = Output.of(Objects.requireNonNull(anomalyDetectorConfig));
             return this;
         }
 
-        public Builder anomalyDetectorDescription(@Nullable Input<String> anomalyDetectorDescription) {
+        public Builder anomalyDetectorDescription(@Nullable Output<String> anomalyDetectorDescription) {
             this.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
 
         public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
-            this.anomalyDetectorDescription = Input.ofNullable(anomalyDetectorDescription);
+            this.anomalyDetectorDescription = Output.ofNullable(anomalyDetectorDescription);
             return this;
         }
 
-        public Builder anomalyDetectorName(@Nullable Input<String> anomalyDetectorName) {
+        public Builder anomalyDetectorName(@Nullable Output<String> anomalyDetectorName) {
             this.anomalyDetectorName = anomalyDetectorName;
             return this;
         }
 
         public Builder anomalyDetectorName(@Nullable String anomalyDetectorName) {
-            this.anomalyDetectorName = Input.ofNullable(anomalyDetectorName);
+            this.anomalyDetectorName = Output.ofNullable(anomalyDetectorName);
             return this;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder metricSetList(Input<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
+        public Builder metricSetList(Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
             this.metricSetList = Objects.requireNonNull(metricSetList);
             return this;
         }
 
         public Builder metricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
-            this.metricSetList = Input.of(Objects.requireNonNull(metricSetList));
+            this.metricSetList = Output.of(Objects.requireNonNull(metricSetList));
             return this;
         }
         public AnomalyDetectorArgs build() {

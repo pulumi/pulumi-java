@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.workspaces;
 
 import io.pulumi.awsnative.workspaces.inputs.ConnectionAliasTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConnectionAliasArgs Empty = new ConnectionAliasArgs();
 
     @InputImport(name="connectionString", required=true)
-      private final Input<String> connectionString;
+      private final Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
+    public Output<String> getConnectionString() {
         return this.connectionString;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<ConnectionAliasTagArgs>> tags;
+      private final @Nullable Output<List<ConnectionAliasTagArgs>> tags;
 
-    public Input<List<ConnectionAliasTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ConnectionAliasTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionAliasArgs(
-        Input<String> connectionString,
-        @Nullable Input<List<ConnectionAliasTagArgs>> tags) {
+        Output<String> connectionString,
+        @Nullable Output<List<ConnectionAliasTagArgs>> tags) {
         this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
         this.tags = tags;
     }
 
     private ConnectionAliasArgs() {
-        this.connectionString = Input.empty();
-        this.tags = Input.empty();
+        this.connectionString = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> connectionString;
-        private @Nullable Input<List<ConnectionAliasTagArgs>> tags;
+        private Output<String> connectionString;
+        private @Nullable Output<List<ConnectionAliasTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ConnectionAliasArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder connectionString(Input<String> connectionString) {
+        public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Input.of(Objects.requireNonNull(connectionString));
+            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ConnectionAliasTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ConnectionAliasTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ConnectionAliasTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionAliasArgs build() {

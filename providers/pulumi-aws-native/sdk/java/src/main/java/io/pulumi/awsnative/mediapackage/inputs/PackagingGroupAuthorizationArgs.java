@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cdnIdentifierSecret", required=true)
-      private final Input<String> cdnIdentifierSecret;
+      private final Output<String> cdnIdentifierSecret;
 
-    public Input<String> getCdnIdentifierSecret() {
+    public Output<String> getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
 
@@ -29,22 +29,22 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secretsRoleArn", required=true)
-      private final Input<String> secretsRoleArn;
+      private final Output<String> secretsRoleArn;
 
-    public Input<String> getSecretsRoleArn() {
+    public Output<String> getSecretsRoleArn() {
         return this.secretsRoleArn;
     }
 
     public PackagingGroupAuthorizationArgs(
-        Input<String> cdnIdentifierSecret,
-        Input<String> secretsRoleArn) {
+        Output<String> cdnIdentifierSecret,
+        Output<String> secretsRoleArn) {
         this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret, "expected parameter 'cdnIdentifierSecret' to be non-null");
         this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn, "expected parameter 'secretsRoleArn' to be non-null");
     }
 
     private PackagingGroupAuthorizationArgs() {
-        this.cdnIdentifierSecret = Input.empty();
-        this.secretsRoleArn = Input.empty();
+        this.cdnIdentifierSecret = Output.empty();
+        this.secretsRoleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> cdnIdentifierSecret;
-        private Input<String> secretsRoleArn;
+        private Output<String> cdnIdentifierSecret;
+        private Output<String> secretsRoleArn;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
     	      this.secretsRoleArn = defaults.secretsRoleArn;
         }
 
-        public Builder cdnIdentifierSecret(Input<String> cdnIdentifierSecret) {
+        public Builder cdnIdentifierSecret(Output<String> cdnIdentifierSecret) {
             this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
             return this;
         }
 
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
-            this.cdnIdentifierSecret = Input.of(Objects.requireNonNull(cdnIdentifierSecret));
+            this.cdnIdentifierSecret = Output.of(Objects.requireNonNull(cdnIdentifierSecret));
             return this;
         }
 
-        public Builder secretsRoleArn(Input<String> secretsRoleArn) {
+        public Builder secretsRoleArn(Output<String> secretsRoleArn) {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }
 
         public Builder secretsRoleArn(String secretsRoleArn) {
-            this.secretsRoleArn = Input.of(Objects.requireNonNull(secretsRoleArn));
+            this.secretsRoleArn = Output.of(Objects.requireNonNull(secretsRoleArn));
             return this;
         }
         public PackagingGroupAuthorizationArgs build() {

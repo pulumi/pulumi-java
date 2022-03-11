@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -22,18 +22,18 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<BucketVersioningConfigurationStatus> status;
+      private final Output<BucketVersioningConfigurationStatus> status;
 
-    public Input<BucketVersioningConfigurationStatus> getStatus() {
+    public Output<BucketVersioningConfigurationStatus> getStatus() {
         return this.status;
     }
 
-    public BucketVersioningConfigurationArgs(Input<BucketVersioningConfigurationStatus> status) {
+    public BucketVersioningConfigurationArgs(Output<BucketVersioningConfigurationStatus> status) {
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private BucketVersioningConfigurationArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<BucketVersioningConfigurationStatus> status;
+        private Output<BucketVersioningConfigurationStatus> status;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<BucketVersioningConfigurationStatus> status) {
+        public Builder status(Output<BucketVersioningConfigurationStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(BucketVersioningConfigurationStatus status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public BucketVersioningConfigurationArgs build() {

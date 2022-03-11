@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import io.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bandwidth", required=true)
-      private final Input<LinkBandwidthArgs> bandwidth;
+      private final Output<LinkBandwidthArgs> bandwidth;
 
-    public Input<LinkBandwidthArgs> getBandwidth() {
+    public Output<LinkBandwidthArgs> getBandwidth() {
         return this.bandwidth;
     }
 
@@ -33,10 +33,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -55,10 +55,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<String> provider;
+      private final @Nullable Output<String> provider;
 
-    public Input<String> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<String> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteId", required=true)
-      private final Input<String> siteId;
+      private final Output<String> siteId;
 
-    public Input<String> getSiteId() {
+    public Output<String> getSiteId() {
         return this.siteId;
     }
 
@@ -77,10 +77,10 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LinkTagArgs>> tags;
+      private final @Nullable Output<List<LinkTagArgs>> tags;
 
-    public Input<List<LinkTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LinkTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public LinkArgs(
-        Input<LinkBandwidthArgs> bandwidth,
-        @Nullable Input<String> description,
-        Input<String> globalNetworkId,
-        @Nullable Input<String> provider,
-        Input<String> siteId,
-        @Nullable Input<List<LinkTagArgs>> tags,
-        @Nullable Input<String> type) {
+        Output<LinkBandwidthArgs> bandwidth,
+        @Nullable Output<String> description,
+        Output<String> globalNetworkId,
+        @Nullable Output<String> provider,
+        Output<String> siteId,
+        @Nullable Output<List<LinkTagArgs>> tags,
+        @Nullable Output<String> type) {
         this.bandwidth = Objects.requireNonNull(bandwidth, "expected parameter 'bandwidth' to be non-null");
         this.description = description;
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
@@ -112,13 +112,13 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.bandwidth = Input.empty();
-        this.description = Input.empty();
-        this.globalNetworkId = Input.empty();
-        this.provider = Input.empty();
-        this.siteId = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
+        this.bandwidth = Output.empty();
+        this.description = Output.empty();
+        this.globalNetworkId = Output.empty();
+        this.provider = Output.empty();
+        this.siteId = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<LinkBandwidthArgs> bandwidth;
-        private @Nullable Input<String> description;
-        private Input<String> globalNetworkId;
-        private @Nullable Input<String> provider;
-        private Input<String> siteId;
-        private @Nullable Input<List<LinkTagArgs>> tags;
-        private @Nullable Input<String> type;
+        private Output<LinkBandwidthArgs> bandwidth;
+        private @Nullable Output<String> description;
+        private Output<String> globalNetworkId;
+        private @Nullable Output<String> provider;
+        private Output<String> siteId;
+        private @Nullable Output<List<LinkTagArgs>> tags;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder bandwidth(Input<LinkBandwidthArgs> bandwidth) {
+        public Builder bandwidth(Output<LinkBandwidthArgs> bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
 
         public Builder bandwidth(LinkBandwidthArgs bandwidth) {
-            this.bandwidth = Input.of(Objects.requireNonNull(bandwidth));
+            this.bandwidth = Output.of(Objects.requireNonNull(bandwidth));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder provider(@Nullable Input<String> provider) {
+        public Builder provider(@Nullable Output<String> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable String provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
 
-        public Builder siteId(Input<String> siteId) {
+        public Builder siteId(Output<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
         public Builder siteId(String siteId) {
-            this.siteId = Input.of(Objects.requireNonNull(siteId));
+            this.siteId = Output.of(Objects.requireNonNull(siteId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LinkTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LinkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LinkTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public LinkArgs build() {

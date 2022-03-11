@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotSampleValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();
 
     @InputImport(name="sampleValue", required=true)
-      private final Input<BotSampleValueArgs> sampleValue;
+      private final Output<BotSampleValueArgs> sampleValue;
 
-    public Input<BotSampleValueArgs> getSampleValue() {
+    public Output<BotSampleValueArgs> getSampleValue() {
         return this.sampleValue;
     }
 
     @InputImport(name="synonyms")
-      private final @Nullable Input<List<BotSampleValueArgs>> synonyms;
+      private final @Nullable Output<List<BotSampleValueArgs>> synonyms;
 
-    public Input<List<BotSampleValueArgs>> getSynonyms() {
-        return this.synonyms == null ? Input.empty() : this.synonyms;
+    public Output<List<BotSampleValueArgs>> getSynonyms() {
+        return this.synonyms == null ? Output.empty() : this.synonyms;
     }
 
     public BotSlotTypeValueArgs(
-        Input<BotSampleValueArgs> sampleValue,
-        @Nullable Input<List<BotSampleValueArgs>> synonyms) {
+        Output<BotSampleValueArgs> sampleValue,
+        @Nullable Output<List<BotSampleValueArgs>> synonyms) {
         this.sampleValue = Objects.requireNonNull(sampleValue, "expected parameter 'sampleValue' to be non-null");
         this.synonyms = synonyms;
     }
 
     private BotSlotTypeValueArgs() {
-        this.sampleValue = Input.empty();
-        this.synonyms = Input.empty();
+        this.sampleValue = Output.empty();
+        this.synonyms = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<BotSampleValueArgs> sampleValue;
-        private @Nullable Input<List<BotSampleValueArgs>> synonyms;
+        private Output<BotSampleValueArgs> sampleValue;
+        private @Nullable Output<List<BotSampleValueArgs>> synonyms;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder sampleValue(Input<BotSampleValueArgs> sampleValue) {
+        public Builder sampleValue(Output<BotSampleValueArgs> sampleValue) {
             this.sampleValue = Objects.requireNonNull(sampleValue);
             return this;
         }
 
         public Builder sampleValue(BotSampleValueArgs sampleValue) {
-            this.sampleValue = Input.of(Objects.requireNonNull(sampleValue));
+            this.sampleValue = Output.of(Objects.requireNonNull(sampleValue));
             return this;
         }
 
-        public Builder synonyms(@Nullable Input<List<BotSampleValueArgs>> synonyms) {
+        public Builder synonyms(@Nullable Output<List<BotSampleValueArgs>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
         public Builder synonyms(@Nullable List<BotSampleValueArgs> synonyms) {
-            this.synonyms = Input.ofNullable(synonyms);
+            this.synonyms = Output.ofNullable(synonyms);
             return this;
         }
         public BotSlotTypeValueArgs build() {

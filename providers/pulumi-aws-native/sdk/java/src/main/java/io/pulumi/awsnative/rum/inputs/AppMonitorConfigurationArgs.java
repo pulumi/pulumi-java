@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rum.inputs;
 
 import io.pulumi.awsnative.rum.enums.AppMonitorTelemetry;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -27,10 +27,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="allowCookies")
-      private final @Nullable Input<Boolean> allowCookies;
+      private final @Nullable Output<Boolean> allowCookies;
 
-    public Input<Boolean> getAllowCookies() {
-        return this.allowCookies == null ? Input.empty() : this.allowCookies;
+    public Output<Boolean> getAllowCookies() {
+        return this.allowCookies == null ? Output.empty() : this.allowCookies;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enableXRay")
-      private final @Nullable Input<Boolean> enableXRay;
+      private final @Nullable Output<Boolean> enableXRay;
 
-    public Input<Boolean> getEnableXRay() {
-        return this.enableXRay == null ? Input.empty() : this.enableXRay;
+    public Output<Boolean> getEnableXRay() {
+        return this.enableXRay == null ? Output.empty() : this.enableXRay;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="excludedPages")
-      private final @Nullable Input<List<String>> excludedPages;
+      private final @Nullable Output<List<String>> excludedPages;
 
-    public Input<List<String>> getExcludedPages() {
-        return this.excludedPages == null ? Input.empty() : this.excludedPages;
+    public Output<List<String>> getExcludedPages() {
+        return this.excludedPages == null ? Output.empty() : this.excludedPages;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="favoritePages")
-      private final @Nullable Input<List<String>> favoritePages;
+      private final @Nullable Output<List<String>> favoritePages;
 
-    public Input<List<String>> getFavoritePages() {
-        return this.favoritePages == null ? Input.empty() : this.favoritePages;
+    public Output<List<String>> getFavoritePages() {
+        return this.favoritePages == null ? Output.empty() : this.favoritePages;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="guestRoleArn")
-      private final @Nullable Input<String> guestRoleArn;
+      private final @Nullable Output<String> guestRoleArn;
 
-    public Input<String> getGuestRoleArn() {
-        return this.guestRoleArn == null ? Input.empty() : this.guestRoleArn;
+    public Output<String> getGuestRoleArn() {
+        return this.guestRoleArn == null ? Output.empty() : this.guestRoleArn;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identityPoolId")
-      private final @Nullable Input<String> identityPoolId;
+      private final @Nullable Output<String> identityPoolId;
 
-    public Input<String> getIdentityPoolId() {
-        return this.identityPoolId == null ? Input.empty() : this.identityPoolId;
+    public Output<String> getIdentityPoolId() {
+        return this.identityPoolId == null ? Output.empty() : this.identityPoolId;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="includedPages")
-      private final @Nullable Input<List<String>> includedPages;
+      private final @Nullable Output<List<String>> includedPages;
 
-    public Input<List<String>> getIncludedPages() {
-        return this.includedPages == null ? Input.empty() : this.includedPages;
+    public Output<List<String>> getIncludedPages() {
+        return this.includedPages == null ? Output.empty() : this.includedPages;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sessionSampleRate")
-      private final @Nullable Input<Double> sessionSampleRate;
+      private final @Nullable Output<Double> sessionSampleRate;
 
-    public Input<Double> getSessionSampleRate() {
-        return this.sessionSampleRate == null ? Input.empty() : this.sessionSampleRate;
+    public Output<Double> getSessionSampleRate() {
+        return this.sessionSampleRate == null ? Output.empty() : this.sessionSampleRate;
     }
 
     /**
@@ -115,22 +115,22 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="telemetries")
-      private final @Nullable Input<List<AppMonitorTelemetry>> telemetries;
+      private final @Nullable Output<List<AppMonitorTelemetry>> telemetries;
 
-    public Input<List<AppMonitorTelemetry>> getTelemetries() {
-        return this.telemetries == null ? Input.empty() : this.telemetries;
+    public Output<List<AppMonitorTelemetry>> getTelemetries() {
+        return this.telemetries == null ? Output.empty() : this.telemetries;
     }
 
     public AppMonitorConfigurationArgs(
-        @Nullable Input<Boolean> allowCookies,
-        @Nullable Input<Boolean> enableXRay,
-        @Nullable Input<List<String>> excludedPages,
-        @Nullable Input<List<String>> favoritePages,
-        @Nullable Input<String> guestRoleArn,
-        @Nullable Input<String> identityPoolId,
-        @Nullable Input<List<String>> includedPages,
-        @Nullable Input<Double> sessionSampleRate,
-        @Nullable Input<List<AppMonitorTelemetry>> telemetries) {
+        @Nullable Output<Boolean> allowCookies,
+        @Nullable Output<Boolean> enableXRay,
+        @Nullable Output<List<String>> excludedPages,
+        @Nullable Output<List<String>> favoritePages,
+        @Nullable Output<String> guestRoleArn,
+        @Nullable Output<String> identityPoolId,
+        @Nullable Output<List<String>> includedPages,
+        @Nullable Output<Double> sessionSampleRate,
+        @Nullable Output<List<AppMonitorTelemetry>> telemetries) {
         this.allowCookies = allowCookies;
         this.enableXRay = enableXRay;
         this.excludedPages = excludedPages;
@@ -143,15 +143,15 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private AppMonitorConfigurationArgs() {
-        this.allowCookies = Input.empty();
-        this.enableXRay = Input.empty();
-        this.excludedPages = Input.empty();
-        this.favoritePages = Input.empty();
-        this.guestRoleArn = Input.empty();
-        this.identityPoolId = Input.empty();
-        this.includedPages = Input.empty();
-        this.sessionSampleRate = Input.empty();
-        this.telemetries = Input.empty();
+        this.allowCookies = Output.empty();
+        this.enableXRay = Output.empty();
+        this.excludedPages = Output.empty();
+        this.favoritePages = Output.empty();
+        this.guestRoleArn = Output.empty();
+        this.identityPoolId = Output.empty();
+        this.includedPages = Output.empty();
+        this.sessionSampleRate = Output.empty();
+        this.telemetries = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCookies;
-        private @Nullable Input<Boolean> enableXRay;
-        private @Nullable Input<List<String>> excludedPages;
-        private @Nullable Input<List<String>> favoritePages;
-        private @Nullable Input<String> guestRoleArn;
-        private @Nullable Input<String> identityPoolId;
-        private @Nullable Input<List<String>> includedPages;
-        private @Nullable Input<Double> sessionSampleRate;
-        private @Nullable Input<List<AppMonitorTelemetry>> telemetries;
+        private @Nullable Output<Boolean> allowCookies;
+        private @Nullable Output<Boolean> enableXRay;
+        private @Nullable Output<List<String>> excludedPages;
+        private @Nullable Output<List<String>> favoritePages;
+        private @Nullable Output<String> guestRoleArn;
+        private @Nullable Output<String> identityPoolId;
+        private @Nullable Output<List<String>> includedPages;
+        private @Nullable Output<Double> sessionSampleRate;
+        private @Nullable Output<List<AppMonitorTelemetry>> telemetries;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     	      this.telemetries = defaults.telemetries;
         }
 
-        public Builder allowCookies(@Nullable Input<Boolean> allowCookies) {
+        public Builder allowCookies(@Nullable Output<Boolean> allowCookies) {
             this.allowCookies = allowCookies;
             return this;
         }
 
         public Builder allowCookies(@Nullable Boolean allowCookies) {
-            this.allowCookies = Input.ofNullable(allowCookies);
+            this.allowCookies = Output.ofNullable(allowCookies);
             return this;
         }
 
-        public Builder enableXRay(@Nullable Input<Boolean> enableXRay) {
+        public Builder enableXRay(@Nullable Output<Boolean> enableXRay) {
             this.enableXRay = enableXRay;
             return this;
         }
 
         public Builder enableXRay(@Nullable Boolean enableXRay) {
-            this.enableXRay = Input.ofNullable(enableXRay);
+            this.enableXRay = Output.ofNullable(enableXRay);
             return this;
         }
 
-        public Builder excludedPages(@Nullable Input<List<String>> excludedPages) {
+        public Builder excludedPages(@Nullable Output<List<String>> excludedPages) {
             this.excludedPages = excludedPages;
             return this;
         }
 
         public Builder excludedPages(@Nullable List<String> excludedPages) {
-            this.excludedPages = Input.ofNullable(excludedPages);
+            this.excludedPages = Output.ofNullable(excludedPages);
             return this;
         }
 
-        public Builder favoritePages(@Nullable Input<List<String>> favoritePages) {
+        public Builder favoritePages(@Nullable Output<List<String>> favoritePages) {
             this.favoritePages = favoritePages;
             return this;
         }
 
         public Builder favoritePages(@Nullable List<String> favoritePages) {
-            this.favoritePages = Input.ofNullable(favoritePages);
+            this.favoritePages = Output.ofNullable(favoritePages);
             return this;
         }
 
-        public Builder guestRoleArn(@Nullable Input<String> guestRoleArn) {
+        public Builder guestRoleArn(@Nullable Output<String> guestRoleArn) {
             this.guestRoleArn = guestRoleArn;
             return this;
         }
 
         public Builder guestRoleArn(@Nullable String guestRoleArn) {
-            this.guestRoleArn = Input.ofNullable(guestRoleArn);
+            this.guestRoleArn = Output.ofNullable(guestRoleArn);
             return this;
         }
 
-        public Builder identityPoolId(@Nullable Input<String> identityPoolId) {
+        public Builder identityPoolId(@Nullable Output<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
         public Builder identityPoolId(@Nullable String identityPoolId) {
-            this.identityPoolId = Input.ofNullable(identityPoolId);
+            this.identityPoolId = Output.ofNullable(identityPoolId);
             return this;
         }
 
-        public Builder includedPages(@Nullable Input<List<String>> includedPages) {
+        public Builder includedPages(@Nullable Output<List<String>> includedPages) {
             this.includedPages = includedPages;
             return this;
         }
 
         public Builder includedPages(@Nullable List<String> includedPages) {
-            this.includedPages = Input.ofNullable(includedPages);
+            this.includedPages = Output.ofNullable(includedPages);
             return this;
         }
 
-        public Builder sessionSampleRate(@Nullable Input<Double> sessionSampleRate) {
+        public Builder sessionSampleRate(@Nullable Output<Double> sessionSampleRate) {
             this.sessionSampleRate = sessionSampleRate;
             return this;
         }
 
         public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
-            this.sessionSampleRate = Input.ofNullable(sessionSampleRate);
+            this.sessionSampleRate = Output.ofNullable(sessionSampleRate);
             return this;
         }
 
-        public Builder telemetries(@Nullable Input<List<AppMonitorTelemetry>> telemetries) {
+        public Builder telemetries(@Nullable Output<List<AppMonitorTelemetry>> telemetries) {
             this.telemetries = telemetries;
             return this;
         }
 
         public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
-            this.telemetries = Input.ofNullable(telemetries);
+            this.telemetries = Output.ofNullable(telemetries);
             return this;
         }
         public AppMonitorConfigurationArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iot.MitigationActionArgs;
 import io.pulumi.awsnative.iot.outputs.MitigationActionActionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -114,14 +113,14 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MitigationAction(String name, MitigationActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:MitigationAction", name, args == null ? MitigationActionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:iot:MitigationAction", name, args == null ? MitigationActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MitigationAction(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MitigationAction(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:iot:MitigationAction", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -136,7 +135,7 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MitigationAction get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MitigationAction get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MitigationAction(name, id, options);
     }
 }

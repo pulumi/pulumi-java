@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.healthlake.inputs;
 
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreKmsEncryptionConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     public static final FHIRDatastoreSseConfigurationArgs Empty = new FHIRDatastoreSseConfigurationArgs();
 
     @InputImport(name="kmsEncryptionConfig", required=true)
-      private final Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
+      private final Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
 
-    public Input<FHIRDatastoreKmsEncryptionConfigArgs> getKmsEncryptionConfig() {
+    public Output<FHIRDatastoreKmsEncryptionConfigArgs> getKmsEncryptionConfig() {
         return this.kmsEncryptionConfig;
     }
 
-    public FHIRDatastoreSseConfigurationArgs(Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
+    public FHIRDatastoreSseConfigurationArgs(Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
         this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig, "expected parameter 'kmsEncryptionConfig' to be non-null");
     }
 
     private FHIRDatastoreSseConfigurationArgs() {
-        this.kmsEncryptionConfig = Input.empty();
+        this.kmsEncryptionConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
+        private Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class FHIRDatastoreSseConfigurationArgs extends io.pulumi.resources
     	      this.kmsEncryptionConfig = defaults.kmsEncryptionConfig;
         }
 
-        public Builder kmsEncryptionConfig(Input<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
+        public Builder kmsEncryptionConfig(Output<FHIRDatastoreKmsEncryptionConfigArgs> kmsEncryptionConfig) {
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }
 
         public Builder kmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfigArgs kmsEncryptionConfig) {
-            this.kmsEncryptionConfig = Input.of(Objects.requireNonNull(kmsEncryptionConfig));
+            this.kmsEncryptionConfig = Output.of(Objects.requireNonNull(kmsEncryptionConfig));
             return this;
         }
         public FHIRDatastoreSseConfigurationArgs build() {

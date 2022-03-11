@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupLabelMatchScope;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
     public static final RuleGroupLabelMatchStatementArgs Empty = new RuleGroupLabelMatchStatementArgs();
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="scope", required=true)
-      private final Input<RuleGroupLabelMatchScope> scope;
+      private final Output<RuleGroupLabelMatchScope> scope;
 
-    public Input<RuleGroupLabelMatchScope> getScope() {
+    public Output<RuleGroupLabelMatchScope> getScope() {
         return this.scope;
     }
 
     public RuleGroupLabelMatchStatementArgs(
-        Input<String> key,
-        Input<RuleGroupLabelMatchScope> scope) {
+        Output<String> key,
+        Output<RuleGroupLabelMatchScope> scope) {
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
     }
 
     private RuleGroupLabelMatchStatementArgs() {
-        this.key = Input.empty();
-        this.scope = Input.empty();
+        this.key = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> key;
-        private Input<RuleGroupLabelMatchScope> scope;
+        private Output<String> key;
+        private Output<RuleGroupLabelMatchScope> scope;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class RuleGroupLabelMatchStatementArgs extends io.pulumi.resources.
     	      this.scope = defaults.scope;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder scope(Input<RuleGroupLabelMatchScope> scope) {
+        public Builder scope(Output<RuleGroupLabelMatchScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(RuleGroupLabelMatchScope scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public RuleGroupLabelMatchStatementArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.inputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamEncryptionEncryptionType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionType", required=true)
-      private final Input<StreamEncryptionEncryptionType> encryptionType;
+      private final Output<StreamEncryptionEncryptionType> encryptionType;
 
-    public Input<StreamEncryptionEncryptionType> getEncryptionType() {
+    public Output<StreamEncryptionEncryptionType> getEncryptionType() {
         return this.encryptionType;
     }
 
@@ -34,22 +34,22 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
     public StreamEncryptionArgs(
-        Input<StreamEncryptionEncryptionType> encryptionType,
-        Input<String> keyId) {
+        Output<StreamEncryptionEncryptionType> encryptionType,
+        Output<String> keyId) {
         this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
     }
 
     private StreamEncryptionArgs() {
-        this.encryptionType = Input.empty();
-        this.keyId = Input.empty();
+        this.encryptionType = Output.empty();
+        this.keyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<StreamEncryptionEncryptionType> encryptionType;
-        private Input<String> keyId;
+        private Output<StreamEncryptionEncryptionType> encryptionType;
+        private Output<String> keyId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class StreamEncryptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder encryptionType(Input<StreamEncryptionEncryptionType> encryptionType) {
+        public Builder encryptionType(Output<StreamEncryptionEncryptionType> encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
         public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
-            this.encryptionType = Input.of(Objects.requireNonNull(encryptionType));
+            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
             return this;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
         public StreamEncryptionArgs build() {

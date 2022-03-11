@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalog.inputs;
 
 import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,62 +18,62 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     public static final CloudFormationProvisionedProductProvisioningPreferencesArgs Empty = new CloudFormationProvisionedProductProvisioningPreferencesArgs();
 
     @InputImport(name="stackSetAccounts")
-      private final @Nullable Input<List<String>> stackSetAccounts;
+      private final @Nullable Output<List<String>> stackSetAccounts;
 
-    public Input<List<String>> getStackSetAccounts() {
-        return this.stackSetAccounts == null ? Input.empty() : this.stackSetAccounts;
+    public Output<List<String>> getStackSetAccounts() {
+        return this.stackSetAccounts == null ? Output.empty() : this.stackSetAccounts;
     }
 
     @InputImport(name="stackSetFailureToleranceCount")
-      private final @Nullable Input<Integer> stackSetFailureToleranceCount;
+      private final @Nullable Output<Integer> stackSetFailureToleranceCount;
 
-    public Input<Integer> getStackSetFailureToleranceCount() {
-        return this.stackSetFailureToleranceCount == null ? Input.empty() : this.stackSetFailureToleranceCount;
+    public Output<Integer> getStackSetFailureToleranceCount() {
+        return this.stackSetFailureToleranceCount == null ? Output.empty() : this.stackSetFailureToleranceCount;
     }
 
     @InputImport(name="stackSetFailureTolerancePercentage")
-      private final @Nullable Input<Integer> stackSetFailureTolerancePercentage;
+      private final @Nullable Output<Integer> stackSetFailureTolerancePercentage;
 
-    public Input<Integer> getStackSetFailureTolerancePercentage() {
-        return this.stackSetFailureTolerancePercentage == null ? Input.empty() : this.stackSetFailureTolerancePercentage;
+    public Output<Integer> getStackSetFailureTolerancePercentage() {
+        return this.stackSetFailureTolerancePercentage == null ? Output.empty() : this.stackSetFailureTolerancePercentage;
     }
 
     @InputImport(name="stackSetMaxConcurrencyCount")
-      private final @Nullable Input<Integer> stackSetMaxConcurrencyCount;
+      private final @Nullable Output<Integer> stackSetMaxConcurrencyCount;
 
-    public Input<Integer> getStackSetMaxConcurrencyCount() {
-        return this.stackSetMaxConcurrencyCount == null ? Input.empty() : this.stackSetMaxConcurrencyCount;
+    public Output<Integer> getStackSetMaxConcurrencyCount() {
+        return this.stackSetMaxConcurrencyCount == null ? Output.empty() : this.stackSetMaxConcurrencyCount;
     }
 
     @InputImport(name="stackSetMaxConcurrencyPercentage")
-      private final @Nullable Input<Integer> stackSetMaxConcurrencyPercentage;
+      private final @Nullable Output<Integer> stackSetMaxConcurrencyPercentage;
 
-    public Input<Integer> getStackSetMaxConcurrencyPercentage() {
-        return this.stackSetMaxConcurrencyPercentage == null ? Input.empty() : this.stackSetMaxConcurrencyPercentage;
+    public Output<Integer> getStackSetMaxConcurrencyPercentage() {
+        return this.stackSetMaxConcurrencyPercentage == null ? Output.empty() : this.stackSetMaxConcurrencyPercentage;
     }
 
     @InputImport(name="stackSetOperationType")
-      private final @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
+      private final @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
 
-    public Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
-        return this.stackSetOperationType == null ? Input.empty() : this.stackSetOperationType;
+    public Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
+        return this.stackSetOperationType == null ? Output.empty() : this.stackSetOperationType;
     }
 
     @InputImport(name="stackSetRegions")
-      private final @Nullable Input<List<String>> stackSetRegions;
+      private final @Nullable Output<List<String>> stackSetRegions;
 
-    public Input<List<String>> getStackSetRegions() {
-        return this.stackSetRegions == null ? Input.empty() : this.stackSetRegions;
+    public Output<List<String>> getStackSetRegions() {
+        return this.stackSetRegions == null ? Output.empty() : this.stackSetRegions;
     }
 
     public CloudFormationProvisionedProductProvisioningPreferencesArgs(
-        @Nullable Input<List<String>> stackSetAccounts,
-        @Nullable Input<Integer> stackSetFailureToleranceCount,
-        @Nullable Input<Integer> stackSetFailureTolerancePercentage,
-        @Nullable Input<Integer> stackSetMaxConcurrencyCount,
-        @Nullable Input<Integer> stackSetMaxConcurrencyPercentage,
-        @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType,
-        @Nullable Input<List<String>> stackSetRegions) {
+        @Nullable Output<List<String>> stackSetAccounts,
+        @Nullable Output<Integer> stackSetFailureToleranceCount,
+        @Nullable Output<Integer> stackSetFailureTolerancePercentage,
+        @Nullable Output<Integer> stackSetMaxConcurrencyCount,
+        @Nullable Output<Integer> stackSetMaxConcurrencyPercentage,
+        @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType,
+        @Nullable Output<List<String>> stackSetRegions) {
         this.stackSetAccounts = stackSetAccounts;
         this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
         this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
@@ -84,13 +84,13 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     }
 
     private CloudFormationProvisionedProductProvisioningPreferencesArgs() {
-        this.stackSetAccounts = Input.empty();
-        this.stackSetFailureToleranceCount = Input.empty();
-        this.stackSetFailureTolerancePercentage = Input.empty();
-        this.stackSetMaxConcurrencyCount = Input.empty();
-        this.stackSetMaxConcurrencyPercentage = Input.empty();
-        this.stackSetOperationType = Input.empty();
-        this.stackSetRegions = Input.empty();
+        this.stackSetAccounts = Output.empty();
+        this.stackSetFailureToleranceCount = Output.empty();
+        this.stackSetFailureTolerancePercentage = Output.empty();
+        this.stackSetMaxConcurrencyCount = Output.empty();
+        this.stackSetMaxConcurrencyPercentage = Output.empty();
+        this.stackSetOperationType = Output.empty();
+        this.stackSetRegions = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,13 +102,13 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> stackSetAccounts;
-        private @Nullable Input<Integer> stackSetFailureToleranceCount;
-        private @Nullable Input<Integer> stackSetFailureTolerancePercentage;
-        private @Nullable Input<Integer> stackSetMaxConcurrencyCount;
-        private @Nullable Input<Integer> stackSetMaxConcurrencyPercentage;
-        private @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
-        private @Nullable Input<List<String>> stackSetRegions;
+        private @Nullable Output<List<String>> stackSetAccounts;
+        private @Nullable Output<Integer> stackSetFailureToleranceCount;
+        private @Nullable Output<Integer> stackSetFailureTolerancePercentage;
+        private @Nullable Output<Integer> stackSetMaxConcurrencyCount;
+        private @Nullable Output<Integer> stackSetMaxConcurrencyPercentage;
+        private @Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
+        private @Nullable Output<List<String>> stackSetRegions;
 
         public Builder() {
     	      // Empty
@@ -125,73 +125,73 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     	      this.stackSetRegions = defaults.stackSetRegions;
         }
 
-        public Builder stackSetAccounts(@Nullable Input<List<String>> stackSetAccounts) {
+        public Builder stackSetAccounts(@Nullable Output<List<String>> stackSetAccounts) {
             this.stackSetAccounts = stackSetAccounts;
             return this;
         }
 
         public Builder stackSetAccounts(@Nullable List<String> stackSetAccounts) {
-            this.stackSetAccounts = Input.ofNullable(stackSetAccounts);
+            this.stackSetAccounts = Output.ofNullable(stackSetAccounts);
             return this;
         }
 
-        public Builder stackSetFailureToleranceCount(@Nullable Input<Integer> stackSetFailureToleranceCount) {
+        public Builder stackSetFailureToleranceCount(@Nullable Output<Integer> stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
             return this;
         }
 
         public Builder stackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
-            this.stackSetFailureToleranceCount = Input.ofNullable(stackSetFailureToleranceCount);
+            this.stackSetFailureToleranceCount = Output.ofNullable(stackSetFailureToleranceCount);
             return this;
         }
 
-        public Builder stackSetFailureTolerancePercentage(@Nullable Input<Integer> stackSetFailureTolerancePercentage) {
+        public Builder stackSetFailureTolerancePercentage(@Nullable Output<Integer> stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
             return this;
         }
 
         public Builder stackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
-            this.stackSetFailureTolerancePercentage = Input.ofNullable(stackSetFailureTolerancePercentage);
+            this.stackSetFailureTolerancePercentage = Output.ofNullable(stackSetFailureTolerancePercentage);
             return this;
         }
 
-        public Builder stackSetMaxConcurrencyCount(@Nullable Input<Integer> stackSetMaxConcurrencyCount) {
+        public Builder stackSetMaxConcurrencyCount(@Nullable Output<Integer> stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
             return this;
         }
 
         public Builder stackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
-            this.stackSetMaxConcurrencyCount = Input.ofNullable(stackSetMaxConcurrencyCount);
+            this.stackSetMaxConcurrencyCount = Output.ofNullable(stackSetMaxConcurrencyCount);
             return this;
         }
 
-        public Builder stackSetMaxConcurrencyPercentage(@Nullable Input<Integer> stackSetMaxConcurrencyPercentage) {
+        public Builder stackSetMaxConcurrencyPercentage(@Nullable Output<Integer> stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
             return this;
         }
 
         public Builder stackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
-            this.stackSetMaxConcurrencyPercentage = Input.ofNullable(stackSetMaxConcurrencyPercentage);
+            this.stackSetMaxConcurrencyPercentage = Output.ofNullable(stackSetMaxConcurrencyPercentage);
             return this;
         }
 
-        public Builder stackSetOperationType(@Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType) {
+        public Builder stackSetOperationType(@Nullable Output<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType) {
             this.stackSetOperationType = stackSetOperationType;
             return this;
         }
 
         public Builder stackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
-            this.stackSetOperationType = Input.ofNullable(stackSetOperationType);
+            this.stackSetOperationType = Output.ofNullable(stackSetOperationType);
             return this;
         }
 
-        public Builder stackSetRegions(@Nullable Input<List<String>> stackSetRegions) {
+        public Builder stackSetRegions(@Nullable Output<List<String>> stackSetRegions) {
             this.stackSetRegions = stackSetRegions;
             return this;
         }
 
         public Builder stackSetRegions(@Nullable List<String> stackSetRegions) {
-            this.stackSetRegions = Input.ofNullable(stackSetRegions);
+            this.stackSetRegions = Output.ofNullable(stackSetRegions);
             return this;
         }
         public CloudFormationProvisionedProductProvisioningPreferencesArgs build() {

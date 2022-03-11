@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionStatusCodesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     public static final DistributionOriginGroupFailoverCriteriaArgs Empty = new DistributionOriginGroupFailoverCriteriaArgs();
 
     @InputImport(name="statusCodes", required=true)
-      private final Input<DistributionStatusCodesArgs> statusCodes;
+      private final Output<DistributionStatusCodesArgs> statusCodes;
 
-    public Input<DistributionStatusCodesArgs> getStatusCodes() {
+    public Output<DistributionStatusCodesArgs> getStatusCodes() {
         return this.statusCodes;
     }
 
-    public DistributionOriginGroupFailoverCriteriaArgs(Input<DistributionStatusCodesArgs> statusCodes) {
+    public DistributionOriginGroupFailoverCriteriaArgs(Output<DistributionStatusCodesArgs> statusCodes) {
         this.statusCodes = Objects.requireNonNull(statusCodes, "expected parameter 'statusCodes' to be non-null");
     }
 
     private DistributionOriginGroupFailoverCriteriaArgs() {
-        this.statusCodes = Input.empty();
+        this.statusCodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<DistributionStatusCodesArgs> statusCodes;
+        private Output<DistributionStatusCodesArgs> statusCodes;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder statusCodes(Input<DistributionStatusCodesArgs> statusCodes) {
+        public Builder statusCodes(Output<DistributionStatusCodesArgs> statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
 
         public Builder statusCodes(DistributionStatusCodesArgs statusCodes) {
-            this.statusCodes = Input.of(Objects.requireNonNull(statusCodes));
+            this.statusCodes = Output.of(Objects.requireNonNull(statusCodes));
             return this;
         }
         public DistributionOriginGroupFailoverCriteriaArgs build() {

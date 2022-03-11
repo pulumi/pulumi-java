@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentExpression", required=true)
-      private final Input<String> contentExpression;
+      private final Output<String> contentExpression;
 
-    public Input<String> getContentExpression() {
+    public Output<String> getContentExpression() {
         return this.contentExpression;
     }
 
@@ -35,22 +35,22 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DetectorModelPayloadArgs(
-        Input<String> contentExpression,
-        Input<String> type) {
+        Output<String> contentExpression,
+        Output<String> type) {
         this.contentExpression = Objects.requireNonNull(contentExpression, "expected parameter 'contentExpression' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private DetectorModelPayloadArgs() {
-        this.contentExpression = Input.empty();
-        this.type = Input.empty();
+        this.contentExpression = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> contentExpression;
-        private Input<String> type;
+        private Output<String> contentExpression;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder contentExpression(Input<String> contentExpression) {
+        public Builder contentExpression(Output<String> contentExpression) {
             this.contentExpression = Objects.requireNonNull(contentExpression);
             return this;
         }
 
         public Builder contentExpression(String contentExpression) {
-            this.contentExpression = Input.of(Objects.requireNonNull(contentExpression));
+            this.contentExpression = Output.of(Objects.requireNonNull(contentExpression));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DetectorModelPayloadArgs build() {

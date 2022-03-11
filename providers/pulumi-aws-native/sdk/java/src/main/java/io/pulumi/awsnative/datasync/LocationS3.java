@@ -8,7 +8,6 @@ import io.pulumi.awsnative.datasync.LocationS3Args;
 import io.pulumi.awsnative.datasync.enums.LocationS3S3StorageClass;
 import io.pulumi.awsnative.datasync.outputs.LocationS3S3Config;
 import io.pulumi.awsnative.datasync.outputs.LocationS3Tag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -153,14 +152,14 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationS3(String name, LocationS3Args args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:datasync:LocationS3", name, args == null ? LocationS3Args.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:datasync:LocationS3", name, args == null ? LocationS3Args.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocationS3(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocationS3(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:datasync:LocationS3", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -175,7 +174,7 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocationS3 get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocationS3 get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocationS3(name, id, options);
     }
 }

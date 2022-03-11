@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="snapshotTimeOfDay")
-      private final @Nullable Input<String> snapshotTimeOfDay;
+      private final @Nullable Output<String> snapshotTimeOfDay;
 
-    public Input<String> getSnapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Input.empty() : this.snapshotTimeOfDay;
+    public Output<String> getSnapshotTimeOfDay() {
+        return this.snapshotTimeOfDay == null ? Output.empty() : this.snapshotTimeOfDay;
     }
 
-    public InstanceAutoSnapshotAddOnArgs(@Nullable Input<String> snapshotTimeOfDay) {
+    public InstanceAutoSnapshotAddOnArgs(@Nullable Output<String> snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
     }
 
     private InstanceAutoSnapshotAddOnArgs() {
-        this.snapshotTimeOfDay = Input.empty();
+        this.snapshotTimeOfDay = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> snapshotTimeOfDay;
+        private @Nullable Output<String> snapshotTimeOfDay;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
     	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
         }
 
-        public Builder snapshotTimeOfDay(@Nullable Input<String> snapshotTimeOfDay) {
+        public Builder snapshotTimeOfDay(@Nullable Output<String> snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
 
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = Input.ofNullable(snapshotTimeOfDay);
+            this.snapshotTimeOfDay = Output.ofNullable(snapshotTimeOfDay);
             return this;
         }
         public InstanceAutoSnapshotAddOnArgs build() {

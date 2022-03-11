@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,39 +17,39 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     public static final ConfigurationAggregatorOrganizationAggregationSourceArgs Empty = new ConfigurationAggregatorOrganizationAggregationSourceArgs();
 
     @InputImport(name="allAwsRegions")
-      private final @Nullable Input<Boolean> allAwsRegions;
+      private final @Nullable Output<Boolean> allAwsRegions;
 
-    public Input<Boolean> getAllAwsRegions() {
-        return this.allAwsRegions == null ? Input.empty() : this.allAwsRegions;
+    public Output<Boolean> getAllAwsRegions() {
+        return this.allAwsRegions == null ? Output.empty() : this.allAwsRegions;
     }
 
     @InputImport(name="awsRegions")
-      private final @Nullable Input<List<String>> awsRegions;
+      private final @Nullable Output<List<String>> awsRegions;
 
-    public Input<List<String>> getAwsRegions() {
-        return this.awsRegions == null ? Input.empty() : this.awsRegions;
+    public Output<List<String>> getAwsRegions() {
+        return this.awsRegions == null ? Output.empty() : this.awsRegions;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public ConfigurationAggregatorOrganizationAggregationSourceArgs(
-        @Nullable Input<Boolean> allAwsRegions,
-        @Nullable Input<List<String>> awsRegions,
-        Input<String> roleArn) {
+        @Nullable Output<Boolean> allAwsRegions,
+        @Nullable Output<List<String>> awsRegions,
+        Output<String> roleArn) {
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private ConfigurationAggregatorOrganizationAggregationSourceArgs() {
-        this.allAwsRegions = Input.empty();
-        this.awsRegions = Input.empty();
-        this.roleArn = Input.empty();
+        this.allAwsRegions = Output.empty();
+        this.awsRegions = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allAwsRegions;
-        private @Nullable Input<List<String>> awsRegions;
-        private Input<String> roleArn;
+        private @Nullable Output<Boolean> allAwsRegions;
+        private @Nullable Output<List<String>> awsRegions;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ConfigurationAggregatorOrganizationAggregationSourceArgs exte
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder allAwsRegions(@Nullable Input<Boolean> allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Output<Boolean> allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
         public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
-            this.allAwsRegions = Input.ofNullable(allAwsRegions);
+            this.allAwsRegions = Output.ofNullable(allAwsRegions);
             return this;
         }
 
-        public Builder awsRegions(@Nullable Input<List<String>> awsRegions) {
+        public Builder awsRegions(@Nullable Output<List<String>> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
 
         public Builder awsRegions(@Nullable List<String> awsRegions) {
-            this.awsRegions = Input.ofNullable(awsRegions);
+            this.awsRegions = Output.ofNullable(awsRegions);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public ConfigurationAggregatorOrganizationAggregationSourceArgs build() {

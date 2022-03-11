@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     public static final ConnectionParameterArgs Empty = new ConnectionParameterArgs();
 
     @InputImport(name="isValueSecret")
-      private final @Nullable Input<Boolean> isValueSecret;
+      private final @Nullable Output<Boolean> isValueSecret;
 
-    public Input<Boolean> getIsValueSecret() {
-        return this.isValueSecret == null ? Input.empty() : this.isValueSecret;
+    public Output<Boolean> getIsValueSecret() {
+        return this.isValueSecret == null ? Output.empty() : this.isValueSecret;
     }
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public ConnectionParameterArgs(
-        @Nullable Input<Boolean> isValueSecret,
-        Input<String> key,
-        Input<String> value) {
+        @Nullable Output<Boolean> isValueSecret,
+        Output<String> key,
+        Output<String> value) {
         this.isValueSecret = isValueSecret;
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private ConnectionParameterArgs() {
-        this.isValueSecret = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.isValueSecret = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isValueSecret;
-        private Input<String> key;
-        private Input<String> value;
+        private @Nullable Output<Boolean> isValueSecret;
+        private Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     	      this.value = defaults.value;
         }
 
-        public Builder isValueSecret(@Nullable Input<Boolean> isValueSecret) {
+        public Builder isValueSecret(@Nullable Output<Boolean> isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
         public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = Input.ofNullable(isValueSecret);
+            this.isValueSecret = Output.ofNullable(isValueSecret);
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public ConnectionParameterArgs build() {

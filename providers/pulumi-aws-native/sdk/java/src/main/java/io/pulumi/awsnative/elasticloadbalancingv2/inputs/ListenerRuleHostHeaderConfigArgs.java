@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,18 +16,18 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
     public static final ListenerRuleHostHeaderConfigArgs Empty = new ListenerRuleHostHeaderConfigArgs();
 
     @InputImport(name="values")
-      private final @Nullable Input<List<String>> values;
+      private final @Nullable Output<List<String>> values;
 
-    public Input<List<String>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<String>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
-    public ListenerRuleHostHeaderConfigArgs(@Nullable Input<List<String>> values) {
+    public ListenerRuleHostHeaderConfigArgs(@Nullable Output<List<String>> values) {
         this.values = values;
     }
 
     private ListenerRuleHostHeaderConfigArgs() {
-        this.values = Input.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> values;
+        private @Nullable Output<List<String>> values;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
     	      this.values = defaults.values;
         }
 
-        public Builder values(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Output<List<String>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<String> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public ListenerRuleHostHeaderConfigArgs build() {

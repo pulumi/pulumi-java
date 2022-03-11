@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.ResourceSetArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -134,14 +133,14 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceSet(String name, ResourceSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoveryreadiness:ResourceSet", name, args == null ? ResourceSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53recoveryreadiness:ResourceSet", name, args == null ? ResourceSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ResourceSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ResourceSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53recoveryreadiness:ResourceSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -156,7 +155,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ResourceSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ResourceSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ResourceSet(name, id, options);
     }
 }

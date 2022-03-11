@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-      private final @Nullable Input<String> alias;
+      private final @Nullable Output<String> alias;
 
-    public Input<String> getAlias() {
-        return this.alias == null ? Input.empty() : this.alias;
+    public Output<String> getAlias() {
+        return this.alias == null ? Output.empty() : this.alias;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-      private final Input<String> logicalId;
+      private final Output<String> logicalId;
 
-    public Input<String> getLogicalId() {
+    public Output<String> getLogicalId() {
         return this.logicalId;
     }
 
@@ -46,25 +46,25 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationState")
-      private final @Nullable Input<AssetPropertyNotificationState> notificationState;
+      private final @Nullable Output<AssetPropertyNotificationState> notificationState;
 
-    public Input<AssetPropertyNotificationState> getNotificationState() {
-        return this.notificationState == null ? Input.empty() : this.notificationState;
+    public Output<AssetPropertyNotificationState> getNotificationState() {
+        return this.notificationState == null ? Output.empty() : this.notificationState;
     }
 
     public AssetPropertyArgs(
-        @Nullable Input<String> alias,
-        Input<String> logicalId,
-        @Nullable Input<AssetPropertyNotificationState> notificationState) {
+        @Nullable Output<String> alias,
+        Output<String> logicalId,
+        @Nullable Output<AssetPropertyNotificationState> notificationState) {
         this.alias = alias;
         this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
         this.notificationState = notificationState;
     }
 
     private AssetPropertyArgs() {
-        this.alias = Input.empty();
-        this.logicalId = Input.empty();
-        this.notificationState = Input.empty();
+        this.alias = Output.empty();
+        this.logicalId = Output.empty();
+        this.notificationState = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alias;
-        private Input<String> logicalId;
-        private @Nullable Input<AssetPropertyNotificationState> notificationState;
+        private @Nullable Output<String> alias;
+        private Output<String> logicalId;
+        private @Nullable Output<AssetPropertyNotificationState> notificationState;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notificationState = defaults.notificationState;
         }
 
-        public Builder alias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Output<String> alias) {
             this.alias = alias;
             return this;
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = Input.ofNullable(alias);
+            this.alias = Output.ofNullable(alias);
             return this;
         }
 
-        public Builder logicalId(Input<String> logicalId) {
+        public Builder logicalId(Output<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
         public Builder logicalId(String logicalId) {
-            this.logicalId = Input.of(Objects.requireNonNull(logicalId));
+            this.logicalId = Output.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder notificationState(@Nullable Input<AssetPropertyNotificationState> notificationState) {
+        public Builder notificationState(@Nullable Output<AssetPropertyNotificationState> notificationState) {
             this.notificationState = notificationState;
             return this;
         }
 
         public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
-            this.notificationState = Input.ofNullable(notificationState);
+            this.notificationState = Output.ofNullable(notificationState);
             return this;
         }
         public AssetPropertyArgs build() {

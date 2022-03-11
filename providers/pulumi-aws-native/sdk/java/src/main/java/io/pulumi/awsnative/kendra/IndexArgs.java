@@ -10,7 +10,7 @@ import io.pulumi.awsnative.kendra.inputs.IndexDocumentMetadataConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexServerSideEncryptionConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexTagArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexUserTokenConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacityUnits")
-      private final @Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits;
+      private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
-    public Input<IndexCapacityUnitsConfigurationArgs> getCapacityUnits() {
-        return this.capacityUnits == null ? Input.empty() : this.capacityUnits;
+    public Output<IndexCapacityUnitsConfigurationArgs> getCapacityUnits() {
+        return this.capacityUnits == null ? Output.empty() : this.capacityUnits;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -49,30 +49,30 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentMetadataConfigurations")
-      private final @Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
+      private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
-    public Input<List<IndexDocumentMetadataConfigurationArgs>> getDocumentMetadataConfigurations() {
-        return this.documentMetadataConfigurations == null ? Input.empty() : this.documentMetadataConfigurations;
+    public Output<List<IndexDocumentMetadataConfigurationArgs>> getDocumentMetadataConfigurations() {
+        return this.documentMetadataConfigurations == null ? Output.empty() : this.documentMetadataConfigurations;
     }
 
     @InputImport(name="edition", required=true)
-      private final Input<IndexEdition> edition;
+      private final Output<IndexEdition> edition;
 
-    public Input<IndexEdition> getEdition() {
+    public Output<IndexEdition> getEdition() {
         return this.edition;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -81,10 +81,10 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverSideEncryptionConfiguration")
-      private final @Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+      private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
-    public Input<IndexServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Input.empty() : this.serverSideEncryptionConfiguration;
+    public Output<IndexServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
+        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
     }
 
     /**
@@ -92,37 +92,37 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<IndexTagArgs>> tags;
+      private final @Nullable Output<List<IndexTagArgs>> tags;
 
-    public Input<List<IndexTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<IndexTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="userContextPolicy")
-      private final @Nullable Input<IndexUserContextPolicy> userContextPolicy;
+      private final @Nullable Output<IndexUserContextPolicy> userContextPolicy;
 
-    public Input<IndexUserContextPolicy> getUserContextPolicy() {
-        return this.userContextPolicy == null ? Input.empty() : this.userContextPolicy;
+    public Output<IndexUserContextPolicy> getUserContextPolicy() {
+        return this.userContextPolicy == null ? Output.empty() : this.userContextPolicy;
     }
 
     @InputImport(name="userTokenConfigurations")
-      private final @Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
+      private final @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
-    public Input<List<IndexUserTokenConfigurationArgs>> getUserTokenConfigurations() {
-        return this.userTokenConfigurations == null ? Input.empty() : this.userTokenConfigurations;
+    public Output<List<IndexUserTokenConfigurationArgs>> getUserTokenConfigurations() {
+        return this.userTokenConfigurations == null ? Output.empty() : this.userTokenConfigurations;
     }
 
     public IndexArgs(
-        @Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits,
-        @Nullable Input<String> description,
-        @Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations,
-        Input<IndexEdition> edition,
-        @Nullable Input<String> name,
-        Input<String> roleArn,
-        @Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
-        @Nullable Input<List<IndexTagArgs>> tags,
-        @Nullable Input<IndexUserContextPolicy> userContextPolicy,
-        @Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
+        @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits,
+        @Nullable Output<String> description,
+        @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations,
+        Output<IndexEdition> edition,
+        @Nullable Output<String> name,
+        Output<String> roleArn,
+        @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration,
+        @Nullable Output<List<IndexTagArgs>> tags,
+        @Nullable Output<IndexUserContextPolicy> userContextPolicy,
+        @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
         this.capacityUnits = capacityUnits;
         this.description = description;
         this.documentMetadataConfigurations = documentMetadataConfigurations;
@@ -136,16 +136,16 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.capacityUnits = Input.empty();
-        this.description = Input.empty();
-        this.documentMetadataConfigurations = Input.empty();
-        this.edition = Input.empty();
-        this.name = Input.empty();
-        this.roleArn = Input.empty();
-        this.serverSideEncryptionConfiguration = Input.empty();
-        this.tags = Input.empty();
-        this.userContextPolicy = Input.empty();
-        this.userTokenConfigurations = Input.empty();
+        this.capacityUnits = Output.empty();
+        this.description = Output.empty();
+        this.documentMetadataConfigurations = Output.empty();
+        this.edition = Output.empty();
+        this.name = Output.empty();
+        this.roleArn = Output.empty();
+        this.serverSideEncryptionConfiguration = Output.empty();
+        this.tags = Output.empty();
+        this.userContextPolicy = Output.empty();
+        this.userTokenConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,16 +157,16 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
-        private Input<IndexEdition> edition;
-        private @Nullable Input<String> name;
-        private Input<String> roleArn;
-        private @Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
-        private @Nullable Input<List<IndexTagArgs>> tags;
-        private @Nullable Input<IndexUserContextPolicy> userContextPolicy;
-        private @Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
+        private @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
+        private Output<IndexEdition> edition;
+        private @Nullable Output<String> name;
+        private Output<String> roleArn;
+        private @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
+        private @Nullable Output<List<IndexTagArgs>> tags;
+        private @Nullable Output<IndexUserContextPolicy> userContextPolicy;
+        private @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
         public Builder() {
     	      // Empty
@@ -186,103 +186,103 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userTokenConfigurations = defaults.userTokenConfigurations;
         }
 
-        public Builder capacityUnits(@Nullable Input<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
+        public Builder capacityUnits(@Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits) {
             this.capacityUnits = capacityUnits;
             return this;
         }
 
         public Builder capacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
-            this.capacityUnits = Input.ofNullable(capacityUnits);
+            this.capacityUnits = Output.ofNullable(capacityUnits);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder documentMetadataConfigurations(@Nullable Input<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
+        public Builder documentMetadataConfigurations(@Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
 
         public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
-            this.documentMetadataConfigurations = Input.ofNullable(documentMetadataConfigurations);
+            this.documentMetadataConfigurations = Output.ofNullable(documentMetadataConfigurations);
             return this;
         }
 
-        public Builder edition(Input<IndexEdition> edition) {
+        public Builder edition(Output<IndexEdition> edition) {
             this.edition = Objects.requireNonNull(edition);
             return this;
         }
 
         public Builder edition(IndexEdition edition) {
-            this.edition = Input.of(Objects.requireNonNull(edition));
+            this.edition = Output.of(Objects.requireNonNull(edition));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder serverSideEncryptionConfiguration(@Nullable Input<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
         public Builder serverSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<IndexTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<IndexTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<IndexTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder userContextPolicy(@Nullable Input<IndexUserContextPolicy> userContextPolicy) {
+        public Builder userContextPolicy(@Nullable Output<IndexUserContextPolicy> userContextPolicy) {
             this.userContextPolicy = userContextPolicy;
             return this;
         }
 
         public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
-            this.userContextPolicy = Input.ofNullable(userContextPolicy);
+            this.userContextPolicy = Output.ofNullable(userContextPolicy);
             return this;
         }
 
-        public Builder userTokenConfigurations(@Nullable Input<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
+        public Builder userTokenConfigurations(@Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }
 
         public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
-            this.userTokenConfigurations = Input.ofNullable(userTokenConfigurations);
+            this.userTokenConfigurations = Output.ofNullable(userTokenConfigurations);
             return this;
         }
         public IndexArgs build() {

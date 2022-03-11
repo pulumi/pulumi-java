@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
     public static final IndexServerSideEncryptionConfigurationArgs Empty = new IndexServerSideEncryptionConfigurationArgs();
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
-    public IndexServerSideEncryptionConfigurationArgs(@Nullable Input<String> kmsKeyId) {
+    public IndexServerSideEncryptionConfigurationArgs(@Nullable Output<String> kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 
     private IndexServerSideEncryptionConfigurationArgs() {
-        this.kmsKeyId = Input.empty();
+        this.kmsKeyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
+        private @Nullable Output<String> kmsKeyId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class IndexServerSideEncryptionConfigurationArgs extends io.pulumi.
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
         public IndexServerSideEncryptionConfigurationArgs build() {

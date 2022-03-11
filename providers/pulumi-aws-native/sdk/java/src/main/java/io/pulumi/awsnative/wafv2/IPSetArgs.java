@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2;
 import io.pulumi.awsnative.wafv2.enums.IPSetIPAddressVersion;
 import io.pulumi.awsnative.wafv2.enums.IPSetScope;
 import io.pulumi.awsnative.wafv2.inputs.IPSetTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,54 +23,54 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses", required=true)
-      private final Input<List<String>> addresses;
+      private final Output<List<String>> addresses;
 
-    public Input<List<String>> getAddresses() {
+    public Output<List<String>> getAddresses() {
         return this.addresses;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="iPAddressVersion", required=true)
-      private final Input<IPSetIPAddressVersion> iPAddressVersion;
+      private final Output<IPSetIPAddressVersion> iPAddressVersion;
 
-    public Input<IPSetIPAddressVersion> getIPAddressVersion() {
+    public Output<IPSetIPAddressVersion> getIPAddressVersion() {
         return this.iPAddressVersion;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="scope", required=true)
-      private final Input<IPSetScope> scope;
+      private final Output<IPSetScope> scope;
 
-    public Input<IPSetScope> getScope() {
+    public Output<IPSetScope> getScope() {
         return this.scope;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<IPSetTagArgs>> tags;
+      private final @Nullable Output<List<IPSetTagArgs>> tags;
 
-    public Input<List<IPSetTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<IPSetTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public IPSetArgs(
-        Input<List<String>> addresses,
-        @Nullable Input<String> description,
-        Input<IPSetIPAddressVersion> iPAddressVersion,
-        @Nullable Input<String> name,
-        Input<IPSetScope> scope,
-        @Nullable Input<List<IPSetTagArgs>> tags) {
+        Output<List<String>> addresses,
+        @Nullable Output<String> description,
+        Output<IPSetIPAddressVersion> iPAddressVersion,
+        @Nullable Output<String> name,
+        Output<IPSetScope> scope,
+        @Nullable Output<List<IPSetTagArgs>> tags) {
         this.addresses = Objects.requireNonNull(addresses, "expected parameter 'addresses' to be non-null");
         this.description = description;
         this.iPAddressVersion = Objects.requireNonNull(iPAddressVersion, "expected parameter 'iPAddressVersion' to be non-null");
@@ -80,12 +80,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPSetArgs() {
-        this.addresses = Input.empty();
-        this.description = Input.empty();
-        this.iPAddressVersion = Input.empty();
-        this.name = Input.empty();
-        this.scope = Input.empty();
-        this.tags = Input.empty();
+        this.addresses = Output.empty();
+        this.description = Output.empty();
+        this.iPAddressVersion = Output.empty();
+        this.name = Output.empty();
+        this.scope = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,12 +97,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> addresses;
-        private @Nullable Input<String> description;
-        private Input<IPSetIPAddressVersion> iPAddressVersion;
-        private @Nullable Input<String> name;
-        private Input<IPSetScope> scope;
-        private @Nullable Input<List<IPSetTagArgs>> tags;
+        private Output<List<String>> addresses;
+        private @Nullable Output<String> description;
+        private Output<IPSetIPAddressVersion> iPAddressVersion;
+        private @Nullable Output<String> name;
+        private Output<IPSetScope> scope;
+        private @Nullable Output<List<IPSetTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -118,63 +118,63 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder addresses(Input<List<String>> addresses) {
+        public Builder addresses(Output<List<String>> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
         public Builder addresses(List<String> addresses) {
-            this.addresses = Input.of(Objects.requireNonNull(addresses));
+            this.addresses = Output.of(Objects.requireNonNull(addresses));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder iPAddressVersion(Input<IPSetIPAddressVersion> iPAddressVersion) {
+        public Builder iPAddressVersion(Output<IPSetIPAddressVersion> iPAddressVersion) {
             this.iPAddressVersion = Objects.requireNonNull(iPAddressVersion);
             return this;
         }
 
         public Builder iPAddressVersion(IPSetIPAddressVersion iPAddressVersion) {
-            this.iPAddressVersion = Input.of(Objects.requireNonNull(iPAddressVersion));
+            this.iPAddressVersion = Output.of(Objects.requireNonNull(iPAddressVersion));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder scope(Input<IPSetScope> scope) {
+        public Builder scope(Output<IPSetScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(IPSetScope scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<IPSetTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<IPSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<IPSetTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public IPSetArgs build() {

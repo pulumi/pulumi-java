@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyPortalArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyProjectArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,29 +20,29 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     public static final AccessPolicyResourceArgs Empty = new AccessPolicyResourceArgs();
 
     @InputImport(name="portal")
-      private final @Nullable Input<AccessPolicyPortalArgs> portal;
+      private final @Nullable Output<AccessPolicyPortalArgs> portal;
 
-    public Input<AccessPolicyPortalArgs> getPortal() {
-        return this.portal == null ? Input.empty() : this.portal;
+    public Output<AccessPolicyPortalArgs> getPortal() {
+        return this.portal == null ? Output.empty() : this.portal;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<AccessPolicyProjectArgs> project;
+      private final @Nullable Output<AccessPolicyProjectArgs> project;
 
-    public Input<AccessPolicyProjectArgs> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<AccessPolicyProjectArgs> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AccessPolicyResourceArgs(
-        @Nullable Input<AccessPolicyPortalArgs> portal,
-        @Nullable Input<AccessPolicyProjectArgs> project) {
+        @Nullable Output<AccessPolicyPortalArgs> portal,
+        @Nullable Output<AccessPolicyProjectArgs> project) {
         this.portal = portal;
         this.project = project;
     }
 
     private AccessPolicyResourceArgs() {
-        this.portal = Input.empty();
-        this.project = Input.empty();
+        this.portal = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AccessPolicyPortalArgs> portal;
-        private @Nullable Input<AccessPolicyProjectArgs> project;
+        private @Nullable Output<AccessPolicyPortalArgs> portal;
+        private @Nullable Output<AccessPolicyProjectArgs> project;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class AccessPolicyResourceArgs extends io.pulumi.resources.Resource
     	      this.project = defaults.project;
         }
 
-        public Builder portal(@Nullable Input<AccessPolicyPortalArgs> portal) {
+        public Builder portal(@Nullable Output<AccessPolicyPortalArgs> portal) {
             this.portal = portal;
             return this;
         }
 
         public Builder portal(@Nullable AccessPolicyPortalArgs portal) {
-            this.portal = Input.ofNullable(portal);
+            this.portal = Output.ofNullable(portal);
             return this;
         }
 
-        public Builder project(@Nullable Input<AccessPolicyProjectArgs> project) {
+        public Builder project(@Nullable Output<AccessPolicyProjectArgs> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable AccessPolicyProjectArgs project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AccessPolicyResourceArgs build() {

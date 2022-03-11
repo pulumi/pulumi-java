@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountId", required=true)
-      private final Input<String> accountId;
+      private final Output<String> accountId;
 
-    public Input<String> getAccountId() {
+    public Output<String> getAccountId() {
         return this.accountId;
     }
 
@@ -37,17 +37,17 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="encryption")
-      private final @Nullable Input<StorageLensEncryptionArgs> encryption;
+      private final @Nullable Output<StorageLensEncryptionArgs> encryption;
 
-    public Input<StorageLensEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<StorageLensEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="format", required=true)
-      private final Input<StorageLensS3BucketDestinationFormat> format;
+      private final Output<StorageLensS3BucketDestinationFormat> format;
 
-    public Input<StorageLensS3BucketDestinationFormat> getFormat() {
+    public Output<StorageLensS3BucketDestinationFormat> getFormat() {
         return this.format;
     }
 
@@ -66,9 +66,9 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="outputSchemaVersion", required=true)
-      private final Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
+      private final Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
 
-    public Input<StorageLensS3BucketDestinationOutputSchemaVersion> getOutputSchemaVersion() {
+    public Output<StorageLensS3BucketDestinationOutputSchemaVersion> getOutputSchemaVersion() {
         return this.outputSchemaVersion;
     }
 
@@ -77,19 +77,19 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     public StorageLensS3BucketDestinationArgs(
-        Input<String> accountId,
-        Input<String> arn,
-        @Nullable Input<StorageLensEncryptionArgs> encryption,
-        Input<StorageLensS3BucketDestinationFormat> format,
-        Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion,
-        @Nullable Input<String> prefix) {
+        Output<String> accountId,
+        Output<String> arn,
+        @Nullable Output<StorageLensEncryptionArgs> encryption,
+        Output<StorageLensS3BucketDestinationFormat> format,
+        Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion,
+        @Nullable Output<String> prefix) {
         this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.encryption = encryption;
@@ -99,12 +99,12 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
     }
 
     private StorageLensS3BucketDestinationArgs() {
-        this.accountId = Input.empty();
-        this.arn = Input.empty();
-        this.encryption = Input.empty();
-        this.format = Input.empty();
-        this.outputSchemaVersion = Input.empty();
-        this.prefix = Input.empty();
+        this.accountId = Output.empty();
+        this.arn = Output.empty();
+        this.encryption = Output.empty();
+        this.format = Output.empty();
+        this.outputSchemaVersion = Output.empty();
+        this.prefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> accountId;
-        private Input<String> arn;
-        private @Nullable Input<StorageLensEncryptionArgs> encryption;
-        private Input<StorageLensS3BucketDestinationFormat> format;
-        private Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
-        private @Nullable Input<String> prefix;
+        private Output<String> accountId;
+        private Output<String> arn;
+        private @Nullable Output<StorageLensEncryptionArgs> encryption;
+        private Output<StorageLensS3BucketDestinationFormat> format;
+        private Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion;
+        private @Nullable Output<String> prefix;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder accountId(Input<String> accountId) {
+        public Builder accountId(Output<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Input.of(Objects.requireNonNull(accountId));
+            this.accountId = Output.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder encryption(@Nullable Input<StorageLensEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<StorageLensEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable StorageLensEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder format(Input<StorageLensS3BucketDestinationFormat> format) {
+        public Builder format(Output<StorageLensS3BucketDestinationFormat> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
         public Builder format(StorageLensS3BucketDestinationFormat format) {
-            this.format = Input.of(Objects.requireNonNull(format));
+            this.format = Output.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder outputSchemaVersion(Input<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion) {
+        public Builder outputSchemaVersion(Output<StorageLensS3BucketDestinationOutputSchemaVersion> outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
 
         public Builder outputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
-            this.outputSchemaVersion = Input.of(Objects.requireNonNull(outputSchemaVersion));
+            this.outputSchemaVersion = Output.of(Objects.requireNonNull(outputSchemaVersion));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
         public StorageLensS3BucketDestinationArgs build() {

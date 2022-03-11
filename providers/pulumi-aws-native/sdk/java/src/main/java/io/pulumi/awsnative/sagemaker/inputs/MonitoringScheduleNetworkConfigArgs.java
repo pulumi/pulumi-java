@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleVpcConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class MonitoringScheduleNetworkConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enableInterContainerTrafficEncryption")
-      private final @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
+      private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
-    public Input<Boolean> getEnableInterContainerTrafficEncryption() {
-        return this.enableInterContainerTrafficEncryption == null ? Input.empty() : this.enableInterContainerTrafficEncryption;
+    public Output<Boolean> getEnableInterContainerTrafficEncryption() {
+        return this.enableInterContainerTrafficEncryption == null ? Output.empty() : this.enableInterContainerTrafficEncryption;
     }
 
     /**
@@ -35,32 +35,32 @@ public final class MonitoringScheduleNetworkConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-      private final @Nullable Input<Boolean> enableNetworkIsolation;
+      private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Input<Boolean> getEnableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
+    public Output<Boolean> getEnableNetworkIsolation() {
+        return this.enableNetworkIsolation == null ? Output.empty() : this.enableNetworkIsolation;
     }
 
     @InputImport(name="vpcConfig")
-      private final @Nullable Input<MonitoringScheduleVpcConfigArgs> vpcConfig;
+      private final @Nullable Output<MonitoringScheduleVpcConfigArgs> vpcConfig;
 
-    public Input<MonitoringScheduleVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
+    public Output<MonitoringScheduleVpcConfigArgs> getVpcConfig() {
+        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
     }
 
     public MonitoringScheduleNetworkConfigArgs(
-        @Nullable Input<Boolean> enableInterContainerTrafficEncryption,
-        @Nullable Input<Boolean> enableNetworkIsolation,
-        @Nullable Input<MonitoringScheduleVpcConfigArgs> vpcConfig) {
+        @Nullable Output<Boolean> enableInterContainerTrafficEncryption,
+        @Nullable Output<Boolean> enableNetworkIsolation,
+        @Nullable Output<MonitoringScheduleVpcConfigArgs> vpcConfig) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.vpcConfig = vpcConfig;
     }
 
     private MonitoringScheduleNetworkConfigArgs() {
-        this.enableInterContainerTrafficEncryption = Input.empty();
-        this.enableNetworkIsolation = Input.empty();
-        this.vpcConfig = Input.empty();
+        this.enableInterContainerTrafficEncryption = Output.empty();
+        this.enableNetworkIsolation = Output.empty();
+        this.vpcConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class MonitoringScheduleNetworkConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
-        private @Nullable Input<Boolean> enableNetworkIsolation;
-        private @Nullable Input<MonitoringScheduleVpcConfigArgs> vpcConfig;
+        private @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
+        private @Nullable Output<Boolean> enableNetworkIsolation;
+        private @Nullable Output<MonitoringScheduleVpcConfigArgs> vpcConfig;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class MonitoringScheduleNetworkConfigArgs extends io.pulumi.resourc
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder enableInterContainerTrafficEncryption(@Nullable Input<Boolean> enableInterContainerTrafficEncryption) {
+        public Builder enableInterContainerTrafficEncryption(@Nullable Output<Boolean> enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
-            this.enableInterContainerTrafficEncryption = Input.ofNullable(enableInterContainerTrafficEncryption);
+            this.enableInterContainerTrafficEncryption = Output.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
 
-        public Builder enableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Input.ofNullable(enableNetworkIsolation);
+            this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
             return this;
         }
 
-        public Builder vpcConfig(@Nullable Input<MonitoringScheduleVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Output<MonitoringScheduleVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
         public Builder vpcConfig(@Nullable MonitoringScheduleVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Input.ofNullable(vpcConfig);
+            this.vpcConfig = Output.ofNullable(vpcConfig);
             return this;
         }
         public MonitoringScheduleNetworkConfigArgs build() {

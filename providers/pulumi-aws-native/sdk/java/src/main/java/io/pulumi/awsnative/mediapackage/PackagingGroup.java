@@ -8,7 +8,6 @@ import io.pulumi.awsnative.mediapackage.PackagingGroupArgs;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupAuthorization;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupLogConfiguration;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingGroupTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,14 +130,14 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PackagingGroup(String name, @Nullable PackagingGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:mediapackage:PackagingGroup", name, args == null ? PackagingGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PackagingGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PackagingGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:mediapackage:PackagingGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -153,7 +152,7 @@ public class PackagingGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PackagingGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PackagingGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PackagingGroup(name, id, options);
     }
 }

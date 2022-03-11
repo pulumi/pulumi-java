@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceTemplateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     public static final AnalysisSourceEntityArgs Empty = new AnalysisSourceEntityArgs();
 
     @InputImport(name="sourceTemplate")
-      private final @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
+      private final @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
 
-    public Input<AnalysisSourceTemplateArgs> getSourceTemplate() {
-        return this.sourceTemplate == null ? Input.empty() : this.sourceTemplate;
+    public Output<AnalysisSourceTemplateArgs> getSourceTemplate() {
+        return this.sourceTemplate == null ? Output.empty() : this.sourceTemplate;
     }
 
-    public AnalysisSourceEntityArgs(@Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate) {
+    public AnalysisSourceEntityArgs(@Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 
     private AnalysisSourceEntityArgs() {
-        this.sourceTemplate = Input.empty();
+        this.sourceTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
+        private @Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder sourceTemplate(@Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate) {
+        public Builder sourceTemplate(@Nullable Output<AnalysisSourceTemplateArgs> sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
 
         public Builder sourceTemplate(@Nullable AnalysisSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Input.ofNullable(sourceTemplate);
+            this.sourceTemplate = Output.ofNullable(sourceTemplate);
             return this;
         }
         public AnalysisSourceEntityArgs build() {

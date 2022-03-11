@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ivs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
     public static final RecordingConfigurationS3DestinationConfigurationArgs Empty = new RecordingConfigurationS3DestinationConfigurationArgs();
 
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    public RecordingConfigurationS3DestinationConfigurationArgs(Input<String> bucketName) {
+    public RecordingConfigurationS3DestinationConfigurationArgs(Output<String> bucketName) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
     }
 
     private RecordingConfigurationS3DestinationConfigurationArgs() {
-        this.bucketName = Input.empty();
+        this.bucketName = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
+        private Output<String> bucketName;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RecordingConfigurationS3DestinationConfigurationArgs extends 
     	      this.bucketName = defaults.bucketName;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
         public RecordingConfigurationS3DestinationConfigurationArgs build() {

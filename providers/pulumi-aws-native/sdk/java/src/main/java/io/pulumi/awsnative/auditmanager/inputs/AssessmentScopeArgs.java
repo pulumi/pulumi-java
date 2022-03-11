@@ -5,7 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsAccounts")
-      private final @Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts;
+      private final @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
 
-    public Input<List<AssessmentAWSAccountArgs>> getAwsAccounts() {
-        return this.awsAccounts == null ? Input.empty() : this.awsAccounts;
+    public Output<List<AssessmentAWSAccountArgs>> getAwsAccounts() {
+        return this.awsAccounts == null ? Output.empty() : this.awsAccounts;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="awsServices")
-      private final @Nullable Input<List<AssessmentAWSServiceArgs>> awsServices;
+      private final @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
-    public Input<List<AssessmentAWSServiceArgs>> getAwsServices() {
-        return this.awsServices == null ? Input.empty() : this.awsServices;
+    public Output<List<AssessmentAWSServiceArgs>> getAwsServices() {
+        return this.awsServices == null ? Output.empty() : this.awsServices;
     }
 
     public AssessmentScopeArgs(
-        @Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts,
-        @Nullable Input<List<AssessmentAWSServiceArgs>> awsServices) {
+        @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts,
+        @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
         this.awsAccounts = awsAccounts;
         this.awsServices = awsServices;
     }
 
     private AssessmentScopeArgs() {
-        this.awsAccounts = Input.empty();
-        this.awsServices = Input.empty();
+        this.awsAccounts = Output.empty();
+        this.awsServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts;
-        private @Nullable Input<List<AssessmentAWSServiceArgs>> awsServices;
+        private @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
+        private @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.awsServices = defaults.awsServices;
         }
 
-        public Builder awsAccounts(@Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts) {
+        public Builder awsAccounts(@Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts) {
             this.awsAccounts = awsAccounts;
             return this;
         }
 
         public Builder awsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
-            this.awsAccounts = Input.ofNullable(awsAccounts);
+            this.awsAccounts = Output.ofNullable(awsAccounts);
             return this;
         }
 
-        public Builder awsServices(@Nullable Input<List<AssessmentAWSServiceArgs>> awsServices) {
+        public Builder awsServices(@Nullable Output<List<AssessmentAWSServiceArgs>> awsServices) {
             this.awsServices = awsServices;
             return this;
         }
 
         public Builder awsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
-            this.awsServices = Input.ofNullable(awsServices);
+            this.awsServices = Output.ofNullable(awsServices);
             return this;
         }
         public AssessmentScopeArgs build() {

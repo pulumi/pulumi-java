@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppBlockTagArgs Empty = new AppBlockTagArgs();
 
     @InputImport(name="tagKey", required=true)
-      private final Input<String> tagKey;
+      private final Output<String> tagKey;
 
-    public Input<String> getTagKey() {
+    public Output<String> getTagKey() {
         return this.tagKey;
     }
 
     @InputImport(name="tagValue", required=true)
-      private final Input<String> tagValue;
+      private final Output<String> tagValue;
 
-    public Input<String> getTagValue() {
+    public Output<String> getTagValue() {
         return this.tagValue;
     }
 
     public AppBlockTagArgs(
-        Input<String> tagKey,
-        Input<String> tagValue) {
+        Output<String> tagKey,
+        Output<String> tagValue) {
         this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
         this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
     }
 
     private AppBlockTagArgs() {
-        this.tagKey = Input.empty();
-        this.tagValue = Input.empty();
+        this.tagKey = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> tagKey;
-        private Input<String> tagValue;
+        private Output<String> tagKey;
+        private Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder tagKey(Input<String> tagKey) {
+        public Builder tagKey(Output<String> tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
         public Builder tagKey(String tagKey) {
-            this.tagKey = Input.of(Objects.requireNonNull(tagKey));
+            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
             return this;
         }
 
-        public Builder tagValue(Input<String> tagValue) {
+        public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
         public Builder tagValue(String tagValue) {
-            this.tagValue = Input.of(Objects.requireNonNull(tagValue));
+            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
         }
         public AppBlockTagArgs build() {

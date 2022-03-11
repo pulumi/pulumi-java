@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
     public static final IntegrationSalesforceSourcePropertiesArgs Empty = new IntegrationSalesforceSourcePropertiesArgs();
 
     @InputImport(name="enableDynamicFieldUpdate")
-      private final @Nullable Input<Boolean> enableDynamicFieldUpdate;
+      private final @Nullable Output<Boolean> enableDynamicFieldUpdate;
 
-    public Input<Boolean> getEnableDynamicFieldUpdate() {
-        return this.enableDynamicFieldUpdate == null ? Input.empty() : this.enableDynamicFieldUpdate;
+    public Output<Boolean> getEnableDynamicFieldUpdate() {
+        return this.enableDynamicFieldUpdate == null ? Output.empty() : this.enableDynamicFieldUpdate;
     }
 
     @InputImport(name="includeDeletedRecords")
-      private final @Nullable Input<Boolean> includeDeletedRecords;
+      private final @Nullable Output<Boolean> includeDeletedRecords;
 
-    public Input<Boolean> getIncludeDeletedRecords() {
-        return this.includeDeletedRecords == null ? Input.empty() : this.includeDeletedRecords;
+    public Output<Boolean> getIncludeDeletedRecords() {
+        return this.includeDeletedRecords == null ? Output.empty() : this.includeDeletedRecords;
     }
 
     @InputImport(name="object", required=true)
-      private final Input<String> object;
+      private final Output<String> object;
 
-    public Input<String> getObject() {
+    public Output<String> getObject() {
         return this.object;
     }
 
     public IntegrationSalesforceSourcePropertiesArgs(
-        @Nullable Input<Boolean> enableDynamicFieldUpdate,
-        @Nullable Input<Boolean> includeDeletedRecords,
-        Input<String> object) {
+        @Nullable Output<Boolean> enableDynamicFieldUpdate,
+        @Nullable Output<Boolean> includeDeletedRecords,
+        Output<String> object) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         this.includeDeletedRecords = includeDeletedRecords;
         this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
     }
 
     private IntegrationSalesforceSourcePropertiesArgs() {
-        this.enableDynamicFieldUpdate = Input.empty();
-        this.includeDeletedRecords = Input.empty();
-        this.object = Input.empty();
+        this.enableDynamicFieldUpdate = Output.empty();
+        this.includeDeletedRecords = Output.empty();
+        this.object = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableDynamicFieldUpdate;
-        private @Nullable Input<Boolean> includeDeletedRecords;
-        private Input<String> object;
+        private @Nullable Output<Boolean> enableDynamicFieldUpdate;
+        private @Nullable Output<Boolean> includeDeletedRecords;
+        private Output<String> object;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class IntegrationSalesforceSourcePropertiesArgs extends io.pulumi.r
     	      this.object = defaults.object;
         }
 
-        public Builder enableDynamicFieldUpdate(@Nullable Input<Boolean> enableDynamicFieldUpdate) {
+        public Builder enableDynamicFieldUpdate(@Nullable Output<Boolean> enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
 
         public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
-            this.enableDynamicFieldUpdate = Input.ofNullable(enableDynamicFieldUpdate);
+            this.enableDynamicFieldUpdate = Output.ofNullable(enableDynamicFieldUpdate);
             return this;
         }
 
-        public Builder includeDeletedRecords(@Nullable Input<Boolean> includeDeletedRecords) {
+        public Builder includeDeletedRecords(@Nullable Output<Boolean> includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
 
         public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
-            this.includeDeletedRecords = Input.ofNullable(includeDeletedRecords);
+            this.includeDeletedRecords = Output.ofNullable(includeDeletedRecords);
             return this;
         }
 
-        public Builder object(Input<String> object) {
+        public Builder object(Output<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
         public Builder object(String object) {
-            this.object = Input.of(Objects.requireNonNull(object));
+            this.object = Output.of(Objects.requireNonNull(object));
             return this;
         }
         public IntegrationSalesforceSourcePropertiesArgs build() {

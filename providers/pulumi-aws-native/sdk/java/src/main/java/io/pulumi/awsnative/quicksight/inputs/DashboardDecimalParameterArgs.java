@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class DashboardDecimalParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class DashboardDecimalParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="values", required=true)
-      private final Input<List<Double>> values;
+      private final Output<List<Double>> values;
 
-    public Input<List<Double>> getValues() {
+    public Output<List<Double>> getValues() {
         return this.values;
     }
 
     public DashboardDecimalParameterArgs(
-        Input<String> name,
-        Input<List<Double>> values) {
+        Output<String> name,
+        Output<List<Double>> values) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
     }
 
     private DashboardDecimalParameterArgs() {
-        this.name = Input.empty();
-        this.values = Input.empty();
+        this.name = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DashboardDecimalParameterArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<List<Double>> values;
+        private Output<String> name;
+        private Output<List<Double>> values;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DashboardDecimalParameterArgs extends io.pulumi.resources.Res
     	      this.values = defaults.values;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder values(Input<List<Double>> values) {
+        public Builder values(Output<List<Double>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
         public Builder values(List<Double> values) {
-            this.values = Input.of(Objects.requireNonNull(values));
+            this.values = Output.of(Objects.requireNonNull(values));
             return this;
         }
         public DashboardDecimalParameterArgs build() {

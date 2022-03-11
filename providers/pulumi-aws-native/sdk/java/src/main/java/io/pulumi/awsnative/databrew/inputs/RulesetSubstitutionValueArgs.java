@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
@@ -33,22 +33,22 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="valueReference", required=true)
-      private final Input<String> valueReference;
+      private final Output<String> valueReference;
 
-    public Input<String> getValueReference() {
+    public Output<String> getValueReference() {
         return this.valueReference;
     }
 
     public RulesetSubstitutionValueArgs(
-        Input<String> value,
-        Input<String> valueReference) {
+        Output<String> value,
+        Output<String> valueReference) {
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
         this.valueReference = Objects.requireNonNull(valueReference, "expected parameter 'valueReference' to be non-null");
     }
 
     private RulesetSubstitutionValueArgs() {
-        this.value = Input.empty();
-        this.valueReference = Input.empty();
+        this.value = Output.empty();
+        this.valueReference = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> value;
-        private Input<String> valueReference;
+        private Output<String> value;
+        private Output<String> valueReference;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
     	      this.valueReference = defaults.valueReference;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
 
-        public Builder valueReference(Input<String> valueReference) {
+        public Builder valueReference(Output<String> valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }
 
         public Builder valueReference(String valueReference) {
-            this.valueReference = Input.of(Objects.requireNonNull(valueReference));
+            this.valueReference = Output.of(Objects.requireNonNull(valueReference));
             return this;
         }
         public RulesetSubstitutionValueArgs build() {

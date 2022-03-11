@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dimensionName", required=true)
-      private final Input<String> dimensionName;
+      private final Output<String> dimensionName;
 
-    public Input<String> getDimensionName() {
+    public Output<String> getDimensionName() {
         return this.dimensionName;
     }
 
@@ -35,22 +35,22 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<SecurityProfileMetricDimensionOperator> operator;
+      private final @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
-    public Input<SecurityProfileMetricDimensionOperator> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<SecurityProfileMetricDimensionOperator> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     public SecurityProfileMetricDimensionArgs(
-        Input<String> dimensionName,
-        @Nullable Input<SecurityProfileMetricDimensionOperator> operator) {
+        Output<String> dimensionName,
+        @Nullable Output<SecurityProfileMetricDimensionOperator> operator) {
         this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
         this.operator = operator;
     }
 
     private SecurityProfileMetricDimensionArgs() {
-        this.dimensionName = Input.empty();
-        this.operator = Input.empty();
+        this.dimensionName = Output.empty();
+        this.operator = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> dimensionName;
-        private @Nullable Input<SecurityProfileMetricDimensionOperator> operator;
+        private Output<String> dimensionName;
+        private @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
     	      this.operator = defaults.operator;
         }
 
-        public Builder dimensionName(Input<String> dimensionName) {
+        public Builder dimensionName(Output<String> dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Input.of(Objects.requireNonNull(dimensionName));
+            this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
             return this;
         }
 
-        public Builder operator(@Nullable Input<SecurityProfileMetricDimensionOperator> operator) {
+        public Builder operator(@Nullable Output<SecurityProfileMetricDimensionOperator> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable SecurityProfileMetricDimensionOperator operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
         public SecurityProfileMetricDimensionArgs build() {

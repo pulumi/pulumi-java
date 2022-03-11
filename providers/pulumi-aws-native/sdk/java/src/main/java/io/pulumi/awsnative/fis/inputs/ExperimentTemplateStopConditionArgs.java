@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ExperimentTemplateStopConditionArgs extends io.pulumi.resourc
     public static final ExperimentTemplateStopConditionArgs Empty = new ExperimentTemplateStopConditionArgs();
 
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ExperimentTemplateStopConditionArgs(
-        Input<String> source,
-        @Nullable Input<String> value) {
+        Output<String> source,
+        @Nullable Output<String> value) {
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
         this.value = value;
     }
 
     private ExperimentTemplateStopConditionArgs() {
-        this.source = Input.empty();
-        this.value = Input.empty();
+        this.source = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ExperimentTemplateStopConditionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<String> source;
-        private @Nullable Input<String> value;
+        private Output<String> source;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ExperimentTemplateStopConditionArgs extends io.pulumi.resourc
     	      this.value = defaults.value;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ExperimentTemplateStopConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.finspace.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="applicationCallBackURL")
-      private final @Nullable Input<String> applicationCallBackURL;
+      private final @Nullable Output<String> applicationCallBackURL;
 
-    public Input<String> getApplicationCallBackURL() {
-        return this.applicationCallBackURL == null ? Input.empty() : this.applicationCallBackURL;
+    public Output<String> getApplicationCallBackURL() {
+        return this.applicationCallBackURL == null ? Output.empty() : this.applicationCallBackURL;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="attributeMap")
-      private final @Nullable Input<Object> attributeMap;
+      private final @Nullable Output<Object> attributeMap;
 
-    public Input<Object> getAttributeMap() {
-        return this.attributeMap == null ? Input.empty() : this.attributeMap;
+    public Output<Object> getAttributeMap() {
+        return this.attributeMap == null ? Output.empty() : this.attributeMap;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="federationProviderName")
-      private final @Nullable Input<String> federationProviderName;
+      private final @Nullable Output<String> federationProviderName;
 
-    public Input<String> getFederationProviderName() {
-        return this.federationProviderName == null ? Input.empty() : this.federationProviderName;
+    public Output<String> getFederationProviderName() {
+        return this.federationProviderName == null ? Output.empty() : this.federationProviderName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="federationURN")
-      private final @Nullable Input<String> federationURN;
+      private final @Nullable Output<String> federationURN;
 
-    public Input<String> getFederationURN() {
-        return this.federationURN == null ? Input.empty() : this.federationURN;
+    public Output<String> getFederationURN() {
+        return this.federationURN == null ? Output.empty() : this.federationURN;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="samlMetadataDocument")
-      private final @Nullable Input<String> samlMetadataDocument;
+      private final @Nullable Output<String> samlMetadataDocument;
 
-    public Input<String> getSamlMetadataDocument() {
-        return this.samlMetadataDocument == null ? Input.empty() : this.samlMetadataDocument;
+    public Output<String> getSamlMetadataDocument() {
+        return this.samlMetadataDocument == null ? Output.empty() : this.samlMetadataDocument;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="samlMetadataURL")
-      private final @Nullable Input<String> samlMetadataURL;
+      private final @Nullable Output<String> samlMetadataURL;
 
-    public Input<String> getSamlMetadataURL() {
-        return this.samlMetadataURL == null ? Input.empty() : this.samlMetadataURL;
+    public Output<String> getSamlMetadataURL() {
+        return this.samlMetadataURL == null ? Output.empty() : this.samlMetadataURL;
     }
 
     public EnvironmentFederationParametersArgs(
-        @Nullable Input<String> applicationCallBackURL,
-        @Nullable Input<Object> attributeMap,
-        @Nullable Input<String> federationProviderName,
-        @Nullable Input<String> federationURN,
-        @Nullable Input<String> samlMetadataDocument,
-        @Nullable Input<String> samlMetadataURL) {
+        @Nullable Output<String> applicationCallBackURL,
+        @Nullable Output<Object> attributeMap,
+        @Nullable Output<String> federationProviderName,
+        @Nullable Output<String> federationURN,
+        @Nullable Output<String> samlMetadataDocument,
+        @Nullable Output<String> samlMetadataURL) {
         this.applicationCallBackURL = applicationCallBackURL;
         this.attributeMap = attributeMap;
         this.federationProviderName = federationProviderName;
@@ -101,12 +101,12 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
     }
 
     private EnvironmentFederationParametersArgs() {
-        this.applicationCallBackURL = Input.empty();
-        this.attributeMap = Input.empty();
-        this.federationProviderName = Input.empty();
-        this.federationURN = Input.empty();
-        this.samlMetadataDocument = Input.empty();
-        this.samlMetadataURL = Input.empty();
+        this.applicationCallBackURL = Output.empty();
+        this.attributeMap = Output.empty();
+        this.federationProviderName = Output.empty();
+        this.federationURN = Output.empty();
+        this.samlMetadataDocument = Output.empty();
+        this.samlMetadataURL = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationCallBackURL;
-        private @Nullable Input<Object> attributeMap;
-        private @Nullable Input<String> federationProviderName;
-        private @Nullable Input<String> federationURN;
-        private @Nullable Input<String> samlMetadataDocument;
-        private @Nullable Input<String> samlMetadataURL;
+        private @Nullable Output<String> applicationCallBackURL;
+        private @Nullable Output<Object> attributeMap;
+        private @Nullable Output<String> federationProviderName;
+        private @Nullable Output<String> federationURN;
+        private @Nullable Output<String> samlMetadataDocument;
+        private @Nullable Output<String> samlMetadataURL;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
     	      this.samlMetadataURL = defaults.samlMetadataURL;
         }
 
-        public Builder applicationCallBackURL(@Nullable Input<String> applicationCallBackURL) {
+        public Builder applicationCallBackURL(@Nullable Output<String> applicationCallBackURL) {
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
 
         public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
-            this.applicationCallBackURL = Input.ofNullable(applicationCallBackURL);
+            this.applicationCallBackURL = Output.ofNullable(applicationCallBackURL);
             return this;
         }
 
-        public Builder attributeMap(@Nullable Input<Object> attributeMap) {
+        public Builder attributeMap(@Nullable Output<Object> attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
 
         public Builder attributeMap(@Nullable Object attributeMap) {
-            this.attributeMap = Input.ofNullable(attributeMap);
+            this.attributeMap = Output.ofNullable(attributeMap);
             return this;
         }
 
-        public Builder federationProviderName(@Nullable Input<String> federationProviderName) {
+        public Builder federationProviderName(@Nullable Output<String> federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
 
         public Builder federationProviderName(@Nullable String federationProviderName) {
-            this.federationProviderName = Input.ofNullable(federationProviderName);
+            this.federationProviderName = Output.ofNullable(federationProviderName);
             return this;
         }
 
-        public Builder federationURN(@Nullable Input<String> federationURN) {
+        public Builder federationURN(@Nullable Output<String> federationURN) {
             this.federationURN = federationURN;
             return this;
         }
 
         public Builder federationURN(@Nullable String federationURN) {
-            this.federationURN = Input.ofNullable(federationURN);
+            this.federationURN = Output.ofNullable(federationURN);
             return this;
         }
 
-        public Builder samlMetadataDocument(@Nullable Input<String> samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable Output<String> samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
-            this.samlMetadataDocument = Input.ofNullable(samlMetadataDocument);
+            this.samlMetadataDocument = Output.ofNullable(samlMetadataDocument);
             return this;
         }
 
-        public Builder samlMetadataURL(@Nullable Input<String> samlMetadataURL) {
+        public Builder samlMetadataURL(@Nullable Output<String> samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }
 
         public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
-            this.samlMetadataURL = Input.ofNullable(samlMetadataURL);
+            this.samlMetadataURL = Output.ofNullable(samlMetadataURL);
             return this;
         }
         public EnvironmentFederationParametersArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketServerSideEncryptionByDefaultSSEAlgorithm;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kMSMasterKeyID")
-      private final @Nullable Input<String> kMSMasterKeyID;
+      private final @Nullable Output<String> kMSMasterKeyID;
 
-    public Input<String> getKMSMasterKeyID() {
-        return this.kMSMasterKeyID == null ? Input.empty() : this.kMSMasterKeyID;
+    public Output<String> getKMSMasterKeyID() {
+        return this.kMSMasterKeyID == null ? Output.empty() : this.kMSMasterKeyID;
     }
 
     @InputImport(name="sSEAlgorithm", required=true)
-      private final Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
+      private final Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
 
-    public Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> getSSEAlgorithm() {
+    public Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> getSSEAlgorithm() {
         return this.sSEAlgorithm;
     }
 
     public BucketServerSideEncryptionByDefaultArgs(
-        @Nullable Input<String> kMSMasterKeyID,
-        Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
+        @Nullable Output<String> kMSMasterKeyID,
+        Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
         this.kMSMasterKeyID = kMSMasterKeyID;
         this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm, "expected parameter 'sSEAlgorithm' to be non-null");
     }
 
     private BucketServerSideEncryptionByDefaultArgs() {
-        this.kMSMasterKeyID = Input.empty();
-        this.sSEAlgorithm = Input.empty();
+        this.kMSMasterKeyID = Output.empty();
+        this.sSEAlgorithm = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kMSMasterKeyID;
-        private Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
+        private @Nullable Output<String> kMSMasterKeyID;
+        private Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketServerSideEncryptionByDefaultArgs extends io.pulumi.res
     	      this.sSEAlgorithm = defaults.sSEAlgorithm;
         }
 
-        public Builder kMSMasterKeyID(@Nullable Input<String> kMSMasterKeyID) {
+        public Builder kMSMasterKeyID(@Nullable Output<String> kMSMasterKeyID) {
             this.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
 
         public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
-            this.kMSMasterKeyID = Input.ofNullable(kMSMasterKeyID);
+            this.kMSMasterKeyID = Output.ofNullable(kMSMasterKeyID);
             return this;
         }
 
-        public Builder sSEAlgorithm(Input<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
+        public Builder sSEAlgorithm(Output<BucketServerSideEncryptionByDefaultSSEAlgorithm> sSEAlgorithm) {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }
 
         public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
-            this.sSEAlgorithm = Input.of(Objects.requireNonNull(sSEAlgorithm));
+            this.sSEAlgorithm = Output.of(Objects.requireNonNull(sSEAlgorithm));
             return this;
         }
         public BucketServerSideEncryptionByDefaultArgs build() {

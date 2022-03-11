@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class DatasetPathParameterArgs extends io.pulumi.resources.Resource
     public static final DatasetPathParameterArgs Empty = new DatasetPathParameterArgs();
 
     @InputImport(name="datasetParameter", required=true)
-      private final Input<DatasetParameterArgs> datasetParameter;
+      private final Output<DatasetParameterArgs> datasetParameter;
 
-    public Input<DatasetParameterArgs> getDatasetParameter() {
+    public Output<DatasetParameterArgs> getDatasetParameter() {
         return this.datasetParameter;
     }
 
     @InputImport(name="pathParameterName", required=true)
-      private final Input<String> pathParameterName;
+      private final Output<String> pathParameterName;
 
-    public Input<String> getPathParameterName() {
+    public Output<String> getPathParameterName() {
         return this.pathParameterName;
     }
 
     public DatasetPathParameterArgs(
-        Input<DatasetParameterArgs> datasetParameter,
-        Input<String> pathParameterName) {
+        Output<DatasetParameterArgs> datasetParameter,
+        Output<String> pathParameterName) {
         this.datasetParameter = Objects.requireNonNull(datasetParameter, "expected parameter 'datasetParameter' to be non-null");
         this.pathParameterName = Objects.requireNonNull(pathParameterName, "expected parameter 'pathParameterName' to be non-null");
     }
 
     private DatasetPathParameterArgs() {
-        this.datasetParameter = Input.empty();
-        this.pathParameterName = Input.empty();
+        this.datasetParameter = Output.empty();
+        this.pathParameterName = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class DatasetPathParameterArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<DatasetParameterArgs> datasetParameter;
-        private Input<String> pathParameterName;
+        private Output<DatasetParameterArgs> datasetParameter;
+        private Output<String> pathParameterName;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class DatasetPathParameterArgs extends io.pulumi.resources.Resource
     	      this.pathParameterName = defaults.pathParameterName;
         }
 
-        public Builder datasetParameter(Input<DatasetParameterArgs> datasetParameter) {
+        public Builder datasetParameter(Output<DatasetParameterArgs> datasetParameter) {
             this.datasetParameter = Objects.requireNonNull(datasetParameter);
             return this;
         }
 
         public Builder datasetParameter(DatasetParameterArgs datasetParameter) {
-            this.datasetParameter = Input.of(Objects.requireNonNull(datasetParameter));
+            this.datasetParameter = Output.of(Objects.requireNonNull(datasetParameter));
             return this;
         }
 
-        public Builder pathParameterName(Input<String> pathParameterName) {
+        public Builder pathParameterName(Output<String> pathParameterName) {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
         }
 
         public Builder pathParameterName(String pathParameterName) {
-            this.pathParameterName = Input.of(Objects.requireNonNull(pathParameterName));
+            this.pathParameterName = Output.of(Objects.requireNonNull(pathParameterName));
             return this;
         }
         public DatasetPathParameterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiId")
-      private final @Nullable Input<String> apiId;
+      private final @Nullable Output<String> apiId;
 
-    public Input<String> getApiId() {
-        return this.apiId == null ? Input.empty() : this.apiId;
+    public Output<String> getApiId() {
+        return this.apiId == null ? Output.empty() : this.apiId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stage")
-      private final @Nullable Input<String> stage;
+      private final @Nullable Output<String> stage;
 
-    public Input<String> getStage() {
-        return this.stage == null ? Input.empty() : this.stage;
+    public Output<String> getStage() {
+        return this.stage == null ? Output.empty() : this.stage;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="throttle")
-      private final @Nullable Input<Object> throttle;
+      private final @Nullable Output<Object> throttle;
 
-    public Input<Object> getThrottle() {
-        return this.throttle == null ? Input.empty() : this.throttle;
+    public Output<Object> getThrottle() {
+        return this.throttle == null ? Output.empty() : this.throttle;
     }
 
     public UsagePlanApiStageArgs(
-        @Nullable Input<String> apiId,
-        @Nullable Input<String> stage,
-        @Nullable Input<Object> throttle) {
+        @Nullable Output<String> apiId,
+        @Nullable Output<String> stage,
+        @Nullable Output<Object> throttle) {
         this.apiId = apiId;
         this.stage = stage;
         this.throttle = throttle;
     }
 
     private UsagePlanApiStageArgs() {
-        this.apiId = Input.empty();
-        this.stage = Input.empty();
-        this.throttle = Input.empty();
+        this.apiId = Output.empty();
+        this.stage = Output.empty();
+        this.throttle = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiId;
-        private @Nullable Input<String> stage;
-        private @Nullable Input<Object> throttle;
+        private @Nullable Output<String> apiId;
+        private @Nullable Output<String> stage;
+        private @Nullable Output<Object> throttle;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder apiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Output<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Input.ofNullable(apiId);
+            this.apiId = Output.ofNullable(apiId);
             return this;
         }
 
-        public Builder stage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Output<String> stage) {
             this.stage = stage;
             return this;
         }
 
         public Builder stage(@Nullable String stage) {
-            this.stage = Input.ofNullable(stage);
+            this.stage = Output.ofNullable(stage);
             return this;
         }
 
-        public Builder throttle(@Nullable Input<Object> throttle) {
+        public Builder throttle(@Nullable Output<Object> throttle) {
             this.throttle = throttle;
             return this;
         }
 
         public Builder throttle(@Nullable Object throttle) {
-            this.throttle = Input.ofNullable(throttle);
+            this.throttle = Output.ofNullable(throttle);
             return this;
         }
         public UsagePlanApiStageArgs build() {

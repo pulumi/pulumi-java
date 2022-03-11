@@ -6,7 +6,6 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.emr.StudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -114,14 +113,14 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StudioSessionMapping(String name, StudioSessionMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:emr:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:emr:StudioSessionMapping", name, args == null ? StudioSessionMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private StudioSessionMapping(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private StudioSessionMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:emr:StudioSessionMapping", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -136,7 +135,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StudioSessionMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static StudioSessionMapping get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new StudioSessionMapping(name, id, options);
     }
 }

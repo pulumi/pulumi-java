@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityRebalanceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     public static final EC2FleetMaintenanceStrategiesArgs Empty = new EC2FleetMaintenanceStrategiesArgs();
 
     @InputImport(name="capacityRebalance")
-      private final @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+      private final @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
-    public Input<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
+    public Output<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
+        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
     }
 
-    public EC2FleetMaintenanceStrategiesArgs(@Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
+    public EC2FleetMaintenanceStrategiesArgs(@Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 
     private EC2FleetMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Input.empty();
+        this.capacityRebalance = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+        private @Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder capacityRebalance(@Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Output<EC2FleetCapacityRebalanceArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
         public Builder capacityRebalance(@Nullable EC2FleetCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Input.ofNullable(capacityRebalance);
+            this.capacityRebalance = Output.ofNullable(capacityRebalance);
             return this;
         }
         public EC2FleetMaintenanceStrategiesArgs build() {

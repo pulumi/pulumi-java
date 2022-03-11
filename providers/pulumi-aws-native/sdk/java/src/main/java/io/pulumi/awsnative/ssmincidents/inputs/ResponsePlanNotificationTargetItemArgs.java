@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmincidents.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
     public static final ResponsePlanNotificationTargetItemArgs Empty = new ResponsePlanNotificationTargetItemArgs();
 
     @InputImport(name="snsTopicArn")
-      private final @Nullable Input<String> snsTopicArn;
+      private final @Nullable Output<String> snsTopicArn;
 
-    public Input<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Input.empty() : this.snsTopicArn;
+    public Output<String> getSnsTopicArn() {
+        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
     }
 
-    public ResponsePlanNotificationTargetItemArgs(@Nullable Input<String> snsTopicArn) {
+    public ResponsePlanNotificationTargetItemArgs(@Nullable Output<String> snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
     }
 
     private ResponsePlanNotificationTargetItemArgs() {
-        this.snsTopicArn = Input.empty();
+        this.snsTopicArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> snsTopicArn;
+        private @Nullable Output<String> snsTopicArn;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ResponsePlanNotificationTargetItemArgs extends io.pulumi.reso
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Input.ofNullable(snsTopicArn);
+            this.snsTopicArn = Output.ofNullable(snsTopicArn);
             return this;
         }
         public ResponsePlanNotificationTargetItemArgs build() {

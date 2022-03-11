@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.awsnative.elasticache.inputs.GlobalReplicationGroupReshardingConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="replicationGroupId")
-      private final @Nullable Input<String> replicationGroupId;
+      private final @Nullable Output<String> replicationGroupId;
 
-    public Input<String> getReplicationGroupId() {
-        return this.replicationGroupId == null ? Input.empty() : this.replicationGroupId;
+    public Output<String> getReplicationGroupId() {
+        return this.replicationGroupId == null ? Output.empty() : this.replicationGroupId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="replicationGroupRegion")
-      private final @Nullable Input<String> replicationGroupRegion;
+      private final @Nullable Output<String> replicationGroupRegion;
 
-    public Input<String> getReplicationGroupRegion() {
-        return this.replicationGroupRegion == null ? Input.empty() : this.replicationGroupRegion;
+    public Output<String> getReplicationGroupRegion() {
+        return this.replicationGroupRegion == null ? Output.empty() : this.replicationGroupRegion;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="reshardingConfigurations")
-      private final @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
+      private final @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
-    public Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> getReshardingConfigurations() {
-        return this.reshardingConfigurations == null ? Input.empty() : this.reshardingConfigurations;
+    public Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> getReshardingConfigurations() {
+        return this.reshardingConfigurations == null ? Output.empty() : this.reshardingConfigurations;
     }
 
     public GlobalReplicationGroupRegionalConfigurationArgs(
-        @Nullable Input<String> replicationGroupId,
-        @Nullable Input<String> replicationGroupRegion,
-        @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
+        @Nullable Output<String> replicationGroupId,
+        @Nullable Output<String> replicationGroupRegion,
+        @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.reshardingConfigurations = reshardingConfigurations;
     }
 
     private GlobalReplicationGroupRegionalConfigurationArgs() {
-        this.replicationGroupId = Input.empty();
-        this.replicationGroupRegion = Input.empty();
-        this.reshardingConfigurations = Input.empty();
+        this.replicationGroupId = Output.empty();
+        this.replicationGroupRegion = Output.empty();
+        this.reshardingConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> replicationGroupId;
-        private @Nullable Input<String> replicationGroupRegion;
-        private @Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
+        private @Nullable Output<String> replicationGroupId;
+        private @Nullable Output<String> replicationGroupRegion;
+        private @Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
     	      this.reshardingConfigurations = defaults.reshardingConfigurations;
         }
 
-        public Builder replicationGroupId(@Nullable Input<String> replicationGroupId) {
+        public Builder replicationGroupId(@Nullable Output<String> replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Input.ofNullable(replicationGroupId);
+            this.replicationGroupId = Output.ofNullable(replicationGroupId);
             return this;
         }
 
-        public Builder replicationGroupRegion(@Nullable Input<String> replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable Output<String> replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
         public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
-            this.replicationGroupRegion = Input.ofNullable(replicationGroupRegion);
+            this.replicationGroupRegion = Output.ofNullable(replicationGroupRegion);
             return this;
         }
 
-        public Builder reshardingConfigurations(@Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
+        public Builder reshardingConfigurations(@Nullable Output<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
             this.reshardingConfigurations = reshardingConfigurations;
             return this;
         }
 
         public Builder reshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfigurationArgs> reshardingConfigurations) {
-            this.reshardingConfigurations = Input.ofNullable(reshardingConfigurations);
+            this.reshardingConfigurations = Output.ofNullable(reshardingConfigurations);
             return this;
         }
         public GlobalReplicationGroupRegionalConfigurationArgs build() {

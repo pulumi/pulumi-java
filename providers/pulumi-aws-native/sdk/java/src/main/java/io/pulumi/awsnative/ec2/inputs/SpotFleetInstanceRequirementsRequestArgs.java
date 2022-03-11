@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetMemoryMiBRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetNetworkInterfaceCountRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTotalLocalStorageGBRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetVCpuCountRangeRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,174 +35,174 @@ public final class SpotFleetInstanceRequirementsRequestArgs extends io.pulumi.re
     public static final SpotFleetInstanceRequirementsRequestArgs Empty = new SpotFleetInstanceRequirementsRequestArgs();
 
     @InputImport(name="acceleratorCount")
-      private final @Nullable Input<SpotFleetAcceleratorCountRequestArgs> acceleratorCount;
+      private final @Nullable Output<SpotFleetAcceleratorCountRequestArgs> acceleratorCount;
 
-    public Input<SpotFleetAcceleratorCountRequestArgs> getAcceleratorCount() {
-        return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
+    public Output<SpotFleetAcceleratorCountRequestArgs> getAcceleratorCount() {
+        return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
     }
 
     @InputImport(name="acceleratorManufacturers")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> getAcceleratorManufacturers() {
-        return this.acceleratorManufacturers == null ? Input.empty() : this.acceleratorManufacturers;
+    public Output<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> getAcceleratorManufacturers() {
+        return this.acceleratorManufacturers == null ? Output.empty() : this.acceleratorManufacturers;
     }
 
     @InputImport(name="acceleratorNames")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> getAcceleratorNames() {
-        return this.acceleratorNames == null ? Input.empty() : this.acceleratorNames;
+    public Output<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> getAcceleratorNames() {
+        return this.acceleratorNames == null ? Output.empty() : this.acceleratorNames;
     }
 
     @InputImport(name="acceleratorTotalMemoryMiB")
-      private final @Nullable Input<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB;
+      private final @Nullable Output<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB;
 
-    public Input<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> getAcceleratorTotalMemoryMiB() {
-        return this.acceleratorTotalMemoryMiB == null ? Input.empty() : this.acceleratorTotalMemoryMiB;
+    public Output<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> getAcceleratorTotalMemoryMiB() {
+        return this.acceleratorTotalMemoryMiB == null ? Output.empty() : this.acceleratorTotalMemoryMiB;
     }
 
     @InputImport(name="acceleratorTypes")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> getAcceleratorTypes() {
-        return this.acceleratorTypes == null ? Input.empty() : this.acceleratorTypes;
+    public Output<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> getAcceleratorTypes() {
+        return this.acceleratorTypes == null ? Output.empty() : this.acceleratorTypes;
     }
 
     @InputImport(name="bareMetal")
-      private final @Nullable Input<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal;
+      private final @Nullable Output<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal;
 
-    public Input<SpotFleetInstanceRequirementsRequestBareMetal> getBareMetal() {
-        return this.bareMetal == null ? Input.empty() : this.bareMetal;
+    public Output<SpotFleetInstanceRequirementsRequestBareMetal> getBareMetal() {
+        return this.bareMetal == null ? Output.empty() : this.bareMetal;
     }
 
     @InputImport(name="baselineEbsBandwidthMbps")
-      private final @Nullable Input<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps;
+      private final @Nullable Output<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps;
 
-    public Input<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> getBaselineEbsBandwidthMbps() {
-        return this.baselineEbsBandwidthMbps == null ? Input.empty() : this.baselineEbsBandwidthMbps;
+    public Output<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> getBaselineEbsBandwidthMbps() {
+        return this.baselineEbsBandwidthMbps == null ? Output.empty() : this.baselineEbsBandwidthMbps;
     }
 
     @InputImport(name="burstablePerformance")
-      private final @Nullable Input<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance;
+      private final @Nullable Output<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance;
 
-    public Input<SpotFleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
-        return this.burstablePerformance == null ? Input.empty() : this.burstablePerformance;
+    public Output<SpotFleetInstanceRequirementsRequestBurstablePerformance> getBurstablePerformance() {
+        return this.burstablePerformance == null ? Output.empty() : this.burstablePerformance;
     }
 
     @InputImport(name="cpuManufacturers")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> getCpuManufacturers() {
-        return this.cpuManufacturers == null ? Input.empty() : this.cpuManufacturers;
+    public Output<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> getCpuManufacturers() {
+        return this.cpuManufacturers == null ? Output.empty() : this.cpuManufacturers;
     }
 
     @InputImport(name="excludedInstanceTypes")
-      private final @Nullable Input<List<String>> excludedInstanceTypes;
+      private final @Nullable Output<List<String>> excludedInstanceTypes;
 
-    public Input<List<String>> getExcludedInstanceTypes() {
-        return this.excludedInstanceTypes == null ? Input.empty() : this.excludedInstanceTypes;
+    public Output<List<String>> getExcludedInstanceTypes() {
+        return this.excludedInstanceTypes == null ? Output.empty() : this.excludedInstanceTypes;
     }
 
     @InputImport(name="instanceGenerations")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> getInstanceGenerations() {
-        return this.instanceGenerations == null ? Input.empty() : this.instanceGenerations;
+    public Output<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> getInstanceGenerations() {
+        return this.instanceGenerations == null ? Output.empty() : this.instanceGenerations;
     }
 
     @InputImport(name="localStorage")
-      private final @Nullable Input<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage;
+      private final @Nullable Output<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage;
 
-    public Input<SpotFleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
-        return this.localStorage == null ? Input.empty() : this.localStorage;
+    public Output<SpotFleetInstanceRequirementsRequestLocalStorage> getLocalStorage() {
+        return this.localStorage == null ? Output.empty() : this.localStorage;
     }
 
     @InputImport(name="localStorageTypes")
-      private final @Nullable Input<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes;
+      private final @Nullable Output<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes;
 
-    public Input<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> getLocalStorageTypes() {
-        return this.localStorageTypes == null ? Input.empty() : this.localStorageTypes;
+    public Output<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> getLocalStorageTypes() {
+        return this.localStorageTypes == null ? Output.empty() : this.localStorageTypes;
     }
 
     @InputImport(name="memoryGiBPerVCpu")
-      private final @Nullable Input<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu;
+      private final @Nullable Output<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu;
 
-    public Input<SpotFleetMemoryGiBPerVCpuRequestArgs> getMemoryGiBPerVCpu() {
-        return this.memoryGiBPerVCpu == null ? Input.empty() : this.memoryGiBPerVCpu;
+    public Output<SpotFleetMemoryGiBPerVCpuRequestArgs> getMemoryGiBPerVCpu() {
+        return this.memoryGiBPerVCpu == null ? Output.empty() : this.memoryGiBPerVCpu;
     }
 
     @InputImport(name="memoryMiB")
-      private final @Nullable Input<SpotFleetMemoryMiBRequestArgs> memoryMiB;
+      private final @Nullable Output<SpotFleetMemoryMiBRequestArgs> memoryMiB;
 
-    public Input<SpotFleetMemoryMiBRequestArgs> getMemoryMiB() {
-        return this.memoryMiB == null ? Input.empty() : this.memoryMiB;
+    public Output<SpotFleetMemoryMiBRequestArgs> getMemoryMiB() {
+        return this.memoryMiB == null ? Output.empty() : this.memoryMiB;
     }
 
     @InputImport(name="networkInterfaceCount")
-      private final @Nullable Input<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount;
+      private final @Nullable Output<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount;
 
-    public Input<SpotFleetNetworkInterfaceCountRequestArgs> getNetworkInterfaceCount() {
-        return this.networkInterfaceCount == null ? Input.empty() : this.networkInterfaceCount;
+    public Output<SpotFleetNetworkInterfaceCountRequestArgs> getNetworkInterfaceCount() {
+        return this.networkInterfaceCount == null ? Output.empty() : this.networkInterfaceCount;
     }
 
     @InputImport(name="onDemandMaxPricePercentageOverLowestPrice")
-      private final @Nullable Input<Integer> onDemandMaxPricePercentageOverLowestPrice;
+      private final @Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice;
 
-    public Input<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
-        return this.onDemandMaxPricePercentageOverLowestPrice == null ? Input.empty() : this.onDemandMaxPricePercentageOverLowestPrice;
+    public Output<Integer> getOnDemandMaxPricePercentageOverLowestPrice() {
+        return this.onDemandMaxPricePercentageOverLowestPrice == null ? Output.empty() : this.onDemandMaxPricePercentageOverLowestPrice;
     }
 
     @InputImport(name="requireHibernateSupport")
-      private final @Nullable Input<Boolean> requireHibernateSupport;
+      private final @Nullable Output<Boolean> requireHibernateSupport;
 
-    public Input<Boolean> getRequireHibernateSupport() {
-        return this.requireHibernateSupport == null ? Input.empty() : this.requireHibernateSupport;
+    public Output<Boolean> getRequireHibernateSupport() {
+        return this.requireHibernateSupport == null ? Output.empty() : this.requireHibernateSupport;
     }
 
     @InputImport(name="spotMaxPricePercentageOverLowestPrice")
-      private final @Nullable Input<Integer> spotMaxPricePercentageOverLowestPrice;
+      private final @Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice;
 
-    public Input<Integer> getSpotMaxPricePercentageOverLowestPrice() {
-        return this.spotMaxPricePercentageOverLowestPrice == null ? Input.empty() : this.spotMaxPricePercentageOverLowestPrice;
+    public Output<Integer> getSpotMaxPricePercentageOverLowestPrice() {
+        return this.spotMaxPricePercentageOverLowestPrice == null ? Output.empty() : this.spotMaxPricePercentageOverLowestPrice;
     }
 
     @InputImport(name="totalLocalStorageGB")
-      private final @Nullable Input<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB;
+      private final @Nullable Output<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB;
 
-    public Input<SpotFleetTotalLocalStorageGBRequestArgs> getTotalLocalStorageGB() {
-        return this.totalLocalStorageGB == null ? Input.empty() : this.totalLocalStorageGB;
+    public Output<SpotFleetTotalLocalStorageGBRequestArgs> getTotalLocalStorageGB() {
+        return this.totalLocalStorageGB == null ? Output.empty() : this.totalLocalStorageGB;
     }
 
     @InputImport(name="vCpuCount")
-      private final @Nullable Input<SpotFleetVCpuCountRangeRequestArgs> vCpuCount;
+      private final @Nullable Output<SpotFleetVCpuCountRangeRequestArgs> vCpuCount;
 
-    public Input<SpotFleetVCpuCountRangeRequestArgs> getVCpuCount() {
-        return this.vCpuCount == null ? Input.empty() : this.vCpuCount;
+    public Output<SpotFleetVCpuCountRangeRequestArgs> getVCpuCount() {
+        return this.vCpuCount == null ? Output.empty() : this.vCpuCount;
     }
 
     public SpotFleetInstanceRequirementsRequestArgs(
-        @Nullable Input<SpotFleetAcceleratorCountRequestArgs> acceleratorCount,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames,
-        @Nullable Input<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes,
-        @Nullable Input<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal,
-        @Nullable Input<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps,
-        @Nullable Input<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers,
-        @Nullable Input<List<String>> excludedInstanceTypes,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations,
-        @Nullable Input<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage,
-        @Nullable Input<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes,
-        @Nullable Input<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu,
-        @Nullable Input<SpotFleetMemoryMiBRequestArgs> memoryMiB,
-        @Nullable Input<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount,
-        @Nullable Input<Integer> onDemandMaxPricePercentageOverLowestPrice,
-        @Nullable Input<Boolean> requireHibernateSupport,
-        @Nullable Input<Integer> spotMaxPricePercentageOverLowestPrice,
-        @Nullable Input<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB,
-        @Nullable Input<SpotFleetVCpuCountRangeRequestArgs> vCpuCount) {
+        @Nullable Output<SpotFleetAcceleratorCountRequestArgs> acceleratorCount,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames,
+        @Nullable Output<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes,
+        @Nullable Output<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal,
+        @Nullable Output<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps,
+        @Nullable Output<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers,
+        @Nullable Output<List<String>> excludedInstanceTypes,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations,
+        @Nullable Output<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage,
+        @Nullable Output<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes,
+        @Nullable Output<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu,
+        @Nullable Output<SpotFleetMemoryMiBRequestArgs> memoryMiB,
+        @Nullable Output<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount,
+        @Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice,
+        @Nullable Output<Boolean> requireHibernateSupport,
+        @Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice,
+        @Nullable Output<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB,
+        @Nullable Output<SpotFleetVCpuCountRangeRequestArgs> vCpuCount) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorManufacturers = acceleratorManufacturers;
         this.acceleratorNames = acceleratorNames;
@@ -227,27 +227,27 @@ public final class SpotFleetInstanceRequirementsRequestArgs extends io.pulumi.re
     }
 
     private SpotFleetInstanceRequirementsRequestArgs() {
-        this.acceleratorCount = Input.empty();
-        this.acceleratorManufacturers = Input.empty();
-        this.acceleratorNames = Input.empty();
-        this.acceleratorTotalMemoryMiB = Input.empty();
-        this.acceleratorTypes = Input.empty();
-        this.bareMetal = Input.empty();
-        this.baselineEbsBandwidthMbps = Input.empty();
-        this.burstablePerformance = Input.empty();
-        this.cpuManufacturers = Input.empty();
-        this.excludedInstanceTypes = Input.empty();
-        this.instanceGenerations = Input.empty();
-        this.localStorage = Input.empty();
-        this.localStorageTypes = Input.empty();
-        this.memoryGiBPerVCpu = Input.empty();
-        this.memoryMiB = Input.empty();
-        this.networkInterfaceCount = Input.empty();
-        this.onDemandMaxPricePercentageOverLowestPrice = Input.empty();
-        this.requireHibernateSupport = Input.empty();
-        this.spotMaxPricePercentageOverLowestPrice = Input.empty();
-        this.totalLocalStorageGB = Input.empty();
-        this.vCpuCount = Input.empty();
+        this.acceleratorCount = Output.empty();
+        this.acceleratorManufacturers = Output.empty();
+        this.acceleratorNames = Output.empty();
+        this.acceleratorTotalMemoryMiB = Output.empty();
+        this.acceleratorTypes = Output.empty();
+        this.bareMetal = Output.empty();
+        this.baselineEbsBandwidthMbps = Output.empty();
+        this.burstablePerformance = Output.empty();
+        this.cpuManufacturers = Output.empty();
+        this.excludedInstanceTypes = Output.empty();
+        this.instanceGenerations = Output.empty();
+        this.localStorage = Output.empty();
+        this.localStorageTypes = Output.empty();
+        this.memoryGiBPerVCpu = Output.empty();
+        this.memoryMiB = Output.empty();
+        this.networkInterfaceCount = Output.empty();
+        this.onDemandMaxPricePercentageOverLowestPrice = Output.empty();
+        this.requireHibernateSupport = Output.empty();
+        this.spotMaxPricePercentageOverLowestPrice = Output.empty();
+        this.totalLocalStorageGB = Output.empty();
+        this.vCpuCount = Output.empty();
     }
 
     public static Builder builder() {
@@ -259,27 +259,27 @@ public final class SpotFleetInstanceRequirementsRequestArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetAcceleratorCountRequestArgs> acceleratorCount;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames;
-        private @Nullable Input<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes;
-        private @Nullable Input<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal;
-        private @Nullable Input<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps;
-        private @Nullable Input<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers;
-        private @Nullable Input<List<String>> excludedInstanceTypes;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations;
-        private @Nullable Input<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage;
-        private @Nullable Input<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes;
-        private @Nullable Input<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu;
-        private @Nullable Input<SpotFleetMemoryMiBRequestArgs> memoryMiB;
-        private @Nullable Input<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount;
-        private @Nullable Input<Integer> onDemandMaxPricePercentageOverLowestPrice;
-        private @Nullable Input<Boolean> requireHibernateSupport;
-        private @Nullable Input<Integer> spotMaxPricePercentageOverLowestPrice;
-        private @Nullable Input<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB;
-        private @Nullable Input<SpotFleetVCpuCountRangeRequestArgs> vCpuCount;
+        private @Nullable Output<SpotFleetAcceleratorCountRequestArgs> acceleratorCount;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames;
+        private @Nullable Output<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes;
+        private @Nullable Output<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal;
+        private @Nullable Output<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps;
+        private @Nullable Output<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers;
+        private @Nullable Output<List<String>> excludedInstanceTypes;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations;
+        private @Nullable Output<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage;
+        private @Nullable Output<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes;
+        private @Nullable Output<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu;
+        private @Nullable Output<SpotFleetMemoryMiBRequestArgs> memoryMiB;
+        private @Nullable Output<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount;
+        private @Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice;
+        private @Nullable Output<Boolean> requireHibernateSupport;
+        private @Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice;
+        private @Nullable Output<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB;
+        private @Nullable Output<SpotFleetVCpuCountRangeRequestArgs> vCpuCount;
 
         public Builder() {
     	      // Empty
@@ -310,213 +310,213 @@ public final class SpotFleetInstanceRequirementsRequestArgs extends io.pulumi.re
     	      this.vCpuCount = defaults.vCpuCount;
         }
 
-        public Builder acceleratorCount(@Nullable Input<SpotFleetAcceleratorCountRequestArgs> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Output<SpotFleetAcceleratorCountRequestArgs> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
         public Builder acceleratorCount(@Nullable SpotFleetAcceleratorCountRequestArgs acceleratorCount) {
-            this.acceleratorCount = Input.ofNullable(acceleratorCount);
+            this.acceleratorCount = Output.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder acceleratorManufacturers(@Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers) {
+        public Builder acceleratorManufacturers(@Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem>> acceleratorManufacturers) {
             this.acceleratorManufacturers = acceleratorManufacturers;
             return this;
         }
 
         public Builder acceleratorManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers) {
-            this.acceleratorManufacturers = Input.ofNullable(acceleratorManufacturers);
+            this.acceleratorManufacturers = Output.ofNullable(acceleratorManufacturers);
             return this;
         }
 
-        public Builder acceleratorNames(@Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames) {
+        public Builder acceleratorNames(@Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem>> acceleratorNames) {
             this.acceleratorNames = acceleratorNames;
             return this;
         }
 
         public Builder acceleratorNames(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames) {
-            this.acceleratorNames = Input.ofNullable(acceleratorNames);
+            this.acceleratorNames = Output.ofNullable(acceleratorNames);
             return this;
         }
 
-        public Builder acceleratorTotalMemoryMiB(@Nullable Input<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB) {
+        public Builder acceleratorTotalMemoryMiB(@Nullable Output<SpotFleetAcceleratorTotalMemoryMiBRequestArgs> acceleratorTotalMemoryMiB) {
             this.acceleratorTotalMemoryMiB = acceleratorTotalMemoryMiB;
             return this;
         }
 
         public Builder acceleratorTotalMemoryMiB(@Nullable SpotFleetAcceleratorTotalMemoryMiBRequestArgs acceleratorTotalMemoryMiB) {
-            this.acceleratorTotalMemoryMiB = Input.ofNullable(acceleratorTotalMemoryMiB);
+            this.acceleratorTotalMemoryMiB = Output.ofNullable(acceleratorTotalMemoryMiB);
             return this;
         }
 
-        public Builder acceleratorTypes(@Nullable Input<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes) {
+        public Builder acceleratorTypes(@Nullable Output<List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem>> acceleratorTypes) {
             this.acceleratorTypes = acceleratorTypes;
             return this;
         }
 
         public Builder acceleratorTypes(@Nullable List<SpotFleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes) {
-            this.acceleratorTypes = Input.ofNullable(acceleratorTypes);
+            this.acceleratorTypes = Output.ofNullable(acceleratorTypes);
             return this;
         }
 
-        public Builder bareMetal(@Nullable Input<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal) {
+        public Builder bareMetal(@Nullable Output<SpotFleetInstanceRequirementsRequestBareMetal> bareMetal) {
             this.bareMetal = bareMetal;
             return this;
         }
 
         public Builder bareMetal(@Nullable SpotFleetInstanceRequirementsRequestBareMetal bareMetal) {
-            this.bareMetal = Input.ofNullable(bareMetal);
+            this.bareMetal = Output.ofNullable(bareMetal);
             return this;
         }
 
-        public Builder baselineEbsBandwidthMbps(@Nullable Input<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps) {
+        public Builder baselineEbsBandwidthMbps(@Nullable Output<SpotFleetBaselineEbsBandwidthMbpsRequestArgs> baselineEbsBandwidthMbps) {
             this.baselineEbsBandwidthMbps = baselineEbsBandwidthMbps;
             return this;
         }
 
         public Builder baselineEbsBandwidthMbps(@Nullable SpotFleetBaselineEbsBandwidthMbpsRequestArgs baselineEbsBandwidthMbps) {
-            this.baselineEbsBandwidthMbps = Input.ofNullable(baselineEbsBandwidthMbps);
+            this.baselineEbsBandwidthMbps = Output.ofNullable(baselineEbsBandwidthMbps);
             return this;
         }
 
-        public Builder burstablePerformance(@Nullable Input<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance) {
+        public Builder burstablePerformance(@Nullable Output<SpotFleetInstanceRequirementsRequestBurstablePerformance> burstablePerformance) {
             this.burstablePerformance = burstablePerformance;
             return this;
         }
 
         public Builder burstablePerformance(@Nullable SpotFleetInstanceRequirementsRequestBurstablePerformance burstablePerformance) {
-            this.burstablePerformance = Input.ofNullable(burstablePerformance);
+            this.burstablePerformance = Output.ofNullable(burstablePerformance);
             return this;
         }
 
-        public Builder cpuManufacturers(@Nullable Input<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers) {
+        public Builder cpuManufacturers(@Nullable Output<List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem>> cpuManufacturers) {
             this.cpuManufacturers = cpuManufacturers;
             return this;
         }
 
         public Builder cpuManufacturers(@Nullable List<SpotFleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers) {
-            this.cpuManufacturers = Input.ofNullable(cpuManufacturers);
+            this.cpuManufacturers = Output.ofNullable(cpuManufacturers);
             return this;
         }
 
-        public Builder excludedInstanceTypes(@Nullable Input<List<String>> excludedInstanceTypes) {
+        public Builder excludedInstanceTypes(@Nullable Output<List<String>> excludedInstanceTypes) {
             this.excludedInstanceTypes = excludedInstanceTypes;
             return this;
         }
 
         public Builder excludedInstanceTypes(@Nullable List<String> excludedInstanceTypes) {
-            this.excludedInstanceTypes = Input.ofNullable(excludedInstanceTypes);
+            this.excludedInstanceTypes = Output.ofNullable(excludedInstanceTypes);
             return this;
         }
 
-        public Builder instanceGenerations(@Nullable Input<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations) {
+        public Builder instanceGenerations(@Nullable Output<List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem>> instanceGenerations) {
             this.instanceGenerations = instanceGenerations;
             return this;
         }
 
         public Builder instanceGenerations(@Nullable List<SpotFleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations) {
-            this.instanceGenerations = Input.ofNullable(instanceGenerations);
+            this.instanceGenerations = Output.ofNullable(instanceGenerations);
             return this;
         }
 
-        public Builder localStorage(@Nullable Input<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage) {
+        public Builder localStorage(@Nullable Output<SpotFleetInstanceRequirementsRequestLocalStorage> localStorage) {
             this.localStorage = localStorage;
             return this;
         }
 
         public Builder localStorage(@Nullable SpotFleetInstanceRequirementsRequestLocalStorage localStorage) {
-            this.localStorage = Input.ofNullable(localStorage);
+            this.localStorage = Output.ofNullable(localStorage);
             return this;
         }
 
-        public Builder localStorageTypes(@Nullable Input<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes) {
+        public Builder localStorageTypes(@Nullable Output<List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem>> localStorageTypes) {
             this.localStorageTypes = localStorageTypes;
             return this;
         }
 
         public Builder localStorageTypes(@Nullable List<SpotFleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes) {
-            this.localStorageTypes = Input.ofNullable(localStorageTypes);
+            this.localStorageTypes = Output.ofNullable(localStorageTypes);
             return this;
         }
 
-        public Builder memoryGiBPerVCpu(@Nullable Input<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu) {
+        public Builder memoryGiBPerVCpu(@Nullable Output<SpotFleetMemoryGiBPerVCpuRequestArgs> memoryGiBPerVCpu) {
             this.memoryGiBPerVCpu = memoryGiBPerVCpu;
             return this;
         }
 
         public Builder memoryGiBPerVCpu(@Nullable SpotFleetMemoryGiBPerVCpuRequestArgs memoryGiBPerVCpu) {
-            this.memoryGiBPerVCpu = Input.ofNullable(memoryGiBPerVCpu);
+            this.memoryGiBPerVCpu = Output.ofNullable(memoryGiBPerVCpu);
             return this;
         }
 
-        public Builder memoryMiB(@Nullable Input<SpotFleetMemoryMiBRequestArgs> memoryMiB) {
+        public Builder memoryMiB(@Nullable Output<SpotFleetMemoryMiBRequestArgs> memoryMiB) {
             this.memoryMiB = memoryMiB;
             return this;
         }
 
         public Builder memoryMiB(@Nullable SpotFleetMemoryMiBRequestArgs memoryMiB) {
-            this.memoryMiB = Input.ofNullable(memoryMiB);
+            this.memoryMiB = Output.ofNullable(memoryMiB);
             return this;
         }
 
-        public Builder networkInterfaceCount(@Nullable Input<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount) {
+        public Builder networkInterfaceCount(@Nullable Output<SpotFleetNetworkInterfaceCountRequestArgs> networkInterfaceCount) {
             this.networkInterfaceCount = networkInterfaceCount;
             return this;
         }
 
         public Builder networkInterfaceCount(@Nullable SpotFleetNetworkInterfaceCountRequestArgs networkInterfaceCount) {
-            this.networkInterfaceCount = Input.ofNullable(networkInterfaceCount);
+            this.networkInterfaceCount = Output.ofNullable(networkInterfaceCount);
             return this;
         }
 
-        public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Input<Integer> onDemandMaxPricePercentageOverLowestPrice) {
+        public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Output<Integer> onDemandMaxPricePercentageOverLowestPrice) {
             this.onDemandMaxPricePercentageOverLowestPrice = onDemandMaxPricePercentageOverLowestPrice;
             return this;
         }
 
         public Builder onDemandMaxPricePercentageOverLowestPrice(@Nullable Integer onDemandMaxPricePercentageOverLowestPrice) {
-            this.onDemandMaxPricePercentageOverLowestPrice = Input.ofNullable(onDemandMaxPricePercentageOverLowestPrice);
+            this.onDemandMaxPricePercentageOverLowestPrice = Output.ofNullable(onDemandMaxPricePercentageOverLowestPrice);
             return this;
         }
 
-        public Builder requireHibernateSupport(@Nullable Input<Boolean> requireHibernateSupport) {
+        public Builder requireHibernateSupport(@Nullable Output<Boolean> requireHibernateSupport) {
             this.requireHibernateSupport = requireHibernateSupport;
             return this;
         }
 
         public Builder requireHibernateSupport(@Nullable Boolean requireHibernateSupport) {
-            this.requireHibernateSupport = Input.ofNullable(requireHibernateSupport);
+            this.requireHibernateSupport = Output.ofNullable(requireHibernateSupport);
             return this;
         }
 
-        public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Input<Integer> spotMaxPricePercentageOverLowestPrice) {
+        public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Output<Integer> spotMaxPricePercentageOverLowestPrice) {
             this.spotMaxPricePercentageOverLowestPrice = spotMaxPricePercentageOverLowestPrice;
             return this;
         }
 
         public Builder spotMaxPricePercentageOverLowestPrice(@Nullable Integer spotMaxPricePercentageOverLowestPrice) {
-            this.spotMaxPricePercentageOverLowestPrice = Input.ofNullable(spotMaxPricePercentageOverLowestPrice);
+            this.spotMaxPricePercentageOverLowestPrice = Output.ofNullable(spotMaxPricePercentageOverLowestPrice);
             return this;
         }
 
-        public Builder totalLocalStorageGB(@Nullable Input<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB) {
+        public Builder totalLocalStorageGB(@Nullable Output<SpotFleetTotalLocalStorageGBRequestArgs> totalLocalStorageGB) {
             this.totalLocalStorageGB = totalLocalStorageGB;
             return this;
         }
 
         public Builder totalLocalStorageGB(@Nullable SpotFleetTotalLocalStorageGBRequestArgs totalLocalStorageGB) {
-            this.totalLocalStorageGB = Input.ofNullable(totalLocalStorageGB);
+            this.totalLocalStorageGB = Output.ofNullable(totalLocalStorageGB);
             return this;
         }
 
-        public Builder vCpuCount(@Nullable Input<SpotFleetVCpuCountRangeRequestArgs> vCpuCount) {
+        public Builder vCpuCount(@Nullable Output<SpotFleetVCpuCountRangeRequestArgs> vCpuCount) {
             this.vCpuCount = vCpuCount;
             return this;
         }
 
         public Builder vCpuCount(@Nullable SpotFleetVCpuCountRangeRequestArgs vCpuCount) {
-            this.vCpuCount = Input.ofNullable(vCpuCount);
+            this.vCpuCount = Output.ofNullable(vCpuCount);
             return this;
         }
         public SpotFleetInstanceRequirementsRequestArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,53 +18,53 @@ public final class ProviderAssumeRoleArgs {
      * Number of seconds to restrict the assume role session duration.
      * 
      */
-    private final @Nullable Input<Integer> durationSeconds;
+    private final @Nullable Output<Integer> durationSeconds;
     /**
      * External identifier to use when assuming the role.
      * 
      */
-    private final @Nullable Input<String> externalId;
+    private final @Nullable Output<String> externalId;
     /**
      * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
      */
-    private final @Nullable Input<String> policy;
+    private final @Nullable Output<String> policy;
     /**
      * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
      */
-    private final @Nullable Input<List<String>> policyArns;
+    private final @Nullable Output<List<String>> policyArns;
     /**
      * Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
      */
-    private final @Nullable Input<String> roleArn;
+    private final @Nullable Output<String> roleArn;
     /**
      * Session name to use when assuming the role.
      * 
      */
-    private final @Nullable Input<String> sessionName;
+    private final @Nullable Output<String> sessionName;
     /**
      * Map of assume role session tags.
      * 
      */
-    private final @Nullable Input<Map<String,String>> tags;
+    private final @Nullable Output<Map<String,String>> tags;
     /**
      * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
      */
-    private final @Nullable Input<List<String>> transitiveTagKeys;
+    private final @Nullable Output<List<String>> transitiveTagKeys;
 
     @OutputCustomType.Constructor
     private ProviderAssumeRoleArgs(
-        @OutputCustomType.Parameter("durationSeconds") @Nullable Input<Integer> durationSeconds,
-        @OutputCustomType.Parameter("externalId") @Nullable Input<String> externalId,
-        @OutputCustomType.Parameter("policy") @Nullable Input<String> policy,
-        @OutputCustomType.Parameter("policyArns") @Nullable Input<List<String>> policyArns,
-        @OutputCustomType.Parameter("roleArn") @Nullable Input<String> roleArn,
-        @OutputCustomType.Parameter("sessionName") @Nullable Input<String> sessionName,
-        @OutputCustomType.Parameter("tags") @Nullable Input<Map<String,String>> tags,
-        @OutputCustomType.Parameter("transitiveTagKeys") @Nullable Input<List<String>> transitiveTagKeys) {
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Output<Integer> durationSeconds,
+        @OutputCustomType.Parameter("externalId") @Nullable Output<String> externalId,
+        @OutputCustomType.Parameter("policy") @Nullable Output<String> policy,
+        @OutputCustomType.Parameter("policyArns") @Nullable Output<List<String>> policyArns,
+        @OutputCustomType.Parameter("roleArn") @Nullable Output<String> roleArn,
+        @OutputCustomType.Parameter("sessionName") @Nullable Output<String> sessionName,
+        @OutputCustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags,
+        @OutputCustomType.Parameter("transitiveTagKeys") @Nullable Output<List<String>> transitiveTagKeys) {
         this.durationSeconds = durationSeconds;
         this.externalId = externalId;
         this.policy = policy;
@@ -79,56 +79,56 @@ public final class ProviderAssumeRoleArgs {
      * Number of seconds to restrict the assume role session duration.
      * 
     */
-    public @Nullable Input<Integer> getDurationSeconds() {
+    public @Nullable Output<Integer> getDurationSeconds() {
         return this.durationSeconds;
     }
     /**
      * External identifier to use when assuming the role.
      * 
     */
-    public @Nullable Input<String> getExternalId() {
+    public @Nullable Output<String> getExternalId() {
         return this.externalId;
     }
     /**
      * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
     */
-    public @Nullable Input<String> getPolicy() {
+    public @Nullable Output<String> getPolicy() {
         return this.policy;
     }
     /**
      * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
     */
-    public @Nullable Input<List<String>> getPolicyArns() {
+    public @Nullable Output<List<String>> getPolicyArns() {
         return this.policyArns;
     }
     /**
      * Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
     */
-    public @Nullable Input<String> getRoleArn() {
+    public @Nullable Output<String> getRoleArn() {
         return this.roleArn;
     }
     /**
      * Session name to use when assuming the role.
      * 
     */
-    public @Nullable Input<String> getSessionName() {
+    public @Nullable Output<String> getSessionName() {
         return this.sessionName;
     }
     /**
      * Map of assume role session tags.
      * 
     */
-    public @Nullable Input<Map<String,String>> getTags() {
+    public @Nullable Output<Map<String,String>> getTags() {
         return this.tags;
     }
     /**
      * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
     */
-    public @Nullable Input<List<String>> getTransitiveTagKeys() {
+    public @Nullable Output<List<String>> getTransitiveTagKeys() {
         return this.transitiveTagKeys;
     }
 
@@ -141,14 +141,14 @@ public final class ProviderAssumeRoleArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> durationSeconds;
-        private @Nullable Input<String> externalId;
-        private @Nullable Input<String> policy;
-        private @Nullable Input<List<String>> policyArns;
-        private @Nullable Input<String> roleArn;
-        private @Nullable Input<String> sessionName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> transitiveTagKeys;
+        private @Nullable Output<Integer> durationSeconds;
+        private @Nullable Output<String> externalId;
+        private @Nullable Output<String> policy;
+        private @Nullable Output<List<String>> policyArns;
+        private @Nullable Output<String> roleArn;
+        private @Nullable Output<String> sessionName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> transitiveTagKeys;
 
         public Builder() {
     	      // Empty
@@ -166,42 +166,42 @@ public final class ProviderAssumeRoleArgs {
     	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
-        public Builder durationSeconds(@Nullable Input<Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Output<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder externalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Output<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder policy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Output<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder policyArns(@Nullable Input<List<String>> policyArns) {
+        public Builder policyArns(@Nullable Output<List<String>> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
 
-        public Builder roleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Output<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder sessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Output<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder transitiveTagKeys(@Nullable Input<List<String>> transitiveTagKeys) {
+        public Builder transitiveTagKeys(@Nullable Output<List<String>> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }

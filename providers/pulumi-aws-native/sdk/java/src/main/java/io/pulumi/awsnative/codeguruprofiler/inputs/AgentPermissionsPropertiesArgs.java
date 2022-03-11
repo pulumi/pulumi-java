@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codeguruprofiler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="principals", required=true)
-      private final Input<List<String>> principals;
+      private final Output<List<String>> principals;
 
-    public Input<List<String>> getPrincipals() {
+    public Output<List<String>> getPrincipals() {
         return this.principals;
     }
 
-    public AgentPermissionsPropertiesArgs(Input<List<String>> principals) {
+    public AgentPermissionsPropertiesArgs(Output<List<String>> principals) {
         this.principals = Objects.requireNonNull(principals, "expected parameter 'principals' to be non-null");
     }
 
     private AgentPermissionsPropertiesArgs() {
-        this.principals = Input.empty();
+        this.principals = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<List<String>> principals;
+        private Output<List<String>> principals;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AgentPermissionsPropertiesArgs extends io.pulumi.resources.Re
     	      this.principals = defaults.principals;
         }
 
-        public Builder principals(Input<List<String>> principals) {
+        public Builder principals(Output<List<String>> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
 
         public Builder principals(List<String> principals) {
-            this.principals = Input.of(Objects.requireNonNull(principals));
+            this.principals = Output.of(Objects.requireNonNull(principals));
             return this;
         }
         public AgentPermissionsPropertiesArgs build() {

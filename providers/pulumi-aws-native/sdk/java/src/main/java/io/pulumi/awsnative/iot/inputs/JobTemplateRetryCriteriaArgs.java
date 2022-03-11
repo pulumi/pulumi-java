@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.JobTemplateJobRetryFailureType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.Reso
     public static final JobTemplateRetryCriteriaArgs Empty = new JobTemplateRetryCriteriaArgs();
 
     @InputImport(name="failureType")
-      private final @Nullable Input<JobTemplateJobRetryFailureType> failureType;
+      private final @Nullable Output<JobTemplateJobRetryFailureType> failureType;
 
-    public Input<JobTemplateJobRetryFailureType> getFailureType() {
-        return this.failureType == null ? Input.empty() : this.failureType;
+    public Output<JobTemplateJobRetryFailureType> getFailureType() {
+        return this.failureType == null ? Output.empty() : this.failureType;
     }
 
     @InputImport(name="numberOfRetries")
-      private final @Nullable Input<Integer> numberOfRetries;
+      private final @Nullable Output<Integer> numberOfRetries;
 
-    public Input<Integer> getNumberOfRetries() {
-        return this.numberOfRetries == null ? Input.empty() : this.numberOfRetries;
+    public Output<Integer> getNumberOfRetries() {
+        return this.numberOfRetries == null ? Output.empty() : this.numberOfRetries;
     }
 
     public JobTemplateRetryCriteriaArgs(
-        @Nullable Input<JobTemplateJobRetryFailureType> failureType,
-        @Nullable Input<Integer> numberOfRetries) {
+        @Nullable Output<JobTemplateJobRetryFailureType> failureType,
+        @Nullable Output<Integer> numberOfRetries) {
         this.failureType = failureType;
         this.numberOfRetries = numberOfRetries;
     }
 
     private JobTemplateRetryCriteriaArgs() {
-        this.failureType = Input.empty();
-        this.numberOfRetries = Input.empty();
+        this.failureType = Output.empty();
+        this.numberOfRetries = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<JobTemplateJobRetryFailureType> failureType;
-        private @Nullable Input<Integer> numberOfRetries;
+        private @Nullable Output<JobTemplateJobRetryFailureType> failureType;
+        private @Nullable Output<Integer> numberOfRetries;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class JobTemplateRetryCriteriaArgs extends io.pulumi.resources.Reso
     	      this.numberOfRetries = defaults.numberOfRetries;
         }
 
-        public Builder failureType(@Nullable Input<JobTemplateJobRetryFailureType> failureType) {
+        public Builder failureType(@Nullable Output<JobTemplateJobRetryFailureType> failureType) {
             this.failureType = failureType;
             return this;
         }
 
         public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
-            this.failureType = Input.ofNullable(failureType);
+            this.failureType = Output.ofNullable(failureType);
             return this;
         }
 
-        public Builder numberOfRetries(@Nullable Input<Integer> numberOfRetries) {
+        public Builder numberOfRetries(@Nullable Output<Integer> numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
         }
 
         public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
-            this.numberOfRetries = Input.ofNullable(numberOfRetries);
+            this.numberOfRetries = Output.ofNullable(numberOfRetries);
             return this;
         }
         public JobTemplateRetryCriteriaArgs build() {

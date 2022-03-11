@@ -7,7 +7,6 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.wafv2.LoggingConfigurationArgs;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,14 +130,14 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoggingConfiguration(String name, LoggingConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:wafv2:LoggingConfiguration", name, args == null ? LoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:wafv2:LoggingConfiguration", name, args == null ? LoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LoggingConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LoggingConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:wafv2:LoggingConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -153,7 +152,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoggingConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LoggingConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LoggingConfiguration(name, id, options);
     }
 }

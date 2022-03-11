@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,17 +24,17 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="creationTime", required=true)
-      private final Input<String> creationTime;
+      private final Output<String> creationTime;
 
-    public Input<String> getCreationTime() {
+    public Output<String> getCreationTime() {
         return this.creationTime;
     }
 
     @InputImport(name="endpointName")
-      private final @Nullable Input<String> endpointName;
+      private final @Nullable Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
-        return this.endpointName == null ? Input.empty() : this.endpointName;
+    public Output<String> getEndpointName() {
+        return this.endpointName == null ? Output.empty() : this.endpointName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="failureReason")
-      private final @Nullable Input<String> failureReason;
+      private final @Nullable Output<String> failureReason;
 
-    public Input<String> getFailureReason() {
-        return this.failureReason == null ? Input.empty() : this.failureReason;
+    public Output<String> getFailureReason() {
+        return this.failureReason == null ? Output.empty() : this.failureReason;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="lastModifiedTime", required=true)
-      private final Input<String> lastModifiedTime;
+      private final Output<String> lastModifiedTime;
 
-    public Input<String> getLastModifiedTime() {
+    public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
 
@@ -64,16 +64,16 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="monitoringExecutionStatus", required=true)
-      private final Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
+      private final Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
 
-    public Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> getMonitoringExecutionStatus() {
+    public Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @InputImport(name="monitoringScheduleName", required=true)
-      private final Input<String> monitoringScheduleName;
+      private final Output<String> monitoringScheduleName;
 
-    public Input<String> getMonitoringScheduleName() {
+    public Output<String> getMonitoringScheduleName() {
         return this.monitoringScheduleName;
     }
 
@@ -82,10 +82,10 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="processingJobArn")
-      private final @Nullable Input<String> processingJobArn;
+      private final @Nullable Output<String> processingJobArn;
 
-    public Input<String> getProcessingJobArn() {
-        return this.processingJobArn == null ? Input.empty() : this.processingJobArn;
+    public Output<String> getProcessingJobArn() {
+        return this.processingJobArn == null ? Output.empty() : this.processingJobArn;
     }
 
     /**
@@ -93,21 +93,21 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
      * 
      */
     @InputImport(name="scheduledTime", required=true)
-      private final Input<String> scheduledTime;
+      private final Output<String> scheduledTime;
 
-    public Input<String> getScheduledTime() {
+    public Output<String> getScheduledTime() {
         return this.scheduledTime;
     }
 
     public MonitoringScheduleMonitoringExecutionSummaryArgs(
-        Input<String> creationTime,
-        @Nullable Input<String> endpointName,
-        @Nullable Input<String> failureReason,
-        Input<String> lastModifiedTime,
-        Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus,
-        Input<String> monitoringScheduleName,
-        @Nullable Input<String> processingJobArn,
-        Input<String> scheduledTime) {
+        Output<String> creationTime,
+        @Nullable Output<String> endpointName,
+        @Nullable Output<String> failureReason,
+        Output<String> lastModifiedTime,
+        Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus,
+        Output<String> monitoringScheduleName,
+        @Nullable Output<String> processingJobArn,
+        Output<String> scheduledTime) {
         this.creationTime = Objects.requireNonNull(creationTime, "expected parameter 'creationTime' to be non-null");
         this.endpointName = endpointName;
         this.failureReason = failureReason;
@@ -119,14 +119,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
     }
 
     private MonitoringScheduleMonitoringExecutionSummaryArgs() {
-        this.creationTime = Input.empty();
-        this.endpointName = Input.empty();
-        this.failureReason = Input.empty();
-        this.lastModifiedTime = Input.empty();
-        this.monitoringExecutionStatus = Input.empty();
-        this.monitoringScheduleName = Input.empty();
-        this.processingJobArn = Input.empty();
-        this.scheduledTime = Input.empty();
+        this.creationTime = Output.empty();
+        this.endpointName = Output.empty();
+        this.failureReason = Output.empty();
+        this.lastModifiedTime = Output.empty();
+        this.monitoringExecutionStatus = Output.empty();
+        this.monitoringScheduleName = Output.empty();
+        this.processingJobArn = Output.empty();
+        this.scheduledTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,14 +138,14 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<String> creationTime;
-        private @Nullable Input<String> endpointName;
-        private @Nullable Input<String> failureReason;
-        private Input<String> lastModifiedTime;
-        private Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
-        private Input<String> monitoringScheduleName;
-        private @Nullable Input<String> processingJobArn;
-        private Input<String> scheduledTime;
+        private Output<String> creationTime;
+        private @Nullable Output<String> endpointName;
+        private @Nullable Output<String> failureReason;
+        private Output<String> lastModifiedTime;
+        private Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus;
+        private Output<String> monitoringScheduleName;
+        private @Nullable Output<String> processingJobArn;
+        private Output<String> scheduledTime;
 
         public Builder() {
     	      // Empty
@@ -163,83 +163,83 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
     	      this.scheduledTime = defaults.scheduledTime;
         }
 
-        public Builder creationTime(Input<String> creationTime) {
+        public Builder creationTime(Output<String> creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
         public Builder creationTime(String creationTime) {
-            this.creationTime = Input.of(Objects.requireNonNull(creationTime));
+            this.creationTime = Output.of(Objects.requireNonNull(creationTime));
             return this;
         }
 
-        public Builder endpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Input.ofNullable(endpointName);
+            this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
 
-        public Builder failureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Output<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Input.ofNullable(failureReason);
+            this.failureReason = Output.ofNullable(failureReason);
             return this;
         }
 
-        public Builder lastModifiedTime(Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(Output<String> lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
         public Builder lastModifiedTime(String lastModifiedTime) {
-            this.lastModifiedTime = Input.of(Objects.requireNonNull(lastModifiedTime));
+            this.lastModifiedTime = Output.of(Objects.requireNonNull(lastModifiedTime));
             return this;
         }
 
-        public Builder monitoringExecutionStatus(Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
+        public Builder monitoringExecutionStatus(Output<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
 
         public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
-            this.monitoringExecutionStatus = Input.of(Objects.requireNonNull(monitoringExecutionStatus));
+            this.monitoringExecutionStatus = Output.of(Objects.requireNonNull(monitoringExecutionStatus));
             return this;
         }
 
-        public Builder monitoringScheduleName(Input<String> monitoringScheduleName) {
+        public Builder monitoringScheduleName(Output<String> monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
 
         public Builder monitoringScheduleName(String monitoringScheduleName) {
-            this.monitoringScheduleName = Input.of(Objects.requireNonNull(monitoringScheduleName));
+            this.monitoringScheduleName = Output.of(Objects.requireNonNull(monitoringScheduleName));
             return this;
         }
 
-        public Builder processingJobArn(@Nullable Input<String> processingJobArn) {
+        public Builder processingJobArn(@Nullable Output<String> processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
 
         public Builder processingJobArn(@Nullable String processingJobArn) {
-            this.processingJobArn = Input.ofNullable(processingJobArn);
+            this.processingJobArn = Output.ofNullable(processingJobArn);
             return this;
         }
 
-        public Builder scheduledTime(Input<String> scheduledTime) {
+        public Builder scheduledTime(Output<String> scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
 
         public Builder scheduledTime(String scheduledTime) {
-            this.scheduledTime = Input.of(Objects.requireNonNull(scheduledTime));
+            this.scheduledTime = Output.of(Objects.requireNonNull(scheduledTime));
             return this;
         }
         public MonitoringScheduleMonitoringExecutionSummaryArgs build() {

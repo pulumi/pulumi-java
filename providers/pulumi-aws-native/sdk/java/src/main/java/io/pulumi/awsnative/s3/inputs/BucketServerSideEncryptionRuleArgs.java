@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionByDefaultArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,29 +24,29 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="bucketKeyEnabled")
-      private final @Nullable Input<Boolean> bucketKeyEnabled;
+      private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Input<Boolean> getBucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
+    public Output<Boolean> getBucketKeyEnabled() {
+        return this.bucketKeyEnabled == null ? Output.empty() : this.bucketKeyEnabled;
     }
 
     @InputImport(name="serverSideEncryptionByDefault")
-      private final @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
+      private final @Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
 
-    public Input<BucketServerSideEncryptionByDefaultArgs> getServerSideEncryptionByDefault() {
-        return this.serverSideEncryptionByDefault == null ? Input.empty() : this.serverSideEncryptionByDefault;
+    public Output<BucketServerSideEncryptionByDefaultArgs> getServerSideEncryptionByDefault() {
+        return this.serverSideEncryptionByDefault == null ? Output.empty() : this.serverSideEncryptionByDefault;
     }
 
     public BucketServerSideEncryptionRuleArgs(
-        @Nullable Input<Boolean> bucketKeyEnabled,
-        @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
+        @Nullable Output<Boolean> bucketKeyEnabled,
+        @Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
         this.bucketKeyEnabled = bucketKeyEnabled;
         this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
     }
 
     private BucketServerSideEncryptionRuleArgs() {
-        this.bucketKeyEnabled = Input.empty();
-        this.serverSideEncryptionByDefault = Input.empty();
+        this.bucketKeyEnabled = Output.empty();
+        this.serverSideEncryptionByDefault = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> bucketKeyEnabled;
-        private @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
+        private @Nullable Output<Boolean> bucketKeyEnabled;
+        private @Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
     	      this.serverSideEncryptionByDefault = defaults.serverSideEncryptionByDefault;
         }
 
-        public Builder bucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Output<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Input.ofNullable(bucketKeyEnabled);
+            this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
             return this;
         }
 
-        public Builder serverSideEncryptionByDefault(@Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
+        public Builder serverSideEncryptionByDefault(@Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
             this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
         }
 
         public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefaultArgs serverSideEncryptionByDefault) {
-            this.serverSideEncryptionByDefault = Input.ofNullable(serverSideEncryptionByDefault);
+            this.serverSideEncryptionByDefault = Output.ofNullable(serverSideEncryptionByDefault);
             return this;
         }
         public BucketServerSideEncryptionRuleArgs build() {

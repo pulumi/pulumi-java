@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
-    public HostedZoneConfigArgs(@Nullable Input<String> comment) {
+    public HostedZoneConfigArgs(@Nullable Output<String> comment) {
         this.comment = comment;
     }
 
     private HostedZoneConfigArgs() {
-        this.comment = Input.empty();
+        this.comment = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
+        private @Nullable Output<String> comment;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class HostedZoneConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.comment = defaults.comment;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
         public HostedZoneConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.efs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
     public static final FileSystemLifecyclePolicyArgs Empty = new FileSystemLifecyclePolicyArgs();
 
     @InputImport(name="transitionToIA")
-      private final @Nullable Input<String> transitionToIA;
+      private final @Nullable Output<String> transitionToIA;
 
-    public Input<String> getTransitionToIA() {
-        return this.transitionToIA == null ? Input.empty() : this.transitionToIA;
+    public Output<String> getTransitionToIA() {
+        return this.transitionToIA == null ? Output.empty() : this.transitionToIA;
     }
 
     @InputImport(name="transitionToPrimaryStorageClass")
-      private final @Nullable Input<String> transitionToPrimaryStorageClass;
+      private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
-    public Input<String> getTransitionToPrimaryStorageClass() {
-        return this.transitionToPrimaryStorageClass == null ? Input.empty() : this.transitionToPrimaryStorageClass;
+    public Output<String> getTransitionToPrimaryStorageClass() {
+        return this.transitionToPrimaryStorageClass == null ? Output.empty() : this.transitionToPrimaryStorageClass;
     }
 
     public FileSystemLifecyclePolicyArgs(
-        @Nullable Input<String> transitionToIA,
-        @Nullable Input<String> transitionToPrimaryStorageClass) {
+        @Nullable Output<String> transitionToIA,
+        @Nullable Output<String> transitionToPrimaryStorageClass) {
         this.transitionToIA = transitionToIA;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
 
     private FileSystemLifecyclePolicyArgs() {
-        this.transitionToIA = Input.empty();
-        this.transitionToPrimaryStorageClass = Input.empty();
+        this.transitionToIA = Output.empty();
+        this.transitionToPrimaryStorageClass = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> transitionToIA;
-        private @Nullable Input<String> transitionToPrimaryStorageClass;
+        private @Nullable Output<String> transitionToIA;
+        private @Nullable Output<String> transitionToPrimaryStorageClass;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
     	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
         }
 
-        public Builder transitionToIA(@Nullable Input<String> transitionToIA) {
+        public Builder transitionToIA(@Nullable Output<String> transitionToIA) {
             this.transitionToIA = transitionToIA;
             return this;
         }
 
         public Builder transitionToIA(@Nullable String transitionToIA) {
-            this.transitionToIA = Input.ofNullable(transitionToIA);
+            this.transitionToIA = Output.ofNullable(transitionToIA);
             return this;
         }
 
-        public Builder transitionToPrimaryStorageClass(@Nullable Input<String> transitionToPrimaryStorageClass) {
+        public Builder transitionToPrimaryStorageClass(@Nullable Output<String> transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }
 
         public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
-            this.transitionToPrimaryStorageClass = Input.ofNullable(transitionToPrimaryStorageClass);
+            this.transitionToPrimaryStorageClass = Output.ofNullable(transitionToPrimaryStorageClass);
             return this;
         }
         public FileSystemLifecyclePolicyArgs build() {

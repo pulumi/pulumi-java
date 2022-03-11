@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     public static final GlobalTablePointInTimeRecoverySpecificationArgs Empty = new GlobalTablePointInTimeRecoverySpecificationArgs();
 
     @InputImport(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Input<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> getPointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
     }
 
-    public GlobalTablePointInTimeRecoverySpecificationArgs(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+    public GlobalTablePointInTimeRecoverySpecificationArgs(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
         this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     }
 
     private GlobalTablePointInTimeRecoverySpecificationArgs() {
-        this.pointInTimeRecoveryEnabled = Input.empty();
+        this.pointInTimeRecoveryEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+        private @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
         }
 
-        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
         public GlobalTablePointInTimeRecoverySpecificationArgs build() {

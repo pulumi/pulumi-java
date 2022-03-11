@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class FlowSAPODataSourcePropertiesArgs extends io.pulumi.resources.
     public static final FlowSAPODataSourcePropertiesArgs Empty = new FlowSAPODataSourcePropertiesArgs();
 
     @InputImport(name="objectPath", required=true)
-      private final Input<String> objectPath;
+      private final Output<String> objectPath;
 
-    public Input<String> getObjectPath() {
+    public Output<String> getObjectPath() {
         return this.objectPath;
     }
 
-    public FlowSAPODataSourcePropertiesArgs(Input<String> objectPath) {
+    public FlowSAPODataSourcePropertiesArgs(Output<String> objectPath) {
         this.objectPath = Objects.requireNonNull(objectPath, "expected parameter 'objectPath' to be non-null");
     }
 
     private FlowSAPODataSourcePropertiesArgs() {
-        this.objectPath = Input.empty();
+        this.objectPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class FlowSAPODataSourcePropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> objectPath;
+        private Output<String> objectPath;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class FlowSAPODataSourcePropertiesArgs extends io.pulumi.resources.
     	      this.objectPath = defaults.objectPath;
         }
 
-        public Builder objectPath(Input<String> objectPath) {
+        public Builder objectPath(Output<String> objectPath) {
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
         }
 
         public Builder objectPath(String objectPath) {
-            this.objectPath = Input.of(Objects.requireNonNull(objectPath));
+            this.objectPath = Output.of(Objects.requireNonNull(objectPath));
             return this;
         }
         public FlowSAPODataSourcePropertiesArgs build() {

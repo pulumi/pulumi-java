@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     public WorkflowStepCustomStepDetailsPropertiesArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> target,
-        @Nullable Input<Integer> timeoutSeconds) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> target,
+        @Nullable Output<Integer> timeoutSeconds) {
         this.name = name;
         this.target = target;
         this.timeoutSeconds = timeoutSeconds;
     }
 
     private WorkflowStepCustomStepDetailsPropertiesArgs() {
-        this.name = Input.empty();
-        this.target = Input.empty();
-        this.timeoutSeconds = Input.empty();
+        this.name = Output.empty();
+        this.target = Output.empty();
+        this.timeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> target;
-        private @Nullable Input<Integer> timeoutSeconds;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> target;
+        private @Nullable Output<Integer> timeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class WorkflowStepCustomStepDetailsPropertiesArgs extends io.pulumi
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
         public WorkflowStepCustomStepDetailsPropertiesArgs build() {

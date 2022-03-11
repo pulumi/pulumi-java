@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pattern", required=true)
-      private final Input<String> pattern;
+      private final Output<String> pattern;
 
-    public Input<String> getPattern() {
+    public Output<String> getPattern() {
         return this.pattern;
     }
 
@@ -34,9 +34,9 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="patternName", required=true)
-      private final Input<String> patternName;
+      private final Output<String> patternName;
 
-    public Input<String> getPatternName() {
+    public Output<String> getPatternName() {
         return this.patternName;
     }
 
@@ -45,25 +45,25 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rank", required=true)
-      private final Input<Integer> rank;
+      private final Output<Integer> rank;
 
-    public Input<Integer> getRank() {
+    public Output<Integer> getRank() {
         return this.rank;
     }
 
     public ApplicationLogPatternArgs(
-        Input<String> pattern,
-        Input<String> patternName,
-        Input<Integer> rank) {
+        Output<String> pattern,
+        Output<String> patternName,
+        Output<Integer> rank) {
         this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
         this.patternName = Objects.requireNonNull(patternName, "expected parameter 'patternName' to be non-null");
         this.rank = Objects.requireNonNull(rank, "expected parameter 'rank' to be non-null");
     }
 
     private ApplicationLogPatternArgs() {
-        this.pattern = Input.empty();
-        this.patternName = Input.empty();
-        this.rank = Input.empty();
+        this.pattern = Output.empty();
+        this.patternName = Output.empty();
+        this.rank = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> pattern;
-        private Input<String> patternName;
-        private Input<Integer> rank;
+        private Output<String> pattern;
+        private Output<String> patternName;
+        private Output<Integer> rank;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     	      this.rank = defaults.rank;
         }
 
-        public Builder pattern(Input<String> pattern) {
+        public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
         public Builder pattern(String pattern) {
-            this.pattern = Input.of(Objects.requireNonNull(pattern));
+            this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
 
-        public Builder patternName(Input<String> patternName) {
+        public Builder patternName(Output<String> patternName) {
             this.patternName = Objects.requireNonNull(patternName);
             return this;
         }
 
         public Builder patternName(String patternName) {
-            this.patternName = Input.of(Objects.requireNonNull(patternName));
+            this.patternName = Output.of(Objects.requireNonNull(patternName));
             return this;
         }
 
-        public Builder rank(Input<Integer> rank) {
+        public Builder rank(Output<Integer> rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
 
         public Builder rank(Integer rank) {
-            this.rank = Input.of(Objects.requireNonNull(rank));
+            this.rank = Output.of(Objects.requireNonNull(rank));
             return this;
         }
         public ApplicationLogPatternArgs build() {

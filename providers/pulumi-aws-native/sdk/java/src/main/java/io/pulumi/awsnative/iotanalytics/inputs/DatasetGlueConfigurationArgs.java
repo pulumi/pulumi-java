@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class DatasetGlueConfigurationArgs extends io.pulumi.resources.Reso
     public static final DatasetGlueConfigurationArgs Empty = new DatasetGlueConfigurationArgs();
 
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public DatasetGlueConfigurationArgs(
-        Input<String> databaseName,
-        Input<String> tableName) {
+        Output<String> databaseName,
+        Output<String> tableName) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
     }
 
     private DatasetGlueConfigurationArgs() {
-        this.databaseName = Input.empty();
-        this.tableName = Input.empty();
+        this.databaseName = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class DatasetGlueConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private Input<String> tableName;
+        private Output<String> databaseName;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class DatasetGlueConfigurationArgs extends io.pulumi.resources.Reso
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public DatasetGlueConfigurationArgs build() {

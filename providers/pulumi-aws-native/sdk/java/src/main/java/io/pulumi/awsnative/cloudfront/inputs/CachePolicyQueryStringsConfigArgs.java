@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,29 +16,29 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     public static final CachePolicyQueryStringsConfigArgs Empty = new CachePolicyQueryStringsConfigArgs();
 
     @InputImport(name="queryStringBehavior", required=true)
-      private final Input<String> queryStringBehavior;
+      private final Output<String> queryStringBehavior;
 
-    public Input<String> getQueryStringBehavior() {
+    public Output<String> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-      private final @Nullable Input<List<String>> queryStrings;
+      private final @Nullable Output<List<String>> queryStrings;
 
-    public Input<List<String>> getQueryStrings() {
-        return this.queryStrings == null ? Input.empty() : this.queryStrings;
+    public Output<List<String>> getQueryStrings() {
+        return this.queryStrings == null ? Output.empty() : this.queryStrings;
     }
 
     public CachePolicyQueryStringsConfigArgs(
-        Input<String> queryStringBehavior,
-        @Nullable Input<List<String>> queryStrings) {
+        Output<String> queryStringBehavior,
+        @Nullable Output<List<String>> queryStrings) {
         this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
         this.queryStrings = queryStrings;
     }
 
     private CachePolicyQueryStringsConfigArgs() {
-        this.queryStringBehavior = Input.empty();
-        this.queryStrings = Input.empty();
+        this.queryStringBehavior = Output.empty();
+        this.queryStrings = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> queryStringBehavior;
-        private @Nullable Input<List<String>> queryStrings;
+        private Output<String> queryStringBehavior;
+        private @Nullable Output<List<String>> queryStrings;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder queryStringBehavior(Input<String> queryStringBehavior) {
+        public Builder queryStringBehavior(Output<String> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
         public Builder queryStringBehavior(String queryStringBehavior) {
-            this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
+            this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
 
-        public Builder queryStrings(@Nullable Input<List<String>> queryStrings) {
+        public Builder queryStrings(@Nullable Output<List<String>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
         public Builder queryStrings(@Nullable List<String> queryStrings) {
-            this.queryStrings = Input.ofNullable(queryStrings);
+            this.queryStrings = Output.ofNullable(queryStrings);
             return this;
         }
         public CachePolicyQueryStringsConfigArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationAlarmMetricArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEventArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="alarmMetrics")
-      private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
+      private final @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
-    public Input<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
-        return this.alarmMetrics == null ? Input.empty() : this.alarmMetrics;
+    public Output<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
+        return this.alarmMetrics == null ? Output.empty() : this.alarmMetrics;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<List<ApplicationLogArgs>> logs;
+      private final @Nullable Output<List<ApplicationLogArgs>> logs;
 
-    public Input<List<ApplicationLogArgs>> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<List<ApplicationLogArgs>> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
      * 
      */
     @InputImport(name="windowsEvents")
-      private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
+      private final @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
-    public Input<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
-        return this.windowsEvents == null ? Input.empty() : this.windowsEvents;
+    public Output<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
+        return this.windowsEvents == null ? Output.empty() : this.windowsEvents;
     }
 
     public ApplicationSubComponentConfigurationDetailsArgs(
-        @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics,
-        @Nullable Input<List<ApplicationLogArgs>> logs,
-        @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents) {
+        @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics,
+        @Nullable Output<List<ApplicationLogArgs>> logs,
+        @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
         this.alarmMetrics = alarmMetrics;
         this.logs = logs;
         this.windowsEvents = windowsEvents;
     }
 
     private ApplicationSubComponentConfigurationDetailsArgs() {
-        this.alarmMetrics = Input.empty();
-        this.logs = Input.empty();
-        this.windowsEvents = Input.empty();
+        this.alarmMetrics = Output.empty();
+        this.logs = Output.empty();
+        this.windowsEvents = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
-        private @Nullable Input<List<ApplicationLogArgs>> logs;
-        private @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
+        private @Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics;
+        private @Nullable Output<List<ApplicationLogArgs>> logs;
+        private @Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     	      this.windowsEvents = defaults.windowsEvents;
         }
 
-        public Builder alarmMetrics(@Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
+        public Builder alarmMetrics(@Nullable Output<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
             this.alarmMetrics = alarmMetrics;
             return this;
         }
 
         public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
-            this.alarmMetrics = Input.ofNullable(alarmMetrics);
+            this.alarmMetrics = Output.ofNullable(alarmMetrics);
             return this;
         }
 
-        public Builder logs(@Nullable Input<List<ApplicationLogArgs>> logs) {
+        public Builder logs(@Nullable Output<List<ApplicationLogArgs>> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable List<ApplicationLogArgs> logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
 
-        public Builder windowsEvents(@Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents) {
+        public Builder windowsEvents(@Nullable Output<List<ApplicationWindowsEventArgs>> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }
 
         public Builder windowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
-            this.windowsEvents = Input.ofNullable(windowsEvents);
+            this.windowsEvents = Output.ofNullable(windowsEvents);
             return this;
         }
         public ApplicationSubComponentConfigurationDetailsArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderManagedScalingStatus;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,46 +20,46 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     public static final CapacityProviderManagedScalingArgs Empty = new CapacityProviderManagedScalingArgs();
 
     @InputImport(name="instanceWarmupPeriod")
-      private final @Nullable Input<Integer> instanceWarmupPeriod;
+      private final @Nullable Output<Integer> instanceWarmupPeriod;
 
-    public Input<Integer> getInstanceWarmupPeriod() {
-        return this.instanceWarmupPeriod == null ? Input.empty() : this.instanceWarmupPeriod;
+    public Output<Integer> getInstanceWarmupPeriod() {
+        return this.instanceWarmupPeriod == null ? Output.empty() : this.instanceWarmupPeriod;
     }
 
     @InputImport(name="maximumScalingStepSize")
-      private final @Nullable Input<Integer> maximumScalingStepSize;
+      private final @Nullable Output<Integer> maximumScalingStepSize;
 
-    public Input<Integer> getMaximumScalingStepSize() {
-        return this.maximumScalingStepSize == null ? Input.empty() : this.maximumScalingStepSize;
+    public Output<Integer> getMaximumScalingStepSize() {
+        return this.maximumScalingStepSize == null ? Output.empty() : this.maximumScalingStepSize;
     }
 
     @InputImport(name="minimumScalingStepSize")
-      private final @Nullable Input<Integer> minimumScalingStepSize;
+      private final @Nullable Output<Integer> minimumScalingStepSize;
 
-    public Input<Integer> getMinimumScalingStepSize() {
-        return this.minimumScalingStepSize == null ? Input.empty() : this.minimumScalingStepSize;
+    public Output<Integer> getMinimumScalingStepSize() {
+        return this.minimumScalingStepSize == null ? Output.empty() : this.minimumScalingStepSize;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<CapacityProviderManagedScalingStatus> status;
+      private final @Nullable Output<CapacityProviderManagedScalingStatus> status;
 
-    public Input<CapacityProviderManagedScalingStatus> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<CapacityProviderManagedScalingStatus> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     @InputImport(name="targetCapacity")
-      private final @Nullable Input<Integer> targetCapacity;
+      private final @Nullable Output<Integer> targetCapacity;
 
-    public Input<Integer> getTargetCapacity() {
-        return this.targetCapacity == null ? Input.empty() : this.targetCapacity;
+    public Output<Integer> getTargetCapacity() {
+        return this.targetCapacity == null ? Output.empty() : this.targetCapacity;
     }
 
     public CapacityProviderManagedScalingArgs(
-        @Nullable Input<Integer> instanceWarmupPeriod,
-        @Nullable Input<Integer> maximumScalingStepSize,
-        @Nullable Input<Integer> minimumScalingStepSize,
-        @Nullable Input<CapacityProviderManagedScalingStatus> status,
-        @Nullable Input<Integer> targetCapacity) {
+        @Nullable Output<Integer> instanceWarmupPeriod,
+        @Nullable Output<Integer> maximumScalingStepSize,
+        @Nullable Output<Integer> minimumScalingStepSize,
+        @Nullable Output<CapacityProviderManagedScalingStatus> status,
+        @Nullable Output<Integer> targetCapacity) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         this.maximumScalingStepSize = maximumScalingStepSize;
         this.minimumScalingStepSize = minimumScalingStepSize;
@@ -68,11 +68,11 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     }
 
     private CapacityProviderManagedScalingArgs() {
-        this.instanceWarmupPeriod = Input.empty();
-        this.maximumScalingStepSize = Input.empty();
-        this.minimumScalingStepSize = Input.empty();
-        this.status = Input.empty();
-        this.targetCapacity = Input.empty();
+        this.instanceWarmupPeriod = Output.empty();
+        this.maximumScalingStepSize = Output.empty();
+        this.minimumScalingStepSize = Output.empty();
+        this.status = Output.empty();
+        this.targetCapacity = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,11 +84,11 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> instanceWarmupPeriod;
-        private @Nullable Input<Integer> maximumScalingStepSize;
-        private @Nullable Input<Integer> minimumScalingStepSize;
-        private @Nullable Input<CapacityProviderManagedScalingStatus> status;
-        private @Nullable Input<Integer> targetCapacity;
+        private @Nullable Output<Integer> instanceWarmupPeriod;
+        private @Nullable Output<Integer> maximumScalingStepSize;
+        private @Nullable Output<Integer> minimumScalingStepSize;
+        private @Nullable Output<CapacityProviderManagedScalingStatus> status;
+        private @Nullable Output<Integer> targetCapacity;
 
         public Builder() {
     	      // Empty
@@ -103,53 +103,53 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     	      this.targetCapacity = defaults.targetCapacity;
         }
 
-        public Builder instanceWarmupPeriod(@Nullable Input<Integer> instanceWarmupPeriod) {
+        public Builder instanceWarmupPeriod(@Nullable Output<Integer> instanceWarmupPeriod) {
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
 
         public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
-            this.instanceWarmupPeriod = Input.ofNullable(instanceWarmupPeriod);
+            this.instanceWarmupPeriod = Output.ofNullable(instanceWarmupPeriod);
             return this;
         }
 
-        public Builder maximumScalingStepSize(@Nullable Input<Integer> maximumScalingStepSize) {
+        public Builder maximumScalingStepSize(@Nullable Output<Integer> maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
 
         public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
-            this.maximumScalingStepSize = Input.ofNullable(maximumScalingStepSize);
+            this.maximumScalingStepSize = Output.ofNullable(maximumScalingStepSize);
             return this;
         }
 
-        public Builder minimumScalingStepSize(@Nullable Input<Integer> minimumScalingStepSize) {
+        public Builder minimumScalingStepSize(@Nullable Output<Integer> minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
 
         public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
-            this.minimumScalingStepSize = Input.ofNullable(minimumScalingStepSize);
+            this.minimumScalingStepSize = Output.ofNullable(minimumScalingStepSize);
             return this;
         }
 
-        public Builder status(@Nullable Input<CapacityProviderManagedScalingStatus> status) {
+        public Builder status(@Nullable Output<CapacityProviderManagedScalingStatus> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable CapacityProviderManagedScalingStatus status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder targetCapacity(@Nullable Input<Integer> targetCapacity) {
+        public Builder targetCapacity(@Nullable Output<Integer> targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }
 
         public Builder targetCapacity(@Nullable Integer targetCapacity) {
-            this.targetCapacity = Input.ofNullable(targetCapacity);
+            this.targetCapacity = Output.ofNullable(targetCapacity);
             return this;
         }
         public CapacityProviderManagedScalingArgs build() {

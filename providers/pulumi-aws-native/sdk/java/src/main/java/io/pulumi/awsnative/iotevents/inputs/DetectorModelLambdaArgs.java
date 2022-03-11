@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class DetectorModelLambdaArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="functionArn", required=true)
-      private final Input<String> functionArn;
+      private final Output<String> functionArn;
 
-    public Input<String> getFunctionArn() {
+    public Output<String> getFunctionArn() {
         return this.functionArn;
     }
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     public DetectorModelLambdaArgs(
-        Input<String> functionArn,
-        @Nullable Input<DetectorModelPayloadArgs> payload) {
+        Output<String> functionArn,
+        @Nullable Output<DetectorModelPayloadArgs> payload) {
         this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
         this.payload = payload;
     }
 
     private DetectorModelLambdaArgs() {
-        this.functionArn = Input.empty();
-        this.payload = Input.empty();
+        this.functionArn = Output.empty();
+        this.payload = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class DetectorModelLambdaArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<String> functionArn;
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
+        private Output<String> functionArn;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class DetectorModelLambdaArgs extends io.pulumi.resources.ResourceA
     	      this.payload = defaults.payload;
         }
 
-        public Builder functionArn(Input<String> functionArn) {
+        public Builder functionArn(Output<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
         public Builder functionArn(String functionArn) {
-            this.functionArn = Input.of(Objects.requireNonNull(functionArn));
+            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
             return this;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
         public DetectorModelLambdaArgs build() {

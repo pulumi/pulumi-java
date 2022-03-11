@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rekognition;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="projectName")
-      private final @Nullable Input<String> projectName;
+      private final @Nullable Output<String> projectName;
 
-    public Input<String> getProjectName() {
-        return this.projectName == null ? Input.empty() : this.projectName;
+    public Output<String> getProjectName() {
+        return this.projectName == null ? Output.empty() : this.projectName;
     }
 
-    public ProjectArgs(@Nullable Input<String> projectName) {
+    public ProjectArgs(@Nullable Output<String> projectName) {
         this.projectName = projectName;
     }
 
     private ProjectArgs() {
-        this.projectName = Input.empty();
+        this.projectName = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> projectName;
+        private @Nullable Output<String> projectName;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.projectName = defaults.projectName;
         }
 
-        public Builder projectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Output<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Input.ofNullable(projectName);
+            this.projectName = Output.ofNullable(projectName);
             return this;
         }
         public ProjectArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventLevels", required=true)
-      private final Input<List<ApplicationEventLevel>> eventLevels;
+      private final Output<List<ApplicationEventLevel>> eventLevels;
 
-    public Input<List<ApplicationEventLevel>> getEventLevels() {
+    public Output<List<ApplicationEventLevel>> getEventLevels() {
         return this.eventLevels;
     }
 
@@ -36,9 +36,9 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventName", required=true)
-      private final Input<String> eventName;
+      private final Output<String> eventName;
 
-    public Input<String> getEventName() {
+    public Output<String> getEventName() {
         return this.eventName;
     }
 
@@ -47,9 +47,9 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logGroupName", required=true)
-      private final Input<String> logGroupName;
+      private final Output<String> logGroupName;
 
-    public Input<String> getLogGroupName() {
+    public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
@@ -58,17 +58,17 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="patternSet")
-      private final @Nullable Input<String> patternSet;
+      private final @Nullable Output<String> patternSet;
 
-    public Input<String> getPatternSet() {
-        return this.patternSet == null ? Input.empty() : this.patternSet;
+    public Output<String> getPatternSet() {
+        return this.patternSet == null ? Output.empty() : this.patternSet;
     }
 
     public ApplicationWindowsEventArgs(
-        Input<List<ApplicationEventLevel>> eventLevels,
-        Input<String> eventName,
-        Input<String> logGroupName,
-        @Nullable Input<String> patternSet) {
+        Output<List<ApplicationEventLevel>> eventLevels,
+        Output<String> eventName,
+        Output<String> logGroupName,
+        @Nullable Output<String> patternSet) {
         this.eventLevels = Objects.requireNonNull(eventLevels, "expected parameter 'eventLevels' to be non-null");
         this.eventName = Objects.requireNonNull(eventName, "expected parameter 'eventName' to be non-null");
         this.logGroupName = Objects.requireNonNull(logGroupName, "expected parameter 'logGroupName' to be non-null");
@@ -76,10 +76,10 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationWindowsEventArgs() {
-        this.eventLevels = Input.empty();
-        this.eventName = Input.empty();
-        this.logGroupName = Input.empty();
-        this.patternSet = Input.empty();
+        this.eventLevels = Output.empty();
+        this.eventName = Output.empty();
+        this.logGroupName = Output.empty();
+        this.patternSet = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<List<ApplicationEventLevel>> eventLevels;
-        private Input<String> eventName;
-        private Input<String> logGroupName;
-        private @Nullable Input<String> patternSet;
+        private Output<List<ApplicationEventLevel>> eventLevels;
+        private Output<String> eventName;
+        private Output<String> logGroupName;
+        private @Nullable Output<String> patternSet;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder eventLevels(Input<List<ApplicationEventLevel>> eventLevels) {
+        public Builder eventLevels(Output<List<ApplicationEventLevel>> eventLevels) {
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
 
         public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
-            this.eventLevels = Input.of(Objects.requireNonNull(eventLevels));
+            this.eventLevels = Output.of(Objects.requireNonNull(eventLevels));
             return this;
         }
 
-        public Builder eventName(Input<String> eventName) {
+        public Builder eventName(Output<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
         public Builder eventName(String eventName) {
-            this.eventName = Input.of(Objects.requireNonNull(eventName));
+            this.eventName = Output.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder logGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Output<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
         public Builder logGroupName(String logGroupName) {
-            this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
+            this.logGroupName = Output.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder patternSet(@Nullable Input<String> patternSet) {
+        public Builder patternSet(@Nullable Output<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
 
         public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = Input.ofNullable(patternSet);
+            this.patternSet = Output.ofNullable(patternSet);
             return this;
         }
         public ApplicationWindowsEventArgs build() {

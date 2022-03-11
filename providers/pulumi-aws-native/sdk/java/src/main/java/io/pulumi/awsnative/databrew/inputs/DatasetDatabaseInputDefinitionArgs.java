@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseTableName")
-      private final @Nullable Input<String> databaseTableName;
+      private final @Nullable Output<String> databaseTableName;
 
-    public Input<String> getDatabaseTableName() {
-        return this.databaseTableName == null ? Input.empty() : this.databaseTableName;
+    public Output<String> getDatabaseTableName() {
+        return this.databaseTableName == null ? Output.empty() : this.databaseTableName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="glueConnectionName", required=true)
-      private final Input<String> glueConnectionName;
+      private final Output<String> glueConnectionName;
 
-    public Input<String> getGlueConnectionName() {
+    public Output<String> getGlueConnectionName() {
         return this.glueConnectionName;
     }
 
@@ -42,24 +42,24 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<String> queryString;
+      private final @Nullable Output<String> queryString;
 
-    public Input<String> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<String> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     @InputImport(name="tempDirectory")
-      private final @Nullable Input<DatasetS3LocationArgs> tempDirectory;
+      private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
-    public Input<DatasetS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Input.empty() : this.tempDirectory;
+    public Output<DatasetS3LocationArgs> getTempDirectory() {
+        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
     }
 
     public DatasetDatabaseInputDefinitionArgs(
-        @Nullable Input<String> databaseTableName,
-        Input<String> glueConnectionName,
-        @Nullable Input<String> queryString,
-        @Nullable Input<DatasetS3LocationArgs> tempDirectory) {
+        @Nullable Output<String> databaseTableName,
+        Output<String> glueConnectionName,
+        @Nullable Output<String> queryString,
+        @Nullable Output<DatasetS3LocationArgs> tempDirectory) {
         this.databaseTableName = databaseTableName;
         this.glueConnectionName = Objects.requireNonNull(glueConnectionName, "expected parameter 'glueConnectionName' to be non-null");
         this.queryString = queryString;
@@ -67,10 +67,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     }
 
     private DatasetDatabaseInputDefinitionArgs() {
-        this.databaseTableName = Input.empty();
-        this.glueConnectionName = Input.empty();
-        this.queryString = Input.empty();
-        this.tempDirectory = Input.empty();
+        this.databaseTableName = Output.empty();
+        this.glueConnectionName = Output.empty();
+        this.queryString = Output.empty();
+        this.tempDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -82,10 +82,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> databaseTableName;
-        private Input<String> glueConnectionName;
-        private @Nullable Input<String> queryString;
-        private @Nullable Input<DatasetS3LocationArgs> tempDirectory;
+        private @Nullable Output<String> databaseTableName;
+        private Output<String> glueConnectionName;
+        private @Nullable Output<String> queryString;
+        private @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
         public Builder() {
     	      // Empty
@@ -99,43 +99,43 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder databaseTableName(@Nullable Input<String> databaseTableName) {
+        public Builder databaseTableName(@Nullable Output<String> databaseTableName) {
             this.databaseTableName = databaseTableName;
             return this;
         }
 
         public Builder databaseTableName(@Nullable String databaseTableName) {
-            this.databaseTableName = Input.ofNullable(databaseTableName);
+            this.databaseTableName = Output.ofNullable(databaseTableName);
             return this;
         }
 
-        public Builder glueConnectionName(Input<String> glueConnectionName) {
+        public Builder glueConnectionName(Output<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
 
         public Builder glueConnectionName(String glueConnectionName) {
-            this.glueConnectionName = Input.of(Objects.requireNonNull(glueConnectionName));
+            this.glueConnectionName = Output.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }
 
-        public Builder queryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder tempDirectory(@Nullable Input<DatasetS3LocationArgs> tempDirectory) {
+        public Builder tempDirectory(@Nullable Output<DatasetS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
 
         public Builder tempDirectory(@Nullable DatasetS3LocationArgs tempDirectory) {
-            this.tempDirectory = Input.ofNullable(tempDirectory);
+            this.tempDirectory = Output.ofNullable(tempDirectory);
             return this;
         }
         public DatasetDatabaseInputDefinitionArgs build() {

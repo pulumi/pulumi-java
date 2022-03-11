@@ -5,7 +5,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -19,38 +19,38 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     public static final RouteUriPathRouteInputArgs Empty = new RouteUriPathRouteInputArgs();
 
     @InputImport(name="activationState", required=true)
-      private final Input<RouteActivationState> activationState;
+      private final Output<RouteActivationState> activationState;
 
-    public Input<RouteActivationState> getActivationState() {
+    public Output<RouteActivationState> getActivationState() {
         return this.activationState;
     }
 
     @InputImport(name="includeChildPaths")
-      private final @Nullable Input<Boolean> includeChildPaths;
+      private final @Nullable Output<Boolean> includeChildPaths;
 
-    public Input<Boolean> getIncludeChildPaths() {
-        return this.includeChildPaths == null ? Input.empty() : this.includeChildPaths;
+    public Output<Boolean> getIncludeChildPaths() {
+        return this.includeChildPaths == null ? Output.empty() : this.includeChildPaths;
     }
 
     @InputImport(name="methods")
-      private final @Nullable Input<List<RouteMethod>> methods;
+      private final @Nullable Output<List<RouteMethod>> methods;
 
-    public Input<List<RouteMethod>> getMethods() {
-        return this.methods == null ? Input.empty() : this.methods;
+    public Output<List<RouteMethod>> getMethods() {
+        return this.methods == null ? Output.empty() : this.methods;
     }
 
     @InputImport(name="sourcePath")
-      private final @Nullable Input<String> sourcePath;
+      private final @Nullable Output<String> sourcePath;
 
-    public Input<String> getSourcePath() {
-        return this.sourcePath == null ? Input.empty() : this.sourcePath;
+    public Output<String> getSourcePath() {
+        return this.sourcePath == null ? Output.empty() : this.sourcePath;
     }
 
     public RouteUriPathRouteInputArgs(
-        Input<RouteActivationState> activationState,
-        @Nullable Input<Boolean> includeChildPaths,
-        @Nullable Input<List<RouteMethod>> methods,
-        @Nullable Input<String> sourcePath) {
+        Output<RouteActivationState> activationState,
+        @Nullable Output<Boolean> includeChildPaths,
+        @Nullable Output<List<RouteMethod>> methods,
+        @Nullable Output<String> sourcePath) {
         this.activationState = Objects.requireNonNull(activationState, "expected parameter 'activationState' to be non-null");
         this.includeChildPaths = includeChildPaths;
         this.methods = methods;
@@ -58,10 +58,10 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     }
 
     private RouteUriPathRouteInputArgs() {
-        this.activationState = Input.empty();
-        this.includeChildPaths = Input.empty();
-        this.methods = Input.empty();
-        this.sourcePath = Input.empty();
+        this.activationState = Output.empty();
+        this.includeChildPaths = Output.empty();
+        this.methods = Output.empty();
+        this.sourcePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,10 +73,10 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<RouteActivationState> activationState;
-        private @Nullable Input<Boolean> includeChildPaths;
-        private @Nullable Input<List<RouteMethod>> methods;
-        private @Nullable Input<String> sourcePath;
+        private Output<RouteActivationState> activationState;
+        private @Nullable Output<Boolean> includeChildPaths;
+        private @Nullable Output<List<RouteMethod>> methods;
+        private @Nullable Output<String> sourcePath;
 
         public Builder() {
     	      // Empty
@@ -90,43 +90,43 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder activationState(Input<RouteActivationState> activationState) {
+        public Builder activationState(Output<RouteActivationState> activationState) {
             this.activationState = Objects.requireNonNull(activationState);
             return this;
         }
 
         public Builder activationState(RouteActivationState activationState) {
-            this.activationState = Input.of(Objects.requireNonNull(activationState));
+            this.activationState = Output.of(Objects.requireNonNull(activationState));
             return this;
         }
 
-        public Builder includeChildPaths(@Nullable Input<Boolean> includeChildPaths) {
+        public Builder includeChildPaths(@Nullable Output<Boolean> includeChildPaths) {
             this.includeChildPaths = includeChildPaths;
             return this;
         }
 
         public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
-            this.includeChildPaths = Input.ofNullable(includeChildPaths);
+            this.includeChildPaths = Output.ofNullable(includeChildPaths);
             return this;
         }
 
-        public Builder methods(@Nullable Input<List<RouteMethod>> methods) {
+        public Builder methods(@Nullable Output<List<RouteMethod>> methods) {
             this.methods = methods;
             return this;
         }
 
         public Builder methods(@Nullable List<RouteMethod> methods) {
-            this.methods = Input.ofNullable(methods);
+            this.methods = Output.ofNullable(methods);
             return this;
         }
 
-        public Builder sourcePath(@Nullable Input<String> sourcePath) {
+        public Builder sourcePath(@Nullable Output<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
 
         public Builder sourcePath(@Nullable String sourcePath) {
-            this.sourcePath = Input.ofNullable(sourcePath);
+            this.sourcePath = Output.ofNullable(sourcePath);
             return this;
         }
         public RouteUriPathRouteInputArgs build() {

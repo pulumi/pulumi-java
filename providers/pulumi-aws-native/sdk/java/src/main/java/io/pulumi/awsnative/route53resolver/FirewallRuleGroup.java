@@ -9,7 +9,6 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupFirewallRule;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupTag;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -231,14 +230,14 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallRuleGroup(String name, @Nullable FirewallRuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:FirewallRuleGroup", name, args == null ? FirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:route53resolver:FirewallRuleGroup", name, args == null ? FirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FirewallRuleGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FirewallRuleGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:route53resolver:FirewallRuleGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -253,7 +252,7 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirewallRuleGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FirewallRuleGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FirewallRuleGroup(name, id, options);
     }
 }

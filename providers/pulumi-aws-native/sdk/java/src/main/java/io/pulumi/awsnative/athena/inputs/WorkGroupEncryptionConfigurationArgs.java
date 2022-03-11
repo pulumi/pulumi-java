@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,29 +20,29 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     public static final WorkGroupEncryptionConfigurationArgs Empty = new WorkGroupEncryptionConfigurationArgs();
 
     @InputImport(name="encryptionOption", required=true)
-      private final Input<WorkGroupEncryptionOption> encryptionOption;
+      private final Output<WorkGroupEncryptionOption> encryptionOption;
 
-    public Input<WorkGroupEncryptionOption> getEncryptionOption() {
+    public Output<WorkGroupEncryptionOption> getEncryptionOption() {
         return this.encryptionOption;
     }
 
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
     public WorkGroupEncryptionConfigurationArgs(
-        Input<WorkGroupEncryptionOption> encryptionOption,
-        @Nullable Input<String> kmsKey) {
+        Output<WorkGroupEncryptionOption> encryptionOption,
+        @Nullable Output<String> kmsKey) {
         this.encryptionOption = Objects.requireNonNull(encryptionOption, "expected parameter 'encryptionOption' to be non-null");
         this.kmsKey = kmsKey;
     }
 
     private WorkGroupEncryptionConfigurationArgs() {
-        this.encryptionOption = Input.empty();
-        this.kmsKey = Input.empty();
+        this.encryptionOption = Output.empty();
+        this.kmsKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -54,8 +54,8 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<WorkGroupEncryptionOption> encryptionOption;
-        private @Nullable Input<String> kmsKey;
+        private Output<WorkGroupEncryptionOption> encryptionOption;
+        private @Nullable Output<String> kmsKey;
 
         public Builder() {
     	      // Empty
@@ -67,23 +67,23 @@ public final class WorkGroupEncryptionConfigurationArgs extends io.pulumi.resour
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder encryptionOption(Input<WorkGroupEncryptionOption> encryptionOption) {
+        public Builder encryptionOption(Output<WorkGroupEncryptionOption> encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
         public Builder encryptionOption(WorkGroupEncryptionOption encryptionOption) {
-            this.encryptionOption = Input.of(Objects.requireNonNull(encryptionOption));
+            this.encryptionOption = Output.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
         public WorkGroupEncryptionConfigurationArgs build() {

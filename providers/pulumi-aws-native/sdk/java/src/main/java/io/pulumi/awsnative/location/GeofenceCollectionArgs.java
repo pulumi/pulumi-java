@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,46 +16,46 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     public static final GeofenceCollectionArgs Empty = new GeofenceCollectionArgs();
 
     @InputImport(name="collectionName", required=true)
-      private final Input<String> collectionName;
+      private final Output<String> collectionName;
 
-    public Input<String> getCollectionName() {
+    public Output<String> getCollectionName() {
         return this.collectionName;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<GeofenceCollectionPricingPlan> pricingPlan;
+      private final @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
 
-    public Input<GeofenceCollectionPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<GeofenceCollectionPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     @InputImport(name="pricingPlanDataSource")
-      private final @Nullable Input<String> pricingPlanDataSource;
+      private final @Nullable Output<String> pricingPlanDataSource;
 
-    public Input<String> getPricingPlanDataSource() {
-        return this.pricingPlanDataSource == null ? Input.empty() : this.pricingPlanDataSource;
+    public Output<String> getPricingPlanDataSource() {
+        return this.pricingPlanDataSource == null ? Output.empty() : this.pricingPlanDataSource;
     }
 
     public GeofenceCollectionArgs(
-        Input<String> collectionName,
-        @Nullable Input<String> description,
-        @Nullable Input<String> kmsKeyId,
-        @Nullable Input<GeofenceCollectionPricingPlan> pricingPlan,
-        @Nullable Input<String> pricingPlanDataSource) {
+        Output<String> collectionName,
+        @Nullable Output<String> description,
+        @Nullable Output<String> kmsKeyId,
+        @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan,
+        @Nullable Output<String> pricingPlanDataSource) {
         this.collectionName = Objects.requireNonNull(collectionName, "expected parameter 'collectionName' to be non-null");
         this.description = description;
         this.kmsKeyId = kmsKeyId;
@@ -64,11 +64,11 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GeofenceCollectionArgs() {
-        this.collectionName = Input.empty();
-        this.description = Input.empty();
-        this.kmsKeyId = Input.empty();
-        this.pricingPlan = Input.empty();
-        this.pricingPlanDataSource = Input.empty();
+        this.collectionName = Output.empty();
+        this.description = Output.empty();
+        this.kmsKeyId = Output.empty();
+        this.pricingPlan = Output.empty();
+        this.pricingPlanDataSource = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,11 +80,11 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> collectionName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> kmsKeyId;
-        private @Nullable Input<GeofenceCollectionPricingPlan> pricingPlan;
-        private @Nullable Input<String> pricingPlanDataSource;
+        private Output<String> collectionName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> kmsKeyId;
+        private @Nullable Output<GeofenceCollectionPricingPlan> pricingPlan;
+        private @Nullable Output<String> pricingPlanDataSource;
 
         public Builder() {
     	      // Empty
@@ -99,53 +99,53 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     	      this.pricingPlanDataSource = defaults.pricingPlanDataSource;
         }
 
-        public Builder collectionName(Input<String> collectionName) {
+        public Builder collectionName(Output<String> collectionName) {
             this.collectionName = Objects.requireNonNull(collectionName);
             return this;
         }
 
         public Builder collectionName(String collectionName) {
-            this.collectionName = Input.of(Objects.requireNonNull(collectionName));
+            this.collectionName = Output.of(Objects.requireNonNull(collectionName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<GeofenceCollectionPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<GeofenceCollectionPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder pricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable Output<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
 
         public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
-            this.pricingPlanDataSource = Input.ofNullable(pricingPlanDataSource);
+            this.pricingPlanDataSource = Output.ofNullable(pricingPlanDataSource);
             return this;
         }
         public GeofenceCollectionArgs build() {

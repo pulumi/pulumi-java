@@ -6,7 +6,7 @@ package io.pulumi.awsnative.signer;
 import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformId", required=true)
-      private final Input<SigningProfilePlatformId> platformId;
+      private final Output<SigningProfilePlatformId> platformId;
 
-    public Input<SigningProfilePlatformId> getPlatformId() {
+    public Output<SigningProfilePlatformId> getPlatformId() {
         return this.platformId;
     }
 
@@ -33,10 +33,10 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureValidityPeriod")
-      private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
+      private final @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
-    public Input<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
+    public Output<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
+        return this.signatureValidityPeriod == null ? Output.empty() : this.signatureValidityPeriod;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<SigningProfileTagArgs>> tags;
+      private final @Nullable Output<List<SigningProfileTagArgs>> tags;
 
-    public Input<List<SigningProfileTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<SigningProfileTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SigningProfileArgs(
-        Input<SigningProfilePlatformId> platformId,
-        @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod,
-        @Nullable Input<List<SigningProfileTagArgs>> tags) {
+        Output<SigningProfilePlatformId> platformId,
+        @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod,
+        @Nullable Output<List<SigningProfileTagArgs>> tags) {
         this.platformId = Objects.requireNonNull(platformId, "expected parameter 'platformId' to be non-null");
         this.signatureValidityPeriod = signatureValidityPeriod;
         this.tags = tags;
     }
 
     private SigningProfileArgs() {
-        this.platformId = Input.empty();
-        this.signatureValidityPeriod = Input.empty();
-        this.tags = Input.empty();
+        this.platformId = Output.empty();
+        this.signatureValidityPeriod = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SigningProfilePlatformId> platformId;
-        private @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
-        private @Nullable Input<List<SigningProfileTagArgs>> tags;
+        private Output<SigningProfilePlatformId> platformId;
+        private @Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
+        private @Nullable Output<List<SigningProfileTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder platformId(Input<SigningProfilePlatformId> platformId) {
+        public Builder platformId(Output<SigningProfilePlatformId> platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
 
         public Builder platformId(SigningProfilePlatformId platformId) {
-            this.platformId = Input.of(Objects.requireNonNull(platformId));
+            this.platformId = Output.of(Objects.requireNonNull(platformId));
             return this;
         }
 
-        public Builder signatureValidityPeriod(@Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
+        public Builder signatureValidityPeriod(@Nullable Output<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod) {
             this.signatureValidityPeriod = signatureValidityPeriod;
             return this;
         }
 
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Input.ofNullable(signatureValidityPeriod);
+            this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<SigningProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<SigningProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<SigningProfileTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SigningProfileArgs build() {

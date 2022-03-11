@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot;
 
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="logLevel", required=true)
-      private final Input<ResourceSpecificLoggingLogLevel> logLevel;
+      private final Output<ResourceSpecificLoggingLogLevel> logLevel;
 
-    public Input<ResourceSpecificLoggingLogLevel> getLogLevel() {
+    public Output<ResourceSpecificLoggingLogLevel> getLogLevel() {
         return this.logLevel;
     }
 
@@ -31,9 +31,9 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetName", required=true)
-      private final Input<String> targetName;
+      private final Output<String> targetName;
 
-    public Input<String> getTargetName() {
+    public Output<String> getTargetName() {
         return this.targetName;
     }
 
@@ -42,25 +42,25 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="targetType", required=true)
-      private final Input<ResourceSpecificLoggingTargetType> targetType;
+      private final Output<ResourceSpecificLoggingTargetType> targetType;
 
-    public Input<ResourceSpecificLoggingTargetType> getTargetType() {
+    public Output<ResourceSpecificLoggingTargetType> getTargetType() {
         return this.targetType;
     }
 
     public ResourceSpecificLoggingArgs(
-        Input<ResourceSpecificLoggingLogLevel> logLevel,
-        Input<String> targetName,
-        Input<ResourceSpecificLoggingTargetType> targetType) {
+        Output<ResourceSpecificLoggingLogLevel> logLevel,
+        Output<String> targetName,
+        Output<ResourceSpecificLoggingTargetType> targetType) {
         this.logLevel = Objects.requireNonNull(logLevel, "expected parameter 'logLevel' to be non-null");
         this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
         this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
     }
 
     private ResourceSpecificLoggingArgs() {
-        this.logLevel = Input.empty();
-        this.targetName = Input.empty();
-        this.targetType = Input.empty();
+        this.logLevel = Output.empty();
+        this.targetName = Output.empty();
+        this.targetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<ResourceSpecificLoggingLogLevel> logLevel;
-        private Input<String> targetName;
-        private Input<ResourceSpecificLoggingTargetType> targetType;
+        private Output<ResourceSpecificLoggingLogLevel> logLevel;
+        private Output<String> targetName;
+        private Output<ResourceSpecificLoggingTargetType> targetType;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder logLevel(Input<ResourceSpecificLoggingLogLevel> logLevel) {
+        public Builder logLevel(Output<ResourceSpecificLoggingLogLevel> logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
 
         public Builder logLevel(ResourceSpecificLoggingLogLevel logLevel) {
-            this.logLevel = Input.of(Objects.requireNonNull(logLevel));
+            this.logLevel = Output.of(Objects.requireNonNull(logLevel));
             return this;
         }
 
-        public Builder targetName(Input<String> targetName) {
+        public Builder targetName(Output<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
         public Builder targetName(String targetName) {
-            this.targetName = Input.of(Objects.requireNonNull(targetName));
+            this.targetName = Output.of(Objects.requireNonNull(targetName));
             return this;
         }
 
-        public Builder targetType(Input<ResourceSpecificLoggingTargetType> targetType) {
+        public Builder targetType(Output<ResourceSpecificLoggingTargetType> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
         public Builder targetType(ResourceSpecificLoggingTargetType targetType) {
-            this.targetType = Input.of(Objects.requireNonNull(targetType));
+            this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
         }
         public ResourceSpecificLoggingArgs build() {

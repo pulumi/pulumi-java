@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
     public static final OriginRequestPolicyArgs Empty = new OriginRequestPolicyArgs();
 
     @InputImport(name="originRequestPolicyConfig", required=true)
-      private final Input<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
+      private final Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
 
-    public Input<OriginRequestPolicyConfigArgs> getOriginRequestPolicyConfig() {
+    public Output<OriginRequestPolicyConfigArgs> getOriginRequestPolicyConfig() {
         return this.originRequestPolicyConfig;
     }
 
-    public OriginRequestPolicyArgs(Input<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
+    public OriginRequestPolicyArgs(Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
         this.originRequestPolicyConfig = Objects.requireNonNull(originRequestPolicyConfig, "expected parameter 'originRequestPolicyConfig' to be non-null");
     }
 
     private OriginRequestPolicyArgs() {
-        this.originRequestPolicyConfig = Input.empty();
+        this.originRequestPolicyConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
+        private Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.originRequestPolicyConfig = defaults.originRequestPolicyConfig;
         }
 
-        public Builder originRequestPolicyConfig(Input<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
+        public Builder originRequestPolicyConfig(Output<OriginRequestPolicyConfigArgs> originRequestPolicyConfig) {
             this.originRequestPolicyConfig = Objects.requireNonNull(originRequestPolicyConfig);
             return this;
         }
 
         public Builder originRequestPolicyConfig(OriginRequestPolicyConfigArgs originRequestPolicyConfig) {
-            this.originRequestPolicyConfig = Input.of(Objects.requireNonNull(originRequestPolicyConfig));
+            this.originRequestPolicyConfig = Output.of(Objects.requireNonNull(originRequestPolicyConfig));
             return this;
         }
         public OriginRequestPolicyArgs build() {

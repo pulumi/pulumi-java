@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream;
 
 import io.pulumi.awsnative.appstream.inputs.EntitlementAttributeArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,46 +17,46 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
     @InputImport(name="appVisibility", required=true)
-      private final Input<String> appVisibility;
+      private final Output<String> appVisibility;
 
-    public Input<String> getAppVisibility() {
+    public Output<String> getAppVisibility() {
         return this.appVisibility;
     }
 
     @InputImport(name="attributes", required=true)
-      private final Input<List<EntitlementAttributeArgs>> attributes;
+      private final Output<List<EntitlementAttributeArgs>> attributes;
 
-    public Input<List<EntitlementAttributeArgs>> getAttributes() {
+    public Output<List<EntitlementAttributeArgs>> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="stackName", required=true)
-      private final Input<String> stackName;
+      private final Output<String> stackName;
 
-    public Input<String> getStackName() {
+    public Output<String> getStackName() {
         return this.stackName;
     }
 
     public EntitlementArgs(
-        Input<String> appVisibility,
-        Input<List<EntitlementAttributeArgs>> attributes,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        Input<String> stackName) {
+        Output<String> appVisibility,
+        Output<List<EntitlementAttributeArgs>> attributes,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        Output<String> stackName) {
         this.appVisibility = Objects.requireNonNull(appVisibility, "expected parameter 'appVisibility' to be non-null");
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.description = description;
@@ -65,11 +65,11 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntitlementArgs() {
-        this.appVisibility = Input.empty();
-        this.attributes = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.stackName = Input.empty();
+        this.appVisibility = Output.empty();
+        this.attributes = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.stackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -81,11 +81,11 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> appVisibility;
-        private Input<List<EntitlementAttributeArgs>> attributes;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private Input<String> stackName;
+        private Output<String> appVisibility;
+        private Output<List<EntitlementAttributeArgs>> attributes;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private Output<String> stackName;
 
         public Builder() {
     	      // Empty
@@ -100,53 +100,53 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder appVisibility(Input<String> appVisibility) {
+        public Builder appVisibility(Output<String> appVisibility) {
             this.appVisibility = Objects.requireNonNull(appVisibility);
             return this;
         }
 
         public Builder appVisibility(String appVisibility) {
-            this.appVisibility = Input.of(Objects.requireNonNull(appVisibility));
+            this.appVisibility = Output.of(Objects.requireNonNull(appVisibility));
             return this;
         }
 
-        public Builder attributes(Input<List<EntitlementAttributeArgs>> attributes) {
+        public Builder attributes(Output<List<EntitlementAttributeArgs>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(List<EntitlementAttributeArgs> attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder stackName(Input<String> stackName) {
+        public Builder stackName(Output<String> stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }
 
         public Builder stackName(String stackName) {
-            this.stackName = Input.of(Objects.requireNonNull(stackName));
+            this.stackName = Output.of(Objects.requireNonNull(stackName));
             return this;
         }
         public EntitlementArgs build() {

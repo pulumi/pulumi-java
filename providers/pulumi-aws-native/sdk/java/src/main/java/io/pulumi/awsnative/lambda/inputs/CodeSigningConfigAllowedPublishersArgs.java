@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="signingProfileVersionArns", required=true)
-      private final Input<List<String>> signingProfileVersionArns;
+      private final Output<List<String>> signingProfileVersionArns;
 
-    public Input<List<String>> getSigningProfileVersionArns() {
+    public Output<List<String>> getSigningProfileVersionArns() {
         return this.signingProfileVersionArns;
     }
 
-    public CodeSigningConfigAllowedPublishersArgs(Input<List<String>> signingProfileVersionArns) {
+    public CodeSigningConfigAllowedPublishersArgs(Output<List<String>> signingProfileVersionArns) {
         this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns, "expected parameter 'signingProfileVersionArns' to be non-null");
     }
 
     private CodeSigningConfigAllowedPublishersArgs() {
-        this.signingProfileVersionArns = Input.empty();
+        this.signingProfileVersionArns = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<List<String>> signingProfileVersionArns;
+        private Output<List<String>> signingProfileVersionArns;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CodeSigningConfigAllowedPublishersArgs extends io.pulumi.reso
     	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
         }
 
-        public Builder signingProfileVersionArns(Input<List<String>> signingProfileVersionArns) {
+        public Builder signingProfileVersionArns(Output<List<String>> signingProfileVersionArns) {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }
 
         public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
-            this.signingProfileVersionArns = Input.of(Objects.requireNonNull(signingProfileVersionArns));
+            this.signingProfileVersionArns = Output.of(Objects.requireNonNull(signingProfileVersionArns));
             return this;
         }
         public CodeSigningConfigAllowedPublishersArgs build() {

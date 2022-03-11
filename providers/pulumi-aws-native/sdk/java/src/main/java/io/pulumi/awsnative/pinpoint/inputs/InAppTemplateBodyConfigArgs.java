@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,39 +16,39 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     public static final InAppTemplateBodyConfigArgs Empty = new InAppTemplateBodyConfigArgs();
 
     @InputImport(name="alignment")
-      private final @Nullable Input<InAppTemplateAlignment> alignment;
+      private final @Nullable Output<InAppTemplateAlignment> alignment;
 
-    public Input<InAppTemplateAlignment> getAlignment() {
-        return this.alignment == null ? Input.empty() : this.alignment;
+    public Output<InAppTemplateAlignment> getAlignment() {
+        return this.alignment == null ? Output.empty() : this.alignment;
     }
 
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     @InputImport(name="textColor")
-      private final @Nullable Input<String> textColor;
+      private final @Nullable Output<String> textColor;
 
-    public Input<String> getTextColor() {
-        return this.textColor == null ? Input.empty() : this.textColor;
+    public Output<String> getTextColor() {
+        return this.textColor == null ? Output.empty() : this.textColor;
     }
 
     public InAppTemplateBodyConfigArgs(
-        @Nullable Input<InAppTemplateAlignment> alignment,
-        @Nullable Input<String> body,
-        @Nullable Input<String> textColor) {
+        @Nullable Output<InAppTemplateAlignment> alignment,
+        @Nullable Output<String> body,
+        @Nullable Output<String> textColor) {
         this.alignment = alignment;
         this.body = body;
         this.textColor = textColor;
     }
 
     private InAppTemplateBodyConfigArgs() {
-        this.alignment = Input.empty();
-        this.body = Input.empty();
-        this.textColor = Input.empty();
+        this.alignment = Output.empty();
+        this.body = Output.empty();
+        this.textColor = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<InAppTemplateAlignment> alignment;
-        private @Nullable Input<String> body;
-        private @Nullable Input<String> textColor;
+        private @Nullable Output<InAppTemplateAlignment> alignment;
+        private @Nullable Output<String> body;
+        private @Nullable Output<String> textColor;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder alignment(@Nullable Input<InAppTemplateAlignment> alignment) {
+        public Builder alignment(@Nullable Output<InAppTemplateAlignment> alignment) {
             this.alignment = alignment;
             return this;
         }
 
         public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
-            this.alignment = Input.ofNullable(alignment);
+            this.alignment = Output.ofNullable(alignment);
             return this;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder textColor(@Nullable Input<String> textColor) {
+        public Builder textColor(@Nullable Output<String> textColor) {
             this.textColor = textColor;
             return this;
         }
 
         public Builder textColor(@Nullable String textColor) {
-            this.textColor = Input.ofNullable(textColor);
+            this.textColor = Output.ofNullable(textColor);
             return this;
         }
         public InAppTemplateBodyConfigArgs build() {

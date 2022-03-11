@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="bucketName", required=true)
-      private final Input<String> bucketName;
+      private final Output<String> bucketName;
 
-    public Input<String> getBucketName() {
+    public Output<String> getBucketName() {
         return this.bucketName;
     }
 
@@ -30,10 +30,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="bucketPrefix")
-      private final @Nullable Input<String> bucketPrefix;
+      private final @Nullable Output<String> bucketPrefix;
 
-    public Input<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
+    public Output<String> getBucketPrefix() {
+        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="databaseUrl", required=true)
-      private final Input<String> databaseUrl;
+      private final Output<String> databaseUrl;
 
-    public Input<String> getDatabaseUrl() {
+    public Output<String> getDatabaseUrl() {
         return this.databaseUrl;
     }
 
@@ -52,17 +52,17 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public ConnectorProfileRedshiftConnectorProfilePropertiesArgs(
-        Input<String> bucketName,
-        @Nullable Input<String> bucketPrefix,
-        Input<String> databaseUrl,
-        Input<String> roleArn) {
+        Output<String> bucketName,
+        @Nullable Output<String> bucketPrefix,
+        Output<String> databaseUrl,
+        Output<String> roleArn) {
         this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
         this.bucketPrefix = bucketPrefix;
         this.databaseUrl = Objects.requireNonNull(databaseUrl, "expected parameter 'databaseUrl' to be non-null");
@@ -70,10 +70,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     }
 
     private ConnectorProfileRedshiftConnectorProfilePropertiesArgs() {
-        this.bucketName = Input.empty();
-        this.bucketPrefix = Input.empty();
-        this.databaseUrl = Input.empty();
-        this.roleArn = Input.empty();
+        this.bucketName = Output.empty();
+        this.bucketPrefix = Output.empty();
+        this.databaseUrl = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     }
 
     public static final class Builder {
-        private Input<String> bucketName;
-        private @Nullable Input<String> bucketPrefix;
-        private Input<String> databaseUrl;
-        private Input<String> roleArn;
+        private Output<String> bucketName;
+        private @Nullable Output<String> bucketPrefix;
+        private Output<String> databaseUrl;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder bucketName(Input<String> bucketName) {
+        public Builder bucketName(Output<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Input.of(Objects.requireNonNull(bucketName));
+            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Input.ofNullable(bucketPrefix);
+            this.bucketPrefix = Output.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder databaseUrl(Input<String> databaseUrl) {
+        public Builder databaseUrl(Output<String> databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
 
         public Builder databaseUrl(String databaseUrl) {
-            this.databaseUrl = Input.of(Objects.requireNonNull(databaseUrl));
+            this.databaseUrl = Output.of(Objects.requireNonNull(databaseUrl));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {

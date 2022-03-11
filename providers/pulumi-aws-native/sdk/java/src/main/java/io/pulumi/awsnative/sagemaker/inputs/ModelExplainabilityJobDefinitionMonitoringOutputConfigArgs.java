@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionMonitoringOutputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
      * 
      */
     @InputImport(name="kmsKeyId")
-      private final @Nullable Input<String> kmsKeyId;
+      private final @Nullable Output<String> kmsKeyId;
 
-    public Input<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
+    public Output<String> getKmsKeyId() {
+        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
      * 
      */
     @InputImport(name="monitoringOutputs", required=true)
-      private final Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+      private final Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
-    public Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
+    public Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> getMonitoringOutputs() {
         return this.monitoringOutputs;
     }
 
     public ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs(
-        @Nullable Input<String> kmsKeyId,
-        Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
+        @Nullable Output<String> kmsKeyId,
+        Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs, "expected parameter 'monitoringOutputs' to be non-null");
     }
 
     private ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs() {
-        this.kmsKeyId = Input.empty();
-        this.monitoringOutputs = Input.empty();
+        this.kmsKeyId = Output.empty();
+        this.monitoringOutputs = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyId;
-        private Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
+        private @Nullable Output<String> kmsKeyId;
+        private Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs ex
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Input.ofNullable(kmsKeyId);
+            this.kmsKeyId = Output.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder monitoringOutputs(Input<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
+        public Builder monitoringOutputs(Output<List<ModelExplainabilityJobDefinitionMonitoringOutputArgs>> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }
 
         public Builder monitoringOutputs(List<ModelExplainabilityJobDefinitionMonitoringOutputArgs> monitoringOutputs) {
-            this.monitoringOutputs = Input.of(Objects.requireNonNull(monitoringOutputs));
+            this.monitoringOutputs = Output.of(Objects.requireNonNull(monitoringOutputs));
             return this;
         }
         public ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs build() {

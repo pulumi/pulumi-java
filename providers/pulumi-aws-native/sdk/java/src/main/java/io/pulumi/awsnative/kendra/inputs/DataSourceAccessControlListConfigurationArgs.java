@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     public static final DataSourceAccessControlListConfigurationArgs Empty = new DataSourceAccessControlListConfigurationArgs();
 
     @InputImport(name="keyPath")
-      private final @Nullable Input<String> keyPath;
+      private final @Nullable Output<String> keyPath;
 
-    public Input<String> getKeyPath() {
-        return this.keyPath == null ? Input.empty() : this.keyPath;
+    public Output<String> getKeyPath() {
+        return this.keyPath == null ? Output.empty() : this.keyPath;
     }
 
-    public DataSourceAccessControlListConfigurationArgs(@Nullable Input<String> keyPath) {
+    public DataSourceAccessControlListConfigurationArgs(@Nullable Output<String> keyPath) {
         this.keyPath = keyPath;
     }
 
     private DataSourceAccessControlListConfigurationArgs() {
-        this.keyPath = Input.empty();
+        this.keyPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyPath;
+        private @Nullable Output<String> keyPath;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     	      this.keyPath = defaults.keyPath;
         }
 
-        public Builder keyPath(@Nullable Input<String> keyPath) {
+        public Builder keyPath(@Nullable Output<String> keyPath) {
             this.keyPath = keyPath;
             return this;
         }
 
         public Builder keyPath(@Nullable String keyPath) {
-            this.keyPath = Input.ofNullable(keyPath);
+            this.keyPath = Output.ofNullable(keyPath);
             return this;
         }
         public DataSourceAccessControlListConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.inputs;
 
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationS3DestinationConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -18,18 +18,18 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     public static final RecordingConfigurationDestinationConfigurationArgs Empty = new RecordingConfigurationDestinationConfigurationArgs();
 
     @InputImport(name="s3", required=true)
-      private final Input<RecordingConfigurationS3DestinationConfigurationArgs> s3;
+      private final Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
-    public Input<RecordingConfigurationS3DestinationConfigurationArgs> getS3() {
+    public Output<RecordingConfigurationS3DestinationConfigurationArgs> getS3() {
         return this.s3;
     }
 
-    public RecordingConfigurationDestinationConfigurationArgs(Input<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
+    public RecordingConfigurationDestinationConfigurationArgs(Output<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
         this.s3 = Objects.requireNonNull(s3, "expected parameter 's3' to be non-null");
     }
 
     private RecordingConfigurationDestinationConfigurationArgs() {
-        this.s3 = Input.empty();
+        this.s3 = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     }
 
     public static final class Builder {
-        private Input<RecordingConfigurationS3DestinationConfigurationArgs> s3;
+        private Output<RecordingConfigurationS3DestinationConfigurationArgs> s3;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     	      this.s3 = defaults.s3;
         }
 
-        public Builder s3(Input<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
+        public Builder s3(Output<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
         public Builder s3(RecordingConfigurationS3DestinationConfigurationArgs s3) {
-            this.s3 = Input.of(Objects.requireNonNull(s3));
+            this.s3 = Output.of(Objects.requireNonNull(s3));
             return this;
         }
         public RecordingConfigurationDestinationConfigurationArgs build() {

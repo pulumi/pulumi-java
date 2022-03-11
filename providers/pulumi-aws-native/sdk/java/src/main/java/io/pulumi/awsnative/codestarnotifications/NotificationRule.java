@@ -8,7 +8,6 @@ import io.pulumi.awsnative.codestarnotifications.NotificationRuleArgs;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailType;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.outputs.NotificationRuleTarget;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -128,14 +127,14 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRule(String name, NotificationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:codestarnotifications:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("aws-native:codestarnotifications:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotificationRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotificationRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("aws-native:codestarnotifications:NotificationRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -150,7 +149,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotificationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotificationRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotificationRule(name, id, options);
     }
 }

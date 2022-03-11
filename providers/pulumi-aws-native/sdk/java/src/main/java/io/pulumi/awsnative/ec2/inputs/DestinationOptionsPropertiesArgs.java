@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.FlowLogDestinationOptionsPropertiesFileFormat;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class DestinationOptionsPropertiesArgs extends io.pulumi.resources.
     public static final DestinationOptionsPropertiesArgs Empty = new DestinationOptionsPropertiesArgs();
 
     @InputImport(name="fileFormat", required=true)
-      private final Input<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat;
+      private final Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat;
 
-    public Input<FlowLogDestinationOptionsPropertiesFileFormat> getFileFormat() {
+    public Output<FlowLogDestinationOptionsPropertiesFileFormat> getFileFormat() {
         return this.fileFormat;
     }
 
     @InputImport(name="hiveCompatiblePartitions", required=true)
-      private final Input<Boolean> hiveCompatiblePartitions;
+      private final Output<Boolean> hiveCompatiblePartitions;
 
-    public Input<Boolean> getHiveCompatiblePartitions() {
+    public Output<Boolean> getHiveCompatiblePartitions() {
         return this.hiveCompatiblePartitions;
     }
 
     @InputImport(name="perHourPartition", required=true)
-      private final Input<Boolean> perHourPartition;
+      private final Output<Boolean> perHourPartition;
 
-    public Input<Boolean> getPerHourPartition() {
+    public Output<Boolean> getPerHourPartition() {
         return this.perHourPartition;
     }
 
     public DestinationOptionsPropertiesArgs(
-        Input<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat,
-        Input<Boolean> hiveCompatiblePartitions,
-        Input<Boolean> perHourPartition) {
+        Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat,
+        Output<Boolean> hiveCompatiblePartitions,
+        Output<Boolean> perHourPartition) {
         this.fileFormat = Objects.requireNonNull(fileFormat, "expected parameter 'fileFormat' to be non-null");
         this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions, "expected parameter 'hiveCompatiblePartitions' to be non-null");
         this.perHourPartition = Objects.requireNonNull(perHourPartition, "expected parameter 'perHourPartition' to be non-null");
     }
 
     private DestinationOptionsPropertiesArgs() {
-        this.fileFormat = Input.empty();
-        this.hiveCompatiblePartitions = Input.empty();
-        this.perHourPartition = Input.empty();
+        this.fileFormat = Output.empty();
+        this.hiveCompatiblePartitions = Output.empty();
+        this.perHourPartition = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class DestinationOptionsPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat;
-        private Input<Boolean> hiveCompatiblePartitions;
-        private Input<Boolean> perHourPartition;
+        private Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat;
+        private Output<Boolean> hiveCompatiblePartitions;
+        private Output<Boolean> perHourPartition;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class DestinationOptionsPropertiesArgs extends io.pulumi.resources.
     	      this.perHourPartition = defaults.perHourPartition;
         }
 
-        public Builder fileFormat(Input<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat) {
+        public Builder fileFormat(Output<FlowLogDestinationOptionsPropertiesFileFormat> fileFormat) {
             this.fileFormat = Objects.requireNonNull(fileFormat);
             return this;
         }
 
         public Builder fileFormat(FlowLogDestinationOptionsPropertiesFileFormat fileFormat) {
-            this.fileFormat = Input.of(Objects.requireNonNull(fileFormat));
+            this.fileFormat = Output.of(Objects.requireNonNull(fileFormat));
             return this;
         }
 
-        public Builder hiveCompatiblePartitions(Input<Boolean> hiveCompatiblePartitions) {
+        public Builder hiveCompatiblePartitions(Output<Boolean> hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions);
             return this;
         }
 
         public Builder hiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
-            this.hiveCompatiblePartitions = Input.of(Objects.requireNonNull(hiveCompatiblePartitions));
+            this.hiveCompatiblePartitions = Output.of(Objects.requireNonNull(hiveCompatiblePartitions));
             return this;
         }
 
-        public Builder perHourPartition(Input<Boolean> perHourPartition) {
+        public Builder perHourPartition(Output<Boolean> perHourPartition) {
             this.perHourPartition = Objects.requireNonNull(perHourPartition);
             return this;
         }
 
         public Builder perHourPartition(Boolean perHourPartition) {
-            this.perHourPartition = Input.of(Objects.requireNonNull(perHourPartition));
+            this.perHourPartition = Output.of(Objects.requireNonNull(perHourPartition));
             return this;
         }
         public DestinationOptionsPropertiesArgs build() {

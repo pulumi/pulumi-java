@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorEntityTypeArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorEventVariableArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-      private final @Nullable Input<String> arn;
+      private final @Nullable Output<String> arn;
 
-    public Input<String> getArn() {
-        return this.arn == null ? Input.empty() : this.arn;
+    public Output<String> getArn() {
+        return this.arn == null ? Output.empty() : this.arn;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -47,38 +47,38 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="entityTypes")
-      private final @Nullable Input<List<DetectorEntityTypeArgs>> entityTypes;
+      private final @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
 
-    public Input<List<DetectorEntityTypeArgs>> getEntityTypes() {
-        return this.entityTypes == null ? Input.empty() : this.entityTypes;
+    public Output<List<DetectorEntityTypeArgs>> getEntityTypes() {
+        return this.entityTypes == null ? Output.empty() : this.entityTypes;
     }
 
     @InputImport(name="eventVariables")
-      private final @Nullable Input<List<DetectorEventVariableArgs>> eventVariables;
+      private final @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
 
-    public Input<List<DetectorEventVariableArgs>> getEventVariables() {
-        return this.eventVariables == null ? Input.empty() : this.eventVariables;
+    public Output<List<DetectorEventVariableArgs>> getEventVariables() {
+        return this.eventVariables == null ? Output.empty() : this.eventVariables;
     }
 
     @InputImport(name="inline")
-      private final @Nullable Input<Boolean> inline;
+      private final @Nullable Output<Boolean> inline;
 
-    public Input<Boolean> getInline() {
-        return this.inline == null ? Input.empty() : this.inline;
+    public Output<Boolean> getInline() {
+        return this.inline == null ? Output.empty() : this.inline;
     }
 
     @InputImport(name="labels")
-      private final @Nullable Input<List<DetectorLabelArgs>> labels;
+      private final @Nullable Output<List<DetectorLabelArgs>> labels;
 
-    public Input<List<DetectorLabelArgs>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<DetectorLabelArgs>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="lastUpdatedTime")
-      private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Output<String> lastUpdatedTime;
 
-    public Input<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
+    public Output<String> getLastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -108,23 +108,23 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DetectorTagArgs>> tags;
+      private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Input<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DetectorEventTypeArgs(
-        @Nullable Input<String> arn,
-        @Nullable Input<String> createdTime,
-        @Nullable Input<String> description,
-        @Nullable Input<List<DetectorEntityTypeArgs>> entityTypes,
-        @Nullable Input<List<DetectorEventVariableArgs>> eventVariables,
-        @Nullable Input<Boolean> inline,
-        @Nullable Input<List<DetectorLabelArgs>> labels,
-        @Nullable Input<String> lastUpdatedTime,
-        @Nullable Input<String> name,
-        @Nullable Input<List<DetectorTagArgs>> tags) {
+        @Nullable Output<String> arn,
+        @Nullable Output<String> createdTime,
+        @Nullable Output<String> description,
+        @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes,
+        @Nullable Output<List<DetectorEventVariableArgs>> eventVariables,
+        @Nullable Output<Boolean> inline,
+        @Nullable Output<List<DetectorLabelArgs>> labels,
+        @Nullable Output<String> lastUpdatedTime,
+        @Nullable Output<String> name,
+        @Nullable Output<List<DetectorTagArgs>> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -138,16 +138,16 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DetectorEventTypeArgs() {
-        this.arn = Input.empty();
-        this.createdTime = Input.empty();
-        this.description = Input.empty();
-        this.entityTypes = Input.empty();
-        this.eventVariables = Input.empty();
-        this.inline = Input.empty();
-        this.labels = Input.empty();
-        this.lastUpdatedTime = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.arn = Output.empty();
+        this.createdTime = Output.empty();
+        this.description = Output.empty();
+        this.entityTypes = Output.empty();
+        this.eventVariables = Output.empty();
+        this.inline = Output.empty();
+        this.labels = Output.empty();
+        this.lastUpdatedTime = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,16 +159,16 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arn;
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<String> description;
-        private @Nullable Input<List<DetectorEntityTypeArgs>> entityTypes;
-        private @Nullable Input<List<DetectorEventVariableArgs>> eventVariables;
-        private @Nullable Input<Boolean> inline;
-        private @Nullable Input<List<DetectorLabelArgs>> labels;
-        private @Nullable Input<String> lastUpdatedTime;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<DetectorTagArgs>> tags;
+        private @Nullable Output<String> arn;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<String> description;
+        private @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
+        private @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
+        private @Nullable Output<Boolean> inline;
+        private @Nullable Output<List<DetectorLabelArgs>> labels;
+        private @Nullable Output<String> lastUpdatedTime;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<DetectorTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,103 +188,103 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder arn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Output<String> arn) {
             this.arn = arn;
             return this;
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = Input.ofNullable(arn);
+            this.arn = Output.ofNullable(arn);
             return this;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder entityTypes(@Nullable Input<List<DetectorEntityTypeArgs>> entityTypes) {
+        public Builder entityTypes(@Nullable Output<List<DetectorEntityTypeArgs>> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
 
         public Builder entityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
-            this.entityTypes = Input.ofNullable(entityTypes);
+            this.entityTypes = Output.ofNullable(entityTypes);
             return this;
         }
 
-        public Builder eventVariables(@Nullable Input<List<DetectorEventVariableArgs>> eventVariables) {
+        public Builder eventVariables(@Nullable Output<List<DetectorEventVariableArgs>> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
 
         public Builder eventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
-            this.eventVariables = Input.ofNullable(eventVariables);
+            this.eventVariables = Output.ofNullable(eventVariables);
             return this;
         }
 
-        public Builder inline(@Nullable Input<Boolean> inline) {
+        public Builder inline(@Nullable Output<Boolean> inline) {
             this.inline = inline;
             return this;
         }
 
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = Input.ofNullable(inline);
+            this.inline = Output.ofNullable(inline);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<DetectorLabelArgs>> labels) {
+        public Builder labels(@Nullable Output<List<DetectorLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<DetectorLabelArgs> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DetectorEventTypeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final KeyGroupConfigArgs Empty = new KeyGroupConfigArgs();
 
     @InputImport(name="comment")
-      private final @Nullable Input<String> comment;
+      private final @Nullable Output<String> comment;
 
-    public Input<String> getComment() {
-        return this.comment == null ? Input.empty() : this.comment;
+    public Output<String> getComment() {
+        return this.comment == null ? Output.empty() : this.comment;
     }
 
     @InputImport(name="items", required=true)
-      private final Input<List<String>> items;
+      private final Output<List<String>> items;
 
-    public Input<List<String>> getItems() {
+    public Output<List<String>> getItems() {
         return this.items;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public KeyGroupConfigArgs(
-        @Nullable Input<String> comment,
-        Input<List<String>> items,
-        Input<String> name) {
+        @Nullable Output<String> comment,
+        Output<List<String>> items,
+        Output<String> name) {
         this.comment = comment;
         this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private KeyGroupConfigArgs() {
-        this.comment = Input.empty();
-        this.items = Input.empty();
-        this.name = Input.empty();
+        this.comment = Output.empty();
+        this.items = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> comment;
-        private Input<List<String>> items;
-        private Input<String> name;
+        private @Nullable Output<String> comment;
+        private Output<List<String>> items;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder comment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Output<String> comment) {
             this.comment = comment;
             return this;
         }
 
         public Builder comment(@Nullable String comment) {
-            this.comment = Input.ofNullable(comment);
+            this.comment = Output.ofNullable(comment);
             return this;
         }
 
-        public Builder items(Input<List<String>> items) {
+        public Builder items(Output<List<String>> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
         public Builder items(List<String> items) {
-            this.items = Input.of(Objects.requireNonNull(items));
+            this.items = Output.of(Objects.requireNonNull(items));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public KeyGroupConfigArgs build() {

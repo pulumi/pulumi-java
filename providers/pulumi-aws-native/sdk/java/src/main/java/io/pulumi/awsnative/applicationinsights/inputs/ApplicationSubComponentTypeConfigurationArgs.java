@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTypeConfigurationSubComponentType;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetailsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentConfigurationDetails", required=true)
-      private final Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
+      private final Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
-    public Input<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
+    public Output<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
     }
 
@@ -34,22 +34,22 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentType", required=true)
-      private final Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+      private final Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
-    public Input<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {
+    public Output<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {
         return this.subComponentType;
     }
 
     public ApplicationSubComponentTypeConfigurationArgs(
-        Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails,
-        Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
+        Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails,
+        Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
         this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails, "expected parameter 'subComponentConfigurationDetails' to be non-null");
         this.subComponentType = Objects.requireNonNull(subComponentType, "expected parameter 'subComponentType' to be non-null");
     }
 
     private ApplicationSubComponentTypeConfigurationArgs() {
-        this.subComponentConfigurationDetails = Input.empty();
-        this.subComponentType = Input.empty();
+        this.subComponentConfigurationDetails = Output.empty();
+        this.subComponentType = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
-        private Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+        private Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
+        private Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
     	      this.subComponentType = defaults.subComponentType;
         }
 
-        public Builder subComponentConfigurationDetails(Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails) {
+        public Builder subComponentConfigurationDetails(Output<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails) {
             this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
             return this;
         }
 
         public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetailsArgs subComponentConfigurationDetails) {
-            this.subComponentConfigurationDetails = Input.of(Objects.requireNonNull(subComponentConfigurationDetails));
+            this.subComponentConfigurationDetails = Output.of(Objects.requireNonNull(subComponentConfigurationDetails));
             return this;
         }
 
-        public Builder subComponentType(Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
+        public Builder subComponentType(Output<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType) {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }
 
         public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
-            this.subComponentType = Input.of(Objects.requireNonNull(subComponentType));
+            this.subComponentType = Output.of(Objects.requireNonNull(subComponentType));
             return this;
         }
         public ApplicationSubComponentTypeConfigurationArgs build() {

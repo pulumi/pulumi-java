@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jsonBody")
-      private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
+      private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
-    public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
-        return this.jsonBody == null ? Input.empty() : this.jsonBody;
+    public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
+        return this.jsonBody == null ? Output.empty() : this.jsonBody;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="method")
-      private final @Nullable Input<Object> method;
+      private final @Nullable Output<Object> method;
 
-    public Input<Object> getMethod() {
-        return this.method == null ? Input.empty() : this.method;
+    public Output<Object> getMethod() {
+        return this.method == null ? Output.empty() : this.method;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<Object> queryString;
+      private final @Nullable Output<Object> queryString;
 
-    public Input<Object> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<Object> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="singleHeader")
-      private final @Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+      private final @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
-    public Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
-        return this.singleHeader == null ? Input.empty() : this.singleHeader;
+    public Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
+        return this.singleHeader == null ? Output.empty() : this.singleHeader;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="uriPath")
-      private final @Nullable Input<Object> uriPath;
+      private final @Nullable Output<Object> uriPath;
 
-    public Input<Object> getUriPath() {
-        return this.uriPath == null ? Input.empty() : this.uriPath;
+    public Output<Object> getUriPath() {
+        return this.uriPath == null ? Output.empty() : this.uriPath;
     }
 
     public LoggingConfigurationFieldToMatchArgs(
-        @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody,
-        @Nullable Input<Object> method,
-        @Nullable Input<Object> queryString,
-        @Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader,
-        @Nullable Input<Object> uriPath) {
+        @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody,
+        @Nullable Output<Object> method,
+        @Nullable Output<Object> queryString,
+        @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader,
+        @Nullable Output<Object> uriPath) {
         this.jsonBody = jsonBody;
         this.method = method;
         this.queryString = queryString;
@@ -89,11 +89,11 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     }
 
     private LoggingConfigurationFieldToMatchArgs() {
-        this.jsonBody = Input.empty();
-        this.method = Input.empty();
-        this.queryString = Input.empty();
-        this.singleHeader = Input.empty();
-        this.uriPath = Input.empty();
+        this.jsonBody = Output.empty();
+        this.method = Output.empty();
+        this.queryString = Output.empty();
+        this.singleHeader = Output.empty();
+        this.uriPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
-        private @Nullable Input<Object> method;
-        private @Nullable Input<Object> queryString;
-        private @Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
-        private @Nullable Input<Object> uriPath;
+        private @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
+        private @Nullable Output<Object> method;
+        private @Nullable Output<Object> queryString;
+        private @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+        private @Nullable Output<Object> uriPath;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder jsonBody(@Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody) {
+        public Builder jsonBody(@Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
         public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
-            this.jsonBody = Input.ofNullable(jsonBody);
+            this.jsonBody = Output.ofNullable(jsonBody);
             return this;
         }
 
-        public Builder method(@Nullable Input<Object> method) {
+        public Builder method(@Nullable Output<Object> method) {
             this.method = method;
             return this;
         }
 
         public Builder method(@Nullable Object method) {
-            this.method = Input.ofNullable(method);
+            this.method = Output.ofNullable(method);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<Object> queryString) {
+        public Builder queryString(@Nullable Output<Object> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable Object queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder singleHeader(@Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
         public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
-            this.singleHeader = Input.ofNullable(singleHeader);
+            this.singleHeader = Output.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder uriPath(@Nullable Input<Object> uriPath) {
+        public Builder uriPath(@Nullable Output<Object> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
         public Builder uriPath(@Nullable Object uriPath) {
-            this.uriPath = Input.ofNullable(uriPath);
+            this.uriPath = Output.ofNullable(uriPath);
             return this;
         }
         public LoggingConfigurationFieldToMatchArgs build() {

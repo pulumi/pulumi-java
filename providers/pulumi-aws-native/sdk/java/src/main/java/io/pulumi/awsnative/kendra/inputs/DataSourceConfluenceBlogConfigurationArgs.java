@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceBlogToIndexFieldMappingArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -16,18 +16,18 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
     public static final DataSourceConfluenceBlogConfigurationArgs Empty = new DataSourceConfluenceBlogConfigurationArgs();
 
     @InputImport(name="blogFieldMappings")
-      private final @Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
+      private final @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
 
-    public Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> getBlogFieldMappings() {
-        return this.blogFieldMappings == null ? Input.empty() : this.blogFieldMappings;
+    public Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> getBlogFieldMappings() {
+        return this.blogFieldMappings == null ? Output.empty() : this.blogFieldMappings;
     }
 
-    public DataSourceConfluenceBlogConfigurationArgs(@Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
+    public DataSourceConfluenceBlogConfigurationArgs(@Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
         this.blogFieldMappings = blogFieldMappings;
     }
 
     private DataSourceConfluenceBlogConfigurationArgs() {
-        this.blogFieldMappings = Input.empty();
+        this.blogFieldMappings = Output.empty();
     }
 
     public static Builder builder() {
@@ -39,7 +39,7 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
+        private @Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings;
 
         public Builder() {
     	      // Empty
@@ -50,13 +50,13 @@ public final class DataSourceConfluenceBlogConfigurationArgs extends io.pulumi.r
     	      this.blogFieldMappings = defaults.blogFieldMappings;
         }
 
-        public Builder blogFieldMappings(@Nullable Input<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
+        public Builder blogFieldMappings(@Nullable Output<List<DataSourceConfluenceBlogToIndexFieldMappingArgs>> blogFieldMappings) {
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
 
         public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMappingArgs> blogFieldMappings) {
-            this.blogFieldMappings = Input.ofNullable(blogFieldMappings);
+            this.blogFieldMappings = Output.ofNullable(blogFieldMappings);
             return this;
         }
         public DataSourceConfluenceBlogConfigurationArgs build() {

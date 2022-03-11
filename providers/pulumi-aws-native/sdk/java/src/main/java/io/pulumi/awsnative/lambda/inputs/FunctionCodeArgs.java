@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageUri")
-      private final @Nullable Input<String> imageUri;
+      private final @Nullable Output<String> imageUri;
 
-    public Input<String> getImageUri() {
-        return this.imageUri == null ? Input.empty() : this.imageUri;
+    public Output<String> getImageUri() {
+        return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-      private final @Nullable Input<String> s3Bucket;
+      private final @Nullable Output<String> s3Bucket;
 
-    public Input<String> getS3Bucket() {
-        return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
+    public Output<String> getS3Bucket() {
+        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-      private final @Nullable Input<String> s3Key;
+      private final @Nullable Output<String> s3Key;
 
-    public Input<String> getS3Key() {
-        return this.s3Key == null ? Input.empty() : this.s3Key;
+    public Output<String> getS3Key() {
+        return this.s3Key == null ? Output.empty() : this.s3Key;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectVersion")
-      private final @Nullable Input<String> s3ObjectVersion;
+      private final @Nullable Output<String> s3ObjectVersion;
 
-    public Input<String> getS3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
+    public Output<String> getS3ObjectVersion() {
+        return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zipFile")
-      private final @Nullable Input<String> zipFile;
+      private final @Nullable Output<String> zipFile;
 
-    public Input<String> getZipFile() {
-        return this.zipFile == null ? Input.empty() : this.zipFile;
+    public Output<String> getZipFile() {
+        return this.zipFile == null ? Output.empty() : this.zipFile;
     }
 
     public FunctionCodeArgs(
-        @Nullable Input<String> imageUri,
-        @Nullable Input<String> s3Bucket,
-        @Nullable Input<String> s3Key,
-        @Nullable Input<String> s3ObjectVersion,
-        @Nullable Input<String> zipFile) {
+        @Nullable Output<String> imageUri,
+        @Nullable Output<String> s3Bucket,
+        @Nullable Output<String> s3Key,
+        @Nullable Output<String> s3ObjectVersion,
+        @Nullable Output<String> zipFile) {
         this.imageUri = imageUri;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
@@ -83,11 +83,11 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionCodeArgs() {
-        this.imageUri = Input.empty();
-        this.s3Bucket = Input.empty();
-        this.s3Key = Input.empty();
-        this.s3ObjectVersion = Input.empty();
-        this.zipFile = Input.empty();
+        this.imageUri = Output.empty();
+        this.s3Bucket = Output.empty();
+        this.s3Key = Output.empty();
+        this.s3ObjectVersion = Output.empty();
+        this.zipFile = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageUri;
-        private @Nullable Input<String> s3Bucket;
-        private @Nullable Input<String> s3Key;
-        private @Nullable Input<String> s3ObjectVersion;
-        private @Nullable Input<String> zipFile;
+        private @Nullable Output<String> imageUri;
+        private @Nullable Output<String> s3Bucket;
+        private @Nullable Output<String> s3Key;
+        private @Nullable Output<String> s3ObjectVersion;
+        private @Nullable Output<String> zipFile;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zipFile = defaults.zipFile;
         }
 
-        public Builder imageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Input.ofNullable(imageUri);
+            this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
 
-        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Input.ofNullable(s3Bucket);
+            this.s3Bucket = Output.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder s3Key(@Nullable Input<String> s3Key) {
+        public Builder s3Key(@Nullable Output<String> s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
         public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Input.ofNullable(s3Key);
+            this.s3Key = Output.ofNullable(s3Key);
             return this;
         }
 
-        public Builder s3ObjectVersion(@Nullable Input<String> s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Input.ofNullable(s3ObjectVersion);
+            this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
             return this;
         }
 
-        public Builder zipFile(@Nullable Input<String> zipFile) {
+        public Builder zipFile(@Nullable Output<String> zipFile) {
             this.zipFile = zipFile;
             return this;
         }
 
         public Builder zipFile(@Nullable String zipFile) {
-            this.zipFile = Input.ofNullable(zipFile);
+            this.zipFile = Output.ofNullable(zipFile);
             return this;
         }
         public FunctionCodeArgs build() {

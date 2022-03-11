@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilesLimitArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,39 +22,39 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetPathOptionsArgs Empty = new DatasetPathOptionsArgs();
 
     @InputImport(name="filesLimit")
-      private final @Nullable Input<DatasetFilesLimitArgs> filesLimit;
+      private final @Nullable Output<DatasetFilesLimitArgs> filesLimit;
 
-    public Input<DatasetFilesLimitArgs> getFilesLimit() {
-        return this.filesLimit == null ? Input.empty() : this.filesLimit;
+    public Output<DatasetFilesLimitArgs> getFilesLimit() {
+        return this.filesLimit == null ? Output.empty() : this.filesLimit;
     }
 
     @InputImport(name="lastModifiedDateCondition")
-      private final @Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition;
+      private final @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
 
-    public Input<DatasetFilterExpressionArgs> getLastModifiedDateCondition() {
-        return this.lastModifiedDateCondition == null ? Input.empty() : this.lastModifiedDateCondition;
+    public Output<DatasetFilterExpressionArgs> getLastModifiedDateCondition() {
+        return this.lastModifiedDateCondition == null ? Output.empty() : this.lastModifiedDateCondition;
     }
 
     @InputImport(name="parameters")
-      private final @Nullable Input<List<DatasetPathParameterArgs>> parameters;
+      private final @Nullable Output<List<DatasetPathParameterArgs>> parameters;
 
-    public Input<List<DatasetPathParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<DatasetPathParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public DatasetPathOptionsArgs(
-        @Nullable Input<DatasetFilesLimitArgs> filesLimit,
-        @Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition,
-        @Nullable Input<List<DatasetPathParameterArgs>> parameters) {
+        @Nullable Output<DatasetFilesLimitArgs> filesLimit,
+        @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition,
+        @Nullable Output<List<DatasetPathParameterArgs>> parameters) {
         this.filesLimit = filesLimit;
         this.lastModifiedDateCondition = lastModifiedDateCondition;
         this.parameters = parameters;
     }
 
     private DatasetPathOptionsArgs() {
-        this.filesLimit = Input.empty();
-        this.lastModifiedDateCondition = Input.empty();
-        this.parameters = Input.empty();
+        this.filesLimit = Output.empty();
+        this.lastModifiedDateCondition = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,9 +66,9 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DatasetFilesLimitArgs> filesLimit;
-        private @Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition;
-        private @Nullable Input<List<DatasetPathParameterArgs>> parameters;
+        private @Nullable Output<DatasetFilesLimitArgs> filesLimit;
+        private @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
+        private @Nullable Output<List<DatasetPathParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -81,33 +81,33 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder filesLimit(@Nullable Input<DatasetFilesLimitArgs> filesLimit) {
+        public Builder filesLimit(@Nullable Output<DatasetFilesLimitArgs> filesLimit) {
             this.filesLimit = filesLimit;
             return this;
         }
 
         public Builder filesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
-            this.filesLimit = Input.ofNullable(filesLimit);
+            this.filesLimit = Output.ofNullable(filesLimit);
             return this;
         }
 
-        public Builder lastModifiedDateCondition(@Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
+        public Builder lastModifiedDateCondition(@Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
             this.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
 
         public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
-            this.lastModifiedDateCondition = Input.ofNullable(lastModifiedDateCondition);
+            this.lastModifiedDateCondition = Output.ofNullable(lastModifiedDateCondition);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<List<DatasetPathParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<DatasetPathParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<DatasetPathParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public DatasetPathOptionsArgs build() {

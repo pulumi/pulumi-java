@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKeyArn")
-      private final @Nullable Input<String> kmsKeyArn;
+      private final @Nullable Output<String> kmsKeyArn;
 
-    public Input<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
+    public Output<String> getKmsKeyArn() {
+        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="logPrefix", required=true)
-      private final Input<String> logPrefix;
+      private final Output<String> logPrefix;
 
-    public Input<String> getLogPrefix() {
+    public Output<String> getLogPrefix() {
         return this.logPrefix;
     }
 
@@ -45,25 +45,25 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="s3BucketArn", required=true)
-      private final Input<String> s3BucketArn;
+      private final Output<String> s3BucketArn;
 
-    public Input<String> getS3BucketArn() {
+    public Output<String> getS3BucketArn() {
         return this.s3BucketArn;
     }
 
     public BotAliasS3BucketLogDestinationArgs(
-        @Nullable Input<String> kmsKeyArn,
-        Input<String> logPrefix,
-        Input<String> s3BucketArn) {
+        @Nullable Output<String> kmsKeyArn,
+        Output<String> logPrefix,
+        Output<String> s3BucketArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.logPrefix = Objects.requireNonNull(logPrefix, "expected parameter 'logPrefix' to be non-null");
         this.s3BucketArn = Objects.requireNonNull(s3BucketArn, "expected parameter 's3BucketArn' to be non-null");
     }
 
     private BotAliasS3BucketLogDestinationArgs() {
-        this.kmsKeyArn = Input.empty();
-        this.logPrefix = Input.empty();
-        this.s3BucketArn = Input.empty();
+        this.kmsKeyArn = Output.empty();
+        this.logPrefix = Output.empty();
+        this.s3BucketArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyArn;
-        private Input<String> logPrefix;
-        private Input<String> s3BucketArn;
+        private @Nullable Output<String> kmsKeyArn;
+        private Output<String> logPrefix;
+        private Output<String> s3BucketArn;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     	      this.s3BucketArn = defaults.s3BucketArn;
         }
 
-        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder logPrefix(Input<String> logPrefix) {
+        public Builder logPrefix(Output<String> logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
 
         public Builder logPrefix(String logPrefix) {
-            this.logPrefix = Input.of(Objects.requireNonNull(logPrefix));
+            this.logPrefix = Output.of(Objects.requireNonNull(logPrefix));
             return this;
         }
 
-        public Builder s3BucketArn(Input<String> s3BucketArn) {
+        public Builder s3BucketArn(Output<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
 
         public Builder s3BucketArn(String s3BucketArn) {
-            this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
+            this.s3BucketArn = Output.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
         public BotAliasS3BucketLogDestinationArgs build() {

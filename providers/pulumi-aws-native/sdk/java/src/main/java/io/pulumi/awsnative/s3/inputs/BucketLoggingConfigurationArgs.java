@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,29 +19,29 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinationBucketName")
-      private final @Nullable Input<String> destinationBucketName;
+      private final @Nullable Output<String> destinationBucketName;
 
-    public Input<String> getDestinationBucketName() {
-        return this.destinationBucketName == null ? Input.empty() : this.destinationBucketName;
+    public Output<String> getDestinationBucketName() {
+        return this.destinationBucketName == null ? Output.empty() : this.destinationBucketName;
     }
 
     @InputImport(name="logFilePrefix")
-      private final @Nullable Input<String> logFilePrefix;
+      private final @Nullable Output<String> logFilePrefix;
 
-    public Input<String> getLogFilePrefix() {
-        return this.logFilePrefix == null ? Input.empty() : this.logFilePrefix;
+    public Output<String> getLogFilePrefix() {
+        return this.logFilePrefix == null ? Output.empty() : this.logFilePrefix;
     }
 
     public BucketLoggingConfigurationArgs(
-        @Nullable Input<String> destinationBucketName,
-        @Nullable Input<String> logFilePrefix) {
+        @Nullable Output<String> destinationBucketName,
+        @Nullable Output<String> logFilePrefix) {
         this.destinationBucketName = destinationBucketName;
         this.logFilePrefix = logFilePrefix;
     }
 
     private BucketLoggingConfigurationArgs() {
-        this.destinationBucketName = Input.empty();
-        this.logFilePrefix = Input.empty();
+        this.destinationBucketName = Output.empty();
+        this.logFilePrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -53,8 +53,8 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationBucketName;
-        private @Nullable Input<String> logFilePrefix;
+        private @Nullable Output<String> destinationBucketName;
+        private @Nullable Output<String> logFilePrefix;
 
         public Builder() {
     	      // Empty
@@ -66,23 +66,23 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     	      this.logFilePrefix = defaults.logFilePrefix;
         }
 
-        public Builder destinationBucketName(@Nullable Input<String> destinationBucketName) {
+        public Builder destinationBucketName(@Nullable Output<String> destinationBucketName) {
             this.destinationBucketName = destinationBucketName;
             return this;
         }
 
         public Builder destinationBucketName(@Nullable String destinationBucketName) {
-            this.destinationBucketName = Input.ofNullable(destinationBucketName);
+            this.destinationBucketName = Output.ofNullable(destinationBucketName);
             return this;
         }
 
-        public Builder logFilePrefix(@Nullable Input<String> logFilePrefix) {
+        public Builder logFilePrefix(@Nullable Output<String> logFilePrefix) {
             this.logFilePrefix = logFilePrefix;
             return this;
         }
 
         public Builder logFilePrefix(@Nullable String logFilePrefix) {
-            this.logFilePrefix = Input.ofNullable(logFilePrefix);
+            this.logFilePrefix = Output.ofNullable(logFilePrefix);
             return this;
         }
         public BucketLoggingConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     public static final JobDatabaseTableOutputOptionsArgs Empty = new JobDatabaseTableOutputOptionsArgs();
 
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="tempDirectory")
-      private final @Nullable Input<JobS3LocationArgs> tempDirectory;
+      private final @Nullable Output<JobS3LocationArgs> tempDirectory;
 
-    public Input<JobS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Input.empty() : this.tempDirectory;
+    public Output<JobS3LocationArgs> getTempDirectory() {
+        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
     }
 
     public JobDatabaseTableOutputOptionsArgs(
-        Input<String> tableName,
-        @Nullable Input<JobS3LocationArgs> tempDirectory) {
+        Output<String> tableName,
+        @Nullable Output<JobS3LocationArgs> tempDirectory) {
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
         this.tempDirectory = tempDirectory;
     }
 
     private JobDatabaseTableOutputOptionsArgs() {
-        this.tableName = Input.empty();
-        this.tempDirectory = Input.empty();
+        this.tableName = Output.empty();
+        this.tempDirectory = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> tableName;
-        private @Nullable Input<JobS3LocationArgs> tempDirectory;
+        private Output<String> tableName;
+        private @Nullable Output<JobS3LocationArgs> tempDirectory;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder tempDirectory(@Nullable Input<JobS3LocationArgs> tempDirectory) {
+        public Builder tempDirectory(@Nullable Output<JobS3LocationArgs> tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }
 
         public Builder tempDirectory(@Nullable JobS3LocationArgs tempDirectory) {
-            this.tempDirectory = Input.ofNullable(tempDirectory);
+            this.tempDirectory = Output.ofNullable(tempDirectory);
             return this;
         }
         public JobDatabaseTableOutputOptionsArgs build() {

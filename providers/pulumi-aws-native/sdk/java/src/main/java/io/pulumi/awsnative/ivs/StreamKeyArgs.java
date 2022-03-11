@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.StreamKeyTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelArn", required=true)
-      private final Input<String> channelArn;
+      private final Output<String> channelArn;
 
-    public Input<String> getChannelArn() {
+    public Output<String> getChannelArn() {
         return this.channelArn;
     }
 
@@ -32,22 +32,22 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<StreamKeyTagArgs>> tags;
+      private final @Nullable Output<List<StreamKeyTagArgs>> tags;
 
-    public Input<List<StreamKeyTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<StreamKeyTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public StreamKeyArgs(
-        Input<String> channelArn,
-        @Nullable Input<List<StreamKeyTagArgs>> tags) {
+        Output<String> channelArn,
+        @Nullable Output<List<StreamKeyTagArgs>> tags) {
         this.channelArn = Objects.requireNonNull(channelArn, "expected parameter 'channelArn' to be non-null");
         this.tags = tags;
     }
 
     private StreamKeyArgs() {
-        this.channelArn = Input.empty();
-        this.tags = Input.empty();
+        this.channelArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> channelArn;
-        private @Nullable Input<List<StreamKeyTagArgs>> tags;
+        private Output<String> channelArn;
+        private @Nullable Output<List<StreamKeyTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder channelArn(Input<String> channelArn) {
+        public Builder channelArn(Output<String> channelArn) {
             this.channelArn = Objects.requireNonNull(channelArn);
             return this;
         }
 
         public Builder channelArn(String channelArn) {
-            this.channelArn = Input.of(Objects.requireNonNull(channelArn));
+            this.channelArn = Output.of(Objects.requireNonNull(channelArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<StreamKeyTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<StreamKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<StreamKeyTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public StreamKeyArgs build() {

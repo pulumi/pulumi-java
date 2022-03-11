@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
     public static final ServiceCapacityProviderStrategyItemArgs Empty = new ServiceCapacityProviderStrategyItemArgs();
 
     @InputImport(name="base")
-      private final @Nullable Input<Integer> base;
+      private final @Nullable Output<Integer> base;
 
-    public Input<Integer> getBase() {
-        return this.base == null ? Input.empty() : this.base;
+    public Output<Integer> getBase() {
+        return this.base == null ? Output.empty() : this.base;
     }
 
     @InputImport(name="capacityProvider")
-      private final @Nullable Input<String> capacityProvider;
+      private final @Nullable Output<String> capacityProvider;
 
-    public Input<String> getCapacityProvider() {
-        return this.capacityProvider == null ? Input.empty() : this.capacityProvider;
+    public Output<String> getCapacityProvider() {
+        return this.capacityProvider == null ? Output.empty() : this.capacityProvider;
     }
 
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public ServiceCapacityProviderStrategyItemArgs(
-        @Nullable Input<Integer> base,
-        @Nullable Input<String> capacityProvider,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<Integer> base,
+        @Nullable Output<String> capacityProvider,
+        @Nullable Output<Integer> weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;
     }
 
     private ServiceCapacityProviderStrategyItemArgs() {
-        this.base = Input.empty();
-        this.capacityProvider = Input.empty();
-        this.weight = Input.empty();
+        this.base = Output.empty();
+        this.capacityProvider = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> base;
-        private @Nullable Input<String> capacityProvider;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Integer> base;
+        private @Nullable Output<String> capacityProvider;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class ServiceCapacityProviderStrategyItemArgs extends io.pulumi.res
     	      this.weight = defaults.weight;
         }
 
-        public Builder base(@Nullable Input<Integer> base) {
+        public Builder base(@Nullable Output<Integer> base) {
             this.base = base;
             return this;
         }
 
         public Builder base(@Nullable Integer base) {
-            this.base = Input.ofNullable(base);
+            this.base = Output.ofNullable(base);
             return this;
         }
 
-        public Builder capacityProvider(@Nullable Input<String> capacityProvider) {
+        public Builder capacityProvider(@Nullable Output<String> capacityProvider) {
             this.capacityProvider = capacityProvider;
             return this;
         }
 
         public Builder capacityProvider(@Nullable String capacityProvider) {
-            this.capacityProvider = Input.ofNullable(capacityProvider);
+            this.capacityProvider = Output.ofNullable(capacityProvider);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public ServiceCapacityProviderStrategyItemArgs build() {

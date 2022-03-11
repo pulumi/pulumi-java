@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleTargetGroupStickinessConfigArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleTargetGroupTupleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
     public static final ListenerRuleForwardConfigArgs Empty = new ListenerRuleForwardConfigArgs();
 
     @InputImport(name="targetGroupStickinessConfig")
-      private final @Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
+      private final @Nullable Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
-    public Input<ListenerRuleTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
-        return this.targetGroupStickinessConfig == null ? Input.empty() : this.targetGroupStickinessConfig;
+    public Output<ListenerRuleTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
+        return this.targetGroupStickinessConfig == null ? Output.empty() : this.targetGroupStickinessConfig;
     }
 
     @InputImport(name="targetGroups")
-      private final @Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
+      private final @Nullable Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
 
-    public Input<List<ListenerRuleTargetGroupTupleArgs>> getTargetGroups() {
-        return this.targetGroups == null ? Input.empty() : this.targetGroups;
+    public Output<List<ListenerRuleTargetGroupTupleArgs>> getTargetGroups() {
+        return this.targetGroups == null ? Output.empty() : this.targetGroups;
     }
 
     public ListenerRuleForwardConfigArgs(
-        @Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig,
-        @Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
+        @Nullable Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig,
+        @Nullable Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
         this.targetGroupStickinessConfig = targetGroupStickinessConfig;
         this.targetGroups = targetGroups;
     }
 
     private ListenerRuleForwardConfigArgs() {
-        this.targetGroupStickinessConfig = Input.empty();
-        this.targetGroups = Input.empty();
+        this.targetGroupStickinessConfig = Output.empty();
+        this.targetGroups = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
-        private @Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
+        private @Nullable Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
+        private @Nullable Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder targetGroupStickinessConfig(@Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
+        public Builder targetGroupStickinessConfig(@Nullable Output<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
             this.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
 
         public Builder targetGroupStickinessConfig(@Nullable ListenerRuleTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = Input.ofNullable(targetGroupStickinessConfig);
+            this.targetGroupStickinessConfig = Output.ofNullable(targetGroupStickinessConfig);
             return this;
         }
 
-        public Builder targetGroups(@Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
+        public Builder targetGroups(@Nullable Output<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
             this.targetGroups = targetGroups;
             return this;
         }
 
         public Builder targetGroups(@Nullable List<ListenerRuleTargetGroupTupleArgs> targetGroups) {
-            this.targetGroups = Input.ofNullable(targetGroups);
+            this.targetGroups = Output.ofNullable(targetGroups);
             return this;
         }
         public ListenerRuleForwardConfigArgs build() {

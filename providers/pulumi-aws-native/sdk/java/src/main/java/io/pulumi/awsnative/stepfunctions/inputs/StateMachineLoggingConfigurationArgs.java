@@ -5,7 +5,7 @@ package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -18,39 +18,39 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
     public static final StateMachineLoggingConfigurationArgs Empty = new StateMachineLoggingConfigurationArgs();
 
     @InputImport(name="destinations")
-      private final @Nullable Input<List<StateMachineLogDestinationArgs>> destinations;
+      private final @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
 
-    public Input<List<StateMachineLogDestinationArgs>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<StateMachineLogDestinationArgs>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     @InputImport(name="includeExecutionData")
-      private final @Nullable Input<Boolean> includeExecutionData;
+      private final @Nullable Output<Boolean> includeExecutionData;
 
-    public Input<Boolean> getIncludeExecutionData() {
-        return this.includeExecutionData == null ? Input.empty() : this.includeExecutionData;
+    public Output<Boolean> getIncludeExecutionData() {
+        return this.includeExecutionData == null ? Output.empty() : this.includeExecutionData;
     }
 
     @InputImport(name="level")
-      private final @Nullable Input<StateMachineLoggingConfigurationLevel> level;
+      private final @Nullable Output<StateMachineLoggingConfigurationLevel> level;
 
-    public Input<StateMachineLoggingConfigurationLevel> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<StateMachineLoggingConfigurationLevel> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     public StateMachineLoggingConfigurationArgs(
-        @Nullable Input<List<StateMachineLogDestinationArgs>> destinations,
-        @Nullable Input<Boolean> includeExecutionData,
-        @Nullable Input<StateMachineLoggingConfigurationLevel> level) {
+        @Nullable Output<List<StateMachineLogDestinationArgs>> destinations,
+        @Nullable Output<Boolean> includeExecutionData,
+        @Nullable Output<StateMachineLoggingConfigurationLevel> level) {
         this.destinations = destinations;
         this.includeExecutionData = includeExecutionData;
         this.level = level;
     }
 
     private StateMachineLoggingConfigurationArgs() {
-        this.destinations = Input.empty();
-        this.includeExecutionData = Input.empty();
-        this.level = Input.empty();
+        this.destinations = Output.empty();
+        this.includeExecutionData = Output.empty();
+        this.level = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,9 +62,9 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<StateMachineLogDestinationArgs>> destinations;
-        private @Nullable Input<Boolean> includeExecutionData;
-        private @Nullable Input<StateMachineLoggingConfigurationLevel> level;
+        private @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
+        private @Nullable Output<Boolean> includeExecutionData;
+        private @Nullable Output<StateMachineLoggingConfigurationLevel> level;
 
         public Builder() {
     	      // Empty
@@ -77,33 +77,33 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
     	      this.level = defaults.level;
         }
 
-        public Builder destinations(@Nullable Input<List<StateMachineLogDestinationArgs>> destinations) {
+        public Builder destinations(@Nullable Output<List<StateMachineLogDestinationArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<StateMachineLogDestinationArgs> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder includeExecutionData(@Nullable Input<Boolean> includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Output<Boolean> includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
-            this.includeExecutionData = Input.ofNullable(includeExecutionData);
+            this.includeExecutionData = Output.ofNullable(includeExecutionData);
             return this;
         }
 
-        public Builder level(@Nullable Input<StateMachineLoggingConfigurationLevel> level) {
+        public Builder level(@Nullable Output<StateMachineLoggingConfigurationLevel> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
         public StateMachineLoggingConfigurationArgs build() {

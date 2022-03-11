@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
     public static final ListenerFixedResponseConfigArgs Empty = new ListenerFixedResponseConfigArgs();
 
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     @InputImport(name="messageBody")
-      private final @Nullable Input<String> messageBody;
+      private final @Nullable Output<String> messageBody;
 
-    public Input<String> getMessageBody() {
-        return this.messageBody == null ? Input.empty() : this.messageBody;
+    public Output<String> getMessageBody() {
+        return this.messageBody == null ? Output.empty() : this.messageBody;
     }
 
     @InputImport(name="statusCode", required=true)
-      private final Input<String> statusCode;
+      private final Output<String> statusCode;
 
-    public Input<String> getStatusCode() {
+    public Output<String> getStatusCode() {
         return this.statusCode;
     }
 
     public ListenerFixedResponseConfigArgs(
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> messageBody,
-        Input<String> statusCode) {
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> messageBody,
+        Output<String> statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = Objects.requireNonNull(statusCode, "expected parameter 'statusCode' to be non-null");
     }
 
     private ListenerFixedResponseConfigArgs() {
-        this.contentType = Input.empty();
-        this.messageBody = Input.empty();
-        this.statusCode = Input.empty();
+        this.contentType = Output.empty();
+        this.messageBody = Output.empty();
+        this.statusCode = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> messageBody;
-        private Input<String> statusCode;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> messageBody;
+        private Output<String> statusCode;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ListenerFixedResponseConfigArgs extends io.pulumi.resources.R
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder messageBody(@Nullable Input<String> messageBody) {
+        public Builder messageBody(@Nullable Output<String> messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
         public Builder messageBody(@Nullable String messageBody) {
-            this.messageBody = Input.ofNullable(messageBody);
+            this.messageBody = Output.ofNullable(messageBody);
             return this;
         }
 
-        public Builder statusCode(Input<String> statusCode) {
+        public Builder statusCode(Output<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
         public Builder statusCode(String statusCode) {
-            this.statusCode = Input.of(Objects.requireNonNull(statusCode));
+            this.statusCode = Output.of(Objects.requireNonNull(statusCode));
             return this;
         }
         public ListenerFixedResponseConfigArgs build() {

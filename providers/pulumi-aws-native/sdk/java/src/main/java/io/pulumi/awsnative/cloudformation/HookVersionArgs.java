@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.inputs.HookVersionLoggingConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionRoleArn")
-      private final @Nullable Input<String> executionRoleArn;
+      private final @Nullable Output<String> executionRoleArn;
 
-    public Input<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Input.empty() : this.executionRoleArn;
+    public Output<String> getExecutionRoleArn() {
+        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggingConfig")
-      private final @Nullable Input<HookVersionLoggingConfigArgs> loggingConfig;
+      private final @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig;
 
-    public Input<HookVersionLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Input.empty() : this.loggingConfig;
+    public Output<HookVersionLoggingConfigArgs> getLoggingConfig() {
+        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaHandlerPackage", required=true)
-      private final Input<String> schemaHandlerPackage;
+      private final Output<String> schemaHandlerPackage;
 
-    public Input<String> getSchemaHandlerPackage() {
+    public Output<String> getSchemaHandlerPackage() {
         return this.schemaHandlerPackage;
     }
 
@@ -57,17 +57,17 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName", required=true)
-      private final Input<String> typeName;
+      private final Output<String> typeName;
 
-    public Input<String> getTypeName() {
+    public Output<String> getTypeName() {
         return this.typeName;
     }
 
     public HookVersionArgs(
-        @Nullable Input<String> executionRoleArn,
-        @Nullable Input<HookVersionLoggingConfigArgs> loggingConfig,
-        Input<String> schemaHandlerPackage,
-        Input<String> typeName) {
+        @Nullable Output<String> executionRoleArn,
+        @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig,
+        Output<String> schemaHandlerPackage,
+        Output<String> typeName) {
         this.executionRoleArn = executionRoleArn;
         this.loggingConfig = loggingConfig;
         this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage, "expected parameter 'schemaHandlerPackage' to be non-null");
@@ -75,10 +75,10 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HookVersionArgs() {
-        this.executionRoleArn = Input.empty();
-        this.loggingConfig = Input.empty();
-        this.schemaHandlerPackage = Input.empty();
-        this.typeName = Input.empty();
+        this.executionRoleArn = Output.empty();
+        this.loggingConfig = Output.empty();
+        this.schemaHandlerPackage = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> executionRoleArn;
-        private @Nullable Input<HookVersionLoggingConfigArgs> loggingConfig;
-        private Input<String> schemaHandlerPackage;
-        private Input<String> typeName;
+        private @Nullable Output<String> executionRoleArn;
+        private @Nullable Output<HookVersionLoggingConfigArgs> loggingConfig;
+        private Output<String> schemaHandlerPackage;
+        private Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class HookVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Input.ofNullable(executionRoleArn);
+            this.executionRoleArn = Output.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder loggingConfig(@Nullable Input<HookVersionLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Output<HookVersionLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
         public Builder loggingConfig(@Nullable HookVersionLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Input.ofNullable(loggingConfig);
+            this.loggingConfig = Output.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder schemaHandlerPackage(Input<String> schemaHandlerPackage) {
+        public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
             this.schemaHandlerPackage = Objects.requireNonNull(schemaHandlerPackage);
             return this;
         }
 
         public Builder schemaHandlerPackage(String schemaHandlerPackage) {
-            this.schemaHandlerPackage = Input.of(Objects.requireNonNull(schemaHandlerPackage));
+            this.schemaHandlerPackage = Output.of(Objects.requireNonNull(schemaHandlerPackage));
             return this;
         }
 
-        public Builder typeName(Input<String> typeName) {
+        public Builder typeName(Output<String> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
         public Builder typeName(String typeName) {
-            this.typeName = Input.of(Objects.requireNonNull(typeName));
+            this.typeName = Output.of(Objects.requireNonNull(typeName));
             return this;
         }
         public HookVersionArgs build() {

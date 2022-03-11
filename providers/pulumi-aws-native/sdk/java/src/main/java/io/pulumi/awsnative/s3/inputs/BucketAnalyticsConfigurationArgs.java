@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketStorageClassAnalysisArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,9 +26,9 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -37,31 +37,31 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="prefix")
-      private final @Nullable Input<String> prefix;
+      private final @Nullable Output<String> prefix;
 
-    public Input<String> getPrefix() {
-        return this.prefix == null ? Input.empty() : this.prefix;
+    public Output<String> getPrefix() {
+        return this.prefix == null ? Output.empty() : this.prefix;
     }
 
     @InputImport(name="storageClassAnalysis", required=true)
-      private final Input<BucketStorageClassAnalysisArgs> storageClassAnalysis;
+      private final Output<BucketStorageClassAnalysisArgs> storageClassAnalysis;
 
-    public Input<BucketStorageClassAnalysisArgs> getStorageClassAnalysis() {
+    public Output<BucketStorageClassAnalysisArgs> getStorageClassAnalysis() {
         return this.storageClassAnalysis;
     }
 
     @InputImport(name="tagFilters")
-      private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+      private final @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
-    public Input<List<BucketTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Input.empty() : this.tagFilters;
+    public Output<List<BucketTagFilterArgs>> getTagFilters() {
+        return this.tagFilters == null ? Output.empty() : this.tagFilters;
     }
 
     public BucketAnalyticsConfigurationArgs(
-        Input<String> id,
-        @Nullable Input<String> prefix,
-        Input<BucketStorageClassAnalysisArgs> storageClassAnalysis,
-        @Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        Output<String> id,
+        @Nullable Output<String> prefix,
+        Output<BucketStorageClassAnalysisArgs> storageClassAnalysis,
+        @Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.prefix = prefix;
         this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis, "expected parameter 'storageClassAnalysis' to be non-null");
@@ -69,10 +69,10 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     }
 
     private BucketAnalyticsConfigurationArgs() {
-        this.id = Input.empty();
-        this.prefix = Input.empty();
-        this.storageClassAnalysis = Input.empty();
-        this.tagFilters = Input.empty();
+        this.id = Output.empty();
+        this.prefix = Output.empty();
+        this.storageClassAnalysis = Output.empty();
+        this.tagFilters = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<String> prefix;
-        private Input<BucketStorageClassAnalysisArgs> storageClassAnalysis;
-        private @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+        private Output<String> id;
+        private @Nullable Output<String> prefix;
+        private Output<BucketStorageClassAnalysisArgs> storageClassAnalysis;
+        private @Nullable Output<List<BucketTagFilterArgs>> tagFilters;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder prefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Output<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Input.ofNullable(prefix);
+            this.prefix = Output.ofNullable(prefix);
             return this;
         }
 
-        public Builder storageClassAnalysis(Input<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
+        public Builder storageClassAnalysis(Output<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
             this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
             return this;
         }
 
         public Builder storageClassAnalysis(BucketStorageClassAnalysisArgs storageClassAnalysis) {
-            this.storageClassAnalysis = Input.of(Objects.requireNonNull(storageClassAnalysis));
+            this.storageClassAnalysis = Output.of(Objects.requireNonNull(storageClassAnalysis));
             return this;
         }
 
-        public Builder tagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Output<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
         public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
-            this.tagFilters = Input.ofNullable(tagFilters);
+            this.tagFilters = Output.ofNullable(tagFilters);
             return this;
         }
         public BucketAnalyticsConfigurationArgs build() {

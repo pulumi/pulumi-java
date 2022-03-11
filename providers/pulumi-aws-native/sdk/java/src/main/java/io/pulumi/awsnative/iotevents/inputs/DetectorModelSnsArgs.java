@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     public static final DetectorModelSnsArgs Empty = new DetectorModelSnsArgs();
 
     @InputImport(name="payload")
-      private final @Nullable Input<DetectorModelPayloadArgs> payload;
+      private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Input<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Input.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> getPayload() {
+        return this.payload == null ? Output.empty() : this.payload;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetArn", required=true)
-      private final Input<String> targetArn;
+      private final Output<String> targetArn;
 
-    public Input<String> getTargetArn() {
+    public Output<String> getTargetArn() {
         return this.targetArn;
     }
 
     public DetectorModelSnsArgs(
-        @Nullable Input<DetectorModelPayloadArgs> payload,
-        Input<String> targetArn) {
+        @Nullable Output<DetectorModelPayloadArgs> payload,
+        Output<String> targetArn) {
         this.payload = payload;
         this.targetArn = Objects.requireNonNull(targetArn, "expected parameter 'targetArn' to be non-null");
     }
 
     private DetectorModelSnsArgs() {
-        this.payload = Input.empty();
-        this.targetArn = Input.empty();
+        this.payload = Output.empty();
+        this.targetArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorModelPayloadArgs> payload;
-        private Input<String> targetArn;
+        private @Nullable Output<DetectorModelPayloadArgs> payload;
+        private Output<String> targetArn;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Output<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Input.ofNullable(payload);
+            this.payload = Output.ofNullable(payload);
             return this;
         }
 
-        public Builder targetArn(Input<String> targetArn) {
+        public Builder targetArn(Output<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
         public Builder targetArn(String targetArn) {
-            this.targetArn = Input.of(Objects.requireNonNull(targetArn));
+            this.targetArn = Output.of(Objects.requireNonNull(targetArn));
             return this;
         }
         public DetectorModelSnsArgs build() {

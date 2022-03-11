@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AlarmsPropertiesArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.PortalTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarms")
-      private final @Nullable Input<AlarmsPropertiesArgs> alarms;
+      private final @Nullable Output<AlarmsPropertiesArgs> alarms;
 
-    public Input<AlarmsPropertiesArgs> getAlarms() {
-        return this.alarms == null ? Input.empty() : this.alarms;
+    public Output<AlarmsPropertiesArgs> getAlarms() {
+        return this.alarms == null ? Output.empty() : this.alarms;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationSenderEmail")
-      private final @Nullable Input<String> notificationSenderEmail;
+      private final @Nullable Output<String> notificationSenderEmail;
 
-    public Input<String> getNotificationSenderEmail() {
-        return this.notificationSenderEmail == null ? Input.empty() : this.notificationSenderEmail;
+    public Output<String> getNotificationSenderEmail() {
+        return this.notificationSenderEmail == null ? Output.empty() : this.notificationSenderEmail;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalAuthMode")
-      private final @Nullable Input<String> portalAuthMode;
+      private final @Nullable Output<String> portalAuthMode;
 
-    public Input<String> getPortalAuthMode() {
-        return this.portalAuthMode == null ? Input.empty() : this.portalAuthMode;
+    public Output<String> getPortalAuthMode() {
+        return this.portalAuthMode == null ? Output.empty() : this.portalAuthMode;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalContactEmail", required=true)
-      private final Input<String> portalContactEmail;
+      private final Output<String> portalContactEmail;
 
-    public Input<String> getPortalContactEmail() {
+    public Output<String> getPortalContactEmail() {
         return this.portalContactEmail;
     }
 
@@ -66,10 +66,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalDescription")
-      private final @Nullable Input<String> portalDescription;
+      private final @Nullable Output<String> portalDescription;
 
-    public Input<String> getPortalDescription() {
-        return this.portalDescription == null ? Input.empty() : this.portalDescription;
+    public Output<String> getPortalDescription() {
+        return this.portalDescription == null ? Output.empty() : this.portalDescription;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalName")
-      private final @Nullable Input<String> portalName;
+      private final @Nullable Output<String> portalName;
 
-    public Input<String> getPortalName() {
-        return this.portalName == null ? Input.empty() : this.portalName;
+    public Output<String> getPortalName() {
+        return this.portalName == null ? Output.empty() : this.portalName;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
@@ -99,21 +99,21 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<PortalTagArgs>> tags;
+      private final @Nullable Output<List<PortalTagArgs>> tags;
 
-    public Input<List<PortalTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<PortalTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PortalArgs(
-        @Nullable Input<AlarmsPropertiesArgs> alarms,
-        @Nullable Input<String> notificationSenderEmail,
-        @Nullable Input<String> portalAuthMode,
-        Input<String> portalContactEmail,
-        @Nullable Input<String> portalDescription,
-        @Nullable Input<String> portalName,
-        Input<String> roleArn,
-        @Nullable Input<List<PortalTagArgs>> tags) {
+        @Nullable Output<AlarmsPropertiesArgs> alarms,
+        @Nullable Output<String> notificationSenderEmail,
+        @Nullable Output<String> portalAuthMode,
+        Output<String> portalContactEmail,
+        @Nullable Output<String> portalDescription,
+        @Nullable Output<String> portalName,
+        Output<String> roleArn,
+        @Nullable Output<List<PortalTagArgs>> tags) {
         this.alarms = alarms;
         this.notificationSenderEmail = notificationSenderEmail;
         this.portalAuthMode = portalAuthMode;
@@ -125,14 +125,14 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortalArgs() {
-        this.alarms = Input.empty();
-        this.notificationSenderEmail = Input.empty();
-        this.portalAuthMode = Input.empty();
-        this.portalContactEmail = Input.empty();
-        this.portalDescription = Input.empty();
-        this.portalName = Input.empty();
-        this.roleArn = Input.empty();
-        this.tags = Input.empty();
+        this.alarms = Output.empty();
+        this.notificationSenderEmail = Output.empty();
+        this.portalAuthMode = Output.empty();
+        this.portalContactEmail = Output.empty();
+        this.portalDescription = Output.empty();
+        this.portalName = Output.empty();
+        this.roleArn = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,14 +144,14 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AlarmsPropertiesArgs> alarms;
-        private @Nullable Input<String> notificationSenderEmail;
-        private @Nullable Input<String> portalAuthMode;
-        private Input<String> portalContactEmail;
-        private @Nullable Input<String> portalDescription;
-        private @Nullable Input<String> portalName;
-        private Input<String> roleArn;
-        private @Nullable Input<List<PortalTagArgs>> tags;
+        private @Nullable Output<AlarmsPropertiesArgs> alarms;
+        private @Nullable Output<String> notificationSenderEmail;
+        private @Nullable Output<String> portalAuthMode;
+        private Output<String> portalContactEmail;
+        private @Nullable Output<String> portalDescription;
+        private @Nullable Output<String> portalName;
+        private Output<String> roleArn;
+        private @Nullable Output<List<PortalTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -169,83 +169,83 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder alarms(@Nullable Input<AlarmsPropertiesArgs> alarms) {
+        public Builder alarms(@Nullable Output<AlarmsPropertiesArgs> alarms) {
             this.alarms = alarms;
             return this;
         }
 
         public Builder alarms(@Nullable AlarmsPropertiesArgs alarms) {
-            this.alarms = Input.ofNullable(alarms);
+            this.alarms = Output.ofNullable(alarms);
             return this;
         }
 
-        public Builder notificationSenderEmail(@Nullable Input<String> notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
-            this.notificationSenderEmail = Input.ofNullable(notificationSenderEmail);
+            this.notificationSenderEmail = Output.ofNullable(notificationSenderEmail);
             return this;
         }
 
-        public Builder portalAuthMode(@Nullable Input<String> portalAuthMode) {
+        public Builder portalAuthMode(@Nullable Output<String> portalAuthMode) {
             this.portalAuthMode = portalAuthMode;
             return this;
         }
 
         public Builder portalAuthMode(@Nullable String portalAuthMode) {
-            this.portalAuthMode = Input.ofNullable(portalAuthMode);
+            this.portalAuthMode = Output.ofNullable(portalAuthMode);
             return this;
         }
 
-        public Builder portalContactEmail(Input<String> portalContactEmail) {
+        public Builder portalContactEmail(Output<String> portalContactEmail) {
             this.portalContactEmail = Objects.requireNonNull(portalContactEmail);
             return this;
         }
 
         public Builder portalContactEmail(String portalContactEmail) {
-            this.portalContactEmail = Input.of(Objects.requireNonNull(portalContactEmail));
+            this.portalContactEmail = Output.of(Objects.requireNonNull(portalContactEmail));
             return this;
         }
 
-        public Builder portalDescription(@Nullable Input<String> portalDescription) {
+        public Builder portalDescription(@Nullable Output<String> portalDescription) {
             this.portalDescription = portalDescription;
             return this;
         }
 
         public Builder portalDescription(@Nullable String portalDescription) {
-            this.portalDescription = Input.ofNullable(portalDescription);
+            this.portalDescription = Output.ofNullable(portalDescription);
             return this;
         }
 
-        public Builder portalName(@Nullable Input<String> portalName) {
+        public Builder portalName(@Nullable Output<String> portalName) {
             this.portalName = portalName;
             return this;
         }
 
         public Builder portalName(@Nullable String portalName) {
-            this.portalName = Input.ofNullable(portalName);
+            this.portalName = Output.ofNullable(portalName);
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<PortalTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<PortalTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<PortalTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PortalArgs build() {

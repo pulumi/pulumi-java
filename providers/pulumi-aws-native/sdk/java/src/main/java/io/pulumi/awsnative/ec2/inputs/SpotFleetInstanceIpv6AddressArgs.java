@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     public static final SpotFleetInstanceIpv6AddressArgs Empty = new SpotFleetInstanceIpv6AddressArgs();
 
     @InputImport(name="ipv6Address", required=true)
-      private final Input<String> ipv6Address;
+      private final Output<String> ipv6Address;
 
-    public Input<String> getIpv6Address() {
+    public Output<String> getIpv6Address() {
         return this.ipv6Address;
     }
 
-    public SpotFleetInstanceIpv6AddressArgs(Input<String> ipv6Address) {
+    public SpotFleetInstanceIpv6AddressArgs(Output<String> ipv6Address) {
         this.ipv6Address = Objects.requireNonNull(ipv6Address, "expected parameter 'ipv6Address' to be non-null");
     }
 
     private SpotFleetInstanceIpv6AddressArgs() {
-        this.ipv6Address = Input.empty();
+        this.ipv6Address = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> ipv6Address;
+        private Output<String> ipv6Address;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder ipv6Address(Input<String> ipv6Address) {
+        public Builder ipv6Address(Output<String> ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
         public Builder ipv6Address(String ipv6Address) {
-            this.ipv6Address = Input.of(Objects.requireNonNull(ipv6Address));
+            this.ipv6Address = Output.of(Objects.requireNonNull(ipv6Address));
             return this;
         }
         public SpotFleetInstanceIpv6AddressArgs build() {

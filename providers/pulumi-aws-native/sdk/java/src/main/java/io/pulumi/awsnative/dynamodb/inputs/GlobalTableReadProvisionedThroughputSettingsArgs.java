@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     public static final GlobalTableReadProvisionedThroughputSettingsArgs Empty = new GlobalTableReadProvisionedThroughputSettingsArgs();
 
     @InputImport(name="readCapacityAutoScalingSettings")
-      private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
+      private final @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
 
-    public Input<GlobalTableCapacityAutoScalingSettingsArgs> getReadCapacityAutoScalingSettings() {
-        return this.readCapacityAutoScalingSettings == null ? Input.empty() : this.readCapacityAutoScalingSettings;
+    public Output<GlobalTableCapacityAutoScalingSettingsArgs> getReadCapacityAutoScalingSettings() {
+        return this.readCapacityAutoScalingSettings == null ? Output.empty() : this.readCapacityAutoScalingSettings;
     }
 
     @InputImport(name="readCapacityUnits")
-      private final @Nullable Input<Integer> readCapacityUnits;
+      private final @Nullable Output<Integer> readCapacityUnits;
 
-    public Input<Integer> getReadCapacityUnits() {
-        return this.readCapacityUnits == null ? Input.empty() : this.readCapacityUnits;
+    public Output<Integer> getReadCapacityUnits() {
+        return this.readCapacityUnits == null ? Output.empty() : this.readCapacityUnits;
     }
 
     public GlobalTableReadProvisionedThroughputSettingsArgs(
-        @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings,
-        @Nullable Input<Integer> readCapacityUnits) {
+        @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings,
+        @Nullable Output<Integer> readCapacityUnits) {
         this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
         this.readCapacityUnits = readCapacityUnits;
     }
 
     private GlobalTableReadProvisionedThroughputSettingsArgs() {
-        this.readCapacityAutoScalingSettings = Input.empty();
-        this.readCapacityUnits = Input.empty();
+        this.readCapacityAutoScalingSettings = Output.empty();
+        this.readCapacityUnits = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
-        private @Nullable Input<Integer> readCapacityUnits;
+        private @Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
+        private @Nullable Output<Integer> readCapacityUnits;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     	      this.readCapacityUnits = defaults.readCapacityUnits;
         }
 
-        public Builder readCapacityAutoScalingSettings(@Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings) {
+        public Builder readCapacityAutoScalingSettings(@Nullable Output<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings) {
             this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
             return this;
         }
 
         public Builder readCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
-            this.readCapacityAutoScalingSettings = Input.ofNullable(readCapacityAutoScalingSettings);
+            this.readCapacityAutoScalingSettings = Output.ofNullable(readCapacityAutoScalingSettings);
             return this;
         }
 
-        public Builder readCapacityUnits(@Nullable Input<Integer> readCapacityUnits) {
+        public Builder readCapacityUnits(@Nullable Output<Integer> readCapacityUnits) {
             this.readCapacityUnits = readCapacityUnits;
             return this;
         }
 
         public Builder readCapacityUnits(@Nullable Integer readCapacityUnits) {
-            this.readCapacityUnits = Input.ofNullable(readCapacityUnits);
+            this.readCapacityUnits = Output.ofNullable(readCapacityUnits);
             return this;
         }
         public GlobalTableReadProvisionedThroughputSettingsArgs build() {

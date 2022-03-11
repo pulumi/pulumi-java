@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mrapName", required=true)
-      private final Input<String> mrapName;
+      private final Output<String> mrapName;
 
-    public Input<String> getMrapName() {
+    public Output<String> getMrapName() {
         return this.mrapName;
     }
 
@@ -30,22 +30,22 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policy", required=true)
-      private final Input<Object> policy;
+      private final Output<Object> policy;
 
-    public Input<Object> getPolicy() {
+    public Output<Object> getPolicy() {
         return this.policy;
     }
 
     public MultiRegionAccessPointPolicyArgs(
-        Input<String> mrapName,
-        Input<Object> policy) {
+        Output<String> mrapName,
+        Output<Object> policy) {
         this.mrapName = Objects.requireNonNull(mrapName, "expected parameter 'mrapName' to be non-null");
         this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
     }
 
     private MultiRegionAccessPointPolicyArgs() {
-        this.mrapName = Input.empty();
-        this.policy = Input.empty();
+        this.mrapName = Output.empty();
+        this.policy = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> mrapName;
-        private Input<Object> policy;
+        private Output<String> mrapName;
+        private Output<Object> policy;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     	      this.policy = defaults.policy;
         }
 
-        public Builder mrapName(Input<String> mrapName) {
+        public Builder mrapName(Output<String> mrapName) {
             this.mrapName = Objects.requireNonNull(mrapName);
             return this;
         }
 
         public Builder mrapName(String mrapName) {
-            this.mrapName = Input.of(Objects.requireNonNull(mrapName));
+            this.mrapName = Output.of(Objects.requireNonNull(mrapName));
             return this;
         }
 
-        public Builder policy(Input<Object> policy) {
+        public Builder policy(Output<Object> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
         public Builder policy(Object policy) {
-            this.policy = Input.of(Objects.requireNonNull(policy));
+            this.policy = Output.of(Objects.requireNonNull(policy));
             return this;
         }
         public MultiRegionAccessPointPolicyArgs build() {

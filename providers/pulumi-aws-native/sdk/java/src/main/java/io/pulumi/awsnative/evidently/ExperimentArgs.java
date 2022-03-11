@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.inputs.ExperimentMetricGoalObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentOnlineAbConfigObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,52 +21,52 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="metricGoals", required=true)
-      private final Input<List<ExperimentMetricGoalObjectArgs>> metricGoals;
+      private final Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
 
-    public Input<List<ExperimentMetricGoalObjectArgs>> getMetricGoals() {
+    public Output<List<ExperimentMetricGoalObjectArgs>> getMetricGoals() {
         return this.metricGoals;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="onlineAbConfig", required=true)
-      private final Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
+      private final Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
 
-    public Input<ExperimentOnlineAbConfigObjectArgs> getOnlineAbConfig() {
+    public Output<ExperimentOnlineAbConfigObjectArgs> getOnlineAbConfig() {
         return this.onlineAbConfig;
     }
 
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
     @InputImport(name="randomizationSalt")
-      private final @Nullable Input<String> randomizationSalt;
+      private final @Nullable Output<String> randomizationSalt;
 
-    public Input<String> getRandomizationSalt() {
-        return this.randomizationSalt == null ? Input.empty() : this.randomizationSalt;
+    public Output<String> getRandomizationSalt() {
+        return this.randomizationSalt == null ? Output.empty() : this.randomizationSalt;
     }
 
     @InputImport(name="samplingRate")
-      private final @Nullable Input<Integer> samplingRate;
+      private final @Nullable Output<Integer> samplingRate;
 
-    public Input<Integer> getSamplingRate() {
-        return this.samplingRate == null ? Input.empty() : this.samplingRate;
+    public Output<Integer> getSamplingRate() {
+        return this.samplingRate == null ? Output.empty() : this.samplingRate;
     }
 
     /**
@@ -74,29 +74,29 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ExperimentTagArgs>> tags;
+      private final @Nullable Output<List<ExperimentTagArgs>> tags;
 
-    public Input<List<ExperimentTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ExperimentTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="treatments", required=true)
-      private final Input<List<ExperimentTreatmentObjectArgs>> treatments;
+      private final Output<List<ExperimentTreatmentObjectArgs>> treatments;
 
-    public Input<List<ExperimentTreatmentObjectArgs>> getTreatments() {
+    public Output<List<ExperimentTreatmentObjectArgs>> getTreatments() {
         return this.treatments;
     }
 
     public ExperimentArgs(
-        @Nullable Input<String> description,
-        Input<List<ExperimentMetricGoalObjectArgs>> metricGoals,
-        @Nullable Input<String> name,
-        Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig,
-        Input<String> project,
-        @Nullable Input<String> randomizationSalt,
-        @Nullable Input<Integer> samplingRate,
-        @Nullable Input<List<ExperimentTagArgs>> tags,
-        Input<List<ExperimentTreatmentObjectArgs>> treatments) {
+        @Nullable Output<String> description,
+        Output<List<ExperimentMetricGoalObjectArgs>> metricGoals,
+        @Nullable Output<String> name,
+        Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig,
+        Output<String> project,
+        @Nullable Output<String> randomizationSalt,
+        @Nullable Output<Integer> samplingRate,
+        @Nullable Output<List<ExperimentTagArgs>> tags,
+        Output<List<ExperimentTreatmentObjectArgs>> treatments) {
         this.description = description;
         this.metricGoals = Objects.requireNonNull(metricGoals, "expected parameter 'metricGoals' to be non-null");
         this.name = name;
@@ -109,15 +109,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.description = Input.empty();
-        this.metricGoals = Input.empty();
-        this.name = Input.empty();
-        this.onlineAbConfig = Input.empty();
-        this.project = Input.empty();
-        this.randomizationSalt = Input.empty();
-        this.samplingRate = Input.empty();
-        this.tags = Input.empty();
-        this.treatments = Input.empty();
+        this.description = Output.empty();
+        this.metricGoals = Output.empty();
+        this.name = Output.empty();
+        this.onlineAbConfig = Output.empty();
+        this.project = Output.empty();
+        this.randomizationSalt = Output.empty();
+        this.samplingRate = Output.empty();
+        this.tags = Output.empty();
+        this.treatments = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,15 +129,15 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<List<ExperimentMetricGoalObjectArgs>> metricGoals;
-        private @Nullable Input<String> name;
-        private Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
-        private Input<String> project;
-        private @Nullable Input<String> randomizationSalt;
-        private @Nullable Input<Integer> samplingRate;
-        private @Nullable Input<List<ExperimentTagArgs>> tags;
-        private Input<List<ExperimentTreatmentObjectArgs>> treatments;
+        private @Nullable Output<String> description;
+        private Output<List<ExperimentMetricGoalObjectArgs>> metricGoals;
+        private @Nullable Output<String> name;
+        private Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
+        private Output<String> project;
+        private @Nullable Output<String> randomizationSalt;
+        private @Nullable Output<Integer> samplingRate;
+        private @Nullable Output<List<ExperimentTagArgs>> tags;
+        private Output<List<ExperimentTreatmentObjectArgs>> treatments;
 
         public Builder() {
     	      // Empty
@@ -156,93 +156,93 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.treatments = defaults.treatments;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder metricGoals(Input<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
+        public Builder metricGoals(Output<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
             this.metricGoals = Objects.requireNonNull(metricGoals);
             return this;
         }
 
         public Builder metricGoals(List<ExperimentMetricGoalObjectArgs> metricGoals) {
-            this.metricGoals = Input.of(Objects.requireNonNull(metricGoals));
+            this.metricGoals = Output.of(Objects.requireNonNull(metricGoals));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onlineAbConfig(Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
+        public Builder onlineAbConfig(Output<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
             this.onlineAbConfig = Objects.requireNonNull(onlineAbConfig);
             return this;
         }
 
         public Builder onlineAbConfig(ExperimentOnlineAbConfigObjectArgs onlineAbConfig) {
-            this.onlineAbConfig = Input.of(Objects.requireNonNull(onlineAbConfig));
+            this.onlineAbConfig = Output.of(Objects.requireNonNull(onlineAbConfig));
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder randomizationSalt(@Nullable Input<String> randomizationSalt) {
+        public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
         public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Input.ofNullable(randomizationSalt);
+            this.randomizationSalt = Output.ofNullable(randomizationSalt);
             return this;
         }
 
-        public Builder samplingRate(@Nullable Input<Integer> samplingRate) {
+        public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
         public Builder samplingRate(@Nullable Integer samplingRate) {
-            this.samplingRate = Input.ofNullable(samplingRate);
+            this.samplingRate = Output.ofNullable(samplingRate);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ExperimentTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ExperimentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ExperimentTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder treatments(Input<List<ExperimentTreatmentObjectArgs>> treatments) {
+        public Builder treatments(Output<List<ExperimentTreatmentObjectArgs>> treatments) {
             this.treatments = Objects.requireNonNull(treatments);
             return this;
         }
 
         public Builder treatments(List<ExperimentTreatmentObjectArgs> treatments) {
-            this.treatments = Input.of(Objects.requireNonNull(treatments));
+            this.treatments = Output.of(Objects.requireNonNull(treatments));
             return this;
         }
         public ExperimentArgs build() {

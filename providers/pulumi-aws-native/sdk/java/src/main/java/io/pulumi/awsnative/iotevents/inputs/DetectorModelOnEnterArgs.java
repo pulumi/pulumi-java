@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class DetectorModelOnEnterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="events")
-      private final @Nullable Input<List<DetectorModelEventArgs>> events;
+      private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
-    public Input<List<DetectorModelEventArgs>> getEvents() {
-        return this.events == null ? Input.empty() : this.events;
+    public Output<List<DetectorModelEventArgs>> getEvents() {
+        return this.events == null ? Output.empty() : this.events;
     }
 
-    public DetectorModelOnEnterArgs(@Nullable Input<List<DetectorModelEventArgs>> events) {
+    public DetectorModelOnEnterArgs(@Nullable Output<List<DetectorModelEventArgs>> events) {
         this.events = events;
     }
 
     private DetectorModelOnEnterArgs() {
-        this.events = Input.empty();
+        this.events = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class DetectorModelOnEnterArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DetectorModelEventArgs>> events;
+        private @Nullable Output<List<DetectorModelEventArgs>> events;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class DetectorModelOnEnterArgs extends io.pulumi.resources.Resource
     	      this.events = defaults.events;
         }
 
-        public Builder events(@Nullable Input<List<DetectorModelEventArgs>> events) {
+        public Builder events(@Nullable Output<List<DetectorModelEventArgs>> events) {
             this.events = events;
             return this;
         }
 
         public Builder events(@Nullable List<DetectorModelEventArgs> events) {
-            this.events = Input.ofNullable(events);
+            this.events = Output.ofNullable(events);
             return this;
         }
         public DetectorModelOnEnterArgs build() {

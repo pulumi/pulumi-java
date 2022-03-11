@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     public static final SuiteDefinitionDeviceUnderTestArgs Empty = new SuiteDefinitionDeviceUnderTestArgs();
 
     @InputImport(name="certificateArn")
-      private final @Nullable Input<String> certificateArn;
+      private final @Nullable Output<String> certificateArn;
 
-    public Input<String> getCertificateArn() {
-        return this.certificateArn == null ? Input.empty() : this.certificateArn;
+    public Output<String> getCertificateArn() {
+        return this.certificateArn == null ? Output.empty() : this.certificateArn;
     }
 
     @InputImport(name="thingArn")
-      private final @Nullable Input<String> thingArn;
+      private final @Nullable Output<String> thingArn;
 
-    public Input<String> getThingArn() {
-        return this.thingArn == null ? Input.empty() : this.thingArn;
+    public Output<String> getThingArn() {
+        return this.thingArn == null ? Output.empty() : this.thingArn;
     }
 
     public SuiteDefinitionDeviceUnderTestArgs(
-        @Nullable Input<String> certificateArn,
-        @Nullable Input<String> thingArn) {
+        @Nullable Output<String> certificateArn,
+        @Nullable Output<String> thingArn) {
         this.certificateArn = certificateArn;
         this.thingArn = thingArn;
     }
 
     private SuiteDefinitionDeviceUnderTestArgs() {
-        this.certificateArn = Input.empty();
-        this.thingArn = Input.empty();
+        this.certificateArn = Output.empty();
+        this.thingArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateArn;
-        private @Nullable Input<String> thingArn;
+        private @Nullable Output<String> certificateArn;
+        private @Nullable Output<String> thingArn;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     	      this.thingArn = defaults.thingArn;
         }
 
-        public Builder certificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Output<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Input.ofNullable(certificateArn);
+            this.certificateArn = Output.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder thingArn(@Nullable Input<String> thingArn) {
+        public Builder thingArn(@Nullable Output<String> thingArn) {
             this.thingArn = thingArn;
             return this;
         }
 
         public Builder thingArn(@Nullable String thingArn) {
-            this.thingArn = Input.ofNullable(thingArn);
+            this.thingArn = Output.ofNullable(thingArn);
             return this;
         }
         public SuiteDefinitionDeviceUnderTestArgs build() {

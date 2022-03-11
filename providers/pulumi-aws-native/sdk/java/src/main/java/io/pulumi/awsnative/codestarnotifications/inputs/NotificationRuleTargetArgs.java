@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codestarnotifications.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     public static final NotificationRuleTargetArgs Empty = new NotificationRuleTargetArgs();
 
     @InputImport(name="targetAddress", required=true)
-      private final Input<String> targetAddress;
+      private final Output<String> targetAddress;
 
-    public Input<String> getTargetAddress() {
+    public Output<String> getTargetAddress() {
         return this.targetAddress;
     }
 
     @InputImport(name="targetType", required=true)
-      private final Input<String> targetType;
+      private final Output<String> targetType;
 
-    public Input<String> getTargetType() {
+    public Output<String> getTargetType() {
         return this.targetType;
     }
 
     public NotificationRuleTargetArgs(
-        Input<String> targetAddress,
-        Input<String> targetType) {
+        Output<String> targetAddress,
+        Output<String> targetType) {
         this.targetAddress = Objects.requireNonNull(targetAddress, "expected parameter 'targetAddress' to be non-null");
         this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
     }
 
     private NotificationRuleTargetArgs() {
-        this.targetAddress = Input.empty();
-        this.targetType = Input.empty();
+        this.targetAddress = Output.empty();
+        this.targetType = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> targetAddress;
-        private Input<String> targetType;
+        private Output<String> targetAddress;
+        private Output<String> targetType;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder targetAddress(Input<String> targetAddress) {
+        public Builder targetAddress(Output<String> targetAddress) {
             this.targetAddress = Objects.requireNonNull(targetAddress);
             return this;
         }
 
         public Builder targetAddress(String targetAddress) {
-            this.targetAddress = Input.of(Objects.requireNonNull(targetAddress));
+            this.targetAddress = Output.of(Objects.requireNonNull(targetAddress));
             return this;
         }
 
-        public Builder targetType(Input<String> targetType) {
+        public Builder targetType(Output<String> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
         public Builder targetType(String targetType) {
-            this.targetType = Input.of(Objects.requireNonNull(targetType));
+            this.targetType = Output.of(Objects.requireNonNull(targetType));
             return this;
         }
         public NotificationRuleTargetArgs build() {

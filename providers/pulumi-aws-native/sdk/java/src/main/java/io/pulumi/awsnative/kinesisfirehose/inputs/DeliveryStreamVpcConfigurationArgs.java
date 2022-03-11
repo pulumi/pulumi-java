@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,39 +15,39 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     public static final DeliveryStreamVpcConfigurationArgs Empty = new DeliveryStreamVpcConfigurationArgs();
 
     @InputImport(name="roleARN", required=true)
-      private final Input<String> roleARN;
+      private final Output<String> roleARN;
 
-    public Input<String> getRoleARN() {
+    public Output<String> getRoleARN() {
         return this.roleARN;
     }
 
     @InputImport(name="securityGroupIds", required=true)
-      private final Input<List<String>> securityGroupIds;
+      private final Output<List<String>> securityGroupIds;
 
-    public Input<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-      private final Input<List<String>> subnetIds;
+      private final Output<List<String>> subnetIds;
 
-    public Input<List<String>> getSubnetIds() {
+    public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     public DeliveryStreamVpcConfigurationArgs(
-        Input<String> roleARN,
-        Input<List<String>> securityGroupIds,
-        Input<List<String>> subnetIds) {
+        Output<String> roleARN,
+        Output<List<String>> securityGroupIds,
+        Output<List<String>> subnetIds) {
         this.roleARN = Objects.requireNonNull(roleARN, "expected parameter 'roleARN' to be non-null");
         this.securityGroupIds = Objects.requireNonNull(securityGroupIds, "expected parameter 'securityGroupIds' to be non-null");
         this.subnetIds = Objects.requireNonNull(subnetIds, "expected parameter 'subnetIds' to be non-null");
     }
 
     private DeliveryStreamVpcConfigurationArgs() {
-        this.roleARN = Input.empty();
-        this.securityGroupIds = Input.empty();
-        this.subnetIds = Input.empty();
+        this.roleARN = Output.empty();
+        this.securityGroupIds = Output.empty();
+        this.subnetIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> roleARN;
-        private Input<List<String>> securityGroupIds;
-        private Input<List<String>> subnetIds;
+        private Output<String> roleARN;
+        private Output<List<String>> securityGroupIds;
+        private Output<List<String>> subnetIds;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class DeliveryStreamVpcConfigurationArgs extends io.pulumi.resource
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder roleARN(Input<String> roleARN) {
+        public Builder roleARN(Output<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
         public Builder roleARN(String roleARN) {
-            this.roleARN = Input.of(Objects.requireNonNull(roleARN));
+            this.roleARN = Output.of(Objects.requireNonNull(roleARN));
             return this;
         }
 
-        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
         public Builder securityGroupIds(List<String> securityGroupIds) {
-            this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
+            this.securityGroupIds = Output.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder subnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Output<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
         public Builder subnetIds(List<String> subnetIds) {
-            this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
+            this.subnetIds = Output.of(Objects.requireNonNull(subnetIds));
             return this;
         }
         public DeliveryStreamVpcConfigurationArgs build() {

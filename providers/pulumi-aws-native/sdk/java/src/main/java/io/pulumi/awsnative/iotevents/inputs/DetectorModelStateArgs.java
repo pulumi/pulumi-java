@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnEnterArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnExitArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,24 +22,24 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     public static final DetectorModelStateArgs Empty = new DetectorModelStateArgs();
 
     @InputImport(name="onEnter")
-      private final @Nullable Input<DetectorModelOnEnterArgs> onEnter;
+      private final @Nullable Output<DetectorModelOnEnterArgs> onEnter;
 
-    public Input<DetectorModelOnEnterArgs> getOnEnter() {
-        return this.onEnter == null ? Input.empty() : this.onEnter;
+    public Output<DetectorModelOnEnterArgs> getOnEnter() {
+        return this.onEnter == null ? Output.empty() : this.onEnter;
     }
 
     @InputImport(name="onExit")
-      private final @Nullable Input<DetectorModelOnExitArgs> onExit;
+      private final @Nullable Output<DetectorModelOnExitArgs> onExit;
 
-    public Input<DetectorModelOnExitArgs> getOnExit() {
-        return this.onExit == null ? Input.empty() : this.onExit;
+    public Output<DetectorModelOnExitArgs> getOnExit() {
+        return this.onExit == null ? Output.empty() : this.onExit;
     }
 
     @InputImport(name="onInput")
-      private final @Nullable Input<DetectorModelOnInputArgs> onInput;
+      private final @Nullable Output<DetectorModelOnInputArgs> onInput;
 
-    public Input<DetectorModelOnInputArgs> getOnInput() {
-        return this.onInput == null ? Input.empty() : this.onInput;
+    public Output<DetectorModelOnInputArgs> getOnInput() {
+        return this.onInput == null ? Output.empty() : this.onInput;
     }
 
     /**
@@ -47,17 +47,17 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="stateName", required=true)
-      private final Input<String> stateName;
+      private final Output<String> stateName;
 
-    public Input<String> getStateName() {
+    public Output<String> getStateName() {
         return this.stateName;
     }
 
     public DetectorModelStateArgs(
-        @Nullable Input<DetectorModelOnEnterArgs> onEnter,
-        @Nullable Input<DetectorModelOnExitArgs> onExit,
-        @Nullable Input<DetectorModelOnInputArgs> onInput,
-        Input<String> stateName) {
+        @Nullable Output<DetectorModelOnEnterArgs> onEnter,
+        @Nullable Output<DetectorModelOnExitArgs> onExit,
+        @Nullable Output<DetectorModelOnInputArgs> onInput,
+        Output<String> stateName) {
         this.onEnter = onEnter;
         this.onExit = onExit;
         this.onInput = onInput;
@@ -65,10 +65,10 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DetectorModelStateArgs() {
-        this.onEnter = Input.empty();
-        this.onExit = Input.empty();
-        this.onInput = Input.empty();
-        this.stateName = Input.empty();
+        this.onEnter = Output.empty();
+        this.onExit = Output.empty();
+        this.onInput = Output.empty();
+        this.stateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<DetectorModelOnEnterArgs> onEnter;
-        private @Nullable Input<DetectorModelOnExitArgs> onExit;
-        private @Nullable Input<DetectorModelOnInputArgs> onInput;
-        private Input<String> stateName;
+        private @Nullable Output<DetectorModelOnEnterArgs> onEnter;
+        private @Nullable Output<DetectorModelOnExitArgs> onExit;
+        private @Nullable Output<DetectorModelOnInputArgs> onInput;
+        private Output<String> stateName;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     	      this.stateName = defaults.stateName;
         }
 
-        public Builder onEnter(@Nullable Input<DetectorModelOnEnterArgs> onEnter) {
+        public Builder onEnter(@Nullable Output<DetectorModelOnEnterArgs> onEnter) {
             this.onEnter = onEnter;
             return this;
         }
 
         public Builder onEnter(@Nullable DetectorModelOnEnterArgs onEnter) {
-            this.onEnter = Input.ofNullable(onEnter);
+            this.onEnter = Output.ofNullable(onEnter);
             return this;
         }
 
-        public Builder onExit(@Nullable Input<DetectorModelOnExitArgs> onExit) {
+        public Builder onExit(@Nullable Output<DetectorModelOnExitArgs> onExit) {
             this.onExit = onExit;
             return this;
         }
 
         public Builder onExit(@Nullable DetectorModelOnExitArgs onExit) {
-            this.onExit = Input.ofNullable(onExit);
+            this.onExit = Output.ofNullable(onExit);
             return this;
         }
 
-        public Builder onInput(@Nullable Input<DetectorModelOnInputArgs> onInput) {
+        public Builder onInput(@Nullable Output<DetectorModelOnInputArgs> onInput) {
             this.onInput = onInput;
             return this;
         }
 
         public Builder onInput(@Nullable DetectorModelOnInputArgs onInput) {
-            this.onInput = Input.ofNullable(onInput);
+            this.onInput = Output.ofNullable(onInput);
             return this;
         }
 
-        public Builder stateName(Input<String> stateName) {
+        public Builder stateName(Output<String> stateName) {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }
 
         public Builder stateName(String stateName) {
-            this.stateName = Input.of(Objects.requireNonNull(stateName));
+            this.stateName = Output.of(Objects.requireNonNull(stateName));
             return this;
         }
         public DetectorModelStateArgs build() {

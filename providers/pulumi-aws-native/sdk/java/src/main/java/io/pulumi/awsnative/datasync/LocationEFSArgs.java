@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync;
 
 import io.pulumi.awsnative.datasync.inputs.LocationEFSEc2ConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationEFSTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -18,9 +18,9 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
     public static final LocationEFSArgs Empty = new LocationEFSArgs();
 
     @InputImport(name="ec2Config", required=true)
-      private final Input<LocationEFSEc2ConfigArgs> ec2Config;
+      private final Output<LocationEFSEc2ConfigArgs> ec2Config;
 
-    public Input<LocationEFSEc2ConfigArgs> getEc2Config() {
+    public Output<LocationEFSEc2ConfigArgs> getEc2Config() {
         return this.ec2Config;
     }
 
@@ -29,9 +29,9 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="efsFilesystemArn", required=true)
-      private final Input<String> efsFilesystemArn;
+      private final Output<String> efsFilesystemArn;
 
-    public Input<String> getEfsFilesystemArn() {
+    public Output<String> getEfsFilesystemArn() {
         return this.efsFilesystemArn;
     }
 
@@ -40,10 +40,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdirectory")
-      private final @Nullable Input<String> subdirectory;
+      private final @Nullable Output<String> subdirectory;
 
-    public Input<String> getSubdirectory() {
-        return this.subdirectory == null ? Input.empty() : this.subdirectory;
+    public Output<String> getSubdirectory() {
+        return this.subdirectory == null ? Output.empty() : this.subdirectory;
     }
 
     /**
@@ -51,17 +51,17 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<LocationEFSTagArgs>> tags;
+      private final @Nullable Output<List<LocationEFSTagArgs>> tags;
 
-    public Input<List<LocationEFSTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<LocationEFSTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LocationEFSArgs(
-        Input<LocationEFSEc2ConfigArgs> ec2Config,
-        Input<String> efsFilesystemArn,
-        @Nullable Input<String> subdirectory,
-        @Nullable Input<List<LocationEFSTagArgs>> tags) {
+        Output<LocationEFSEc2ConfigArgs> ec2Config,
+        Output<String> efsFilesystemArn,
+        @Nullable Output<String> subdirectory,
+        @Nullable Output<List<LocationEFSTagArgs>> tags) {
         this.ec2Config = Objects.requireNonNull(ec2Config, "expected parameter 'ec2Config' to be non-null");
         this.efsFilesystemArn = Objects.requireNonNull(efsFilesystemArn, "expected parameter 'efsFilesystemArn' to be non-null");
         this.subdirectory = subdirectory;
@@ -69,10 +69,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationEFSArgs() {
-        this.ec2Config = Input.empty();
-        this.efsFilesystemArn = Input.empty();
-        this.subdirectory = Input.empty();
-        this.tags = Input.empty();
+        this.ec2Config = Output.empty();
+        this.efsFilesystemArn = Output.empty();
+        this.subdirectory = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<LocationEFSEc2ConfigArgs> ec2Config;
-        private Input<String> efsFilesystemArn;
-        private @Nullable Input<String> subdirectory;
-        private @Nullable Input<List<LocationEFSTagArgs>> tags;
+        private Output<LocationEFSEc2ConfigArgs> ec2Config;
+        private Output<String> efsFilesystemArn;
+        private @Nullable Output<String> subdirectory;
+        private @Nullable Output<List<LocationEFSTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -101,43 +101,43 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder ec2Config(Input<LocationEFSEc2ConfigArgs> ec2Config) {
+        public Builder ec2Config(Output<LocationEFSEc2ConfigArgs> ec2Config) {
             this.ec2Config = Objects.requireNonNull(ec2Config);
             return this;
         }
 
         public Builder ec2Config(LocationEFSEc2ConfigArgs ec2Config) {
-            this.ec2Config = Input.of(Objects.requireNonNull(ec2Config));
+            this.ec2Config = Output.of(Objects.requireNonNull(ec2Config));
             return this;
         }
 
-        public Builder efsFilesystemArn(Input<String> efsFilesystemArn) {
+        public Builder efsFilesystemArn(Output<String> efsFilesystemArn) {
             this.efsFilesystemArn = Objects.requireNonNull(efsFilesystemArn);
             return this;
         }
 
         public Builder efsFilesystemArn(String efsFilesystemArn) {
-            this.efsFilesystemArn = Input.of(Objects.requireNonNull(efsFilesystemArn));
+            this.efsFilesystemArn = Output.of(Objects.requireNonNull(efsFilesystemArn));
             return this;
         }
 
-        public Builder subdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Output<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Input.ofNullable(subdirectory);
+            this.subdirectory = Output.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<LocationEFSTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<LocationEFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<LocationEFSTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LocationEFSArgs build() {

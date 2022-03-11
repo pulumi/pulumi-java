@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location;
 
 import io.pulumi.awsnative.location.enums.RouteCalculatorPricingPlan;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,38 +16,38 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     public static final RouteCalculatorArgs Empty = new RouteCalculatorArgs();
 
     @InputImport(name="calculatorName", required=true)
-      private final Input<String> calculatorName;
+      private final Output<String> calculatorName;
 
-    public Input<String> getCalculatorName() {
+    public Output<String> getCalculatorName() {
         return this.calculatorName;
     }
 
     @InputImport(name="dataSource", required=true)
-      private final Input<String> dataSource;
+      private final Output<String> dataSource;
 
-    public Input<String> getDataSource() {
+    public Output<String> getDataSource() {
         return this.dataSource;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="pricingPlan")
-      private final @Nullable Input<RouteCalculatorPricingPlan> pricingPlan;
+      private final @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
 
-    public Input<RouteCalculatorPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
+    public Output<RouteCalculatorPricingPlan> getPricingPlan() {
+        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
     }
 
     public RouteCalculatorArgs(
-        Input<String> calculatorName,
-        Input<String> dataSource,
-        @Nullable Input<String> description,
-        @Nullable Input<RouteCalculatorPricingPlan> pricingPlan) {
+        Output<String> calculatorName,
+        Output<String> dataSource,
+        @Nullable Output<String> description,
+        @Nullable Output<RouteCalculatorPricingPlan> pricingPlan) {
         this.calculatorName = Objects.requireNonNull(calculatorName, "expected parameter 'calculatorName' to be non-null");
         this.dataSource = Objects.requireNonNull(dataSource, "expected parameter 'dataSource' to be non-null");
         this.description = description;
@@ -55,10 +55,10 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouteCalculatorArgs() {
-        this.calculatorName = Input.empty();
-        this.dataSource = Input.empty();
-        this.description = Input.empty();
-        this.pricingPlan = Input.empty();
+        this.calculatorName = Output.empty();
+        this.dataSource = Output.empty();
+        this.description = Output.empty();
+        this.pricingPlan = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,10 +70,10 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> calculatorName;
-        private Input<String> dataSource;
-        private @Nullable Input<String> description;
-        private @Nullable Input<RouteCalculatorPricingPlan> pricingPlan;
+        private Output<String> calculatorName;
+        private Output<String> dataSource;
+        private @Nullable Output<String> description;
+        private @Nullable Output<RouteCalculatorPricingPlan> pricingPlan;
 
         public Builder() {
     	      // Empty
@@ -87,43 +87,43 @@ public final class RouteCalculatorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.pricingPlan = defaults.pricingPlan;
         }
 
-        public Builder calculatorName(Input<String> calculatorName) {
+        public Builder calculatorName(Output<String> calculatorName) {
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
         }
 
         public Builder calculatorName(String calculatorName) {
-            this.calculatorName = Input.of(Objects.requireNonNull(calculatorName));
+            this.calculatorName = Output.of(Objects.requireNonNull(calculatorName));
             return this;
         }
 
-        public Builder dataSource(Input<String> dataSource) {
+        public Builder dataSource(Output<String> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
         public Builder dataSource(String dataSource) {
-            this.dataSource = Input.of(Objects.requireNonNull(dataSource));
+            this.dataSource = Output.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder pricingPlan(@Nullable Input<RouteCalculatorPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Output<RouteCalculatorPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
         public Builder pricingPlan(@Nullable RouteCalculatorPricingPlan pricingPlan) {
-            this.pricingPlan = Input.ofNullable(pricingPlan);
+            this.pricingPlan = Output.ofNullable(pricingPlan);
             return this;
         }
         public RouteCalculatorArgs build() {

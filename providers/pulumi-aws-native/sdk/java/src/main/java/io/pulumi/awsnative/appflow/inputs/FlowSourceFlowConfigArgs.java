@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectorProfileName")
-      private final @Nullable Input<String> connectorProfileName;
+      private final @Nullable Output<String> connectorProfileName;
 
-    public Input<String> getConnectorProfileName() {
-        return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
+    public Output<String> getConnectorProfileName() {
+        return this.connectorProfileName == null ? Output.empty() : this.connectorProfileName;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectorType", required=true)
-      private final Input<FlowConnectorType> connectorType;
+      private final Output<FlowConnectorType> connectorType;
 
-    public Input<FlowConnectorType> getConnectorType() {
+    public Output<FlowConnectorType> getConnectorType() {
         return this.connectorType;
     }
 
@@ -48,10 +48,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="incrementalPullConfig")
-      private final @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig;
+      private final @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
 
-    public Input<FlowIncrementalPullConfigArgs> getIncrementalPullConfig() {
-        return this.incrementalPullConfig == null ? Input.empty() : this.incrementalPullConfig;
+    public Output<FlowIncrementalPullConfigArgs> getIncrementalPullConfig() {
+        return this.incrementalPullConfig == null ? Output.empty() : this.incrementalPullConfig;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceConnectorProperties", required=true)
-      private final Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
+      private final Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
-    public Input<FlowSourceConnectorPropertiesArgs> getSourceConnectorProperties() {
+    public Output<FlowSourceConnectorPropertiesArgs> getSourceConnectorProperties() {
         return this.sourceConnectorProperties;
     }
 
     public FlowSourceFlowConfigArgs(
-        @Nullable Input<String> connectorProfileName,
-        Input<FlowConnectorType> connectorType,
-        @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig,
-        Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
+        @Nullable Output<String> connectorProfileName,
+        Output<FlowConnectorType> connectorType,
+        @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig,
+        Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
         this.incrementalPullConfig = incrementalPullConfig;
@@ -77,10 +77,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
     }
 
     private FlowSourceFlowConfigArgs() {
-        this.connectorProfileName = Input.empty();
-        this.connectorType = Input.empty();
-        this.incrementalPullConfig = Input.empty();
-        this.sourceConnectorProperties = Input.empty();
+        this.connectorProfileName = Output.empty();
+        this.connectorType = Output.empty();
+        this.incrementalPullConfig = Output.empty();
+        this.sourceConnectorProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectorProfileName;
-        private Input<FlowConnectorType> connectorType;
-        private @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig;
-        private Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
+        private @Nullable Output<String> connectorProfileName;
+        private Output<FlowConnectorType> connectorType;
+        private @Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig;
+        private Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
     	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
         }
 
-        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Output<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
         public Builder connectorProfileName(@Nullable String connectorProfileName) {
-            this.connectorProfileName = Input.ofNullable(connectorProfileName);
+            this.connectorProfileName = Output.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder connectorType(Input<FlowConnectorType> connectorType) {
+        public Builder connectorType(Output<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
         public Builder connectorType(FlowConnectorType connectorType) {
-            this.connectorType = Input.of(Objects.requireNonNull(connectorType));
+            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder incrementalPullConfig(@Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable Output<FlowIncrementalPullConfigArgs> incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
         public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfigArgs incrementalPullConfig) {
-            this.incrementalPullConfig = Input.ofNullable(incrementalPullConfig);
+            this.incrementalPullConfig = Output.ofNullable(incrementalPullConfig);
             return this;
         }
 
-        public Builder sourceConnectorProperties(Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(Output<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
 
         public Builder sourceConnectorProperties(FlowSourceConnectorPropertiesArgs sourceConnectorProperties) {
-            this.sourceConnectorProperties = Input.of(Objects.requireNonNull(sourceConnectorProperties));
+            this.sourceConnectorProperties = Output.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
         }
         public FlowSourceFlowConfigArgs build() {

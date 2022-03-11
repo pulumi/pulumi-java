@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
      * 
      */
     @InputImport(name="confidenceLevel")
-      private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+      private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
-    public Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
-        return this.confidenceLevel == null ? Input.empty() : this.confidenceLevel;
+    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
+        return this.confidenceLevel == null ? Output.empty() : this.confidenceLevel;
     }
 
-    public SecurityProfileMachineLearningDetectionConfigArgs(@Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
+    public SecurityProfileMachineLearningDetectionConfigArgs(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
     }
 
     private SecurityProfileMachineLearningDetectionConfigArgs() {
-        this.confidenceLevel = Input.empty();
+        this.confidenceLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+        private @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
     	      this.confidenceLevel = defaults.confidenceLevel;
         }
 
-        public Builder confidenceLevel(@Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
+        public Builder confidenceLevel(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
             this.confidenceLevel = confidenceLevel;
             return this;
         }
 
         public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
-            this.confidenceLevel = Input.ofNullable(confidenceLevel);
+            this.confidenceLevel = Output.ofNullable(confidenceLevel);
             return this;
         }
         public SecurityProfileMachineLearningDetectionConfigArgs build() {

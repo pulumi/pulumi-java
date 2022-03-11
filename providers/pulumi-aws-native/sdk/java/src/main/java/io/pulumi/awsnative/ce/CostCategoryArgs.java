@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ce;
 
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,23 +20,23 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<String> defaultValue;
+      private final @Nullable Output<String> defaultValue;
 
-    public Input<String> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<String> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="ruleVersion", required=true)
-      private final Input<CostCategoryRuleVersion> ruleVersion;
+      private final Output<CostCategoryRuleVersion> ruleVersion;
 
-    public Input<CostCategoryRuleVersion> getRuleVersion() {
+    public Output<CostCategoryRuleVersion> getRuleVersion() {
         return this.ruleVersion;
     }
 
@@ -45,9 +45,9 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-      private final Input<String> rules;
+      private final Output<String> rules;
 
-    public Input<String> getRules() {
+    public Output<String> getRules() {
         return this.rules;
     }
 
@@ -56,18 +56,18 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="splitChargeRules")
-      private final @Nullable Input<String> splitChargeRules;
+      private final @Nullable Output<String> splitChargeRules;
 
-    public Input<String> getSplitChargeRules() {
-        return this.splitChargeRules == null ? Input.empty() : this.splitChargeRules;
+    public Output<String> getSplitChargeRules() {
+        return this.splitChargeRules == null ? Output.empty() : this.splitChargeRules;
     }
 
     public CostCategoryArgs(
-        @Nullable Input<String> defaultValue,
-        @Nullable Input<String> name,
-        Input<CostCategoryRuleVersion> ruleVersion,
-        Input<String> rules,
-        @Nullable Input<String> splitChargeRules) {
+        @Nullable Output<String> defaultValue,
+        @Nullable Output<String> name,
+        Output<CostCategoryRuleVersion> ruleVersion,
+        Output<String> rules,
+        @Nullable Output<String> splitChargeRules) {
         this.defaultValue = defaultValue;
         this.name = name;
         this.ruleVersion = Objects.requireNonNull(ruleVersion, "expected parameter 'ruleVersion' to be non-null");
@@ -76,11 +76,11 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CostCategoryArgs() {
-        this.defaultValue = Input.empty();
-        this.name = Input.empty();
-        this.ruleVersion = Input.empty();
-        this.rules = Input.empty();
-        this.splitChargeRules = Input.empty();
+        this.defaultValue = Output.empty();
+        this.name = Output.empty();
+        this.ruleVersion = Output.empty();
+        this.rules = Output.empty();
+        this.splitChargeRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,11 +92,11 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultValue;
-        private @Nullable Input<String> name;
-        private Input<CostCategoryRuleVersion> ruleVersion;
-        private Input<String> rules;
-        private @Nullable Input<String> splitChargeRules;
+        private @Nullable Output<String> defaultValue;
+        private @Nullable Output<String> name;
+        private Output<CostCategoryRuleVersion> ruleVersion;
+        private Output<String> rules;
+        private @Nullable Output<String> splitChargeRules;
 
         public Builder() {
     	      // Empty
@@ -111,53 +111,53 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.splitChargeRules = defaults.splitChargeRules;
         }
 
-        public Builder defaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ruleVersion(Input<CostCategoryRuleVersion> ruleVersion) {
+        public Builder ruleVersion(Output<CostCategoryRuleVersion> ruleVersion) {
             this.ruleVersion = Objects.requireNonNull(ruleVersion);
             return this;
         }
 
         public Builder ruleVersion(CostCategoryRuleVersion ruleVersion) {
-            this.ruleVersion = Input.of(Objects.requireNonNull(ruleVersion));
+            this.ruleVersion = Output.of(Objects.requireNonNull(ruleVersion));
             return this;
         }
 
-        public Builder rules(Input<String> rules) {
+        public Builder rules(Output<String> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
         public Builder rules(String rules) {
-            this.rules = Input.of(Objects.requireNonNull(rules));
+            this.rules = Output.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder splitChargeRules(@Nullable Input<String> splitChargeRules) {
+        public Builder splitChargeRules(@Nullable Output<String> splitChargeRules) {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
 
         public Builder splitChargeRules(@Nullable String splitChargeRules) {
-            this.splitChargeRules = Input.ofNullable(splitChargeRules);
+            this.splitChargeRules = Output.ofNullable(splitChargeRules);
             return this;
         }
         public CostCategoryArgs build() {

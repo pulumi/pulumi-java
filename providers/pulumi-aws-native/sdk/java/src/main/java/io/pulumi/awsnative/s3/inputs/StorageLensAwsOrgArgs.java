@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArg
     public static final StorageLensAwsOrgArgs Empty = new StorageLensAwsOrgArgs();
 
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
-    public StorageLensAwsOrgArgs(Input<String> arn) {
+    public StorageLensAwsOrgArgs(Output<String> arn) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
     }
 
     private StorageLensAwsOrgArgs() {
-        this.arn = Input.empty();
+        this.arn = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> arn;
+        private Output<String> arn;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class StorageLensAwsOrgArgs extends io.pulumi.resources.ResourceArg
     	      this.arn = defaults.arn;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
         public StorageLensAwsOrgArgs build() {

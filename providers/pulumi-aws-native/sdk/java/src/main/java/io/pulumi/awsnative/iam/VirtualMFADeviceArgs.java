@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.VirtualMFADeviceTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,38 +17,38 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     public static final VirtualMFADeviceArgs Empty = new VirtualMFADeviceArgs();
 
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     @InputImport(name="tags")
-      private final @Nullable Input<List<VirtualMFADeviceTagArgs>> tags;
+      private final @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
 
-    public Input<List<VirtualMFADeviceTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<VirtualMFADeviceTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     @InputImport(name="users", required=true)
-      private final Input<List<String>> users;
+      private final Output<List<String>> users;
 
-    public Input<List<String>> getUsers() {
+    public Output<List<String>> getUsers() {
         return this.users;
     }
 
     @InputImport(name="virtualMfaDeviceName")
-      private final @Nullable Input<String> virtualMfaDeviceName;
+      private final @Nullable Output<String> virtualMfaDeviceName;
 
-    public Input<String> getVirtualMfaDeviceName() {
-        return this.virtualMfaDeviceName == null ? Input.empty() : this.virtualMfaDeviceName;
+    public Output<String> getVirtualMfaDeviceName() {
+        return this.virtualMfaDeviceName == null ? Output.empty() : this.virtualMfaDeviceName;
     }
 
     public VirtualMFADeviceArgs(
-        @Nullable Input<String> path,
-        @Nullable Input<List<VirtualMFADeviceTagArgs>> tags,
-        Input<List<String>> users,
-        @Nullable Input<String> virtualMfaDeviceName) {
+        @Nullable Output<String> path,
+        @Nullable Output<List<VirtualMFADeviceTagArgs>> tags,
+        Output<List<String>> users,
+        @Nullable Output<String> virtualMfaDeviceName) {
         this.path = path;
         this.tags = tags;
         this.users = Objects.requireNonNull(users, "expected parameter 'users' to be non-null");
@@ -56,10 +56,10 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VirtualMFADeviceArgs() {
-        this.path = Input.empty();
-        this.tags = Input.empty();
-        this.users = Input.empty();
-        this.virtualMfaDeviceName = Input.empty();
+        this.path = Output.empty();
+        this.tags = Output.empty();
+        this.users = Output.empty();
+        this.virtualMfaDeviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> path;
-        private @Nullable Input<List<VirtualMFADeviceTagArgs>> tags;
-        private Input<List<String>> users;
-        private @Nullable Input<String> virtualMfaDeviceName;
+        private @Nullable Output<String> path;
+        private @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
+        private Output<List<String>> users;
+        private @Nullable Output<String> virtualMfaDeviceName;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualMfaDeviceName = defaults.virtualMfaDeviceName;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<VirtualMFADeviceTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<VirtualMFADeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder users(Input<List<String>> users) {
+        public Builder users(Output<List<String>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
         public Builder users(List<String> users) {
-            this.users = Input.of(Objects.requireNonNull(users));
+            this.users = Output.of(Objects.requireNonNull(users));
             return this;
         }
 
-        public Builder virtualMfaDeviceName(@Nullable Input<String> virtualMfaDeviceName) {
+        public Builder virtualMfaDeviceName(@Nullable Output<String> virtualMfaDeviceName) {
             this.virtualMfaDeviceName = virtualMfaDeviceName;
             return this;
         }
 
         public Builder virtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
-            this.virtualMfaDeviceName = Input.ofNullable(virtualMfaDeviceName);
+            this.virtualMfaDeviceName = Output.ofNullable(virtualMfaDeviceName);
             return this;
         }
         public VirtualMFADeviceArgs build() {

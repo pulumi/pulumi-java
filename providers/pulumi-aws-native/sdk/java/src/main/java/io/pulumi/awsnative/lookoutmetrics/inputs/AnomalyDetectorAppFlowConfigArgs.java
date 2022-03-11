@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class AnomalyDetectorAppFlowConfigArgs extends io.pulumi.resources.
     public static final AnomalyDetectorAppFlowConfigArgs Empty = new AnomalyDetectorAppFlowConfigArgs();
 
     @InputImport(name="flowName", required=true)
-      private final Input<String> flowName;
+      private final Output<String> flowName;
 
-    public Input<String> getFlowName() {
+    public Output<String> getFlowName() {
         return this.flowName;
     }
 
     @InputImport(name="roleArn", required=true)
-      private final Input<String> roleArn;
+      private final Output<String> roleArn;
 
-    public Input<String> getRoleArn() {
+    public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
     public AnomalyDetectorAppFlowConfigArgs(
-        Input<String> flowName,
-        Input<String> roleArn) {
+        Output<String> flowName,
+        Output<String> roleArn) {
         this.flowName = Objects.requireNonNull(flowName, "expected parameter 'flowName' to be non-null");
         this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
     }
 
     private AnomalyDetectorAppFlowConfigArgs() {
-        this.flowName = Input.empty();
-        this.roleArn = Input.empty();
+        this.flowName = Output.empty();
+        this.roleArn = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class AnomalyDetectorAppFlowConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> flowName;
-        private Input<String> roleArn;
+        private Output<String> flowName;
+        private Output<String> roleArn;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class AnomalyDetectorAppFlowConfigArgs extends io.pulumi.resources.
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder flowName(Input<String> flowName) {
+        public Builder flowName(Output<String> flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
         public Builder flowName(String flowName) {
-            this.flowName = Input.of(Objects.requireNonNull(flowName));
+            this.flowName = Output.of(Objects.requireNonNull(flowName));
             return this;
         }
 
-        public Builder roleArn(Input<String> roleArn) {
+        public Builder roleArn(Output<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
         public Builder roleArn(String roleArn) {
-            this.roleArn = Input.of(Objects.requireNonNull(roleArn));
+            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
             return this;
         }
         public AnomalyDetectorAppFlowConfigArgs build() {

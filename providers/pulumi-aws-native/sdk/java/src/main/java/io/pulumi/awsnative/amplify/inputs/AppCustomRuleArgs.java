@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppCustomRuleArgs Empty = new AppCustomRuleArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<String> condition;
+      private final @Nullable Output<String> condition;
 
-    public Input<String> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<String> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="source", required=true)
-      private final Input<String> source;
+      private final Output<String> source;
 
-    public Input<String> getSource() {
+    public Output<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     @InputImport(name="target", required=true)
-      private final Input<String> target;
+      private final Output<String> target;
 
-    public Input<String> getTarget() {
+    public Output<String> getTarget() {
         return this.target;
     }
 
     public AppCustomRuleArgs(
-        @Nullable Input<String> condition,
-        Input<String> source,
-        @Nullable Input<String> status,
-        Input<String> target) {
+        @Nullable Output<String> condition,
+        Output<String> source,
+        @Nullable Output<String> status,
+        Output<String> target) {
         this.condition = condition;
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
         this.status = status;
@@ -54,10 +54,10 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppCustomRuleArgs() {
-        this.condition = Input.empty();
-        this.source = Input.empty();
-        this.status = Input.empty();
-        this.target = Input.empty();
+        this.condition = Output.empty();
+        this.source = Output.empty();
+        this.status = Output.empty();
+        this.target = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> condition;
-        private Input<String> source;
-        private @Nullable Input<String> status;
-        private Input<String> target;
+        private @Nullable Output<String> condition;
+        private Output<String> source;
+        private @Nullable Output<String> status;
+        private Output<String> target;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder condition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Output<String> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable String condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder source(Input<String> source) {
+        public Builder source(Output<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(String source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder target(Input<String> target) {
+        public Builder target(Output<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
         public Builder target(String target) {
-            this.target = Input.of(Objects.requireNonNull(target));
+            this.target = Output.of(Objects.requireNonNull(target));
             return this;
         }
         public AppCustomRuleArgs build() {

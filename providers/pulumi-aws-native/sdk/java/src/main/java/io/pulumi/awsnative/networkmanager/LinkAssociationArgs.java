@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceId", required=true)
-      private final Input<String> deviceId;
+      private final Output<String> deviceId;
 
-    public Input<String> getDeviceId() {
+    public Output<String> getDeviceId() {
         return this.deviceId;
     }
 
@@ -29,9 +29,9 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-      private final Input<String> globalNetworkId;
+      private final Output<String> globalNetworkId;
 
-    public Input<String> getGlobalNetworkId() {
+    public Output<String> getGlobalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -40,25 +40,25 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkId", required=true)
-      private final Input<String> linkId;
+      private final Output<String> linkId;
 
-    public Input<String> getLinkId() {
+    public Output<String> getLinkId() {
         return this.linkId;
     }
 
     public LinkAssociationArgs(
-        Input<String> deviceId,
-        Input<String> globalNetworkId,
-        Input<String> linkId) {
+        Output<String> deviceId,
+        Output<String> globalNetworkId,
+        Output<String> linkId) {
         this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
         this.globalNetworkId = Objects.requireNonNull(globalNetworkId, "expected parameter 'globalNetworkId' to be non-null");
         this.linkId = Objects.requireNonNull(linkId, "expected parameter 'linkId' to be non-null");
     }
 
     private LinkAssociationArgs() {
-        this.deviceId = Input.empty();
-        this.globalNetworkId = Input.empty();
-        this.linkId = Input.empty();
+        this.deviceId = Output.empty();
+        this.globalNetworkId = Output.empty();
+        this.linkId = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> deviceId;
-        private Input<String> globalNetworkId;
-        private Input<String> linkId;
+        private Output<String> deviceId;
+        private Output<String> globalNetworkId;
+        private Output<String> linkId;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder deviceId(Input<String> deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Input.of(Objects.requireNonNull(deviceId));
+            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder globalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Output<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
         public Builder globalNetworkId(String globalNetworkId) {
-            this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
+            this.globalNetworkId = Output.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder linkId(Input<String> linkId) {
+        public Builder linkId(Output<String> linkId) {
             this.linkId = Objects.requireNonNull(linkId);
             return this;
         }
 
         public Builder linkId(String linkId) {
-            this.linkId = Input.of(Objects.requireNonNull(linkId));
+            this.linkId = Output.of(Objects.requireNonNull(linkId));
             return this;
         }
         public LinkAssociationArgs build() {

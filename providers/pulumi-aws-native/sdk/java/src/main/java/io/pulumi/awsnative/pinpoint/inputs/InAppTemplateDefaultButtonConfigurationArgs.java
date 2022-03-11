@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,54 +17,54 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     public static final InAppTemplateDefaultButtonConfigurationArgs Empty = new InAppTemplateDefaultButtonConfigurationArgs();
 
     @InputImport(name="backgroundColor")
-      private final @Nullable Input<String> backgroundColor;
+      private final @Nullable Output<String> backgroundColor;
 
-    public Input<String> getBackgroundColor() {
-        return this.backgroundColor == null ? Input.empty() : this.backgroundColor;
+    public Output<String> getBackgroundColor() {
+        return this.backgroundColor == null ? Output.empty() : this.backgroundColor;
     }
 
     @InputImport(name="borderRadius")
-      private final @Nullable Input<Integer> borderRadius;
+      private final @Nullable Output<Integer> borderRadius;
 
-    public Input<Integer> getBorderRadius() {
-        return this.borderRadius == null ? Input.empty() : this.borderRadius;
+    public Output<Integer> getBorderRadius() {
+        return this.borderRadius == null ? Output.empty() : this.borderRadius;
     }
 
     @InputImport(name="buttonAction")
-      private final @Nullable Input<InAppTemplateButtonAction> buttonAction;
+      private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
-    public Input<InAppTemplateButtonAction> getButtonAction() {
-        return this.buttonAction == null ? Input.empty() : this.buttonAction;
+    public Output<InAppTemplateButtonAction> getButtonAction() {
+        return this.buttonAction == null ? Output.empty() : this.buttonAction;
     }
 
     @InputImport(name="link")
-      private final @Nullable Input<String> link;
+      private final @Nullable Output<String> link;
 
-    public Input<String> getLink() {
-        return this.link == null ? Input.empty() : this.link;
+    public Output<String> getLink() {
+        return this.link == null ? Output.empty() : this.link;
     }
 
     @InputImport(name="text")
-      private final @Nullable Input<String> text;
+      private final @Nullable Output<String> text;
 
-    public Input<String> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<String> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
     @InputImport(name="textColor")
-      private final @Nullable Input<String> textColor;
+      private final @Nullable Output<String> textColor;
 
-    public Input<String> getTextColor() {
-        return this.textColor == null ? Input.empty() : this.textColor;
+    public Output<String> getTextColor() {
+        return this.textColor == null ? Output.empty() : this.textColor;
     }
 
     public InAppTemplateDefaultButtonConfigurationArgs(
-        @Nullable Input<String> backgroundColor,
-        @Nullable Input<Integer> borderRadius,
-        @Nullable Input<InAppTemplateButtonAction> buttonAction,
-        @Nullable Input<String> link,
-        @Nullable Input<String> text,
-        @Nullable Input<String> textColor) {
+        @Nullable Output<String> backgroundColor,
+        @Nullable Output<Integer> borderRadius,
+        @Nullable Output<InAppTemplateButtonAction> buttonAction,
+        @Nullable Output<String> link,
+        @Nullable Output<String> text,
+        @Nullable Output<String> textColor) {
         this.backgroundColor = backgroundColor;
         this.borderRadius = borderRadius;
         this.buttonAction = buttonAction;
@@ -74,12 +74,12 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     }
 
     private InAppTemplateDefaultButtonConfigurationArgs() {
-        this.backgroundColor = Input.empty();
-        this.borderRadius = Input.empty();
-        this.buttonAction = Input.empty();
-        this.link = Input.empty();
-        this.text = Input.empty();
-        this.textColor = Input.empty();
+        this.backgroundColor = Output.empty();
+        this.borderRadius = Output.empty();
+        this.buttonAction = Output.empty();
+        this.link = Output.empty();
+        this.text = Output.empty();
+        this.textColor = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,12 +91,12 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backgroundColor;
-        private @Nullable Input<Integer> borderRadius;
-        private @Nullable Input<InAppTemplateButtonAction> buttonAction;
-        private @Nullable Input<String> link;
-        private @Nullable Input<String> text;
-        private @Nullable Input<String> textColor;
+        private @Nullable Output<String> backgroundColor;
+        private @Nullable Output<Integer> borderRadius;
+        private @Nullable Output<InAppTemplateButtonAction> buttonAction;
+        private @Nullable Output<String> link;
+        private @Nullable Output<String> text;
+        private @Nullable Output<String> textColor;
 
         public Builder() {
     	      // Empty
@@ -112,63 +112,63 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder backgroundColor(@Nullable Input<String> backgroundColor) {
+        public Builder backgroundColor(@Nullable Output<String> backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
         public Builder backgroundColor(@Nullable String backgroundColor) {
-            this.backgroundColor = Input.ofNullable(backgroundColor);
+            this.backgroundColor = Output.ofNullable(backgroundColor);
             return this;
         }
 
-        public Builder borderRadius(@Nullable Input<Integer> borderRadius) {
+        public Builder borderRadius(@Nullable Output<Integer> borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
 
         public Builder borderRadius(@Nullable Integer borderRadius) {
-            this.borderRadius = Input.ofNullable(borderRadius);
+            this.borderRadius = Output.ofNullable(borderRadius);
             return this;
         }
 
-        public Builder buttonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
+        public Builder buttonAction(@Nullable Output<InAppTemplateButtonAction> buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
         public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
-            this.buttonAction = Input.ofNullable(buttonAction);
+            this.buttonAction = Output.ofNullable(buttonAction);
             return this;
         }
 
-        public Builder link(@Nullable Input<String> link) {
+        public Builder link(@Nullable Output<String> link) {
             this.link = link;
             return this;
         }
 
         public Builder link(@Nullable String link) {
-            this.link = Input.ofNullable(link);
+            this.link = Output.ofNullable(link);
             return this;
         }
 
-        public Builder text(@Nullable Input<String> text) {
+        public Builder text(@Nullable Output<String> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable String text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
 
-        public Builder textColor(@Nullable Input<String> textColor) {
+        public Builder textColor(@Nullable Output<String> textColor) {
             this.textColor = textColor;
             return this;
         }
 
         public Builder textColor(@Nullable String textColor) {
-            this.textColor = Input.ofNullable(textColor);
+            this.textColor = Output.ofNullable(textColor);
             return this;
         }
         public InAppTemplateDefaultButtonConfigurationArgs build() {

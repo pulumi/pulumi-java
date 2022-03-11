@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,18 +15,18 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     public static final EC2FleetCapacityReservationOptionsRequestArgs Empty = new EC2FleetCapacityReservationOptionsRequestArgs();
 
     @InputImport(name="usageStrategy")
-      private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+      private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
-    public Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
-        return this.usageStrategy == null ? Input.empty() : this.usageStrategy;
+    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
+        return this.usageStrategy == null ? Output.empty() : this.usageStrategy;
     }
 
-    public EC2FleetCapacityReservationOptionsRequestArgs(@Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
+    public EC2FleetCapacityReservationOptionsRequestArgs(@Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
         this.usageStrategy = usageStrategy;
     }
 
     private EC2FleetCapacityReservationOptionsRequestArgs() {
-        this.usageStrategy = Input.empty();
+        this.usageStrategy = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
+        private @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     	      this.usageStrategy = defaults.usageStrategy;
         }
 
-        public Builder usageStrategy(@Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
+        public Builder usageStrategy(@Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
             this.usageStrategy = usageStrategy;
             return this;
         }
 
         public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
-            this.usageStrategy = Input.ofNullable(usageStrategy);
+            this.usageStrategy = Output.ofNullable(usageStrategy);
             return this;
         }
         public EC2FleetCapacityReservationOptionsRequestArgs build() {

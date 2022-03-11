@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect;
 
 import io.pulumi.awsnative.mediaconnect.inputs.FlowFailoverConfigArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone")
-      private final @Nullable Input<String> availabilityZone;
+      private final @Nullable Output<String> availabilityZone;
 
-    public Input<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
+    public Output<String> getAvailabilityZone() {
+        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-      private final Input<FlowSourceArgs> source;
+      private final Output<FlowSourceArgs> source;
 
-    public Input<FlowSourceArgs> getSource() {
+    public Output<FlowSourceArgs> getSource() {
         return this.source;
     }
 
@@ -54,17 +54,17 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFailoverConfig")
-      private final @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig;
+      private final @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
-    public Input<FlowFailoverConfigArgs> getSourceFailoverConfig() {
-        return this.sourceFailoverConfig == null ? Input.empty() : this.sourceFailoverConfig;
+    public Output<FlowFailoverConfigArgs> getSourceFailoverConfig() {
+        return this.sourceFailoverConfig == null ? Output.empty() : this.sourceFailoverConfig;
     }
 
     public FlowArgs(
-        @Nullable Input<String> availabilityZone,
-        @Nullable Input<String> name,
-        Input<FlowSourceArgs> source,
-        @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig) {
+        @Nullable Output<String> availabilityZone,
+        @Nullable Output<String> name,
+        Output<FlowSourceArgs> source,
+        @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
         this.availabilityZone = availabilityZone;
         this.name = name;
         this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
@@ -72,10 +72,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowArgs() {
-        this.availabilityZone = Input.empty();
-        this.name = Input.empty();
-        this.source = Input.empty();
-        this.sourceFailoverConfig = Input.empty();
+        this.availabilityZone = Output.empty();
+        this.name = Output.empty();
+        this.source = Output.empty();
+        this.sourceFailoverConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> availabilityZone;
-        private @Nullable Input<String> name;
-        private Input<FlowSourceArgs> source;
-        private @Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig;
+        private @Nullable Output<String> availabilityZone;
+        private @Nullable Output<String> name;
+        private Output<FlowSourceArgs> source;
+        private @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceFailoverConfig = defaults.sourceFailoverConfig;
         }
 
-        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Input.ofNullable(availabilityZone);
+            this.availabilityZone = Output.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder source(Input<FlowSourceArgs> source) {
+        public Builder source(Output<FlowSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
         public Builder source(FlowSourceArgs source) {
-            this.source = Input.of(Objects.requireNonNull(source));
+            this.source = Output.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder sourceFailoverConfig(@Nullable Input<FlowFailoverConfigArgs> sourceFailoverConfig) {
+        public Builder sourceFailoverConfig(@Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig) {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
 
         public Builder sourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
-            this.sourceFailoverConfig = Input.ofNullable(sourceFailoverConfig);
+            this.sourceFailoverConfig = Output.ofNullable(sourceFailoverConfig);
             return this;
         }
         public FlowArgs build() {

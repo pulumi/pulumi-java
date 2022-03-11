@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasLocaleSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
     public static final BotAliasLocaleSettingsItemArgs Empty = new BotAliasLocaleSettingsItemArgs();
 
     @InputImport(name="botAliasLocaleSetting", required=true)
-      private final Input<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
+      private final Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
 
-    public Input<BotAliasLocaleSettingsArgs> getBotAliasLocaleSetting() {
+    public Output<BotAliasLocaleSettingsArgs> getBotAliasLocaleSetting() {
         return this.botAliasLocaleSetting;
     }
 
@@ -30,22 +30,22 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="localeId", required=true)
-      private final Input<String> localeId;
+      private final Output<String> localeId;
 
-    public Input<String> getLocaleId() {
+    public Output<String> getLocaleId() {
         return this.localeId;
     }
 
     public BotAliasLocaleSettingsItemArgs(
-        Input<BotAliasLocaleSettingsArgs> botAliasLocaleSetting,
-        Input<String> localeId) {
+        Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting,
+        Output<String> localeId) {
         this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting, "expected parameter 'botAliasLocaleSetting' to be non-null");
         this.localeId = Objects.requireNonNull(localeId, "expected parameter 'localeId' to be non-null");
     }
 
     private BotAliasLocaleSettingsItemArgs() {
-        this.botAliasLocaleSetting = Input.empty();
-        this.localeId = Input.empty();
+        this.botAliasLocaleSetting = Output.empty();
+        this.localeId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
-        private Input<String> localeId;
+        private Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting;
+        private Output<String> localeId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class BotAliasLocaleSettingsItemArgs extends io.pulumi.resources.Re
     	      this.localeId = defaults.localeId;
         }
 
-        public Builder botAliasLocaleSetting(Input<BotAliasLocaleSettingsArgs> botAliasLocaleSetting) {
+        public Builder botAliasLocaleSetting(Output<BotAliasLocaleSettingsArgs> botAliasLocaleSetting) {
             this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
             return this;
         }
 
         public Builder botAliasLocaleSetting(BotAliasLocaleSettingsArgs botAliasLocaleSetting) {
-            this.botAliasLocaleSetting = Input.of(Objects.requireNonNull(botAliasLocaleSetting));
+            this.botAliasLocaleSetting = Output.of(Objects.requireNonNull(botAliasLocaleSetting));
             return this;
         }
 
-        public Builder localeId(Input<String> localeId) {
+        public Builder localeId(Output<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
 
         public Builder localeId(String localeId) {
-            this.localeId = Input.of(Objects.requireNonNull(localeId));
+            this.localeId = Output.of(Objects.requireNonNull(localeId));
             return this;
         }
         public BotAliasLocaleSettingsItemArgs build() {

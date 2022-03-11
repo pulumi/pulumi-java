@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
     public static final DatasetTriggeringDatasetArgs Empty = new DatasetTriggeringDatasetArgs();
 
     @InputImport(name="datasetName", required=true)
-      private final Input<String> datasetName;
+      private final Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
+    public Output<String> getDatasetName() {
         return this.datasetName;
     }
 
-    public DatasetTriggeringDatasetArgs(Input<String> datasetName) {
+    public DatasetTriggeringDatasetArgs(Output<String> datasetName) {
         this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
     }
 
     private DatasetTriggeringDatasetArgs() {
-        this.datasetName = Input.empty();
+        this.datasetName = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> datasetName;
+        private Output<String> datasetName;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class DatasetTriggeringDatasetArgs extends io.pulumi.resources.Reso
     	      this.datasetName = defaults.datasetName;
         }
 
-        public Builder datasetName(Input<String> datasetName) {
+        public Builder datasetName(Output<String> datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
         public Builder datasetName(String datasetName) {
-            this.datasetName = Input.of(Objects.requireNonNull(datasetName));
+            this.datasetName = Output.of(Objects.requireNonNull(datasetName));
             return this;
         }
         public DatasetTriggeringDatasetArgs build() {

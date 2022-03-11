@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSeedUrlConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSiteMapsConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,29 +16,29 @@ public final class DataSourceWebCrawlerUrlsArgs extends io.pulumi.resources.Reso
     public static final DataSourceWebCrawlerUrlsArgs Empty = new DataSourceWebCrawlerUrlsArgs();
 
     @InputImport(name="seedUrlConfiguration")
-      private final @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
+      private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
 
-    public Input<DataSourceWebCrawlerSeedUrlConfigurationArgs> getSeedUrlConfiguration() {
-        return this.seedUrlConfiguration == null ? Input.empty() : this.seedUrlConfiguration;
+    public Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> getSeedUrlConfiguration() {
+        return this.seedUrlConfiguration == null ? Output.empty() : this.seedUrlConfiguration;
     }
 
     @InputImport(name="siteMapsConfiguration")
-      private final @Nullable Input<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
+      private final @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
 
-    public Input<DataSourceWebCrawlerSiteMapsConfigurationArgs> getSiteMapsConfiguration() {
-        return this.siteMapsConfiguration == null ? Input.empty() : this.siteMapsConfiguration;
+    public Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> getSiteMapsConfiguration() {
+        return this.siteMapsConfiguration == null ? Output.empty() : this.siteMapsConfiguration;
     }
 
     public DataSourceWebCrawlerUrlsArgs(
-        @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration,
-        @Nullable Input<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
+        @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration,
+        @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
         this.seedUrlConfiguration = seedUrlConfiguration;
         this.siteMapsConfiguration = siteMapsConfiguration;
     }
 
     private DataSourceWebCrawlerUrlsArgs() {
-        this.seedUrlConfiguration = Input.empty();
-        this.siteMapsConfiguration = Input.empty();
+        this.seedUrlConfiguration = Output.empty();
+        this.siteMapsConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class DataSourceWebCrawlerUrlsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
-        private @Nullable Input<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
+        private @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration;
+        private @Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class DataSourceWebCrawlerUrlsArgs extends io.pulumi.resources.Reso
     	      this.siteMapsConfiguration = defaults.siteMapsConfiguration;
         }
 
-        public Builder seedUrlConfiguration(@Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration) {
+        public Builder seedUrlConfiguration(@Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationArgs> seedUrlConfiguration) {
             this.seedUrlConfiguration = seedUrlConfiguration;
             return this;
         }
 
         public Builder seedUrlConfiguration(@Nullable DataSourceWebCrawlerSeedUrlConfigurationArgs seedUrlConfiguration) {
-            this.seedUrlConfiguration = Input.ofNullable(seedUrlConfiguration);
+            this.seedUrlConfiguration = Output.ofNullable(seedUrlConfiguration);
             return this;
         }
 
-        public Builder siteMapsConfiguration(@Nullable Input<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
+        public Builder siteMapsConfiguration(@Nullable Output<DataSourceWebCrawlerSiteMapsConfigurationArgs> siteMapsConfiguration) {
             this.siteMapsConfiguration = siteMapsConfiguration;
             return this;
         }
 
         public Builder siteMapsConfiguration(@Nullable DataSourceWebCrawlerSiteMapsConfigurationArgs siteMapsConfiguration) {
-            this.siteMapsConfiguration = Input.ofNullable(siteMapsConfiguration);
+            this.siteMapsConfiguration = Output.ofNullable(siteMapsConfiguration);
             return this;
         }
         public DataSourceWebCrawlerUrlsArgs build() {

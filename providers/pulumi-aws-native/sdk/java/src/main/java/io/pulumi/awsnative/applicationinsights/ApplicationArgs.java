@@ -7,7 +7,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentMonito
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationCustomComponentArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternSetArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoConfigurationEnabled")
-      private final @Nullable Input<Boolean> autoConfigurationEnabled;
+      private final @Nullable Output<Boolean> autoConfigurationEnabled;
 
-    public Input<Boolean> getAutoConfigurationEnabled() {
-        return this.autoConfigurationEnabled == null ? Input.empty() : this.autoConfigurationEnabled;
+    public Output<Boolean> getAutoConfigurationEnabled() {
+        return this.autoConfigurationEnabled == null ? Output.empty() : this.autoConfigurationEnabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cWEMonitorEnabled")
-      private final @Nullable Input<Boolean> cWEMonitorEnabled;
+      private final @Nullable Output<Boolean> cWEMonitorEnabled;
 
-    public Input<Boolean> getCWEMonitorEnabled() {
-        return this.cWEMonitorEnabled == null ? Input.empty() : this.cWEMonitorEnabled;
+    public Output<Boolean> getCWEMonitorEnabled() {
+        return this.cWEMonitorEnabled == null ? Output.empty() : this.cWEMonitorEnabled;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentMonitoringSettings")
-      private final @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
+      private final @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
-    public Input<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
-        return this.componentMonitoringSettings == null ? Input.empty() : this.componentMonitoringSettings;
+    public Output<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
+        return this.componentMonitoringSettings == null ? Output.empty() : this.componentMonitoringSettings;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customComponents")
-      private final @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents;
+      private final @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
 
-    public Input<List<ApplicationCustomComponentArgs>> getCustomComponents() {
-        return this.customComponents == null ? Input.empty() : this.customComponents;
+    public Output<List<ApplicationCustomComponentArgs>> getCustomComponents() {
+        return this.customComponents == null ? Output.empty() : this.customComponents;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPatternSets")
-      private final @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets;
+      private final @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
-    public Input<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
-        return this.logPatternSets == null ? Input.empty() : this.logPatternSets;
+    public Output<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
+        return this.logPatternSets == null ? Output.empty() : this.logPatternSets;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opsCenterEnabled")
-      private final @Nullable Input<Boolean> opsCenterEnabled;
+      private final @Nullable Output<Boolean> opsCenterEnabled;
 
-    public Input<Boolean> getOpsCenterEnabled() {
-        return this.opsCenterEnabled == null ? Input.empty() : this.opsCenterEnabled;
+    public Output<Boolean> getOpsCenterEnabled() {
+        return this.opsCenterEnabled == null ? Output.empty() : this.opsCenterEnabled;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opsItemSNSTopicArn")
-      private final @Nullable Input<String> opsItemSNSTopicArn;
+      private final @Nullable Output<String> opsItemSNSTopicArn;
 
-    public Input<String> getOpsItemSNSTopicArn() {
-        return this.opsItemSNSTopicArn == null ? Input.empty() : this.opsItemSNSTopicArn;
+    public Output<String> getOpsItemSNSTopicArn() {
+        return this.opsItemSNSTopicArn == null ? Output.empty() : this.opsItemSNSTopicArn;
     }
 
     /**
@@ -102,9 +102,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,22 +113,22 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ApplicationTagArgs>> tags;
+      private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Input<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ApplicationArgs(
-        @Nullable Input<Boolean> autoConfigurationEnabled,
-        @Nullable Input<Boolean> cWEMonitorEnabled,
-        @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings,
-        @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents,
-        @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets,
-        @Nullable Input<Boolean> opsCenterEnabled,
-        @Nullable Input<String> opsItemSNSTopicArn,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<ApplicationTagArgs>> tags) {
+        @Nullable Output<Boolean> autoConfigurationEnabled,
+        @Nullable Output<Boolean> cWEMonitorEnabled,
+        @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings,
+        @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents,
+        @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets,
+        @Nullable Output<Boolean> opsCenterEnabled,
+        @Nullable Output<String> opsItemSNSTopicArn,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<ApplicationTagArgs>> tags) {
         this.autoConfigurationEnabled = autoConfigurationEnabled;
         this.cWEMonitorEnabled = cWEMonitorEnabled;
         this.componentMonitoringSettings = componentMonitoringSettings;
@@ -141,15 +141,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.autoConfigurationEnabled = Input.empty();
-        this.cWEMonitorEnabled = Input.empty();
-        this.componentMonitoringSettings = Input.empty();
-        this.customComponents = Input.empty();
-        this.logPatternSets = Input.empty();
-        this.opsCenterEnabled = Input.empty();
-        this.opsItemSNSTopicArn = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.autoConfigurationEnabled = Output.empty();
+        this.cWEMonitorEnabled = Output.empty();
+        this.componentMonitoringSettings = Output.empty();
+        this.customComponents = Output.empty();
+        this.logPatternSets = Output.empty();
+        this.opsCenterEnabled = Output.empty();
+        this.opsItemSNSTopicArn = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> autoConfigurationEnabled;
-        private @Nullable Input<Boolean> cWEMonitorEnabled;
-        private @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
-        private @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents;
-        private @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets;
-        private @Nullable Input<Boolean> opsCenterEnabled;
-        private @Nullable Input<String> opsItemSNSTopicArn;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<ApplicationTagArgs>> tags;
+        private @Nullable Output<Boolean> autoConfigurationEnabled;
+        private @Nullable Output<Boolean> cWEMonitorEnabled;
+        private @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
+        private @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
+        private @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
+        private @Nullable Output<Boolean> opsCenterEnabled;
+        private @Nullable Output<String> opsItemSNSTopicArn;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<ApplicationTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder autoConfigurationEnabled(@Nullable Input<Boolean> autoConfigurationEnabled) {
+        public Builder autoConfigurationEnabled(@Nullable Output<Boolean> autoConfigurationEnabled) {
             this.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
 
         public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
-            this.autoConfigurationEnabled = Input.ofNullable(autoConfigurationEnabled);
+            this.autoConfigurationEnabled = Output.ofNullable(autoConfigurationEnabled);
             return this;
         }
 
-        public Builder cWEMonitorEnabled(@Nullable Input<Boolean> cWEMonitorEnabled) {
+        public Builder cWEMonitorEnabled(@Nullable Output<Boolean> cWEMonitorEnabled) {
             this.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
 
         public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
-            this.cWEMonitorEnabled = Input.ofNullable(cWEMonitorEnabled);
+            this.cWEMonitorEnabled = Output.ofNullable(cWEMonitorEnabled);
             return this;
         }
 
-        public Builder componentMonitoringSettings(@Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
+        public Builder componentMonitoringSettings(@Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
             this.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
 
         public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
-            this.componentMonitoringSettings = Input.ofNullable(componentMonitoringSettings);
+            this.componentMonitoringSettings = Output.ofNullable(componentMonitoringSettings);
             return this;
         }
 
-        public Builder customComponents(@Nullable Input<List<ApplicationCustomComponentArgs>> customComponents) {
+        public Builder customComponents(@Nullable Output<List<ApplicationCustomComponentArgs>> customComponents) {
             this.customComponents = customComponents;
             return this;
         }
 
         public Builder customComponents(@Nullable List<ApplicationCustomComponentArgs> customComponents) {
-            this.customComponents = Input.ofNullable(customComponents);
+            this.customComponents = Output.ofNullable(customComponents);
             return this;
         }
 
-        public Builder logPatternSets(@Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets) {
+        public Builder logPatternSets(@Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets) {
             this.logPatternSets = logPatternSets;
             return this;
         }
 
         public Builder logPatternSets(@Nullable List<ApplicationLogPatternSetArgs> logPatternSets) {
-            this.logPatternSets = Input.ofNullable(logPatternSets);
+            this.logPatternSets = Output.ofNullable(logPatternSets);
             return this;
         }
 
-        public Builder opsCenterEnabled(@Nullable Input<Boolean> opsCenterEnabled) {
+        public Builder opsCenterEnabled(@Nullable Output<Boolean> opsCenterEnabled) {
             this.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
 
         public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
-            this.opsCenterEnabled = Input.ofNullable(opsCenterEnabled);
+            this.opsCenterEnabled = Output.ofNullable(opsCenterEnabled);
             return this;
         }
 
-        public Builder opsItemSNSTopicArn(@Nullable Input<String> opsItemSNSTopicArn) {
+        public Builder opsItemSNSTopicArn(@Nullable Output<String> opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
 
         public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
-            this.opsItemSNSTopicArn = Input.ofNullable(opsItemSNSTopicArn);
+            this.opsItemSNSTopicArn = Output.ofNullable(opsItemSNSTopicArn);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ApplicationArgs build() {

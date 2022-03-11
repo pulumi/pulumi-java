@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="arn", required=true)
-      private final Input<String> arn;
+      private final Output<String> arn;
 
-    public Input<String> getArn() {
+    public Output<String> getArn() {
         return this.arn;
     }
 
@@ -29,22 +29,22 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="localMountPath", required=true)
-      private final Input<String> localMountPath;
+      private final Output<String> localMountPath;
 
-    public Input<String> getLocalMountPath() {
+    public Output<String> getLocalMountPath() {
         return this.localMountPath;
     }
 
     public FunctionFileSystemConfigArgs(
-        Input<String> arn,
-        Input<String> localMountPath) {
+        Output<String> arn,
+        Output<String> localMountPath) {
         this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
         this.localMountPath = Objects.requireNonNull(localMountPath, "expected parameter 'localMountPath' to be non-null");
     }
 
     private FunctionFileSystemConfigArgs() {
-        this.arn = Input.empty();
-        this.localMountPath = Input.empty();
+        this.arn = Output.empty();
+        this.localMountPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> arn;
-        private Input<String> localMountPath;
+        private Output<String> arn;
+        private Output<String> localMountPath;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
     	      this.localMountPath = defaults.localMountPath;
         }
 
-        public Builder arn(Input<String> arn) {
+        public Builder arn(Output<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
         public Builder arn(String arn) {
-            this.arn = Input.of(Objects.requireNonNull(arn));
+            this.arn = Output.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder localMountPath(Input<String> localMountPath) {
+        public Builder localMountPath(Output<String> localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
 
         public Builder localMountPath(String localMountPath) {
-            this.localMountPath = Input.of(Objects.requireNonNull(localMountPath));
+            this.localMountPath = Output.of(Objects.requireNonNull(localMountPath));
             return this;
         }
         public FunctionFileSystemConfigArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,38 +17,38 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     public static final ComponentChildArgs Empty = new ComponentChildArgs();
 
     @InputImport(name="children")
-      private final @Nullable Input<List<ComponentChildArgs>> children;
+      private final @Nullable Output<List<ComponentChildArgs>> children;
 
-    public Input<List<ComponentChildArgs>> getChildren() {
-        return this.children == null ? Input.empty() : this.children;
+    public Output<List<ComponentChildArgs>> getChildren() {
+        return this.children == null ? Output.empty() : this.children;
     }
 
     @InputImport(name="componentType", required=true)
-      private final Input<String> componentType;
+      private final Output<String> componentType;
 
-    public Input<String> getComponentType() {
+    public Output<String> getComponentType() {
         return this.componentType;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="properties", required=true)
-      private final Input<ComponentPropertiesArgs> properties;
+      private final Output<ComponentPropertiesArgs> properties;
 
-    public Input<ComponentPropertiesArgs> getProperties() {
+    public Output<ComponentPropertiesArgs> getProperties() {
         return this.properties;
     }
 
     public ComponentChildArgs(
-        @Nullable Input<List<ComponentChildArgs>> children,
-        Input<String> componentType,
-        Input<String> name,
-        Input<ComponentPropertiesArgs> properties) {
+        @Nullable Output<List<ComponentChildArgs>> children,
+        Output<String> componentType,
+        Output<String> name,
+        Output<ComponentPropertiesArgs> properties) {
         this.children = children;
         this.componentType = Objects.requireNonNull(componentType, "expected parameter 'componentType' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -56,10 +56,10 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentChildArgs() {
-        this.children = Input.empty();
-        this.componentType = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
+        this.children = Output.empty();
+        this.componentType = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ComponentChildArgs>> children;
-        private Input<String> componentType;
-        private Input<String> name;
-        private Input<ComponentPropertiesArgs> properties;
+        private @Nullable Output<List<ComponentChildArgs>> children;
+        private Output<String> componentType;
+        private Output<String> name;
+        private Output<ComponentPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder children(@Nullable Input<List<ComponentChildArgs>> children) {
+        public Builder children(@Nullable Output<List<ComponentChildArgs>> children) {
             this.children = children;
             return this;
         }
 
         public Builder children(@Nullable List<ComponentChildArgs> children) {
-            this.children = Input.ofNullable(children);
+            this.children = Output.ofNullable(children);
             return this;
         }
 
-        public Builder componentType(Input<String> componentType) {
+        public Builder componentType(Output<String> componentType) {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
 
         public Builder componentType(String componentType) {
-            this.componentType = Input.of(Objects.requireNonNull(componentType));
+            this.componentType = Output.of(Objects.requireNonNull(componentType));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder properties(Input<ComponentPropertiesArgs> properties) {
+        public Builder properties(Output<ComponentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(ComponentPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public ComponentChildArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
     public static final ScheduledQueryScheduleConfigurationArgs Empty = new ScheduledQueryScheduleConfigurationArgs();
 
     @InputImport(name="scheduleExpression", required=true)
-      private final Input<String> scheduleExpression;
+      private final Output<String> scheduleExpression;
 
-    public Input<String> getScheduleExpression() {
+    public Output<String> getScheduleExpression() {
         return this.scheduleExpression;
     }
 
-    public ScheduledQueryScheduleConfigurationArgs(Input<String> scheduleExpression) {
+    public ScheduledQueryScheduleConfigurationArgs(Output<String> scheduleExpression) {
         this.scheduleExpression = Objects.requireNonNull(scheduleExpression, "expected parameter 'scheduleExpression' to be non-null");
     }
 
     private ScheduledQueryScheduleConfigurationArgs() {
-        this.scheduleExpression = Input.empty();
+        this.scheduleExpression = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> scheduleExpression;
+        private Output<String> scheduleExpression;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ScheduledQueryScheduleConfigurationArgs extends io.pulumi.res
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder scheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Output<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
         public Builder scheduleExpression(String scheduleExpression) {
-            this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
+            this.scheduleExpression = Output.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
         public ScheduledQueryScheduleConfigurationArgs build() {

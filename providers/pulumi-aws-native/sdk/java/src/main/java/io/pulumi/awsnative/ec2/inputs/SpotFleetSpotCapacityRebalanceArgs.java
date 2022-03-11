@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotCapacityRebalanceReplacementStrategy;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,29 +16,29 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     public static final SpotFleetSpotCapacityRebalanceArgs Empty = new SpotFleetSpotCapacityRebalanceArgs();
 
     @InputImport(name="replacementStrategy")
-      private final @Nullable Input<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
+      private final @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
 
-    public Input<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
-        return this.replacementStrategy == null ? Input.empty() : this.replacementStrategy;
+    public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
+        return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
     }
 
     @InputImport(name="terminationDelay")
-      private final @Nullable Input<Integer> terminationDelay;
+      private final @Nullable Output<Integer> terminationDelay;
 
-    public Input<Integer> getTerminationDelay() {
-        return this.terminationDelay == null ? Input.empty() : this.terminationDelay;
+    public Output<Integer> getTerminationDelay() {
+        return this.terminationDelay == null ? Output.empty() : this.terminationDelay;
     }
 
     public SpotFleetSpotCapacityRebalanceArgs(
-        @Nullable Input<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy,
-        @Nullable Input<Integer> terminationDelay) {
+        @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy,
+        @Nullable Output<Integer> terminationDelay) {
         this.replacementStrategy = replacementStrategy;
         this.terminationDelay = terminationDelay;
     }
 
     private SpotFleetSpotCapacityRebalanceArgs() {
-        this.replacementStrategy = Input.empty();
-        this.terminationDelay = Input.empty();
+        this.replacementStrategy = Output.empty();
+        this.terminationDelay = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
-        private @Nullable Input<Integer> terminationDelay;
+        private @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
+        private @Nullable Output<Integer> terminationDelay;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder replacementStrategy(@Nullable Input<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy) {
+        public Builder replacementStrategy(@Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
         public Builder replacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
-            this.replacementStrategy = Input.ofNullable(replacementStrategy);
+            this.replacementStrategy = Output.ofNullable(replacementStrategy);
             return this;
         }
 
-        public Builder terminationDelay(@Nullable Input<Integer> terminationDelay) {
+        public Builder terminationDelay(@Nullable Output<Integer> terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }
 
         public Builder terminationDelay(@Nullable Integer terminationDelay) {
-            this.terminationDelay = Input.ofNullable(terminationDelay);
+            this.terminationDelay = Output.ofNullable(terminationDelay);
             return this;
         }
         public SpotFleetSpotCapacityRebalanceArgs build() {

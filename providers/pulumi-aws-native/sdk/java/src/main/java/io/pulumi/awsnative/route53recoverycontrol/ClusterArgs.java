@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol;
 
 import io.pulumi.awsnative.route53recoverycontrol.inputs.ClusterTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ClusterTagArgs>> tags;
+      private final @Nullable Output<List<ClusterTagArgs>> tags;
 
-    public Input<List<ClusterTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ClusterTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<List<ClusterTagArgs>> tags) {
+        @Nullable Output<String> name,
+        @Nullable Output<List<ClusterTagArgs>> tags) {
         this.name = name;
         this.tags = tags;
     }
 
     private ClusterArgs() {
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ClusterTagArgs>> tags;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ClusterTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ClusterTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssm.enums.DocumentType;
 import io.pulumi.awsnative.ssm.inputs.DocumentAttachmentsSourceArgs;
 import io.pulumi.awsnative.ssm.inputs.DocumentRequiresArgs;
 import io.pulumi.awsnative.ssm.inputs.DocumentTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachments")
-      private final @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments;
+      private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
 
-    public Input<List<DocumentAttachmentsSourceArgs>> getAttachments() {
-        return this.attachments == null ? Input.empty() : this.attachments;
+    public Output<List<DocumentAttachmentsSourceArgs>> getAttachments() {
+        return this.attachments == null ? Output.empty() : this.attachments;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<Object> content;
+      private final Output<Object> content;
 
-    public Input<Object> getContent() {
+    public Output<Object> getContent() {
         return this.content;
     }
 
@@ -48,10 +48,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentFormat")
-      private final @Nullable Input<DocumentFormat> documentFormat;
+      private final @Nullable Output<DocumentFormat> documentFormat;
 
-    public Input<DocumentFormat> getDocumentFormat() {
-        return this.documentFormat == null ? Input.empty() : this.documentFormat;
+    public Output<DocumentFormat> getDocumentFormat() {
+        return this.documentFormat == null ? Output.empty() : this.documentFormat;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentType")
-      private final @Nullable Input<DocumentType> documentType;
+      private final @Nullable Output<DocumentType> documentType;
 
-    public Input<DocumentType> getDocumentType() {
-        return this.documentType == null ? Input.empty() : this.documentType;
+    public Output<DocumentType> getDocumentType() {
+        return this.documentType == null ? Output.empty() : this.documentType;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requires")
-      private final @Nullable Input<List<DocumentRequiresArgs>> requires;
+      private final @Nullable Output<List<DocumentRequiresArgs>> requires;
 
-    public Input<List<DocumentRequiresArgs>> getRequires() {
-        return this.requires == null ? Input.empty() : this.requires;
+    public Output<List<DocumentRequiresArgs>> getRequires() {
+        return this.requires == null ? Output.empty() : this.requires;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<DocumentTagArgs>> tags;
+      private final @Nullable Output<List<DocumentTagArgs>> tags;
 
-    public Input<List<DocumentTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<DocumentTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetType")
-      private final @Nullable Input<String> targetType;
+      private final @Nullable Output<String> targetType;
 
-    public Input<String> getTargetType() {
-        return this.targetType == null ? Input.empty() : this.targetType;
+    public Output<String> getTargetType() {
+        return this.targetType == null ? Output.empty() : this.targetType;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-      private final @Nullable Input<String> versionName;
+      private final @Nullable Output<String> versionName;
 
-    public Input<String> getVersionName() {
-        return this.versionName == null ? Input.empty() : this.versionName;
+    public Output<String> getVersionName() {
+        return this.versionName == null ? Output.empty() : this.versionName;
     }
 
     public DocumentArgs(
-        @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments,
-        Input<Object> content,
-        @Nullable Input<DocumentFormat> documentFormat,
-        @Nullable Input<DocumentType> documentType,
-        @Nullable Input<String> name,
-        @Nullable Input<List<DocumentRequiresArgs>> requires,
-        @Nullable Input<List<DocumentTagArgs>> tags,
-        @Nullable Input<String> targetType,
-        @Nullable Input<String> versionName) {
+        @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments,
+        Output<Object> content,
+        @Nullable Output<DocumentFormat> documentFormat,
+        @Nullable Output<DocumentType> documentType,
+        @Nullable Output<String> name,
+        @Nullable Output<List<DocumentRequiresArgs>> requires,
+        @Nullable Output<List<DocumentTagArgs>> tags,
+        @Nullable Output<String> targetType,
+        @Nullable Output<String> versionName) {
         this.attachments = attachments;
         this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
         this.documentFormat = documentFormat;
@@ -142,15 +142,15 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.attachments = Input.empty();
-        this.content = Input.empty();
-        this.documentFormat = Input.empty();
-        this.documentType = Input.empty();
-        this.name = Input.empty();
-        this.requires = Input.empty();
-        this.tags = Input.empty();
-        this.targetType = Input.empty();
-        this.versionName = Input.empty();
+        this.attachments = Output.empty();
+        this.content = Output.empty();
+        this.documentFormat = Output.empty();
+        this.documentType = Output.empty();
+        this.name = Output.empty();
+        this.requires = Output.empty();
+        this.tags = Output.empty();
+        this.targetType = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments;
-        private Input<Object> content;
-        private @Nullable Input<DocumentFormat> documentFormat;
-        private @Nullable Input<DocumentType> documentType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<DocumentRequiresArgs>> requires;
-        private @Nullable Input<List<DocumentTagArgs>> tags;
-        private @Nullable Input<String> targetType;
-        private @Nullable Input<String> versionName;
+        private @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
+        private Output<Object> content;
+        private @Nullable Output<DocumentFormat> documentFormat;
+        private @Nullable Output<DocumentType> documentType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<DocumentRequiresArgs>> requires;
+        private @Nullable Output<List<DocumentTagArgs>> tags;
+        private @Nullable Output<String> targetType;
+        private @Nullable Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder attachments(@Nullable Input<List<DocumentAttachmentsSourceArgs>> attachments) {
+        public Builder attachments(@Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments) {
             this.attachments = attachments;
             return this;
         }
 
         public Builder attachments(@Nullable List<DocumentAttachmentsSourceArgs> attachments) {
-            this.attachments = Input.ofNullable(attachments);
+            this.attachments = Output.ofNullable(attachments);
             return this;
         }
 
-        public Builder content(Input<Object> content) {
+        public Builder content(Output<Object> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(Object content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder documentFormat(@Nullable Input<DocumentFormat> documentFormat) {
+        public Builder documentFormat(@Nullable Output<DocumentFormat> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
 
         public Builder documentFormat(@Nullable DocumentFormat documentFormat) {
-            this.documentFormat = Input.ofNullable(documentFormat);
+            this.documentFormat = Output.ofNullable(documentFormat);
             return this;
         }
 
-        public Builder documentType(@Nullable Input<DocumentType> documentType) {
+        public Builder documentType(@Nullable Output<DocumentType> documentType) {
             this.documentType = documentType;
             return this;
         }
 
         public Builder documentType(@Nullable DocumentType documentType) {
-            this.documentType = Input.ofNullable(documentType);
+            this.documentType = Output.ofNullable(documentType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder requires(@Nullable Input<List<DocumentRequiresArgs>> requires) {
+        public Builder requires(@Nullable Output<List<DocumentRequiresArgs>> requires) {
             this.requires = requires;
             return this;
         }
 
         public Builder requires(@Nullable List<DocumentRequiresArgs> requires) {
-            this.requires = Input.ofNullable(requires);
+            this.requires = Output.ofNullable(requires);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<DocumentTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<DocumentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<DocumentTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Output<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Input.ofNullable(targetType);
+            this.targetType = Output.ofNullable(targetType);
             return this;
         }
 
-        public Builder versionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Output<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Input.ofNullable(versionName);
+            this.versionName = Output.ofNullable(versionName);
             return this;
         }
         public DocumentArgs build() {

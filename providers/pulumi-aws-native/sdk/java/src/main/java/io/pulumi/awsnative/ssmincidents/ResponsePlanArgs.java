@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanActionArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanChatChannelArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanIncidentTemplateArgs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,17 +24,17 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<ResponsePlanActionArgs>> actions;
+      private final @Nullable Output<List<ResponsePlanActionArgs>> actions;
 
-    public Input<List<ResponsePlanActionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<ResponsePlanActionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     @InputImport(name="chatChannel")
-      private final @Nullable Input<ResponsePlanChatChannelArgs> chatChannel;
+      private final @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
 
-    public Input<ResponsePlanChatChannelArgs> getChatChannel() {
-        return this.chatChannel == null ? Input.empty() : this.chatChannel;
+    public Output<ResponsePlanChatChannelArgs> getChatChannel() {
+        return this.chatChannel == null ? Output.empty() : this.chatChannel;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -53,16 +53,16 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engagements")
-      private final @Nullable Input<List<String>> engagements;
+      private final @Nullable Output<List<String>> engagements;
 
-    public Input<List<String>> getEngagements() {
-        return this.engagements == null ? Input.empty() : this.engagements;
+    public Output<List<String>> getEngagements() {
+        return this.engagements == null ? Output.empty() : this.engagements;
     }
 
     @InputImport(name="incidentTemplate", required=true)
-      private final Input<ResponsePlanIncidentTemplateArgs> incidentTemplate;
+      private final Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
 
-    public Input<ResponsePlanIncidentTemplateArgs> getIncidentTemplate() {
+    public Output<ResponsePlanIncidentTemplateArgs> getIncidentTemplate() {
         return this.incidentTemplate;
     }
 
@@ -71,10 +71,10 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,20 +82,20 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ResponsePlanTagArgs>> tags;
+      private final @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
-    public Input<List<ResponsePlanTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ResponsePlanTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ResponsePlanArgs(
-        @Nullable Input<List<ResponsePlanActionArgs>> actions,
-        @Nullable Input<ResponsePlanChatChannelArgs> chatChannel,
-        @Nullable Input<String> displayName,
-        @Nullable Input<List<String>> engagements,
-        Input<ResponsePlanIncidentTemplateArgs> incidentTemplate,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ResponsePlanTagArgs>> tags) {
+        @Nullable Output<List<ResponsePlanActionArgs>> actions,
+        @Nullable Output<ResponsePlanChatChannelArgs> chatChannel,
+        @Nullable Output<String> displayName,
+        @Nullable Output<List<String>> engagements,
+        Output<ResponsePlanIncidentTemplateArgs> incidentTemplate,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ResponsePlanTagArgs>> tags) {
         this.actions = actions;
         this.chatChannel = chatChannel;
         this.displayName = displayName;
@@ -106,13 +106,13 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponsePlanArgs() {
-        this.actions = Input.empty();
-        this.chatChannel = Input.empty();
-        this.displayName = Input.empty();
-        this.engagements = Input.empty();
-        this.incidentTemplate = Input.empty();
-        this.name = Input.empty();
-        this.tags = Input.empty();
+        this.actions = Output.empty();
+        this.chatChannel = Output.empty();
+        this.displayName = Output.empty();
+        this.engagements = Output.empty();
+        this.incidentTemplate = Output.empty();
+        this.name = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,13 +124,13 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ResponsePlanActionArgs>> actions;
-        private @Nullable Input<ResponsePlanChatChannelArgs> chatChannel;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<List<String>> engagements;
-        private Input<ResponsePlanIncidentTemplateArgs> incidentTemplate;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ResponsePlanTagArgs>> tags;
+        private @Nullable Output<List<ResponsePlanActionArgs>> actions;
+        private @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<List<String>> engagements;
+        private Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -147,73 +147,73 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder actions(@Nullable Input<List<ResponsePlanActionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<ResponsePlanActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<ResponsePlanActionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder chatChannel(@Nullable Input<ResponsePlanChatChannelArgs> chatChannel) {
+        public Builder chatChannel(@Nullable Output<ResponsePlanChatChannelArgs> chatChannel) {
             this.chatChannel = chatChannel;
             return this;
         }
 
         public Builder chatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
-            this.chatChannel = Input.ofNullable(chatChannel);
+            this.chatChannel = Output.ofNullable(chatChannel);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder engagements(@Nullable Input<List<String>> engagements) {
+        public Builder engagements(@Nullable Output<List<String>> engagements) {
             this.engagements = engagements;
             return this;
         }
 
         public Builder engagements(@Nullable List<String> engagements) {
-            this.engagements = Input.ofNullable(engagements);
+            this.engagements = Output.ofNullable(engagements);
             return this;
         }
 
-        public Builder incidentTemplate(Input<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
+        public Builder incidentTemplate(Output<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
             this.incidentTemplate = Objects.requireNonNull(incidentTemplate);
             return this;
         }
 
         public Builder incidentTemplate(ResponsePlanIncidentTemplateArgs incidentTemplate) {
-            this.incidentTemplate = Input.of(Objects.requireNonNull(incidentTemplate));
+            this.incidentTemplate = Output.of(Objects.requireNonNull(incidentTemplate));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ResponsePlanTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ResponsePlanTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ResponsePlanTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ResponsePlanArgs build() {

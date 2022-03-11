@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,18 +19,18 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
     public static final DashboardExportToCSVOptionArgs Empty = new DashboardExportToCSVOptionArgs();
 
     @InputImport(name="availabilityStatus")
-      private final @Nullable Input<DashboardBehavior> availabilityStatus;
+      private final @Nullable Output<DashboardBehavior> availabilityStatus;
 
-    public Input<DashboardBehavior> getAvailabilityStatus() {
-        return this.availabilityStatus == null ? Input.empty() : this.availabilityStatus;
+    public Output<DashboardBehavior> getAvailabilityStatus() {
+        return this.availabilityStatus == null ? Output.empty() : this.availabilityStatus;
     }
 
-    public DashboardExportToCSVOptionArgs(@Nullable Input<DashboardBehavior> availabilityStatus) {
+    public DashboardExportToCSVOptionArgs(@Nullable Output<DashboardBehavior> availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
     }
 
     private DashboardExportToCSVOptionArgs() {
-        this.availabilityStatus = Input.empty();
+        this.availabilityStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DashboardBehavior> availabilityStatus;
+        private @Nullable Output<DashboardBehavior> availabilityStatus;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
     	      this.availabilityStatus = defaults.availabilityStatus;
         }
 
-        public Builder availabilityStatus(@Nullable Input<DashboardBehavior> availabilityStatus) {
+        public Builder availabilityStatus(@Nullable Output<DashboardBehavior> availabilityStatus) {
             this.availabilityStatus = availabilityStatus;
             return this;
         }
 
         public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
-            this.availabilityStatus = Input.ofNullable(availabilityStatus);
+            this.availabilityStatus = Output.ofNullable(availabilityStatus);
             return this;
         }
         public DashboardExportToCSVOptionArgs build() {

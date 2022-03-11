@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codestarconnections;
 
 import io.pulumi.awsnative.codestarconnections.inputs.ConnectionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionName")
-      private final @Nullable Input<String> connectionName;
+      private final @Nullable Output<String> connectionName;
 
-    public Input<String> getConnectionName() {
-        return this.connectionName == null ? Input.empty() : this.connectionName;
+    public Output<String> getConnectionName() {
+        return this.connectionName == null ? Output.empty() : this.connectionName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostArn")
-      private final @Nullable Input<String> hostArn;
+      private final @Nullable Output<String> hostArn;
 
-    public Input<String> getHostArn() {
-        return this.hostArn == null ? Input.empty() : this.hostArn;
+    public Output<String> getHostArn() {
+        return this.hostArn == null ? Output.empty() : this.hostArn;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerType")
-      private final @Nullable Input<String> providerType;
+      private final @Nullable Output<String> providerType;
 
-    public Input<String> getProviderType() {
-        return this.providerType == null ? Input.empty() : this.providerType;
+    public Output<String> getProviderType() {
+        return this.providerType == null ? Output.empty() : this.providerType;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<ConnectionTagArgs>> tags;
+      private final @Nullable Output<List<ConnectionTagArgs>> tags;
 
-    public Input<List<ConnectionTagArgs>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<ConnectionTagArgs>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ConnectionArgs(
-        @Nullable Input<String> connectionName,
-        @Nullable Input<String> hostArn,
-        @Nullable Input<String> providerType,
-        @Nullable Input<List<ConnectionTagArgs>> tags) {
+        @Nullable Output<String> connectionName,
+        @Nullable Output<String> hostArn,
+        @Nullable Output<String> providerType,
+        @Nullable Output<List<ConnectionTagArgs>> tags) {
         this.connectionName = connectionName;
         this.hostArn = hostArn;
         this.providerType = providerType;
@@ -72,10 +72,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.connectionName = Input.empty();
-        this.hostArn = Input.empty();
-        this.providerType = Input.empty();
-        this.tags = Input.empty();
+        this.connectionName = Output.empty();
+        this.hostArn = Output.empty();
+        this.providerType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> connectionName;
-        private @Nullable Input<String> hostArn;
-        private @Nullable Input<String> providerType;
-        private @Nullable Input<List<ConnectionTagArgs>> tags;
+        private @Nullable Output<String> connectionName;
+        private @Nullable Output<String> hostArn;
+        private @Nullable Output<String> providerType;
+        private @Nullable Output<List<ConnectionTagArgs>> tags;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder connectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Output<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Input.ofNullable(connectionName);
+            this.connectionName = Output.ofNullable(connectionName);
             return this;
         }
 
-        public Builder hostArn(@Nullable Input<String> hostArn) {
+        public Builder hostArn(@Nullable Output<String> hostArn) {
             this.hostArn = hostArn;
             return this;
         }
 
         public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Input.ofNullable(hostArn);
+            this.hostArn = Output.ofNullable(hostArn);
             return this;
         }
 
-        public Builder providerType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Output<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Input.ofNullable(providerType);
+            this.providerType = Output.ofNullable(providerType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<ConnectionTagArgs>> tags) {
+        public Builder tags(@Nullable Output<List<ConnectionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<ConnectionTagArgs> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ConnectionArgs build() {

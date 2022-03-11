@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resourcegroups.inputs;
 
 import io.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     public static final GroupConfigurationItemArgs Empty = new GroupConfigurationItemArgs();
 
     @InputImport(name="parameters")
-      private final @Nullable Input<List<GroupConfigurationParameterArgs>> parameters;
+      private final @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
 
-    public Input<List<GroupConfigurationParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<GroupConfigurationParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public GroupConfigurationItemArgs(
-        @Nullable Input<List<GroupConfigurationParameterArgs>> parameters,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<GroupConfigurationParameterArgs>> parameters,
+        @Nullable Output<String> type) {
         this.parameters = parameters;
         this.type = type;
     }
 
     private GroupConfigurationItemArgs() {
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<GroupConfigurationParameterArgs>> parameters;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder parameters(@Nullable Input<List<GroupConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<GroupConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public GroupConfigurationItemArgs build() {

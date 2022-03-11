@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.DistributionConfigurationTargetContainerRepositoryService;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @InputImport(name="repositoryName")
-      private final @Nullable Input<String> repositoryName;
+      private final @Nullable Output<String> repositoryName;
 
-    public Input<String> getRepositoryName() {
-        return this.repositoryName == null ? Input.empty() : this.repositoryName;
+    public Output<String> getRepositoryName() {
+        return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service;
+      private final @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
-    public Input<DistributionConfigurationTargetContainerRepositoryService> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<DistributionConfigurationTargetContainerRepositoryService> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     public DistributionConfigurationTargetContainerRepositoryArgs(
-        @Nullable Input<String> repositoryName,
-        @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service) {
+        @Nullable Output<String> repositoryName,
+        @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }
 
     private DistributionConfigurationTargetContainerRepositoryArgs() {
-        this.repositoryName = Input.empty();
-        this.service = Input.empty();
+        this.repositoryName = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     }
 
     public static final class Builder {
-        private @Nullable Input<String> repositoryName;
-        private @Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service;
+        private @Nullable Output<String> repositoryName;
+        private @Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DistributionConfigurationTargetContainerRepositoryArgs extend
     	      this.service = defaults.service;
         }
 
-        public Builder repositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Output<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Input.ofNullable(repositoryName);
+            this.repositoryName = Output.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder service(@Nullable Input<DistributionConfigurationTargetContainerRepositoryService> service) {
+        public Builder service(@Nullable Output<DistributionConfigurationTargetContainerRepositoryService> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
         public DistributionConfigurationTargetContainerRepositoryArgs build() {
