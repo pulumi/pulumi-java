@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public JobAppEngineHttpTargetAppEngineRoutingGetArgs(
-        @Nullable Input<String> instance,
-        @Nullable Input<String> service,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> instance,
+        @Nullable Output<String> service,
+        @Nullable Output<String> version) {
         this.instance = instance;
         this.service = service;
         this.version = version;
     }
 
     private JobAppEngineHttpTargetAppEngineRoutingGetArgs() {
-        this.instance = Input.empty();
-        this.service = Input.empty();
-        this.version = Input.empty();
+        this.instance = Output.empty();
+        this.service = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
     	      this.version = defaults.version;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public JobAppEngineHttpTargetAppEngineRoutingGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="certSign")
-      private final @Nullable Input<Boolean> certSign;
+      private final @Nullable Output<Boolean> certSign;
 
-    public Input<Boolean> getCertSign() {
-        return this.certSign == null ? Input.empty() : this.certSign;
+    public Output<Boolean> getCertSign() {
+        return this.certSign == null ? Output.empty() : this.certSign;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="contentCommitment")
-      private final @Nullable Input<Boolean> contentCommitment;
+      private final @Nullable Output<Boolean> contentCommitment;
 
-    public Input<Boolean> getContentCommitment() {
-        return this.contentCommitment == null ? Input.empty() : this.contentCommitment;
+    public Output<Boolean> getContentCommitment() {
+        return this.contentCommitment == null ? Output.empty() : this.contentCommitment;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="crlSign")
-      private final @Nullable Input<Boolean> crlSign;
+      private final @Nullable Output<Boolean> crlSign;
 
-    public Input<Boolean> getCrlSign() {
-        return this.crlSign == null ? Input.empty() : this.crlSign;
+    public Output<Boolean> getCrlSign() {
+        return this.crlSign == null ? Output.empty() : this.crlSign;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="dataEncipherment")
-      private final @Nullable Input<Boolean> dataEncipherment;
+      private final @Nullable Output<Boolean> dataEncipherment;
 
-    public Input<Boolean> getDataEncipherment() {
-        return this.dataEncipherment == null ? Input.empty() : this.dataEncipherment;
+    public Output<Boolean> getDataEncipherment() {
+        return this.dataEncipherment == null ? Output.empty() : this.dataEncipherment;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="decipherOnly")
-      private final @Nullable Input<Boolean> decipherOnly;
+      private final @Nullable Output<Boolean> decipherOnly;
 
-    public Input<Boolean> getDecipherOnly() {
-        return this.decipherOnly == null ? Input.empty() : this.decipherOnly;
+    public Output<Boolean> getDecipherOnly() {
+        return this.decipherOnly == null ? Output.empty() : this.decipherOnly;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="digitalSignature")
-      private final @Nullable Input<Boolean> digitalSignature;
+      private final @Nullable Output<Boolean> digitalSignature;
 
-    public Input<Boolean> getDigitalSignature() {
-        return this.digitalSignature == null ? Input.empty() : this.digitalSignature;
+    public Output<Boolean> getDigitalSignature() {
+        return this.digitalSignature == null ? Output.empty() : this.digitalSignature;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="encipherOnly")
-      private final @Nullable Input<Boolean> encipherOnly;
+      private final @Nullable Output<Boolean> encipherOnly;
 
-    public Input<Boolean> getEncipherOnly() {
-        return this.encipherOnly == null ? Input.empty() : this.encipherOnly;
+    public Output<Boolean> getEncipherOnly() {
+        return this.encipherOnly == null ? Output.empty() : this.encipherOnly;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="keyAgreement")
-      private final @Nullable Input<Boolean> keyAgreement;
+      private final @Nullable Output<Boolean> keyAgreement;
 
-    public Input<Boolean> getKeyAgreement() {
-        return this.keyAgreement == null ? Input.empty() : this.keyAgreement;
+    public Output<Boolean> getKeyAgreement() {
+        return this.keyAgreement == null ? Output.empty() : this.keyAgreement;
     }
 
     /**
@@ -107,22 +107,22 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
      * 
      */
     @InputImport(name="keyEncipherment")
-      private final @Nullable Input<Boolean> keyEncipherment;
+      private final @Nullable Output<Boolean> keyEncipherment;
 
-    public Input<Boolean> getKeyEncipherment() {
-        return this.keyEncipherment == null ? Input.empty() : this.keyEncipherment;
+    public Output<Boolean> getKeyEncipherment() {
+        return this.keyEncipherment == null ? Output.empty() : this.keyEncipherment;
     }
 
     public CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs(
-        @Nullable Input<Boolean> certSign,
-        @Nullable Input<Boolean> contentCommitment,
-        @Nullable Input<Boolean> crlSign,
-        @Nullable Input<Boolean> dataEncipherment,
-        @Nullable Input<Boolean> decipherOnly,
-        @Nullable Input<Boolean> digitalSignature,
-        @Nullable Input<Boolean> encipherOnly,
-        @Nullable Input<Boolean> keyAgreement,
-        @Nullable Input<Boolean> keyEncipherment) {
+        @Nullable Output<Boolean> certSign,
+        @Nullable Output<Boolean> contentCommitment,
+        @Nullable Output<Boolean> crlSign,
+        @Nullable Output<Boolean> dataEncipherment,
+        @Nullable Output<Boolean> decipherOnly,
+        @Nullable Output<Boolean> digitalSignature,
+        @Nullable Output<Boolean> encipherOnly,
+        @Nullable Output<Boolean> keyAgreement,
+        @Nullable Output<Boolean> keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;
@@ -135,15 +135,15 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
     }
 
     private CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs() {
-        this.certSign = Input.empty();
-        this.contentCommitment = Input.empty();
-        this.crlSign = Input.empty();
-        this.dataEncipherment = Input.empty();
-        this.decipherOnly = Input.empty();
-        this.digitalSignature = Input.empty();
-        this.encipherOnly = Input.empty();
-        this.keyAgreement = Input.empty();
-        this.keyEncipherment = Input.empty();
+        this.certSign = Output.empty();
+        this.contentCommitment = Output.empty();
+        this.crlSign = Output.empty();
+        this.dataEncipherment = Output.empty();
+        this.decipherOnly = Output.empty();
+        this.digitalSignature = Output.empty();
+        this.encipherOnly = Output.empty();
+        this.keyAgreement = Output.empty();
+        this.keyEncipherment = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> certSign;
-        private @Nullable Input<Boolean> contentCommitment;
-        private @Nullable Input<Boolean> crlSign;
-        private @Nullable Input<Boolean> dataEncipherment;
-        private @Nullable Input<Boolean> decipherOnly;
-        private @Nullable Input<Boolean> digitalSignature;
-        private @Nullable Input<Boolean> encipherOnly;
-        private @Nullable Input<Boolean> keyAgreement;
-        private @Nullable Input<Boolean> keyEncipherment;
+        private @Nullable Output<Boolean> certSign;
+        private @Nullable Output<Boolean> contentCommitment;
+        private @Nullable Output<Boolean> crlSign;
+        private @Nullable Output<Boolean> dataEncipherment;
+        private @Nullable Output<Boolean> decipherOnly;
+        private @Nullable Output<Boolean> digitalSignature;
+        private @Nullable Output<Boolean> encipherOnly;
+        private @Nullable Output<Boolean> keyAgreement;
+        private @Nullable Output<Boolean> keyEncipherment;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs extends i
     	      this.keyEncipherment = defaults.keyEncipherment;
         }
 
-        public Builder certSign(@Nullable Input<Boolean> certSign) {
+        public Builder certSign(@Nullable Output<Boolean> certSign) {
             this.certSign = certSign;
             return this;
         }
 
         public Builder certSign(@Nullable Boolean certSign) {
-            this.certSign = Input.ofNullable(certSign);
+            this.certSign = Output.ofNullable(certSign);
             return this;
         }
 
-        public Builder contentCommitment(@Nullable Input<Boolean> contentCommitment) {
+        public Builder contentCommitment(@Nullable Output<Boolean> contentCommitment) {
             this.contentCommitment = contentCommitment;
             return this;
         }
 
         public Builder contentCommitment(@Nullable Boolean contentCommitment) {
-            this.contentCommitment = Input.ofNullable(contentCommitment);
+            this.contentCommitment = Output.ofNullable(contentCommitment);
             return this;
         }
 
-        public Builder crlSign(@Nullable Input<Boolean> crlSign) {
+        public Builder crlSign(@Nullable Output<Boolean> crlSign) {
             this.crlSign = crlSign;
             return this;
         }
 
         public Builder crlSign(@Nullable Boolean crlSign) {
-            this.crlSign = Input.ofNullable(crlSign);
+            this.crlSign = Output.ofNullable(crlSign);
             return this;
         }
 
-        public Builder dataEncipherment(@Nullable Input<Boolean> dataEncipherment) {
+        public Builder dataEncipherment(@Nullable Output<Boolean> dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
 
         public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
-            this.dataEncipherment = Input.ofNullable(dataEncipherment);
+            this.dataEncipherment = Output.ofNullable(dataEncipherment);
             return this;
         }
 
-        public Builder decipherOnly(@Nullable Input<Boolean> decipherOnly) {
+        public Builder decipherOnly(@Nullable Output<Boolean> decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
 
         public Builder decipherOnly(@Nullable Boolean decipherOnly) {
-            this.decipherOnly = Input.ofNullable(decipherOnly);
+            this.decipherOnly = Output.ofNullable(decipherOnly);
             return this;
         }
 
-        public Builder digitalSignature(@Nullable Input<Boolean> digitalSignature) {
+        public Builder digitalSignature(@Nullable Output<Boolean> digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
 
         public Builder digitalSignature(@Nullable Boolean digitalSignature) {
-            this.digitalSignature = Input.ofNullable(digitalSignature);
+            this.digitalSignature = Output.ofNullable(digitalSignature);
             return this;
         }
 
-        public Builder encipherOnly(@Nullable Input<Boolean> encipherOnly) {
+        public Builder encipherOnly(@Nullable Output<Boolean> encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
 
         public Builder encipherOnly(@Nullable Boolean encipherOnly) {
-            this.encipherOnly = Input.ofNullable(encipherOnly);
+            this.encipherOnly = Output.ofNullable(encipherOnly);
             return this;
         }
 
-        public Builder keyAgreement(@Nullable Input<Boolean> keyAgreement) {
+        public Builder keyAgreement(@Nullable Output<Boolean> keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
 
         public Builder keyAgreement(@Nullable Boolean keyAgreement) {
-            this.keyAgreement = Input.ofNullable(keyAgreement);
+            this.keyAgreement = Output.ofNullable(keyAgreement);
             return this;
         }
 
-        public Builder keyEncipherment(@Nullable Input<Boolean> keyEncipherment) {
+        public Builder keyEncipherment(@Nullable Output<Boolean> keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
 
         public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
-            this.keyEncipherment = Input.ofNullable(keyEncipherment);
+            this.keyEncipherment = Output.ofNullable(keyEncipherment);
             return this;
         }
         public CertificateConfigX509ConfigKeyUsageBaseKeyUsageArgs build() {

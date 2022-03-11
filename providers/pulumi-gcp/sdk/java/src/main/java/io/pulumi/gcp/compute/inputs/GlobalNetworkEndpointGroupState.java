@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultPort")
-      private final @Nullable Input<Integer> defaultPort;
+      private final @Nullable Output<Integer> defaultPort;
 
-    public Input<Integer> getDefaultPort() {
-        return this.defaultPort == null ? Input.empty() : this.defaultPort;
+    public Output<Integer> getDefaultPort() {
+        return this.defaultPort == null ? Output.empty() : this.defaultPort;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkEndpointType")
-      private final @Nullable Input<String> networkEndpointType;
+      private final @Nullable Output<String> networkEndpointType;
 
-    public Input<String> getNetworkEndpointType() {
-        return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
+    public Output<String> getNetworkEndpointType() {
+        return this.networkEndpointType == null ? Output.empty() : this.networkEndpointType;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     public GlobalNetworkEndpointGroupState(
-        @Nullable Input<Integer> defaultPort,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> networkEndpointType,
-        @Nullable Input<String> project,
-        @Nullable Input<String> selfLink) {
+        @Nullable Output<Integer> defaultPort,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> networkEndpointType,
+        @Nullable Output<String> project,
+        @Nullable Output<String> selfLink) {
         this.defaultPort = defaultPort;
         this.description = description;
         this.name = name;
@@ -107,12 +107,12 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
     }
 
     private GlobalNetworkEndpointGroupState() {
-        this.defaultPort = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.networkEndpointType = Input.empty();
-        this.project = Input.empty();
-        this.selfLink = Input.empty();
+        this.defaultPort = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.networkEndpointType = Output.empty();
+        this.project = Output.empty();
+        this.selfLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> defaultPort;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> networkEndpointType;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> selfLink;
+        private @Nullable Output<Integer> defaultPort;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> networkEndpointType;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> selfLink;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class GlobalNetworkEndpointGroupState extends io.pulumi.resources.R
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder defaultPort(@Nullable Input<Integer> defaultPort) {
+        public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
 
         public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Input.ofNullable(defaultPort);
+            this.defaultPort = Output.ofNullable(defaultPort);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkEndpointType(@Nullable Input<String> networkEndpointType) {
+        public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
 
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Input.ofNullable(networkEndpointType);
+            this.networkEndpointType = Output.ofNullable(networkEndpointType);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
         public GlobalNetworkEndpointGroupState build() {

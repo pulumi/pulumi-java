@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigNamespaceGetArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
+      private final Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
 
-    public Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> getNamespace() {
+    public Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> getNamespace() {
         return this.namespace;
     }
 
-    public ManagedZoneServiceDirectoryConfigGetArgs(Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace) {
+    public ManagedZoneServiceDirectoryConfigGetArgs(Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace) {
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private ManagedZoneServiceDirectoryConfigGetArgs() {
-        this.namespace = Input.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
+        private Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder namespace(Input<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace) {
+        public Builder namespace(Output<ManagedZoneServiceDirectoryConfigNamespaceGetArgs> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceGetArgs namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public ManagedZoneServiceDirectoryConfigGetArgs build() {

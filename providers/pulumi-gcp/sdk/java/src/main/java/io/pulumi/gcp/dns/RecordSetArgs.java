@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,9 +22,9 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedZone", required=true)
-      private final Input<String> managedZone;
+      private final Output<String> managedZone;
 
-    public Input<String> getManagedZone() {
+    public Output<String> getManagedZone() {
         return this.managedZone;
     }
 
@@ -33,9 +33,9 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -45,10 +45,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rrdatas", required=true)
-      private final Input<List<String>> rrdatas;
+      private final Output<List<String>> rrdatas;
 
-    public Input<List<String>> getRrdatas() {
+    public Output<List<String>> getRrdatas() {
         return this.rrdatas;
     }
 
@@ -70,10 +70,10 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<Integer> ttl;
+      private final @Nullable Output<Integer> ttl;
 
-    public Input<Integer> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<Integer> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RecordSetArgs(
-        Input<String> managedZone,
-        Input<String> name,
-        @Nullable Input<String> project,
-        Input<List<String>> rrdatas,
-        @Nullable Input<Integer> ttl,
-        Input<String> type) {
+        Output<String> managedZone,
+        Output<String> name,
+        @Nullable Output<String> project,
+        Output<List<String>> rrdatas,
+        @Nullable Output<Integer> ttl,
+        Output<String> type) {
         this.managedZone = Objects.requireNonNull(managedZone, "expected parameter 'managedZone' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.project = project;
@@ -103,12 +103,12 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordSetArgs() {
-        this.managedZone = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.rrdatas = Input.empty();
-        this.ttl = Input.empty();
-        this.type = Input.empty();
+        this.managedZone = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.rrdatas = Output.empty();
+        this.ttl = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> managedZone;
-        private Input<String> name;
-        private @Nullable Input<String> project;
-        private Input<List<String>> rrdatas;
-        private @Nullable Input<Integer> ttl;
-        private Input<String> type;
+        private Output<String> managedZone;
+        private Output<String> name;
+        private @Nullable Output<String> project;
+        private Output<List<String>> rrdatas;
+        private @Nullable Output<Integer> ttl;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder managedZone(Input<String> managedZone) {
+        public Builder managedZone(Output<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
         public Builder managedZone(String managedZone) {
-            this.managedZone = Input.of(Objects.requireNonNull(managedZone));
+            this.managedZone = Output.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder rrdatas(Input<List<String>> rrdatas) {
+        public Builder rrdatas(Output<List<String>> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
 
         public Builder rrdatas(List<String> rrdatas) {
-            this.rrdatas = Input.of(Objects.requireNonNull(rrdatas));
+            this.rrdatas = Output.of(Objects.requireNonNull(rrdatas));
             return this;
         }
 
-        public Builder ttl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Output<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RecordSetArgs build() {

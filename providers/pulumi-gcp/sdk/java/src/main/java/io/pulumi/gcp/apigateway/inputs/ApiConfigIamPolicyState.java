@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,17 +20,17 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="api")
-      private final @Nullable Input<String> api;
+      private final @Nullable Output<String> api;
 
-    public Input<String> getApi() {
-        return this.api == null ? Input.empty() : this.api;
+    public Output<String> getApi() {
+        return this.api == null ? Output.empty() : this.api;
     }
 
     @InputImport(name="apiConfig")
-      private final @Nullable Input<String> apiConfig;
+      private final @Nullable Output<String> apiConfig;
 
-    public Input<String> getApiConfig() {
-        return this.apiConfig == null ? Input.empty() : this.apiConfig;
+    public Output<String> getApiConfig() {
+        return this.apiConfig == null ? Output.empty() : this.apiConfig;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     /**
@@ -62,18 +62,18 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ApiConfigIamPolicyState(
-        @Nullable Input<String> api,
-        @Nullable Input<String> apiConfig,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> policyData,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> api,
+        @Nullable Output<String> apiConfig,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> policyData,
+        @Nullable Output<String> project) {
         this.api = api;
         this.apiConfig = apiConfig;
         this.etag = etag;
@@ -82,11 +82,11 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private ApiConfigIamPolicyState() {
-        this.api = Input.empty();
-        this.apiConfig = Input.empty();
-        this.etag = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
+        this.api = Output.empty();
+        this.apiConfig = Output.empty();
+        this.etag = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -98,11 +98,11 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> api;
-        private @Nullable Input<String> apiConfig;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> policyData;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> api;
+        private @Nullable Output<String> apiConfig;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> policyData;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -117,53 +117,53 @@ public final class ApiConfigIamPolicyState extends io.pulumi.resources.ResourceA
     	      this.project = defaults.project;
         }
 
-        public Builder api(@Nullable Input<String> api) {
+        public Builder api(@Nullable Output<String> api) {
             this.api = api;
             return this;
         }
 
         public Builder api(@Nullable String api) {
-            this.api = Input.ofNullable(api);
+            this.api = Output.ofNullable(api);
             return this;
         }
 
-        public Builder apiConfig(@Nullable Input<String> apiConfig) {
+        public Builder apiConfig(@Nullable Output<String> apiConfig) {
             this.apiConfig = apiConfig;
             return this;
         }
 
         public Builder apiConfig(@Nullable String apiConfig) {
-            this.apiConfig = Input.ofNullable(apiConfig);
+            this.apiConfig = Output.ofNullable(apiConfig);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ApiConfigIamPolicyState build() {

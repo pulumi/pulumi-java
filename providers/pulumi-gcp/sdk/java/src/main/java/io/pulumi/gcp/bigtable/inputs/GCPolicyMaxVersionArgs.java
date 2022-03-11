@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class GCPolicyMaxVersionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="number", required=true)
-      private final Input<Integer> number;
+      private final Output<Integer> number;
 
-    public Input<Integer> getNumber() {
+    public Output<Integer> getNumber() {
         return this.number;
     }
 
-    public GCPolicyMaxVersionArgs(Input<Integer> number) {
+    public GCPolicyMaxVersionArgs(Output<Integer> number) {
         this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
     }
 
     private GCPolicyMaxVersionArgs() {
-        this.number = Input.empty();
+        this.number = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class GCPolicyMaxVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Integer> number;
+        private Output<Integer> number;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class GCPolicyMaxVersionArgs extends io.pulumi.resources.ResourceAr
     	      this.number = defaults.number;
         }
 
-        public Builder number(Input<Integer> number) {
+        public Builder number(Output<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
         public Builder number(Integer number) {
-            this.number = Input.of(Objects.requireNonNull(number));
+            this.number = Output.of(Objects.requireNonNull(number));
             return this;
         }
         public GCPolicyMaxVersionArgs build() {

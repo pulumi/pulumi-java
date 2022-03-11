@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * 
      */
     @InputImport(name="fixedLikelihood")
-      private final @Nullable Input<String> fixedLikelihood;
+      private final @Nullable Output<String> fixedLikelihood;
 
-    public Input<String> getFixedLikelihood() {
-        return this.fixedLikelihood == null ? Input.empty() : this.fixedLikelihood;
+    public Output<String> getFixedLikelihood() {
+        return this.fixedLikelihood == null ? Output.empty() : this.fixedLikelihood;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * 
      */
     @InputImport(name="relativeLikelihood")
-      private final @Nullable Input<Integer> relativeLikelihood;
+      private final @Nullable Output<Integer> relativeLikelihood;
 
-    public Input<Integer> getRelativeLikelihood() {
-        return this.relativeLikelihood == null ? Input.empty() : this.relativeLikelihood;
+    public Output<Integer> getRelativeLikelihood() {
+        return this.relativeLikelihood == null ? Output.empty() : this.relativeLikelihood;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs(
-        @Nullable Input<String> fixedLikelihood,
-        @Nullable Input<Integer> relativeLikelihood) {
+        @Nullable Output<String> fixedLikelihood,
+        @Nullable Output<Integer> relativeLikelihood) {
         this.fixedLikelihood = fixedLikelihood;
         this.relativeLikelihood = relativeLikelihood;
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs() {
-        this.fixedLikelihood = Input.empty();
-        this.relativeLikelihood = Input.empty();
+        this.fixedLikelihood = Output.empty();
+        this.relativeLikelihood = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fixedLikelihood;
-        private @Nullable Input<Integer> relativeLikelihood;
+        private @Nullable Output<String> fixedLikelihood;
+        private @Nullable Output<Integer> relativeLikelihood;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder fixedLikelihood(@Nullable Input<String> fixedLikelihood) {
+        public Builder fixedLikelihood(@Nullable Output<String> fixedLikelihood) {
             this.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
         public Builder fixedLikelihood(@Nullable String fixedLikelihood) {
-            this.fixedLikelihood = Input.ofNullable(fixedLikelihood);
+            this.fixedLikelihood = Output.ofNullable(fixedLikelihood);
             return this;
         }
 
-        public Builder relativeLikelihood(@Nullable Input<Integer> relativeLikelihood) {
+        public Builder relativeLikelihood(@Nullable Output<Integer> relativeLikelihood) {
             this.relativeLikelihood = relativeLikelihood;
             return this;
         }
 
         public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
-            this.relativeLikelihood = Input.ofNullable(relativeLikelihood);
+            this.relativeLikelihood = Output.ofNullable(relativeLikelihood);
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs build() {

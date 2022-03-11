@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret", required=true)
-      private final Input<String> secret;
+      private final Output<String> secret;
 
-    public Input<String> getSecret() {
+    public Output<String> getSecret() {
         return this.secret;
     }
 
@@ -43,25 +43,25 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretData", required=true)
-      private final Input<String> secretData;
+      private final Output<String> secretData;
 
-    public Input<String> getSecretData() {
+    public Output<String> getSecretData() {
         return this.secretData;
     }
 
     public SecretVersionArgs(
-        @Nullable Input<Boolean> enabled,
-        Input<String> secret,
-        Input<String> secretData) {
+        @Nullable Output<Boolean> enabled,
+        Output<String> secret,
+        Output<String> secretData) {
         this.enabled = enabled;
         this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
         this.secretData = Objects.requireNonNull(secretData, "expected parameter 'secretData' to be non-null");
     }
 
     private SecretVersionArgs() {
-        this.enabled = Input.empty();
-        this.secret = Input.empty();
-        this.secretData = Input.empty();
+        this.enabled = Output.empty();
+        this.secret = Output.empty();
+        this.secretData = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> secret;
-        private Input<String> secretData;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> secret;
+        private Output<String> secretData;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secretData = defaults.secretData;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder secret(Input<String> secret) {
+        public Builder secret(Output<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
         public Builder secret(String secret) {
-            this.secret = Input.of(Objects.requireNonNull(secret));
+            this.secret = Output.of(Objects.requireNonNull(secret));
             return this;
         }
 
-        public Builder secretData(Input<String> secretData) {
+        public Builder secretData(Output<String> secretData) {
             this.secretData = Objects.requireNonNull(secretData);
             return this;
         }
 
         public Builder secretData(String secretData) {
-            this.secretData = Input.of(Objects.requireNonNull(secretData));
+            this.secretData = Output.of(Objects.requireNonNull(secretData));
             return this;
         }
         public SecretVersionArgs build() {

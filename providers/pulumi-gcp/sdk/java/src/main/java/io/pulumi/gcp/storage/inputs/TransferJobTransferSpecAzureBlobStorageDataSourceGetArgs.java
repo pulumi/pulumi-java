@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="azureCredentials", required=true)
-      private final Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
+      private final Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
 
-    public Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> getAzureCredentials() {
+    public Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> getAzureCredentials() {
         return this.azureCredentials;
     }
 
@@ -31,9 +31,9 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="container", required=true)
-      private final Input<String> container;
+      private final Output<String> container;
 
-    public Input<String> getContainer() {
+    public Output<String> getContainer() {
         return this.container;
     }
 
@@ -42,10 +42,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
      * 
      */
     @InputImport(name="storageAccount", required=true)
-      private final Input<String> storageAccount;
+      private final Output<String> storageAccount;
 
-    public Input<String> getStorageAccount() {
+    public Output<String> getStorageAccount() {
         return this.storageAccount;
     }
 
     public TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs(
-        Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials,
-        Input<String> container,
-        @Nullable Input<String> path,
-        Input<String> storageAccount) {
+        Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials,
+        Output<String> container,
+        @Nullable Output<String> path,
+        Output<String> storageAccount) {
         this.azureCredentials = Objects.requireNonNull(azureCredentials, "expected parameter 'azureCredentials' to be non-null");
         this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
         this.path = path;
@@ -71,10 +71,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     }
 
     private TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs() {
-        this.azureCredentials = Input.empty();
-        this.container = Input.empty();
-        this.path = Input.empty();
-        this.storageAccount = Input.empty();
+        this.azureCredentials = Output.empty();
+        this.container = Output.empty();
+        this.path = Output.empty();
+        this.storageAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     }
 
     public static final class Builder {
-        private Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
-        private Input<String> container;
-        private @Nullable Input<String> path;
-        private Input<String> storageAccount;
+        private Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials;
+        private Output<String> container;
+        private @Nullable Output<String> path;
+        private Output<String> storageAccount;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder azureCredentials(Input<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials) {
+        public Builder azureCredentials(Output<TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs> azureCredentials) {
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
 
         public Builder azureCredentials(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs azureCredentials) {
-            this.azureCredentials = Input.of(Objects.requireNonNull(azureCredentials));
+            this.azureCredentials = Output.of(Objects.requireNonNull(azureCredentials));
             return this;
         }
 
-        public Builder container(Input<String> container) {
+        public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
         public Builder container(String container) {
-            this.container = Input.of(Objects.requireNonNull(container));
+            this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder storageAccount(Input<String> storageAccount) {
+        public Builder storageAccount(Output<String> storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
         public Builder storageAccount(String storageAccount) {
-            this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
+            this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
             return this;
         }
         public TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs build() {

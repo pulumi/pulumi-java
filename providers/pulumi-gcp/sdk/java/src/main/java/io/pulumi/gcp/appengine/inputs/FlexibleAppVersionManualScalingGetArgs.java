@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class FlexibleAppVersionManualScalingGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="instances", required=true)
-      private final Input<Integer> instances;
+      private final Output<Integer> instances;
 
-    public Input<Integer> getInstances() {
+    public Output<Integer> getInstances() {
         return this.instances;
     }
 
-    public FlexibleAppVersionManualScalingGetArgs(Input<Integer> instances) {
+    public FlexibleAppVersionManualScalingGetArgs(Output<Integer> instances) {
         this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
     }
 
     private FlexibleAppVersionManualScalingGetArgs() {
-        this.instances = Input.empty();
+        this.instances = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class FlexibleAppVersionManualScalingGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<Integer> instances;
+        private Output<Integer> instances;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class FlexibleAppVersionManualScalingGetArgs extends io.pulumi.reso
     	      this.instances = defaults.instances;
         }
 
-        public Builder instances(Input<Integer> instances) {
+        public Builder instances(Output<Integer> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
         public Builder instances(Integer instances) {
-            this.instances = Input.of(Objects.requireNonNull(instances));
+            this.instances = Output.of(Objects.requireNonNull(instances));
             return this;
         }
         public FlexibleAppVersionManualScalingGetArgs build() {

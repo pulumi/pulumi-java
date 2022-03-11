@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AwsNodePoolMaxPodsConstraintArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxPodsPerNode", required=true)
-      private final Input<Integer> maxPodsPerNode;
+      private final Output<Integer> maxPodsPerNode;
 
-    public Input<Integer> getMaxPodsPerNode() {
+    public Output<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
-    public AwsNodePoolMaxPodsConstraintArgs(Input<Integer> maxPodsPerNode) {
+    public AwsNodePoolMaxPodsConstraintArgs(Output<Integer> maxPodsPerNode) {
         this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
     }
 
     private AwsNodePoolMaxPodsConstraintArgs() {
-        this.maxPodsPerNode = Input.empty();
+        this.maxPodsPerNode = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AwsNodePoolMaxPodsConstraintArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Integer> maxPodsPerNode;
+        private Output<Integer> maxPodsPerNode;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AwsNodePoolMaxPodsConstraintArgs extends io.pulumi.resources.
     	      this.maxPodsPerNode = defaults.maxPodsPerNode;
         }
 
-        public Builder maxPodsPerNode(Input<Integer> maxPodsPerNode) {
+        public Builder maxPodsPerNode(Output<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
 
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Input.of(Objects.requireNonNull(maxPodsPerNode));
+            this.maxPodsPerNode = Output.of(Objects.requireNonNull(maxPodsPerNode));
             return this;
         }
         public AwsNodePoolMaxPodsConstraintArgs build() {

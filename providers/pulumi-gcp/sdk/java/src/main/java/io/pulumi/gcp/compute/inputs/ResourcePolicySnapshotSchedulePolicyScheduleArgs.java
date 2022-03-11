@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs;
@@ -22,10 +22,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="dailySchedule")
-      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
+      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
 
-    public Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> getDailySchedule() {
-        return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> getDailySchedule() {
+        return this.dailySchedule == null ? Output.empty() : this.dailySchedule;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="hourlySchedule")
-      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
+      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
 
-    public Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> getHourlySchedule() {
-        return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> getHourlySchedule() {
+        return this.hourlySchedule == null ? Output.empty() : this.hourlySchedule;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="weeklySchedule")
-      private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
+      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 
-    public Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> getWeeklySchedule() {
-        return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
+    public Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> getWeeklySchedule() {
+        return this.weeklySchedule == null ? Output.empty() : this.weeklySchedule;
     }
 
     public ResourcePolicySnapshotSchedulePolicyScheduleArgs(
-        @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule,
-        @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule,
-        @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule) {
+        @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule,
+        @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule,
+        @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleArgs() {
-        this.dailySchedule = Input.empty();
-        this.hourlySchedule = Input.empty();
-        this.weeklySchedule = Input.empty();
+        this.dailySchedule = Output.empty();
+        this.hourlySchedule = Output.empty();
+        this.weeklySchedule = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
-        private @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
-        private @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
+        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
+        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
+        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder dailySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule) {
+        public Builder dailySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
         public Builder dailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs dailySchedule) {
-            this.dailySchedule = Input.ofNullable(dailySchedule);
+            this.dailySchedule = Output.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder hourlySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule) {
+        public Builder hourlySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
         public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs hourlySchedule) {
-            this.hourlySchedule = Input.ofNullable(hourlySchedule);
+            this.hourlySchedule = Output.ofNullable(hourlySchedule);
             return this;
         }
 
-        public Builder weeklySchedule(@Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Output<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
         public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs weeklySchedule) {
-            this.weeklySchedule = Input.ofNullable(weeklySchedule);
+            this.weeklySchedule = Output.ofNullable(weeklySchedule);
             return this;
         }
         public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesCaOptionsArgs;
@@ -24,10 +24,10 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
+      private final @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
 
-    public Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="aiaOcspServers")
-      private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Input<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
+    public Output<List<String>> getAiaOcspServers() {
+        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="caOptions")
-      private final @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
+      private final @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
 
-    public Input<CertificateTemplatePredefinedValuesCaOptionsArgs> getCaOptions() {
-        return this.caOptions == null ? Input.empty() : this.caOptions;
+    public Output<CertificateTemplatePredefinedValuesCaOptionsArgs> getCaOptions() {
+        return this.caOptions == null ? Output.empty() : this.caOptions;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="keyUsage")
-      private final @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
+      private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
 
-    public Input<CertificateTemplatePredefinedValuesKeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Input.empty() : this.keyUsage;
+    public Output<CertificateTemplatePredefinedValuesKeyUsageArgs> getKeyUsage() {
+        return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="policyIds")
-      private final @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
+      private final @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
 
-    public Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Input.empty() : this.policyIds;
+    public Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> getPolicyIds() {
+        return this.policyIds == null ? Output.empty() : this.policyIds;
     }
 
     public CertificateTemplatePredefinedValuesArgs(
-        @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions,
-        @Nullable Input<List<String>> aiaOcspServers,
-        @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions,
-        @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage,
-        @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds) {
+        @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions,
+        @Nullable Output<List<String>> aiaOcspServers,
+        @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions,
+        @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage,
+        @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
@@ -88,11 +88,11 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
     }
 
     private CertificateTemplatePredefinedValuesArgs() {
-        this.additionalExtensions = Input.empty();
-        this.aiaOcspServers = Input.empty();
-        this.caOptions = Input.empty();
-        this.keyUsage = Input.empty();
-        this.policyIds = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.aiaOcspServers = Output.empty();
+        this.caOptions = Output.empty();
+        this.keyUsage = Output.empty();
+        this.policyIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
-        private @Nullable Input<List<String>> aiaOcspServers;
-        private @Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
-        private @Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
-        private @Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
+        private @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
+        private @Nullable Output<List<String>> aiaOcspServers;
+        private @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
+        private @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
+        private @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder caOptions(@Nullable Input<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions) {
+        public Builder caOptions(@Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
         public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsArgs caOptions) {
-            this.caOptions = Input.ofNullable(caOptions);
+            this.caOptions = Output.ofNullable(caOptions);
             return this;
         }
 
-        public Builder keyUsage(@Nullable Input<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
         public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageArgs keyUsage) {
-            this.keyUsage = Input.ofNullable(keyUsage);
+            this.keyUsage = Output.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder policyIds(@Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds) {
+        public Builder policyIds(@Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
         public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdArgs> policyIds) {
-            this.policyIds = Input.ofNullable(policyIds);
+            this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
         public CertificateTemplatePredefinedValuesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="samplingRatio", required=true)
-      private final Input<Double> samplingRatio;
+      private final Output<Double> samplingRatio;
 
-    public Input<Double> getSamplingRatio() {
+    public Output<Double> getSamplingRatio() {
         return this.samplingRatio;
     }
 
-    public QueueStackdriverLoggingConfigArgs(Input<Double> samplingRatio) {
+    public QueueStackdriverLoggingConfigArgs(Output<Double> samplingRatio) {
         this.samplingRatio = Objects.requireNonNull(samplingRatio, "expected parameter 'samplingRatio' to be non-null");
     }
 
     private QueueStackdriverLoggingConfigArgs() {
-        this.samplingRatio = Input.empty();
+        this.samplingRatio = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Double> samplingRatio;
+        private Output<Double> samplingRatio;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
     	      this.samplingRatio = defaults.samplingRatio;
         }
 
-        public Builder samplingRatio(Input<Double> samplingRatio) {
+        public Builder samplingRatio(Output<Double> samplingRatio) {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
 
         public Builder samplingRatio(Double samplingRatio) {
-            this.samplingRatio = Input.of(Objects.requireNonNull(samplingRatio));
+            this.samplingRatio = Output.of(Objects.requireNonNull(samplingRatio));
             return this;
         }
         public QueueStackdriverLoggingConfigArgs build() {

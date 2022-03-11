@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -148,14 +147,14 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FhirStoreIamPolicy(String name, FhirStoreIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/fhirStoreIamPolicy:FhirStoreIamPolicy", name, args == null ? FhirStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:healthcare/fhirStoreIamPolicy:FhirStoreIamPolicy", name, args == null ? FhirStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FhirStoreIamPolicy(String name, Input<String> id, @Nullable FhirStoreIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FhirStoreIamPolicy(String name, Output<String> id, @Nullable FhirStoreIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:healthcare/fhirStoreIamPolicy:FhirStoreIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -171,7 +170,7 @@ public class FhirStoreIamPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FhirStoreIamPolicy get(String name, Input<String> id, @Nullable FhirStoreIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FhirStoreIamPolicy get(String name, Output<String> id, @Nullable FhirStoreIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FhirStoreIamPolicy(name, id, state, options);
     }
 }

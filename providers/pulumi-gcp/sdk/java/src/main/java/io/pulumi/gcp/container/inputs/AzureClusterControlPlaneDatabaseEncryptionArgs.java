@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
      * 
      */
     @InputImport(name="keyId", required=true)
-      private final Input<String> keyId;
+      private final Output<String> keyId;
 
-    public Input<String> getKeyId() {
+    public Output<String> getKeyId() {
         return this.keyId;
     }
 
-    public AzureClusterControlPlaneDatabaseEncryptionArgs(Input<String> keyId) {
+    public AzureClusterControlPlaneDatabaseEncryptionArgs(Output<String> keyId) {
         this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
     }
 
     private AzureClusterControlPlaneDatabaseEncryptionArgs() {
-        this.keyId = Input.empty();
+        this.keyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> keyId;
+        private Output<String> keyId;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder keyId(Input<String> keyId) {
+        public Builder keyId(Output<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Input.of(Objects.requireNonNull(keyId));
+            this.keyId = Output.of(Objects.requireNonNull(keyId));
             return this;
         }
         public AzureClusterControlPlaneDatabaseEncryptionArgs build() {

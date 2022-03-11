@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-      private final Input<String> kmsKeyName;
+      private final Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
+    public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -33,22 +33,22 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secretEnv")
-      private final @Nullable Input<Map<String,String>> secretEnv;
+      private final @Nullable Output<Map<String,String>> secretEnv;
 
-    public Input<Map<String,String>> getSecretEnv() {
-        return this.secretEnv == null ? Input.empty() : this.secretEnv;
+    public Output<Map<String,String>> getSecretEnv() {
+        return this.secretEnv == null ? Output.empty() : this.secretEnv;
     }
 
     public TriggerBuildSecretArgs(
-        Input<String> kmsKeyName,
-        @Nullable Input<Map<String,String>> secretEnv) {
+        Output<String> kmsKeyName,
+        @Nullable Output<Map<String,String>> secretEnv) {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
         this.secretEnv = secretEnv;
     }
 
     private TriggerBuildSecretArgs() {
-        this.kmsKeyName = Input.empty();
-        this.secretEnv = Input.empty();
+        this.kmsKeyName = Output.empty();
+        this.secretEnv = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyName;
-        private @Nullable Input<Map<String,String>> secretEnv;
+        private Output<String> kmsKeyName;
+        private @Nullable Output<Map<String,String>> secretEnv;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class TriggerBuildSecretArgs extends io.pulumi.resources.ResourceAr
     	      this.secretEnv = defaults.secretEnv;
         }
 
-        public Builder kmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Output<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
+            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
 
-        public Builder secretEnv(@Nullable Input<Map<String,String>> secretEnv) {
+        public Builder secretEnv(@Nullable Output<Map<String,String>> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }
 
         public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
-            this.secretEnv = Input.ofNullable(secretEnv);
+            this.secretEnv = Output.ofNullable(secretEnv);
             return this;
         }
         public TriggerBuildSecretArgs build() {

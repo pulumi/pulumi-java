@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<Integer> day;
+      private final @Nullable Output<Integer> day;
 
-    public Input<Integer> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<Integer> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * 
      */
     @InputImport(name="hour")
-      private final @Nullable Input<Integer> hour;
+      private final @Nullable Output<Integer> hour;
 
-    public Input<Integer> getHour() {
-        return this.hour == null ? Input.empty() : this.hour;
+    public Output<Integer> getHour() {
+        return this.hour == null ? Output.empty() : this.hour;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
      * 
      */
     @InputImport(name="updateTrack")
-      private final @Nullable Input<String> updateTrack;
+      private final @Nullable Output<String> updateTrack;
 
-    public Input<String> getUpdateTrack() {
-        return this.updateTrack == null ? Input.empty() : this.updateTrack;
+    public Output<String> getUpdateTrack() {
+        return this.updateTrack == null ? Output.empty() : this.updateTrack;
     }
 
     public DatabaseInstanceSettingsMaintenanceWindowArgs(
-        @Nullable Input<Integer> day,
-        @Nullable Input<Integer> hour,
-        @Nullable Input<String> updateTrack) {
+        @Nullable Output<Integer> day,
+        @Nullable Output<Integer> hour,
+        @Nullable Output<String> updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;
     }
 
     private DatabaseInstanceSettingsMaintenanceWindowArgs() {
-        this.day = Input.empty();
-        this.hour = Input.empty();
-        this.updateTrack = Input.empty();
+        this.day = Output.empty();
+        this.hour = Output.empty();
+        this.updateTrack = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> day;
-        private @Nullable Input<Integer> hour;
-        private @Nullable Input<String> updateTrack;
+        private @Nullable Output<Integer> day;
+        private @Nullable Output<Integer> hour;
+        private @Nullable Output<String> updateTrack;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends io.pulu
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder day(@Nullable Input<Integer> day) {
+        public Builder day(@Nullable Output<Integer> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable Integer day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder hour(@Nullable Input<Integer> hour) {
+        public Builder hour(@Nullable Output<Integer> hour) {
             this.hour = hour;
             return this;
         }
 
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Input.ofNullable(hour);
+            this.hour = Output.ofNullable(hour);
             return this;
         }
 
-        public Builder updateTrack(@Nullable Input<String> updateTrack) {
+        public Builder updateTrack(@Nullable Output<String> updateTrack) {
             this.updateTrack = updateTrack;
             return this;
         }
 
         public Builder updateTrack(@Nullable String updateTrack) {
-            this.updateTrack = Input.ofNullable(updateTrack);
+            this.updateTrack = Output.ofNullable(updateTrack);
             return this;
         }
         public DatabaseInstanceSettingsMaintenanceWindowArgs build() {

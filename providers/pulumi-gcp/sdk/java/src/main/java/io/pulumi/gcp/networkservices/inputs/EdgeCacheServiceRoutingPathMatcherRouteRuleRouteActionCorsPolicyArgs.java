@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowCredentials")
-      private final @Nullable Input<Boolean> allowCredentials;
+      private final @Nullable Output<Boolean> allowCredentials;
 
-    public Input<Boolean> getAllowCredentials() {
-        return this.allowCredentials == null ? Input.empty() : this.allowCredentials;
+    public Output<Boolean> getAllowCredentials() {
+        return this.allowCredentials == null ? Output.empty() : this.allowCredentials;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowHeaders")
-      private final @Nullable Input<List<String>> allowHeaders;
+      private final @Nullable Output<List<String>> allowHeaders;
 
-    public Input<List<String>> getAllowHeaders() {
-        return this.allowHeaders == null ? Input.empty() : this.allowHeaders;
+    public Output<List<String>> getAllowHeaders() {
+        return this.allowHeaders == null ? Output.empty() : this.allowHeaders;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowMethods")
-      private final @Nullable Input<List<String>> allowMethods;
+      private final @Nullable Output<List<String>> allowMethods;
 
-    public Input<List<String>> getAllowMethods() {
-        return this.allowMethods == null ? Input.empty() : this.allowMethods;
+    public Output<List<String>> getAllowMethods() {
+        return this.allowMethods == null ? Output.empty() : this.allowMethods;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="allowOrigins")
-      private final @Nullable Input<List<String>> allowOrigins;
+      private final @Nullable Output<List<String>> allowOrigins;
 
-    public Input<List<String>> getAllowOrigins() {
-        return this.allowOrigins == null ? Input.empty() : this.allowOrigins;
+    public Output<List<String>> getAllowOrigins() {
+        return this.allowOrigins == null ? Output.empty() : this.allowOrigins;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="exposeHeaders")
-      private final @Nullable Input<List<String>> exposeHeaders;
+      private final @Nullable Output<List<String>> exposeHeaders;
 
-    public Input<List<String>> getExposeHeaders() {
-        return this.exposeHeaders == null ? Input.empty() : this.exposeHeaders;
+    public Output<List<String>> getExposeHeaders() {
+        return this.exposeHeaders == null ? Output.empty() : this.exposeHeaders;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      * 
      */
     @InputImport(name="maxAge", required=true)
-      private final Input<String> maxAge;
+      private final Output<String> maxAge;
 
-    public Input<String> getMaxAge() {
+    public Output<String> getMaxAge() {
         return this.maxAge;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs(
-        @Nullable Input<Boolean> allowCredentials,
-        @Nullable Input<List<String>> allowHeaders,
-        @Nullable Input<List<String>> allowMethods,
-        @Nullable Input<List<String>> allowOrigins,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<List<String>> exposeHeaders,
-        Input<String> maxAge) {
+        @Nullable Output<Boolean> allowCredentials,
+        @Nullable Output<List<String>> allowHeaders,
+        @Nullable Output<List<String>> allowMethods,
+        @Nullable Output<List<String>> allowOrigins,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<List<String>> exposeHeaders,
+        Output<String> maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;
@@ -117,13 +117,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs() {
-        this.allowCredentials = Input.empty();
-        this.allowHeaders = Input.empty();
-        this.allowMethods = Input.empty();
-        this.allowOrigins = Input.empty();
-        this.disabled = Input.empty();
-        this.exposeHeaders = Input.empty();
-        this.maxAge = Input.empty();
+        this.allowCredentials = Output.empty();
+        this.allowHeaders = Output.empty();
+        this.allowMethods = Output.empty();
+        this.allowOrigins = Output.empty();
+        this.disabled = Output.empty();
+        this.exposeHeaders = Output.empty();
+        this.maxAge = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowCredentials;
-        private @Nullable Input<List<String>> allowHeaders;
-        private @Nullable Input<List<String>> allowMethods;
-        private @Nullable Input<List<String>> allowOrigins;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<List<String>> exposeHeaders;
-        private Input<String> maxAge;
+        private @Nullable Output<Boolean> allowCredentials;
+        private @Nullable Output<List<String>> allowHeaders;
+        private @Nullable Output<List<String>> allowMethods;
+        private @Nullable Output<List<String>> allowOrigins;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<List<String>> exposeHeaders;
+        private Output<String> maxAge;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder allowCredentials(@Nullable Input<Boolean> allowCredentials) {
+        public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
-            this.allowCredentials = Input.ofNullable(allowCredentials);
+            this.allowCredentials = Output.ofNullable(allowCredentials);
             return this;
         }
 
-        public Builder allowHeaders(@Nullable Input<List<String>> allowHeaders) {
+        public Builder allowHeaders(@Nullable Output<List<String>> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
 
         public Builder allowHeaders(@Nullable List<String> allowHeaders) {
-            this.allowHeaders = Input.ofNullable(allowHeaders);
+            this.allowHeaders = Output.ofNullable(allowHeaders);
             return this;
         }
 
-        public Builder allowMethods(@Nullable Input<List<String>> allowMethods) {
+        public Builder allowMethods(@Nullable Output<List<String>> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
 
         public Builder allowMethods(@Nullable List<String> allowMethods) {
-            this.allowMethods = Input.ofNullable(allowMethods);
+            this.allowMethods = Output.ofNullable(allowMethods);
             return this;
         }
 
-        public Builder allowOrigins(@Nullable Input<List<String>> allowOrigins) {
+        public Builder allowOrigins(@Nullable Output<List<String>> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
 
         public Builder allowOrigins(@Nullable List<String> allowOrigins) {
-            this.allowOrigins = Input.ofNullable(allowOrigins);
+            this.allowOrigins = Output.ofNullable(allowOrigins);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder exposeHeaders(@Nullable Input<List<String>> exposeHeaders) {
+        public Builder exposeHeaders(@Nullable Output<List<String>> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
 
         public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
-            this.exposeHeaders = Input.ofNullable(exposeHeaders);
+            this.exposeHeaders = Output.ofNullable(exposeHeaders);
             return this;
         }
 
-        public Builder maxAge(Input<String> maxAge) {
+        public Builder maxAge(Output<String> maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
 
         public Builder maxAge(String maxAge) {
-            this.maxAge = Input.of(Objects.requireNonNull(maxAge));
+            this.maxAge = Output.of(Objects.requireNonNull(maxAge));
             return this;
         }
         public EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs build() {

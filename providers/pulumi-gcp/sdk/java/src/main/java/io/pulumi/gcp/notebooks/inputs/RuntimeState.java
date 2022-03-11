@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
@@ -25,10 +25,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessConfig")
-      private final @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig;
+      private final @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
-    public Input<RuntimeAccessConfigGetArgs> getAccessConfig() {
-        return this.accessConfig == null ? Input.empty() : this.accessConfig;
+    public Output<RuntimeAccessConfigGetArgs> getAccessConfig() {
+        return this.accessConfig == null ? Output.empty() : this.accessConfig;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthState")
-      private final @Nullable Input<String> healthState;
+      private final @Nullable Output<String> healthState;
 
-    public Input<String> getHealthState() {
-        return this.healthState == null ? Input.empty() : this.healthState;
+    public Output<String> getHealthState() {
+        return this.healthState == null ? Output.empty() : this.healthState;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<RuntimeMetricGetArgs>> metrics;
+      private final @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
-    public Input<List<RuntimeMetricGetArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<RuntimeMetricGetArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-      private final @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig;
+      private final @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
-    public Input<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
+    public Output<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
+        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -117,22 +117,22 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachine")
-      private final @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine;
+      private final @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
-    public Input<RuntimeVirtualMachineGetArgs> getVirtualMachine() {
-        return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
+    public Output<RuntimeVirtualMachineGetArgs> getVirtualMachine() {
+        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
     }
 
     public RuntimeState(
-        @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig,
-        @Nullable Input<String> healthState,
-        @Nullable Input<String> location,
-        @Nullable Input<List<RuntimeMetricGetArgs>> metrics,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig,
-        @Nullable Input<String> state,
-        @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine) {
+        @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig,
+        @Nullable Output<String> healthState,
+        @Nullable Output<String> location,
+        @Nullable Output<List<RuntimeMetricGetArgs>> metrics,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig,
+        @Nullable Output<String> state,
+        @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
         this.accessConfig = accessConfig;
         this.healthState = healthState;
         this.location = location;
@@ -145,15 +145,15 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeState() {
-        this.accessConfig = Input.empty();
-        this.healthState = Input.empty();
-        this.location = Input.empty();
-        this.metrics = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.softwareConfig = Input.empty();
-        this.state = Input.empty();
-        this.virtualMachine = Input.empty();
+        this.accessConfig = Output.empty();
+        this.healthState = Output.empty();
+        this.location = Output.empty();
+        this.metrics = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.softwareConfig = Output.empty();
+        this.state = Output.empty();
+        this.virtualMachine = Output.empty();
     }
 
     public static Builder builder() {
@@ -165,15 +165,15 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig;
-        private @Nullable Input<String> healthState;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<RuntimeMetricGetArgs>> metrics;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig;
-        private @Nullable Input<String> state;
-        private @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine;
+        private @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
+        private @Nullable Output<String> healthState;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
+        private @Nullable Output<String> state;
+        private @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
         public Builder() {
     	      // Empty
@@ -192,93 +192,93 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder accessConfig(@Nullable Input<RuntimeAccessConfigGetArgs> accessConfig) {
+        public Builder accessConfig(@Nullable Output<RuntimeAccessConfigGetArgs> accessConfig) {
             this.accessConfig = accessConfig;
             return this;
         }
 
         public Builder accessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
-            this.accessConfig = Input.ofNullable(accessConfig);
+            this.accessConfig = Output.ofNullable(accessConfig);
             return this;
         }
 
-        public Builder healthState(@Nullable Input<String> healthState) {
+        public Builder healthState(@Nullable Output<String> healthState) {
             this.healthState = healthState;
             return this;
         }
 
         public Builder healthState(@Nullable String healthState) {
-            this.healthState = Input.ofNullable(healthState);
+            this.healthState = Output.ofNullable(healthState);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metrics(@Nullable Input<List<RuntimeMetricGetArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder softwareConfig(@Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
-            this.softwareConfig = Input.ofNullable(softwareConfig);
+            this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder virtualMachine(@Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine) {
+        public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
         public Builder virtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
-            this.virtualMachine = Input.ofNullable(virtualMachine);
+            this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
         }
         public RuntimeState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entityType")
-      private final @Nullable Input<String> entityType;
+      private final @Nullable Output<String> entityType;
 
-    public Input<String> getEntityType() {
-        return this.entityType == null ? Input.empty() : this.entityType;
+    public Output<String> getEntityType() {
+        return this.entityType == null ? Output.empty() : this.entityType;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fillBehavior")
-      private final @Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior;
+      private final @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior;
 
-    public Input<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
-        return this.fillBehavior == null ? Input.empty() : this.fillBehavior;
+    public Output<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
+        return this.fillBehavior == null ? Output.empty() : this.fillBehavior;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isList")
-      private final @Nullable Input<Boolean> isList;
+      private final @Nullable Output<Boolean> isList;
 
-    public Input<Boolean> getIsList() {
-        return this.isList == null ? Input.empty() : this.isList;
+    public Output<Boolean> getIsList() {
+        return this.isList == null ? Output.empty() : this.isList;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="redact")
-      private final @Nullable Input<Boolean> redact;
+      private final @Nullable Output<Boolean> redact;
 
-    public Input<Boolean> getRedact() {
-        return this.redact == null ? Input.empty() : this.redact;
+    public Output<Boolean> getRedact() {
+        return this.redact == null ? Output.empty() : this.redact;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="required")
-      private final @Nullable Input<Boolean> required;
+      private final @Nullable Output<Boolean> required;
 
-    public Input<Boolean> getRequired() {
-        return this.required == null ? Input.empty() : this.required;
+    public Output<Boolean> getRequired() {
+        return this.required == null ? Output.empty() : this.required;
     }
 
     public CxPageFormParameterArgs(
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> entityType,
-        @Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior,
-        @Nullable Input<Boolean> isList,
-        @Nullable Input<Boolean> redact,
-        @Nullable Input<Boolean> required) {
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> entityType,
+        @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior,
+        @Nullable Output<Boolean> isList,
+        @Nullable Output<Boolean> redact,
+        @Nullable Output<Boolean> required) {
         this.displayName = displayName;
         this.entityType = entityType;
         this.fillBehavior = fillBehavior;
@@ -102,12 +102,12 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     private CxPageFormParameterArgs() {
-        this.displayName = Input.empty();
-        this.entityType = Input.empty();
-        this.fillBehavior = Input.empty();
-        this.isList = Input.empty();
-        this.redact = Input.empty();
-        this.required = Input.empty();
+        this.displayName = Output.empty();
+        this.entityType = Output.empty();
+        this.fillBehavior = Output.empty();
+        this.isList = Output.empty();
+        this.redact = Output.empty();
+        this.required = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> entityType;
-        private @Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior;
-        private @Nullable Input<Boolean> isList;
-        private @Nullable Input<Boolean> redact;
-        private @Nullable Input<Boolean> required;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> entityType;
+        private @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior;
+        private @Nullable Output<Boolean> isList;
+        private @Nullable Output<Boolean> redact;
+        private @Nullable Output<Boolean> required;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     	      this.required = defaults.required;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder entityType(@Nullable Input<String> entityType) {
+        public Builder entityType(@Nullable Output<String> entityType) {
             this.entityType = entityType;
             return this;
         }
 
         public Builder entityType(@Nullable String entityType) {
-            this.entityType = Input.ofNullable(entityType);
+            this.entityType = Output.ofNullable(entityType);
             return this;
         }
 
-        public Builder fillBehavior(@Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
+        public Builder fillBehavior(@Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
             this.fillBehavior = fillBehavior;
             return this;
         }
 
         public Builder fillBehavior(@Nullable CxPageFormParameterFillBehaviorArgs fillBehavior) {
-            this.fillBehavior = Input.ofNullable(fillBehavior);
+            this.fillBehavior = Output.ofNullable(fillBehavior);
             return this;
         }
 
-        public Builder isList(@Nullable Input<Boolean> isList) {
+        public Builder isList(@Nullable Output<Boolean> isList) {
             this.isList = isList;
             return this;
         }
 
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Input.ofNullable(isList);
+            this.isList = Output.ofNullable(isList);
             return this;
         }
 
-        public Builder redact(@Nullable Input<Boolean> redact) {
+        public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
 
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Input.ofNullable(redact);
+            this.redact = Output.ofNullable(redact);
             return this;
         }
 
-        public Builder required(@Nullable Input<Boolean> required) {
+        public Builder required(@Nullable Output<Boolean> required) {
             this.required = required;
             return this;
         }
 
         public Builder required(@Nullable Boolean required) {
-            this.required = Input.ofNullable(required);
+            this.required = Output.ofNullable(required);
             return this;
         }
         public CxPageFormParameterArgs build() {

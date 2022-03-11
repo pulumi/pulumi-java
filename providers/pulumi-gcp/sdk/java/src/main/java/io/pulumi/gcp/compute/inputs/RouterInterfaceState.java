@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interconnectAttachment")
-      private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Output<String> interconnectAttachment;
 
-    public Input<String> getInterconnectAttachment() {
-        return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
+    public Output<String> getInterconnectAttachment() {
+        return this.interconnectAttachment == null ? Output.empty() : this.interconnectAttachment;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipRange")
-      private final @Nullable Input<String> ipRange;
+      private final @Nullable Output<String> ipRange;
 
-    public Input<String> getIpRange() {
-        return this.ipRange == null ? Input.empty() : this.ipRange;
+    public Output<String> getIpRange() {
+        return this.ipRange == null ? Output.empty() : this.ipRange;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="router")
-      private final @Nullable Input<String> router;
+      private final @Nullable Output<String> router;
 
-    public Input<String> getRouter() {
-        return this.router == null ? Input.empty() : this.router;
+    public Output<String> getRouter() {
+        return this.router == null ? Output.empty() : this.router;
     }
 
     /**
@@ -96,20 +96,20 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpnTunnel")
-      private final @Nullable Input<String> vpnTunnel;
+      private final @Nullable Output<String> vpnTunnel;
 
-    public Input<String> getVpnTunnel() {
-        return this.vpnTunnel == null ? Input.empty() : this.vpnTunnel;
+    public Output<String> getVpnTunnel() {
+        return this.vpnTunnel == null ? Output.empty() : this.vpnTunnel;
     }
 
     public RouterInterfaceState(
-        @Nullable Input<String> interconnectAttachment,
-        @Nullable Input<String> ipRange,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> router,
-        @Nullable Input<String> vpnTunnel) {
+        @Nullable Output<String> interconnectAttachment,
+        @Nullable Output<String> ipRange,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> router,
+        @Nullable Output<String> vpnTunnel) {
         this.interconnectAttachment = interconnectAttachment;
         this.ipRange = ipRange;
         this.name = name;
@@ -120,13 +120,13 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
     }
 
     private RouterInterfaceState() {
-        this.interconnectAttachment = Input.empty();
-        this.ipRange = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.router = Input.empty();
-        this.vpnTunnel = Input.empty();
+        this.interconnectAttachment = Output.empty();
+        this.ipRange = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.router = Output.empty();
+        this.vpnTunnel = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> interconnectAttachment;
-        private @Nullable Input<String> ipRange;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> router;
-        private @Nullable Input<String> vpnTunnel;
+        private @Nullable Output<String> interconnectAttachment;
+        private @Nullable Output<String> ipRange;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> router;
+        private @Nullable Output<String> vpnTunnel;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
     	      this.vpnTunnel = defaults.vpnTunnel;
         }
 
-        public Builder interconnectAttachment(@Nullable Input<String> interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
+            this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
             return this;
         }
 
-        public Builder ipRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Output<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
         public Builder ipRange(@Nullable String ipRange) {
-            this.ipRange = Input.ofNullable(ipRange);
+            this.ipRange = Output.ofNullable(ipRange);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder router(@Nullable Input<String> router) {
+        public Builder router(@Nullable Output<String> router) {
             this.router = router;
             return this;
         }
 
         public Builder router(@Nullable String router) {
-            this.router = Input.ofNullable(router);
+            this.router = Output.ofNullable(router);
             return this;
         }
 
-        public Builder vpnTunnel(@Nullable Input<String> vpnTunnel) {
+        public Builder vpnTunnel(@Nullable Output<String> vpnTunnel) {
             this.vpnTunnel = vpnTunnel;
             return this;
         }
 
         public Builder vpnTunnel(@Nullable String vpnTunnel) {
-            this.vpnTunnel = Input.ofNullable(vpnTunnel);
+            this.vpnTunnel = Output.ofNullable(vpnTunnel);
             return this;
         }
         public RouterInterfaceState build() {

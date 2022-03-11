@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * 
      */
     @InputImport(name="virtualMachine")
-      private final @Nullable Input<String> virtualMachine;
+      private final @Nullable Output<String> virtualMachine;
 
-    public Input<String> getVirtualMachine() {
-        return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
+    public Output<String> getVirtualMachine() {
+        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
     }
 
     public SpokeLinkedRouterApplianceInstancesInstanceGetArgs(
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<String> virtualMachine) {
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<String> virtualMachine) {
         this.ipAddress = ipAddress;
         this.virtualMachine = virtualMachine;
     }
 
     private SpokeLinkedRouterApplianceInstancesInstanceGetArgs() {
-        this.ipAddress = Input.empty();
-        this.virtualMachine = Input.empty();
+        this.ipAddress = Output.empty();
+        this.virtualMachine = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<String> virtualMachine;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<String> virtualMachine;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder virtualMachine(@Nullable Input<String> virtualMachine) {
+        public Builder virtualMachine(@Nullable Output<String> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
         public Builder virtualMachine(@Nullable String virtualMachine) {
-            this.virtualMachine = Input.ofNullable(virtualMachine);
+            this.virtualMachine = Output.ofNullable(virtualMachine);
             return this;
         }
         public SpokeLinkedRouterApplianceInstancesInstanceGetArgs build() {

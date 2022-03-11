@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutArgs;
 import java.lang.Integer;
@@ -23,10 +23,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="failoverOrigin")
-      private final @Nullable Input<String> failoverOrigin;
+      private final @Nullable Output<String> failoverOrigin;
 
-    public Input<String> getFailoverOrigin() {
-        return this.failoverOrigin == null ? Input.empty() : this.failoverOrigin;
+    public Output<String> getFailoverOrigin() {
+        return this.failoverOrigin == null ? Output.empty() : this.failoverOrigin;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxAttempts")
-      private final @Nullable Input<Integer> maxAttempts;
+      private final @Nullable Output<Integer> maxAttempts;
 
-    public Input<Integer> getMaxAttempts() {
-        return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
+    public Output<Integer> getMaxAttempts() {
+        return this.maxAttempts == null ? Output.empty() : this.maxAttempts;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="originAddress", required=true)
-      private final Input<String> originAddress;
+      private final Output<String> originAddress;
 
-    public Input<String> getOriginAddress() {
+    public Output<String> getOriginAddress() {
         return this.originAddress;
     }
 
@@ -105,10 +105,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -130,10 +130,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retryConditions")
-      private final @Nullable Input<List<String>> retryConditions;
+      private final @Nullable Output<List<String>> retryConditions;
 
-    public Input<List<String>> getRetryConditions() {
-        return this.retryConditions == null ? Input.empty() : this.retryConditions;
+    public Output<List<String>> getRetryConditions() {
+        return this.retryConditions == null ? Output.empty() : this.retryConditions;
     }
 
     /**
@@ -165,24 +165,24 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<EdgeCacheOriginTimeoutArgs> timeout;
+      private final @Nullable Output<EdgeCacheOriginTimeoutArgs> timeout;
 
-    public Input<EdgeCacheOriginTimeoutArgs> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<EdgeCacheOriginTimeoutArgs> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public EdgeCacheOriginArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> failoverOrigin,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<Integer> maxAttempts,
-        @Nullable Input<String> name,
-        Input<String> originAddress,
-        @Nullable Input<Integer> port,
-        @Nullable Input<String> project,
-        @Nullable Input<String> protocol,
-        @Nullable Input<List<String>> retryConditions,
-        @Nullable Input<EdgeCacheOriginTimeoutArgs> timeout) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> failoverOrigin,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<Integer> maxAttempts,
+        @Nullable Output<String> name,
+        Output<String> originAddress,
+        @Nullable Output<Integer> port,
+        @Nullable Output<String> project,
+        @Nullable Output<String> protocol,
+        @Nullable Output<List<String>> retryConditions,
+        @Nullable Output<EdgeCacheOriginTimeoutArgs> timeout) {
         this.description = description;
         this.failoverOrigin = failoverOrigin;
         this.labels = labels;
@@ -197,17 +197,17 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EdgeCacheOriginArgs() {
-        this.description = Input.empty();
-        this.failoverOrigin = Input.empty();
-        this.labels = Input.empty();
-        this.maxAttempts = Input.empty();
-        this.name = Input.empty();
-        this.originAddress = Input.empty();
-        this.port = Input.empty();
-        this.project = Input.empty();
-        this.protocol = Input.empty();
-        this.retryConditions = Input.empty();
-        this.timeout = Input.empty();
+        this.description = Output.empty();
+        this.failoverOrigin = Output.empty();
+        this.labels = Output.empty();
+        this.maxAttempts = Output.empty();
+        this.name = Output.empty();
+        this.originAddress = Output.empty();
+        this.port = Output.empty();
+        this.project = Output.empty();
+        this.protocol = Output.empty();
+        this.retryConditions = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -219,17 +219,17 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> failoverOrigin;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<Integer> maxAttempts;
-        private @Nullable Input<String> name;
-        private Input<String> originAddress;
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<List<String>> retryConditions;
-        private @Nullable Input<EdgeCacheOriginTimeoutArgs> timeout;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> failoverOrigin;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<Integer> maxAttempts;
+        private @Nullable Output<String> name;
+        private Output<String> originAddress;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<List<String>> retryConditions;
+        private @Nullable Output<EdgeCacheOriginTimeoutArgs> timeout;
 
         public Builder() {
     	      // Empty
@@ -250,113 +250,113 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder failoverOrigin(@Nullable Input<String> failoverOrigin) {
+        public Builder failoverOrigin(@Nullable Output<String> failoverOrigin) {
             this.failoverOrigin = failoverOrigin;
             return this;
         }
 
         public Builder failoverOrigin(@Nullable String failoverOrigin) {
-            this.failoverOrigin = Input.ofNullable(failoverOrigin);
+            this.failoverOrigin = Output.ofNullable(failoverOrigin);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder maxAttempts(@Nullable Input<Integer> maxAttempts) {
+        public Builder maxAttempts(@Nullable Output<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
         public Builder maxAttempts(@Nullable Integer maxAttempts) {
-            this.maxAttempts = Input.ofNullable(maxAttempts);
+            this.maxAttempts = Output.ofNullable(maxAttempts);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder originAddress(Input<String> originAddress) {
+        public Builder originAddress(Output<String> originAddress) {
             this.originAddress = Objects.requireNonNull(originAddress);
             return this;
         }
 
         public Builder originAddress(String originAddress) {
-            this.originAddress = Input.of(Objects.requireNonNull(originAddress));
+            this.originAddress = Output.of(Objects.requireNonNull(originAddress));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder retryConditions(@Nullable Input<List<String>> retryConditions) {
+        public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }
 
         public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Input.ofNullable(retryConditions);
+            this.retryConditions = Output.ofNullable(retryConditions);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<EdgeCacheOriginTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Output<EdgeCacheOriginTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable EdgeCacheOriginTimeoutArgs timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public EdgeCacheOriginArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -178,14 +177,14 @@ public class TaxonomyIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TaxonomyIamBinding(String name, TaxonomyIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/taxonomyIamBinding:TaxonomyIamBinding", name, args == null ? TaxonomyIamBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:datacatalog/taxonomyIamBinding:TaxonomyIamBinding", name, args == null ? TaxonomyIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TaxonomyIamBinding(String name, Input<String> id, @Nullable TaxonomyIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TaxonomyIamBinding(String name, Output<String> id, @Nullable TaxonomyIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:datacatalog/taxonomyIamBinding:TaxonomyIamBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -201,7 +200,7 @@ public class TaxonomyIamBinding extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TaxonomyIamBinding get(String name, Input<String> id, @Nullable TaxonomyIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TaxonomyIamBinding get(String name, Output<String> id, @Nullable TaxonomyIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TaxonomyIamBinding(name, id, state, options);
     }
 }

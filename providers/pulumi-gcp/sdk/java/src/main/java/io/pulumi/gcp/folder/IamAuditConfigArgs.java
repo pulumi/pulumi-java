@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
@@ -20,16 +20,16 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-      private final Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+      private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Input<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
 
     @InputImport(name="folder", required=true)
-      private final Input<String> folder;
+      private final Output<String> folder;
 
-    public Input<String> getFolder() {
+    public Output<String> getFolder() {
         return this.folder;
     }
 
@@ -38,25 +38,25 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public IamAuditConfigArgs(
-        Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs,
-        Input<String> folder,
-        Input<String> service) {
+        Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs,
+        Output<String> folder,
+        Output<String> service) {
         this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
         this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private IamAuditConfigArgs() {
-        this.auditLogConfigs = Input.empty();
-        this.folder = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.folder = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
-        private Input<String> folder;
-        private Input<String> service;
+        private Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+        private Output<String> folder;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(Input<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
         public Builder auditLogConfigs(List<IamAuditConfigAuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.of(Objects.requireNonNull(auditLogConfigs));
+            this.auditLogConfigs = Output.of(Objects.requireNonNull(auditLogConfigs));
             return this;
         }
 
-        public Builder folder(Input<String> folder) {
+        public Builder folder(Output<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
         public Builder folder(String folder) {
-            this.folder = Input.of(Objects.requireNonNull(folder));
+            this.folder = Output.of(Objects.requireNonNull(folder));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public IamAuditConfigArgs build() {

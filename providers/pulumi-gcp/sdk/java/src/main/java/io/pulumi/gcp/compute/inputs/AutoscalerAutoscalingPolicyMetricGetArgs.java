@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -46,10 +46,10 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -81,10 +81,10 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="singleInstanceAssignment")
-      private final @Nullable Input<Double> singleInstanceAssignment;
+      private final @Nullable Output<Double> singleInstanceAssignment;
 
-    public Input<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Input.empty() : this.singleInstanceAssignment;
+    public Output<Double> getSingleInstanceAssignment() {
+        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<Double> target;
+      private final @Nullable Output<Double> target;
 
-    public Input<Double> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<Double> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -107,18 +107,18 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public AutoscalerAutoscalingPolicyMetricGetArgs(
-        @Nullable Input<String> filter,
-        Input<String> name,
-        @Nullable Input<Double> singleInstanceAssignment,
-        @Nullable Input<Double> target,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> filter,
+        Output<String> name,
+        @Nullable Output<Double> singleInstanceAssignment,
+        @Nullable Output<Double> target,
+        @Nullable Output<String> type) {
         this.filter = filter;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.singleInstanceAssignment = singleInstanceAssignment;
@@ -127,11 +127,11 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     }
 
     private AutoscalerAutoscalingPolicyMetricGetArgs() {
-        this.filter = Input.empty();
-        this.name = Input.empty();
-        this.singleInstanceAssignment = Input.empty();
-        this.target = Input.empty();
-        this.type = Input.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
+        this.singleInstanceAssignment = Output.empty();
+        this.target = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -143,11 +143,11 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private Input<String> name;
-        private @Nullable Input<Double> singleInstanceAssignment;
-        private @Nullable Input<Double> target;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> filter;
+        private Output<String> name;
+        private @Nullable Output<Double> singleInstanceAssignment;
+        private @Nullable Output<Double> target;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -162,53 +162,53 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder target(@Nullable Input<Double> target) {
+        public Builder target(@Nullable Output<Double> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable Double target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public AutoscalerAutoscalingPolicyMetricGetArgs build() {

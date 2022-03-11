@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="billingAccount", required=true)
-      private final Input<String> billingAccount;
+      private final Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
+    public Output<String> getBillingAccount() {
         return this.billingAccount;
     }
 
@@ -31,9 +31,9 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketId", required=true)
-      private final Input<String> bucketId;
+      private final Output<String> bucketId;
 
-    public Input<String> getBucketId() {
+    public Output<String> getBucketId() {
         return this.bucketId;
     }
 
@@ -42,10 +42,10 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -64,18 +64,18 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     public BillingAccountBucketConfigArgs(
-        Input<String> billingAccount,
-        Input<String> bucketId,
-        @Nullable Input<String> description,
-        Input<String> location,
-        @Nullable Input<Integer> retentionDays) {
+        Output<String> billingAccount,
+        Output<String> bucketId,
+        @Nullable Output<String> description,
+        Output<String> location,
+        @Nullable Output<Integer> retentionDays) {
         this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
         this.bucketId = Objects.requireNonNull(bucketId, "expected parameter 'bucketId' to be non-null");
         this.description = description;
@@ -84,11 +84,11 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
     }
 
     private BillingAccountBucketConfigArgs() {
-        this.billingAccount = Input.empty();
-        this.bucketId = Input.empty();
-        this.description = Input.empty();
-        this.location = Input.empty();
-        this.retentionDays = Input.empty();
+        this.billingAccount = Output.empty();
+        this.bucketId = Output.empty();
+        this.description = Output.empty();
+        this.location = Output.empty();
+        this.retentionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> billingAccount;
-        private Input<String> bucketId;
-        private @Nullable Input<String> description;
-        private Input<String> location;
-        private @Nullable Input<Integer> retentionDays;
+        private Output<String> billingAccount;
+        private Output<String> bucketId;
+        private @Nullable Output<String> description;
+        private Output<String> location;
+        private @Nullable Output<Integer> retentionDays;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder billingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Output<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
+            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder bucketId(Input<String> bucketId) {
+        public Builder bucketId(Output<String> bucketId) {
             this.bucketId = Objects.requireNonNull(bucketId);
             return this;
         }
 
         public Builder bucketId(String bucketId) {
-            this.bucketId = Input.of(Objects.requireNonNull(bucketId));
+            this.bucketId = Output.of(Objects.requireNonNull(bucketId));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
         public BillingAccountBucketConfigArgs build() {

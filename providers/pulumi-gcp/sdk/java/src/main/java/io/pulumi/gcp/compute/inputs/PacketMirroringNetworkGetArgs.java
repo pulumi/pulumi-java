@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class PacketMirroringNetworkGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="url", required=true)
-      private final Input<String> url;
+      private final Output<String> url;
 
-    public Input<String> getUrl() {
+    public Output<String> getUrl() {
         return this.url;
     }
 
-    public PacketMirroringNetworkGetArgs(Input<String> url) {
+    public PacketMirroringNetworkGetArgs(Output<String> url) {
         this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
     }
 
     private PacketMirroringNetworkGetArgs() {
-        this.url = Input.empty();
+        this.url = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class PacketMirroringNetworkGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> url;
+        private Output<String> url;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class PacketMirroringNetworkGetArgs extends io.pulumi.resources.Res
     	      this.url = defaults.url;
         }
 
-        public Builder url(Input<String> url) {
+        public Builder url(Output<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
         public Builder url(String url) {
-            this.url = Input.of(Objects.requireNonNull(url));
+            this.url = Output.of(Objects.requireNonNull(url));
             return this;
         }
         public PacketMirroringNetworkGetArgs build() {

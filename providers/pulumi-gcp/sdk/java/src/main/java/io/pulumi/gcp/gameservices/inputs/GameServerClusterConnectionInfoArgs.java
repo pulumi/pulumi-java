@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGkeClusterReferenceArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="gkeClusterReference", required=true)
-      private final Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
+      private final Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
 
-    public Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> getGkeClusterReference() {
+    public Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> getGkeClusterReference() {
         return this.gkeClusterReference;
     }
 
@@ -33,22 +33,22 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-      private final Input<String> namespace;
+      private final Output<String> namespace;
 
-    public Input<String> getNamespace() {
+    public Output<String> getNamespace() {
         return this.namespace;
     }
 
     public GameServerClusterConnectionInfoArgs(
-        Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference,
-        Input<String> namespace) {
+        Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference,
+        Output<String> namespace) {
         this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
         this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
     }
 
     private GameServerClusterConnectionInfoArgs() {
-        this.gkeClusterReference = Input.empty();
-        this.namespace = Input.empty();
+        this.gkeClusterReference = Output.empty();
+        this.namespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
-        private Input<String> namespace;
+        private Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference;
+        private Output<String> namespace;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder gkeClusterReference(Input<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference) {
+        public Builder gkeClusterReference(Output<GameServerClusterConnectionInfoGkeClusterReferenceArgs> gkeClusterReference) {
             this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
             return this;
         }
 
         public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReferenceArgs gkeClusterReference) {
-            this.gkeClusterReference = Input.of(Objects.requireNonNull(gkeClusterReference));
+            this.gkeClusterReference = Output.of(Objects.requireNonNull(gkeClusterReference));
             return this;
         }
 
-        public Builder namespace(Input<String> namespace) {
+        public Builder namespace(Output<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Input.of(Objects.requireNonNull(namespace));
+            this.namespace = Output.of(Objects.requireNonNull(namespace));
             return this;
         }
         public GameServerClusterConnectionInfoArgs build() {

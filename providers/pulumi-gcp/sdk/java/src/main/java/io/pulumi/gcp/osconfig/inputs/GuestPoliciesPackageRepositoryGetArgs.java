@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryAptGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGooGetArgs;
@@ -23,10 +23,10 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="apt")
-      private final @Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt;
+      private final @Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt;
 
-    public Input<GuestPoliciesPackageRepositoryAptGetArgs> getApt() {
-        return this.apt == null ? Input.empty() : this.apt;
+    public Output<GuestPoliciesPackageRepositoryAptGetArgs> getApt() {
+        return this.apt == null ? Output.empty() : this.apt;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="goo")
-      private final @Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo;
+      private final @Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo;
 
-    public Input<GuestPoliciesPackageRepositoryGooGetArgs> getGoo() {
-        return this.goo == null ? Input.empty() : this.goo;
+    public Output<GuestPoliciesPackageRepositoryGooGetArgs> getGoo() {
+        return this.goo == null ? Output.empty() : this.goo;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="yum")
-      private final @Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum;
+      private final @Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum;
 
-    public Input<GuestPoliciesPackageRepositoryYumGetArgs> getYum() {
-        return this.yum == null ? Input.empty() : this.yum;
+    public Output<GuestPoliciesPackageRepositoryYumGetArgs> getYum() {
+        return this.yum == null ? Output.empty() : this.yum;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="zypper")
-      private final @Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
+      private final @Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
 
-    public Input<GuestPoliciesPackageRepositoryZypperGetArgs> getZypper() {
-        return this.zypper == null ? Input.empty() : this.zypper;
+    public Output<GuestPoliciesPackageRepositoryZypperGetArgs> getZypper() {
+        return this.zypper == null ? Output.empty() : this.zypper;
     }
 
     public GuestPoliciesPackageRepositoryGetArgs(
-        @Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt,
-        @Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo,
-        @Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum,
-        @Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
+        @Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt,
+        @Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo,
+        @Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum,
+        @Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -77,10 +77,10 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     }
 
     private GuestPoliciesPackageRepositoryGetArgs() {
-        this.apt = Input.empty();
-        this.goo = Input.empty();
-        this.yum = Input.empty();
-        this.zypper = Input.empty();
+        this.apt = Output.empty();
+        this.goo = Output.empty();
+        this.yum = Output.empty();
+        this.zypper = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt;
-        private @Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo;
-        private @Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum;
-        private @Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
+        private @Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt;
+        private @Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo;
+        private @Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum;
+        private @Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder apt(@Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt) {
+        public Builder apt(@Nullable Output<GuestPoliciesPackageRepositoryAptGetArgs> apt) {
             this.apt = apt;
             return this;
         }
 
         public Builder apt(@Nullable GuestPoliciesPackageRepositoryAptGetArgs apt) {
-            this.apt = Input.ofNullable(apt);
+            this.apt = Output.ofNullable(apt);
             return this;
         }
 
-        public Builder goo(@Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
+        public Builder goo(@Nullable Output<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
             this.goo = goo;
             return this;
         }
 
         public Builder goo(@Nullable GuestPoliciesPackageRepositoryGooGetArgs goo) {
-            this.goo = Input.ofNullable(goo);
+            this.goo = Output.ofNullable(goo);
             return this;
         }
 
-        public Builder yum(@Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
+        public Builder yum(@Nullable Output<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
 
         public Builder yum(@Nullable GuestPoliciesPackageRepositoryYumGetArgs yum) {
-            this.yum = Input.ofNullable(yum);
+            this.yum = Output.ofNullable(yum);
             return this;
         }
 
-        public Builder zypper(@Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
+        public Builder zypper(@Nullable Output<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
         public Builder zypper(@Nullable GuestPoliciesPackageRepositoryZypperGetArgs zypper) {
-            this.zypper = Input.ofNullable(zypper);
+            this.zypper = Output.ofNullable(zypper);
             return this;
         }
         public GuestPoliciesPackageRepositoryGetArgs build() {

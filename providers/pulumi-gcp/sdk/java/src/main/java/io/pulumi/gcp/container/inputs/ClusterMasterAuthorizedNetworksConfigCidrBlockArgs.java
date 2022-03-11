@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-      private final Input<String> cidrBlock;
+      private final Output<String> cidrBlock;
 
-    public Input<String> getCidrBlock() {
+    public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
 
@@ -31,22 +31,22 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     public ClusterMasterAuthorizedNetworksConfigCidrBlockArgs(
-        Input<String> cidrBlock,
-        @Nullable Input<String> displayName) {
+        Output<String> cidrBlock,
+        @Nullable Output<String> displayName) {
         this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
         this.displayName = displayName;
     }
 
     private ClusterMasterAuthorizedNetworksConfigCidrBlockArgs() {
-        this.cidrBlock = Input.empty();
-        this.displayName = Input.empty();
+        this.cidrBlock = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
     }
 
     public static final class Builder {
-        private Input<String> cidrBlock;
-        private @Nullable Input<String> displayName;
+        private Output<String> cidrBlock;
+        private @Nullable Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockArgs extends io
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder cidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Output<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
+            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
         public ClusterMasterAuthorizedNetworksConfigCidrBlockArgs build() {

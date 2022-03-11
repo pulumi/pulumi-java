@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="maximum")
-      private final @Nullable Input<Integer> maximum;
+      private final @Nullable Output<Integer> maximum;
 
-    public Input<Integer> getMaximum() {
-        return this.maximum == null ? Input.empty() : this.maximum;
+    public Output<Integer> getMaximum() {
+        return this.maximum == null ? Output.empty() : this.maximum;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="minimum")
-      private final @Nullable Input<Integer> minimum;
+      private final @Nullable Output<Integer> minimum;
 
-    public Input<Integer> getMinimum() {
-        return this.minimum == null ? Input.empty() : this.minimum;
+    public Output<Integer> getMinimum() {
+        return this.minimum == null ? Output.empty() : this.minimum;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceType", required=true)
-      private final Input<String> resourceType;
+      private final Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
+    public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
     public ClusterClusterAutoscalingResourceLimitGetArgs(
-        @Nullable Input<Integer> maximum,
-        @Nullable Input<Integer> minimum,
-        Input<String> resourceType) {
+        @Nullable Output<Integer> maximum,
+        @Nullable Output<Integer> minimum,
+        Output<String> resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
     }
 
     private ClusterClusterAutoscalingResourceLimitGetArgs() {
-        this.maximum = Input.empty();
-        this.minimum = Input.empty();
-        this.resourceType = Input.empty();
+        this.maximum = Output.empty();
+        this.minimum = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maximum;
-        private @Nullable Input<Integer> minimum;
-        private Input<String> resourceType;
+        private @Nullable Output<Integer> maximum;
+        private @Nullable Output<Integer> minimum;
+        private Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder maximum(@Nullable Input<Integer> maximum) {
+        public Builder maximum(@Nullable Output<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
 
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Input.ofNullable(maximum);
+            this.maximum = Output.ofNullable(maximum);
             return this;
         }
 
-        public Builder minimum(@Nullable Input<Integer> minimum) {
+        public Builder minimum(@Nullable Output<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
 
         public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = Input.ofNullable(minimum);
+            this.minimum = Output.ofNullable(minimum);
             return this;
         }
 
-        public Builder resourceType(Input<String> resourceType) {
+        public Builder resourceType(Output<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Input.of(Objects.requireNonNull(resourceType));
+            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
             return this;
         }
         public ClusterClusterAutoscalingResourceLimitGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
     public static final WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigArgs();
 
     @InputImport(name="instanceGroupManagerName")
-      private final @Nullable Input<String> instanceGroupManagerName;
+      private final @Nullable Output<String> instanceGroupManagerName;
 
-    public Input<String> getInstanceGroupManagerName() {
-        return this.instanceGroupManagerName == null ? Input.empty() : this.instanceGroupManagerName;
+    public Output<String> getInstanceGroupManagerName() {
+        return this.instanceGroupManagerName == null ? Output.empty() : this.instanceGroupManagerName;
     }
 
     @InputImport(name="instanceTemplateName")
-      private final @Nullable Input<String> instanceTemplateName;
+      private final @Nullable Output<String> instanceTemplateName;
 
-    public Input<String> getInstanceTemplateName() {
-        return this.instanceTemplateName == null ? Input.empty() : this.instanceTemplateName;
+    public Output<String> getInstanceTemplateName() {
+        return this.instanceTemplateName == null ? Output.empty() : this.instanceTemplateName;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigArgs(
-        @Nullable Input<String> instanceGroupManagerName,
-        @Nullable Input<String> instanceTemplateName) {
+        @Nullable Output<String> instanceGroupManagerName,
+        @Nullable Output<String> instanceTemplateName) {
         this.instanceGroupManagerName = instanceGroupManagerName;
         this.instanceTemplateName = instanceTemplateName;
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigArgs() {
-        this.instanceGroupManagerName = Input.empty();
-        this.instanceTemplateName = Input.empty();
+        this.instanceGroupManagerName = Output.empty();
+        this.instanceTemplateName = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceGroupManagerName;
-        private @Nullable Input<String> instanceTemplateName;
+        private @Nullable Output<String> instanceGroupManagerName;
+        private @Nullable Output<String> instanceTemplateName;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder instanceGroupManagerName(@Nullable Input<String> instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(@Nullable Output<String> instanceGroupManagerName) {
             this.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
 
         public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
-            this.instanceGroupManagerName = Input.ofNullable(instanceGroupManagerName);
+            this.instanceGroupManagerName = Output.ofNullable(instanceGroupManagerName);
             return this;
         }
 
-        public Builder instanceTemplateName(@Nullable Input<String> instanceTemplateName) {
+        public Builder instanceTemplateName(@Nullable Output<String> instanceTemplateName) {
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }
 
         public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
-            this.instanceTemplateName = Input.ofNullable(instanceTemplateName);
+            this.instanceTemplateName = Output.ofNullable(instanceTemplateName);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfigArgs build() {

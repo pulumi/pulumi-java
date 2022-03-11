@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs;
@@ -20,10 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
      * 
      */
     @InputImport(name="enforce")
-      private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
+      private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> getEnforce() {
-        return this.enforce == null ? Input.empty() : this.enforce;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> getEnforce() {
+        return this.enforce == null ? Output.empty() : this.enforce;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
      * 
      */
     @InputImport(name="validate", required=true)
-      private final Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
+      private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
 
-    public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> getValidate() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> getValidate() {
         return this.validate;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs(
-        @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce,
-        Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate) {
+        @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce,
+        Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate) {
         this.enforce = enforce;
         this.validate = Objects.requireNonNull(validate, "expected parameter 'validate' to be non-null");
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs() {
-        this.enforce = Input.empty();
-        this.validate = Input.empty();
+        this.enforce = Output.empty();
+        this.validate = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
     }
 
     public static final class Builder {
-        private @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
-        private Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
+        private @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce;
+        private Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs ex
     	      this.validate = defaults.validate;
         }
 
-        public Builder enforce(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce) {
+        public Builder enforce(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs> enforce) {
             this.enforce = enforce;
             return this;
         }
 
         public Builder enforce(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs enforce) {
-            this.enforce = Input.ofNullable(enforce);
+            this.enforce = Output.ofNullable(enforce);
             return this;
         }
 
-        public Builder validate(Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate) {
+        public Builder validate(Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs> validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
 
         public Builder validate(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGetArgs validate) {
-            this.validate = Input.of(Objects.requireNonNull(validate));
+            this.validate = Output.of(Objects.requireNonNull(validate));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs build() {

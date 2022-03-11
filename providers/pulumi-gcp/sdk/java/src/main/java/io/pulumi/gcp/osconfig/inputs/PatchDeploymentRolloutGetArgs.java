@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutDisruptionBudgetGetArgs;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disruptionBudget", required=true)
-      private final Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+      private final Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
 
-    public Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
+    public Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> getDisruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -36,22 +36,22 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<String> mode;
+      private final Output<String> mode;
 
-    public Input<String> getMode() {
+    public Output<String> getMode() {
         return this.mode;
     }
 
     public PatchDeploymentRolloutGetArgs(
-        Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget,
-        Input<String> mode) {
+        Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget,
+        Output<String> mode) {
         this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
         this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
     }
 
     private PatchDeploymentRolloutGetArgs() {
-        this.disruptionBudget = Input.empty();
-        this.mode = Input.empty();
+        this.disruptionBudget = Output.empty();
+        this.mode = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
-        private Input<String> mode;
+        private Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget;
+        private Output<String> mode;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PatchDeploymentRolloutGetArgs extends io.pulumi.resources.Res
     	      this.mode = defaults.mode;
         }
 
-        public Builder disruptionBudget(Input<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget) {
+        public Builder disruptionBudget(Output<PatchDeploymentRolloutDisruptionBudgetGetArgs> disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
         public Builder disruptionBudget(PatchDeploymentRolloutDisruptionBudgetGetArgs disruptionBudget) {
-            this.disruptionBudget = Input.of(Objects.requireNonNull(disruptionBudget));
+            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
             return this;
         }
 
-        public Builder mode(Input<String> mode) {
+        public Builder mode(Output<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(String mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
         public PatchDeploymentRolloutGetArgs build() {

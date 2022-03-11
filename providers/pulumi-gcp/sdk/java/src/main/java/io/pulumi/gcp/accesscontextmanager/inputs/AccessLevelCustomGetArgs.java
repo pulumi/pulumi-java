@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomExprGetArgs;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class AccessLevelCustomGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="expr", required=true)
-      private final Input<AccessLevelCustomExprGetArgs> expr;
+      private final Output<AccessLevelCustomExprGetArgs> expr;
 
-    public Input<AccessLevelCustomExprGetArgs> getExpr() {
+    public Output<AccessLevelCustomExprGetArgs> getExpr() {
         return this.expr;
     }
 
-    public AccessLevelCustomGetArgs(Input<AccessLevelCustomExprGetArgs> expr) {
+    public AccessLevelCustomGetArgs(Output<AccessLevelCustomExprGetArgs> expr) {
         this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
     }
 
     private AccessLevelCustomGetArgs() {
-        this.expr = Input.empty();
+        this.expr = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class AccessLevelCustomGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<AccessLevelCustomExprGetArgs> expr;
+        private Output<AccessLevelCustomExprGetArgs> expr;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class AccessLevelCustomGetArgs extends io.pulumi.resources.Resource
     	      this.expr = defaults.expr;
         }
 
-        public Builder expr(Input<AccessLevelCustomExprGetArgs> expr) {
+        public Builder expr(Output<AccessLevelCustomExprGetArgs> expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
         public Builder expr(AccessLevelCustomExprGetArgs expr) {
-            this.expr = Input.of(Objects.requireNonNull(expr));
+            this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
         }
         public AccessLevelCustomGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datafusion.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipAllocation", required=true)
-      private final Input<String> ipAllocation;
+      private final Output<String> ipAllocation;
 
-    public Input<String> getIpAllocation() {
+    public Output<String> getIpAllocation() {
         return this.ipAllocation;
     }
 
@@ -32,22 +32,22 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<String> network;
+      private final Output<String> network;
 
-    public Input<String> getNetwork() {
+    public Output<String> getNetwork() {
         return this.network;
     }
 
     public InstanceNetworkConfigGetArgs(
-        Input<String> ipAllocation,
-        Input<String> network) {
+        Output<String> ipAllocation,
+        Output<String> network) {
         this.ipAllocation = Objects.requireNonNull(ipAllocation, "expected parameter 'ipAllocation' to be non-null");
         this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
     }
 
     private InstanceNetworkConfigGetArgs() {
-        this.ipAllocation = Input.empty();
-        this.network = Input.empty();
+        this.ipAllocation = Output.empty();
+        this.network = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> ipAllocation;
-        private Input<String> network;
+        private Output<String> ipAllocation;
+        private Output<String> network;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class InstanceNetworkConfigGetArgs extends io.pulumi.resources.Reso
     	      this.network = defaults.network;
         }
 
-        public Builder ipAllocation(Input<String> ipAllocation) {
+        public Builder ipAllocation(Output<String> ipAllocation) {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
 
         public Builder ipAllocation(String ipAllocation) {
-            this.ipAllocation = Input.of(Objects.requireNonNull(ipAllocation));
+            this.ipAllocation = Output.of(Objects.requireNonNull(ipAllocation));
             return this;
         }
 
-        public Builder network(Input<String> network) {
+        public Builder network(Output<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(String network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
         public InstanceNetworkConfigGetArgs build() {

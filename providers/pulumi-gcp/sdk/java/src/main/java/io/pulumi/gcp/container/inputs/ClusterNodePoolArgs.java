@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolAutoscalingArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodePoolManagementArgs;
@@ -22,10 +22,10 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     public static final ClusterNodePoolArgs Empty = new ClusterNodePoolArgs();
 
     @InputImport(name="autoscaling")
-      private final @Nullable Input<ClusterNodePoolAutoscalingArgs> autoscaling;
+      private final @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
 
-    public Input<ClusterNodePoolAutoscalingArgs> getAutoscaling() {
-        return this.autoscaling == null ? Input.empty() : this.autoscaling;
+    public Output<ClusterNodePoolAutoscalingArgs> getAutoscaling() {
+        return this.autoscaling == null ? Output.empty() : this.autoscaling;
     }
 
     /**
@@ -38,38 +38,38 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="initialNodeCount")
-      private final @Nullable Input<Integer> initialNodeCount;
+      private final @Nullable Output<Integer> initialNodeCount;
 
-    public Input<Integer> getInitialNodeCount() {
-        return this.initialNodeCount == null ? Input.empty() : this.initialNodeCount;
+    public Output<Integer> getInitialNodeCount() {
+        return this.initialNodeCount == null ? Output.empty() : this.initialNodeCount;
     }
 
     @InputImport(name="instanceGroupUrls")
-      private final @Nullable Input<List<String>> instanceGroupUrls;
+      private final @Nullable Output<List<String>> instanceGroupUrls;
 
-    public Input<List<String>> getInstanceGroupUrls() {
-        return this.instanceGroupUrls == null ? Input.empty() : this.instanceGroupUrls;
+    public Output<List<String>> getInstanceGroupUrls() {
+        return this.instanceGroupUrls == null ? Output.empty() : this.instanceGroupUrls;
     }
 
     @InputImport(name="managedInstanceGroupUrls")
-      private final @Nullable Input<List<String>> managedInstanceGroupUrls;
+      private final @Nullable Output<List<String>> managedInstanceGroupUrls;
 
-    public Input<List<String>> getManagedInstanceGroupUrls() {
-        return this.managedInstanceGroupUrls == null ? Input.empty() : this.managedInstanceGroupUrls;
+    public Output<List<String>> getManagedInstanceGroupUrls() {
+        return this.managedInstanceGroupUrls == null ? Output.empty() : this.managedInstanceGroupUrls;
     }
 
     @InputImport(name="management")
-      private final @Nullable Input<ClusterNodePoolManagementArgs> management;
+      private final @Nullable Output<ClusterNodePoolManagementArgs> management;
 
-    public Input<ClusterNodePoolManagementArgs> getManagement() {
-        return this.management == null ? Input.empty() : this.management;
+    public Output<ClusterNodePoolManagementArgs> getManagement() {
+        return this.management == null ? Output.empty() : this.management;
     }
 
     @InputImport(name="maxPodsPerNode")
-      private final @Nullable Input<Integer> maxPodsPerNode;
+      private final @Nullable Output<Integer> maxPodsPerNode;
 
-    public Input<Integer> getMaxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
+    public Output<Integer> getMaxPodsPerNode() {
+        return this.maxPodsPerNode == null ? Output.empty() : this.maxPodsPerNode;
     }
 
     /**
@@ -78,17 +78,17 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     @InputImport(name="namePrefix")
-      private final @Nullable Input<String> namePrefix;
+      private final @Nullable Output<String> namePrefix;
 
-    public Input<String> getNamePrefix() {
-        return this.namePrefix == null ? Input.empty() : this.namePrefix;
+    public Output<String> getNamePrefix() {
+        return this.namePrefix == null ? Output.empty() : this.namePrefix;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkConfig")
-      private final @Nullable Input<ClusterNodePoolNetworkConfigArgs> networkConfig;
+      private final @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
 
-    public Input<ClusterNodePoolNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Input.empty() : this.networkConfig;
+    public Output<ClusterNodePoolNetworkConfigArgs> getNetworkConfig() {
+        return this.networkConfig == null ? Output.empty() : this.networkConfig;
     }
 
     /**
@@ -112,17 +112,17 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodeConfig")
-      private final @Nullable Input<ClusterNodePoolNodeConfigArgs> nodeConfig;
+      private final @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
 
-    public Input<ClusterNodePoolNodeConfigArgs> getNodeConfig() {
-        return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
+    public Output<ClusterNodePoolNodeConfigArgs> getNodeConfig() {
+        return this.nodeConfig == null ? Output.empty() : this.nodeConfig;
     }
 
     @InputImport(name="nodeCount")
-      private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Output<Integer> nodeCount;
 
-    public Input<Integer> getNodeCount() {
-        return this.nodeCount == null ? Input.empty() : this.nodeCount;
+    public Output<Integer> getNodeCount() {
+        return this.nodeCount == null ? Output.empty() : this.nodeCount;
     }
 
     /**
@@ -133,41 +133,41 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nodeLocations")
-      private final @Nullable Input<List<String>> nodeLocations;
+      private final @Nullable Output<List<String>> nodeLocations;
 
-    public Input<List<String>> getNodeLocations() {
-        return this.nodeLocations == null ? Input.empty() : this.nodeLocations;
+    public Output<List<String>> getNodeLocations() {
+        return this.nodeLocations == null ? Output.empty() : this.nodeLocations;
     }
 
     @InputImport(name="upgradeSettings")
-      private final @Nullable Input<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Input<ClusterNodePoolUpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
+    public Output<ClusterNodePoolUpgradeSettingsArgs> getUpgradeSettings() {
+        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
     }
 
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ClusterNodePoolArgs(
-        @Nullable Input<ClusterNodePoolAutoscalingArgs> autoscaling,
-        @Nullable Input<Integer> initialNodeCount,
-        @Nullable Input<List<String>> instanceGroupUrls,
-        @Nullable Input<List<String>> managedInstanceGroupUrls,
-        @Nullable Input<ClusterNodePoolManagementArgs> management,
-        @Nullable Input<Integer> maxPodsPerNode,
-        @Nullable Input<String> name,
-        @Nullable Input<String> namePrefix,
-        @Nullable Input<ClusterNodePoolNetworkConfigArgs> networkConfig,
-        @Nullable Input<ClusterNodePoolNodeConfigArgs> nodeConfig,
-        @Nullable Input<Integer> nodeCount,
-        @Nullable Input<List<String>> nodeLocations,
-        @Nullable Input<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings,
-        @Nullable Input<String> version) {
+        @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling,
+        @Nullable Output<Integer> initialNodeCount,
+        @Nullable Output<List<String>> instanceGroupUrls,
+        @Nullable Output<List<String>> managedInstanceGroupUrls,
+        @Nullable Output<ClusterNodePoolManagementArgs> management,
+        @Nullable Output<Integer> maxPodsPerNode,
+        @Nullable Output<String> name,
+        @Nullable Output<String> namePrefix,
+        @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig,
+        @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig,
+        @Nullable Output<Integer> nodeCount,
+        @Nullable Output<List<String>> nodeLocations,
+        @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings,
+        @Nullable Output<String> version) {
         this.autoscaling = autoscaling;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;
@@ -185,20 +185,20 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterNodePoolArgs() {
-        this.autoscaling = Input.empty();
-        this.initialNodeCount = Input.empty();
-        this.instanceGroupUrls = Input.empty();
-        this.managedInstanceGroupUrls = Input.empty();
-        this.management = Input.empty();
-        this.maxPodsPerNode = Input.empty();
-        this.name = Input.empty();
-        this.namePrefix = Input.empty();
-        this.networkConfig = Input.empty();
-        this.nodeConfig = Input.empty();
-        this.nodeCount = Input.empty();
-        this.nodeLocations = Input.empty();
-        this.upgradeSettings = Input.empty();
-        this.version = Input.empty();
+        this.autoscaling = Output.empty();
+        this.initialNodeCount = Output.empty();
+        this.instanceGroupUrls = Output.empty();
+        this.managedInstanceGroupUrls = Output.empty();
+        this.management = Output.empty();
+        this.maxPodsPerNode = Output.empty();
+        this.name = Output.empty();
+        this.namePrefix = Output.empty();
+        this.networkConfig = Output.empty();
+        this.nodeConfig = Output.empty();
+        this.nodeCount = Output.empty();
+        this.nodeLocations = Output.empty();
+        this.upgradeSettings = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,20 +210,20 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterNodePoolAutoscalingArgs> autoscaling;
-        private @Nullable Input<Integer> initialNodeCount;
-        private @Nullable Input<List<String>> instanceGroupUrls;
-        private @Nullable Input<List<String>> managedInstanceGroupUrls;
-        private @Nullable Input<ClusterNodePoolManagementArgs> management;
-        private @Nullable Input<Integer> maxPodsPerNode;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> namePrefix;
-        private @Nullable Input<ClusterNodePoolNetworkConfigArgs> networkConfig;
-        private @Nullable Input<ClusterNodePoolNodeConfigArgs> nodeConfig;
-        private @Nullable Input<Integer> nodeCount;
-        private @Nullable Input<List<String>> nodeLocations;
-        private @Nullable Input<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Input<String> version;
+        private @Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling;
+        private @Nullable Output<Integer> initialNodeCount;
+        private @Nullable Output<List<String>> instanceGroupUrls;
+        private @Nullable Output<List<String>> managedInstanceGroupUrls;
+        private @Nullable Output<ClusterNodePoolManagementArgs> management;
+        private @Nullable Output<Integer> maxPodsPerNode;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> namePrefix;
+        private @Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig;
+        private @Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig;
+        private @Nullable Output<Integer> nodeCount;
+        private @Nullable Output<List<String>> nodeLocations;
+        private @Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -247,143 +247,143 @@ public final class ClusterNodePoolArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder autoscaling(@Nullable Input<ClusterNodePoolAutoscalingArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Output<ClusterNodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
         public Builder autoscaling(@Nullable ClusterNodePoolAutoscalingArgs autoscaling) {
-            this.autoscaling = Input.ofNullable(autoscaling);
+            this.autoscaling = Output.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder initialNodeCount(@Nullable Input<Integer> initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Output<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
         public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
-            this.initialNodeCount = Input.ofNullable(initialNodeCount);
+            this.initialNodeCount = Output.ofNullable(initialNodeCount);
             return this;
         }
 
-        public Builder instanceGroupUrls(@Nullable Input<List<String>> instanceGroupUrls) {
+        public Builder instanceGroupUrls(@Nullable Output<List<String>> instanceGroupUrls) {
             this.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
 
         public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
-            this.instanceGroupUrls = Input.ofNullable(instanceGroupUrls);
+            this.instanceGroupUrls = Output.ofNullable(instanceGroupUrls);
             return this;
         }
 
-        public Builder managedInstanceGroupUrls(@Nullable Input<List<String>> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(@Nullable Output<List<String>> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
 
         public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
-            this.managedInstanceGroupUrls = Input.ofNullable(managedInstanceGroupUrls);
+            this.managedInstanceGroupUrls = Output.ofNullable(managedInstanceGroupUrls);
             return this;
         }
 
-        public Builder management(@Nullable Input<ClusterNodePoolManagementArgs> management) {
+        public Builder management(@Nullable Output<ClusterNodePoolManagementArgs> management) {
             this.management = management;
             return this;
         }
 
         public Builder management(@Nullable ClusterNodePoolManagementArgs management) {
-            this.management = Input.ofNullable(management);
+            this.management = Output.ofNullable(management);
             return this;
         }
 
-        public Builder maxPodsPerNode(@Nullable Input<Integer> maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
+            this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder namePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Output<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Input.ofNullable(namePrefix);
+            this.namePrefix = Output.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder networkConfig(@Nullable Input<ClusterNodePoolNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Output<ClusterNodePoolNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
         public Builder networkConfig(@Nullable ClusterNodePoolNetworkConfigArgs networkConfig) {
-            this.networkConfig = Input.ofNullable(networkConfig);
+            this.networkConfig = Output.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder nodeConfig(@Nullable Input<ClusterNodePoolNodeConfigArgs> nodeConfig) {
+        public Builder nodeConfig(@Nullable Output<ClusterNodePoolNodeConfigArgs> nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
 
         public Builder nodeConfig(@Nullable ClusterNodePoolNodeConfigArgs nodeConfig) {
-            this.nodeConfig = Input.ofNullable(nodeConfig);
+            this.nodeConfig = Output.ofNullable(nodeConfig);
             return this;
         }
 
-        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Input.ofNullable(nodeCount);
+            this.nodeCount = Output.ofNullable(nodeCount);
             return this;
         }
 
-        public Builder nodeLocations(@Nullable Input<List<String>> nodeLocations) {
+        public Builder nodeLocations(@Nullable Output<List<String>> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
 
         public Builder nodeLocations(@Nullable List<String> nodeLocations) {
-            this.nodeLocations = Input.ofNullable(nodeLocations);
+            this.nodeLocations = Output.ofNullable(nodeLocations);
             return this;
         }
 
-        public Builder upgradeSettings(@Nullable Input<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Output<ClusterNodePoolUpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
         public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Input.ofNullable(upgradeSettings);
+            this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ClusterNodePoolArgs build() {

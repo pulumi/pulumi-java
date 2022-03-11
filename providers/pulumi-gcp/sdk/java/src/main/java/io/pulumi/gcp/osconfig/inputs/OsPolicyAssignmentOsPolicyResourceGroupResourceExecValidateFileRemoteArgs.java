@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      * 
      */
     @InputImport(name="sha256Checksum")
-      private final @Nullable Input<String> sha256Checksum;
+      private final @Nullable Output<String> sha256Checksum;
 
-    public Input<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
+    public Output<String> getSha256Checksum() {
+        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs(
-        @Nullable Input<String> sha256Checksum,
-        Input<String> uri) {
+        @Nullable Output<String> sha256Checksum,
+        Output<String> uri) {
         this.sha256Checksum = sha256Checksum;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs() {
-        this.sha256Checksum = Input.empty();
-        this.uri = Input.empty();
+        this.sha256Checksum = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sha256Checksum;
-        private Input<String> uri;
+        private @Nullable Output<String> sha256Checksum;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     	      this.uri = defaults.uri;
         }
 
-        public Builder sha256Checksum(@Nullable Input<String> sha256Checksum) {
+        public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Input.ofNullable(sha256Checksum);
+            this.sha256Checksum = Output.ofNullable(sha256Checksum);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemoteArgs build() {

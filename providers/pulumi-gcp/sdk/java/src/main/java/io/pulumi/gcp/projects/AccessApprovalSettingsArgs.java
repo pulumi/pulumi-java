@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enrolledServices", required=true)
-      private final Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+      private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
-    public Input<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
         return this.enrolledServices;
     }
 
@@ -38,10 +38,10 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="notificationEmails")
-      private final @Nullable Input<List<String>> notificationEmails;
+      private final @Nullable Output<List<String>> notificationEmails;
 
-    public Input<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Input.empty() : this.notificationEmails;
+    public Output<List<String>> getNotificationEmails() {
+        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
     }
 
     /**
@@ -55,11 +55,11 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      */
     @Deprecated /* Deprecated in favor of `project_id` */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
     @Deprecated /* Deprecated in favor of `project_id` */
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -67,17 +67,17 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
     public AccessApprovalSettingsArgs(
-        Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
-        @Nullable Input<List<String>> notificationEmails,
-        @Nullable Input<String> project,
-        Input<String> projectId) {
+        Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices,
+        @Nullable Output<List<String>> notificationEmails,
+        @Nullable Output<String> project,
+        Output<String> projectId) {
         this.enrolledServices = Objects.requireNonNull(enrolledServices, "expected parameter 'enrolledServices' to be non-null");
         this.notificationEmails = notificationEmails;
         this.project = project;
@@ -85,10 +85,10 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Input.empty();
-        this.notificationEmails = Input.empty();
-        this.project = Input.empty();
-        this.projectId = Input.empty();
+        this.enrolledServices = Output.empty();
+        this.notificationEmails = Output.empty();
+        this.project = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,10 +100,10 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
-        private @Nullable Input<List<String>> notificationEmails;
-        private @Nullable Input<String> project;
-        private Input<String> projectId;
+        private Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
+        private @Nullable Output<List<String>> notificationEmails;
+        private @Nullable Output<String> project;
+        private Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -117,43 +117,43 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder enrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
+        public Builder enrolledServices(Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
 
         public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
-            this.enrolledServices = Input.of(Objects.requireNonNull(enrolledServices));
+            this.enrolledServices = Output.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
 
-        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Output<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Input.ofNullable(notificationEmails);
+            this.notificationEmails = Output.ofNullable(notificationEmails);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
         public AccessApprovalSettingsArgs build() {

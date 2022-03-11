@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class InstanceNetworkPerformanceConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="totalEgressBandwidthTier", required=true)
-      private final Input<String> totalEgressBandwidthTier;
+      private final Output<String> totalEgressBandwidthTier;
 
-    public Input<String> getTotalEgressBandwidthTier() {
+    public Output<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 
-    public InstanceNetworkPerformanceConfigGetArgs(Input<String> totalEgressBandwidthTier) {
+    public InstanceNetworkPerformanceConfigGetArgs(Output<String> totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier, "expected parameter 'totalEgressBandwidthTier' to be non-null");
     }
 
     private InstanceNetworkPerformanceConfigGetArgs() {
-        this.totalEgressBandwidthTier = Input.empty();
+        this.totalEgressBandwidthTier = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class InstanceNetworkPerformanceConfigGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> totalEgressBandwidthTier;
+        private Output<String> totalEgressBandwidthTier;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class InstanceNetworkPerformanceConfigGetArgs extends io.pulumi.res
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder totalEgressBandwidthTier(Input<String> totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(Output<String> totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
 
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
-            this.totalEgressBandwidthTier = Input.of(Objects.requireNonNull(totalEgressBandwidthTier));
+            this.totalEgressBandwidthTier = Output.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
         }
         public InstanceNetworkPerformanceConfigGetArgs build() {

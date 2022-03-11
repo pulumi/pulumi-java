@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tags;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -29,22 +29,22 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagValue", required=true)
-      private final Input<String> tagValue;
+      private final Output<String> tagValue;
 
-    public Input<String> getTagValue() {
+    public Output<String> getTagValue() {
         return this.tagValue;
     }
 
     public TagBindingArgs(
-        Input<String> parent,
-        Input<String> tagValue) {
+        Output<String> parent,
+        Output<String> tagValue) {
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
         this.tagValue = Objects.requireNonNull(tagValue, "expected parameter 'tagValue' to be non-null");
     }
 
     private TagBindingArgs() {
-        this.parent = Input.empty();
-        this.tagValue = Input.empty();
+        this.parent = Output.empty();
+        this.tagValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> parent;
-        private Input<String> tagValue;
+        private Output<String> parent;
+        private Output<String> tagValue;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder tagValue(Input<String> tagValue) {
+        public Builder tagValue(Output<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
         public Builder tagValue(String tagValue) {
-            this.tagValue = Input.of(Objects.requireNonNull(tagValue));
+            this.tagValue = Output.of(Objects.requireNonNull(tagValue));
             return this;
         }
         public TagBindingArgs build() {

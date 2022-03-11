@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,9 +15,9 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiIamPolicyArgs Empty = new ApiIamPolicyArgs();
 
     @InputImport(name="api", required=true)
-      private final Input<String> api;
+      private final Output<String> api;
 
-    public Input<String> getApi() {
+    public Output<String> getApi() {
         return this.api;
     }
 
@@ -27,9 +27,9 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
@@ -39,25 +39,25 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public ApiIamPolicyArgs(
-        Input<String> api,
-        Input<String> policyData,
-        @Nullable Input<String> project) {
+        Output<String> api,
+        Output<String> policyData,
+        @Nullable Output<String> project) {
         this.api = Objects.requireNonNull(api, "expected parameter 'api' to be non-null");
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
     }
 
     private ApiIamPolicyArgs() {
-        this.api = Input.empty();
-        this.policyData = Input.empty();
-        this.project = Input.empty();
+        this.api = Output.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,9 +69,9 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> api;
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
+        private Output<String> api;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -84,33 +84,33 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder api(Input<String> api) {
+        public Builder api(Output<String> api) {
             this.api = Objects.requireNonNull(api);
             return this;
         }
 
         public Builder api(String api) {
-            this.api = Input.of(Objects.requireNonNull(api));
+            this.api = Output.of(Objects.requireNonNull(api));
             return this;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public ApiIamPolicyArgs build() {

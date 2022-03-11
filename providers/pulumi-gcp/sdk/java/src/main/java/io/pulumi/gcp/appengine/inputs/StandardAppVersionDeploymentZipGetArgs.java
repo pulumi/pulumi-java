@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="filesCount")
-      private final @Nullable Input<Integer> filesCount;
+      private final @Nullable Output<Integer> filesCount;
 
-    public Input<Integer> getFilesCount() {
-        return this.filesCount == null ? Input.empty() : this.filesCount;
+    public Output<Integer> getFilesCount() {
+        return this.filesCount == null ? Output.empty() : this.filesCount;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sourceUrl", required=true)
-      private final Input<String> sourceUrl;
+      private final Output<String> sourceUrl;
 
-    public Input<String> getSourceUrl() {
+    public Output<String> getSourceUrl() {
         return this.sourceUrl;
     }
 
     public StandardAppVersionDeploymentZipGetArgs(
-        @Nullable Input<Integer> filesCount,
-        Input<String> sourceUrl) {
+        @Nullable Output<Integer> filesCount,
+        Output<String> sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = Objects.requireNonNull(sourceUrl, "expected parameter 'sourceUrl' to be non-null");
     }
 
     private StandardAppVersionDeploymentZipGetArgs() {
-        this.filesCount = Input.empty();
-        this.sourceUrl = Input.empty();
+        this.filesCount = Output.empty();
+        this.sourceUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> filesCount;
-        private Input<String> sourceUrl;
+        private @Nullable Output<Integer> filesCount;
+        private Output<String> sourceUrl;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class StandardAppVersionDeploymentZipGetArgs extends io.pulumi.reso
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder filesCount(@Nullable Input<Integer> filesCount) {
+        public Builder filesCount(@Nullable Output<Integer> filesCount) {
             this.filesCount = filesCount;
             return this;
         }
 
         public Builder filesCount(@Nullable Integer filesCount) {
-            this.filesCount = Input.ofNullable(filesCount);
+            this.filesCount = Output.ofNullable(filesCount);
             return this;
         }
 
-        public Builder sourceUrl(Input<String> sourceUrl) {
+        public Builder sourceUrl(Output<String> sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
 
         public Builder sourceUrl(String sourceUrl) {
-            this.sourceUrl = Input.of(Objects.requireNonNull(sourceUrl));
+            this.sourceUrl = Output.of(Objects.requireNonNull(sourceUrl));
             return this;
         }
         public StandardAppVersionDeploymentZipGetArgs build() {

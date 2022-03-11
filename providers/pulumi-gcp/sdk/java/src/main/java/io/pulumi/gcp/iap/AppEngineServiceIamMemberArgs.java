@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberConditionArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-      private final Input<String> appId;
+      private final Output<String> appId;
 
-    public Input<String> getAppId() {
+    public Output<String> getAppId() {
         return this.appId;
     }
 
@@ -32,16 +32,16 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<AppEngineServiceIamMemberConditionArgs> condition;
+      private final @Nullable Output<AppEngineServiceIamMemberConditionArgs> condition;
 
-    public Input<AppEngineServiceIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<AppEngineServiceIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -51,10 +51,10 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
@@ -75,19 +75,19 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public AppEngineServiceIamMemberArgs(
-        Input<String> appId,
-        @Nullable Input<AppEngineServiceIamMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role,
-        Input<String> service) {
+        Output<String> appId,
+        @Nullable Output<AppEngineServiceIamMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role,
+        Output<String> service) {
         this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -97,12 +97,12 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     }
 
     private AppEngineServiceIamMemberArgs() {
-        this.appId = Input.empty();
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
-        this.service = Input.empty();
+        this.appId = Output.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> appId;
-        private @Nullable Input<AppEngineServiceIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
-        private Input<String> service;
+        private Output<String> appId;
+        private @Nullable Output<AppEngineServiceIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class AppEngineServiceIamMemberArgs extends io.pulumi.resources.Res
     	      this.service = defaults.service;
         }
 
-        public Builder appId(Input<String> appId) {
+        public Builder appId(Output<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
         public Builder appId(String appId) {
-            this.appId = Input.of(Objects.requireNonNull(appId));
+            this.appId = Output.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder condition(@Nullable Input<AppEngineServiceIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<AppEngineServiceIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable AppEngineServiceIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public AppEngineServiceIamMemberArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalExperiments")
-      private final @Nullable Input<List<String>> additionalExperiments;
+      private final @Nullable Output<List<String>> additionalExperiments;
 
-    public Input<List<String>> getAdditionalExperiments() {
-        return this.additionalExperiments == null ? Input.empty() : this.additionalExperiments;
+    public Output<List<String>> getAdditionalExperiments() {
+        return this.additionalExperiments == null ? Output.empty() : this.additionalExperiments;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableStreamingEngine")
-      private final @Nullable Input<Boolean> enableStreamingEngine;
+      private final @Nullable Output<Boolean> enableStreamingEngine;
 
-    public Input<Boolean> getEnableStreamingEngine() {
-        return this.enableStreamingEngine == null ? Input.empty() : this.enableStreamingEngine;
+    public Output<Boolean> getEnableStreamingEngine() {
+        return this.enableStreamingEngine == null ? Output.empty() : this.enableStreamingEngine;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfiguration")
-      private final @Nullable Input<String> ipConfiguration;
+      private final @Nullable Output<String> ipConfiguration;
 
-    public Input<String> getIpConfiguration() {
-        return this.ipConfiguration == null ? Input.empty() : this.ipConfiguration;
+    public Output<String> getIpConfiguration() {
+        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId")
-      private final @Nullable Input<String> jobId;
+      private final @Nullable Output<String> jobId;
 
-    public Input<String> getJobId() {
-        return this.jobId == null ? Input.empty() : this.jobId;
+    public Output<String> getJobId() {
+        return this.jobId == null ? Output.empty() : this.jobId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,Object>> labels;
+      private final @Nullable Output<Map<String,Object>> labels;
 
-    public Input<Map<String,Object>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,Object>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxWorkers")
-      private final @Nullable Input<Integer> maxWorkers;
+      private final @Nullable Output<Integer> maxWorkers;
 
-    public Input<Integer> getMaxWorkers() {
-        return this.maxWorkers == null ? Input.empty() : this.maxWorkers;
+    public Output<Integer> getMaxWorkers() {
+        return this.maxWorkers == null ? Output.empty() : this.maxWorkers;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="onDelete")
-      private final @Nullable Input<String> onDelete;
+      private final @Nullable Output<String> onDelete;
 
-    public Input<String> getOnDelete() {
-        return this.onDelete == null ? Input.empty() : this.onDelete;
+    public Output<String> getOnDelete() {
+        return this.onDelete == null ? Output.empty() : this.onDelete;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -182,10 +182,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -193,10 +193,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -204,10 +204,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-      private final @Nullable Input<String> subnetwork;
+      private final @Nullable Output<String> subnetwork;
 
-    public Input<String> getSubnetwork() {
-        return this.subnetwork == null ? Input.empty() : this.subnetwork;
+    public Output<String> getSubnetwork() {
+        return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
     /**
@@ -215,10 +215,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempGcsLocation")
-      private final @Nullable Input<String> tempGcsLocation;
+      private final @Nullable Output<String> tempGcsLocation;
 
-    public Input<String> getTempGcsLocation() {
-        return this.tempGcsLocation == null ? Input.empty() : this.tempGcsLocation;
+    public Output<String> getTempGcsLocation() {
+        return this.tempGcsLocation == null ? Output.empty() : this.tempGcsLocation;
     }
 
     /**
@@ -226,10 +226,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateGcsPath")
-      private final @Nullable Input<String> templateGcsPath;
+      private final @Nullable Output<String> templateGcsPath;
 
-    public Input<String> getTemplateGcsPath() {
-        return this.templateGcsPath == null ? Input.empty() : this.templateGcsPath;
+    public Output<String> getTemplateGcsPath() {
+        return this.templateGcsPath == null ? Output.empty() : this.templateGcsPath;
     }
 
     /**
@@ -238,10 +238,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformNameMapping")
-      private final @Nullable Input<Map<String,Object>> transformNameMapping;
+      private final @Nullable Output<Map<String,Object>> transformNameMapping;
 
-    public Input<Map<String,Object>> getTransformNameMapping() {
-        return this.transformNameMapping == null ? Input.empty() : this.transformNameMapping;
+    public Output<Map<String,Object>> getTransformNameMapping() {
+        return this.transformNameMapping == null ? Output.empty() : this.transformNameMapping;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -260,35 +260,35 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public JobState(
-        @Nullable Input<List<String>> additionalExperiments,
-        @Nullable Input<Boolean> enableStreamingEngine,
-        @Nullable Input<String> ipConfiguration,
-        @Nullable Input<String> jobId,
-        @Nullable Input<String> kmsKeyName,
-        @Nullable Input<Map<String,Object>> labels,
-        @Nullable Input<String> machineType,
-        @Nullable Input<Integer> maxWorkers,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<String> onDelete,
-        @Nullable Input<Map<String,Object>> parameters,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> serviceAccountEmail,
-        @Nullable Input<String> state,
-        @Nullable Input<String> subnetwork,
-        @Nullable Input<String> tempGcsLocation,
-        @Nullable Input<String> templateGcsPath,
-        @Nullable Input<Map<String,Object>> transformNameMapping,
-        @Nullable Input<String> type,
-        @Nullable Input<String> zone) {
+        @Nullable Output<List<String>> additionalExperiments,
+        @Nullable Output<Boolean> enableStreamingEngine,
+        @Nullable Output<String> ipConfiguration,
+        @Nullable Output<String> jobId,
+        @Nullable Output<String> kmsKeyName,
+        @Nullable Output<Map<String,Object>> labels,
+        @Nullable Output<String> machineType,
+        @Nullable Output<Integer> maxWorkers,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<String> onDelete,
+        @Nullable Output<Map<String,Object>> parameters,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> serviceAccountEmail,
+        @Nullable Output<String> state,
+        @Nullable Output<String> subnetwork,
+        @Nullable Output<String> tempGcsLocation,
+        @Nullable Output<String> templateGcsPath,
+        @Nullable Output<Map<String,Object>> transformNameMapping,
+        @Nullable Output<String> type,
+        @Nullable Output<String> zone) {
         this.additionalExperiments = additionalExperiments;
         this.enableStreamingEngine = enableStreamingEngine;
         this.ipConfiguration = ipConfiguration;
@@ -314,28 +314,28 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobState() {
-        this.additionalExperiments = Input.empty();
-        this.enableStreamingEngine = Input.empty();
-        this.ipConfiguration = Input.empty();
-        this.jobId = Input.empty();
-        this.kmsKeyName = Input.empty();
-        this.labels = Input.empty();
-        this.machineType = Input.empty();
-        this.maxWorkers = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.onDelete = Input.empty();
-        this.parameters = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.serviceAccountEmail = Input.empty();
-        this.state = Input.empty();
-        this.subnetwork = Input.empty();
-        this.tempGcsLocation = Input.empty();
-        this.templateGcsPath = Input.empty();
-        this.transformNameMapping = Input.empty();
-        this.type = Input.empty();
-        this.zone = Input.empty();
+        this.additionalExperiments = Output.empty();
+        this.enableStreamingEngine = Output.empty();
+        this.ipConfiguration = Output.empty();
+        this.jobId = Output.empty();
+        this.kmsKeyName = Output.empty();
+        this.labels = Output.empty();
+        this.machineType = Output.empty();
+        this.maxWorkers = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.onDelete = Output.empty();
+        this.parameters = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.state = Output.empty();
+        this.subnetwork = Output.empty();
+        this.tempGcsLocation = Output.empty();
+        this.templateGcsPath = Output.empty();
+        this.transformNameMapping = Output.empty();
+        this.type = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -347,28 +347,28 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> additionalExperiments;
-        private @Nullable Input<Boolean> enableStreamingEngine;
-        private @Nullable Input<String> ipConfiguration;
-        private @Nullable Input<String> jobId;
-        private @Nullable Input<String> kmsKeyName;
-        private @Nullable Input<Map<String,Object>> labels;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<Integer> maxWorkers;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<String> onDelete;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> serviceAccountEmail;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> subnetwork;
-        private @Nullable Input<String> tempGcsLocation;
-        private @Nullable Input<String> templateGcsPath;
-        private @Nullable Input<Map<String,Object>> transformNameMapping;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<List<String>> additionalExperiments;
+        private @Nullable Output<Boolean> enableStreamingEngine;
+        private @Nullable Output<String> ipConfiguration;
+        private @Nullable Output<String> jobId;
+        private @Nullable Output<String> kmsKeyName;
+        private @Nullable Output<Map<String,Object>> labels;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<Integer> maxWorkers;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<String> onDelete;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> serviceAccountEmail;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> subnetwork;
+        private @Nullable Output<String> tempGcsLocation;
+        private @Nullable Output<String> templateGcsPath;
+        private @Nullable Output<Map<String,Object>> transformNameMapping;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -400,223 +400,223 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder additionalExperiments(@Nullable Input<List<String>> additionalExperiments) {
+        public Builder additionalExperiments(@Nullable Output<List<String>> additionalExperiments) {
             this.additionalExperiments = additionalExperiments;
             return this;
         }
 
         public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
-            this.additionalExperiments = Input.ofNullable(additionalExperiments);
+            this.additionalExperiments = Output.ofNullable(additionalExperiments);
             return this;
         }
 
-        public Builder enableStreamingEngine(@Nullable Input<Boolean> enableStreamingEngine) {
+        public Builder enableStreamingEngine(@Nullable Output<Boolean> enableStreamingEngine) {
             this.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
 
         public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
-            this.enableStreamingEngine = Input.ofNullable(enableStreamingEngine);
+            this.enableStreamingEngine = Output.ofNullable(enableStreamingEngine);
             return this;
         }
 
-        public Builder ipConfiguration(@Nullable Input<String> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Output<String> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
         public Builder ipConfiguration(@Nullable String ipConfiguration) {
-            this.ipConfiguration = Input.ofNullable(ipConfiguration);
+            this.ipConfiguration = Output.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder jobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Output<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Input.ofNullable(jobId);
+            this.jobId = Output.ofNullable(jobId);
             return this;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Output<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder maxWorkers(@Nullable Input<Integer> maxWorkers) {
+        public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Input.ofNullable(maxWorkers);
+            this.maxWorkers = Output.ofNullable(maxWorkers);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder onDelete(@Nullable Input<String> onDelete) {
+        public Builder onDelete(@Nullable Output<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
 
         public Builder onDelete(@Nullable String onDelete) {
-            this.onDelete = Input.ofNullable(onDelete);
+            this.onDelete = Output.ofNullable(onDelete);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder subnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Output<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Input.ofNullable(subnetwork);
+            this.subnetwork = Output.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder tempGcsLocation(@Nullable Input<String> tempGcsLocation) {
+        public Builder tempGcsLocation(@Nullable Output<String> tempGcsLocation) {
             this.tempGcsLocation = tempGcsLocation;
             return this;
         }
 
         public Builder tempGcsLocation(@Nullable String tempGcsLocation) {
-            this.tempGcsLocation = Input.ofNullable(tempGcsLocation);
+            this.tempGcsLocation = Output.ofNullable(tempGcsLocation);
             return this;
         }
 
-        public Builder templateGcsPath(@Nullable Input<String> templateGcsPath) {
+        public Builder templateGcsPath(@Nullable Output<String> templateGcsPath) {
             this.templateGcsPath = templateGcsPath;
             return this;
         }
 
         public Builder templateGcsPath(@Nullable String templateGcsPath) {
-            this.templateGcsPath = Input.ofNullable(templateGcsPath);
+            this.templateGcsPath = Output.ofNullable(templateGcsPath);
             return this;
         }
 
-        public Builder transformNameMapping(@Nullable Input<Map<String,Object>> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Output<Map<String,Object>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
 
         public Builder transformNameMapping(@Nullable Map<String,Object> transformNameMapping) {
-            this.transformNameMapping = Input.ofNullable(transformNameMapping);
+            this.transformNameMapping = Output.ofNullable(transformNameMapping);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public JobState build() {

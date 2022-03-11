@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     /**
@@ -96,20 +96,20 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="workloadIdentityPoolId")
-      private final @Nullable Input<String> workloadIdentityPoolId;
+      private final @Nullable Output<String> workloadIdentityPoolId;
 
-    public Input<String> getWorkloadIdentityPoolId() {
-        return this.workloadIdentityPoolId == null ? Input.empty() : this.workloadIdentityPoolId;
+    public Output<String> getWorkloadIdentityPoolId() {
+        return this.workloadIdentityPoolId == null ? Output.empty() : this.workloadIdentityPoolId;
     }
 
     public WorkloadIdentityPoolState(
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> state,
-        @Nullable Input<String> workloadIdentityPoolId) {
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> state,
+        @Nullable Output<String> workloadIdentityPoolId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;
@@ -120,13 +120,13 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     }
 
     private WorkloadIdentityPoolState() {
-        this.description = Input.empty();
-        this.disabled = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.state = Input.empty();
-        this.workloadIdentityPoolId = Input.empty();
+        this.description = Output.empty();
+        this.disabled = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.state = Output.empty();
+        this.workloadIdentityPoolId = Output.empty();
     }
 
     public static Builder builder() {
@@ -138,13 +138,13 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> state;
-        private @Nullable Input<String> workloadIdentityPoolId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> state;
+        private @Nullable Output<String> workloadIdentityPoolId;
 
         public Builder() {
     	      // Empty
@@ -161,73 +161,73 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
     	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
 
-        public Builder workloadIdentityPoolId(@Nullable Input<String> workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(@Nullable Output<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
         public Builder workloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Input.ofNullable(workloadIdentityPoolId);
+            this.workloadIdentityPoolId = Output.ofNullable(workloadIdentityPoolId);
             return this;
         }
         public WorkloadIdentityPoolState build() {

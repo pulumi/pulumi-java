@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class NodePoolNodeConfigTaintArgs extends io.pulumi.resources.Resou
     public static final NodePoolNodeConfigTaintArgs Empty = new NodePoolNodeConfigTaintArgs();
 
     @InputImport(name="effect", required=true)
-      private final Input<String> effect;
+      private final Output<String> effect;
 
-    public Input<String> getEffect() {
+    public Output<String> getEffect() {
         return this.effect;
     }
 
     @InputImport(name="key", required=true)
-      private final Input<String> key;
+      private final Output<String> key;
 
-    public Input<String> getKey() {
+    public Output<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public NodePoolNodeConfigTaintArgs(
-        Input<String> effect,
-        Input<String> key,
-        Input<String> value) {
+        Output<String> effect,
+        Output<String> key,
+        Output<String> value) {
         this.effect = Objects.requireNonNull(effect, "expected parameter 'effect' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private NodePoolNodeConfigTaintArgs() {
-        this.effect = Input.empty();
-        this.key = Input.empty();
-        this.value = Input.empty();
+        this.effect = Output.empty();
+        this.key = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class NodePoolNodeConfigTaintArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> effect;
-        private Input<String> key;
-        private Input<String> value;
+        private Output<String> effect;
+        private Output<String> key;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class NodePoolNodeConfigTaintArgs extends io.pulumi.resources.Resou
     	      this.value = defaults.value;
         }
 
-        public Builder effect(Input<String> effect) {
+        public Builder effect(Output<String> effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
         public Builder effect(String effect) {
-            this.effect = Input.of(Objects.requireNonNull(effect));
+            this.effect = Output.of(Objects.requireNonNull(effect));
             return this;
         }
 
-        public Builder key(Input<String> key) {
+        public Builder key(Output<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(String key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public NodePoolNodeConfigTaintArgs build() {

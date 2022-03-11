@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectArgs;
@@ -18,10 +18,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     public static final CertificateCertificateDescriptionSubjectDescriptionArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionArgs();
 
     @InputImport(name="hexSerialNumber")
-      private final @Nullable Input<String> hexSerialNumber;
+      private final @Nullable Output<String> hexSerialNumber;
 
-    public Input<String> getHexSerialNumber() {
-        return this.hexSerialNumber == null ? Input.empty() : this.hexSerialNumber;
+    public Output<String> getHexSerialNumber() {
+        return this.hexSerialNumber == null ? Output.empty() : this.hexSerialNumber;
     }
 
     /**
@@ -31,24 +31,24 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="lifetime")
-      private final @Nullable Input<String> lifetime;
+      private final @Nullable Output<String> lifetime;
 
-    public Input<String> getLifetime() {
-        return this.lifetime == null ? Input.empty() : this.lifetime;
+    public Output<String> getLifetime() {
+        return this.lifetime == null ? Output.empty() : this.lifetime;
     }
 
     @InputImport(name="notAfterTime")
-      private final @Nullable Input<String> notAfterTime;
+      private final @Nullable Output<String> notAfterTime;
 
-    public Input<String> getNotAfterTime() {
-        return this.notAfterTime == null ? Input.empty() : this.notAfterTime;
+    public Output<String> getNotAfterTime() {
+        return this.notAfterTime == null ? Output.empty() : this.notAfterTime;
     }
 
     @InputImport(name="notBeforeTime")
-      private final @Nullable Input<String> notBeforeTime;
+      private final @Nullable Output<String> notBeforeTime;
 
-    public Input<String> getNotBeforeTime() {
-        return this.notBeforeTime == null ? Input.empty() : this.notBeforeTime;
+    public Output<String> getNotBeforeTime() {
+        return this.notBeforeTime == null ? Output.empty() : this.notBeforeTime;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="subjectAltNames")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
 
-    public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> getSubjectAltNames() {
-        return this.subjectAltNames == null ? Input.empty() : this.subjectAltNames;
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> getSubjectAltNames() {
+        return this.subjectAltNames == null ? Output.empty() : this.subjectAltNames;
     }
 
     /**
@@ -69,19 +69,19 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
      * 
      */
     @InputImport(name="subjects")
-      private final @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
+      private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
 
-    public Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> getSubjects() {
-        return this.subjects == null ? Input.empty() : this.subjects;
+    public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> getSubjects() {
+        return this.subjects == null ? Output.empty() : this.subjects;
     }
 
     public CertificateCertificateDescriptionSubjectDescriptionArgs(
-        @Nullable Input<String> hexSerialNumber,
-        @Nullable Input<String> lifetime,
-        @Nullable Input<String> notAfterTime,
-        @Nullable Input<String> notBeforeTime,
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames,
-        @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
+        @Nullable Output<String> hexSerialNumber,
+        @Nullable Output<String> lifetime,
+        @Nullable Output<String> notAfterTime,
+        @Nullable Output<String> notBeforeTime,
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames,
+        @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
         this.notAfterTime = notAfterTime;
@@ -91,12 +91,12 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionArgs() {
-        this.hexSerialNumber = Input.empty();
-        this.lifetime = Input.empty();
-        this.notAfterTime = Input.empty();
-        this.notBeforeTime = Input.empty();
-        this.subjectAltNames = Input.empty();
-        this.subjects = Input.empty();
+        this.hexSerialNumber = Output.empty();
+        this.lifetime = Output.empty();
+        this.notAfterTime = Output.empty();
+        this.notBeforeTime = Output.empty();
+        this.subjectAltNames = Output.empty();
+        this.subjects = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hexSerialNumber;
-        private @Nullable Input<String> lifetime;
-        private @Nullable Input<String> notAfterTime;
-        private @Nullable Input<String> notBeforeTime;
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
-        private @Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
+        private @Nullable Output<String> hexSerialNumber;
+        private @Nullable Output<String> lifetime;
+        private @Nullable Output<String> notAfterTime;
+        private @Nullable Output<String> notBeforeTime;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
+        private @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder hexSerialNumber(@Nullable Input<String> hexSerialNumber) {
+        public Builder hexSerialNumber(@Nullable Output<String> hexSerialNumber) {
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
 
         public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
-            this.hexSerialNumber = Input.ofNullable(hexSerialNumber);
+            this.hexSerialNumber = Output.ofNullable(hexSerialNumber);
             return this;
         }
 
-        public Builder lifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Output<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Input.ofNullable(lifetime);
+            this.lifetime = Output.ofNullable(lifetime);
             return this;
         }
 
-        public Builder notAfterTime(@Nullable Input<String> notAfterTime) {
+        public Builder notAfterTime(@Nullable Output<String> notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
 
         public Builder notAfterTime(@Nullable String notAfterTime) {
-            this.notAfterTime = Input.ofNullable(notAfterTime);
+            this.notAfterTime = Output.ofNullable(notAfterTime);
             return this;
         }
 
-        public Builder notBeforeTime(@Nullable Input<String> notBeforeTime) {
+        public Builder notBeforeTime(@Nullable Output<String> notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
 
         public Builder notBeforeTime(@Nullable String notBeforeTime) {
-            this.notBeforeTime = Input.ofNullable(notBeforeTime);
+            this.notBeforeTime = Output.ofNullable(notBeforeTime);
             return this;
         }
 
-        public Builder subjectAltNames(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
         public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs> subjectAltNames) {
-            this.subjectAltNames = Input.ofNullable(subjectAltNames);
+            this.subjectAltNames = Output.ofNullable(subjectAltNames);
             return this;
         }
 
-        public Builder subjects(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
+        public Builder subjects(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
             this.subjects = subjects;
             return this;
         }
 
         public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs> subjects) {
-            this.subjects = Input.ofNullable(subjects);
+            this.subjects = Output.ofNullable(subjects);
             return this;
         }
         public CertificateCertificateDescriptionSubjectDescriptionArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.servicedirectory;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -140,14 +139,14 @@ public class NamespaceIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamPolicy(String name, NamespaceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamPolicy:NamespaceIamPolicy", name, args == null ? NamespaceIamPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:servicedirectory/namespaceIamPolicy:NamespaceIamPolicy", name, args == null ? NamespaceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NamespaceIamPolicy(String name, Input<String> id, @Nullable NamespaceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NamespaceIamPolicy(String name, Output<String> id, @Nullable NamespaceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:servicedirectory/namespaceIamPolicy:NamespaceIamPolicy", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -163,7 +162,7 @@ public class NamespaceIamPolicy extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NamespaceIamPolicy get(String name, Input<String> id, @Nullable NamespaceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NamespaceIamPolicy get(String name, Output<String> id, @Nullable NamespaceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceIamPolicy(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-      private final Input<String> pubsubTopic;
+      private final Output<String> pubsubTopic;
 
-    public Input<String> getPubsubTopic() {
+    public Output<String> getPubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public FhirStoreNotificationConfigArgs(Input<String> pubsubTopic) {
+    public FhirStoreNotificationConfigArgs(Output<String> pubsubTopic) {
         this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
     }
 
     private FhirStoreNotificationConfigArgs() {
-        this.pubsubTopic = Input.empty();
+        this.pubsubTopic = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> pubsubTopic;
+        private Output<String> pubsubTopic;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder pubsubTopic(Input<String> pubsubTopic) {
+        public Builder pubsubTopic(Output<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
+            this.pubsubTopic = Output.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
         public FhirStoreNotificationConfigArgs build() {

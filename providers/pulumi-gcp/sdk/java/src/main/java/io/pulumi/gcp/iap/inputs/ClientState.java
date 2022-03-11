@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brand")
-      private final @Nullable Input<String> brand;
+      private final @Nullable Output<String> brand;
 
-    public Input<String> getBrand() {
-        return this.brand == null ? Input.empty() : this.brand;
+    public Output<String> getBrand() {
+        return this.brand == null ? Output.empty() : this.brand;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public ClientState(
-        @Nullable Input<String> brand,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> secret) {
+        @Nullable Output<String> brand,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> secret) {
         this.brand = brand;
         this.clientId = clientId;
         this.displayName = displayName;
@@ -72,10 +72,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClientState() {
-        this.brand = Input.empty();
-        this.clientId = Input.empty();
-        this.displayName = Input.empty();
-        this.secret = Input.empty();
+        this.brand = Output.empty();
+        this.clientId = Output.empty();
+        this.displayName = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> brand;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> secret;
+        private @Nullable Output<String> brand;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder brand(@Nullable Input<String> brand) {
+        public Builder brand(@Nullable Output<String> brand) {
             this.brand = brand;
             return this;
         }
 
         public Builder brand(@Nullable String brand) {
-            this.brand = Input.ofNullable(brand);
+            this.brand = Output.ofNullable(brand);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public ClientState build() {

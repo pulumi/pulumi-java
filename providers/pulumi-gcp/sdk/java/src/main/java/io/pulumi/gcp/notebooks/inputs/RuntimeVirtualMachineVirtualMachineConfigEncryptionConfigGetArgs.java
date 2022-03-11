@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
      * 
      */
     @InputImport(name="kmsKey")
-      private final @Nullable Input<String> kmsKey;
+      private final @Nullable Output<String> kmsKey;
 
-    public Input<String> getKmsKey() {
-        return this.kmsKey == null ? Input.empty() : this.kmsKey;
+    public Output<String> getKmsKey() {
+        return this.kmsKey == null ? Output.empty() : this.kmsKey;
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(@Nullable Input<String> kmsKey) {
+    public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs(@Nullable Output<String> kmsKey) {
         this.kmsKey = kmsKey;
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs() {
-        this.kmsKey = Input.empty();
+        this.kmsKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKey;
+        private @Nullable Output<String> kmsKey;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetA
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder kmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Output<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Input.ofNullable(kmsKey);
+            this.kmsKey = Output.ofNullable(kmsKey);
             return this;
         }
         public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs build() {

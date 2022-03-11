@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -314,14 +313,14 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Agent(String name, AgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/agent:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:diagflow/agent:Agent", name, args == null ? AgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Agent(String name, Input<String> id, @Nullable AgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Agent(String name, Output<String> id, @Nullable AgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:diagflow/agent:Agent", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -337,7 +336,7 @@ public class Agent extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Agent get(String name, Input<String> id, @Nullable AgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Agent get(String name, Output<String> id, @Nullable AgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Agent(name, id, state, options);
     }
 }

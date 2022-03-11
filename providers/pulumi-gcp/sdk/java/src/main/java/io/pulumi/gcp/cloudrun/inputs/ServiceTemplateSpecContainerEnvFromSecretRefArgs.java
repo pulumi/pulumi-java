@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs;
 import java.lang.Boolean;
@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
      * 
      */
     @InputImport(name="localObjectReference")
-      private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
+      private final @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
 
-    public Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> getLocalObjectReference() {
-        return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
+    public Output<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> getLocalObjectReference() {
+        return this.localObjectReference == null ? Output.empty() : this.localObjectReference;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
      * 
      */
     @InputImport(name="optional")
-      private final @Nullable Input<Boolean> optional;
+      private final @Nullable Output<Boolean> optional;
 
-    public Input<Boolean> getOptional() {
-        return this.optional == null ? Input.empty() : this.optional;
+    public Output<Boolean> getOptional() {
+        return this.optional == null ? Output.empty() : this.optional;
     }
 
     public ServiceTemplateSpecContainerEnvFromSecretRefArgs(
-        @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference,
-        @Nullable Input<Boolean> optional) {
+        @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference,
+        @Nullable Output<Boolean> optional) {
         this.localObjectReference = localObjectReference;
         this.optional = optional;
     }
 
     private ServiceTemplateSpecContainerEnvFromSecretRefArgs() {
-        this.localObjectReference = Input.empty();
-        this.optional = Input.empty();
+        this.localObjectReference = Output.empty();
+        this.optional = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Input<Boolean> optional;
+        private @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
+        private @Nullable Output<Boolean> optional;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
     	      this.optional = defaults.optional;
         }
 
-        public Builder localObjectReference(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
         public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Input.ofNullable(localObjectReference);
+            this.localObjectReference = Output.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder optional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Output<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
         public Builder optional(@Nullable Boolean optional) {
-            this.optional = Input.ofNullable(optional);
+            this.optional = Output.ofNullable(optional);
             return this;
         }
         public ServiceTemplateSpecContainerEnvFromSecretRefArgs build() {

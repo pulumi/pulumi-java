@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs;
@@ -25,10 +25,10 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="additionalExtensions")
-      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
+      private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
 
-    public Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
+    public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
+        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="aiaOcspServers")
-      private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Output<List<String>> aiaOcspServers;
 
-    public Input<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
+    public Output<List<String>> getAiaOcspServers() {
+        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="caOptions", required=true)
-      private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
+      private final Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
 
-    public Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> getCaOptions() {
+    public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> getCaOptions() {
         return this.caOptions;
     }
 
@@ -61,9 +61,9 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyUsage", required=true)
-      private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
+      private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
 
-    public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> getKeyUsage() {
+    public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> getKeyUsage() {
         return this.keyUsage;
     }
 
@@ -73,18 +73,18 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="policyIds")
-      private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
+      private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
-    public Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Input.empty() : this.policyIds;
+    public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> getPolicyIds() {
+        return this.policyIds == null ? Output.empty() : this.policyIds;
     }
 
     public CaPoolIssuancePolicyBaselineValuesArgs(
-        @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions,
-        @Nullable Input<List<String>> aiaOcspServers,
-        Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions,
-        Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage,
-        @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds) {
+        @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions,
+        @Nullable Output<List<String>> aiaOcspServers,
+        Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions,
+        Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage,
+        @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = Objects.requireNonNull(caOptions, "expected parameter 'caOptions' to be non-null");
@@ -93,11 +93,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     }
 
     private CaPoolIssuancePolicyBaselineValuesArgs() {
-        this.additionalExtensions = Input.empty();
-        this.aiaOcspServers = Input.empty();
-        this.caOptions = Input.empty();
-        this.keyUsage = Input.empty();
-        this.policyIds = Input.empty();
+        this.additionalExtensions = Output.empty();
+        this.aiaOcspServers = Output.empty();
+        this.caOptions = Output.empty();
+        this.keyUsage = Output.empty();
+        this.policyIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
-        private @Nullable Input<List<String>> aiaOcspServers;
-        private Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
-        private Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
-        private @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
+        private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
+        private @Nullable Output<List<String>> aiaOcspServers;
+        private Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
+        private Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
+        private @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder additionalExtensions(@Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
         public Builder additionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Input.ofNullable(additionalExtensions);
+            this.additionalExtensions = Output.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Output<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder caOptions(Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions) {
+        public Builder caOptions(Output<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
         public Builder caOptions(CaPoolIssuancePolicyBaselineValuesCaOptionsArgs caOptions) {
-            this.caOptions = Input.of(Objects.requireNonNull(caOptions));
+            this.caOptions = Output.of(Objects.requireNonNull(caOptions));
             return this;
         }
 
-        public Builder keyUsage(Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(Output<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
         public Builder keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsageArgs keyUsage) {
-            this.keyUsage = Input.of(Objects.requireNonNull(keyUsage));
+            this.keyUsage = Output.of(Objects.requireNonNull(keyUsage));
             return this;
         }
 
-        public Builder policyIds(@Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds) {
+        public Builder policyIds(@Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
         public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs> policyIds) {
-            this.policyIds = Input.ofNullable(policyIds);
+            this.policyIds = Output.ofNullable(policyIds);
             return this;
         }
         public CaPoolIssuancePolicyBaselineValuesArgs build() {

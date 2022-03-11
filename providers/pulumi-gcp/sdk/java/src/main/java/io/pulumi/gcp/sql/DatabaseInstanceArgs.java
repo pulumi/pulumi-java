@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
@@ -26,10 +26,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clone")
-      private final @Nullable Input<DatabaseInstanceCloneArgs> clone;
+      private final @Nullable Output<DatabaseInstanceCloneArgs> clone;
 
-    public Input<DatabaseInstanceCloneArgs> getClone() {
-        return this.clone == null ? Input.empty() : this.clone;
+    public Output<DatabaseInstanceCloneArgs> getClone() {
+        return this.clone == null ? Output.empty() : this.clone;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseVersion", required=true)
-      private final Input<String> databaseVersion;
+      private final Output<String> databaseVersion;
 
-    public Input<String> getDatabaseVersion() {
+    public Output<String> getDatabaseVersion() {
         return this.databaseVersion;
     }
 
@@ -57,10 +57,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deletionProtection")
-      private final @Nullable Input<Boolean> deletionProtection;
+      private final @Nullable Output<Boolean> deletionProtection;
 
-    public Input<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
+    public Output<Boolean> getDeletionProtection() {
+        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionKeyName")
-      private final @Nullable Input<String> encryptionKeyName;
+      private final @Nullable Output<String> encryptionKeyName;
 
-    public Input<String> getEncryptionKeyName() {
-        return this.encryptionKeyName == null ? Input.empty() : this.encryptionKeyName;
+    public Output<String> getEncryptionKeyName() {
+        return this.encryptionKeyName == null ? Output.empty() : this.encryptionKeyName;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="masterInstanceName")
-      private final @Nullable Input<String> masterInstanceName;
+      private final @Nullable Output<String> masterInstanceName;
 
-    public Input<String> getMasterInstanceName() {
-        return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
+    public Output<String> getMasterInstanceName() {
+        return this.masterInstanceName == null ? Output.empty() : this.masterInstanceName;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicaConfiguration")
-      private final @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
+      private final @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
-    public Input<DatabaseInstanceReplicaConfigurationArgs> getReplicaConfiguration() {
-        return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
+    public Output<DatabaseInstanceReplicaConfigurationArgs> getReplicaConfiguration() {
+        return this.replicaConfiguration == null ? Output.empty() : this.replicaConfiguration;
     }
 
     /**
@@ -152,10 +152,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="restoreBackupContext")
-      private final @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
+      private final @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
-    public Input<DatabaseInstanceRestoreBackupContextArgs> getRestoreBackupContext() {
-        return this.restoreBackupContext == null ? Input.empty() : this.restoreBackupContext;
+    public Output<DatabaseInstanceRestoreBackupContextArgs> getRestoreBackupContext() {
+        return this.restoreBackupContext == null ? Output.empty() : this.restoreBackupContext;
     }
 
     /**
@@ -163,10 +163,10 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rootPassword")
-      private final @Nullable Input<String> rootPassword;
+      private final @Nullable Output<String> rootPassword;
 
-    public Input<String> getRootPassword() {
-        return this.rootPassword == null ? Input.empty() : this.rootPassword;
+    public Output<String> getRootPassword() {
+        return this.rootPassword == null ? Output.empty() : this.rootPassword;
     }
 
     /**
@@ -175,25 +175,25 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<DatabaseInstanceSettingsArgs> settings;
+      private final @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
-    public Input<DatabaseInstanceSettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<DatabaseInstanceSettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
     public DatabaseInstanceArgs(
-        @Nullable Input<DatabaseInstanceCloneArgs> clone,
-        Input<String> databaseVersion,
-        @Nullable Input<Boolean> deletionProtection,
-        @Nullable Input<String> encryptionKeyName,
-        @Nullable Input<String> masterInstanceName,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration,
-        @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext,
-        @Nullable Input<String> rootPassword,
-        @Nullable Input<DatabaseInstanceSettingsArgs> settings) {
+        @Nullable Output<DatabaseInstanceCloneArgs> clone,
+        Output<String> databaseVersion,
+        @Nullable Output<Boolean> deletionProtection,
+        @Nullable Output<String> encryptionKeyName,
+        @Nullable Output<String> masterInstanceName,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration,
+        @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext,
+        @Nullable Output<String> rootPassword,
+        @Nullable Output<DatabaseInstanceSettingsArgs> settings) {
         this.clone = clone;
         this.databaseVersion = Objects.requireNonNull(databaseVersion, "expected parameter 'databaseVersion' to be non-null");
         this.deletionProtection = deletionProtection;
@@ -209,18 +209,18 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatabaseInstanceArgs() {
-        this.clone = Input.empty();
-        this.databaseVersion = Input.empty();
-        this.deletionProtection = Input.empty();
-        this.encryptionKeyName = Input.empty();
-        this.masterInstanceName = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.replicaConfiguration = Input.empty();
-        this.restoreBackupContext = Input.empty();
-        this.rootPassword = Input.empty();
-        this.settings = Input.empty();
+        this.clone = Output.empty();
+        this.databaseVersion = Output.empty();
+        this.deletionProtection = Output.empty();
+        this.encryptionKeyName = Output.empty();
+        this.masterInstanceName = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.replicaConfiguration = Output.empty();
+        this.restoreBackupContext = Output.empty();
+        this.rootPassword = Output.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -232,18 +232,18 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<DatabaseInstanceCloneArgs> clone;
-        private Input<String> databaseVersion;
-        private @Nullable Input<Boolean> deletionProtection;
-        private @Nullable Input<String> encryptionKeyName;
-        private @Nullable Input<String> masterInstanceName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
-        private @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
-        private @Nullable Input<String> rootPassword;
-        private @Nullable Input<DatabaseInstanceSettingsArgs> settings;
+        private @Nullable Output<DatabaseInstanceCloneArgs> clone;
+        private Output<String> databaseVersion;
+        private @Nullable Output<Boolean> deletionProtection;
+        private @Nullable Output<String> encryptionKeyName;
+        private @Nullable Output<String> masterInstanceName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
+        private @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
+        private @Nullable Output<String> rootPassword;
+        private @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
         public Builder() {
     	      // Empty
@@ -265,123 +265,123 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.settings = defaults.settings;
         }
 
-        public Builder clone(@Nullable Input<DatabaseInstanceCloneArgs> clone) {
+        public Builder clone(@Nullable Output<DatabaseInstanceCloneArgs> clone) {
             this.clone = clone;
             return this;
         }
 
         public Builder clone(@Nullable DatabaseInstanceCloneArgs clone) {
-            this.clone = Input.ofNullable(clone);
+            this.clone = Output.ofNullable(clone);
             return this;
         }
 
-        public Builder databaseVersion(Input<String> databaseVersion) {
+        public Builder databaseVersion(Output<String> databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
         public Builder databaseVersion(String databaseVersion) {
-            this.databaseVersion = Input.of(Objects.requireNonNull(databaseVersion));
+            this.databaseVersion = Output.of(Objects.requireNonNull(databaseVersion));
             return this;
         }
 
-        public Builder deletionProtection(@Nullable Input<Boolean> deletionProtection) {
+        public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
 
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Input.ofNullable(deletionProtection);
+            this.deletionProtection = Output.ofNullable(deletionProtection);
             return this;
         }
 
-        public Builder encryptionKeyName(@Nullable Input<String> encryptionKeyName) {
+        public Builder encryptionKeyName(@Nullable Output<String> encryptionKeyName) {
             this.encryptionKeyName = encryptionKeyName;
             return this;
         }
 
         public Builder encryptionKeyName(@Nullable String encryptionKeyName) {
-            this.encryptionKeyName = Input.ofNullable(encryptionKeyName);
+            this.encryptionKeyName = Output.ofNullable(encryptionKeyName);
             return this;
         }
 
-        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
         public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Input.ofNullable(masterInstanceName);
+            this.masterInstanceName = Output.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder replicaConfiguration(@Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
         public Builder replicaConfiguration(@Nullable DatabaseInstanceReplicaConfigurationArgs replicaConfiguration) {
-            this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
+            this.replicaConfiguration = Output.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder restoreBackupContext(@Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
+        public Builder restoreBackupContext(@Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext) {
             this.restoreBackupContext = restoreBackupContext;
             return this;
         }
 
         public Builder restoreBackupContext(@Nullable DatabaseInstanceRestoreBackupContextArgs restoreBackupContext) {
-            this.restoreBackupContext = Input.ofNullable(restoreBackupContext);
+            this.restoreBackupContext = Output.ofNullable(restoreBackupContext);
             return this;
         }
 
-        public Builder rootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Output<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
         public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Input.ofNullable(rootPassword);
+            this.rootPassword = Output.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder settings(@Nullable Input<DatabaseInstanceSettingsArgs> settings) {
+        public Builder settings(@Nullable Output<DatabaseInstanceSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable DatabaseInstanceSettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public DatabaseInstanceArgs build() {

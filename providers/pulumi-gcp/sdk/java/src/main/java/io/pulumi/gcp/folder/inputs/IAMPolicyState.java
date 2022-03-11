@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="folder")
-      private final @Nullable Input<String> folder;
+      private final @Nullable Output<String> folder;
 
-    public Input<String> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<String> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     @InputImport(name="policyData")
-      private final @Nullable Input<String> policyData;
+      private final @Nullable Output<String> policyData;
 
-    public Input<String> getPolicyData() {
-        return this.policyData == null ? Input.empty() : this.policyData;
+    public Output<String> getPolicyData() {
+        return this.policyData == null ? Output.empty() : this.policyData;
     }
 
     public IAMPolicyState(
-        @Nullable Input<String> etag,
-        @Nullable Input<String> folder,
-        @Nullable Input<String> policyData) {
+        @Nullable Output<String> etag,
+        @Nullable Output<String> folder,
+        @Nullable Output<String> policyData) {
         this.etag = etag;
         this.folder = folder;
         this.policyData = policyData;
     }
 
     private IAMPolicyState() {
-        this.etag = Input.empty();
-        this.folder = Input.empty();
-        this.policyData = Input.empty();
+        this.etag = Output.empty();
+        this.folder = Output.empty();
+        this.policyData = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> folder;
-        private @Nullable Input<String> policyData;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> folder;
+        private @Nullable Output<String> policyData;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder folder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Output<String> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable String folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder policyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Output<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Input.ofNullable(policyData);
+            this.policyData = Output.ofNullable(policyData);
             return this;
         }
         public IAMPolicyState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyGetArgs;
@@ -26,10 +26,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="baseline")
-      private final @Nullable Input<Boolean> baseline;
+      private final @Nullable Output<Boolean> baseline;
 
-    public Input<Boolean> getBaseline() {
-        return this.baseline == null ? Input.empty() : this.baseline;
+    public Output<Boolean> getBaseline() {
+        return this.baseline == null ? Output.empty() : this.baseline;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deleted")
-      private final @Nullable Input<Boolean> deleted;
+      private final @Nullable Output<Boolean> deleted;
 
-    public Input<Boolean> getDeleted() {
-        return this.deleted == null ? Input.empty() : this.deleted;
+    public Output<Boolean> getDeleted() {
+        return this.deleted == null ? Output.empty() : this.deleted;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceFilter")
-      private final @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
+      private final @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
-    public Input<OsPolicyAssignmentInstanceFilterGetArgs> getInstanceFilter() {
-        return this.instanceFilter == null ? Input.empty() : this.instanceFilter;
+    public Output<OsPolicyAssignmentInstanceFilterGetArgs> getInstanceFilter() {
+        return this.instanceFilter == null ? Output.empty() : this.instanceFilter;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="osPolicies")
-      private final @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
+      private final @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
-    public Input<List<OsPolicyAssignmentOsPolicyGetArgs>> getOsPolicies() {
-        return this.osPolicies == null ? Input.empty() : this.osPolicies;
+    public Output<List<OsPolicyAssignmentOsPolicyGetArgs>> getOsPolicies() {
+        return this.osPolicies == null ? Output.empty() : this.osPolicies;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="reconciling")
-      private final @Nullable Input<Boolean> reconciling;
+      private final @Nullable Output<Boolean> reconciling;
 
-    public Input<Boolean> getReconciling() {
-        return this.reconciling == null ? Input.empty() : this.reconciling;
+    public Output<Boolean> getReconciling() {
+        return this.reconciling == null ? Output.empty() : this.reconciling;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revisionCreateTime")
-      private final @Nullable Input<String> revisionCreateTime;
+      private final @Nullable Output<String> revisionCreateTime;
 
-    public Input<String> getRevisionCreateTime() {
-        return this.revisionCreateTime == null ? Input.empty() : this.revisionCreateTime;
+    public Output<String> getRevisionCreateTime() {
+        return this.revisionCreateTime == null ? Output.empty() : this.revisionCreateTime;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revisionId")
-      private final @Nullable Input<String> revisionId;
+      private final @Nullable Output<String> revisionId;
 
-    public Input<String> getRevisionId() {
-        return this.revisionId == null ? Input.empty() : this.revisionId;
+    public Output<String> getRevisionId() {
+        return this.revisionId == null ? Output.empty() : this.revisionId;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rollout")
-      private final @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout;
+      private final @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
 
-    public Input<OsPolicyAssignmentRolloutGetArgs> getRollout() {
-        return this.rollout == null ? Input.empty() : this.rollout;
+    public Output<OsPolicyAssignmentRolloutGetArgs> getRollout() {
+        return this.rollout == null ? Output.empty() : this.rollout;
     }
 
     /**
@@ -172,10 +172,10 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloutState")
-      private final @Nullable Input<String> rolloutState;
+      private final @Nullable Output<String> rolloutState;
 
-    public Input<String> getRolloutState() {
-        return this.rolloutState == null ? Input.empty() : this.rolloutState;
+    public Output<String> getRolloutState() {
+        return this.rolloutState == null ? Output.empty() : this.rolloutState;
     }
 
     /**
@@ -183,28 +183,28 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<String> uid;
+      private final @Nullable Output<String> uid;
 
-    public Input<String> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<String> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public OsPolicyAssignmentState(
-        @Nullable Input<Boolean> baseline,
-        @Nullable Input<Boolean> deleted,
-        @Nullable Input<String> description,
-        @Nullable Input<String> etag,
-        @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies,
-        @Nullable Input<String> project,
-        @Nullable Input<Boolean> reconciling,
-        @Nullable Input<String> revisionCreateTime,
-        @Nullable Input<String> revisionId,
-        @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout,
-        @Nullable Input<String> rolloutState,
-        @Nullable Input<String> uid) {
+        @Nullable Output<Boolean> baseline,
+        @Nullable Output<Boolean> deleted,
+        @Nullable Output<String> description,
+        @Nullable Output<String> etag,
+        @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies,
+        @Nullable Output<String> project,
+        @Nullable Output<Boolean> reconciling,
+        @Nullable Output<String> revisionCreateTime,
+        @Nullable Output<String> revisionId,
+        @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout,
+        @Nullable Output<String> rolloutState,
+        @Nullable Output<String> uid) {
         this.baseline = baseline;
         this.deleted = deleted;
         this.description = description;
@@ -223,21 +223,21 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     }
 
     private OsPolicyAssignmentState() {
-        this.baseline = Input.empty();
-        this.deleted = Input.empty();
-        this.description = Input.empty();
-        this.etag = Input.empty();
-        this.instanceFilter = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.osPolicies = Input.empty();
-        this.project = Input.empty();
-        this.reconciling = Input.empty();
-        this.revisionCreateTime = Input.empty();
-        this.revisionId = Input.empty();
-        this.rollout = Input.empty();
-        this.rolloutState = Input.empty();
-        this.uid = Input.empty();
+        this.baseline = Output.empty();
+        this.deleted = Output.empty();
+        this.description = Output.empty();
+        this.etag = Output.empty();
+        this.instanceFilter = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.osPolicies = Output.empty();
+        this.project = Output.empty();
+        this.reconciling = Output.empty();
+        this.revisionCreateTime = Output.empty();
+        this.revisionId = Output.empty();
+        this.rollout = Output.empty();
+        this.rolloutState = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -249,21 +249,21 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> baseline;
-        private @Nullable Input<Boolean> deleted;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Boolean> reconciling;
-        private @Nullable Input<String> revisionCreateTime;
-        private @Nullable Input<String> revisionId;
-        private @Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout;
-        private @Nullable Input<String> rolloutState;
-        private @Nullable Input<String> uid;
+        private @Nullable Output<Boolean> baseline;
+        private @Nullable Output<Boolean> deleted;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Boolean> reconciling;
+        private @Nullable Output<String> revisionCreateTime;
+        private @Nullable Output<String> revisionId;
+        private @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
+        private @Nullable Output<String> rolloutState;
+        private @Nullable Output<String> uid;
 
         public Builder() {
     	      // Empty
@@ -288,153 +288,153 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     	      this.uid = defaults.uid;
         }
 
-        public Builder baseline(@Nullable Input<Boolean> baseline) {
+        public Builder baseline(@Nullable Output<Boolean> baseline) {
             this.baseline = baseline;
             return this;
         }
 
         public Builder baseline(@Nullable Boolean baseline) {
-            this.baseline = Input.ofNullable(baseline);
+            this.baseline = Output.ofNullable(baseline);
             return this;
         }
 
-        public Builder deleted(@Nullable Input<Boolean> deleted) {
+        public Builder deleted(@Nullable Output<Boolean> deleted) {
             this.deleted = deleted;
             return this;
         }
 
         public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Input.ofNullable(deleted);
+            this.deleted = Output.ofNullable(deleted);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder instanceFilter(@Nullable Input<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
+        public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
             this.instanceFilter = instanceFilter;
             return this;
         }
 
         public Builder instanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
-            this.instanceFilter = Input.ofNullable(instanceFilter);
+            this.instanceFilter = Output.ofNullable(instanceFilter);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder osPolicies(@Nullable Input<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
+        public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
             this.osPolicies = osPolicies;
             return this;
         }
 
         public Builder osPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
-            this.osPolicies = Input.ofNullable(osPolicies);
+            this.osPolicies = Output.ofNullable(osPolicies);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reconciling(@Nullable Input<Boolean> reconciling) {
+        public Builder reconciling(@Nullable Output<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
 
         public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Input.ofNullable(reconciling);
+            this.reconciling = Output.ofNullable(reconciling);
             return this;
         }
 
-        public Builder revisionCreateTime(@Nullable Input<String> revisionCreateTime) {
+        public Builder revisionCreateTime(@Nullable Output<String> revisionCreateTime) {
             this.revisionCreateTime = revisionCreateTime;
             return this;
         }
 
         public Builder revisionCreateTime(@Nullable String revisionCreateTime) {
-            this.revisionCreateTime = Input.ofNullable(revisionCreateTime);
+            this.revisionCreateTime = Output.ofNullable(revisionCreateTime);
             return this;
         }
 
-        public Builder revisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Output<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Input.ofNullable(revisionId);
+            this.revisionId = Output.ofNullable(revisionId);
             return this;
         }
 
-        public Builder rollout(@Nullable Input<OsPolicyAssignmentRolloutGetArgs> rollout) {
+        public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
 
         public Builder rollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
-            this.rollout = Input.ofNullable(rollout);
+            this.rollout = Output.ofNullable(rollout);
             return this;
         }
 
-        public Builder rolloutState(@Nullable Input<String> rolloutState) {
+        public Builder rolloutState(@Nullable Output<String> rolloutState) {
             this.rolloutState = rolloutState;
             return this;
         }
 
         public Builder rolloutState(@Nullable String rolloutState) {
-            this.rolloutState = Input.ofNullable(rolloutState);
+            this.rolloutState = Output.ofNullable(rolloutState);
             return this;
         }
 
-        public Builder uid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Output<String> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable String uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public OsPolicyAssignmentState build() {

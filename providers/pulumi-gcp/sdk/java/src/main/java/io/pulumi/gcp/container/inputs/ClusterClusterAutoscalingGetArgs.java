@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitGetArgs;
@@ -24,10 +24,10 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoProvisioningDefaults")
-      private final @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
+      private final @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
-    public Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
-        return this.autoProvisioningDefaults == null ? Input.empty() : this.autoProvisioningDefaults;
+    public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
+        return this.autoProvisioningDefaults == null ? Output.empty() : this.autoProvisioningDefaults;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoscalingProfile")
-      private final @Nullable Input<String> autoscalingProfile;
+      private final @Nullable Output<String> autoscalingProfile;
 
-    public Input<String> getAutoscalingProfile() {
-        return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
+    public Output<String> getAutoscalingProfile() {
+        return this.autoscalingProfile == null ? Output.empty() : this.autoscalingProfile;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -64,17 +64,17 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceLimits")
-      private final @Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
+      private final @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
-    public Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {
-        return this.resourceLimits == null ? Input.empty() : this.resourceLimits;
+    public Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {
+        return this.resourceLimits == null ? Output.empty() : this.resourceLimits;
     }
 
     public ClusterClusterAutoscalingGetArgs(
-        @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults,
-        @Nullable Input<String> autoscalingProfile,
-        Input<Boolean> enabled,
-        @Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
+        @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults,
+        @Nullable Output<String> autoscalingProfile,
+        Output<Boolean> enabled,
+        @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
         this.autoProvisioningDefaults = autoProvisioningDefaults;
         this.autoscalingProfile = autoscalingProfile;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
@@ -82,10 +82,10 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     }
 
     private ClusterClusterAutoscalingGetArgs() {
-        this.autoProvisioningDefaults = Input.empty();
-        this.autoscalingProfile = Input.empty();
-        this.enabled = Input.empty();
-        this.resourceLimits = Input.empty();
+        this.autoProvisioningDefaults = Output.empty();
+        this.autoscalingProfile = Output.empty();
+        this.enabled = Output.empty();
+        this.resourceLimits = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,10 +97,10 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
-        private @Nullable Input<String> autoscalingProfile;
-        private Input<Boolean> enabled;
-        private @Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
+        private @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
+        private @Nullable Output<String> autoscalingProfile;
+        private Output<Boolean> enabled;
+        private @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
         public Builder() {
     	      // Empty
@@ -114,43 +114,43 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder autoProvisioningDefaults(@Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults) {
+        public Builder autoProvisioningDefaults(@Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults) {
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
 
         public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
-            this.autoProvisioningDefaults = Input.ofNullable(autoProvisioningDefaults);
+            this.autoProvisioningDefaults = Output.ofNullable(autoProvisioningDefaults);
             return this;
         }
 
-        public Builder autoscalingProfile(@Nullable Input<String> autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
         public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
-            this.autoscalingProfile = Input.ofNullable(autoscalingProfile);
+            this.autoscalingProfile = Output.ofNullable(autoscalingProfile);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder resourceLimits(@Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
+        public Builder resourceLimits(@Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
 
         public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
-            this.resourceLimits = Input.ofNullable(resourceLimits);
+            this.resourceLimits = Output.ofNullable(resourceLimits);
             return this;
         }
         public ClusterClusterAutoscalingGetArgs build() {

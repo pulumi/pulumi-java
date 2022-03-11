@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExplicitBucketsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExponentialBucketsGetArgs;
@@ -22,10 +22,10 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="explicitBuckets")
-      private final @Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
+      private final @Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
 
-    public Input<MetricBucketOptionsExplicitBucketsGetArgs> getExplicitBuckets() {
-        return this.explicitBuckets == null ? Input.empty() : this.explicitBuckets;
+    public Output<MetricBucketOptionsExplicitBucketsGetArgs> getExplicitBuckets() {
+        return this.explicitBuckets == null ? Output.empty() : this.explicitBuckets;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="exponentialBuckets")
-      private final @Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
+      private final @Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
 
-    public Input<MetricBucketOptionsExponentialBucketsGetArgs> getExponentialBuckets() {
-        return this.exponentialBuckets == null ? Input.empty() : this.exponentialBuckets;
+    public Output<MetricBucketOptionsExponentialBucketsGetArgs> getExponentialBuckets() {
+        return this.exponentialBuckets == null ? Output.empty() : this.exponentialBuckets;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="linearBuckets")
-      private final @Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
+      private final @Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
 
-    public Input<MetricBucketOptionsLinearBucketsGetArgs> getLinearBuckets() {
-        return this.linearBuckets == null ? Input.empty() : this.linearBuckets;
+    public Output<MetricBucketOptionsLinearBucketsGetArgs> getLinearBuckets() {
+        return this.linearBuckets == null ? Output.empty() : this.linearBuckets;
     }
 
     public MetricBucketOptionsGetArgs(
-        @Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets,
-        @Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets,
-        @Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
+        @Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets,
+        @Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets,
+        @Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
         this.explicitBuckets = explicitBuckets;
         this.exponentialBuckets = exponentialBuckets;
         this.linearBuckets = linearBuckets;
     }
 
     private MetricBucketOptionsGetArgs() {
-        this.explicitBuckets = Input.empty();
-        this.exponentialBuckets = Input.empty();
-        this.linearBuckets = Input.empty();
+        this.explicitBuckets = Output.empty();
+        this.exponentialBuckets = Output.empty();
+        this.linearBuckets = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
-        private @Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
-        private @Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
+        private @Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
+        private @Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
+        private @Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
     	      this.linearBuckets = defaults.linearBuckets;
         }
 
-        public Builder explicitBuckets(@Nullable Input<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets) {
+        public Builder explicitBuckets(@Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets) {
             this.explicitBuckets = explicitBuckets;
             return this;
         }
 
         public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsGetArgs explicitBuckets) {
-            this.explicitBuckets = Input.ofNullable(explicitBuckets);
+            this.explicitBuckets = Output.ofNullable(explicitBuckets);
             return this;
         }
 
-        public Builder exponentialBuckets(@Nullable Input<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets) {
+        public Builder exponentialBuckets(@Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
 
         public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsGetArgs exponentialBuckets) {
-            this.exponentialBuckets = Input.ofNullable(exponentialBuckets);
+            this.exponentialBuckets = Output.ofNullable(exponentialBuckets);
             return this;
         }
 
-        public Builder linearBuckets(@Nullable Input<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
+        public Builder linearBuckets(@Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
         }
 
         public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBucketsGetArgs linearBuckets) {
-            this.linearBuckets = Input.ofNullable(linearBuckets);
+            this.linearBuckets = Output.ofNullable(linearBuckets);
             return this;
         }
         public MetricBucketOptionsGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
@@ -21,9 +21,9 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -33,10 +33,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<TransferJobScheduleArgs> schedule;
+      private final @Nullable Output<TransferJobScheduleArgs> schedule;
 
-    public Input<TransferJobScheduleArgs> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<TransferJobScheduleArgs> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<String> status;
+      private final @Nullable Output<String> status;
 
-    public Input<String> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<String> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     /**
@@ -66,18 +66,18 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferSpec", required=true)
-      private final Input<TransferJobTransferSpecArgs> transferSpec;
+      private final Output<TransferJobTransferSpecArgs> transferSpec;
 
-    public Input<TransferJobTransferSpecArgs> getTransferSpec() {
+    public Output<TransferJobTransferSpecArgs> getTransferSpec() {
         return this.transferSpec;
     }
 
     public TransferJobArgs(
-        Input<String> description,
-        @Nullable Input<String> project,
-        @Nullable Input<TransferJobScheduleArgs> schedule,
-        @Nullable Input<String> status,
-        Input<TransferJobTransferSpecArgs> transferSpec) {
+        Output<String> description,
+        @Nullable Output<String> project,
+        @Nullable Output<TransferJobScheduleArgs> schedule,
+        @Nullable Output<String> status,
+        Output<TransferJobTransferSpecArgs> transferSpec) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.project = project;
         this.schedule = schedule;
@@ -86,11 +86,11 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferJobArgs() {
-        this.description = Input.empty();
-        this.project = Input.empty();
-        this.schedule = Input.empty();
-        this.status = Input.empty();
-        this.transferSpec = Input.empty();
+        this.description = Output.empty();
+        this.project = Output.empty();
+        this.schedule = Output.empty();
+        this.status = Output.empty();
+        this.transferSpec = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> description;
-        private @Nullable Input<String> project;
-        private @Nullable Input<TransferJobScheduleArgs> schedule;
-        private @Nullable Input<String> status;
-        private Input<TransferJobTransferSpecArgs> transferSpec;
+        private Output<String> description;
+        private @Nullable Output<String> project;
+        private @Nullable Output<TransferJobScheduleArgs> schedule;
+        private @Nullable Output<String> status;
+        private Output<TransferJobTransferSpecArgs> transferSpec;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferSpec = defaults.transferSpec;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder schedule(@Nullable Input<TransferJobScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable TransferJobScheduleArgs schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder status(@Nullable Input<String> status) {
+        public Builder status(@Nullable Output<String> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable String status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
 
-        public Builder transferSpec(Input<TransferJobTransferSpecArgs> transferSpec) {
+        public Builder transferSpec(Output<TransferJobTransferSpecArgs> transferSpec) {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }
 
         public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
-            this.transferSpec = Input.of(Objects.requireNonNull(transferSpec));
+            this.transferSpec = Output.of(Objects.requireNonNull(transferSpec));
             return this;
         }
         public TransferJobArgs build() {

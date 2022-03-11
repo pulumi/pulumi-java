@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageEventHandlerTriggerFulfillmentMessageTextArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends io.pu
      * 
      */
     @InputImport(name="text")
-      private final @Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text;
+      private final @Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text;
 
-    public Input<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> getText() {
-        return this.text == null ? Input.empty() : this.text;
+    public Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> getText() {
+        return this.text == null ? Output.empty() : this.text;
     }
 
-    public CxPageEventHandlerTriggerFulfillmentMessageArgs(@Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text) {
+    public CxPageEventHandlerTriggerFulfillmentMessageArgs(@Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text) {
         this.text = text;
     }
 
     private CxPageEventHandlerTriggerFulfillmentMessageArgs() {
-        this.text = Input.empty();
+        this.text = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text;
+        private @Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class CxPageEventHandlerTriggerFulfillmentMessageArgs extends io.pu
     	      this.text = defaults.text;
         }
 
-        public Builder text(@Nullable Input<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text) {
+        public Builder text(@Nullable Output<CxPageEventHandlerTriggerFulfillmentMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
         public Builder text(@Nullable CxPageEventHandlerTriggerFulfillmentMessageTextArgs text) {
-            this.text = Input.ofNullable(text);
+            this.text = Output.ofNullable(text);
             return this;
         }
         public CxPageEventHandlerTriggerFulfillmentMessageArgs build() {

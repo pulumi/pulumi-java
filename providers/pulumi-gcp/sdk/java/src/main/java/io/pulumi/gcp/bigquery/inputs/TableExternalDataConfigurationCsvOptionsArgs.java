@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,10 +22,10 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="allowJaggedRows")
-      private final @Nullable Input<Boolean> allowJaggedRows;
+      private final @Nullable Output<Boolean> allowJaggedRows;
 
-    public Input<Boolean> getAllowJaggedRows() {
-        return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
+    public Output<Boolean> getAllowJaggedRows() {
+        return this.allowJaggedRows == null ? Output.empty() : this.allowJaggedRows;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="allowQuotedNewlines")
-      private final @Nullable Input<Boolean> allowQuotedNewlines;
+      private final @Nullable Output<Boolean> allowQuotedNewlines;
 
-    public Input<Boolean> getAllowQuotedNewlines() {
-        return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
+    public Output<Boolean> getAllowQuotedNewlines() {
+        return this.allowQuotedNewlines == null ? Output.empty() : this.allowQuotedNewlines;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="fieldDelimiter")
-      private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Output<String> fieldDelimiter;
 
-    public Input<String> getFieldDelimiter() {
-        return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
+    public Output<String> getFieldDelimiter() {
+        return this.fieldDelimiter == null ? Output.empty() : this.fieldDelimiter;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="quote", required=true)
-      private final Input<String> quote;
+      private final Output<String> quote;
 
-    public Input<String> getQuote() {
+    public Output<String> getQuote() {
         return this.quote;
     }
 
@@ -88,19 +88,19 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * 
      */
     @InputImport(name="skipLeadingRows")
-      private final @Nullable Input<Integer> skipLeadingRows;
+      private final @Nullable Output<Integer> skipLeadingRows;
 
-    public Input<Integer> getSkipLeadingRows() {
-        return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
+    public Output<Integer> getSkipLeadingRows() {
+        return this.skipLeadingRows == null ? Output.empty() : this.skipLeadingRows;
     }
 
     public TableExternalDataConfigurationCsvOptionsArgs(
-        @Nullable Input<Boolean> allowJaggedRows,
-        @Nullable Input<Boolean> allowQuotedNewlines,
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> fieldDelimiter,
-        Input<String> quote,
-        @Nullable Input<Integer> skipLeadingRows) {
+        @Nullable Output<Boolean> allowJaggedRows,
+        @Nullable Output<Boolean> allowQuotedNewlines,
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> fieldDelimiter,
+        Output<String> quote,
+        @Nullable Output<Integer> skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;
@@ -110,12 +110,12 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     }
 
     private TableExternalDataConfigurationCsvOptionsArgs() {
-        this.allowJaggedRows = Input.empty();
-        this.allowQuotedNewlines = Input.empty();
-        this.encoding = Input.empty();
-        this.fieldDelimiter = Input.empty();
-        this.quote = Input.empty();
-        this.skipLeadingRows = Input.empty();
+        this.allowJaggedRows = Output.empty();
+        this.allowQuotedNewlines = Output.empty();
+        this.encoding = Output.empty();
+        this.fieldDelimiter = Output.empty();
+        this.quote = Output.empty();
+        this.skipLeadingRows = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,12 +127,12 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowJaggedRows;
-        private @Nullable Input<Boolean> allowQuotedNewlines;
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> fieldDelimiter;
-        private Input<String> quote;
-        private @Nullable Input<Integer> skipLeadingRows;
+        private @Nullable Output<Boolean> allowJaggedRows;
+        private @Nullable Output<Boolean> allowQuotedNewlines;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> fieldDelimiter;
+        private Output<String> quote;
+        private @Nullable Output<Integer> skipLeadingRows;
 
         public Builder() {
     	      // Empty
@@ -148,63 +148,63 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder allowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Output<Boolean> allowJaggedRows) {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
         public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
-            this.allowJaggedRows = Input.ofNullable(allowJaggedRows);
+            this.allowJaggedRows = Output.ofNullable(allowJaggedRows);
             return this;
         }
 
-        public Builder allowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Output<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
         public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
-            this.allowQuotedNewlines = Input.ofNullable(allowQuotedNewlines);
+            this.allowQuotedNewlines = Output.ofNullable(allowQuotedNewlines);
             return this;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
+            this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder quote(Input<String> quote) {
+        public Builder quote(Output<String> quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
 
         public Builder quote(String quote) {
-            this.quote = Input.of(Objects.requireNonNull(quote));
+            this.quote = Output.of(Objects.requireNonNull(quote));
             return this;
         }
 
-        public Builder skipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Output<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
         public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
-            this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
+            this.skipLeadingRows = Output.ofNullable(skipLeadingRows);
             return this;
         }
         public TableExternalDataConfigurationCsvOptionsArgs build() {

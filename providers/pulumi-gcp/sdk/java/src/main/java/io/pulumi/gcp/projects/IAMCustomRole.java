@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -206,14 +205,14 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMCustomRole(String name, IAMCustomRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/iAMCustomRole:IAMCustomRole", name, args == null ? IAMCustomRoleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:projects/iAMCustomRole:IAMCustomRole", name, args == null ? IAMCustomRoleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IAMCustomRole(String name, Input<String> id, @Nullable IAMCustomRoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IAMCustomRole(String name, Output<String> id, @Nullable IAMCustomRoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:projects/iAMCustomRole:IAMCustomRole", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -229,7 +228,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMCustomRole get(String name, Input<String> id, @Nullable IAMCustomRoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IAMCustomRole get(String name, Output<String> id, @Nullable IAMCustomRoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IAMCustomRole(name, id, state, options);
     }
 }

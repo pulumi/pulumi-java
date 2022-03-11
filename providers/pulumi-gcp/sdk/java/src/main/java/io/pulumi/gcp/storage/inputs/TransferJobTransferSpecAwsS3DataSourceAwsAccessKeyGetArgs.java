@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-      private final Input<String> accessKeyId;
+      private final Output<String> accessKeyId;
 
-    public Input<String> getAccessKeyId() {
+    public Output<String> getAccessKeyId() {
         return this.accessKeyId;
     }
 
@@ -29,22 +29,22 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
      * 
      */
     @InputImport(name="secretAccessKey", required=true)
-      private final Input<String> secretAccessKey;
+      private final Output<String> secretAccessKey;
 
-    public Input<String> getSecretAccessKey() {
+    public Output<String> getSecretAccessKey() {
         return this.secretAccessKey;
     }
 
     public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs(
-        Input<String> accessKeyId,
-        Input<String> secretAccessKey) {
+        Output<String> accessKeyId,
+        Output<String> secretAccessKey) {
         this.accessKeyId = Objects.requireNonNull(accessKeyId, "expected parameter 'accessKeyId' to be non-null");
         this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
     }
 
     private TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs() {
-        this.accessKeyId = Input.empty();
-        this.secretAccessKey = Input.empty();
+        this.accessKeyId = Output.empty();
+        this.secretAccessKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -56,8 +56,8 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
     }
 
     public static final class Builder {
-        private Input<String> accessKeyId;
-        private Input<String> secretAccessKey;
+        private Output<String> accessKeyId;
+        private Output<String> secretAccessKey;
 
         public Builder() {
     	      // Empty
@@ -69,23 +69,23 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
     	      this.secretAccessKey = defaults.secretAccessKey;
         }
 
-        public Builder accessKeyId(Input<String> accessKeyId) {
+        public Builder accessKeyId(Output<String> accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
         public Builder accessKeyId(String accessKeyId) {
-            this.accessKeyId = Input.of(Objects.requireNonNull(accessKeyId));
+            this.accessKeyId = Output.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
 
-        public Builder secretAccessKey(Input<String> secretAccessKey) {
+        public Builder secretAccessKey(Output<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
+            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }
         public TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs build() {

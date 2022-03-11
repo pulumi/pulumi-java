@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyArgs;
@@ -24,10 +24,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="booleanPolicy")
-      private final @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy;
+      private final @Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy;
 
-    public Input<PolicyBooleanPolicyArgs> getBooleanPolicy() {
-        return this.booleanPolicy == null ? Input.empty() : this.booleanPolicy;
+    public Output<PolicyBooleanPolicyArgs> getBooleanPolicy() {
+        return this.booleanPolicy == null ? Output.empty() : this.booleanPolicy;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="constraint", required=true)
-      private final Input<String> constraint;
+      private final Output<String> constraint;
 
-    public Input<String> getConstraint() {
+    public Output<String> getConstraint() {
         return this.constraint;
     }
 
@@ -46,10 +46,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listPolicy")
-      private final @Nullable Input<PolicyListPolicyArgs> listPolicy;
+      private final @Nullable Output<PolicyListPolicyArgs> listPolicy;
 
-    public Input<PolicyListPolicyArgs> getListPolicy() {
-        return this.listPolicy == null ? Input.empty() : this.listPolicy;
+    public Output<PolicyListPolicyArgs> getListPolicy() {
+        return this.listPolicy == null ? Output.empty() : this.listPolicy;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -68,10 +68,10 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePolicy")
-      private final @Nullable Input<PolicyRestorePolicyArgs> restorePolicy;
+      private final @Nullable Output<PolicyRestorePolicyArgs> restorePolicy;
 
-    public Input<PolicyRestorePolicyArgs> getRestorePolicy() {
-        return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
+    public Output<PolicyRestorePolicyArgs> getRestorePolicy() {
+        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public PolicyArgs(
-        @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy,
-        Input<String> constraint,
-        @Nullable Input<PolicyListPolicyArgs> listPolicy,
-        Input<String> orgId,
-        @Nullable Input<PolicyRestorePolicyArgs> restorePolicy,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy,
+        Output<String> constraint,
+        @Nullable Output<PolicyListPolicyArgs> listPolicy,
+        Output<String> orgId,
+        @Nullable Output<PolicyRestorePolicyArgs> restorePolicy,
+        @Nullable Output<Integer> version) {
         this.booleanPolicy = booleanPolicy;
         this.constraint = Objects.requireNonNull(constraint, "expected parameter 'constraint' to be non-null");
         this.listPolicy = listPolicy;
@@ -101,12 +101,12 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.booleanPolicy = Input.empty();
-        this.constraint = Input.empty();
-        this.listPolicy = Input.empty();
-        this.orgId = Input.empty();
-        this.restorePolicy = Input.empty();
-        this.version = Input.empty();
+        this.booleanPolicy = Output.empty();
+        this.constraint = Output.empty();
+        this.listPolicy = Output.empty();
+        this.orgId = Output.empty();
+        this.restorePolicy = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy;
-        private Input<String> constraint;
-        private @Nullable Input<PolicyListPolicyArgs> listPolicy;
-        private Input<String> orgId;
-        private @Nullable Input<PolicyRestorePolicyArgs> restorePolicy;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy;
+        private Output<String> constraint;
+        private @Nullable Output<PolicyListPolicyArgs> listPolicy;
+        private Output<String> orgId;
+        private @Nullable Output<PolicyRestorePolicyArgs> restorePolicy;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder booleanPolicy(@Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Output<PolicyBooleanPolicyArgs> booleanPolicy) {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
 
         public Builder booleanPolicy(@Nullable PolicyBooleanPolicyArgs booleanPolicy) {
-            this.booleanPolicy = Input.ofNullable(booleanPolicy);
+            this.booleanPolicy = Output.ofNullable(booleanPolicy);
             return this;
         }
 
-        public Builder constraint(Input<String> constraint) {
+        public Builder constraint(Output<String> constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
 
         public Builder constraint(String constraint) {
-            this.constraint = Input.of(Objects.requireNonNull(constraint));
+            this.constraint = Output.of(Objects.requireNonNull(constraint));
             return this;
         }
 
-        public Builder listPolicy(@Nullable Input<PolicyListPolicyArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Output<PolicyListPolicyArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
 
         public Builder listPolicy(@Nullable PolicyListPolicyArgs listPolicy) {
-            this.listPolicy = Input.ofNullable(listPolicy);
+            this.listPolicy = Output.ofNullable(listPolicy);
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder restorePolicy(@Nullable Input<PolicyRestorePolicyArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Output<PolicyRestorePolicyArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
         public Builder restorePolicy(@Nullable PolicyRestorePolicyArgs restorePolicy) {
-            this.restorePolicy = Input.ofNullable(restorePolicy);
+            this.restorePolicy = Output.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public PolicyArgs build() {

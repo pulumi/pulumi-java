@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="policyUri", required=true)
-      private final Input<String> policyUri;
+      private final Output<String> policyUri;
 
-    public Input<String> getPolicyUri() {
+    public Output<String> getPolicyUri() {
         return this.policyUri;
     }
 
-    public ClusterClusterConfigAutoscalingConfigArgs(Input<String> policyUri) {
+    public ClusterClusterConfigAutoscalingConfigArgs(Output<String> policyUri) {
         this.policyUri = Objects.requireNonNull(policyUri, "expected parameter 'policyUri' to be non-null");
     }
 
     private ClusterClusterConfigAutoscalingConfigArgs() {
-        this.policyUri = Input.empty();
+        this.policyUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> policyUri;
+        private Output<String> policyUri;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterClusterConfigAutoscalingConfigArgs extends io.pulumi.r
     	      this.policyUri = defaults.policyUri;
         }
 
-        public Builder policyUri(Input<String> policyUri) {
+        public Builder policyUri(Output<String> policyUri) {
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
 
         public Builder policyUri(String policyUri) {
-            this.policyUri = Input.of(Objects.requireNonNull(policyUri));
+            this.policyUri = Output.of(Objects.requireNonNull(policyUri));
             return this;
         }
         public ClusterClusterConfigAutoscalingConfigArgs build() {

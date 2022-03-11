@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs;
@@ -21,10 +21,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ellipticCurve")
-      private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
+      private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
-    public Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> getEllipticCurve() {
-        return this.ellipticCurve == null ? Input.empty() : this.ellipticCurve;
+    public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> getEllipticCurve() {
+        return this.ellipticCurve == null ? Output.empty() : this.ellipticCurve;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="rsa")
-      private final @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
+      private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
-    public Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> getRsa() {
-        return this.rsa == null ? Input.empty() : this.rsa;
+    public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> getRsa() {
+        return this.rsa == null ? Output.empty() : this.rsa;
     }
 
     public CaPoolIssuancePolicyAllowedKeyTypeArgs(
-        @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve,
-        @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
+        @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve,
+        @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }
 
     private CaPoolIssuancePolicyAllowedKeyTypeArgs() {
-        this.ellipticCurve = Input.empty();
-        this.rsa = Input.empty();
+        this.ellipticCurve = Output.empty();
+        this.rsa = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
-        private @Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
+        private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
+        private @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder ellipticCurve(@Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve) {
+        public Builder ellipticCurve(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve) {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
 
         public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs ellipticCurve) {
-            this.ellipticCurve = Input.ofNullable(ellipticCurve);
+            this.ellipticCurve = Output.ofNullable(ellipticCurve);
             return this;
         }
 
-        public Builder rsa(@Nullable Input<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
+        public Builder rsa(@Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa) {
             this.rsa = rsa;
             return this;
         }
 
         public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsaArgs rsa) {
-            this.rsa = Input.ofNullable(rsa);
+            this.rsa = Output.ofNullable(rsa);
             return this;
         }
         public CaPoolIssuancePolicyAllowedKeyTypeArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGetArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -32,9 +32,9 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
+      private final Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> getConfig() {
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> getConfig() {
         return this.config;
     }
 
@@ -43,25 +43,25 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public WorkflowTemplatePlacementManagedClusterGetArgs(
-        Input<String> clusterName,
-        Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config,
-        @Nullable Input<Map<String,String>> labels) {
+        Output<String> clusterName,
+        Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config,
+        @Nullable Output<Map<String,String>> labels) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.labels = labels;
     }
 
     private WorkflowTemplatePlacementManagedClusterGetArgs() {
-        this.clusterName = Input.empty();
-        this.config = Input.empty();
-        this.labels = Input.empty();
+        this.clusterName = Output.empty();
+        this.config = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
-        private @Nullable Input<Map<String,String>> labels;
+        private Output<String> clusterName;
+        private Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
+        private @Nullable Output<Map<String,String>> labels;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends io.pul
     	      this.labels = defaults.labels;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder config(Input<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config) {
+        public Builder config(Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(WorkflowTemplatePlacementManagedClusterConfigGetArgs config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterGetArgs build() {

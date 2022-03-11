@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigArgs;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogConfigs", required=true)
-      private final Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+      private final Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Input<List<IAMAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IAMAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -32,9 +32,9 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project", required=true)
-      private final Input<String> project;
+      private final Output<String> project;
 
-    public Input<String> getProject() {
+    public Output<String> getProject() {
         return this.project;
     }
 
@@ -43,25 +43,25 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service", required=true)
-      private final Input<String> service;
+      private final Output<String> service;
 
-    public Input<String> getService() {
+    public Output<String> getService() {
         return this.service;
     }
 
     public IAMAuditConfigArgs(
-        Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs,
-        Input<String> project,
-        Input<String> service) {
+        Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs,
+        Output<String> project,
+        Output<String> service) {
         this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
         this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
         this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
     }
 
     private IAMAuditConfigArgs() {
-        this.auditLogConfigs = Input.empty();
-        this.project = Input.empty();
-        this.service = Input.empty();
+        this.auditLogConfigs = Output.empty();
+        this.project = Output.empty();
+        this.service = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
-        private Input<String> project;
-        private Input<String> service;
+        private Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
+        private Output<String> project;
+        private Output<String> service;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder auditLogConfigs(Input<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
         public Builder auditLogConfigs(List<IAMAuditConfigAuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Input.of(Objects.requireNonNull(auditLogConfigs));
+            this.auditLogConfigs = Output.of(Objects.requireNonNull(auditLogConfigs));
             return this;
         }
 
-        public Builder project(Input<String> project) {
+        public Builder project(Output<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
         public Builder project(String project) {
-            this.project = Input.of(Objects.requireNonNull(project));
+            this.project = Output.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder service(Input<String> service) {
+        public Builder service(Output<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
         public Builder service(String service) {
-            this.service = Input.of(Objects.requireNonNull(service));
+            this.service = Output.of(Objects.requireNonNull(service));
             return this;
         }
         public IAMAuditConfigArgs build() {

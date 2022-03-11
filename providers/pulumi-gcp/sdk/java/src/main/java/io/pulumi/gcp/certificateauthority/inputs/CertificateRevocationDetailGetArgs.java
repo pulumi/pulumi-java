@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class CertificateRevocationDetailGetArgs extends io.pulumi.resource
     public static final CertificateRevocationDetailGetArgs Empty = new CertificateRevocationDetailGetArgs();
 
     @InputImport(name="revocationState")
-      private final @Nullable Input<String> revocationState;
+      private final @Nullable Output<String> revocationState;
 
-    public Input<String> getRevocationState() {
-        return this.revocationState == null ? Input.empty() : this.revocationState;
+    public Output<String> getRevocationState() {
+        return this.revocationState == null ? Output.empty() : this.revocationState;
     }
 
     @InputImport(name="revocationTime")
-      private final @Nullable Input<String> revocationTime;
+      private final @Nullable Output<String> revocationTime;
 
-    public Input<String> getRevocationTime() {
-        return this.revocationTime == null ? Input.empty() : this.revocationTime;
+    public Output<String> getRevocationTime() {
+        return this.revocationTime == null ? Output.empty() : this.revocationTime;
     }
 
     public CertificateRevocationDetailGetArgs(
-        @Nullable Input<String> revocationState,
-        @Nullable Input<String> revocationTime) {
+        @Nullable Output<String> revocationState,
+        @Nullable Output<String> revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }
 
     private CertificateRevocationDetailGetArgs() {
-        this.revocationState = Input.empty();
-        this.revocationTime = Input.empty();
+        this.revocationState = Output.empty();
+        this.revocationTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class CertificateRevocationDetailGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> revocationState;
-        private @Nullable Input<String> revocationTime;
+        private @Nullable Output<String> revocationState;
+        private @Nullable Output<String> revocationTime;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class CertificateRevocationDetailGetArgs extends io.pulumi.resource
     	      this.revocationTime = defaults.revocationTime;
         }
 
-        public Builder revocationState(@Nullable Input<String> revocationState) {
+        public Builder revocationState(@Nullable Output<String> revocationState) {
             this.revocationState = revocationState;
             return this;
         }
 
         public Builder revocationState(@Nullable String revocationState) {
-            this.revocationState = Input.ofNullable(revocationState);
+            this.revocationState = Output.ofNullable(revocationState);
             return this;
         }
 
-        public Builder revocationTime(@Nullable Input<String> revocationTime) {
+        public Builder revocationTime(@Nullable Output<String> revocationTime) {
             this.revocationTime = revocationTime;
             return this;
         }
 
         public Builder revocationTime(@Nullable String revocationTime) {
-            this.revocationTime = Input.ofNullable(revocationTime);
+            this.revocationTime = Output.ofNullable(revocationTime);
             return this;
         }
         public CertificateRevocationDetailGetArgs build() {

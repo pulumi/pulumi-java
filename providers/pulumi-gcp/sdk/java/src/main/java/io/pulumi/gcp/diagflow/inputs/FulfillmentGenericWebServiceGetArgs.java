@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="requestHeaders")
-      private final @Nullable Input<Map<String,String>> requestHeaders;
+      private final @Nullable Output<Map<String,String>> requestHeaders;
 
-    public Input<Map<String,String>> getRequestHeaders() {
-        return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
+    public Output<Map<String,String>> getRequestHeaders() {
+        return this.requestHeaders == null ? Output.empty() : this.requestHeaders;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
@@ -53,17 +53,17 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public FulfillmentGenericWebServiceGetArgs(
-        @Nullable Input<String> password,
-        @Nullable Input<Map<String,String>> requestHeaders,
-        Input<String> uri,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> password,
+        @Nullable Output<Map<String,String>> requestHeaders,
+        Output<String> uri,
+        @Nullable Output<String> username) {
         this.password = password;
         this.requestHeaders = requestHeaders;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
@@ -71,10 +71,10 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     }
 
     private FulfillmentGenericWebServiceGetArgs() {
-        this.password = Input.empty();
-        this.requestHeaders = Input.empty();
-        this.uri = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.requestHeaders = Output.empty();
+        this.uri = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private @Nullable Input<Map<String,String>> requestHeaders;
-        private Input<String> uri;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> password;
+        private @Nullable Output<Map<String,String>> requestHeaders;
+        private Output<String> uri;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class FulfillmentGenericWebServiceGetArgs extends io.pulumi.resourc
     	      this.username = defaults.username;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder requestHeaders(@Nullable Input<Map<String,String>> requestHeaders) {
+        public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
-            this.requestHeaders = Input.ofNullable(requestHeaders);
+            this.requestHeaders = Output.ofNullable(requestHeaders);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public FulfillmentGenericWebServiceGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * 
      */
     @InputImport(name="env", required=true)
-      private final Input<String> env;
+      private final Output<String> env;
 
-    public Input<String> getEnv() {
+    public Output<String> getEnv() {
         return this.env;
     }
 
@@ -32,22 +32,22 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
      * 
      */
     @InputImport(name="versionName", required=true)
-      private final Input<String> versionName;
+      private final Output<String> versionName;
 
-    public Input<String> getVersionName() {
+    public Output<String> getVersionName() {
         return this.versionName;
     }
 
     public TriggerBuildAvailableSecretsSecretManagerGetArgs(
-        Input<String> env,
-        Input<String> versionName) {
+        Output<String> env,
+        Output<String> versionName) {
         this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
         this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
     }
 
     private TriggerBuildAvailableSecretsSecretManagerGetArgs() {
-        this.env = Input.empty();
-        this.versionName = Input.empty();
+        this.env = Output.empty();
+        this.versionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<String> env;
-        private Input<String> versionName;
+        private Output<String> env;
+        private Output<String> versionName;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder env(Input<String> env) {
+        public Builder env(Output<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
         public Builder env(String env) {
-            this.env = Input.of(Objects.requireNonNull(env));
+            this.env = Output.of(Objects.requireNonNull(env));
             return this;
         }
 
-        public Builder versionName(Input<String> versionName) {
+        public Builder versionName(Output<String> versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
 
         public Builder versionName(String versionName) {
-            this.versionName = Input.of(Objects.requireNonNull(versionName));
+            this.versionName = Output.of(Objects.requireNonNull(versionName));
             return this;
         }
         public TriggerBuildAvailableSecretsSecretManagerGetArgs build() {

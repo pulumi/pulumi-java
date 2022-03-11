@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.notebooks;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,14 +184,14 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuntimeIamMember(String name, RuntimeIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/runtimeIamMember:RuntimeIamMember", name, args == null ? RuntimeIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:notebooks/runtimeIamMember:RuntimeIamMember", name, args == null ? RuntimeIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RuntimeIamMember(String name, Input<String> id, @Nullable RuntimeIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RuntimeIamMember(String name, Output<String> id, @Nullable RuntimeIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:notebooks/runtimeIamMember:RuntimeIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -208,7 +207,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RuntimeIamMember get(String name, Input<String> id, @Nullable RuntimeIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RuntimeIamMember get(String name, Output<String> id, @Nullable RuntimeIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RuntimeIamMember(name, id, state, options);
     }
 }

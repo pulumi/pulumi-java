@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigGetArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="onlineServingConfig")
-      private final @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
+      private final @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
-    public Input<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
-        return this.onlineServingConfig == null ? Input.empty() : this.onlineServingConfig;
+    public Output<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
+        return this.onlineServingConfig == null ? Output.empty() : this.onlineServingConfig;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -114,22 +114,22 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public AiFeatureStoreState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> etag,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> etag,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.etag = etag;
         this.forceDestroy = forceDestroy;
@@ -142,15 +142,15 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     }
 
     private AiFeatureStoreState() {
-        this.createTime = Input.empty();
-        this.etag = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.onlineServingConfig = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.etag = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.onlineServingConfig = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder onlineServingConfig(@Nullable Input<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig) {
+        public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig) {
             this.onlineServingConfig = onlineServingConfig;
             return this;
         }
 
         public Builder onlineServingConfig(@Nullable AiFeatureStoreOnlineServingConfigGetArgs onlineServingConfig) {
-            this.onlineServingConfig = Input.ofNullable(onlineServingConfig);
+            this.onlineServingConfig = Output.ofNullable(onlineServingConfig);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public AiFeatureStoreState build() {

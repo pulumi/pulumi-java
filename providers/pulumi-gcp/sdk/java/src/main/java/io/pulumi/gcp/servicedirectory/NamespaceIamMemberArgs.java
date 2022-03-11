@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final NamespaceIamMemberArgs Empty = new NamespaceIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<NamespaceIamMemberConditionArgs> condition;
+      private final @Nullable Output<NamespaceIamMemberConditionArgs> condition;
 
-    public Input<NamespaceIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<NamespaceIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -34,10 +34,10 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,17 +47,17 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public NamespaceIamMemberArgs(
-        @Nullable Input<NamespaceIamMemberConditionArgs> condition,
-        Input<String> member,
-        @Nullable Input<String> name,
-        Input<String> role) {
+        @Nullable Output<NamespaceIamMemberConditionArgs> condition,
+        Output<String> member,
+        @Nullable Output<String> name,
+        Output<String> role) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.name = name;
@@ -65,10 +65,10 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NamespaceIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.name = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.name = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<NamespaceIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private @Nullable Input<String> name;
-        private Input<String> role;
+        private @Nullable Output<NamespaceIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private @Nullable Output<String> name;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<NamespaceIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<NamespaceIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable NamespaceIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public NamespaceIamMemberArgs build() {

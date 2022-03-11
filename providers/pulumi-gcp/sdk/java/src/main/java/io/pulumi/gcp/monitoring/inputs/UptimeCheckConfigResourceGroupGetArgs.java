@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public UptimeCheckConfigResourceGroupGetArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }
 
     private UptimeCheckConfigResourceGroupGetArgs() {
-        this.groupId = Input.empty();
-        this.resourceType = Input.empty();
+        this.groupId = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class UptimeCheckConfigResourceGroupGetArgs extends io.pulumi.resou
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public UptimeCheckConfigResourceGroupGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs;
 import java.lang.String;
@@ -19,9 +19,9 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="datasetUri", required=true)
-      private final Input<String> datasetUri;
+      private final Output<String> datasetUri;
 
-    public Input<String> getDatasetUri() {
+    public Output<String> getDatasetUri() {
         return this.datasetUri;
     }
 
@@ -31,22 +31,22 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * 
      */
     @InputImport(name="schemaConfig", required=true)
-      private final Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
+      private final Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
-    public Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {
+    public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {
         return this.schemaConfig;
     }
 
     public FhirStoreStreamConfigBigqueryDestinationArgs(
-        Input<String> datasetUri,
-        Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
+        Output<String> datasetUri,
+        Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
         this.datasetUri = Objects.requireNonNull(datasetUri, "expected parameter 'datasetUri' to be non-null");
         this.schemaConfig = Objects.requireNonNull(schemaConfig, "expected parameter 'schemaConfig' to be non-null");
     }
 
     private FhirStoreStreamConfigBigqueryDestinationArgs() {
-        this.datasetUri = Input.empty();
-        this.schemaConfig = Input.empty();
+        this.datasetUri = Output.empty();
+        this.schemaConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> datasetUri;
-        private Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
+        private Output<String> datasetUri;
+        private Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     	      this.schemaConfig = defaults.schemaConfig;
         }
 
-        public Builder datasetUri(Input<String> datasetUri) {
+        public Builder datasetUri(Output<String> datasetUri) {
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
 
         public Builder datasetUri(String datasetUri) {
-            this.datasetUri = Input.of(Objects.requireNonNull(datasetUri));
+            this.datasetUri = Output.of(Objects.requireNonNull(datasetUri));
             return this;
         }
 
-        public Builder schemaConfig(Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
+        public Builder schemaConfig(Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
 
         public Builder schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs schemaConfig) {
-            this.schemaConfig = Input.of(Objects.requireNonNull(schemaConfig));
+            this.schemaConfig = Output.of(Objects.requireNonNull(schemaConfig));
             return this;
         }
         public FhirStoreStreamConfigBigqueryDestinationArgs build() {

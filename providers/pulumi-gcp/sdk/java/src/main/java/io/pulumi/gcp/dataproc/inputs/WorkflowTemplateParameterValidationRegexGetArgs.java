@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -19,18 +19,18 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
      * 
      */
     @InputImport(name="regexes", required=true)
-      private final Input<List<String>> regexes;
+      private final Output<List<String>> regexes;
 
-    public Input<List<String>> getRegexes() {
+    public Output<List<String>> getRegexes() {
         return this.regexes;
     }
 
-    public WorkflowTemplateParameterValidationRegexGetArgs(Input<List<String>> regexes) {
+    public WorkflowTemplateParameterValidationRegexGetArgs(Output<List<String>> regexes) {
         this.regexes = Objects.requireNonNull(regexes, "expected parameter 'regexes' to be non-null");
     }
 
     private WorkflowTemplateParameterValidationRegexGetArgs() {
-        this.regexes = Input.empty();
+        this.regexes = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<List<String>> regexes;
+        private Output<List<String>> regexes;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class WorkflowTemplateParameterValidationRegexGetArgs extends io.pu
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder regexes(Input<List<String>> regexes) {
+        public Builder regexes(Output<List<String>> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }
 
         public Builder regexes(List<String> regexes) {
-            this.regexes = Input.of(Objects.requireNonNull(regexes));
+            this.regexes = Output.of(Objects.requireNonNull(regexes));
             return this;
         }
         public WorkflowTemplateParameterValidationRegexGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="urlMask")
-      private final @Nullable Input<String> urlMask;
+      private final @Nullable Output<String> urlMask;
 
-    public Input<String> getUrlMask() {
-        return this.urlMask == null ? Input.empty() : this.urlMask;
+    public Output<String> getUrlMask() {
+        return this.urlMask == null ? Output.empty() : this.urlMask;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public RegionNetworkEndpointGroupAppEngineArgs(
-        @Nullable Input<String> service,
-        @Nullable Input<String> urlMask,
-        @Nullable Input<String> version) {
+        @Nullable Output<String> service,
+        @Nullable Output<String> urlMask,
+        @Nullable Output<String> version) {
         this.service = service;
         this.urlMask = urlMask;
         this.version = version;
     }
 
     private RegionNetworkEndpointGroupAppEngineArgs() {
-        this.service = Input.empty();
-        this.urlMask = Input.empty();
-        this.version = Input.empty();
+        this.service = Output.empty();
+        this.urlMask = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> service;
-        private @Nullable Input<String> urlMask;
-        private @Nullable Input<String> version;
+        private @Nullable Output<String> service;
+        private @Nullable Output<String> urlMask;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
     	      this.version = defaults.version;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder urlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Output<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Input.ofNullable(urlMask);
+            this.urlMask = Output.ofNullable(urlMask);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public RegionNetworkEndpointGroupAppEngineArgs build() {

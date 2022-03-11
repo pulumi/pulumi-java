@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
      * 
      */
     @InputImport(name="infoTypeTransformations", required=true)
-      private final Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
+      private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
 
-    public Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> getInfoTypeTransformations() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> getInfoTypeTransformations() {
         return this.infoTypeTransformations;
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigArgs(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations) {
+    public PreventionDeidentifyTemplateDeidentifyConfigArgs(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations) {
         this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigArgs() {
-        this.infoTypeTransformations = Input.empty();
+        this.infoTypeTransformations = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
+        private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends io.p
     	      this.infoTypeTransformations = defaults.infoTypeTransformations;
         }
 
-        public Builder infoTypeTransformations(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations) {
+        public Builder infoTypeTransformations(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
         public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs infoTypeTransformations) {
-            this.infoTypeTransformations = Input.of(Objects.requireNonNull(infoTypeTransformations));
+            this.infoTypeTransformations = Output.of(Objects.requireNonNull(infoTypeTransformations));
             return this;
         }
         public PreventionDeidentifyTemplateDeidentifyConfigArgs build() {

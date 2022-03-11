@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.IAMBindingConditionArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMBindingArgs Empty = new IAMBindingArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<IAMBindingConditionArgs> condition;
+      private final @Nullable Output<IAMBindingConditionArgs> condition;
 
-    public Input<IAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<IAMBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,9 +28,9 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
@@ -39,9 +39,9 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
@@ -52,17 +52,17 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public IAMBindingArgs(
-        @Nullable Input<IAMBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> orgId,
-        Input<String> role) {
+        @Nullable Output<IAMBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> orgId,
+        Output<String> role) {
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
         this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
@@ -70,10 +70,10 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMBindingArgs() {
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.orgId = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.orgId = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IAMBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> orgId;
-        private Input<String> role;
+        private @Nullable Output<IAMBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> orgId;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<IAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<IAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable IAMBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public IAMBindingArgs build() {

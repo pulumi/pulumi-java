@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final DeviceStateGetArgs Empty = new DeviceStateGetArgs();
 
     @InputImport(name="binaryData")
-      private final @Nullable Input<String> binaryData;
+      private final @Nullable Output<String> binaryData;
 
-    public Input<String> getBinaryData() {
-        return this.binaryData == null ? Input.empty() : this.binaryData;
+    public Output<String> getBinaryData() {
+        return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public DeviceStateGetArgs(
-        @Nullable Input<String> binaryData,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> binaryData,
+        @Nullable Output<String> updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }
 
     private DeviceStateGetArgs() {
-        this.binaryData = Input.empty();
-        this.updateTime = Input.empty();
+        this.binaryData = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> binaryData;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> binaryData;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class DeviceStateGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder binaryData(@Nullable Input<String> binaryData) {
+        public Builder binaryData(@Nullable Output<String> binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
         public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Input.ofNullable(binaryData);
+            this.binaryData = Output.ofNullable(binaryData);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public DeviceStateGetArgs build() {

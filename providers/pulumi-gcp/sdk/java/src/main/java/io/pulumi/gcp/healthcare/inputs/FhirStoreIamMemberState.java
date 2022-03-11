@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionGetArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     public static final FhirStoreIamMemberState Empty = new FhirStoreIamMemberState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<FhirStoreIamMemberConditionGetArgs> condition;
+      private final @Nullable Output<FhirStoreIamMemberConditionGetArgs> condition;
 
-    public Input<FhirStoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<FhirStoreIamMemberConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,10 +27,10 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -41,17 +41,17 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fhirStoreId")
-      private final @Nullable Input<String> fhirStoreId;
+      private final @Nullable Output<String> fhirStoreId;
 
-    public Input<String> getFhirStoreId() {
-        return this.fhirStoreId == null ? Input.empty() : this.fhirStoreId;
+    public Output<String> getFhirStoreId() {
+        return this.fhirStoreId == null ? Output.empty() : this.fhirStoreId;
     }
 
     @InputImport(name="member")
-      private final @Nullable Input<String> member;
+      private final @Nullable Output<String> member;
 
-    public Input<String> getMember() {
-        return this.member == null ? Input.empty() : this.member;
+    public Output<String> getMember() {
+        return this.member == null ? Output.empty() : this.member;
     }
 
     /**
@@ -61,18 +61,18 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public FhirStoreIamMemberState(
-        @Nullable Input<FhirStoreIamMemberConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> fhirStoreId,
-        @Nullable Input<String> member,
-        @Nullable Input<String> role) {
+        @Nullable Output<FhirStoreIamMemberConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> fhirStoreId,
+        @Nullable Output<String> member,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.fhirStoreId = fhirStoreId;
@@ -81,11 +81,11 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     }
 
     private FhirStoreIamMemberState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.fhirStoreId = Input.empty();
-        this.member = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.fhirStoreId = Output.empty();
+        this.member = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -97,11 +97,11 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<FhirStoreIamMemberConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> fhirStoreId;
-        private @Nullable Input<String> member;
-        private @Nullable Input<String> role;
+        private @Nullable Output<FhirStoreIamMemberConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> fhirStoreId;
+        private @Nullable Output<String> member;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -116,53 +116,53 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<FhirStoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<FhirStoreIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable FhirStoreIamMemberConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder fhirStoreId(@Nullable Input<String> fhirStoreId) {
+        public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
             this.fhirStoreId = fhirStoreId;
             return this;
         }
 
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
-            this.fhirStoreId = Input.ofNullable(fhirStoreId);
+            this.fhirStoreId = Output.ofNullable(fhirStoreId);
             return this;
         }
 
-        public Builder member(@Nullable Input<String> member) {
+        public Builder member(@Nullable Output<String> member) {
             this.member = member;
             return this;
         }
 
         public Builder member(@Nullable String member) {
-            this.member = Input.ofNullable(member);
+            this.member = Output.ofNullable(member);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public FhirStoreIamMemberState build() {

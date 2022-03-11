@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
      * 
      */
     @InputImport(name="maxScaledInReplicas")
-      private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
+      private final @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
 
-    public Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> getMaxScaledInReplicas() {
-        return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
+    public Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> getMaxScaledInReplicas() {
+        return this.maxScaledInReplicas == null ? Output.empty() : this.maxScaledInReplicas;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
      * 
      */
     @InputImport(name="timeWindowSec")
-      private final @Nullable Input<Integer> timeWindowSec;
+      private final @Nullable Output<Integer> timeWindowSec;
 
-    public Input<Integer> getTimeWindowSec() {
-        return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;
+    public Output<Integer> getTimeWindowSec() {
+        return this.timeWindowSec == null ? Output.empty() : this.timeWindowSec;
     }
 
     public RegionAutoscalerAutoscalingPolicyScaleInControlArgs(
-        @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas,
-        @Nullable Input<Integer> timeWindowSec) {
+        @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas,
+        @Nullable Output<Integer> timeWindowSec) {
         this.maxScaledInReplicas = maxScaledInReplicas;
         this.timeWindowSec = timeWindowSec;
     }
 
     private RegionAutoscalerAutoscalingPolicyScaleInControlArgs() {
-        this.maxScaledInReplicas = Input.empty();
-        this.timeWindowSec = Input.empty();
+        this.maxScaledInReplicas = Output.empty();
+        this.timeWindowSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
     }
 
     public static final class Builder {
-        private @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
-        private @Nullable Input<Integer> timeWindowSec;
+        private @Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas;
+        private @Nullable Output<Integer> timeWindowSec;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlArgs extends i
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder maxScaledInReplicas(@Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable Output<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs> maxScaledInReplicas) {
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
         public Builder maxScaledInReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs maxScaledInReplicas) {
-            this.maxScaledInReplicas = Input.ofNullable(maxScaledInReplicas);
+            this.maxScaledInReplicas = Output.ofNullable(maxScaledInReplicas);
             return this;
         }
 
-        public Builder timeWindowSec(@Nullable Input<Integer> timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Output<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
 
         public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
-            this.timeWindowSec = Input.ofNullable(timeWindowSec);
+            this.timeWindowSec = Output.ofNullable(timeWindowSec);
             return this;
         }
         public RegionAutoscalerAutoscalingPolicyScaleInControlArgs build() {

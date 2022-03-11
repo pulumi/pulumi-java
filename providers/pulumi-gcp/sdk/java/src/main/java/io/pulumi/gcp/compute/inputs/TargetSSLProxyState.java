@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<String> backendService;
+      private final @Nullable Output<String> backendService;
 
-    public Input<String> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<String> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyHeader")
-      private final @Nullable Input<String> proxyHeader;
+      private final @Nullable Output<String> proxyHeader;
 
-    public Input<String> getProxyHeader() {
-        return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
+    public Output<String> getProxyHeader() {
+        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyId")
-      private final @Nullable Input<Integer> proxyId;
+      private final @Nullable Output<Integer> proxyId;
 
-    public Input<Integer> getProxyId() {
-        return this.proxyId == null ? Input.empty() : this.proxyId;
+    public Output<Integer> getProxyId() {
+        return this.proxyId == null ? Output.empty() : this.proxyId;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sslCertificates")
-      private final @Nullable Input<List<String>> sslCertificates;
+      private final @Nullable Output<List<String>> sslCertificates;
 
-    public Input<List<String>> getSslCertificates() {
-        return this.sslCertificates == null ? Input.empty() : this.sslCertificates;
+    public Output<List<String>> getSslCertificates() {
+        return this.sslCertificates == null ? Output.empty() : this.sslCertificates;
     }
 
     /**
@@ -134,23 +134,23 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sslPolicy")
-      private final @Nullable Input<String> sslPolicy;
+      private final @Nullable Output<String> sslPolicy;
 
-    public Input<String> getSslPolicy() {
-        return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
+    public Output<String> getSslPolicy() {
+        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
     }
 
     public TargetSSLProxyState(
-        @Nullable Input<String> backendService,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> proxyHeader,
-        @Nullable Input<Integer> proxyId,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<List<String>> sslCertificates,
-        @Nullable Input<String> sslPolicy) {
+        @Nullable Output<String> backendService,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> proxyHeader,
+        @Nullable Output<Integer> proxyId,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<List<String>> sslCertificates,
+        @Nullable Output<String> sslPolicy) {
         this.backendService = backendService;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -164,16 +164,16 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private TargetSSLProxyState() {
-        this.backendService = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.proxyHeader = Input.empty();
-        this.proxyId = Input.empty();
-        this.selfLink = Input.empty();
-        this.sslCertificates = Input.empty();
-        this.sslPolicy = Input.empty();
+        this.backendService = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.proxyHeader = Output.empty();
+        this.proxyId = Output.empty();
+        this.selfLink = Output.empty();
+        this.sslCertificates = Output.empty();
+        this.sslPolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -185,16 +185,16 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendService;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> proxyHeader;
-        private @Nullable Input<Integer> proxyId;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<List<String>> sslCertificates;
-        private @Nullable Input<String> sslPolicy;
+        private @Nullable Output<String> backendService;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> proxyHeader;
+        private @Nullable Output<Integer> proxyId;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<List<String>> sslCertificates;
+        private @Nullable Output<String> sslPolicy;
 
         public Builder() {
     	      // Empty
@@ -214,103 +214,103 @@ public final class TargetSSLProxyState extends io.pulumi.resources.ResourceArgs 
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder backendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Output<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder proxyHeader(@Nullable Input<String> proxyHeader) {
+        public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
         public Builder proxyHeader(@Nullable String proxyHeader) {
-            this.proxyHeader = Input.ofNullable(proxyHeader);
+            this.proxyHeader = Output.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder proxyId(@Nullable Input<Integer> proxyId) {
+        public Builder proxyId(@Nullable Output<Integer> proxyId) {
             this.proxyId = proxyId;
             return this;
         }
 
         public Builder proxyId(@Nullable Integer proxyId) {
-            this.proxyId = Input.ofNullable(proxyId);
+            this.proxyId = Output.ofNullable(proxyId);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder sslCertificates(@Nullable Input<List<String>> sslCertificates) {
+        public Builder sslCertificates(@Nullable Output<List<String>> sslCertificates) {
             this.sslCertificates = sslCertificates;
             return this;
         }
 
         public Builder sslCertificates(@Nullable List<String> sslCertificates) {
-            this.sslCertificates = Input.ofNullable(sslCertificates);
+            this.sslCertificates = Output.ofNullable(sslCertificates);
             return this;
         }
 
-        public Builder sslPolicy(@Nullable Input<String> sslPolicy) {
+        public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Input.ofNullable(sslPolicy);
+            this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
         public TargetSSLProxyState build() {

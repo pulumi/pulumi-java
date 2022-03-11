@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="messageFormat", required=true)
-      private final Input<String> messageFormat;
+      private final Output<String> messageFormat;
 
-    public Input<String> getMessageFormat() {
+    public Output<String> getMessageFormat() {
         return this.messageFormat;
     }
 
@@ -36,10 +36,10 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceAccountEmail")
-      private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
+    public Output<String> getServiceAccountEmail() {
+        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topic", required=true)
-      private final Input<String> topic;
+      private final Output<String> topic;
 
-    public Input<String> getTopic() {
+    public Output<String> getTopic() {
         return this.topic;
     }
 
     public RepositoryPubsubConfigArgs(
-        Input<String> messageFormat,
-        @Nullable Input<String> serviceAccountEmail,
-        Input<String> topic) {
+        Output<String> messageFormat,
+        @Nullable Output<String> serviceAccountEmail,
+        Output<String> topic) {
         this.messageFormat = Objects.requireNonNull(messageFormat, "expected parameter 'messageFormat' to be non-null");
         this.serviceAccountEmail = serviceAccountEmail;
         this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
     }
 
     private RepositoryPubsubConfigArgs() {
-        this.messageFormat = Input.empty();
-        this.serviceAccountEmail = Input.empty();
-        this.topic = Input.empty();
+        this.messageFormat = Output.empty();
+        this.serviceAccountEmail = Output.empty();
+        this.topic = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> messageFormat;
-        private @Nullable Input<String> serviceAccountEmail;
-        private Input<String> topic;
+        private Output<String> messageFormat;
+        private @Nullable Output<String> serviceAccountEmail;
+        private Output<String> topic;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
     	      this.topic = defaults.topic;
         }
 
-        public Builder messageFormat(Input<String> messageFormat) {
+        public Builder messageFormat(Output<String> messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
         public Builder messageFormat(String messageFormat) {
-            this.messageFormat = Input.of(Objects.requireNonNull(messageFormat));
+            this.messageFormat = Output.of(Objects.requireNonNull(messageFormat));
             return this;
         }
 
-        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder topic(Input<String> topic) {
+        public Builder topic(Output<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
         public Builder topic(String topic) {
-            this.topic = Input.of(Objects.requireNonNull(topic));
+            this.topic = Output.of(Objects.requireNonNull(topic));
             return this;
         }
         public RepositoryPubsubConfigArgs build() {

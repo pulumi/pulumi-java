@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesGetArgs;
@@ -20,10 +20,10 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="regex")
-      private final @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
+      private final @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
-    public Input<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
-        return this.regex == null ? Input.empty() : this.regex;
+    public Output<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
+        return this.regex == null ? Output.empty() : this.regex;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
+      private final @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
-    public Input<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     public WorkflowTemplateParameterValidationGetArgs(
-        @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex,
-        @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values) {
+        @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex,
+        @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values) {
         this.regex = regex;
         this.values = values;
     }
 
     private WorkflowTemplateParameterValidationGetArgs() {
-        this.regex = Input.empty();
-        this.values = Input.empty();
+        this.regex = Output.empty();
+        this.values = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
-        private @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
+        private @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex;
+        private @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
     	      this.values = defaults.values;
         }
 
-        public Builder regex(@Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex) {
+        public Builder regex(@Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
 
         public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexGetArgs regex) {
-            this.regex = Input.ofNullable(regex);
+            this.regex = Output.ofNullable(regex);
             return this;
         }
 
-        public Builder values(@Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values) {
+        public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable WorkflowTemplateParameterValidationValuesGetArgs values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
         public WorkflowTemplateParameterValidationGetArgs build() {

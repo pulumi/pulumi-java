@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobPlacementArgs Empty = new JobPlacementArgs();
 
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
     @InputImport(name="clusterUuid")
-      private final @Nullable Input<String> clusterUuid;
+      private final @Nullable Output<String> clusterUuid;
 
-    public Input<String> getClusterUuid() {
-        return this.clusterUuid == null ? Input.empty() : this.clusterUuid;
+    public Output<String> getClusterUuid() {
+        return this.clusterUuid == null ? Output.empty() : this.clusterUuid;
     }
 
     public JobPlacementArgs(
-        Input<String> clusterName,
-        @Nullable Input<String> clusterUuid) {
+        Output<String> clusterName,
+        @Nullable Output<String> clusterUuid) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.clusterUuid = clusterUuid;
     }
 
     private JobPlacementArgs() {
-        this.clusterName = Input.empty();
-        this.clusterUuid = Input.empty();
+        this.clusterName = Output.empty();
+        this.clusterUuid = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private @Nullable Input<String> clusterUuid;
+        private Output<String> clusterName;
+        private @Nullable Output<String> clusterUuid;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterUuid = defaults.clusterUuid;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder clusterUuid(@Nullable Input<String> clusterUuid) {
+        public Builder clusterUuid(@Nullable Output<String> clusterUuid) {
             this.clusterUuid = clusterUuid;
             return this;
         }
 
         public Builder clusterUuid(@Nullable String clusterUuid) {
-            this.clusterUuid = Input.ofNullable(clusterUuid);
+            this.clusterUuid = Output.ofNullable(clusterUuid);
             return this;
         }
         public JobPlacementArgs build() {

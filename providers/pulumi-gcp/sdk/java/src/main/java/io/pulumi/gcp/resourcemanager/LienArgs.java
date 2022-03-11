@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.resourcemanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,9 +21,9 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin", required=true)
-      private final Input<String> origin;
+      private final Output<String> origin;
 
-    public Input<String> getOrigin() {
+    public Output<String> getOrigin() {
         return this.origin;
     }
 
@@ -35,9 +35,9 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
@@ -47,9 +47,9 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-      private final Input<String> reason;
+      private final Output<String> reason;
 
-    public Input<String> getReason() {
+    public Output<String> getReason() {
         return this.reason;
     }
 
@@ -62,17 +62,17 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions", required=true)
-      private final Input<List<String>> restrictions;
+      private final Output<List<String>> restrictions;
 
-    public Input<List<String>> getRestrictions() {
+    public Output<List<String>> getRestrictions() {
         return this.restrictions;
     }
 
     public LienArgs(
-        Input<String> origin,
-        Input<String> parent,
-        Input<String> reason,
-        Input<List<String>> restrictions) {
+        Output<String> origin,
+        Output<String> parent,
+        Output<String> reason,
+        Output<List<String>> restrictions) {
         this.origin = Objects.requireNonNull(origin, "expected parameter 'origin' to be non-null");
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
         this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
@@ -80,10 +80,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LienArgs() {
-        this.origin = Input.empty();
-        this.parent = Input.empty();
-        this.reason = Input.empty();
-        this.restrictions = Input.empty();
+        this.origin = Output.empty();
+        this.parent = Output.empty();
+        this.reason = Output.empty();
+        this.restrictions = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> origin;
-        private Input<String> parent;
-        private Input<String> reason;
-        private Input<List<String>> restrictions;
+        private Output<String> origin;
+        private Output<String> parent;
+        private Output<String> reason;
+        private Output<List<String>> restrictions;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder origin(Input<String> origin) {
+        public Builder origin(Output<String> origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
         public Builder origin(String origin) {
-            this.origin = Input.of(Objects.requireNonNull(origin));
+            this.origin = Output.of(Objects.requireNonNull(origin));
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder reason(Input<String> reason) {
+        public Builder reason(Output<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
         public Builder reason(String reason) {
-            this.reason = Input.of(Objects.requireNonNull(reason));
+            this.reason = Output.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder restrictions(Input<List<String>> restrictions) {
+        public Builder restrictions(Output<List<String>> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }
 
         public Builder restrictions(List<String> restrictions) {
-            this.restrictions = Input.of(Objects.requireNonNull(restrictions));
+            this.restrictions = Output.of(Objects.requireNonNull(restrictions));
             return this;
         }
         public LienArgs build() {

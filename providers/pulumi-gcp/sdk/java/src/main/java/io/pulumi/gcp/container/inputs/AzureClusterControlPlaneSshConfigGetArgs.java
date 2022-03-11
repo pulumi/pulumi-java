@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizedKey", required=true)
-      private final Input<String> authorizedKey;
+      private final Output<String> authorizedKey;
 
-    public Input<String> getAuthorizedKey() {
+    public Output<String> getAuthorizedKey() {
         return this.authorizedKey;
     }
 
-    public AzureClusterControlPlaneSshConfigGetArgs(Input<String> authorizedKey) {
+    public AzureClusterControlPlaneSshConfigGetArgs(Output<String> authorizedKey) {
         this.authorizedKey = Objects.requireNonNull(authorizedKey, "expected parameter 'authorizedKey' to be non-null");
     }
 
     private AzureClusterControlPlaneSshConfigGetArgs() {
-        this.authorizedKey = Input.empty();
+        this.authorizedKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> authorizedKey;
+        private Output<String> authorizedKey;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class AzureClusterControlPlaneSshConfigGetArgs extends io.pulumi.re
     	      this.authorizedKey = defaults.authorizedKey;
         }
 
-        public Builder authorizedKey(Input<String> authorizedKey) {
+        public Builder authorizedKey(Output<String> authorizedKey) {
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }
 
         public Builder authorizedKey(String authorizedKey) {
-            this.authorizedKey = Input.of(Objects.requireNonNull(authorizedKey));
+            this.authorizedKey = Output.of(Objects.requireNonNull(authorizedKey));
             return this;
         }
         public AzureClusterControlPlaneSshConfigGetArgs build() {

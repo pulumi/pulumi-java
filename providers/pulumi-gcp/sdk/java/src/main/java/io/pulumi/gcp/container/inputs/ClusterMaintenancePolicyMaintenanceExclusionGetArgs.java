@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,39 +14,39 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     public static final ClusterMaintenancePolicyMaintenanceExclusionGetArgs Empty = new ClusterMaintenancePolicyMaintenanceExclusionGetArgs();
 
     @InputImport(name="endTime", required=true)
-      private final Input<String> endTime;
+      private final Output<String> endTime;
 
-    public Input<String> getEndTime() {
+    public Output<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="exclusionName", required=true)
-      private final Input<String> exclusionName;
+      private final Output<String> exclusionName;
 
-    public Input<String> getExclusionName() {
+    public Output<String> getExclusionName() {
         return this.exclusionName;
     }
 
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
     public ClusterMaintenancePolicyMaintenanceExclusionGetArgs(
-        Input<String> endTime,
-        Input<String> exclusionName,
-        Input<String> startTime) {
+        Output<String> endTime,
+        Output<String> exclusionName,
+        Output<String> startTime) {
         this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
         this.exclusionName = Objects.requireNonNull(exclusionName, "expected parameter 'exclusionName' to be non-null");
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private ClusterMaintenancePolicyMaintenanceExclusionGetArgs() {
-        this.endTime = Input.empty();
-        this.exclusionName = Input.empty();
-        this.startTime = Input.empty();
+        this.endTime = Output.empty();
+        this.exclusionName = Output.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,9 +58,9 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     }
 
     public static final class Builder {
-        private Input<String> endTime;
-        private Input<String> exclusionName;
-        private Input<String> startTime;
+        private Output<String> endTime;
+        private Output<String> exclusionName;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -73,33 +73,33 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder endTime(Input<String> endTime) {
+        public Builder endTime(Output<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Input.of(Objects.requireNonNull(endTime));
+            this.endTime = Output.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder exclusionName(Input<String> exclusionName) {
+        public Builder exclusionName(Output<String> exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
 
         public Builder exclusionName(String exclusionName) {
-            this.exclusionName = Input.of(Objects.requireNonNull(exclusionName));
+            this.exclusionName = Output.of(Objects.requireNonNull(exclusionName));
             return this;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public ClusterMaintenancePolicyMaintenanceExclusionGetArgs build() {

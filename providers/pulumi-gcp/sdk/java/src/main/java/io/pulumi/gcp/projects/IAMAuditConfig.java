@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.projects;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -188,14 +187,14 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMAuditConfig(String name, IAMAuditConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, args == null ? IAMAuditConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IAMAuditConfig(String name, Input<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IAMAuditConfig(String name, Output<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:projects/iAMAuditConfig:IAMAuditConfig", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -211,7 +210,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IAMAuditConfig get(String name, Input<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IAMAuditConfig get(String name, Output<String> id, @Nullable IAMAuditConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IAMAuditConfig(name, id, state, options);
     }
 }

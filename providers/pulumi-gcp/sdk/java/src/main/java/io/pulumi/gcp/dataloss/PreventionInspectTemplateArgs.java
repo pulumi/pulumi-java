@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inspectConfig")
-      private final @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
+      private final @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
 
-    public Input<PreventionInspectTemplateInspectConfigArgs> getInspectConfig() {
-        return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
+    public Output<PreventionInspectTemplateInspectConfigArgs> getInspectConfig() {
+        return this.inspectConfig == null ? Output.empty() : this.inspectConfig;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public PreventionInspectTemplateArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig,
-        Input<String> parent) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig,
+        Output<String> parent) {
         this.description = description;
         this.displayName = displayName;
         this.inspectConfig = inspectConfig;
@@ -76,10 +76,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     }
 
     private PreventionInspectTemplateArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.inspectConfig = Input.empty();
-        this.parent = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.inspectConfig = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
-        private Input<String> parent;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class PreventionInspectTemplateArgs extends io.pulumi.resources.Res
     	      this.parent = defaults.parent;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder inspectConfig(@Nullable Input<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Output<PreventionInspectTemplateInspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
 
         public Builder inspectConfig(@Nullable PreventionInspectTemplateInspectConfigArgs inspectConfig) {
-            this.inspectConfig = Input.ofNullable(inspectConfig);
+            this.inspectConfig = Output.ofNullable(inspectConfig);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public PreventionInspectTemplateArgs build() {

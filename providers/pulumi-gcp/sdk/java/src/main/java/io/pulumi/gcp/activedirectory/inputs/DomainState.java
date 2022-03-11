@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.activedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="admin")
-      private final @Nullable Input<String> admin;
+      private final @Nullable Output<String> admin;
 
-    public Input<String> getAdmin() {
-        return this.admin == null ? Input.empty() : this.admin;
+    public Output<String> getAdmin() {
+        return this.admin == null ? Output.empty() : this.admin;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetworks")
-      private final @Nullable Input<List<String>> authorizedNetworks;
+      private final @Nullable Output<List<String>> authorizedNetworks;
 
-    public Input<List<String>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
+    public Output<List<String>> getAuthorizedNetworks() {
+        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations")
-      private final @Nullable Input<List<String>> locations;
+      private final @Nullable Output<List<String>> locations;
 
-    public Input<List<String>> getLocations() {
-        return this.locations == null ? Input.empty() : this.locations;
+    public Output<List<String>> getLocations() {
+        return this.locations == null ? Output.empty() : this.locations;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -116,22 +116,22 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange")
-      private final @Nullable Input<String> reservedIpRange;
+      private final @Nullable Output<String> reservedIpRange;
 
-    public Input<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Input.empty() : this.reservedIpRange;
+    public Output<String> getReservedIpRange() {
+        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
     }
 
     public DomainState(
-        @Nullable Input<String> admin,
-        @Nullable Input<List<String>> authorizedNetworks,
-        @Nullable Input<String> domainName,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<List<String>> locations,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> reservedIpRange) {
+        @Nullable Output<String> admin,
+        @Nullable Output<List<String>> authorizedNetworks,
+        @Nullable Output<String> domainName,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<List<String>> locations,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> reservedIpRange) {
         this.admin = admin;
         this.authorizedNetworks = authorizedNetworks;
         this.domainName = domainName;
@@ -144,15 +144,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.admin = Input.empty();
-        this.authorizedNetworks = Input.empty();
-        this.domainName = Input.empty();
-        this.fqdn = Input.empty();
-        this.labels = Input.empty();
-        this.locations = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.reservedIpRange = Input.empty();
+        this.admin = Output.empty();
+        this.authorizedNetworks = Output.empty();
+        this.domainName = Output.empty();
+        this.fqdn = Output.empty();
+        this.labels = Output.empty();
+        this.locations = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.reservedIpRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -164,15 +164,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> admin;
-        private @Nullable Input<List<String>> authorizedNetworks;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<List<String>> locations;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> reservedIpRange;
+        private @Nullable Output<String> admin;
+        private @Nullable Output<List<String>> authorizedNetworks;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<List<String>> locations;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> reservedIpRange;
 
         public Builder() {
     	      // Empty
@@ -191,93 +191,93 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder admin(@Nullable Input<String> admin) {
+        public Builder admin(@Nullable Output<String> admin) {
             this.admin = admin;
             return this;
         }
 
         public Builder admin(@Nullable String admin) {
-            this.admin = Input.ofNullable(admin);
+            this.admin = Output.ofNullable(admin);
             return this;
         }
 
-        public Builder authorizedNetworks(@Nullable Input<List<String>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
         public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
-            this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder locations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Output<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Input.ofNullable(locations);
+            this.locations = Output.ofNullable(locations);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Input.ofNullable(reservedIpRange);
+            this.reservedIpRange = Output.ofNullable(reservedIpRange);
             return this;
         }
         public DomainState build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,18 +15,18 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     public static final CertificateCertificateDescriptionSubjectKeyIdArgs Empty = new CertificateCertificateDescriptionSubjectKeyIdArgs();
 
     @InputImport(name="keyId")
-      private final @Nullable Input<String> keyId;
+      private final @Nullable Output<String> keyId;
 
-    public Input<String> getKeyId() {
-        return this.keyId == null ? Input.empty() : this.keyId;
+    public Output<String> getKeyId() {
+        return this.keyId == null ? Output.empty() : this.keyId;
     }
 
-    public CertificateCertificateDescriptionSubjectKeyIdArgs(@Nullable Input<String> keyId) {
+    public CertificateCertificateDescriptionSubjectKeyIdArgs(@Nullable Output<String> keyId) {
         this.keyId = keyId;
     }
 
     private CertificateCertificateDescriptionSubjectKeyIdArgs() {
-        this.keyId = Input.empty();
+        this.keyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyId;
+        private @Nullable Output<String> keyId;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder keyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Output<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Input.ofNullable(keyId);
+            this.keyId = Output.ofNullable(keyId);
             return this;
         }
         public CertificateCertificateDescriptionSubjectKeyIdArgs build() {

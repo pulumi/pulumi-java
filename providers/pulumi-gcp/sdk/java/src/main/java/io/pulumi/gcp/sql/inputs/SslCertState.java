@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cert")
-      private final @Nullable Input<String> cert;
+      private final @Nullable Output<String> cert;
 
-    public Input<String> getCert() {
-        return this.cert == null ? Input.empty() : this.cert;
+    public Output<String> getCert() {
+        return this.cert == null ? Output.empty() : this.cert;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certSerialNumber")
-      private final @Nullable Input<String> certSerialNumber;
+      private final @Nullable Output<String> certSerialNumber;
 
-    public Input<String> getCertSerialNumber() {
-        return this.certSerialNumber == null ? Input.empty() : this.certSerialNumber;
+    public Output<String> getCertSerialNumber() {
+        return this.certSerialNumber == null ? Output.empty() : this.certSerialNumber;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-      private final @Nullable Input<String> commonName;
+      private final @Nullable Output<String> commonName;
 
-    public Input<String> getCommonName() {
-        return this.commonName == null ? Input.empty() : this.commonName;
+    public Output<String> getCommonName() {
+        return this.commonName == null ? Output.empty() : this.commonName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-      private final @Nullable Input<String> expirationTime;
+      private final @Nullable Output<String> expirationTime;
 
-    public Input<String> getExpirationTime() {
-        return this.expirationTime == null ? Input.empty() : this.expirationTime;
+    public Output<String> getExpirationTime() {
+        return this.expirationTime == null ? Output.empty() : this.expirationTime;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-      private final @Nullable Input<String> instance;
+      private final @Nullable Output<String> instance;
 
-    public Input<String> getInstance() {
-        return this.instance == null ? Input.empty() : this.instance;
+    public Output<String> getInstance() {
+        return this.instance == null ? Output.empty() : this.instance;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey")
-      private final @Nullable Input<String> privateKey;
+      private final @Nullable Output<String> privateKey;
 
-    public Input<String> getPrivateKey() {
-        return this.privateKey == null ? Input.empty() : this.privateKey;
+    public Output<String> getPrivateKey() {
+        return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverCaCert")
-      private final @Nullable Input<String> serverCaCert;
+      private final @Nullable Output<String> serverCaCert;
 
-    public Input<String> getServerCaCert() {
-        return this.serverCaCert == null ? Input.empty() : this.serverCaCert;
+    public Output<String> getServerCaCert() {
+        return this.serverCaCert == null ? Output.empty() : this.serverCaCert;
     }
 
     /**
@@ -123,23 +123,23 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sha1Fingerprint")
-      private final @Nullable Input<String> sha1Fingerprint;
+      private final @Nullable Output<String> sha1Fingerprint;
 
-    public Input<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
+    public Output<String> getSha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
     }
 
     public SslCertState(
-        @Nullable Input<String> cert,
-        @Nullable Input<String> certSerialNumber,
-        @Nullable Input<String> commonName,
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> expirationTime,
-        @Nullable Input<String> instance,
-        @Nullable Input<String> privateKey,
-        @Nullable Input<String> project,
-        @Nullable Input<String> serverCaCert,
-        @Nullable Input<String> sha1Fingerprint) {
+        @Nullable Output<String> cert,
+        @Nullable Output<String> certSerialNumber,
+        @Nullable Output<String> commonName,
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> expirationTime,
+        @Nullable Output<String> instance,
+        @Nullable Output<String> privateKey,
+        @Nullable Output<String> project,
+        @Nullable Output<String> serverCaCert,
+        @Nullable Output<String> sha1Fingerprint) {
         this.cert = cert;
         this.certSerialNumber = certSerialNumber;
         this.commonName = commonName;
@@ -153,16 +153,16 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslCertState() {
-        this.cert = Input.empty();
-        this.certSerialNumber = Input.empty();
-        this.commonName = Input.empty();
-        this.createTime = Input.empty();
-        this.expirationTime = Input.empty();
-        this.instance = Input.empty();
-        this.privateKey = Input.empty();
-        this.project = Input.empty();
-        this.serverCaCert = Input.empty();
-        this.sha1Fingerprint = Input.empty();
+        this.cert = Output.empty();
+        this.certSerialNumber = Output.empty();
+        this.commonName = Output.empty();
+        this.createTime = Output.empty();
+        this.expirationTime = Output.empty();
+        this.instance = Output.empty();
+        this.privateKey = Output.empty();
+        this.project = Output.empty();
+        this.serverCaCert = Output.empty();
+        this.sha1Fingerprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -174,16 +174,16 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cert;
-        private @Nullable Input<String> certSerialNumber;
-        private @Nullable Input<String> commonName;
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> expirationTime;
-        private @Nullable Input<String> instance;
-        private @Nullable Input<String> privateKey;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> serverCaCert;
-        private @Nullable Input<String> sha1Fingerprint;
+        private @Nullable Output<String> cert;
+        private @Nullable Output<String> certSerialNumber;
+        private @Nullable Output<String> commonName;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> expirationTime;
+        private @Nullable Output<String> instance;
+        private @Nullable Output<String> privateKey;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> serverCaCert;
+        private @Nullable Output<String> sha1Fingerprint;
 
         public Builder() {
     	      // Empty
@@ -203,103 +203,103 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder cert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Output<String> cert) {
             this.cert = cert;
             return this;
         }
 
         public Builder cert(@Nullable String cert) {
-            this.cert = Input.ofNullable(cert);
+            this.cert = Output.ofNullable(cert);
             return this;
         }
 
-        public Builder certSerialNumber(@Nullable Input<String> certSerialNumber) {
+        public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
             this.certSerialNumber = certSerialNumber;
             return this;
         }
 
         public Builder certSerialNumber(@Nullable String certSerialNumber) {
-            this.certSerialNumber = Input.ofNullable(certSerialNumber);
+            this.certSerialNumber = Output.ofNullable(certSerialNumber);
             return this;
         }
 
-        public Builder commonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Output<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Input.ofNullable(commonName);
+            this.commonName = Output.ofNullable(commonName);
             return this;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder expirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Output<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Input.ofNullable(expirationTime);
+            this.expirationTime = Output.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder instance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Output<String> instance) {
             this.instance = instance;
             return this;
         }
 
         public Builder instance(@Nullable String instance) {
-            this.instance = Input.ofNullable(instance);
+            this.instance = Output.ofNullable(instance);
             return this;
         }
 
-        public Builder privateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Output<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Input.ofNullable(privateKey);
+            this.privateKey = Output.ofNullable(privateKey);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder serverCaCert(@Nullable Input<String> serverCaCert) {
+        public Builder serverCaCert(@Nullable Output<String> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
 
         public Builder serverCaCert(@Nullable String serverCaCert) {
-            this.serverCaCert = Input.ofNullable(serverCaCert);
+            this.serverCaCert = Output.ofNullable(serverCaCert);
             return this;
         }
 
-        public Builder sha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
             return this;
         }
         public SslCertState build() {

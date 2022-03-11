@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkBigqueryOptionsArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkExclusionArgs;
@@ -23,10 +23,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bigqueryOptions")
-      private final @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
+      private final @Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
 
-    public Input<BillingAccountSinkBigqueryOptionsArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
+    public Output<BillingAccountSinkBigqueryOptionsArgs> getBigqueryOptions() {
+        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="billingAccount", required=true)
-      private final Input<String> billingAccount;
+      private final Output<String> billingAccount;
 
-    public Input<String> getBillingAccount() {
+    public Output<String> getBillingAccount() {
         return this.billingAccount;
     }
 
@@ -45,10 +45,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
@@ -70,10 +70,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-      private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
-        return this.disabled == null ? Input.empty() : this.disabled;
+    public Output<Boolean> getDisabled() {
+        return this.disabled == null ? Output.empty() : this.disabled;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions;
+      private final @Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions;
 
-    public Input<List<BillingAccountSinkExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<BillingAccountSinkExclusionArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public BillingAccountSinkArgs(
-        @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions,
-        Input<String> billingAccount,
-        @Nullable Input<String> description,
-        Input<String> destination,
-        @Nullable Input<Boolean> disabled,
-        @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions,
-        @Nullable Input<String> filter,
-        @Nullable Input<String> name) {
+        @Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions,
+        Output<String> billingAccount,
+        @Nullable Output<String> description,
+        Output<String> destination,
+        @Nullable Output<Boolean> disabled,
+        @Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions,
+        @Nullable Output<String> filter,
+        @Nullable Output<String> name) {
         this.bigqueryOptions = bigqueryOptions;
         this.billingAccount = Objects.requireNonNull(billingAccount, "expected parameter 'billingAccount' to be non-null");
         this.description = description;
@@ -130,14 +130,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BillingAccountSinkArgs() {
-        this.bigqueryOptions = Input.empty();
-        this.billingAccount = Input.empty();
-        this.description = Input.empty();
-        this.destination = Input.empty();
-        this.disabled = Input.empty();
-        this.exclusions = Input.empty();
-        this.filter = Input.empty();
-        this.name = Input.empty();
+        this.bigqueryOptions = Output.empty();
+        this.billingAccount = Output.empty();
+        this.description = Output.empty();
+        this.destination = Output.empty();
+        this.disabled = Output.empty();
+        this.exclusions = Output.empty();
+        this.filter = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
-        private Input<String> billingAccount;
-        private @Nullable Input<String> description;
-        private Input<String> destination;
-        private @Nullable Input<Boolean> disabled;
-        private @Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<String> name;
+        private @Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions;
+        private Output<String> billingAccount;
+        private @Nullable Output<String> description;
+        private Output<String> destination;
+        private @Nullable Output<Boolean> disabled;
+        private @Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     	      this.name = defaults.name;
         }
 
-        public Builder bigqueryOptions(@Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Output<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
         public Builder bigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder billingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Output<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
         public Builder billingAccount(String billingAccount) {
-            this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
+            this.billingAccount = Output.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder disabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Input.ofNullable(disabled);
+            this.disabled = Output.ofNullable(disabled);
             return this;
         }
 
-        public Builder exclusions(@Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<BillingAccountSinkExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<BillingAccountSinkExclusionArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public BillingAccountSinkArgs build() {

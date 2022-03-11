@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletionPolicy")
-      private final @Nullable Input<String> deletionPolicy;
+      private final @Nullable Output<String> deletionPolicy;
 
-    public Input<String> getDeletionPolicy() {
-        return this.deletionPolicy == null ? Input.empty() : this.deletionPolicy;
+    public Output<String> getDeletionPolicy() {
+        return this.deletionPolicy == null ? Output.empty() : this.deletionPolicy;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -44,25 +44,25 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="masterBillingAccount", required=true)
-      private final Input<String> masterBillingAccount;
+      private final Output<String> masterBillingAccount;
 
-    public Input<String> getMasterBillingAccount() {
+    public Output<String> getMasterBillingAccount() {
         return this.masterBillingAccount;
     }
 
     public SubAccountArgs(
-        @Nullable Input<String> deletionPolicy,
-        Input<String> displayName,
-        Input<String> masterBillingAccount) {
+        @Nullable Output<String> deletionPolicy,
+        Output<String> displayName,
+        Output<String> masterBillingAccount) {
         this.deletionPolicy = deletionPolicy;
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount, "expected parameter 'masterBillingAccount' to be non-null");
     }
 
     private SubAccountArgs() {
-        this.deletionPolicy = Input.empty();
-        this.displayName = Input.empty();
-        this.masterBillingAccount = Input.empty();
+        this.deletionPolicy = Output.empty();
+        this.displayName = Output.empty();
+        this.masterBillingAccount = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deletionPolicy;
-        private Input<String> displayName;
-        private Input<String> masterBillingAccount;
+        private @Nullable Output<String> deletionPolicy;
+        private Output<String> displayName;
+        private Output<String> masterBillingAccount;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterBillingAccount = defaults.masterBillingAccount;
         }
 
-        public Builder deletionPolicy(@Nullable Input<String> deletionPolicy) {
+        public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
 
         public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Input.ofNullable(deletionPolicy);
+            this.deletionPolicy = Output.ofNullable(deletionPolicy);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder masterBillingAccount(Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(Output<String> masterBillingAccount) {
             this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
             return this;
         }
 
         public Builder masterBillingAccount(String masterBillingAccount) {
-            this.masterBillingAccount = Input.of(Objects.requireNonNull(masterBillingAccount));
+            this.masterBillingAccount = Output.of(Objects.requireNonNull(masterBillingAccount));
             return this;
         }
         public SubAccountArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="instanceRedistributionType")
-      private final @Nullable Input<String> instanceRedistributionType;
+      private final @Nullable Output<String> instanceRedistributionType;
 
-    public Input<String> getInstanceRedistributionType() {
-        return this.instanceRedistributionType == null ? Input.empty() : this.instanceRedistributionType;
+    public Output<String> getInstanceRedistributionType() {
+        return this.instanceRedistributionType == null ? Output.empty() : this.instanceRedistributionType;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxSurgeFixed")
-      private final @Nullable Input<Integer> maxSurgeFixed;
+      private final @Nullable Output<Integer> maxSurgeFixed;
 
-    public Input<Integer> getMaxSurgeFixed() {
-        return this.maxSurgeFixed == null ? Input.empty() : this.maxSurgeFixed;
+    public Output<Integer> getMaxSurgeFixed() {
+        return this.maxSurgeFixed == null ? Output.empty() : this.maxSurgeFixed;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxSurgePercent")
-      private final @Nullable Input<Integer> maxSurgePercent;
+      private final @Nullable Output<Integer> maxSurgePercent;
 
-    public Input<Integer> getMaxSurgePercent() {
-        return this.maxSurgePercent == null ? Input.empty() : this.maxSurgePercent;
+    public Output<Integer> getMaxSurgePercent() {
+        return this.maxSurgePercent == null ? Output.empty() : this.maxSurgePercent;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxUnavailableFixed")
-      private final @Nullable Input<Integer> maxUnavailableFixed;
+      private final @Nullable Output<Integer> maxUnavailableFixed;
 
-    public Input<Integer> getMaxUnavailableFixed() {
-        return this.maxUnavailableFixed == null ? Input.empty() : this.maxUnavailableFixed;
+    public Output<Integer> getMaxUnavailableFixed() {
+        return this.maxUnavailableFixed == null ? Output.empty() : this.maxUnavailableFixed;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxUnavailablePercent")
-      private final @Nullable Input<Integer> maxUnavailablePercent;
+      private final @Nullable Output<Integer> maxUnavailablePercent;
 
-    public Input<Integer> getMaxUnavailablePercent() {
-        return this.maxUnavailablePercent == null ? Input.empty() : this.maxUnavailablePercent;
+    public Output<Integer> getMaxUnavailablePercent() {
+        return this.maxUnavailablePercent == null ? Output.empty() : this.maxUnavailablePercent;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minReadySec")
-      private final @Nullable Input<Integer> minReadySec;
+      private final @Nullable Output<Integer> minReadySec;
 
-    public Input<Integer> getMinReadySec() {
-        return this.minReadySec == null ? Input.empty() : this.minReadySec;
+    public Output<Integer> getMinReadySec() {
+        return this.minReadySec == null ? Output.empty() : this.minReadySec;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minimalAction", required=true)
-      private final Input<String> minimalAction;
+      private final Output<String> minimalAction;
 
-    public Input<String> getMinimalAction() {
+    public Output<String> getMinimalAction() {
         return this.minimalAction;
     }
 
@@ -98,10 +98,10 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="replacementMethod")
-      private final @Nullable Input<String> replacementMethod;
+      private final @Nullable Output<String> replacementMethod;
 
-    public Input<String> getReplacementMethod() {
-        return this.replacementMethod == null ? Input.empty() : this.replacementMethod;
+    public Output<String> getReplacementMethod() {
+        return this.replacementMethod == null ? Output.empty() : this.replacementMethod;
     }
 
     /**
@@ -109,22 +109,22 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public RegionInstanceGroupManagerUpdatePolicyArgs(
-        @Nullable Input<String> instanceRedistributionType,
-        @Nullable Input<Integer> maxSurgeFixed,
-        @Nullable Input<Integer> maxSurgePercent,
-        @Nullable Input<Integer> maxUnavailableFixed,
-        @Nullable Input<Integer> maxUnavailablePercent,
-        @Nullable Input<Integer> minReadySec,
-        Input<String> minimalAction,
-        @Nullable Input<String> replacementMethod,
-        Input<String> type) {
+        @Nullable Output<String> instanceRedistributionType,
+        @Nullable Output<Integer> maxSurgeFixed,
+        @Nullable Output<Integer> maxSurgePercent,
+        @Nullable Output<Integer> maxUnavailableFixed,
+        @Nullable Output<Integer> maxUnavailablePercent,
+        @Nullable Output<Integer> minReadySec,
+        Output<String> minimalAction,
+        @Nullable Output<String> replacementMethod,
+        Output<String> type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurgeFixed = maxSurgeFixed;
         this.maxSurgePercent = maxSurgePercent;
@@ -137,15 +137,15 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     }
 
     private RegionInstanceGroupManagerUpdatePolicyArgs() {
-        this.instanceRedistributionType = Input.empty();
-        this.maxSurgeFixed = Input.empty();
-        this.maxSurgePercent = Input.empty();
-        this.maxUnavailableFixed = Input.empty();
-        this.maxUnavailablePercent = Input.empty();
-        this.minReadySec = Input.empty();
-        this.minimalAction = Input.empty();
-        this.replacementMethod = Input.empty();
-        this.type = Input.empty();
+        this.instanceRedistributionType = Output.empty();
+        this.maxSurgeFixed = Output.empty();
+        this.maxSurgePercent = Output.empty();
+        this.maxUnavailableFixed = Output.empty();
+        this.maxUnavailablePercent = Output.empty();
+        this.minReadySec = Output.empty();
+        this.minimalAction = Output.empty();
+        this.replacementMethod = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,15 +157,15 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instanceRedistributionType;
-        private @Nullable Input<Integer> maxSurgeFixed;
-        private @Nullable Input<Integer> maxSurgePercent;
-        private @Nullable Input<Integer> maxUnavailableFixed;
-        private @Nullable Input<Integer> maxUnavailablePercent;
-        private @Nullable Input<Integer> minReadySec;
-        private Input<String> minimalAction;
-        private @Nullable Input<String> replacementMethod;
-        private Input<String> type;
+        private @Nullable Output<String> instanceRedistributionType;
+        private @Nullable Output<Integer> maxSurgeFixed;
+        private @Nullable Output<Integer> maxSurgePercent;
+        private @Nullable Output<Integer> maxUnavailableFixed;
+        private @Nullable Output<Integer> maxUnavailablePercent;
+        private @Nullable Output<Integer> minReadySec;
+        private Output<String> minimalAction;
+        private @Nullable Output<String> replacementMethod;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -184,93 +184,93 @@ public final class RegionInstanceGroupManagerUpdatePolicyArgs extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder instanceRedistributionType(@Nullable Input<String> instanceRedistributionType) {
+        public Builder instanceRedistributionType(@Nullable Output<String> instanceRedistributionType) {
             this.instanceRedistributionType = instanceRedistributionType;
             return this;
         }
 
         public Builder instanceRedistributionType(@Nullable String instanceRedistributionType) {
-            this.instanceRedistributionType = Input.ofNullable(instanceRedistributionType);
+            this.instanceRedistributionType = Output.ofNullable(instanceRedistributionType);
             return this;
         }
 
-        public Builder maxSurgeFixed(@Nullable Input<Integer> maxSurgeFixed) {
+        public Builder maxSurgeFixed(@Nullable Output<Integer> maxSurgeFixed) {
             this.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
 
         public Builder maxSurgeFixed(@Nullable Integer maxSurgeFixed) {
-            this.maxSurgeFixed = Input.ofNullable(maxSurgeFixed);
+            this.maxSurgeFixed = Output.ofNullable(maxSurgeFixed);
             return this;
         }
 
-        public Builder maxSurgePercent(@Nullable Input<Integer> maxSurgePercent) {
+        public Builder maxSurgePercent(@Nullable Output<Integer> maxSurgePercent) {
             this.maxSurgePercent = maxSurgePercent;
             return this;
         }
 
         public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
-            this.maxSurgePercent = Input.ofNullable(maxSurgePercent);
+            this.maxSurgePercent = Output.ofNullable(maxSurgePercent);
             return this;
         }
 
-        public Builder maxUnavailableFixed(@Nullable Input<Integer> maxUnavailableFixed) {
+        public Builder maxUnavailableFixed(@Nullable Output<Integer> maxUnavailableFixed) {
             this.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
 
         public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
-            this.maxUnavailableFixed = Input.ofNullable(maxUnavailableFixed);
+            this.maxUnavailableFixed = Output.ofNullable(maxUnavailableFixed);
             return this;
         }
 
-        public Builder maxUnavailablePercent(@Nullable Input<Integer> maxUnavailablePercent) {
+        public Builder maxUnavailablePercent(@Nullable Output<Integer> maxUnavailablePercent) {
             this.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
 
         public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
-            this.maxUnavailablePercent = Input.ofNullable(maxUnavailablePercent);
+            this.maxUnavailablePercent = Output.ofNullable(maxUnavailablePercent);
             return this;
         }
 
-        public Builder minReadySec(@Nullable Input<Integer> minReadySec) {
+        public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
 
         public Builder minReadySec(@Nullable Integer minReadySec) {
-            this.minReadySec = Input.ofNullable(minReadySec);
+            this.minReadySec = Output.ofNullable(minReadySec);
             return this;
         }
 
-        public Builder minimalAction(Input<String> minimalAction) {
+        public Builder minimalAction(Output<String> minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
 
         public Builder minimalAction(String minimalAction) {
-            this.minimalAction = Input.of(Objects.requireNonNull(minimalAction));
+            this.minimalAction = Output.of(Objects.requireNonNull(minimalAction));
             return this;
         }
 
-        public Builder replacementMethod(@Nullable Input<String> replacementMethod) {
+        public Builder replacementMethod(@Nullable Output<String> replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
 
         public Builder replacementMethod(@Nullable String replacementMethod) {
-            this.replacementMethod = Input.ofNullable(replacementMethod);
+            this.replacementMethod = Output.ofNullable(replacementMethod);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public RegionInstanceGroupManagerUpdatePolicyArgs build() {

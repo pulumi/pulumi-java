@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-      private final Input<String> humanReadableName;
+      private final Output<String> humanReadableName;
 
-    public Input<String> getHumanReadableName() {
+    public Output<String> getHumanReadableName() {
         return this.humanReadableName;
     }
 
-    public NoteAttestationAuthorityHintArgs(Input<String> humanReadableName) {
+    public NoteAttestationAuthorityHintArgs(Output<String> humanReadableName) {
         this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
     }
 
     private NoteAttestationAuthorityHintArgs() {
-        this.humanReadableName = Input.empty();
+        this.humanReadableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> humanReadableName;
+        private Output<String> humanReadableName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class NoteAttestationAuthorityHintArgs extends io.pulumi.resources.
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder humanReadableName(Input<String> humanReadableName) {
+        public Builder humanReadableName(Output<String> humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
 
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
+            this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
             return this;
         }
         public NoteAttestationAuthorityHintArgs build() {

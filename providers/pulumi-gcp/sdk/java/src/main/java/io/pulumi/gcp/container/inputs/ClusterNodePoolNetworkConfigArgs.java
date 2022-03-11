@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createPodRange")
-      private final @Nullable Input<Boolean> createPodRange;
+      private final @Nullable Output<Boolean> createPodRange;
 
-    public Input<Boolean> getCreatePodRange() {
-        return this.createPodRange == null ? Input.empty() : this.createPodRange;
+    public Output<Boolean> getCreatePodRange() {
+        return this.createPodRange == null ? Output.empty() : this.createPodRange;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="podIpv4CidrBlock")
-      private final @Nullable Input<String> podIpv4CidrBlock;
+      private final @Nullable Output<String> podIpv4CidrBlock;
 
-    public Input<String> getPodIpv4CidrBlock() {
-        return this.podIpv4CidrBlock == null ? Input.empty() : this.podIpv4CidrBlock;
+    public Output<String> getPodIpv4CidrBlock() {
+        return this.podIpv4CidrBlock == null ? Output.empty() : this.podIpv4CidrBlock;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="podRange", required=true)
-      private final Input<String> podRange;
+      private final Output<String> podRange;
 
-    public Input<String> getPodRange() {
+    public Output<String> getPodRange() {
         return this.podRange;
     }
 
     public ClusterNodePoolNetworkConfigArgs(
-        @Nullable Input<Boolean> createPodRange,
-        @Nullable Input<String> podIpv4CidrBlock,
-        Input<String> podRange) {
+        @Nullable Output<Boolean> createPodRange,
+        @Nullable Output<String> podIpv4CidrBlock,
+        Output<String> podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = Objects.requireNonNull(podRange, "expected parameter 'podRange' to be non-null");
     }
 
     private ClusterNodePoolNetworkConfigArgs() {
-        this.createPodRange = Input.empty();
-        this.podIpv4CidrBlock = Input.empty();
-        this.podRange = Input.empty();
+        this.createPodRange = Output.empty();
+        this.podIpv4CidrBlock = Output.empty();
+        this.podRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> createPodRange;
-        private @Nullable Input<String> podIpv4CidrBlock;
-        private Input<String> podRange;
+        private @Nullable Output<Boolean> createPodRange;
+        private @Nullable Output<String> podIpv4CidrBlock;
+        private Output<String> podRange;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class ClusterNodePoolNetworkConfigArgs extends io.pulumi.resources.
     	      this.podRange = defaults.podRange;
         }
 
-        public Builder createPodRange(@Nullable Input<Boolean> createPodRange) {
+        public Builder createPodRange(@Nullable Output<Boolean> createPodRange) {
             this.createPodRange = createPodRange;
             return this;
         }
 
         public Builder createPodRange(@Nullable Boolean createPodRange) {
-            this.createPodRange = Input.ofNullable(createPodRange);
+            this.createPodRange = Output.ofNullable(createPodRange);
             return this;
         }
 
-        public Builder podIpv4CidrBlock(@Nullable Input<String> podIpv4CidrBlock) {
+        public Builder podIpv4CidrBlock(@Nullable Output<String> podIpv4CidrBlock) {
             this.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
 
         public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
-            this.podIpv4CidrBlock = Input.ofNullable(podIpv4CidrBlock);
+            this.podIpv4CidrBlock = Output.ofNullable(podIpv4CidrBlock);
             return this;
         }
 
-        public Builder podRange(Input<String> podRange) {
+        public Builder podRange(Output<String> podRange) {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
 
         public Builder podRange(String podRange) {
-            this.podRange = Input.of(Objects.requireNonNull(podRange));
+            this.podRange = Output.of(Objects.requireNonNull(podRange));
             return this;
         }
         public ClusterNodePoolNetworkConfigArgs build() {

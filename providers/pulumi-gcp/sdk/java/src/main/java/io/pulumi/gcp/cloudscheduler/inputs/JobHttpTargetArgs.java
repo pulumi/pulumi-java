@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetOauthTokenArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetOidcTokenArgs;
@@ -25,10 +25,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headers")
-      private final @Nullable Input<Map<String,String>> headers;
+      private final @Nullable Output<Map<String,String>> headers;
 
-    public Input<Map<String,String>> getHeaders() {
-        return this.headers == null ? Input.empty() : this.headers;
+    public Output<Map<String,String>> getHeaders() {
+        return this.headers == null ? Output.empty() : this.headers;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod")
-      private final @Nullable Input<String> httpMethod;
+      private final @Nullable Output<String> httpMethod;
 
-    public Input<String> getHttpMethod() {
-        return this.httpMethod == null ? Input.empty() : this.httpMethod;
+    public Output<String> getHttpMethod() {
+        return this.httpMethod == null ? Output.empty() : this.httpMethod;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthToken")
-      private final @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken;
+      private final @Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken;
 
-    public Input<JobHttpTargetOauthTokenArgs> getOauthToken() {
-        return this.oauthToken == null ? Input.empty() : this.oauthToken;
+    public Output<JobHttpTargetOauthTokenArgs> getOauthToken() {
+        return this.oauthToken == null ? Output.empty() : this.oauthToken;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcToken")
-      private final @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken;
+      private final @Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken;
 
-    public Input<JobHttpTargetOidcTokenArgs> getOidcToken() {
-        return this.oidcToken == null ? Input.empty() : this.oidcToken;
+    public Output<JobHttpTargetOidcTokenArgs> getOidcToken() {
+        return this.oidcToken == null ? Output.empty() : this.oidcToken;
     }
 
     /**
@@ -85,19 +85,19 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public JobHttpTargetArgs(
-        @Nullable Input<String> body,
-        @Nullable Input<Map<String,String>> headers,
-        @Nullable Input<String> httpMethod,
-        @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken,
-        @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken,
-        Input<String> uri) {
+        @Nullable Output<String> body,
+        @Nullable Output<Map<String,String>> headers,
+        @Nullable Output<String> httpMethod,
+        @Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken,
+        @Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken,
+        Output<String> uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -107,12 +107,12 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobHttpTargetArgs() {
-        this.body = Input.empty();
-        this.headers = Input.empty();
-        this.httpMethod = Input.empty();
-        this.oauthToken = Input.empty();
-        this.oidcToken = Input.empty();
-        this.uri = Input.empty();
+        this.body = Output.empty();
+        this.headers = Output.empty();
+        this.httpMethod = Output.empty();
+        this.oauthToken = Output.empty();
+        this.oidcToken = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -124,12 +124,12 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private @Nullable Input<Map<String,String>> headers;
-        private @Nullable Input<String> httpMethod;
-        private @Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken;
-        private @Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken;
-        private Input<String> uri;
+        private @Nullable Output<String> body;
+        private @Nullable Output<Map<String,String>> headers;
+        private @Nullable Output<String> httpMethod;
+        private @Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken;
+        private @Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -145,63 +145,63 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder headers(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Output<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Input.ofNullable(headers);
+            this.headers = Output.ofNullable(headers);
             return this;
         }
 
-        public Builder httpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Output<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Input.ofNullable(httpMethod);
+            this.httpMethod = Output.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder oauthToken(@Nullable Input<JobHttpTargetOauthTokenArgs> oauthToken) {
+        public Builder oauthToken(@Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
         public Builder oauthToken(@Nullable JobHttpTargetOauthTokenArgs oauthToken) {
-            this.oauthToken = Input.ofNullable(oauthToken);
+            this.oauthToken = Output.ofNullable(oauthToken);
             return this;
         }
 
-        public Builder oidcToken(@Nullable Input<JobHttpTargetOidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
         public Builder oidcToken(@Nullable JobHttpTargetOidcTokenArgs oidcToken) {
-            this.oidcToken = Input.ofNullable(oidcToken);
+            this.oidcToken = Output.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public JobHttpTargetArgs build() {

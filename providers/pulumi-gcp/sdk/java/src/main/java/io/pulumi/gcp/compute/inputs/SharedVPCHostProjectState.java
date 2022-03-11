@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
-    public SharedVPCHostProjectState(@Nullable Input<String> project) {
+    public SharedVPCHostProjectState(@Nullable Output<String> project) {
         this.project = project;
     }
 
     private SharedVPCHostProjectState() {
-        this.project = Input.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SharedVPCHostProjectState extends io.pulumi.resources.Resourc
     	      this.project = defaults.project;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public SharedVPCHostProjectState build() {

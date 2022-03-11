@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.certificateauthority;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -189,14 +188,14 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPoolIamMember(String name, CaPoolIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private CaPoolIamMember(String name, Input<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private CaPoolIamMember(String name, Output<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -212,7 +211,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CaPoolIamMember get(String name, Input<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static CaPoolIamMember get(String name, Output<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new CaPoolIamMember(name, id, state, options);
     }
 }

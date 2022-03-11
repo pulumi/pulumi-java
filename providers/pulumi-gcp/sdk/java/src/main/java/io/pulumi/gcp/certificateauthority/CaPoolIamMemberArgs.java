@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
 import java.lang.String;
@@ -20,17 +20,17 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="caPool", required=true)
-      private final Input<String> caPool;
+      private final Output<String> caPool;
 
-    public Input<String> getCaPool() {
+    public Output<String> getCaPool() {
         return this.caPool;
     }
 
     @InputImport(name="condition")
-      private final @Nullable Input<CaPoolIamMemberConditionArgs> condition;
+      private final @Nullable Output<CaPoolIamMemberConditionArgs> condition;
 
-    public Input<CaPoolIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<CaPoolIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -40,16 +40,16 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -59,10 +59,10 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -72,19 +72,19 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public CaPoolIamMemberArgs(
-        Input<String> caPool,
-        @Nullable Input<CaPoolIamMemberConditionArgs> condition,
-        @Nullable Input<String> location,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        Output<String> caPool,
+        @Nullable Output<CaPoolIamMemberConditionArgs> condition,
+        @Nullable Output<String> location,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.caPool = Objects.requireNonNull(caPool, "expected parameter 'caPool' to be non-null");
         this.condition = condition;
         this.location = location;
@@ -94,12 +94,12 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CaPoolIamMemberArgs() {
-        this.caPool = Input.empty();
-        this.condition = Input.empty();
-        this.location = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.caPool = Output.empty();
+        this.condition = Output.empty();
+        this.location = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -111,12 +111,12 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<String> caPool;
-        private @Nullable Input<CaPoolIamMemberConditionArgs> condition;
-        private @Nullable Input<String> location;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private Output<String> caPool;
+        private @Nullable Output<CaPoolIamMemberConditionArgs> condition;
+        private @Nullable Output<String> location;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -132,63 +132,63 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.role = defaults.role;
         }
 
-        public Builder caPool(Input<String> caPool) {
+        public Builder caPool(Output<String> caPool) {
             this.caPool = Objects.requireNonNull(caPool);
             return this;
         }
 
         public Builder caPool(String caPool) {
-            this.caPool = Input.of(Objects.requireNonNull(caPool));
+            this.caPool = Output.of(Objects.requireNonNull(caPool));
             return this;
         }
 
-        public Builder condition(@Nullable Input<CaPoolIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<CaPoolIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable CaPoolIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public CaPoolIamMemberArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromArgs;
@@ -33,10 +33,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="args")
-      private final @Nullable Input<List<String>> args;
+      private final @Nullable Output<List<String>> args;
 
-    public Input<List<String>> getArgs() {
-        return this.args == null ? Input.empty() : this.args;
+    public Output<List<String>> getArgs() {
+        return this.args == null ? Output.empty() : this.args;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="commands")
-      private final @Nullable Input<List<String>> commands;
+      private final @Nullable Output<List<String>> commands;
 
-    public Input<List<String>> getCommands() {
-        return this.commands == null ? Input.empty() : this.commands;
+    public Output<List<String>> getCommands() {
+        return this.commands == null ? Output.empty() : this.commands;
     }
 
     /**
@@ -74,11 +74,11 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="envFroms")
-      private final @Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
+      private final @Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Input<List<ServiceTemplateSpecContainerEnvFromArgs>> getEnvFroms() {
-        return this.envFroms == null ? Input.empty() : this.envFroms;
+    public Output<List<ServiceTemplateSpecContainerEnvFromArgs>> getEnvFroms() {
+        return this.envFroms == null ? Output.empty() : this.envFroms;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="envs")
-      private final @Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs;
+      private final @Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs;
 
-    public Input<List<ServiceTemplateSpecContainerEnvArgs>> getEnvs() {
-        return this.envs == null ? Input.empty() : this.envs;
+    public Output<List<ServiceTemplateSpecContainerEnvArgs>> getEnvs() {
+        return this.envs == null ? Output.empty() : this.envs;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="image", required=true)
-      private final Input<String> image;
+      private final Output<String> image;
 
-    public Input<String> getImage() {
+    public Output<String> getImage() {
         return this.image;
     }
 
@@ -114,10 +114,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ports")
-      private final @Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports;
+      private final @Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports;
 
-    public Input<List<ServiceTemplateSpecContainerPortArgs>> getPorts() {
-        return this.ports == null ? Input.empty() : this.ports;
+    public Output<List<ServiceTemplateSpecContainerPortArgs>> getPorts() {
+        return this.ports == null ? Output.empty() : this.ports;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resources")
-      private final @Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources;
+      private final @Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources;
 
-    public Input<ServiceTemplateSpecContainerResourcesArgs> getResources() {
-        return this.resources == null ? Input.empty() : this.resources;
+    public Output<ServiceTemplateSpecContainerResourcesArgs> getResources() {
+        return this.resources == null ? Output.empty() : this.resources;
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="volumeMounts")
-      private final @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
+      private final @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
 
-    public Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> getVolumeMounts() {
-        return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
+    public Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> getVolumeMounts() {
+        return this.volumeMounts == null ? Output.empty() : this.volumeMounts;
     }
 
     /**
@@ -160,23 +160,23 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="workingDir")
-      private final @Nullable Input<String> workingDir;
+      private final @Nullable Output<String> workingDir;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Input<String> getWorkingDir() {
-        return this.workingDir == null ? Input.empty() : this.workingDir;
+    public Output<String> getWorkingDir() {
+        return this.workingDir == null ? Output.empty() : this.workingDir;
     }
 
     public ServiceTemplateSpecContainerArgs(
-        @Nullable Input<List<String>> args,
-        @Nullable Input<List<String>> commands,
-        @Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms,
-        @Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs,
-        Input<String> image,
-        @Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports,
-        @Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources,
-        @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts,
-        @Nullable Input<String> workingDir) {
+        @Nullable Output<List<String>> args,
+        @Nullable Output<List<String>> commands,
+        @Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms,
+        @Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs,
+        Output<String> image,
+        @Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports,
+        @Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources,
+        @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts,
+        @Nullable Output<String> workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;
@@ -189,15 +189,15 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     }
 
     private ServiceTemplateSpecContainerArgs() {
-        this.args = Input.empty();
-        this.commands = Input.empty();
-        this.envFroms = Input.empty();
-        this.envs = Input.empty();
-        this.image = Input.empty();
-        this.ports = Input.empty();
-        this.resources = Input.empty();
-        this.volumeMounts = Input.empty();
-        this.workingDir = Input.empty();
+        this.args = Output.empty();
+        this.commands = Output.empty();
+        this.envFroms = Output.empty();
+        this.envs = Output.empty();
+        this.image = Output.empty();
+        this.ports = Output.empty();
+        this.resources = Output.empty();
+        this.volumeMounts = Output.empty();
+        this.workingDir = Output.empty();
     }
 
     public static Builder builder() {
@@ -209,15 +209,15 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> args;
-        private @Nullable Input<List<String>> commands;
-        private @Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
-        private @Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs;
-        private Input<String> image;
-        private @Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports;
-        private @Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources;
-        private @Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
-        private @Nullable Input<String> workingDir;
+        private @Nullable Output<List<String>> args;
+        private @Nullable Output<List<String>> commands;
+        private @Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms;
+        private @Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs;
+        private Output<String> image;
+        private @Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports;
+        private @Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources;
+        private @Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts;
+        private @Nullable Output<String> workingDir;
 
         public Builder() {
     	      // Empty
@@ -236,93 +236,93 @@ public final class ServiceTemplateSpecContainerArgs extends io.pulumi.resources.
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder args(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Output<List<String>> args) {
             this.args = args;
             return this;
         }
 
         public Builder args(@Nullable List<String> args) {
-            this.args = Input.ofNullable(args);
+            this.args = Output.ofNullable(args);
             return this;
         }
 
-        public Builder commands(@Nullable Input<List<String>> commands) {
+        public Builder commands(@Nullable Output<List<String>> commands) {
             this.commands = commands;
             return this;
         }
 
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Input.ofNullable(commands);
+            this.commands = Output.ofNullable(commands);
             return this;
         }
 
-        public Builder envFroms(@Nullable Input<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms) {
+        public Builder envFroms(@Nullable Output<List<ServiceTemplateSpecContainerEnvFromArgs>> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
 
         public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromArgs> envFroms) {
-            this.envFroms = Input.ofNullable(envFroms);
+            this.envFroms = Output.ofNullable(envFroms);
             return this;
         }
 
-        public Builder envs(@Nullable Input<List<ServiceTemplateSpecContainerEnvArgs>> envs) {
+        public Builder envs(@Nullable Output<List<ServiceTemplateSpecContainerEnvArgs>> envs) {
             this.envs = envs;
             return this;
         }
 
         public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnvArgs> envs) {
-            this.envs = Input.ofNullable(envs);
+            this.envs = Output.ofNullable(envs);
             return this;
         }
 
-        public Builder image(Input<String> image) {
+        public Builder image(Output<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
         public Builder image(String image) {
-            this.image = Input.of(Objects.requireNonNull(image));
+            this.image = Output.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder ports(@Nullable Input<List<ServiceTemplateSpecContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Output<List<ServiceTemplateSpecContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
         public Builder ports(@Nullable List<ServiceTemplateSpecContainerPortArgs> ports) {
-            this.ports = Input.ofNullable(ports);
+            this.ports = Output.ofNullable(ports);
             return this;
         }
 
-        public Builder resources(@Nullable Input<ServiceTemplateSpecContainerResourcesArgs> resources) {
+        public Builder resources(@Nullable Output<ServiceTemplateSpecContainerResourcesArgs> resources) {
             this.resources = resources;
             return this;
         }
 
         public Builder resources(@Nullable ServiceTemplateSpecContainerResourcesArgs resources) {
-            this.resources = Input.ofNullable(resources);
+            this.resources = Output.ofNullable(resources);
             return this;
         }
 
-        public Builder volumeMounts(@Nullable Input<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Output<List<ServiceTemplateSpecContainerVolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
         public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Input.ofNullable(volumeMounts);
+            this.volumeMounts = Output.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder workingDir(@Nullable Input<String> workingDir) {
+        public Builder workingDir(@Nullable Output<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
 
         public Builder workingDir(@Nullable String workingDir) {
-            this.workingDir = Input.ofNullable(workingDir);
+            this.workingDir = Output.ofNullable(workingDir);
             return this;
         }
         public ServiceTemplateSpecContainerArgs build() {

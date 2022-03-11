@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.AccountIamBindingConditionArgs;
 import java.lang.String;
@@ -17,38 +17,38 @@ public final class AccountIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final AccountIamBindingArgs Empty = new AccountIamBindingArgs();
 
     @InputImport(name="billingAccountId", required=true)
-      private final Input<String> billingAccountId;
+      private final Output<String> billingAccountId;
 
-    public Input<String> getBillingAccountId() {
+    public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="condition")
-      private final @Nullable Input<AccountIamBindingConditionArgs> condition;
+      private final @Nullable Output<AccountIamBindingConditionArgs> condition;
 
-    public Input<AccountIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<AccountIamBindingConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-      private final Input<List<String>> members;
+      private final Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
+    public Output<List<String>> getMembers() {
         return this.members;
     }
 
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public AccountIamBindingArgs(
-        Input<String> billingAccountId,
-        @Nullable Input<AccountIamBindingConditionArgs> condition,
-        Input<List<String>> members,
-        Input<String> role) {
+        Output<String> billingAccountId,
+        @Nullable Output<AccountIamBindingConditionArgs> condition,
+        Output<List<String>> members,
+        Output<String> role) {
         this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
         this.condition = condition;
         this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
@@ -56,10 +56,10 @@ public final class AccountIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountIamBindingArgs() {
-        this.billingAccountId = Input.empty();
-        this.condition = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
+        this.billingAccountId = Output.empty();
+        this.condition = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,10 +71,10 @@ public final class AccountIamBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> billingAccountId;
-        private @Nullable Input<AccountIamBindingConditionArgs> condition;
-        private Input<List<String>> members;
-        private Input<String> role;
+        private Output<String> billingAccountId;
+        private @Nullable Output<AccountIamBindingConditionArgs> condition;
+        private Output<List<String>> members;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -88,43 +88,43 @@ public final class AccountIamBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder billingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Output<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
+            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder condition(@Nullable Input<AccountIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Output<AccountIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable AccountIamBindingConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder members(Input<List<String>> members) {
+        public Builder members(Output<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
         public Builder members(List<String> members) {
-            this.members = Input.of(Objects.requireNonNull(members));
+            this.members = Output.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public AccountIamBindingArgs build() {

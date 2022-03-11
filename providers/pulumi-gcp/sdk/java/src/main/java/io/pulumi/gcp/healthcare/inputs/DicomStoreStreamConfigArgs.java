@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigBigqueryDestinationArgs;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-      private final Input<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
+      private final Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
-    public Input<DicomStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {
+    public Output<DicomStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination;
     }
 
-    public DicomStoreStreamConfigArgs(Input<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
+    public DicomStoreStreamConfigArgs(Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
         this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
     }
 
     private DicomStoreStreamConfigArgs() {
-        this.bigqueryDestination = Input.empty();
+        this.bigqueryDestination = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
+        private Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder bigqueryDestination(Input<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(Output<DicomStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
         public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
+            this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
         public DicomStoreStreamConfigArgs build() {

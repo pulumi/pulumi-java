@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="artifactId", required=true)
-      private final Input<String> artifactId;
+      private final Output<String> artifactId;
 
-    public Input<String> getArtifactId() {
+    public Output<String> getArtifactId() {
         return this.artifactId;
     }
 
@@ -31,9 +31,9 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<String> destination;
+      private final Output<String> destination;
 
-    public Input<String> getDestination() {
+    public Output<String> getDestination() {
         return this.destination;
     }
 
@@ -43,10 +43,10 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="overwrite")
-      private final @Nullable Input<Boolean> overwrite;
+      private final @Nullable Output<Boolean> overwrite;
 
-    public Input<Boolean> getOverwrite() {
-        return this.overwrite == null ? Input.empty() : this.overwrite;
+    public Output<Boolean> getOverwrite() {
+        return this.overwrite == null ? Output.empty() : this.overwrite;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<String> permissions;
+      private final @Nullable Output<String> permissions;
 
-    public Input<String> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<String> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     public GuestPoliciesRecipeUpdateStepFileCopyArgs(
-        Input<String> artifactId,
-        Input<String> destination,
-        @Nullable Input<Boolean> overwrite,
-        @Nullable Input<String> permissions) {
+        Output<String> artifactId,
+        Output<String> destination,
+        @Nullable Output<Boolean> overwrite,
+        @Nullable Output<String> permissions) {
         this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.overwrite = overwrite;
@@ -77,10 +77,10 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
     }
 
     private GuestPoliciesRecipeUpdateStepFileCopyArgs() {
-        this.artifactId = Input.empty();
-        this.destination = Input.empty();
-        this.overwrite = Input.empty();
-        this.permissions = Input.empty();
+        this.artifactId = Output.empty();
+        this.destination = Output.empty();
+        this.overwrite = Output.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> artifactId;
-        private Input<String> destination;
-        private @Nullable Input<Boolean> overwrite;
-        private @Nullable Input<String> permissions;
+        private Output<String> artifactId;
+        private Output<String> destination;
+        private @Nullable Output<Boolean> overwrite;
+        private @Nullable Output<String> permissions;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class GuestPoliciesRecipeUpdateStepFileCopyArgs extends io.pulumi.r
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder artifactId(Input<String> artifactId) {
+        public Builder artifactId(Output<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
         public Builder artifactId(String artifactId) {
-            this.artifactId = Input.of(Objects.requireNonNull(artifactId));
+            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
             return this;
         }
 
-        public Builder destination(Input<String> destination) {
+        public Builder destination(Output<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(String destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Output<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Input.ofNullable(overwrite);
+            this.overwrite = Output.ofNullable(overwrite);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Output<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
         public GuestPoliciesRecipeUpdateStepFileCopyArgs build() {

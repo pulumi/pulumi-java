@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
      * 
      */
     @InputImport(name="followGaeApplication")
-      private final @Nullable Input<String> followGaeApplication;
+      private final @Nullable Output<String> followGaeApplication;
 
-    public Input<String> getFollowGaeApplication() {
-        return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
+    public Output<String> getFollowGaeApplication() {
+        return this.followGaeApplication == null ? Output.empty() : this.followGaeApplication;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DatabaseInstanceSettingsLocationPreferenceGetArgs(
-        @Nullable Input<String> followGaeApplication,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> followGaeApplication,
+        @Nullable Output<String> zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }
 
     private DatabaseInstanceSettingsLocationPreferenceGetArgs() {
-        this.followGaeApplication = Input.empty();
-        this.zone = Input.empty();
+        this.followGaeApplication = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> followGaeApplication;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> followGaeApplication;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DatabaseInstanceSettingsLocationPreferenceGetArgs extends io.
     	      this.zone = defaults.zone;
         }
 
-        public Builder followGaeApplication(@Nullable Input<String> followGaeApplication) {
+        public Builder followGaeApplication(@Nullable Output<String> followGaeApplication) {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
 
         public Builder followGaeApplication(@Nullable String followGaeApplication) {
-            this.followGaeApplication = Input.ofNullable(followGaeApplication);
+            this.followGaeApplication = Output.ofNullable(followGaeApplication);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DatabaseInstanceSettingsLocationPreferenceGetArgs build() {

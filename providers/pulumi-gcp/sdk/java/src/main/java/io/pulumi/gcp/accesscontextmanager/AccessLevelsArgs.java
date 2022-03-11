@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessLevels")
-      private final @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels;
+      private final @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
-    public Input<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
-        return this.accessLevels == null ? Input.empty() : this.accessLevels;
+    public Output<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
+        return this.accessLevels == null ? Output.empty() : this.accessLevels;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<String> parent;
+      private final Output<String> parent;
 
-    public Input<String> getParent() {
+    public Output<String> getParent() {
         return this.parent;
     }
 
     public AccessLevelsArgs(
-        @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels,
-        Input<String> parent) {
+        @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels,
+        Output<String> parent) {
         this.accessLevels = accessLevels;
         this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
     }
 
     private AccessLevelsArgs() {
-        this.accessLevels = Input.empty();
-        this.parent = Input.empty();
+        this.accessLevels = Output.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels;
-        private Input<String> parent;
+        private @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
+        private Output<String> parent;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder accessLevels(@Nullable Input<List<AccessLevelsAccessLevelArgs>> accessLevels) {
+        public Builder accessLevels(@Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
         public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelArgs> accessLevels) {
-            this.accessLevels = Input.ofNullable(accessLevels);
+            this.accessLevels = Output.ofNullable(accessLevels);
             return this;
         }
 
-        public Builder parent(Input<String> parent) {
+        public Builder parent(Output<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(String parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
         public AccessLevelsArgs build() {

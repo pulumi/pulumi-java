@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs;
 import java.lang.String;
@@ -34,9 +34,9 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * 
      */
     @InputImport(name="duration", required=true)
-      private final Input<String> duration;
+      private final Output<String> duration;
 
-    public Input<String> getDuration() {
+    public Output<String> getDuration() {
         return this.duration;
     }
 
@@ -45,9 +45,9 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * 
      */
     @InputImport(name="query", required=true)
-      private final Input<String> query;
+      private final Output<String> query;
 
-    public Input<String> getQuery() {
+    public Output<String> getQuery() {
         return this.query;
     }
 
@@ -64,25 +64,25 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
      * 
      */
     @InputImport(name="trigger")
-      private final @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
+      private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
 
-    public Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> getTrigger() {
-        return this.trigger == null ? Input.empty() : this.trigger;
+    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> getTrigger() {
+        return this.trigger == null ? Output.empty() : this.trigger;
     }
 
     public AlertPolicyConditionConditionMonitoringQueryLanguageArgs(
-        Input<String> duration,
-        Input<String> query,
-        @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
+        Output<String> duration,
+        Output<String> query,
+        @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
         this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
         this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
         this.trigger = trigger;
     }
 
     private AlertPolicyConditionConditionMonitoringQueryLanguageArgs() {
-        this.duration = Input.empty();
-        this.query = Input.empty();
-        this.trigger = Input.empty();
+        this.duration = Output.empty();
+        this.query = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,9 +94,9 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     }
 
     public static final class Builder {
-        private Input<String> duration;
-        private Input<String> query;
-        private @Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
+        private Output<String> duration;
+        private Output<String> query;
+        private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -109,33 +109,33 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageArgs exte
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder duration(Input<String> duration) {
+        public Builder duration(Output<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
         public Builder duration(String duration) {
-            this.duration = Input.of(Objects.requireNonNull(duration));
+            this.duration = Output.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder query(Input<String> query) {
+        public Builder query(Output<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
         public Builder query(String query) {
-            this.query = Input.of(Objects.requireNonNull(query));
+            this.query = Output.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder trigger(@Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
+        public Builder trigger(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
         public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs trigger) {
-            this.trigger = Input.ofNullable(trigger);
+            this.trigger = Output.ofNullable(trigger);
             return this;
         }
         public AlertPolicyConditionConditionMonitoringQueryLanguageArgs build() {

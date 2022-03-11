@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigArgs;
@@ -20,9 +20,9 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-      private final Input<AuthorityConfigSubjectConfigArgs> subjectConfig;
+      private final Output<AuthorityConfigSubjectConfigArgs> subjectConfig;
 
-    public Input<AuthorityConfigSubjectConfigArgs> getSubjectConfig() {
+    public Output<AuthorityConfigSubjectConfigArgs> getSubjectConfig() {
         return this.subjectConfig;
     }
 
@@ -32,22 +32,22 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="x509Config", required=true)
-      private final Input<AuthorityConfigX509ConfigArgs> x509Config;
+      private final Output<AuthorityConfigX509ConfigArgs> x509Config;
 
-    public Input<AuthorityConfigX509ConfigArgs> getX509Config() {
+    public Output<AuthorityConfigX509ConfigArgs> getX509Config() {
         return this.x509Config;
     }
 
     public AuthorityConfigArgs(
-        Input<AuthorityConfigSubjectConfigArgs> subjectConfig,
-        Input<AuthorityConfigX509ConfigArgs> x509Config) {
+        Output<AuthorityConfigSubjectConfigArgs> subjectConfig,
+        Output<AuthorityConfigX509ConfigArgs> x509Config) {
         this.subjectConfig = Objects.requireNonNull(subjectConfig, "expected parameter 'subjectConfig' to be non-null");
         this.x509Config = Objects.requireNonNull(x509Config, "expected parameter 'x509Config' to be non-null");
     }
 
     private AuthorityConfigArgs() {
-        this.subjectConfig = Input.empty();
-        this.x509Config = Input.empty();
+        this.subjectConfig = Output.empty();
+        this.x509Config = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<AuthorityConfigSubjectConfigArgs> subjectConfig;
-        private Input<AuthorityConfigX509ConfigArgs> x509Config;
+        private Output<AuthorityConfigSubjectConfigArgs> subjectConfig;
+        private Output<AuthorityConfigX509ConfigArgs> x509Config;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class AuthorityConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.x509Config = defaults.x509Config;
         }
 
-        public Builder subjectConfig(Input<AuthorityConfigSubjectConfigArgs> subjectConfig) {
+        public Builder subjectConfig(Output<AuthorityConfigSubjectConfigArgs> subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
 
         public Builder subjectConfig(AuthorityConfigSubjectConfigArgs subjectConfig) {
-            this.subjectConfig = Input.of(Objects.requireNonNull(subjectConfig));
+            this.subjectConfig = Output.of(Objects.requireNonNull(subjectConfig));
             return this;
         }
 
-        public Builder x509Config(Input<AuthorityConfigX509ConfigArgs> x509Config) {
+        public Builder x509Config(Output<AuthorityConfigX509ConfigArgs> x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
 
         public Builder x509Config(AuthorityConfigX509ConfigArgs x509Config) {
-            this.x509Config = Input.of(Objects.requireNonNull(x509Config));
+            this.x509Config = Output.of(Objects.requireNonNull(x509Config));
             return this;
         }
         public AuthorityConfigArgs build() {

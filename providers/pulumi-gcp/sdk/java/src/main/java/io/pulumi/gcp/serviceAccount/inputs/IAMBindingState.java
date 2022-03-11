@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.serviceAccount.inputs.IAMBindingConditionGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-      private final @Nullable Input<IAMBindingConditionGetArgs> condition;
+      private final @Nullable Output<IAMBindingConditionGetArgs> condition;
 
-    public Input<IAMBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<IAMBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -33,17 +33,17 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountId")
-      private final @Nullable Input<String> serviceAccountId;
+      private final @Nullable Output<String> serviceAccountId;
 
-    public Input<String> getServiceAccountId() {
-        return this.serviceAccountId == null ? Input.empty() : this.serviceAccountId;
+    public Output<String> getServiceAccountId() {
+        return this.serviceAccountId == null ? Output.empty() : this.serviceAccountId;
     }
 
     public IAMBindingState(
-        @Nullable Input<IAMBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> role,
-        @Nullable Input<String> serviceAccountId) {
+        @Nullable Output<IAMBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> role,
+        @Nullable Output<String> serviceAccountId) {
         this.condition = condition;
         this.etag = etag;
         this.members = members;
@@ -84,11 +84,11 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.members = Input.empty();
-        this.role = Input.empty();
-        this.serviceAccountId = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.members = Output.empty();
+        this.role = Output.empty();
+        this.serviceAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IAMBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> role;
-        private @Nullable Input<String> serviceAccountId;
+        private @Nullable Output<IAMBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> role;
+        private @Nullable Output<String> serviceAccountId;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder condition(@Nullable Input<IAMBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<IAMBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable IAMBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
 
-        public Builder serviceAccountId(@Nullable Input<String> serviceAccountId) {
+        public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
             this.serviceAccountId = serviceAccountId;
             return this;
         }
 
         public Builder serviceAccountId(@Nullable String serviceAccountId) {
-            this.serviceAccountId = Input.ofNullable(serviceAccountId);
+            this.serviceAccountId = Output.ofNullable(serviceAccountId);
             return this;
         }
         public IAMBindingState build() {

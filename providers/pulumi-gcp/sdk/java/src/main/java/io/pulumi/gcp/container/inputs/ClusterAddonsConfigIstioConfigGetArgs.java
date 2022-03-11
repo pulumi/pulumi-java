@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<String> auth;
+      private final @Nullable Output<String> auth;
 
-    public Input<String> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<String> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="disabled", required=true)
-      private final Input<Boolean> disabled;
+      private final Output<Boolean> disabled;
 
-    public Input<Boolean> getDisabled() {
+    public Output<Boolean> getDisabled() {
         return this.disabled;
     }
 
     public ClusterAddonsConfigIstioConfigGetArgs(
-        @Nullable Input<String> auth,
-        Input<Boolean> disabled) {
+        @Nullable Output<String> auth,
+        Output<Boolean> disabled) {
         this.auth = auth;
         this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
     }
 
     private ClusterAddonsConfigIstioConfigGetArgs() {
-        this.auth = Input.empty();
-        this.disabled = Input.empty();
+        this.auth = Output.empty();
+        this.disabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> auth;
-        private Input<Boolean> disabled;
+        private @Nullable Output<String> auth;
+        private Output<Boolean> disabled;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class ClusterAddonsConfigIstioConfigGetArgs extends io.pulumi.resou
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder auth(@Nullable Input<String> auth) {
+        public Builder auth(@Nullable Output<String> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable String auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder disabled(Input<Boolean> disabled) {
+        public Builder disabled(Output<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Input.of(Objects.requireNonNull(disabled));
+            this.disabled = Output.of(Objects.requireNonNull(disabled));
             return this;
         }
         public ClusterAddonsConfigIstioConfigGetArgs build() {

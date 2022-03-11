@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class CxPageEntryFulfillmentMessageTextArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="allowPlaybackInterruption")
-      private final @Nullable Input<Boolean> allowPlaybackInterruption;
+      private final @Nullable Output<Boolean> allowPlaybackInterruption;
 
-    public Input<Boolean> getAllowPlaybackInterruption() {
-        return this.allowPlaybackInterruption == null ? Input.empty() : this.allowPlaybackInterruption;
+    public Output<Boolean> getAllowPlaybackInterruption() {
+        return this.allowPlaybackInterruption == null ? Output.empty() : this.allowPlaybackInterruption;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class CxPageEntryFulfillmentMessageTextArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="texts")
-      private final @Nullable Input<List<String>> texts;
+      private final @Nullable Output<List<String>> texts;
 
-    public Input<List<String>> getTexts() {
-        return this.texts == null ? Input.empty() : this.texts;
+    public Output<List<String>> getTexts() {
+        return this.texts == null ? Output.empty() : this.texts;
     }
 
     public CxPageEntryFulfillmentMessageTextArgs(
-        @Nullable Input<Boolean> allowPlaybackInterruption,
-        @Nullable Input<List<String>> texts) {
+        @Nullable Output<Boolean> allowPlaybackInterruption,
+        @Nullable Output<List<String>> texts) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.texts = texts;
     }
 
     private CxPageEntryFulfillmentMessageTextArgs() {
-        this.allowPlaybackInterruption = Input.empty();
-        this.texts = Input.empty();
+        this.allowPlaybackInterruption = Output.empty();
+        this.texts = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CxPageEntryFulfillmentMessageTextArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allowPlaybackInterruption;
-        private @Nullable Input<List<String>> texts;
+        private @Nullable Output<Boolean> allowPlaybackInterruption;
+        private @Nullable Output<List<String>> texts;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CxPageEntryFulfillmentMessageTextArgs extends io.pulumi.resou
     	      this.texts = defaults.texts;
         }
 
-        public Builder allowPlaybackInterruption(@Nullable Input<Boolean> allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(@Nullable Output<Boolean> allowPlaybackInterruption) {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
         public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
-            this.allowPlaybackInterruption = Input.ofNullable(allowPlaybackInterruption);
+            this.allowPlaybackInterruption = Output.ofNullable(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder texts(@Nullable Input<List<String>> texts) {
+        public Builder texts(@Nullable Output<List<String>> texts) {
             this.texts = texts;
             return this;
         }
 
         public Builder texts(@Nullable List<String> texts) {
-            this.texts = Input.ofNullable(texts);
+            this.texts = Output.ofNullable(texts);
             return this;
         }
         public CxPageEntryFulfillmentMessageTextArgs build() {

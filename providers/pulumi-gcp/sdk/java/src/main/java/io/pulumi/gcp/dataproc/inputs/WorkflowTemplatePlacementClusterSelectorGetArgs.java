@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-      private final Input<Map<String,String>> clusterLabels;
+      private final Output<Map<String,String>> clusterLabels;
 
-    public Input<Map<String,String>> getClusterLabels() {
+    public Output<Map<String,String>> getClusterLabels() {
         return this.clusterLabels;
     }
 
@@ -31,22 +31,22 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public WorkflowTemplatePlacementClusterSelectorGetArgs(
-        Input<Map<String,String>> clusterLabels,
-        @Nullable Input<String> zone) {
+        Output<Map<String,String>> clusterLabels,
+        @Nullable Output<String> zone) {
         this.clusterLabels = Objects.requireNonNull(clusterLabels, "expected parameter 'clusterLabels' to be non-null");
         this.zone = zone;
     }
 
     private WorkflowTemplatePlacementClusterSelectorGetArgs() {
-        this.clusterLabels = Input.empty();
-        this.zone = Input.empty();
+        this.clusterLabels = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
     }
 
     public static final class Builder {
-        private Input<Map<String,String>> clusterLabels;
-        private @Nullable Input<String> zone;
+        private Output<Map<String,String>> clusterLabels;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
     	      this.zone = defaults.zone;
         }
 
-        public Builder clusterLabels(Input<Map<String,String>> clusterLabels) {
+        public Builder clusterLabels(Output<Map<String,String>> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
         public Builder clusterLabels(Map<String,String> clusterLabels) {
-            this.clusterLabels = Input.of(Objects.requireNonNull(clusterLabels));
+            this.clusterLabels = Output.of(Objects.requireNonNull(clusterLabels));
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public WorkflowTemplatePlacementClusterSelectorGetArgs build() {

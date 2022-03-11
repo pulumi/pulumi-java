@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigRootVolumeArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigSshConfigArgs;
@@ -22,10 +22,10 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rootVolume")
-      private final @Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume;
+      private final @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
 
-    public Input<AzureNodePoolConfigRootVolumeArgs> getRootVolume() {
-        return this.rootVolume == null ? Input.empty() : this.rootVolume;
+    public Output<AzureNodePoolConfigRootVolumeArgs> getRootVolume() {
+        return this.rootVolume == null ? Output.empty() : this.rootVolume;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sshConfig", required=true)
-      private final Input<AzureNodePoolConfigSshConfigArgs> sshConfig;
+      private final Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
 
-    public Input<AzureNodePoolConfigSshConfigArgs> getSshConfig() {
+    public Output<AzureNodePoolConfigSshConfigArgs> getSshConfig() {
         return this.sshConfig;
     }
 
@@ -44,10 +44,10 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     public AzureNodePoolConfigArgs(
-        @Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume,
-        Input<AzureNodePoolConfigSshConfigArgs> sshConfig,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> vmSize) {
+        @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume,
+        Output<AzureNodePoolConfigSshConfigArgs> sshConfig,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> vmSize) {
         this.rootVolume = rootVolume;
         this.sshConfig = Objects.requireNonNull(sshConfig, "expected parameter 'sshConfig' to be non-null");
         this.tags = tags;
@@ -73,10 +73,10 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private AzureNodePoolConfigArgs() {
-        this.rootVolume = Input.empty();
-        this.sshConfig = Input.empty();
-        this.tags = Input.empty();
-        this.vmSize = Input.empty();
+        this.rootVolume = Output.empty();
+        this.sshConfig = Output.empty();
+        this.tags = Output.empty();
+        this.vmSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume;
-        private Input<AzureNodePoolConfigSshConfigArgs> sshConfig;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> vmSize;
+        private @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
+        private Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> vmSize;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder rootVolume(@Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume) {
+        public Builder rootVolume(@Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
         public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolumeArgs rootVolume) {
-            this.rootVolume = Input.ofNullable(rootVolume);
+            this.rootVolume = Output.ofNullable(rootVolume);
             return this;
         }
 
-        public Builder sshConfig(Input<AzureNodePoolConfigSshConfigArgs> sshConfig) {
+        public Builder sshConfig(Output<AzureNodePoolConfigSshConfigArgs> sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
 
         public Builder sshConfig(AzureNodePoolConfigSshConfigArgs sshConfig) {
-            this.sshConfig = Input.of(Objects.requireNonNull(sshConfig));
+            this.sshConfig = Output.of(Objects.requireNonNull(sshConfig));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
         public AzureNodePoolConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyArgs;
@@ -27,10 +27,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
 
-    public Input<DiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<DiskDiskEncryptionKeyArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-      private final @Nullable Input<String> image;
+      private final @Nullable Output<String> image;
 
-    public Input<String> getImage() {
-        return this.image == null ? Input.empty() : this.image;
+    public Output<String> getImage() {
+        return this.image == null ? Output.empty() : this.image;
     }
 
     /**
@@ -81,11 +81,11 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
     @InputImport(name="interface")
-      private final @Nullable Input<String> $interface;
+      private final @Nullable Output<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Input<String> get$interface() {
-        return this.$interface == null ? Input.empty() : this.$interface;
+    public Output<String> get$interface() {
+        return this.$interface == null ? Output.empty() : this.$interface;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="multiWriter")
-      private final @Nullable Input<Boolean> multiWriter;
+      private final @Nullable Output<Boolean> multiWriter;
 
-    public Input<Boolean> getMultiWriter() {
-        return this.multiWriter == null ? Input.empty() : this.multiWriter;
+    public Output<Boolean> getMultiWriter() {
+        return this.multiWriter == null ? Output.empty() : this.multiWriter;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="physicalBlockSizeBytes")
-      private final @Nullable Input<Integer> physicalBlockSizeBytes;
+      private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
-    public Input<Integer> getPhysicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Input.empty() : this.physicalBlockSizeBytes;
+    public Output<Integer> getPhysicalBlockSizeBytes() {
+        return this.physicalBlockSizeBytes == null ? Output.empty() : this.physicalBlockSizeBytes;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisionedIops")
-      private final @Nullable Input<Integer> provisionedIops;
+      private final @Nullable Output<Integer> provisionedIops;
 
-    public Input<Integer> getProvisionedIops() {
-        return this.provisionedIops == null ? Input.empty() : this.provisionedIops;
+    public Output<Integer> getProvisionedIops() {
+        return this.provisionedIops == null ? Output.empty() : this.provisionedIops;
     }
 
     /**
@@ -175,10 +175,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePolicies")
-      private final @Nullable Input<List<String>> resourcePolicies;
+      private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Input<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
+    public Output<List<String>> getResourcePolicies() {
+        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<Integer> size;
+      private final @Nullable Output<Integer> size;
 
-    public Input<Integer> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<Integer> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -214,10 +214,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshot")
-      private final @Nullable Input<String> snapshot;
+      private final @Nullable Output<String> snapshot;
 
-    public Input<String> getSnapshot() {
-        return this.snapshot == null ? Input.empty() : this.snapshot;
+    public Output<String> getSnapshot() {
+        return this.snapshot == null ? Output.empty() : this.snapshot;
     }
 
     /**
@@ -227,10 +227,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceImageEncryptionKey")
-      private final @Nullable Input<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
+      private final @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
 
-    public Input<DiskSourceImageEncryptionKeyArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Input.empty() : this.sourceImageEncryptionKey;
+    public Output<DiskSourceImageEncryptionKeyArgs> getSourceImageEncryptionKey() {
+        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -241,10 +241,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey")
-      private final @Nullable Input<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+      private final @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
-    public Input<DiskSourceSnapshotEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Input.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<DiskSourceSnapshotEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -253,10 +253,10 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -264,30 +264,30 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-      private final @Nullable Input<String> zone;
+      private final @Nullable Output<String> zone;
 
-    public Input<String> getZone() {
-        return this.zone == null ? Input.empty() : this.zone;
+    public Output<String> getZone() {
+        return this.zone == null ? Output.empty() : this.zone;
     }
 
     public DiskArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<DiskDiskEncryptionKeyArgs> diskEncryptionKey,
-        @Nullable Input<String> image,
-        @Nullable Input<String> $interface,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<Boolean> multiWriter,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> physicalBlockSizeBytes,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> provisionedIops,
-        @Nullable Input<List<String>> resourcePolicies,
-        @Nullable Input<Integer> size,
-        @Nullable Input<String> snapshot,
-        @Nullable Input<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey,
-        @Nullable Input<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey,
-        @Nullable Input<String> type,
-        @Nullable Input<String> zone) {
+        @Nullable Output<String> description,
+        @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey,
+        @Nullable Output<String> image,
+        @Nullable Output<String> $interface,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<Boolean> multiWriter,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> physicalBlockSizeBytes,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> provisionedIops,
+        @Nullable Output<List<String>> resourcePolicies,
+        @Nullable Output<Integer> size,
+        @Nullable Output<String> snapshot,
+        @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey,
+        @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey,
+        @Nullable Output<String> type,
+        @Nullable Output<String> zone) {
         this.description = description;
         this.diskEncryptionKey = diskEncryptionKey;
         this.image = image;
@@ -308,23 +308,23 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.description = Input.empty();
-        this.diskEncryptionKey = Input.empty();
-        this.image = Input.empty();
-        this.$interface = Input.empty();
-        this.labels = Input.empty();
-        this.multiWriter = Input.empty();
-        this.name = Input.empty();
-        this.physicalBlockSizeBytes = Input.empty();
-        this.project = Input.empty();
-        this.provisionedIops = Input.empty();
-        this.resourcePolicies = Input.empty();
-        this.size = Input.empty();
-        this.snapshot = Input.empty();
-        this.sourceImageEncryptionKey = Input.empty();
-        this.sourceSnapshotEncryptionKey = Input.empty();
-        this.type = Input.empty();
-        this.zone = Input.empty();
+        this.description = Output.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.image = Output.empty();
+        this.$interface = Output.empty();
+        this.labels = Output.empty();
+        this.multiWriter = Output.empty();
+        this.name = Output.empty();
+        this.physicalBlockSizeBytes = Output.empty();
+        this.project = Output.empty();
+        this.provisionedIops = Output.empty();
+        this.resourcePolicies = Output.empty();
+        this.size = Output.empty();
+        this.snapshot = Output.empty();
+        this.sourceImageEncryptionKey = Output.empty();
+        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.type = Output.empty();
+        this.zone = Output.empty();
     }
 
     public static Builder builder() {
@@ -336,23 +336,23 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
-        private @Nullable Input<String> image;
-        private @Nullable Input<String> $interface;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<Boolean> multiWriter;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> physicalBlockSizeBytes;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> provisionedIops;
-        private @Nullable Input<List<String>> resourcePolicies;
-        private @Nullable Input<Integer> size;
-        private @Nullable Input<String> snapshot;
-        private @Nullable Input<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
-        private @Nullable Input<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> zone;
+        private @Nullable Output<String> description;
+        private @Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey;
+        private @Nullable Output<String> image;
+        private @Nullable Output<String> $interface;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<Boolean> multiWriter;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> physicalBlockSizeBytes;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> provisionedIops;
+        private @Nullable Output<List<String>> resourcePolicies;
+        private @Nullable Output<Integer> size;
+        private @Nullable Output<String> snapshot;
+        private @Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey;
+        private @Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> zone;
 
         public Builder() {
     	      // Empty
@@ -379,173 +379,173 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<DiskDiskEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<DiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable DiskDiskEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder image(@Nullable Input<String> image) {
+        public Builder image(@Nullable Output<String> image) {
             this.image = image;
             return this;
         }
 
         public Builder image(@Nullable String image) {
-            this.image = Input.ofNullable(image);
+            this.image = Output.ofNullable(image);
             return this;
         }
 
-        public Builder $interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Output<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
         public Builder $interface(@Nullable String $interface) {
-            this.$interface = Input.ofNullable($interface);
+            this.$interface = Output.ofNullable($interface);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Output<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
         public Builder multiWriter(@Nullable Boolean multiWriter) {
-            this.multiWriter = Input.ofNullable(multiWriter);
+            this.multiWriter = Output.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder physicalBlockSizeBytes(@Nullable Input<Integer> physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = physicalBlockSizeBytes;
             return this;
         }
 
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Input.ofNullable(physicalBlockSizeBytes);
+            this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder provisionedIops(@Nullable Input<Integer> provisionedIops) {
+        public Builder provisionedIops(@Nullable Output<Integer> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
         public Builder provisionedIops(@Nullable Integer provisionedIops) {
-            this.provisionedIops = Input.ofNullable(provisionedIops);
+            this.provisionedIops = Output.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Input.ofNullable(resourcePolicies);
+            this.resourcePolicies = Output.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder size(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Output<Integer> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable Integer size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder snapshot(@Nullable Input<String> snapshot) {
+        public Builder snapshot(@Nullable Output<String> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
         public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Input.ofNullable(snapshot);
+            this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
 
-        public Builder sourceImageEncryptionKey(@Nullable Input<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Output<DiskSourceImageEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
         public Builder sourceImageEncryptionKey(@Nullable DiskSourceImageEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder sourceSnapshotEncryptionKey(@Nullable Input<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Output<DiskSourceSnapshotEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
         public Builder sourceSnapshotEncryptionKey(@Nullable DiskSourceSnapshotEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder zone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Output<String> zone) {
             this.zone = zone;
             return this;
         }
 
         public Builder zone(@Nullable String zone) {
-            this.zone = Input.ofNullable(zone);
+            this.zone = Output.ofNullable(zone);
             return this;
         }
         public DiskArgs build() {

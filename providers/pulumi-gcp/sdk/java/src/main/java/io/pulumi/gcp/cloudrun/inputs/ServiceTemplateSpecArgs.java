@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeArgs;
@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerConcurrency")
-      private final @Nullable Input<Integer> containerConcurrency;
+      private final @Nullable Output<Integer> containerConcurrency;
 
-    public Input<Integer> getContainerConcurrency() {
-        return this.containerConcurrency == null ? Input.empty() : this.containerConcurrency;
+    public Output<Integer> getContainerConcurrency() {
+        return this.containerConcurrency == null ? Output.empty() : this.containerConcurrency;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containers")
-      private final @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers;
+      private final @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
 
-    public Input<List<ServiceTemplateSpecContainerArgs>> getContainers() {
-        return this.containers == null ? Input.empty() : this.containers;
+    public Output<List<ServiceTemplateSpecContainerArgs>> getContainers() {
+        return this.containers == null ? Output.empty() : this.containers;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceAccountName")
-      private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Output<String> serviceAccountName;
 
-    public Input<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
+    public Output<String> getServiceAccountName() {
+        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
     }
 
     /**
@@ -73,11 +73,11 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      */
     @Deprecated /* Not supported by Cloud Run fully managed */
     @InputImport(name="servingState")
-      private final @Nullable Input<String> servingState;
+      private final @Nullable Output<String> servingState;
 
     @Deprecated /* Not supported by Cloud Run fully managed */
-    public Input<String> getServingState() {
-        return this.servingState == null ? Input.empty() : this.servingState;
+    public Output<String> getServingState() {
+        return this.servingState == null ? Output.empty() : this.servingState;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     /**
@@ -97,19 +97,19 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes;
+      private final @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
-    public Input<List<ServiceTemplateSpecVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<ServiceTemplateSpecVolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public ServiceTemplateSpecArgs(
-        @Nullable Input<Integer> containerConcurrency,
-        @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers,
-        @Nullable Input<String> serviceAccountName,
-        @Nullable Input<String> servingState,
-        @Nullable Input<Integer> timeoutSeconds,
-        @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes) {
+        @Nullable Output<Integer> containerConcurrency,
+        @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers,
+        @Nullable Output<String> serviceAccountName,
+        @Nullable Output<String> servingState,
+        @Nullable Output<Integer> timeoutSeconds,
+        @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.serviceAccountName = serviceAccountName;
@@ -119,12 +119,12 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceTemplateSpecArgs() {
-        this.containerConcurrency = Input.empty();
-        this.containers = Input.empty();
-        this.serviceAccountName = Input.empty();
-        this.servingState = Input.empty();
-        this.timeoutSeconds = Input.empty();
-        this.volumes = Input.empty();
+        this.containerConcurrency = Output.empty();
+        this.containers = Output.empty();
+        this.serviceAccountName = Output.empty();
+        this.servingState = Output.empty();
+        this.timeoutSeconds = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,12 +136,12 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> containerConcurrency;
-        private @Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers;
-        private @Nullable Input<String> serviceAccountName;
-        private @Nullable Input<String> servingState;
-        private @Nullable Input<Integer> timeoutSeconds;
-        private @Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes;
+        private @Nullable Output<Integer> containerConcurrency;
+        private @Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers;
+        private @Nullable Output<String> serviceAccountName;
+        private @Nullable Output<String> servingState;
+        private @Nullable Output<Integer> timeoutSeconds;
+        private @Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -157,63 +157,63 @@ public final class ServiceTemplateSpecArgs extends io.pulumi.resources.ResourceA
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder containerConcurrency(@Nullable Input<Integer> containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Output<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Input.ofNullable(containerConcurrency);
+            this.containerConcurrency = Output.ofNullable(containerConcurrency);
             return this;
         }
 
-        public Builder containers(@Nullable Input<List<ServiceTemplateSpecContainerArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ServiceTemplateSpecContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
         public Builder containers(@Nullable List<ServiceTemplateSpecContainerArgs> containers) {
-            this.containers = Input.ofNullable(containers);
+            this.containers = Output.ofNullable(containers);
             return this;
         }
 
-        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Input.ofNullable(serviceAccountName);
+            this.serviceAccountName = Output.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder servingState(@Nullable Input<String> servingState) {
+        public Builder servingState(@Nullable Output<String> servingState) {
             this.servingState = servingState;
             return this;
         }
 
         public Builder servingState(@Nullable String servingState) {
-            this.servingState = Input.ofNullable(servingState);
+            this.servingState = Output.ofNullable(servingState);
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<ServiceTemplateSpecVolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<ServiceTemplateSpecVolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<ServiceTemplateSpecVolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public ServiceTemplateSpecArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     public static final InstanceFromMachineImageReservationAffinityGetArgs Empty = new InstanceFromMachineImageReservationAffinityGetArgs();
 
     @InputImport(name="specificReservation")
-      private final @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
+      private final @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
 
-    public Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Input.empty() : this.specificReservation;
+    public Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
+        return this.specificReservation == null ? Output.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public InstanceFromMachineImageReservationAffinityGetArgs(
-        @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation,
-        Input<String> type) {
+        @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation,
+        Output<String> type) {
         this.specificReservation = specificReservation;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private InstanceFromMachineImageReservationAffinityGetArgs() {
-        this.specificReservation = Input.empty();
-        this.type = Input.empty();
+        this.specificReservation = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     }
 
     public static final class Builder {
-        private @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
-        private Input<String> type;
+        private @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     	      this.type = defaults.type;
         }
 
-        public Builder specificReservation(@Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
         public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs specificReservation) {
-            this.specificReservation = Input.ofNullable(specificReservation);
+            this.specificReservation = Output.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public InstanceFromMachineImageReservationAffinityGetArgs build() {

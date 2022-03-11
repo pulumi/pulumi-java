@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="connectTimeout")
-      private final @Nullable Input<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout;
+      private final @Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout;
 
-    public Input<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> getConnectTimeout() {
-        return this.connectTimeout == null ? Input.empty() : this.connectTimeout;
+    public Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> getConnectTimeout() {
+        return this.connectTimeout == null ? Output.empty() : this.connectTimeout;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxConnections")
-      private final @Nullable Input<Integer> maxConnections;
+      private final @Nullable Output<Integer> maxConnections;
 
-    public Input<Integer> getMaxConnections() {
-        return this.maxConnections == null ? Input.empty() : this.maxConnections;
+    public Output<Integer> getMaxConnections() {
+        return this.maxConnections == null ? Output.empty() : this.maxConnections;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxPendingRequests")
-      private final @Nullable Input<Integer> maxPendingRequests;
+      private final @Nullable Output<Integer> maxPendingRequests;
 
-    public Input<Integer> getMaxPendingRequests() {
-        return this.maxPendingRequests == null ? Input.empty() : this.maxPendingRequests;
+    public Output<Integer> getMaxPendingRequests() {
+        return this.maxPendingRequests == null ? Output.empty() : this.maxPendingRequests;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxRequests")
-      private final @Nullable Input<Integer> maxRequests;
+      private final @Nullable Output<Integer> maxRequests;
 
-    public Input<Integer> getMaxRequests() {
-        return this.maxRequests == null ? Input.empty() : this.maxRequests;
+    public Output<Integer> getMaxRequests() {
+        return this.maxRequests == null ? Output.empty() : this.maxRequests;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxRequestsPerConnection")
-      private final @Nullable Input<Integer> maxRequestsPerConnection;
+      private final @Nullable Output<Integer> maxRequestsPerConnection;
 
-    public Input<Integer> getMaxRequestsPerConnection() {
-        return this.maxRequestsPerConnection == null ? Input.empty() : this.maxRequestsPerConnection;
+    public Output<Integer> getMaxRequestsPerConnection() {
+        return this.maxRequestsPerConnection == null ? Output.empty() : this.maxRequestsPerConnection;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxRetries")
-      private final @Nullable Input<Integer> maxRetries;
+      private final @Nullable Output<Integer> maxRetries;
 
-    public Input<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Input.empty() : this.maxRetries;
+    public Output<Integer> getMaxRetries() {
+        return this.maxRetries == null ? Output.empty() : this.maxRetries;
     }
 
     public RegionBackendServiceCircuitBreakersGetArgs(
-        @Nullable Input<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout,
-        @Nullable Input<Integer> maxConnections,
-        @Nullable Input<Integer> maxPendingRequests,
-        @Nullable Input<Integer> maxRequests,
-        @Nullable Input<Integer> maxRequestsPerConnection,
-        @Nullable Input<Integer> maxRetries) {
+        @Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout,
+        @Nullable Output<Integer> maxConnections,
+        @Nullable Output<Integer> maxPendingRequests,
+        @Nullable Output<Integer> maxRequests,
+        @Nullable Output<Integer> maxRequestsPerConnection,
+        @Nullable Output<Integer> maxRetries) {
         this.connectTimeout = connectTimeout;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
@@ -105,12 +105,12 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
     }
 
     private RegionBackendServiceCircuitBreakersGetArgs() {
-        this.connectTimeout = Input.empty();
-        this.maxConnections = Input.empty();
-        this.maxPendingRequests = Input.empty();
-        this.maxRequests = Input.empty();
-        this.maxRequestsPerConnection = Input.empty();
-        this.maxRetries = Input.empty();
+        this.connectTimeout = Output.empty();
+        this.maxConnections = Output.empty();
+        this.maxPendingRequests = Output.empty();
+        this.maxRequests = Output.empty();
+        this.maxRequestsPerConnection = Output.empty();
+        this.maxRetries = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout;
-        private @Nullable Input<Integer> maxConnections;
-        private @Nullable Input<Integer> maxPendingRequests;
-        private @Nullable Input<Integer> maxRequests;
-        private @Nullable Input<Integer> maxRequestsPerConnection;
-        private @Nullable Input<Integer> maxRetries;
+        private @Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout;
+        private @Nullable Output<Integer> maxConnections;
+        private @Nullable Output<Integer> maxPendingRequests;
+        private @Nullable Output<Integer> maxRequests;
+        private @Nullable Output<Integer> maxRequestsPerConnection;
+        private @Nullable Output<Integer> maxRetries;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class RegionBackendServiceCircuitBreakersGetArgs extends io.pulumi.
     	      this.maxRetries = defaults.maxRetries;
         }
 
-        public Builder connectTimeout(@Nullable Input<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout) {
+        public Builder connectTimeout(@Nullable Output<RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
         }
 
         public Builder connectTimeout(@Nullable RegionBackendServiceCircuitBreakersConnectTimeoutGetArgs connectTimeout) {
-            this.connectTimeout = Input.ofNullable(connectTimeout);
+            this.connectTimeout = Output.ofNullable(connectTimeout);
             return this;
         }
 
-        public Builder maxConnections(@Nullable Input<Integer> maxConnections) {
+        public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
         public Builder maxConnections(@Nullable Integer maxConnections) {
-            this.maxConnections = Input.ofNullable(maxConnections);
+            this.maxConnections = Output.ofNullable(maxConnections);
             return this;
         }
 
-        public Builder maxPendingRequests(@Nullable Input<Integer> maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
-            this.maxPendingRequests = Input.ofNullable(maxPendingRequests);
+            this.maxPendingRequests = Output.ofNullable(maxPendingRequests);
             return this;
         }
 
-        public Builder maxRequests(@Nullable Input<Integer> maxRequests) {
+        public Builder maxRequests(@Nullable Output<Integer> maxRequests) {
             this.maxRequests = maxRequests;
             return this;
         }
 
         public Builder maxRequests(@Nullable Integer maxRequests) {
-            this.maxRequests = Input.ofNullable(maxRequests);
+            this.maxRequests = Output.ofNullable(maxRequests);
             return this;
         }
 
-        public Builder maxRequestsPerConnection(@Nullable Input<Integer> maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(@Nullable Output<Integer> maxRequestsPerConnection) {
             this.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
 
         public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
-            this.maxRequestsPerConnection = Input.ofNullable(maxRequestsPerConnection);
+            this.maxRequestsPerConnection = Output.ofNullable(maxRequestsPerConnection);
             return this;
         }
 
-        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Input.ofNullable(maxRetries);
+            this.maxRetries = Output.ofNullable(maxRetries);
             return this;
         }
         public RegionBackendServiceCircuitBreakersGetArgs build() {

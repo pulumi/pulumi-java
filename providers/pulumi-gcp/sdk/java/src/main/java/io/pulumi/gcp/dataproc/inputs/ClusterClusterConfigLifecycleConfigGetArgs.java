@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="autoDeleteTime")
-      private final @Nullable Input<String> autoDeleteTime;
+      private final @Nullable Output<String> autoDeleteTime;
 
-    public Input<String> getAutoDeleteTime() {
-        return this.autoDeleteTime == null ? Input.empty() : this.autoDeleteTime;
+    public Output<String> getAutoDeleteTime() {
+        return this.autoDeleteTime == null ? Output.empty() : this.autoDeleteTime;
     }
 
     /**
@@ -33,32 +33,32 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="idleDeleteTtl")
-      private final @Nullable Input<String> idleDeleteTtl;
+      private final @Nullable Output<String> idleDeleteTtl;
 
-    public Input<String> getIdleDeleteTtl() {
-        return this.idleDeleteTtl == null ? Input.empty() : this.idleDeleteTtl;
+    public Output<String> getIdleDeleteTtl() {
+        return this.idleDeleteTtl == null ? Output.empty() : this.idleDeleteTtl;
     }
 
     @InputImport(name="idleStartTime")
-      private final @Nullable Input<String> idleStartTime;
+      private final @Nullable Output<String> idleStartTime;
 
-    public Input<String> getIdleStartTime() {
-        return this.idleStartTime == null ? Input.empty() : this.idleStartTime;
+    public Output<String> getIdleStartTime() {
+        return this.idleStartTime == null ? Output.empty() : this.idleStartTime;
     }
 
     public ClusterClusterConfigLifecycleConfigGetArgs(
-        @Nullable Input<String> autoDeleteTime,
-        @Nullable Input<String> idleDeleteTtl,
-        @Nullable Input<String> idleStartTime) {
+        @Nullable Output<String> autoDeleteTime,
+        @Nullable Output<String> idleDeleteTtl,
+        @Nullable Output<String> idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.idleDeleteTtl = idleDeleteTtl;
         this.idleStartTime = idleStartTime;
     }
 
     private ClusterClusterConfigLifecycleConfigGetArgs() {
-        this.autoDeleteTime = Input.empty();
-        this.idleDeleteTtl = Input.empty();
-        this.idleStartTime = Input.empty();
+        this.autoDeleteTime = Output.empty();
+        this.idleDeleteTtl = Output.empty();
+        this.idleStartTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoDeleteTime;
-        private @Nullable Input<String> idleDeleteTtl;
-        private @Nullable Input<String> idleStartTime;
+        private @Nullable Output<String> autoDeleteTime;
+        private @Nullable Output<String> idleDeleteTtl;
+        private @Nullable Output<String> idleStartTime;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class ClusterClusterConfigLifecycleConfigGetArgs extends io.pulumi.
     	      this.idleStartTime = defaults.idleStartTime;
         }
 
-        public Builder autoDeleteTime(@Nullable Input<String> autoDeleteTime) {
+        public Builder autoDeleteTime(@Nullable Output<String> autoDeleteTime) {
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
 
         public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
-            this.autoDeleteTime = Input.ofNullable(autoDeleteTime);
+            this.autoDeleteTime = Output.ofNullable(autoDeleteTime);
             return this;
         }
 
-        public Builder idleDeleteTtl(@Nullable Input<String> idleDeleteTtl) {
+        public Builder idleDeleteTtl(@Nullable Output<String> idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
 
         public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
-            this.idleDeleteTtl = Input.ofNullable(idleDeleteTtl);
+            this.idleDeleteTtl = Output.ofNullable(idleDeleteTtl);
             return this;
         }
 
-        public Builder idleStartTime(@Nullable Input<String> idleStartTime) {
+        public Builder idleStartTime(@Nullable Output<String> idleStartTime) {
             this.idleStartTime = idleStartTime;
             return this;
         }
 
         public Builder idleStartTime(@Nullable String idleStartTime) {
-            this.idleStartTime = Input.ofNullable(idleStartTime);
+            this.idleStartTime = Output.ofNullable(idleStartTime);
             return this;
         }
         public ClusterClusterConfigLifecycleConfigGetArgs build() {

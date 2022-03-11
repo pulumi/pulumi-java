@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.oslogin.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTimeUsec")
-      private final @Nullable Input<String> expirationTimeUsec;
+      private final @Nullable Output<String> expirationTimeUsec;
 
-    public Input<String> getExpirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Input.empty() : this.expirationTimeUsec;
+    public Output<String> getExpirationTimeUsec() {
+        return this.expirationTimeUsec == null ? Output.empty() : this.expirationTimeUsec;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-      private final @Nullable Input<String> key;
+      private final @Nullable Output<String> key;
 
-    public Input<String> getKey() {
-        return this.key == null ? Input.empty() : this.key;
+    public Output<String> getKey() {
+        return this.key == null ? Output.empty() : this.key;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="user")
-      private final @Nullable Input<String> user;
+      private final @Nullable Output<String> user;
 
-    public Input<String> getUser() {
-        return this.user == null ? Input.empty() : this.user;
+    public Output<String> getUser() {
+        return this.user == null ? Output.empty() : this.user;
     }
 
     public SshPublicKeyState(
-        @Nullable Input<String> expirationTimeUsec,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> key,
-        @Nullable Input<String> project,
-        @Nullable Input<String> user) {
+        @Nullable Output<String> expirationTimeUsec,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> key,
+        @Nullable Output<String> project,
+        @Nullable Output<String> user) {
         this.expirationTimeUsec = expirationTimeUsec;
         this.fingerprint = fingerprint;
         this.key = key;
@@ -83,11 +83,11 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyState() {
-        this.expirationTimeUsec = Input.empty();
-        this.fingerprint = Input.empty();
-        this.key = Input.empty();
-        this.project = Input.empty();
-        this.user = Input.empty();
+        this.expirationTimeUsec = Output.empty();
+        this.fingerprint = Output.empty();
+        this.key = Output.empty();
+        this.project = Output.empty();
+        this.user = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expirationTimeUsec;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> key;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> user;
+        private @Nullable Output<String> expirationTimeUsec;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> key;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> user;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class SshPublicKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder expirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
         public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Input.ofNullable(expirationTimeUsec);
+            this.expirationTimeUsec = Output.ofNullable(expirationTimeUsec);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder key(@Nullable Input<String> key) {
+        public Builder key(@Nullable Output<String> key) {
             this.key = key;
             return this;
         }
 
         public Builder key(@Nullable String key) {
-            this.key = Input.ofNullable(key);
+            this.key = Output.ofNullable(key);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder user(@Nullable Input<String> user) {
+        public Builder user(@Nullable Output<String> user) {
             this.user = user;
             return this;
         }
 
         public Builder user(@Nullable String user) {
-            this.user = Input.ofNullable(user);
+            this.user = Output.ofNullable(user);
             return this;
         }
         public SshPublicKeyState build() {

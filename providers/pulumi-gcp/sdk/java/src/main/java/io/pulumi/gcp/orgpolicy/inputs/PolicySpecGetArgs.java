@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecRuleGetArgs;
 import java.lang.Boolean;
@@ -23,10 +23,10 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inheritFromParent")
-      private final @Nullable Input<Boolean> inheritFromParent;
+      private final @Nullable Output<Boolean> inheritFromParent;
 
-    public Input<Boolean> getInheritFromParent() {
-        return this.inheritFromParent == null ? Input.empty() : this.inheritFromParent;
+    public Output<Boolean> getInheritFromParent() {
+        return this.inheritFromParent == null ? Output.empty() : this.inheritFromParent;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reset")
-      private final @Nullable Input<Boolean> reset;
+      private final @Nullable Output<Boolean> reset;
 
-    public Input<Boolean> getReset() {
-        return this.reset == null ? Input.empty() : this.reset;
+    public Output<Boolean> getReset() {
+        return this.reset == null ? Output.empty() : this.reset;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<PolicySpecRuleGetArgs>> rules;
+      private final @Nullable Output<List<PolicySpecRuleGetArgs>> rules;
 
-    public Input<List<PolicySpecRuleGetArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<PolicySpecRuleGetArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public PolicySpecGetArgs(
-        @Nullable Input<String> etag,
-        @Nullable Input<Boolean> inheritFromParent,
-        @Nullable Input<Boolean> reset,
-        @Nullable Input<List<PolicySpecRuleGetArgs>> rules,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> etag,
+        @Nullable Output<Boolean> inheritFromParent,
+        @Nullable Output<Boolean> reset,
+        @Nullable Output<List<PolicySpecRuleGetArgs>> rules,
+        @Nullable Output<String> updateTime) {
         this.etag = etag;
         this.inheritFromParent = inheritFromParent;
         this.reset = reset;
@@ -88,11 +88,11 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicySpecGetArgs() {
-        this.etag = Input.empty();
-        this.inheritFromParent = Input.empty();
-        this.reset = Input.empty();
-        this.rules = Input.empty();
-        this.updateTime = Input.empty();
+        this.etag = Output.empty();
+        this.inheritFromParent = Output.empty();
+        this.reset = Output.empty();
+        this.rules = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> etag;
-        private @Nullable Input<Boolean> inheritFromParent;
-        private @Nullable Input<Boolean> reset;
-        private @Nullable Input<List<PolicySpecRuleGetArgs>> rules;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<Boolean> inheritFromParent;
+        private @Nullable Output<Boolean> reset;
+        private @Nullable Output<List<PolicySpecRuleGetArgs>> rules;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class PolicySpecGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder inheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Output<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
         public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
-            this.inheritFromParent = Input.ofNullable(inheritFromParent);
+            this.inheritFromParent = Output.ofNullable(inheritFromParent);
             return this;
         }
 
-        public Builder reset(@Nullable Input<Boolean> reset) {
+        public Builder reset(@Nullable Output<Boolean> reset) {
             this.reset = reset;
             return this;
         }
 
         public Builder reset(@Nullable Boolean reset) {
-            this.reset = Input.ofNullable(reset);
+            this.reset = Output.ofNullable(reset);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<PolicySpecRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Output<List<PolicySpecRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<PolicySpecRuleGetArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public PolicySpecGetArgs build() {

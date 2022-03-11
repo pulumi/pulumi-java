@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     public static final NodePoolNodeConfigGuestAcceleratorGetArgs Empty = new NodePoolNodeConfigGuestAcceleratorGetArgs();
 
     @InputImport(name="count", required=true)
-      private final Input<Integer> count;
+      private final Output<Integer> count;
 
-    public Input<Integer> getCount() {
+    public Output<Integer> getCount() {
         return this.count;
     }
 
     @InputImport(name="gpuPartitionSize")
-      private final @Nullable Input<String> gpuPartitionSize;
+      private final @Nullable Output<String> gpuPartitionSize;
 
-    public Input<String> getGpuPartitionSize() {
-        return this.gpuPartitionSize == null ? Input.empty() : this.gpuPartitionSize;
+    public Output<String> getGpuPartitionSize() {
+        return this.gpuPartitionSize == null ? Output.empty() : this.gpuPartitionSize;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public NodePoolNodeConfigGuestAcceleratorGetArgs(
-        Input<Integer> count,
-        @Nullable Input<String> gpuPartitionSize,
-        Input<String> type) {
+        Output<Integer> count,
+        @Nullable Output<String> gpuPartitionSize,
+        Output<String> type) {
         this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
         this.gpuPartitionSize = gpuPartitionSize;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private NodePoolNodeConfigGuestAcceleratorGetArgs() {
-        this.count = Input.empty();
-        this.gpuPartitionSize = Input.empty();
-        this.type = Input.empty();
+        this.count = Output.empty();
+        this.gpuPartitionSize = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<Integer> count;
-        private @Nullable Input<String> gpuPartitionSize;
-        private Input<String> type;
+        private Output<Integer> count;
+        private @Nullable Output<String> gpuPartitionSize;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder count(Input<Integer> count) {
+        public Builder count(Output<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
         public Builder count(Integer count) {
-            this.count = Input.of(Objects.requireNonNull(count));
+            this.count = Output.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder gpuPartitionSize(@Nullable Input<String> gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable Output<String> gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
-            this.gpuPartitionSize = Input.ofNullable(gpuPartitionSize);
+            this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public NodePoolNodeConfigGuestAcceleratorGetArgs build() {

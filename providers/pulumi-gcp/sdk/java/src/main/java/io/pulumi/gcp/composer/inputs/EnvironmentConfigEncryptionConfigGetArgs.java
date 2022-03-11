@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class EnvironmentConfigEncryptionConfigGetArgs extends io.pulumi.re
     public static final EnvironmentConfigEncryptionConfigGetArgs Empty = new EnvironmentConfigEncryptionConfigGetArgs();
 
     @InputImport(name="kmsKeyName", required=true)
-      private final Input<String> kmsKeyName;
+      private final Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
+    public Output<String> getKmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public EnvironmentConfigEncryptionConfigGetArgs(Input<String> kmsKeyName) {
+    public EnvironmentConfigEncryptionConfigGetArgs(Output<String> kmsKeyName) {
         this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
     }
 
     private EnvironmentConfigEncryptionConfigGetArgs() {
-        this.kmsKeyName = Input.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class EnvironmentConfigEncryptionConfigGetArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> kmsKeyName;
+        private Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class EnvironmentConfigEncryptionConfigGetArgs extends io.pulumi.re
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kmsKeyName(Input<String> kmsKeyName) {
+        public Builder kmsKeyName(Output<String> kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
+            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
         public EnvironmentConfigEncryptionConfigGetArgs build() {

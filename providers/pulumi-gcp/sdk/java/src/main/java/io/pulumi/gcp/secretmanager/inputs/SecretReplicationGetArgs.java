@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedGetArgs;
 import java.lang.Boolean;
@@ -20,10 +20,10 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="automatic")
-      private final @Nullable Input<Boolean> automatic;
+      private final @Nullable Output<Boolean> automatic;
 
-    public Input<Boolean> getAutomatic() {
-        return this.automatic == null ? Input.empty() : this.automatic;
+    public Output<Boolean> getAutomatic() {
+        return this.automatic == null ? Output.empty() : this.automatic;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userManaged")
-      private final @Nullable Input<SecretReplicationUserManagedGetArgs> userManaged;
+      private final @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
 
-    public Input<SecretReplicationUserManagedGetArgs> getUserManaged() {
-        return this.userManaged == null ? Input.empty() : this.userManaged;
+    public Output<SecretReplicationUserManagedGetArgs> getUserManaged() {
+        return this.userManaged == null ? Output.empty() : this.userManaged;
     }
 
     public SecretReplicationGetArgs(
-        @Nullable Input<Boolean> automatic,
-        @Nullable Input<SecretReplicationUserManagedGetArgs> userManaged) {
+        @Nullable Output<Boolean> automatic,
+        @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }
 
     private SecretReplicationGetArgs() {
-        this.automatic = Input.empty();
-        this.userManaged = Input.empty();
+        this.automatic = Output.empty();
+        this.userManaged = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> automatic;
-        private @Nullable Input<SecretReplicationUserManagedGetArgs> userManaged;
+        private @Nullable Output<Boolean> automatic;
+        private @Nullable Output<SecretReplicationUserManagedGetArgs> userManaged;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class SecretReplicationGetArgs extends io.pulumi.resources.Resource
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder automatic(@Nullable Input<Boolean> automatic) {
+        public Builder automatic(@Nullable Output<Boolean> automatic) {
             this.automatic = automatic;
             return this;
         }
 
         public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Input.ofNullable(automatic);
+            this.automatic = Output.ofNullable(automatic);
             return this;
         }
 
-        public Builder userManaged(@Nullable Input<SecretReplicationUserManagedGetArgs> userManaged) {
+        public Builder userManaged(@Nullable Output<SecretReplicationUserManagedGetArgs> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
         public Builder userManaged(@Nullable SecretReplicationUserManagedGetArgs userManaged) {
-            this.userManaged = Input.ofNullable(userManaged);
+            this.userManaged = Output.ofNullable(userManaged);
             return this;
         }
         public SecretReplicationGetArgs build() {

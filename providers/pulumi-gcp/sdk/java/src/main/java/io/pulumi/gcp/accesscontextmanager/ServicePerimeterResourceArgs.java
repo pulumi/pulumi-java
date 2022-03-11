@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="perimeterName", required=true)
-      private final Input<String> perimeterName;
+      private final Output<String> perimeterName;
 
-    public Input<String> getPerimeterName() {
+    public Output<String> getPerimeterName() {
         return this.perimeterName;
     }
 
@@ -31,22 +31,22 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resource", required=true)
-      private final Input<String> resource;
+      private final Output<String> resource;
 
-    public Input<String> getResource() {
+    public Output<String> getResource() {
         return this.resource;
     }
 
     public ServicePerimeterResourceArgs(
-        Input<String> perimeterName,
-        Input<String> resource) {
+        Output<String> perimeterName,
+        Output<String> resource) {
         this.perimeterName = Objects.requireNonNull(perimeterName, "expected parameter 'perimeterName' to be non-null");
         this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
     }
 
     private ServicePerimeterResourceArgs() {
-        this.perimeterName = Input.empty();
-        this.resource = Input.empty();
+        this.perimeterName = Output.empty();
+        this.resource = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> perimeterName;
-        private Input<String> resource;
+        private Output<String> perimeterName;
+        private Output<String> resource;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     	      this.resource = defaults.resource;
         }
 
-        public Builder perimeterName(Input<String> perimeterName) {
+        public Builder perimeterName(Output<String> perimeterName) {
             this.perimeterName = Objects.requireNonNull(perimeterName);
             return this;
         }
 
         public Builder perimeterName(String perimeterName) {
-            this.perimeterName = Input.of(Objects.requireNonNull(perimeterName));
+            this.perimeterName = Output.of(Objects.requireNonNull(perimeterName));
             return this;
         }
 
-        public Builder resource(Input<String> resource) {
+        public Builder resource(Output<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
         public Builder resource(String resource) {
-            this.resource = Input.of(Objects.requireNonNull(resource));
+            this.resource = Output.of(Objects.requireNonNull(resource));
             return this;
         }
         public ServicePerimeterResourceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,29 +16,29 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
     public static final FeatureResourceStateArgs Empty = new FeatureResourceStateArgs();
 
     @InputImport(name="hasResources")
-      private final @Nullable Input<Boolean> hasResources;
+      private final @Nullable Output<Boolean> hasResources;
 
-    public Input<Boolean> getHasResources() {
-        return this.hasResources == null ? Input.empty() : this.hasResources;
+    public Output<Boolean> getHasResources() {
+        return this.hasResources == null ? Output.empty() : this.hasResources;
     }
 
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public FeatureResourceStateArgs(
-        @Nullable Input<Boolean> hasResources,
-        @Nullable Input<String> state) {
+        @Nullable Output<Boolean> hasResources,
+        @Nullable Output<String> state) {
         this.hasResources = hasResources;
         this.state = state;
     }
 
     private FeatureResourceStateArgs() {
-        this.hasResources = Input.empty();
-        this.state = Input.empty();
+        this.hasResources = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> hasResources;
-        private @Nullable Input<String> state;
+        private @Nullable Output<Boolean> hasResources;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
     	      this.state = defaults.state;
         }
 
-        public Builder hasResources(@Nullable Input<Boolean> hasResources) {
+        public Builder hasResources(@Nullable Output<Boolean> hasResources) {
             this.hasResources = hasResources;
             return this;
         }
 
         public Builder hasResources(@Nullable Boolean hasResources) {
-            this.hasResources = Input.ofNullable(hasResources);
+            this.hasResources = Output.ofNullable(hasResources);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public FeatureResourceStateArgs build() {

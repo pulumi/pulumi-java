@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.gameservices;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,14 +170,14 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerDeploymentRollout(String name, GameServerDeploymentRolloutArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, args == null ? GameServerDeploymentRolloutArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private GameServerDeploymentRollout(String name, Input<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private GameServerDeploymentRollout(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -194,7 +193,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GameServerDeploymentRollout get(String name, Input<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static GameServerDeploymentRollout get(String name, Output<String> id, @Nullable GameServerDeploymentRolloutState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new GameServerDeploymentRollout(name, id, state, options);
     }
 }

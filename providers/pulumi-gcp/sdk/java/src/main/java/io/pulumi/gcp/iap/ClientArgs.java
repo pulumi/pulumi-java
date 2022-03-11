@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brand", required=true)
-      private final Input<String> brand;
+      private final Output<String> brand;
 
-    public Input<String> getBrand() {
+    public Output<String> getBrand() {
         return this.brand;
     }
 
@@ -31,22 +31,22 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
     public ClientArgs(
-        Input<String> brand,
-        Input<String> displayName) {
+        Output<String> brand,
+        Output<String> displayName) {
         this.brand = Objects.requireNonNull(brand, "expected parameter 'brand' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
     }
 
     private ClientArgs() {
-        this.brand = Input.empty();
-        this.displayName = Input.empty();
+        this.brand = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> brand;
-        private Input<String> displayName;
+        private Output<String> brand;
+        private Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder brand(Input<String> brand) {
+        public Builder brand(Output<String> brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
 
         public Builder brand(String brand) {
-            this.brand = Input.of(Objects.requireNonNull(brand));
+            this.brand = Output.of(Objects.requireNonNull(brand));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
         public ClientArgs build() {

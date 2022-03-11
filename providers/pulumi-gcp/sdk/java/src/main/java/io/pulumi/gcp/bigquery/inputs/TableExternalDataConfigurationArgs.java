@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationCsvOptionsArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGoogleSheetsOptionsArgs;
@@ -26,9 +26,9 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="autodetect", required=true)
-      private final Input<Boolean> autodetect;
+      private final Output<Boolean> autodetect;
 
-    public Input<Boolean> getAutodetect() {
+    public Output<Boolean> getAutodetect() {
         return this.autodetect;
     }
 
@@ -38,10 +38,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<String> compression;
+      private final @Nullable Output<String> compression;
 
-    public Input<String> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<String> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="csvOptions")
-      private final @Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
+      private final @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
 
-    public Input<TableExternalDataConfigurationCsvOptionsArgs> getCsvOptions() {
-        return this.csvOptions == null ? Input.empty() : this.csvOptions;
+    public Output<TableExternalDataConfigurationCsvOptionsArgs> getCsvOptions() {
+        return this.csvOptions == null ? Output.empty() : this.csvOptions;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="googleSheetsOptions")
-      private final @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
+      private final @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
 
-    public Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
-        return this.googleSheetsOptions == null ? Input.empty() : this.googleSheetsOptions;
+    public Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
+        return this.googleSheetsOptions == null ? Output.empty() : this.googleSheetsOptions;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hivePartitioningOptions")
-      private final @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
+      private final @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
 
-    public Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> getHivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Input.empty() : this.hivePartitioningOptions;
+    public Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> getHivePartitioningOptions() {
+        return this.hivePartitioningOptions == null ? Output.empty() : this.hivePartitioningOptions;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ignoreUnknownValues")
-      private final @Nullable Input<Boolean> ignoreUnknownValues;
+      private final @Nullable Output<Boolean> ignoreUnknownValues;
 
-    public Input<Boolean> getIgnoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Input.empty() : this.ignoreUnknownValues;
+    public Output<Boolean> getIgnoreUnknownValues() {
+        return this.ignoreUnknownValues == null ? Output.empty() : this.ignoreUnknownValues;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxBadRecords")
-      private final @Nullable Input<Integer> maxBadRecords;
+      private final @Nullable Output<Integer> maxBadRecords;
 
-    public Input<Integer> getMaxBadRecords() {
-        return this.maxBadRecords == null ? Input.empty() : this.maxBadRecords;
+    public Output<Integer> getMaxBadRecords() {
+        return this.maxBadRecords == null ? Output.empty() : this.maxBadRecords;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -141,9 +141,9 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceFormat", required=true)
-      private final Input<String> sourceFormat;
+      private final Output<String> sourceFormat;
 
-    public Input<String> getSourceFormat() {
+    public Output<String> getSourceFormat() {
         return this.sourceFormat;
     }
 
@@ -153,23 +153,23 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sourceUris", required=true)
-      private final Input<List<String>> sourceUris;
+      private final Output<List<String>> sourceUris;
 
-    public Input<List<String>> getSourceUris() {
+    public Output<List<String>> getSourceUris() {
         return this.sourceUris;
     }
 
     public TableExternalDataConfigurationArgs(
-        Input<Boolean> autodetect,
-        @Nullable Input<String> compression,
-        @Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions,
-        @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions,
-        @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions,
-        @Nullable Input<Boolean> ignoreUnknownValues,
-        @Nullable Input<Integer> maxBadRecords,
-        @Nullable Input<String> schema,
-        Input<String> sourceFormat,
-        Input<List<String>> sourceUris) {
+        Output<Boolean> autodetect,
+        @Nullable Output<String> compression,
+        @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions,
+        @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions,
+        @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions,
+        @Nullable Output<Boolean> ignoreUnknownValues,
+        @Nullable Output<Integer> maxBadRecords,
+        @Nullable Output<String> schema,
+        Output<String> sourceFormat,
+        Output<List<String>> sourceUris) {
         this.autodetect = Objects.requireNonNull(autodetect, "expected parameter 'autodetect' to be non-null");
         this.compression = compression;
         this.csvOptions = csvOptions;
@@ -183,16 +183,16 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
     }
 
     private TableExternalDataConfigurationArgs() {
-        this.autodetect = Input.empty();
-        this.compression = Input.empty();
-        this.csvOptions = Input.empty();
-        this.googleSheetsOptions = Input.empty();
-        this.hivePartitioningOptions = Input.empty();
-        this.ignoreUnknownValues = Input.empty();
-        this.maxBadRecords = Input.empty();
-        this.schema = Input.empty();
-        this.sourceFormat = Input.empty();
-        this.sourceUris = Input.empty();
+        this.autodetect = Output.empty();
+        this.compression = Output.empty();
+        this.csvOptions = Output.empty();
+        this.googleSheetsOptions = Output.empty();
+        this.hivePartitioningOptions = Output.empty();
+        this.ignoreUnknownValues = Output.empty();
+        this.maxBadRecords = Output.empty();
+        this.schema = Output.empty();
+        this.sourceFormat = Output.empty();
+        this.sourceUris = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,16 +204,16 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<Boolean> autodetect;
-        private @Nullable Input<String> compression;
-        private @Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
-        private @Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
-        private @Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
-        private @Nullable Input<Boolean> ignoreUnknownValues;
-        private @Nullable Input<Integer> maxBadRecords;
-        private @Nullable Input<String> schema;
-        private Input<String> sourceFormat;
-        private Input<List<String>> sourceUris;
+        private Output<Boolean> autodetect;
+        private @Nullable Output<String> compression;
+        private @Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions;
+        private @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions;
+        private @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions;
+        private @Nullable Output<Boolean> ignoreUnknownValues;
+        private @Nullable Output<Integer> maxBadRecords;
+        private @Nullable Output<String> schema;
+        private Output<String> sourceFormat;
+        private Output<List<String>> sourceUris;
 
         public Builder() {
     	      // Empty
@@ -233,103 +233,103 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder autodetect(Input<Boolean> autodetect) {
+        public Builder autodetect(Output<Boolean> autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
 
         public Builder autodetect(Boolean autodetect) {
-            this.autodetect = Input.of(Objects.requireNonNull(autodetect));
+            this.autodetect = Output.of(Objects.requireNonNull(autodetect));
             return this;
         }
 
-        public Builder compression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Output<String> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable String compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder csvOptions(@Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
+        public Builder csvOptions(@Nullable Output<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
 
         public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
-            this.csvOptions = Input.ofNullable(csvOptions);
+            this.csvOptions = Output.ofNullable(csvOptions);
             return this;
         }
 
-        public Builder googleSheetsOptions(@Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
         public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
-            this.googleSheetsOptions = Input.ofNullable(googleSheetsOptions);
+            this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
             return this;
         }
 
-        public Builder hivePartitioningOptions(@Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
         public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Input.ofNullable(hivePartitioningOptions);
+            this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
             return this;
         }
 
-        public Builder ignoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Input.ofNullable(ignoreUnknownValues);
+            this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
             return this;
         }
 
-        public Builder maxBadRecords(@Nullable Input<Integer> maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Input.ofNullable(maxBadRecords);
+            this.maxBadRecords = Output.ofNullable(maxBadRecords);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder sourceFormat(Input<String> sourceFormat) {
+        public Builder sourceFormat(Output<String> sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
 
         public Builder sourceFormat(String sourceFormat) {
-            this.sourceFormat = Input.of(Objects.requireNonNull(sourceFormat));
+            this.sourceFormat = Output.of(Objects.requireNonNull(sourceFormat));
             return this;
         }
 
-        public Builder sourceUris(Input<List<String>> sourceUris) {
+        public Builder sourceUris(Output<List<String>> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
 
         public Builder sourceUris(List<String> sourceUris) {
-            this.sourceUris = Input.of(Objects.requireNonNull(sourceUris));
+            this.sourceUris = Output.of(Objects.requireNonNull(sourceUris));
             return this;
         }
         public TableExternalDataConfigurationArgs build() {

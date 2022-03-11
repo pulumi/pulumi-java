@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateDiskArgs;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
+      private final @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
-    public Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     public RegionPerInstanceConfigPreservedStateArgs(
-        @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks,
-        @Nullable Input<Map<String,String>> metadata) {
+        @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks,
+        @Nullable Output<Map<String,String>> metadata) {
         this.disks = disks;
         this.metadata = metadata;
     }
 
     private RegionPerInstanceConfigPreservedStateArgs() {
-        this.disks = Input.empty();
-        this.metadata = Input.empty();
+        this.disks = Output.empty();
+        this.metadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
-        private @Nullable Input<Map<String,String>> metadata;
+        private @Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
+        private @Nullable Output<Map<String,String>> metadata;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder disks(@Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
         public RegionPerInstanceConfigPreservedStateArgs build() {

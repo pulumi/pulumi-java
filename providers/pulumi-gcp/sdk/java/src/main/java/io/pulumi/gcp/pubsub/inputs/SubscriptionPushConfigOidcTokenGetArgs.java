@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="audience")
-      private final @Nullable Input<String> audience;
+      private final @Nullable Output<String> audience;
 
-    public Input<String> getAudience() {
-        return this.audience == null ? Input.empty() : this.audience;
+    public Output<String> getAudience() {
+        return this.audience == null ? Output.empty() : this.audience;
     }
 
     /**
@@ -38,22 +38,22 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceAccountEmail", required=true)
-      private final Input<String> serviceAccountEmail;
+      private final Output<String> serviceAccountEmail;
 
-    public Input<String> getServiceAccountEmail() {
+    public Output<String> getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     public SubscriptionPushConfigOidcTokenGetArgs(
-        @Nullable Input<String> audience,
-        Input<String> serviceAccountEmail) {
+        @Nullable Output<String> audience,
+        Output<String> serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
     }
 
     private SubscriptionPushConfigOidcTokenGetArgs() {
-        this.audience = Input.empty();
-        this.serviceAccountEmail = Input.empty();
+        this.audience = Output.empty();
+        this.serviceAccountEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> audience;
-        private Input<String> serviceAccountEmail;
+        private @Nullable Output<String> audience;
+        private Output<String> serviceAccountEmail;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends io.pulumi.reso
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder audience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Output<String> audience) {
             this.audience = audience;
             return this;
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = Input.ofNullable(audience);
+            this.audience = Output.ofNullable(audience);
             return this;
         }
 
-        public Builder serviceAccountEmail(Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Input.of(Objects.requireNonNull(serviceAccountEmail));
+            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
             return this;
         }
         public SubscriptionPushConfigOidcTokenGetArgs build() {

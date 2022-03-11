@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="securityGroup", required=true)
-      private final Input<String> securityGroup;
+      private final Output<String> securityGroup;
 
-    public Input<String> getSecurityGroup() {
+    public Output<String> getSecurityGroup() {
         return this.securityGroup;
     }
 
-    public ClusterAuthenticatorGroupsConfigArgs(Input<String> securityGroup) {
+    public ClusterAuthenticatorGroupsConfigArgs(Output<String> securityGroup) {
         this.securityGroup = Objects.requireNonNull(securityGroup, "expected parameter 'securityGroup' to be non-null");
     }
 
     private ClusterAuthenticatorGroupsConfigArgs() {
-        this.securityGroup = Input.empty();
+        this.securityGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<String> securityGroup;
+        private Output<String> securityGroup;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder securityGroup(Input<String> securityGroup) {
+        public Builder securityGroup(Output<String> securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
 
         public Builder securityGroup(String securityGroup) {
-            this.securityGroup = Input.of(Objects.requireNonNull(securityGroup));
+            this.securityGroup = Output.of(Objects.requireNonNull(securityGroup));
             return this;
         }
         public ClusterAuthenticatorGroupsConfigArgs build() {

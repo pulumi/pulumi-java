@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,18 +18,18 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="startTime", required=true)
-      private final Input<String> startTime;
+      private final Output<String> startTime;
 
-    public Input<String> getStartTime() {
+    public Output<String> getStartTime() {
         return this.startTime;
     }
 
-    public NodeGroupMaintenanceWindowArgs(Input<String> startTime) {
+    public NodeGroupMaintenanceWindowArgs(Output<String> startTime) {
         this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
     }
 
     private NodeGroupMaintenanceWindowArgs() {
-        this.startTime = Input.empty();
+        this.startTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -41,7 +41,7 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> startTime;
+        private Output<String> startTime;
 
         public Builder() {
     	      // Empty
@@ -52,13 +52,13 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder startTime(Input<String> startTime) {
+        public Builder startTime(Output<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
         public Builder startTime(String startTime) {
-            this.startTime = Input.of(Objects.requireNonNull(startTime));
+            this.startTime = Output.of(Objects.requireNonNull(startTime));
             return this;
         }
         public NodeGroupMaintenanceWindowArgs build() {

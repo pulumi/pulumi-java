@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigAcceleratorGetArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigDiskConfigGetArgs;
@@ -23,10 +23,10 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="accelerators")
-      private final @Nullable Input<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
+      private final @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
 
-    public Input<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> getAccelerators() {
-        return this.accelerators == null ? Input.empty() : this.accelerators;
+    public Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> getAccelerators() {
+        return this.accelerators == null ? Output.empty() : this.accelerators;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="diskConfig")
-      private final @Nullable Input<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
+      private final @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
 
-    public Input<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> getDiskConfig() {
-        return this.diskConfig == null ? Input.empty() : this.diskConfig;
+    public Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> getDiskConfig() {
+        return this.diskConfig == null ? Output.empty() : this.diskConfig;
     }
 
     /**
@@ -46,17 +46,17 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="imageUri")
-      private final @Nullable Input<String> imageUri;
+      private final @Nullable Output<String> imageUri;
 
-    public Input<String> getImageUri() {
-        return this.imageUri == null ? Input.empty() : this.imageUri;
+    public Output<String> getImageUri() {
+        return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
     @InputImport(name="instanceNames")
-      private final @Nullable Input<List<String>> instanceNames;
+      private final @Nullable Output<List<String>> instanceNames;
 
-    public Input<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Input.empty() : this.instanceNames;
+    public Output<List<String>> getInstanceNames() {
+        return this.instanceNames == null ? Output.empty() : this.instanceNames;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="machineType")
-      private final @Nullable Input<String> machineType;
+      private final @Nullable Output<String> machineType;
 
-    public Input<String> getMachineType() {
-        return this.machineType == null ? Input.empty() : this.machineType;
+    public Output<String> getMachineType() {
+        return this.machineType == null ? Output.empty() : this.machineType;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="minCpuPlatform")
-      private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Output<String> minCpuPlatform;
 
-    public Input<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
+    public Output<String> getMinCpuPlatform() {
+        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="numInstances")
-      private final @Nullable Input<Integer> numInstances;
+      private final @Nullable Output<Integer> numInstances;
 
-    public Input<Integer> getNumInstances() {
-        return this.numInstances == null ? Input.empty() : this.numInstances;
+    public Output<Integer> getNumInstances() {
+        return this.numInstances == null ? Output.empty() : this.numInstances;
     }
 
     public ClusterClusterConfigWorkerConfigGetArgs(
-        @Nullable Input<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators,
-        @Nullable Input<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig,
-        @Nullable Input<String> imageUri,
-        @Nullable Input<List<String>> instanceNames,
-        @Nullable Input<String> machineType,
-        @Nullable Input<String> minCpuPlatform,
-        @Nullable Input<Integer> numInstances) {
+        @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators,
+        @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig,
+        @Nullable Output<String> imageUri,
+        @Nullable Output<List<String>> instanceNames,
+        @Nullable Output<String> machineType,
+        @Nullable Output<String> minCpuPlatform,
+        @Nullable Output<Integer> numInstances) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;
@@ -116,13 +116,13 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     }
 
     private ClusterClusterConfigWorkerConfigGetArgs() {
-        this.accelerators = Input.empty();
-        this.diskConfig = Input.empty();
-        this.imageUri = Input.empty();
-        this.instanceNames = Input.empty();
-        this.machineType = Input.empty();
-        this.minCpuPlatform = Input.empty();
-        this.numInstances = Input.empty();
+        this.accelerators = Output.empty();
+        this.diskConfig = Output.empty();
+        this.imageUri = Output.empty();
+        this.instanceNames = Output.empty();
+        this.machineType = Output.empty();
+        this.minCpuPlatform = Output.empty();
+        this.numInstances = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
-        private @Nullable Input<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
-        private @Nullable Input<String> imageUri;
-        private @Nullable Input<List<String>> instanceNames;
-        private @Nullable Input<String> machineType;
-        private @Nullable Input<String> minCpuPlatform;
-        private @Nullable Input<Integer> numInstances;
+        private @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators;
+        private @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig;
+        private @Nullable Output<String> imageUri;
+        private @Nullable Output<List<String>> instanceNames;
+        private @Nullable Output<String> machineType;
+        private @Nullable Output<String> minCpuPlatform;
+        private @Nullable Output<Integer> numInstances;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class ClusterClusterConfigWorkerConfigGetArgs extends io.pulumi.res
     	      this.numInstances = defaults.numInstances;
         }
 
-        public Builder accelerators(@Nullable Input<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators) {
+        public Builder accelerators(@Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
         public Builder accelerators(@Nullable List<ClusterClusterConfigWorkerConfigAcceleratorGetArgs> accelerators) {
-            this.accelerators = Input.ofNullable(accelerators);
+            this.accelerators = Output.ofNullable(accelerators);
             return this;
         }
 
-        public Builder diskConfig(@Nullable Input<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigGetArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
         public Builder diskConfig(@Nullable ClusterClusterConfigWorkerConfigDiskConfigGetArgs diskConfig) {
-            this.diskConfig = Input.ofNullable(diskConfig);
+            this.diskConfig = Output.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder imageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Output<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Input.ofNullable(imageUri);
+            this.imageUri = Output.ofNullable(imageUri);
             return this;
         }
 
-        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Input.ofNullable(instanceNames);
+            this.instanceNames = Output.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder machineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Output<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Input.ofNullable(machineType);
+            this.machineType = Output.ofNullable(machineType);
             return this;
         }
 
-        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder numInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Output<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Input.ofNullable(numInstances);
+            this.numInstances = Output.ofNullable(numInstances);
             return this;
         }
         public ClusterClusterConfigWorkerConfigGetArgs build() {

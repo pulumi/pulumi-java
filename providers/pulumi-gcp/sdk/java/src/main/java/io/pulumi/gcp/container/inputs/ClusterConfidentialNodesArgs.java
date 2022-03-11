@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class ClusterConfidentialNodesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
-    public ClusterConfidentialNodesArgs(Input<Boolean> enabled) {
+    public ClusterConfidentialNodesArgs(Output<Boolean> enabled) {
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private ClusterConfidentialNodesArgs() {
-        this.enabled = Input.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class ClusterConfidentialNodesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<Boolean> enabled;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class ClusterConfidentialNodesArgs extends io.pulumi.resources.Reso
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public ClusterConfidentialNodesArgs build() {

@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.healthcare;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -163,14 +162,14 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7StoreIamMember(String name, Hl7StoreIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Hl7StoreIamMember(String name, Input<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Hl7StoreIamMember(String name, Output<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -186,7 +185,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Hl7StoreIamMember get(String name, Input<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Hl7StoreIamMember get(String name, Output<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Hl7StoreIamMember(name, id, state, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="certificateId")
-      private final @Nullable Input<String> certificateId;
+      private final @Nullable Output<String> certificateId;
 
-    public Input<String> getCertificateId() {
-        return this.certificateId == null ? Input.empty() : this.certificateId;
+    public Output<String> getCertificateId() {
+        return this.certificateId == null ? Output.empty() : this.certificateId;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="pendingManagedCertificateId")
-      private final @Nullable Input<String> pendingManagedCertificateId;
+      private final @Nullable Output<String> pendingManagedCertificateId;
 
-    public Input<String> getPendingManagedCertificateId() {
-        return this.pendingManagedCertificateId == null ? Input.empty() : this.pendingManagedCertificateId;
+    public Output<String> getPendingManagedCertificateId() {
+        return this.pendingManagedCertificateId == null ? Output.empty() : this.pendingManagedCertificateId;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslManagementType", required=true)
-      private final Input<String> sslManagementType;
+      private final Output<String> sslManagementType;
 
-    public Input<String> getSslManagementType() {
+    public Output<String> getSslManagementType() {
         return this.sslManagementType;
     }
 
     public DomainMappingSslSettingsArgs(
-        @Nullable Input<String> certificateId,
-        @Nullable Input<String> pendingManagedCertificateId,
-        Input<String> sslManagementType) {
+        @Nullable Output<String> certificateId,
+        @Nullable Output<String> pendingManagedCertificateId,
+        Output<String> sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = Objects.requireNonNull(sslManagementType, "expected parameter 'sslManagementType' to be non-null");
     }
 
     private DomainMappingSslSettingsArgs() {
-        this.certificateId = Input.empty();
-        this.pendingManagedCertificateId = Input.empty();
-        this.sslManagementType = Input.empty();
+        this.certificateId = Output.empty();
+        this.pendingManagedCertificateId = Output.empty();
+        this.sslManagementType = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,9 +83,9 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateId;
-        private @Nullable Input<String> pendingManagedCertificateId;
-        private Input<String> sslManagementType;
+        private @Nullable Output<String> certificateId;
+        private @Nullable Output<String> pendingManagedCertificateId;
+        private Output<String> sslManagementType;
 
         public Builder() {
     	      // Empty
@@ -98,33 +98,33 @@ public final class DomainMappingSslSettingsArgs extends io.pulumi.resources.Reso
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder certificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Output<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Input.ofNullable(certificateId);
+            this.certificateId = Output.ofNullable(certificateId);
             return this;
         }
 
-        public Builder pendingManagedCertificateId(@Nullable Input<String> pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(@Nullable Output<String> pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
 
         public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
-            this.pendingManagedCertificateId = Input.ofNullable(pendingManagedCertificateId);
+            this.pendingManagedCertificateId = Output.ofNullable(pendingManagedCertificateId);
             return this;
         }
 
-        public Builder sslManagementType(Input<String> sslManagementType) {
+        public Builder sslManagementType(Output<String> sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }
 
         public Builder sslManagementType(String sslManagementType) {
-            this.sslManagementType = Input.of(Objects.requireNonNull(sslManagementType));
+            this.sslManagementType = Output.of(Objects.requireNonNull(sslManagementType));
             return this;
         }
         public DomainMappingSslSettingsArgs build() {

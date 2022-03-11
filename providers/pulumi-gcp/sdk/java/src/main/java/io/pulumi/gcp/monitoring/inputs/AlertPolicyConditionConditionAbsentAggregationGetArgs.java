@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -33,10 +33,10 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="alignmentPeriod")
-      private final @Nullable Input<String> alignmentPeriod;
+      private final @Nullable Output<String> alignmentPeriod;
 
-    public Input<String> getAlignmentPeriod() {
-        return this.alignmentPeriod == null ? Input.empty() : this.alignmentPeriod;
+    public Output<String> getAlignmentPeriod() {
+        return this.alignmentPeriod == null ? Output.empty() : this.alignmentPeriod;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="crossSeriesReducer")
-      private final @Nullable Input<String> crossSeriesReducer;
+      private final @Nullable Output<String> crossSeriesReducer;
 
-    public Input<String> getCrossSeriesReducer() {
-        return this.crossSeriesReducer == null ? Input.empty() : this.crossSeriesReducer;
+    public Output<String> getCrossSeriesReducer() {
+        return this.crossSeriesReducer == null ? Output.empty() : this.crossSeriesReducer;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="groupByFields")
-      private final @Nullable Input<List<String>> groupByFields;
+      private final @Nullable Output<List<String>> groupByFields;
 
-    public Input<List<String>> getGroupByFields() {
-        return this.groupByFields == null ? Input.empty() : this.groupByFields;
+    public Output<List<String>> getGroupByFields() {
+        return this.groupByFields == null ? Output.empty() : this.groupByFields;
     }
 
     /**
@@ -124,17 +124,17 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="perSeriesAligner")
-      private final @Nullable Input<String> perSeriesAligner;
+      private final @Nullable Output<String> perSeriesAligner;
 
-    public Input<String> getPerSeriesAligner() {
-        return this.perSeriesAligner == null ? Input.empty() : this.perSeriesAligner;
+    public Output<String> getPerSeriesAligner() {
+        return this.perSeriesAligner == null ? Output.empty() : this.perSeriesAligner;
     }
 
     public AlertPolicyConditionConditionAbsentAggregationGetArgs(
-        @Nullable Input<String> alignmentPeriod,
-        @Nullable Input<String> crossSeriesReducer,
-        @Nullable Input<List<String>> groupByFields,
-        @Nullable Input<String> perSeriesAligner) {
+        @Nullable Output<String> alignmentPeriod,
+        @Nullable Output<String> crossSeriesReducer,
+        @Nullable Output<List<String>> groupByFields,
+        @Nullable Output<String> perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;
@@ -142,10 +142,10 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
     }
 
     private AlertPolicyConditionConditionAbsentAggregationGetArgs() {
-        this.alignmentPeriod = Input.empty();
-        this.crossSeriesReducer = Input.empty();
-        this.groupByFields = Input.empty();
-        this.perSeriesAligner = Input.empty();
+        this.alignmentPeriod = Output.empty();
+        this.crossSeriesReducer = Output.empty();
+        this.groupByFields = Output.empty();
+        this.perSeriesAligner = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,10 +157,10 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
     }
 
     public static final class Builder {
-        private @Nullable Input<String> alignmentPeriod;
-        private @Nullable Input<String> crossSeriesReducer;
-        private @Nullable Input<List<String>> groupByFields;
-        private @Nullable Input<String> perSeriesAligner;
+        private @Nullable Output<String> alignmentPeriod;
+        private @Nullable Output<String> crossSeriesReducer;
+        private @Nullable Output<List<String>> groupByFields;
+        private @Nullable Output<String> perSeriesAligner;
 
         public Builder() {
     	      // Empty
@@ -174,43 +174,43 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
     	      this.perSeriesAligner = defaults.perSeriesAligner;
         }
 
-        public Builder alignmentPeriod(@Nullable Input<String> alignmentPeriod) {
+        public Builder alignmentPeriod(@Nullable Output<String> alignmentPeriod) {
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
 
         public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
-            this.alignmentPeriod = Input.ofNullable(alignmentPeriod);
+            this.alignmentPeriod = Output.ofNullable(alignmentPeriod);
             return this;
         }
 
-        public Builder crossSeriesReducer(@Nullable Input<String> crossSeriesReducer) {
+        public Builder crossSeriesReducer(@Nullable Output<String> crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
 
         public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
-            this.crossSeriesReducer = Input.ofNullable(crossSeriesReducer);
+            this.crossSeriesReducer = Output.ofNullable(crossSeriesReducer);
             return this;
         }
 
-        public Builder groupByFields(@Nullable Input<List<String>> groupByFields) {
+        public Builder groupByFields(@Nullable Output<List<String>> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
 
         public Builder groupByFields(@Nullable List<String> groupByFields) {
-            this.groupByFields = Input.ofNullable(groupByFields);
+            this.groupByFields = Output.ofNullable(groupByFields);
             return this;
         }
 
-        public Builder perSeriesAligner(@Nullable Input<String> perSeriesAligner) {
+        public Builder perSeriesAligner(@Nullable Output<String> perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
 
         public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
-            this.perSeriesAligner = Input.ofNullable(perSeriesAligner);
+            this.perSeriesAligner = Output.ofNullable(perSeriesAligner);
             return this;
         }
         public AlertPolicyConditionConditionAbsentAggregationGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomExprArgs;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class AccessLevelCustomArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expr", required=true)
-      private final Input<AccessLevelCustomExprArgs> expr;
+      private final Output<AccessLevelCustomExprArgs> expr;
 
-    public Input<AccessLevelCustomExprArgs> getExpr() {
+    public Output<AccessLevelCustomExprArgs> getExpr() {
         return this.expr;
     }
 
-    public AccessLevelCustomArgs(Input<AccessLevelCustomExprArgs> expr) {
+    public AccessLevelCustomArgs(Output<AccessLevelCustomExprArgs> expr) {
         this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
     }
 
     private AccessLevelCustomArgs() {
-        this.expr = Input.empty();
+        this.expr = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class AccessLevelCustomArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<AccessLevelCustomExprArgs> expr;
+        private Output<AccessLevelCustomExprArgs> expr;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class AccessLevelCustomArgs extends io.pulumi.resources.ResourceArg
     	      this.expr = defaults.expr;
         }
 
-        public Builder expr(Input<AccessLevelCustomExprArgs> expr) {
+        public Builder expr(Output<AccessLevelCustomExprArgs> expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
         public Builder expr(AccessLevelCustomExprArgs expr) {
-            this.expr = Input.of(Objects.requireNonNull(expr));
+            this.expr = Output.of(Objects.requireNonNull(expr));
             return this;
         }
         public AccessLevelCustomArgs build() {

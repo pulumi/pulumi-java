@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricsScope", required=true)
-      private final Input<String> metricsScope;
+      private final Output<String> metricsScope;
 
-    public Input<String> getMetricsScope() {
+    public Output<String> getMetricsScope() {
         return this.metricsScope;
     }
 
@@ -30,22 +30,22 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public MonitoredProjectArgs(
-        Input<String> metricsScope,
-        @Nullable Input<String> name) {
+        Output<String> metricsScope,
+        @Nullable Output<String> name) {
         this.metricsScope = Objects.requireNonNull(metricsScope, "expected parameter 'metricsScope' to be non-null");
         this.name = name;
     }
 
     private MonitoredProjectArgs() {
-        this.metricsScope = Input.empty();
-        this.name = Input.empty();
+        this.metricsScope = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> metricsScope;
-        private @Nullable Input<String> name;
+        private Output<String> metricsScope;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class MonitoredProjectArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder metricsScope(Input<String> metricsScope) {
+        public Builder metricsScope(Output<String> metricsScope) {
             this.metricsScope = Objects.requireNonNull(metricsScope);
             return this;
         }
 
         public Builder metricsScope(String metricsScope) {
-            this.metricsScope = Input.of(Objects.requireNonNull(metricsScope));
+            this.metricsScope = Output.of(Objects.requireNonNull(metricsScope));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public MonitoredProjectArgs build() {

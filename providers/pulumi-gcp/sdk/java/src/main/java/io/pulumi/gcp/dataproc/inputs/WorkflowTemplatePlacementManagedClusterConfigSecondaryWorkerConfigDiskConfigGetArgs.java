@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-      private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Input<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
+    public Output<Integer> getBootDiskSizeGb() {
+        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @InputImport(name="bootDiskType")
-      private final @Nullable Input<String> bootDiskType;
+      private final @Nullable Output<String> bootDiskType;
 
-    public Input<String> getBootDiskType() {
-        return this.bootDiskType == null ? Input.empty() : this.bootDiskType;
+    public Output<String> getBootDiskType() {
+        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @InputImport(name="numLocalSsds")
-      private final @Nullable Input<Integer> numLocalSsds;
+      private final @Nullable Output<Integer> numLocalSsds;
 
-    public Input<Integer> getNumLocalSsds() {
-        return this.numLocalSsds == null ? Input.empty() : this.numLocalSsds;
+    public Output<Integer> getNumLocalSsds() {
+        return this.numLocalSsds == null ? Output.empty() : this.numLocalSsds;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs(
-        @Nullable Input<Integer> bootDiskSizeGb,
-        @Nullable Input<String> bootDiskType,
-        @Nullable Input<Integer> numLocalSsds) {
+        @Nullable Output<Integer> bootDiskSizeGb,
+        @Nullable Output<String> bootDiskType,
+        @Nullable Output<Integer> numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.numLocalSsds = numLocalSsds;
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs() {
-        this.bootDiskSizeGb = Input.empty();
-        this.bootDiskType = Input.empty();
-        this.numLocalSsds = Input.empty();
+        this.bootDiskSizeGb = Output.empty();
+        this.bootDiskType = Output.empty();
+        this.numLocalSsds = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> bootDiskSizeGb;
-        private @Nullable Input<String> bootDiskType;
-        private @Nullable Input<Integer> numLocalSsds;
+        private @Nullable Output<Integer> bootDiskSizeGb;
+        private @Nullable Output<String> bootDiskType;
+        private @Nullable Output<Integer> numLocalSsds;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Input.ofNullable(bootDiskType);
+            this.bootDiskType = Output.ofNullable(bootDiskType);
             return this;
         }
 
-        public Builder numLocalSsds(@Nullable Input<Integer> numLocalSsds) {
+        public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
 
         public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
-            this.numLocalSsds = Input.ofNullable(numLocalSsds);
+            this.numLocalSsds = Output.ofNullable(numLocalSsds);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs build() {

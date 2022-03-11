@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceBackendGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyGetArgs;
@@ -35,10 +35,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="affinityCookieTtlSec")
-      private final @Nullable Input<Integer> affinityCookieTtlSec;
+      private final @Nullable Output<Integer> affinityCookieTtlSec;
 
-    public Input<Integer> getAffinityCookieTtlSec() {
-        return this.affinityCookieTtlSec == null ? Input.empty() : this.affinityCookieTtlSec;
+    public Output<Integer> getAffinityCookieTtlSec() {
+        return this.affinityCookieTtlSec == null ? Output.empty() : this.affinityCookieTtlSec;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="backends")
-      private final @Nullable Input<List<RegionBackendServiceBackendGetArgs>> backends;
+      private final @Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends;
 
-    public Input<List<RegionBackendServiceBackendGetArgs>> getBackends() {
-        return this.backends == null ? Input.empty() : this.backends;
+    public Output<List<RegionBackendServiceBackendGetArgs>> getBackends() {
+        return this.backends == null ? Output.empty() : this.backends;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cdnPolicy")
-      private final @Nullable Input<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
+      private final @Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
 
-    public Input<RegionBackendServiceCdnPolicyGetArgs> getCdnPolicy() {
-        return this.cdnPolicy == null ? Input.empty() : this.cdnPolicy;
+    public Output<RegionBackendServiceCdnPolicyGetArgs> getCdnPolicy() {
+        return this.cdnPolicy == null ? Output.empty() : this.cdnPolicy;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="circuitBreakers")
-      private final @Nullable Input<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
+      private final @Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
-    public Input<RegionBackendServiceCircuitBreakersGetArgs> getCircuitBreakers() {
-        return this.circuitBreakers == null ? Input.empty() : this.circuitBreakers;
+    public Output<RegionBackendServiceCircuitBreakersGetArgs> getCircuitBreakers() {
+        return this.circuitBreakers == null ? Output.empty() : this.circuitBreakers;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionDrainingTimeoutSec")
-      private final @Nullable Input<Integer> connectionDrainingTimeoutSec;
+      private final @Nullable Output<Integer> connectionDrainingTimeoutSec;
 
-    public Input<Integer> getConnectionDrainingTimeoutSec() {
-        return this.connectionDrainingTimeoutSec == null ? Input.empty() : this.connectionDrainingTimeoutSec;
+    public Output<Integer> getConnectionDrainingTimeoutSec() {
+        return this.connectionDrainingTimeoutSec == null ? Output.empty() : this.connectionDrainingTimeoutSec;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="connectionTrackingPolicy")
-      private final @Nullable Input<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
+      private final @Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
 
-    public Input<RegionBackendServiceConnectionTrackingPolicyGetArgs> getConnectionTrackingPolicy() {
-        return this.connectionTrackingPolicy == null ? Input.empty() : this.connectionTrackingPolicy;
+    public Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> getConnectionTrackingPolicy() {
+        return this.connectionTrackingPolicy == null ? Output.empty() : this.connectionTrackingPolicy;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="consistentHash")
-      private final @Nullable Input<RegionBackendServiceConsistentHashGetArgs> consistentHash;
+      private final @Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash;
 
-    public Input<RegionBackendServiceConsistentHashGetArgs> getConsistentHash() {
-        return this.consistentHash == null ? Input.empty() : this.consistentHash;
+    public Output<RegionBackendServiceConsistentHashGetArgs> getConsistentHash() {
+        return this.consistentHash == null ? Output.empty() : this.consistentHash;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creationTimestamp")
-      private final @Nullable Input<String> creationTimestamp;
+      private final @Nullable Output<String> creationTimestamp;
 
-    public Input<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
+    public Output<String> getCreationTimestamp() {
+        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enableCdn")
-      private final @Nullable Input<Boolean> enableCdn;
+      private final @Nullable Output<Boolean> enableCdn;
 
-    public Input<Boolean> getEnableCdn() {
-        return this.enableCdn == null ? Input.empty() : this.enableCdn;
+    public Output<Boolean> getEnableCdn() {
+        return this.enableCdn == null ? Output.empty() : this.enableCdn;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="failoverPolicy")
-      private final @Nullable Input<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
+      private final @Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
 
-    public Input<RegionBackendServiceFailoverPolicyGetArgs> getFailoverPolicy() {
-        return this.failoverPolicy == null ? Input.empty() : this.failoverPolicy;
+    public Output<RegionBackendServiceFailoverPolicyGetArgs> getFailoverPolicy() {
+        return this.failoverPolicy == null ? Output.empty() : this.failoverPolicy;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fingerprint")
-      private final @Nullable Input<String> fingerprint;
+      private final @Nullable Output<String> fingerprint;
 
-    public Input<String> getFingerprint() {
-        return this.fingerprint == null ? Input.empty() : this.fingerprint;
+    public Output<String> getFingerprint() {
+        return this.fingerprint == null ? Output.empty() : this.fingerprint;
     }
 
     /**
@@ -188,10 +188,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="healthChecks")
-      private final @Nullable Input<String> healthChecks;
+      private final @Nullable Output<String> healthChecks;
 
-    public Input<String> getHealthChecks() {
-        return this.healthChecks == null ? Input.empty() : this.healthChecks;
+    public Output<String> getHealthChecks() {
+        return this.healthChecks == null ? Output.empty() : this.healthChecks;
     }
 
     /**
@@ -200,10 +200,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="iap")
-      private final @Nullable Input<RegionBackendServiceIapGetArgs> iap;
+      private final @Nullable Output<RegionBackendServiceIapGetArgs> iap;
 
-    public Input<RegionBackendServiceIapGetArgs> getIap() {
-        return this.iap == null ? Input.empty() : this.iap;
+    public Output<RegionBackendServiceIapGetArgs> getIap() {
+        return this.iap == null ? Output.empty() : this.iap;
     }
 
     /**
@@ -216,10 +216,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="loadBalancingScheme")
-      private final @Nullable Input<String> loadBalancingScheme;
+      private final @Nullable Output<String> loadBalancingScheme;
 
-    public Input<String> getLoadBalancingScheme() {
-        return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
+    public Output<String> getLoadBalancingScheme() {
+        return this.loadBalancingScheme == null ? Output.empty() : this.loadBalancingScheme;
     }
 
     /**
@@ -246,10 +246,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="localityLbPolicy")
-      private final @Nullable Input<String> localityLbPolicy;
+      private final @Nullable Output<String> localityLbPolicy;
 
-    public Input<String> getLocalityLbPolicy() {
-        return this.localityLbPolicy == null ? Input.empty() : this.localityLbPolicy;
+    public Output<String> getLocalityLbPolicy() {
+        return this.localityLbPolicy == null ? Output.empty() : this.localityLbPolicy;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="logConfig")
-      private final @Nullable Input<RegionBackendServiceLogConfigGetArgs> logConfig;
+      private final @Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig;
 
-    public Input<RegionBackendServiceLogConfigGetArgs> getLogConfig() {
-        return this.logConfig == null ? Input.empty() : this.logConfig;
+    public Output<RegionBackendServiceLogConfigGetArgs> getLogConfig() {
+        return this.logConfig == null ? Output.empty() : this.logConfig;
     }
 
     /**
@@ -270,10 +270,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -282,10 +282,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="network")
-      private final @Nullable Input<String> network;
+      private final @Nullable Output<String> network;
 
-    public Input<String> getNetwork() {
-        return this.network == null ? Input.empty() : this.network;
+    public Output<String> getNetwork() {
+        return this.network == null ? Output.empty() : this.network;
     }
 
     /**
@@ -296,10 +296,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="outlierDetection")
-      private final @Nullable Input<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
+      private final @Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
 
-    public Input<RegionBackendServiceOutlierDetectionGetArgs> getOutlierDetection() {
-        return this.outlierDetection == null ? Input.empty() : this.outlierDetection;
+    public Output<RegionBackendServiceOutlierDetectionGetArgs> getOutlierDetection() {
+        return this.outlierDetection == null ? Output.empty() : this.outlierDetection;
     }
 
     /**
@@ -313,10 +313,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="portName")
-      private final @Nullable Input<String> portName;
+      private final @Nullable Output<String> portName;
 
-    public Input<String> getPortName() {
-        return this.portName == null ? Input.empty() : this.portName;
+    public Output<String> getPortName() {
+        return this.portName == null ? Output.empty() : this.portName;
     }
 
     /**
@@ -325,10 +325,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -339,10 +339,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<String> protocol;
+      private final @Nullable Output<String> protocol;
 
-    public Input<String> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<String> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -351,10 +351,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -362,10 +362,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="selfLink")
-      private final @Nullable Input<String> selfLink;
+      private final @Nullable Output<String> selfLink;
 
-    public Input<String> getSelfLink() {
-        return this.selfLink == null ? Input.empty() : this.selfLink;
+    public Output<String> getSelfLink() {
+        return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
     /**
@@ -375,10 +375,10 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sessionAffinity")
-      private final @Nullable Input<String> sessionAffinity;
+      private final @Nullable Output<String> sessionAffinity;
 
-    public Input<String> getSessionAffinity() {
-        return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
+    public Output<String> getSessionAffinity() {
+        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
     }
 
     /**
@@ -387,40 +387,40 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeoutSec")
-      private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Output<Integer> timeoutSec;
 
-    public Input<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
+    public Output<Integer> getTimeoutSec() {
+        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
     }
 
     public RegionBackendServiceState(
-        @Nullable Input<Integer> affinityCookieTtlSec,
-        @Nullable Input<List<RegionBackendServiceBackendGetArgs>> backends,
-        @Nullable Input<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy,
-        @Nullable Input<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers,
-        @Nullable Input<Integer> connectionDrainingTimeoutSec,
-        @Nullable Input<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy,
-        @Nullable Input<RegionBackendServiceConsistentHashGetArgs> consistentHash,
-        @Nullable Input<String> creationTimestamp,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> enableCdn,
-        @Nullable Input<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy,
-        @Nullable Input<String> fingerprint,
-        @Nullable Input<String> healthChecks,
-        @Nullable Input<RegionBackendServiceIapGetArgs> iap,
-        @Nullable Input<String> loadBalancingScheme,
-        @Nullable Input<String> localityLbPolicy,
-        @Nullable Input<RegionBackendServiceLogConfigGetArgs> logConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> network,
-        @Nullable Input<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection,
-        @Nullable Input<String> portName,
-        @Nullable Input<String> project,
-        @Nullable Input<String> protocol,
-        @Nullable Input<String> region,
-        @Nullable Input<String> selfLink,
-        @Nullable Input<String> sessionAffinity,
-        @Nullable Input<Integer> timeoutSec) {
+        @Nullable Output<Integer> affinityCookieTtlSec,
+        @Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends,
+        @Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy,
+        @Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers,
+        @Nullable Output<Integer> connectionDrainingTimeoutSec,
+        @Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy,
+        @Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash,
+        @Nullable Output<String> creationTimestamp,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> enableCdn,
+        @Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy,
+        @Nullable Output<String> fingerprint,
+        @Nullable Output<String> healthChecks,
+        @Nullable Output<RegionBackendServiceIapGetArgs> iap,
+        @Nullable Output<String> loadBalancingScheme,
+        @Nullable Output<String> localityLbPolicy,
+        @Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> network,
+        @Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection,
+        @Nullable Output<String> portName,
+        @Nullable Output<String> project,
+        @Nullable Output<String> protocol,
+        @Nullable Output<String> region,
+        @Nullable Output<String> selfLink,
+        @Nullable Output<String> sessionAffinity,
+        @Nullable Output<Integer> timeoutSec) {
         this.affinityCookieTtlSec = affinityCookieTtlSec;
         this.backends = backends;
         this.cdnPolicy = cdnPolicy;
@@ -451,33 +451,33 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
     }
 
     private RegionBackendServiceState() {
-        this.affinityCookieTtlSec = Input.empty();
-        this.backends = Input.empty();
-        this.cdnPolicy = Input.empty();
-        this.circuitBreakers = Input.empty();
-        this.connectionDrainingTimeoutSec = Input.empty();
-        this.connectionTrackingPolicy = Input.empty();
-        this.consistentHash = Input.empty();
-        this.creationTimestamp = Input.empty();
-        this.description = Input.empty();
-        this.enableCdn = Input.empty();
-        this.failoverPolicy = Input.empty();
-        this.fingerprint = Input.empty();
-        this.healthChecks = Input.empty();
-        this.iap = Input.empty();
-        this.loadBalancingScheme = Input.empty();
-        this.localityLbPolicy = Input.empty();
-        this.logConfig = Input.empty();
-        this.name = Input.empty();
-        this.network = Input.empty();
-        this.outlierDetection = Input.empty();
-        this.portName = Input.empty();
-        this.project = Input.empty();
-        this.protocol = Input.empty();
-        this.region = Input.empty();
-        this.selfLink = Input.empty();
-        this.sessionAffinity = Input.empty();
-        this.timeoutSec = Input.empty();
+        this.affinityCookieTtlSec = Output.empty();
+        this.backends = Output.empty();
+        this.cdnPolicy = Output.empty();
+        this.circuitBreakers = Output.empty();
+        this.connectionDrainingTimeoutSec = Output.empty();
+        this.connectionTrackingPolicy = Output.empty();
+        this.consistentHash = Output.empty();
+        this.creationTimestamp = Output.empty();
+        this.description = Output.empty();
+        this.enableCdn = Output.empty();
+        this.failoverPolicy = Output.empty();
+        this.fingerprint = Output.empty();
+        this.healthChecks = Output.empty();
+        this.iap = Output.empty();
+        this.loadBalancingScheme = Output.empty();
+        this.localityLbPolicy = Output.empty();
+        this.logConfig = Output.empty();
+        this.name = Output.empty();
+        this.network = Output.empty();
+        this.outlierDetection = Output.empty();
+        this.portName = Output.empty();
+        this.project = Output.empty();
+        this.protocol = Output.empty();
+        this.region = Output.empty();
+        this.selfLink = Output.empty();
+        this.sessionAffinity = Output.empty();
+        this.timeoutSec = Output.empty();
     }
 
     public static Builder builder() {
@@ -489,33 +489,33 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> affinityCookieTtlSec;
-        private @Nullable Input<List<RegionBackendServiceBackendGetArgs>> backends;
-        private @Nullable Input<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
-        private @Nullable Input<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
-        private @Nullable Input<Integer> connectionDrainingTimeoutSec;
-        private @Nullable Input<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
-        private @Nullable Input<RegionBackendServiceConsistentHashGetArgs> consistentHash;
-        private @Nullable Input<String> creationTimestamp;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> enableCdn;
-        private @Nullable Input<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
-        private @Nullable Input<String> fingerprint;
-        private @Nullable Input<String> healthChecks;
-        private @Nullable Input<RegionBackendServiceIapGetArgs> iap;
-        private @Nullable Input<String> loadBalancingScheme;
-        private @Nullable Input<String> localityLbPolicy;
-        private @Nullable Input<RegionBackendServiceLogConfigGetArgs> logConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> network;
-        private @Nullable Input<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
-        private @Nullable Input<String> portName;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> protocol;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> selfLink;
-        private @Nullable Input<String> sessionAffinity;
-        private @Nullable Input<Integer> timeoutSec;
+        private @Nullable Output<Integer> affinityCookieTtlSec;
+        private @Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends;
+        private @Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy;
+        private @Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers;
+        private @Nullable Output<Integer> connectionDrainingTimeoutSec;
+        private @Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy;
+        private @Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash;
+        private @Nullable Output<String> creationTimestamp;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> enableCdn;
+        private @Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy;
+        private @Nullable Output<String> fingerprint;
+        private @Nullable Output<String> healthChecks;
+        private @Nullable Output<RegionBackendServiceIapGetArgs> iap;
+        private @Nullable Output<String> loadBalancingScheme;
+        private @Nullable Output<String> localityLbPolicy;
+        private @Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> network;
+        private @Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection;
+        private @Nullable Output<String> portName;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> protocol;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> selfLink;
+        private @Nullable Output<String> sessionAffinity;
+        private @Nullable Output<Integer> timeoutSec;
 
         public Builder() {
     	      // Empty
@@ -552,273 +552,273 @@ public final class RegionBackendServiceState extends io.pulumi.resources.Resourc
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder affinityCookieTtlSec(@Nullable Input<Integer> affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(@Nullable Output<Integer> affinityCookieTtlSec) {
             this.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
 
         public Builder affinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
-            this.affinityCookieTtlSec = Input.ofNullable(affinityCookieTtlSec);
+            this.affinityCookieTtlSec = Output.ofNullable(affinityCookieTtlSec);
             return this;
         }
 
-        public Builder backends(@Nullable Input<List<RegionBackendServiceBackendGetArgs>> backends) {
+        public Builder backends(@Nullable Output<List<RegionBackendServiceBackendGetArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
         public Builder backends(@Nullable List<RegionBackendServiceBackendGetArgs> backends) {
-            this.backends = Input.ofNullable(backends);
+            this.backends = Output.ofNullable(backends);
             return this;
         }
 
-        public Builder cdnPolicy(@Nullable Input<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Output<RegionBackendServiceCdnPolicyGetArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
 
         public Builder cdnPolicy(@Nullable RegionBackendServiceCdnPolicyGetArgs cdnPolicy) {
-            this.cdnPolicy = Input.ofNullable(cdnPolicy);
+            this.cdnPolicy = Output.ofNullable(cdnPolicy);
             return this;
         }
 
-        public Builder circuitBreakers(@Nullable Input<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers) {
+        public Builder circuitBreakers(@Nullable Output<RegionBackendServiceCircuitBreakersGetArgs> circuitBreakers) {
             this.circuitBreakers = circuitBreakers;
             return this;
         }
 
         public Builder circuitBreakers(@Nullable RegionBackendServiceCircuitBreakersGetArgs circuitBreakers) {
-            this.circuitBreakers = Input.ofNullable(circuitBreakers);
+            this.circuitBreakers = Output.ofNullable(circuitBreakers);
             return this;
         }
 
-        public Builder connectionDrainingTimeoutSec(@Nullable Input<Integer> connectionDrainingTimeoutSec) {
+        public Builder connectionDrainingTimeoutSec(@Nullable Output<Integer> connectionDrainingTimeoutSec) {
             this.connectionDrainingTimeoutSec = connectionDrainingTimeoutSec;
             return this;
         }
 
         public Builder connectionDrainingTimeoutSec(@Nullable Integer connectionDrainingTimeoutSec) {
-            this.connectionDrainingTimeoutSec = Input.ofNullable(connectionDrainingTimeoutSec);
+            this.connectionDrainingTimeoutSec = Output.ofNullable(connectionDrainingTimeoutSec);
             return this;
         }
 
-        public Builder connectionTrackingPolicy(@Nullable Input<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy) {
+        public Builder connectionTrackingPolicy(@Nullable Output<RegionBackendServiceConnectionTrackingPolicyGetArgs> connectionTrackingPolicy) {
             this.connectionTrackingPolicy = connectionTrackingPolicy;
             return this;
         }
 
         public Builder connectionTrackingPolicy(@Nullable RegionBackendServiceConnectionTrackingPolicyGetArgs connectionTrackingPolicy) {
-            this.connectionTrackingPolicy = Input.ofNullable(connectionTrackingPolicy);
+            this.connectionTrackingPolicy = Output.ofNullable(connectionTrackingPolicy);
             return this;
         }
 
-        public Builder consistentHash(@Nullable Input<RegionBackendServiceConsistentHashGetArgs> consistentHash) {
+        public Builder consistentHash(@Nullable Output<RegionBackendServiceConsistentHashGetArgs> consistentHash) {
             this.consistentHash = consistentHash;
             return this;
         }
 
         public Builder consistentHash(@Nullable RegionBackendServiceConsistentHashGetArgs consistentHash) {
-            this.consistentHash = Input.ofNullable(consistentHash);
+            this.consistentHash = Output.ofNullable(consistentHash);
             return this;
         }
 
-        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Input.ofNullable(creationTimestamp);
+            this.creationTimestamp = Output.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder enableCdn(@Nullable Input<Boolean> enableCdn) {
+        public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
 
         public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Input.ofNullable(enableCdn);
+            this.enableCdn = Output.ofNullable(enableCdn);
             return this;
         }
 
-        public Builder failoverPolicy(@Nullable Input<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy) {
+        public Builder failoverPolicy(@Nullable Output<RegionBackendServiceFailoverPolicyGetArgs> failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }
 
         public Builder failoverPolicy(@Nullable RegionBackendServiceFailoverPolicyGetArgs failoverPolicy) {
-            this.failoverPolicy = Input.ofNullable(failoverPolicy);
+            this.failoverPolicy = Output.ofNullable(failoverPolicy);
             return this;
         }
 
-        public Builder fingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Output<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Input.ofNullable(fingerprint);
+            this.fingerprint = Output.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder healthChecks(@Nullable Input<String> healthChecks) {
+        public Builder healthChecks(@Nullable Output<String> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
         public Builder healthChecks(@Nullable String healthChecks) {
-            this.healthChecks = Input.ofNullable(healthChecks);
+            this.healthChecks = Output.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder iap(@Nullable Input<RegionBackendServiceIapGetArgs> iap) {
+        public Builder iap(@Nullable Output<RegionBackendServiceIapGetArgs> iap) {
             this.iap = iap;
             return this;
         }
 
         public Builder iap(@Nullable RegionBackendServiceIapGetArgs iap) {
-            this.iap = Input.ofNullable(iap);
+            this.iap = Output.ofNullable(iap);
             return this;
         }
 
-        public Builder loadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable Output<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
         public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
-            this.loadBalancingScheme = Input.ofNullable(loadBalancingScheme);
+            this.loadBalancingScheme = Output.ofNullable(loadBalancingScheme);
             return this;
         }
 
-        public Builder localityLbPolicy(@Nullable Input<String> localityLbPolicy) {
+        public Builder localityLbPolicy(@Nullable Output<String> localityLbPolicy) {
             this.localityLbPolicy = localityLbPolicy;
             return this;
         }
 
         public Builder localityLbPolicy(@Nullable String localityLbPolicy) {
-            this.localityLbPolicy = Input.ofNullable(localityLbPolicy);
+            this.localityLbPolicy = Output.ofNullable(localityLbPolicy);
             return this;
         }
 
-        public Builder logConfig(@Nullable Input<RegionBackendServiceLogConfigGetArgs> logConfig) {
+        public Builder logConfig(@Nullable Output<RegionBackendServiceLogConfigGetArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
         public Builder logConfig(@Nullable RegionBackendServiceLogConfigGetArgs logConfig) {
-            this.logConfig = Input.ofNullable(logConfig);
+            this.logConfig = Output.ofNullable(logConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder network(@Nullable Input<String> network) {
+        public Builder network(@Nullable Output<String> network) {
             this.network = network;
             return this;
         }
 
         public Builder network(@Nullable String network) {
-            this.network = Input.ofNullable(network);
+            this.network = Output.ofNullable(network);
             return this;
         }
 
-        public Builder outlierDetection(@Nullable Input<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection) {
+        public Builder outlierDetection(@Nullable Output<RegionBackendServiceOutlierDetectionGetArgs> outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
 
         public Builder outlierDetection(@Nullable RegionBackendServiceOutlierDetectionGetArgs outlierDetection) {
-            this.outlierDetection = Input.ofNullable(outlierDetection);
+            this.outlierDetection = Output.ofNullable(outlierDetection);
             return this;
         }
 
-        public Builder portName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Output<String> portName) {
             this.portName = portName;
             return this;
         }
 
         public Builder portName(@Nullable String portName) {
-            this.portName = Input.ofNullable(portName);
+            this.portName = Output.ofNullable(portName);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Output<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder selfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Output<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Input.ofNullable(selfLink);
+            this.selfLink = Output.ofNullable(selfLink);
             return this;
         }
 
-        public Builder sessionAffinity(@Nullable Input<String> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Output<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
         public Builder sessionAffinity(@Nullable String sessionAffinity) {
-            this.sessionAffinity = Input.ofNullable(sessionAffinity);
+            this.sessionAffinity = Output.ofNullable(sessionAffinity);
             return this;
         }
 
-        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Output<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Input.ofNullable(timeoutSec);
+            this.timeoutSec = Output.ofNullable(timeoutSec);
             return this;
         }
         public RegionBackendServiceState build() {

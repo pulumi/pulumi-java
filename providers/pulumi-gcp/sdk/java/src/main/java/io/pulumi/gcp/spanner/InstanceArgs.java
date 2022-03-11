@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,9 +27,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<String> config;
+      private final Output<String> config;
 
-    public Input<String> getConfig() {
+    public Output<String> getConfig() {
         return this.config;
     }
 
@@ -39,9 +39,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -51,10 +51,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceDestroy")
-      private final @Nullable Input<Boolean> forceDestroy;
+      private final @Nullable Output<Boolean> forceDestroy;
 
-    public Input<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Input.empty() : this.forceDestroy;
+    public Output<Boolean> getForceDestroy() {
+        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numNodes")
-      private final @Nullable Input<Integer> numNodes;
+      private final @Nullable Output<Integer> numNodes;
 
-    public Input<Integer> getNumNodes() {
-        return this.numNodes == null ? Input.empty() : this.numNodes;
+    public Output<Integer> getNumNodes() {
+        return this.numNodes == null ? Output.empty() : this.numNodes;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="processingUnits")
-      private final @Nullable Input<Integer> processingUnits;
+      private final @Nullable Output<Integer> processingUnits;
 
-    public Input<Integer> getProcessingUnits() {
-        return this.processingUnits == null ? Input.empty() : this.processingUnits;
+    public Output<Integer> getProcessingUnits() {
+        return this.processingUnits == null ? Output.empty() : this.processingUnits;
     }
 
     /**
@@ -112,21 +112,21 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public InstanceArgs(
-        Input<String> config,
-        Input<String> displayName,
-        @Nullable Input<Boolean> forceDestroy,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> numNodes,
-        @Nullable Input<Integer> processingUnits,
-        @Nullable Input<String> project) {
+        Output<String> config,
+        Output<String> displayName,
+        @Nullable Output<Boolean> forceDestroy,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> numNodes,
+        @Nullable Output<Integer> processingUnits,
+        @Nullable Output<String> project) {
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.forceDestroy = forceDestroy;
@@ -138,14 +138,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.config = Input.empty();
-        this.displayName = Input.empty();
-        this.forceDestroy = Input.empty();
-        this.labels = Input.empty();
-        this.name = Input.empty();
-        this.numNodes = Input.empty();
-        this.processingUnits = Input.empty();
-        this.project = Input.empty();
+        this.config = Output.empty();
+        this.displayName = Output.empty();
+        this.forceDestroy = Output.empty();
+        this.labels = Output.empty();
+        this.name = Output.empty();
+        this.numNodes = Output.empty();
+        this.processingUnits = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -157,14 +157,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> config;
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> forceDestroy;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> numNodes;
-        private @Nullable Input<Integer> processingUnits;
-        private @Nullable Input<String> project;
+        private Output<String> config;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> forceDestroy;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> numNodes;
+        private @Nullable Output<Integer> processingUnits;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -182,83 +182,83 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder config(Input<String> config) {
+        public Builder config(Output<String> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(String config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Input.ofNullable(forceDestroy);
+            this.forceDestroy = Output.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder numNodes(@Nullable Input<Integer> numNodes) {
+        public Builder numNodes(@Nullable Output<Integer> numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
         public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Input.ofNullable(numNodes);
+            this.numNodes = Output.ofNullable(numNodes);
             return this;
         }
 
-        public Builder processingUnits(@Nullable Input<Integer> processingUnits) {
+        public Builder processingUnits(@Nullable Output<Integer> processingUnits) {
             this.processingUnits = processingUnits;
             return this;
         }
 
         public Builder processingUnits(@Nullable Integer processingUnits) {
-            this.processingUnits = Input.ofNullable(processingUnits);
+            this.processingUnits = Output.ofNullable(processingUnits);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public InstanceArgs build() {

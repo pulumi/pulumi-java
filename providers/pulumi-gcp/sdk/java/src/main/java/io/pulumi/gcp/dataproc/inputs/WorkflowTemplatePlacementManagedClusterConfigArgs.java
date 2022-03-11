@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs;
@@ -33,10 +33,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="autoscalingConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> getAutoscalingConfig() {
-        return this.autoscalingConfig == null ? Input.empty() : this.autoscalingConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> getAutoscalingConfig() {
+        return this.autoscalingConfig == null ? Output.empty() : this.autoscalingConfig;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="encryptionConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> getEncryptionConfig() {
+        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="endpointConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> getEndpointConfig() {
-        return this.endpointConfig == null ? Input.empty() : this.endpointConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> getEndpointConfig() {
+        return this.endpointConfig == null ? Output.empty() : this.endpointConfig;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="gceClusterConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> getGceClusterConfig() {
-        return this.gceClusterConfig == null ? Input.empty() : this.gceClusterConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> getGceClusterConfig() {
+        return this.gceClusterConfig == null ? Output.empty() : this.gceClusterConfig;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="gkeClusterConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> getGkeClusterConfig() {
-        return this.gkeClusterConfig == null ? Input.empty() : this.gkeClusterConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> getGkeClusterConfig() {
+        return this.gkeClusterConfig == null ? Output.empty() : this.gkeClusterConfig;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="initializationActions")
-      private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
+      private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
 
-    public Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> getInitializationActions() {
-        return this.initializationActions == null ? Input.empty() : this.initializationActions;
+    public Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> getInitializationActions() {
+        return this.initializationActions == null ? Output.empty() : this.initializationActions;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="lifecycleConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> getLifecycleConfig() {
-        return this.lifecycleConfig == null ? Input.empty() : this.lifecycleConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> getLifecycleConfig() {
+        return this.lifecycleConfig == null ? Output.empty() : this.lifecycleConfig;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="masterConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> getMasterConfig() {
-        return this.masterConfig == null ? Input.empty() : this.masterConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> getMasterConfig() {
+        return this.masterConfig == null ? Output.empty() : this.masterConfig;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="metastoreConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> getMetastoreConfig() {
-        return this.metastoreConfig == null ? Input.empty() : this.metastoreConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> getMetastoreConfig() {
+        return this.metastoreConfig == null ? Output.empty() : this.metastoreConfig;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> getSecondaryWorkerConfig() {
-        return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> getSecondaryWorkerConfig() {
+        return this.secondaryWorkerConfig == null ? Output.empty() : this.secondaryWorkerConfig;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="securityConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> getSecurityConfig() {
-        return this.securityConfig == null ? Input.empty() : this.securityConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> getSecurityConfig() {
+        return this.securityConfig == null ? Output.empty() : this.securityConfig;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="softwareConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> getSoftwareConfig() {
+        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="stagingBucket")
-      private final @Nullable Input<String> stagingBucket;
+      private final @Nullable Output<String> stagingBucket;
 
-    public Input<String> getStagingBucket() {
-        return this.stagingBucket == null ? Input.empty() : this.stagingBucket;
+    public Output<String> getStagingBucket() {
+        return this.stagingBucket == null ? Output.empty() : this.stagingBucket;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="tempBucket")
-      private final @Nullable Input<String> tempBucket;
+      private final @Nullable Output<String> tempBucket;
 
-    public Input<String> getTempBucket() {
-        return this.tempBucket == null ? Input.empty() : this.tempBucket;
+    public Output<String> getTempBucket() {
+        return this.tempBucket == null ? Output.empty() : this.tempBucket;
     }
 
     /**
@@ -187,28 +187,28 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
      * 
      */
     @InputImport(name="workerConfig")
-      private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
+      private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
 
-    public Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Input.empty() : this.workerConfig;
+    public Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> getWorkerConfig() {
+        return this.workerConfig == null ? Output.empty() : this.workerConfig;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigArgs(
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig,
-        @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig,
-        @Nullable Input<String> stagingBucket,
-        @Nullable Input<String> tempBucket,
-        @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig,
+        @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig,
+        @Nullable Output<String> stagingBucket,
+        @Nullable Output<String> tempBucket,
+        @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.encryptionConfig = encryptionConfig;
         this.endpointConfig = endpointConfig;
@@ -227,21 +227,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigArgs() {
-        this.autoscalingConfig = Input.empty();
-        this.encryptionConfig = Input.empty();
-        this.endpointConfig = Input.empty();
-        this.gceClusterConfig = Input.empty();
-        this.gkeClusterConfig = Input.empty();
-        this.initializationActions = Input.empty();
-        this.lifecycleConfig = Input.empty();
-        this.masterConfig = Input.empty();
-        this.metastoreConfig = Input.empty();
-        this.secondaryWorkerConfig = Input.empty();
-        this.securityConfig = Input.empty();
-        this.softwareConfig = Input.empty();
-        this.stagingBucket = Input.empty();
-        this.tempBucket = Input.empty();
-        this.workerConfig = Input.empty();
+        this.autoscalingConfig = Output.empty();
+        this.encryptionConfig = Output.empty();
+        this.endpointConfig = Output.empty();
+        this.gceClusterConfig = Output.empty();
+        this.gkeClusterConfig = Output.empty();
+        this.initializationActions = Output.empty();
+        this.lifecycleConfig = Output.empty();
+        this.masterConfig = Output.empty();
+        this.metastoreConfig = Output.empty();
+        this.secondaryWorkerConfig = Output.empty();
+        this.securityConfig = Output.empty();
+        this.softwareConfig = Output.empty();
+        this.stagingBucket = Output.empty();
+        this.tempBucket = Output.empty();
+        this.workerConfig = Output.empty();
     }
 
     public static Builder builder() {
@@ -253,21 +253,21 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     }
 
     public static final class Builder {
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
-        private @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
-        private @Nullable Input<String> stagingBucket;
-        private @Nullable Input<String> tempBucket;
-        private @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig;
+        private @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig;
+        private @Nullable Output<String> stagingBucket;
+        private @Nullable Output<String> tempBucket;
+        private @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig;
 
         public Builder() {
     	      // Empty
@@ -292,153 +292,153 @@ public final class WorkflowTemplatePlacementManagedClusterConfigArgs extends io.
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder autoscalingConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig) {
+        public Builder autoscalingConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs> autoscalingConfig) {
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
         public Builder autoscalingConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigArgs autoscalingConfig) {
-            this.autoscalingConfig = Input.ofNullable(autoscalingConfig);
+            this.autoscalingConfig = Output.ofNullable(autoscalingConfig);
             return this;
         }
 
-        public Builder encryptionConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
         public Builder encryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Input.ofNullable(encryptionConfig);
+            this.encryptionConfig = Output.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder endpointConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig) {
+        public Builder endpointConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs> endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
 
         public Builder endpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfigArgs endpointConfig) {
-            this.endpointConfig = Input.ofNullable(endpointConfig);
+            this.endpointConfig = Output.ofNullable(endpointConfig);
             return this;
         }
 
-        public Builder gceClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig) {
+        public Builder gceClusterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs> gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
         public Builder gceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigArgs gceClusterConfig) {
-            this.gceClusterConfig = Input.ofNullable(gceClusterConfig);
+            this.gceClusterConfig = Output.ofNullable(gceClusterConfig);
             return this;
         }
 
-        public Builder gkeClusterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig) {
+        public Builder gkeClusterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs> gkeClusterConfig) {
             this.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
 
         public Builder gkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigArgs gkeClusterConfig) {
-            this.gkeClusterConfig = Input.ofNullable(gkeClusterConfig);
+            this.gkeClusterConfig = Output.ofNullable(gkeClusterConfig);
             return this;
         }
 
-        public Builder initializationActions(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions) {
+        public Builder initializationActions(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs>> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
 
         public Builder initializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs> initializationActions) {
-            this.initializationActions = Input.ofNullable(initializationActions);
+            this.initializationActions = Output.ofNullable(initializationActions);
             return this;
         }
 
-        public Builder lifecycleConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig) {
+        public Builder lifecycleConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs> lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
         public Builder lifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigArgs lifecycleConfig) {
-            this.lifecycleConfig = Input.ofNullable(lifecycleConfig);
+            this.lifecycleConfig = Output.ofNullable(lifecycleConfig);
             return this;
         }
 
-        public Builder masterConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig) {
+        public Builder masterConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs> masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
 
         public Builder masterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfigArgs masterConfig) {
-            this.masterConfig = Input.ofNullable(masterConfig);
+            this.masterConfig = Output.ofNullable(masterConfig);
             return this;
         }
 
-        public Builder metastoreConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig) {
+        public Builder metastoreConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs> metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
 
         public Builder metastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigArgs metastoreConfig) {
-            this.metastoreConfig = Input.ofNullable(metastoreConfig);
+            this.metastoreConfig = Output.ofNullable(metastoreConfig);
             return this;
         }
 
-        public Builder secondaryWorkerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
         public Builder secondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigArgs secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = Input.ofNullable(secondaryWorkerConfig);
+            this.secondaryWorkerConfig = Output.ofNullable(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder securityConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig) {
+        public Builder securityConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs> securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
         public Builder securityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigArgs securityConfig) {
-            this.securityConfig = Input.ofNullable(securityConfig);
+            this.securityConfig = Output.ofNullable(securityConfig);
             return this;
         }
 
-        public Builder softwareConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
         public Builder softwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Input.ofNullable(softwareConfig);
+            this.softwareConfig = Output.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder stagingBucket(@Nullable Input<String> stagingBucket) {
+        public Builder stagingBucket(@Nullable Output<String> stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
 
         public Builder stagingBucket(@Nullable String stagingBucket) {
-            this.stagingBucket = Input.ofNullable(stagingBucket);
+            this.stagingBucket = Output.ofNullable(stagingBucket);
             return this;
         }
 
-        public Builder tempBucket(@Nullable Input<String> tempBucket) {
+        public Builder tempBucket(@Nullable Output<String> tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
 
         public Builder tempBucket(@Nullable String tempBucket) {
-            this.tempBucket = Input.ofNullable(tempBucket);
+            this.tempBucket = Output.ofNullable(tempBucket);
             return this;
         }
 
-        public Builder workerConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
         public Builder workerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigArgs workerConfig) {
-            this.workerConfig = Input.ofNullable(workerConfig);
+            this.workerConfig = Output.ofNullable(workerConfig);
             return this;
         }
         public WorkflowTemplatePlacementManagedClusterConfigArgs build() {

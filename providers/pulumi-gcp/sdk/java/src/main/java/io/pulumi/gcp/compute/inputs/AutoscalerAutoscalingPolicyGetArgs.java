@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyCpuUtilizationGetArgs;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs;
@@ -35,10 +35,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cooldownPeriod")
-      private final @Nullable Input<Integer> cooldownPeriod;
+      private final @Nullable Output<Integer> cooldownPeriod;
 
-    public Input<Integer> getCooldownPeriod() {
-        return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
+    public Output<Integer> getCooldownPeriod() {
+        return this.cooldownPeriod == null ? Output.empty() : this.cooldownPeriod;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="cpuUtilization")
-      private final @Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
+      private final @Nullable Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
 
-    public Input<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> getCpuUtilization() {
-        return this.cpuUtilization == null ? Input.empty() : this.cpuUtilization;
+    public Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> getCpuUtilization() {
+        return this.cpuUtilization == null ? Output.empty() : this.cpuUtilization;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancingUtilization")
-      private final @Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
+      private final @Nullable Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
 
-    public Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> getLoadBalancingUtilization() {
-        return this.loadBalancingUtilization == null ? Input.empty() : this.loadBalancingUtilization;
+    public Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> getLoadBalancingUtilization() {
+        return this.loadBalancingUtilization == null ? Output.empty() : this.loadBalancingUtilization;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxReplicas", required=true)
-      private final Input<Integer> maxReplicas;
+      private final Output<Integer> maxReplicas;
 
-    public Input<Integer> getMaxReplicas() {
+    public Output<Integer> getMaxReplicas() {
         return this.maxReplicas;
     }
 
@@ -87,10 +87,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
+      private final @Nullable Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
 
-    public Input<List<AutoscalerAutoscalingPolicyMetricGetArgs>> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minReplicas", required=true)
-      private final Input<Integer> minReplicas;
+      private final Output<Integer> minReplicas;
 
-    public Input<Integer> getMinReplicas() {
+    public Output<Integer> getMinReplicas() {
         return this.minReplicas;
     }
 
@@ -114,10 +114,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<String> mode;
+      private final @Nullable Output<String> mode;
 
-    public Input<String> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<String> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleDownControl")
-      private final @Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
+      private final @Nullable Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
 
-    public Input<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> getScaleDownControl() {
-        return this.scaleDownControl == null ? Input.empty() : this.scaleDownControl;
+    public Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> getScaleDownControl() {
+        return this.scaleDownControl == null ? Output.empty() : this.scaleDownControl;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleInControl")
-      private final @Nullable Input<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
+      private final @Nullable Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
 
-    public Input<AutoscalerAutoscalingPolicyScaleInControlGetArgs> getScaleInControl() {
-        return this.scaleInControl == null ? Input.empty() : this.scaleInControl;
+    public Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> getScaleInControl() {
+        return this.scaleInControl == null ? Output.empty() : this.scaleInControl;
     }
 
     /**
@@ -152,23 +152,23 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scalingSchedules")
-      private final @Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
+      private final @Nullable Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
 
-    public Input<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> getScalingSchedules() {
-        return this.scalingSchedules == null ? Input.empty() : this.scalingSchedules;
+    public Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> getScalingSchedules() {
+        return this.scalingSchedules == null ? Output.empty() : this.scalingSchedules;
     }
 
     public AutoscalerAutoscalingPolicyGetArgs(
-        @Nullable Input<Integer> cooldownPeriod,
-        @Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization,
-        @Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization,
-        Input<Integer> maxReplicas,
-        @Nullable Input<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics,
-        Input<Integer> minReplicas,
-        @Nullable Input<String> mode,
-        @Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl,
-        @Nullable Input<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl,
-        @Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules) {
+        @Nullable Output<Integer> cooldownPeriod,
+        @Nullable Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization,
+        @Nullable Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization,
+        Output<Integer> maxReplicas,
+        @Nullable Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics,
+        Output<Integer> minReplicas,
+        @Nullable Output<String> mode,
+        @Nullable Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl,
+        @Nullable Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl,
+        @Nullable Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules) {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;
@@ -182,16 +182,16 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
     }
 
     private AutoscalerAutoscalingPolicyGetArgs() {
-        this.cooldownPeriod = Input.empty();
-        this.cpuUtilization = Input.empty();
-        this.loadBalancingUtilization = Input.empty();
-        this.maxReplicas = Input.empty();
-        this.metrics = Input.empty();
-        this.minReplicas = Input.empty();
-        this.mode = Input.empty();
-        this.scaleDownControl = Input.empty();
-        this.scaleInControl = Input.empty();
-        this.scalingSchedules = Input.empty();
+        this.cooldownPeriod = Output.empty();
+        this.cpuUtilization = Output.empty();
+        this.loadBalancingUtilization = Output.empty();
+        this.maxReplicas = Output.empty();
+        this.metrics = Output.empty();
+        this.minReplicas = Output.empty();
+        this.mode = Output.empty();
+        this.scaleDownControl = Output.empty();
+        this.scaleInControl = Output.empty();
+        this.scalingSchedules = Output.empty();
     }
 
     public static Builder builder() {
@@ -203,16 +203,16 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> cooldownPeriod;
-        private @Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
-        private @Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
-        private Input<Integer> maxReplicas;
-        private @Nullable Input<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
-        private Input<Integer> minReplicas;
-        private @Nullable Input<String> mode;
-        private @Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
-        private @Nullable Input<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
-        private @Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
+        private @Nullable Output<Integer> cooldownPeriod;
+        private @Nullable Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
+        private @Nullable Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
+        private Output<Integer> maxReplicas;
+        private @Nullable Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
+        private Output<Integer> minReplicas;
+        private @Nullable Output<String> mode;
+        private @Nullable Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
+        private @Nullable Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
+        private @Nullable Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
 
         public Builder() {
     	      // Empty
@@ -232,103 +232,103 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
     	      this.scalingSchedules = defaults.scalingSchedules;
         }
 
-        public Builder cooldownPeriod(@Nullable Input<Integer> cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Output<Integer> cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
         public Builder cooldownPeriod(@Nullable Integer cooldownPeriod) {
-            this.cooldownPeriod = Input.ofNullable(cooldownPeriod);
+            this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
             return this;
         }
 
-        public Builder cpuUtilization(@Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization) {
+        public Builder cpuUtilization(@Nullable Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
 
         public Builder cpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilizationGetArgs cpuUtilization) {
-            this.cpuUtilization = Input.ofNullable(cpuUtilization);
+            this.cpuUtilization = Output.ofNullable(cpuUtilization);
             return this;
         }
 
-        public Builder loadBalancingUtilization(@Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(@Nullable Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
 
         public Builder loadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs loadBalancingUtilization) {
-            this.loadBalancingUtilization = Input.ofNullable(loadBalancingUtilization);
+            this.loadBalancingUtilization = Output.ofNullable(loadBalancingUtilization);
             return this;
         }
 
-        public Builder maxReplicas(Input<Integer> maxReplicas) {
+        public Builder maxReplicas(Output<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
         public Builder maxReplicas(Integer maxReplicas) {
-            this.maxReplicas = Input.of(Objects.requireNonNull(maxReplicas));
+            this.maxReplicas = Output.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
 
-        public Builder metrics(@Nullable Input<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics) {
+        public Builder metrics(@Nullable Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable List<AutoscalerAutoscalingPolicyMetricGetArgs> metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder minReplicas(Input<Integer> minReplicas) {
+        public Builder minReplicas(Output<Integer> minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
 
         public Builder minReplicas(Integer minReplicas) {
-            this.minReplicas = Input.of(Objects.requireNonNull(minReplicas));
+            this.minReplicas = Output.of(Objects.requireNonNull(minReplicas));
             return this;
         }
 
-        public Builder mode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Output<String> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable String mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder scaleDownControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl) {
+        public Builder scaleDownControl(@Nullable Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
 
         public Builder scaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControlGetArgs scaleDownControl) {
-            this.scaleDownControl = Input.ofNullable(scaleDownControl);
+            this.scaleDownControl = Output.ofNullable(scaleDownControl);
             return this;
         }
 
-        public Builder scaleInControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl) {
+        public Builder scaleInControl(@Nullable Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
 
         public Builder scaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControlGetArgs scaleInControl) {
-            this.scaleInControl = Input.ofNullable(scaleInControl);
+            this.scaleInControl = Output.ofNullable(scaleInControl);
             return this;
         }
 
-        public Builder scalingSchedules(@Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules) {
+        public Builder scalingSchedules(@Nullable Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
 
         public Builder scalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs> scalingSchedules) {
-            this.scalingSchedules = Input.ofNullable(scalingSchedules);
+            this.scalingSchedules = Output.ofNullable(scalingSchedules);
             return this;
         }
         public AutoscalerAutoscalingPolicyGetArgs build() {

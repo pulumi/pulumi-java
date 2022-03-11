@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datastore.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="direction", required=true)
-      private final Input<String> direction;
+      private final Output<String> direction;
 
-    public Input<String> getDirection() {
+    public Output<String> getDirection() {
         return this.direction;
     }
 
@@ -30,22 +30,22 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public DataStoreIndexPropertyArgs(
-        Input<String> direction,
-        Input<String> name) {
+        Output<String> direction,
+        Output<String> name) {
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private DataStoreIndexPropertyArgs() {
-        this.direction = Input.empty();
-        this.name = Input.empty();
+        this.direction = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> direction;
-        private Input<String> name;
+        private Output<String> direction;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
     	      this.name = defaults.name;
         }
 
-        public Builder direction(Input<String> direction) {
+        public Builder direction(Output<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
         public Builder direction(String direction) {
-            this.direction = Input.of(Objects.requireNonNull(direction));
+            this.direction = Output.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public DataStoreIndexPropertyArgs build() {

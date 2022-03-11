@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryGroup", required=true)
-      private final Input<String> entryGroup;
+      private final Output<String> entryGroup;
 
-    public Input<String> getEntryGroup() {
+    public Output<String> getEntryGroup() {
         return this.entryGroup;
     }
 
@@ -54,9 +54,9 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryId", required=true)
-      private final Input<String> entryId;
+      private final Output<String> entryId;
 
-    public Input<String> getEntryId() {
+    public Output<String> getEntryId() {
         return this.entryId;
     }
 
@@ -66,10 +66,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsFilesetSpec")
-      private final @Nullable Input<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
+      private final @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
 
-    public Input<EntryGcsFilesetSpecArgs> getGcsFilesetSpec() {
-        return this.gcsFilesetSpec == null ? Input.empty() : this.gcsFilesetSpec;
+    public Output<EntryGcsFilesetSpecArgs> getGcsFilesetSpec() {
+        return this.gcsFilesetSpec == null ? Output.empty() : this.gcsFilesetSpec;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedResource")
-      private final @Nullable Input<String> linkedResource;
+      private final @Nullable Output<String> linkedResource;
 
-    public Input<String> getLinkedResource() {
-        return this.linkedResource == null ? Input.empty() : this.linkedResource;
+    public Output<String> getLinkedResource() {
+        return this.linkedResource == null ? Output.empty() : this.linkedResource;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<String> schema;
+      private final @Nullable Output<String> schema;
 
-    public Input<String> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<String> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedSystem")
-      private final @Nullable Input<String> userSpecifiedSystem;
+      private final @Nullable Output<String> userSpecifiedSystem;
 
-    public Input<String> getUserSpecifiedSystem() {
-        return this.userSpecifiedSystem == null ? Input.empty() : this.userSpecifiedSystem;
+    public Output<String> getUserSpecifiedSystem() {
+        return this.userSpecifiedSystem == null ? Output.empty() : this.userSpecifiedSystem;
     }
 
     /**
@@ -137,23 +137,23 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedType")
-      private final @Nullable Input<String> userSpecifiedType;
+      private final @Nullable Output<String> userSpecifiedType;
 
-    public Input<String> getUserSpecifiedType() {
-        return this.userSpecifiedType == null ? Input.empty() : this.userSpecifiedType;
+    public Output<String> getUserSpecifiedType() {
+        return this.userSpecifiedType == null ? Output.empty() : this.userSpecifiedType;
     }
 
     public EntryArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> entryGroup,
-        Input<String> entryId,
-        @Nullable Input<EntryGcsFilesetSpecArgs> gcsFilesetSpec,
-        @Nullable Input<String> linkedResource,
-        @Nullable Input<String> schema,
-        @Nullable Input<String> type,
-        @Nullable Input<String> userSpecifiedSystem,
-        @Nullable Input<String> userSpecifiedType) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> entryGroup,
+        Output<String> entryId,
+        @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec,
+        @Nullable Output<String> linkedResource,
+        @Nullable Output<String> schema,
+        @Nullable Output<String> type,
+        @Nullable Output<String> userSpecifiedSystem,
+        @Nullable Output<String> userSpecifiedType) {
         this.description = description;
         this.displayName = displayName;
         this.entryGroup = Objects.requireNonNull(entryGroup, "expected parameter 'entryGroup' to be non-null");
@@ -167,16 +167,16 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntryArgs() {
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.entryGroup = Input.empty();
-        this.entryId = Input.empty();
-        this.gcsFilesetSpec = Input.empty();
-        this.linkedResource = Input.empty();
-        this.schema = Input.empty();
-        this.type = Input.empty();
-        this.userSpecifiedSystem = Input.empty();
-        this.userSpecifiedType = Input.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.entryGroup = Output.empty();
+        this.entryId = Output.empty();
+        this.gcsFilesetSpec = Output.empty();
+        this.linkedResource = Output.empty();
+        this.schema = Output.empty();
+        this.type = Output.empty();
+        this.userSpecifiedSystem = Output.empty();
+        this.userSpecifiedType = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,16 +188,16 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> entryGroup;
-        private Input<String> entryId;
-        private @Nullable Input<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
-        private @Nullable Input<String> linkedResource;
-        private @Nullable Input<String> schema;
-        private @Nullable Input<String> type;
-        private @Nullable Input<String> userSpecifiedSystem;
-        private @Nullable Input<String> userSpecifiedType;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> entryGroup;
+        private Output<String> entryId;
+        private @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
+        private @Nullable Output<String> linkedResource;
+        private @Nullable Output<String> schema;
+        private @Nullable Output<String> type;
+        private @Nullable Output<String> userSpecifiedSystem;
+        private @Nullable Output<String> userSpecifiedType;
 
         public Builder() {
     	      // Empty
@@ -217,103 +217,103 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSpecifiedType = defaults.userSpecifiedType;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder entryGroup(Input<String> entryGroup) {
+        public Builder entryGroup(Output<String> entryGroup) {
             this.entryGroup = Objects.requireNonNull(entryGroup);
             return this;
         }
 
         public Builder entryGroup(String entryGroup) {
-            this.entryGroup = Input.of(Objects.requireNonNull(entryGroup));
+            this.entryGroup = Output.of(Objects.requireNonNull(entryGroup));
             return this;
         }
 
-        public Builder entryId(Input<String> entryId) {
+        public Builder entryId(Output<String> entryId) {
             this.entryId = Objects.requireNonNull(entryId);
             return this;
         }
 
         public Builder entryId(String entryId) {
-            this.entryId = Input.of(Objects.requireNonNull(entryId));
+            this.entryId = Output.of(Objects.requireNonNull(entryId));
             return this;
         }
 
-        public Builder gcsFilesetSpec(@Nullable Input<EntryGcsFilesetSpecArgs> gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec) {
             this.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
 
         public Builder gcsFilesetSpec(@Nullable EntryGcsFilesetSpecArgs gcsFilesetSpec) {
-            this.gcsFilesetSpec = Input.ofNullable(gcsFilesetSpec);
+            this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
             return this;
         }
 
-        public Builder linkedResource(@Nullable Input<String> linkedResource) {
+        public Builder linkedResource(@Nullable Output<String> linkedResource) {
             this.linkedResource = linkedResource;
             return this;
         }
 
         public Builder linkedResource(@Nullable String linkedResource) {
-            this.linkedResource = Input.ofNullable(linkedResource);
+            this.linkedResource = Output.ofNullable(linkedResource);
             return this;
         }
 
-        public Builder schema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Output<String> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable String schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userSpecifiedSystem(@Nullable Input<String> userSpecifiedSystem) {
+        public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
             this.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
 
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
-            this.userSpecifiedSystem = Input.ofNullable(userSpecifiedSystem);
+            this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
             return this;
         }
 
-        public Builder userSpecifiedType(@Nullable Input<String> userSpecifiedType) {
+        public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
             this.userSpecifiedType = userSpecifiedType;
             return this;
         }
 
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
-            this.userSpecifiedType = Input.ofNullable(userSpecifiedType);
+            this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
             return this;
         }
         public EntryArgs build() {

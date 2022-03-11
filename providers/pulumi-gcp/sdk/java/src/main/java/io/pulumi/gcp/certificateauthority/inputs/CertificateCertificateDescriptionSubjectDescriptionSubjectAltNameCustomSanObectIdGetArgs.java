@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -20,18 +20,18 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="objectIdPaths")
-      private final @Nullable Input<List<Integer>> objectIdPaths;
+      private final @Nullable Output<List<Integer>> objectIdPaths;
 
-    public Input<List<Integer>> getObjectIdPaths() {
-        return this.objectIdPaths == null ? Input.empty() : this.objectIdPaths;
+    public Output<List<Integer>> getObjectIdPaths() {
+        return this.objectIdPaths == null ? Output.empty() : this.objectIdPaths;
     }
 
-    public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs(@Nullable Input<List<Integer>> objectIdPaths) {
+    public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs(@Nullable Output<List<Integer>> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs() {
-        this.objectIdPaths = Input.empty();
+        this.objectIdPaths = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> objectIdPaths;
+        private @Nullable Output<List<Integer>> objectIdPaths;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder objectIdPaths(@Nullable Input<List<Integer>> objectIdPaths) {
+        public Builder objectIdPaths(@Nullable Output<List<Integer>> objectIdPaths) {
             this.objectIdPaths = objectIdPaths;
             return this;
         }
 
         public Builder objectIdPaths(@Nullable List<Integer> objectIdPaths) {
-            this.objectIdPaths = Input.ofNullable(objectIdPaths);
+            this.objectIdPaths = Output.ofNullable(objectIdPaths);
             return this;
         }
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs build() {

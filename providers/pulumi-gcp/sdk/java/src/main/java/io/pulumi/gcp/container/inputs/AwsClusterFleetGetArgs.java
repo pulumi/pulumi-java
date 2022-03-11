@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AwsClusterFleetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="membership")
-      private final @Nullable Input<String> membership;
+      private final @Nullable Output<String> membership;
 
-    public Input<String> getMembership() {
-        return this.membership == null ? Input.empty() : this.membership;
+    public Output<String> getMembership() {
+        return this.membership == null ? Output.empty() : this.membership;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AwsClusterFleetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public AwsClusterFleetGetArgs(
-        @Nullable Input<String> membership,
-        @Nullable Input<String> project) {
+        @Nullable Output<String> membership,
+        @Nullable Output<String> project) {
         this.membership = membership;
         this.project = project;
     }
 
     private AwsClusterFleetGetArgs() {
-        this.membership = Input.empty();
-        this.project = Input.empty();
+        this.membership = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AwsClusterFleetGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> membership;
-        private @Nullable Input<String> project;
+        private @Nullable Output<String> membership;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AwsClusterFleetGetArgs extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder membership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Output<String> membership) {
             this.membership = membership;
             return this;
         }
 
         public Builder membership(@Nullable String membership) {
-            this.membership = Input.ofNullable(membership);
+            this.membership = Output.ofNullable(membership);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public AwsClusterFleetGetArgs build() {

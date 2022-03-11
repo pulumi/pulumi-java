@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -192,14 +191,14 @@ public class TunnelInstanceIAMBinding extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelInstanceIAMBinding(String name, TunnelInstanceIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, args == null ? TunnelInstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, args == null ? TunnelInstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TunnelInstanceIAMBinding(String name, Input<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TunnelInstanceIAMBinding(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -215,7 +214,7 @@ public class TunnelInstanceIAMBinding extends io.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TunnelInstanceIAMBinding get(String name, Input<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TunnelInstanceIAMBinding get(String name, Output<String> id, @Nullable TunnelInstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TunnelInstanceIAMBinding(name, id, state, options);
     }
 }

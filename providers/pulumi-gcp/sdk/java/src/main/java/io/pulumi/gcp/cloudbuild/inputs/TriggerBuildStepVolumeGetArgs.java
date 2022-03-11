@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,22 +33,22 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
     public TriggerBuildStepVolumeGetArgs(
-        Input<String> name,
-        Input<String> path) {
+        Output<String> name,
+        Output<String> path) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
     }
 
     private TriggerBuildStepVolumeGetArgs() {
-        this.name = Input.empty();
-        this.path = Input.empty();
+        this.name = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> path;
+        private Output<String> name;
+        private Output<String> path;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
     	      this.path = defaults.path;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
         public TriggerBuildStepVolumeGetArgs build() {

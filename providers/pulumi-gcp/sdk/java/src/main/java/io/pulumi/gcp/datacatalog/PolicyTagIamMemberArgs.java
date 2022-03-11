@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final PolicyTagIamMemberArgs Empty = new PolicyTagIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<PolicyTagIamMemberConditionArgs> condition;
+      private final @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
 
-    public Input<PolicyTagIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<PolicyTagIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -34,9 +34,9 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyTag", required=true)
-      private final Input<String> policyTag;
+      private final Output<String> policyTag;
 
-    public Input<String> getPolicyTag() {
+    public Output<String> getPolicyTag() {
         return this.policyTag;
     }
 
@@ -47,17 +47,17 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public PolicyTagIamMemberArgs(
-        @Nullable Input<PolicyTagIamMemberConditionArgs> condition,
-        Input<String> member,
-        Input<String> policyTag,
-        Input<String> role) {
+        @Nullable Output<PolicyTagIamMemberConditionArgs> condition,
+        Output<String> member,
+        Output<String> policyTag,
+        Output<String> role) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.policyTag = Objects.requireNonNull(policyTag, "expected parameter 'policyTag' to be non-null");
@@ -65,10 +65,10 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PolicyTagIamMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.policyTag = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.policyTag = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,10 +80,10 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<PolicyTagIamMemberConditionArgs> condition;
-        private Input<String> member;
-        private Input<String> policyTag;
-        private Input<String> role;
+        private @Nullable Output<PolicyTagIamMemberConditionArgs> condition;
+        private Output<String> member;
+        private Output<String> policyTag;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -97,43 +97,43 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<PolicyTagIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<PolicyTagIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable PolicyTagIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder policyTag(Input<String> policyTag) {
+        public Builder policyTag(Output<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
 
         public Builder policyTag(String policyTag) {
-            this.policyTag = Input.of(Objects.requireNonNull(policyTag));
+            this.policyTag = Output.of(Objects.requireNonNull(policyTag));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public PolicyTagIamMemberArgs build() {

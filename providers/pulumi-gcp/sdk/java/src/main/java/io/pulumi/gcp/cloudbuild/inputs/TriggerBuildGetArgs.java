@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsGetArgs;
@@ -28,10 +28,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="artifacts")
-      private final @Nullable Input<TriggerBuildArtifactsGetArgs> artifacts;
+      private final @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts;
 
-    public Input<TriggerBuildArtifactsGetArgs> getArtifacts() {
-        return this.artifacts == null ? Input.empty() : this.artifacts;
+    public Output<TriggerBuildArtifactsGetArgs> getArtifacts() {
+        return this.artifacts == null ? Output.empty() : this.artifacts;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="availableSecrets")
-      private final @Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
+      private final @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
 
-    public Input<TriggerBuildAvailableSecretsGetArgs> getAvailableSecrets() {
-        return this.availableSecrets == null ? Input.empty() : this.availableSecrets;
+    public Output<TriggerBuildAvailableSecretsGetArgs> getAvailableSecrets() {
+        return this.availableSecrets == null ? Output.empty() : this.availableSecrets;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="images")
-      private final @Nullable Input<List<String>> images;
+      private final @Nullable Output<List<String>> images;
 
-    public Input<List<String>> getImages() {
-        return this.images == null ? Input.empty() : this.images;
+    public Output<List<String>> getImages() {
+        return this.images == null ? Output.empty() : this.images;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logsBucket")
-      private final @Nullable Input<String> logsBucket;
+      private final @Nullable Output<String> logsBucket;
 
-    public Input<String> getLogsBucket() {
-        return this.logsBucket == null ? Input.empty() : this.logsBucket;
+    public Output<String> getLogsBucket() {
+        return this.logsBucket == null ? Output.empty() : this.logsBucket;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="options")
-      private final @Nullable Input<TriggerBuildOptionsGetArgs> options;
+      private final @Nullable Output<TriggerBuildOptionsGetArgs> options;
 
-    public Input<TriggerBuildOptionsGetArgs> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<TriggerBuildOptionsGetArgs> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queueTtl")
-      private final @Nullable Input<String> queueTtl;
+      private final @Nullable Output<String> queueTtl;
 
-    public Input<String> getQueueTtl() {
-        return this.queueTtl == null ? Input.empty() : this.queueTtl;
+    public Output<String> getQueueTtl() {
+        return this.queueTtl == null ? Output.empty() : this.queueTtl;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="secrets")
-      private final @Nullable Input<List<TriggerBuildSecretGetArgs>> secrets;
+      private final @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets;
 
-    public Input<List<TriggerBuildSecretGetArgs>> getSecrets() {
-        return this.secrets == null ? Input.empty() : this.secrets;
+    public Output<List<TriggerBuildSecretGetArgs>> getSecrets() {
+        return this.secrets == null ? Output.empty() : this.secrets;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<TriggerBuildSourceGetArgs> source;
+      private final @Nullable Output<TriggerBuildSourceGetArgs> source;
 
-    public Input<TriggerBuildSourceGetArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<TriggerBuildSourceGetArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     /**
@@ -129,9 +129,9 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="steps", required=true)
-      private final Input<List<TriggerBuildStepGetArgs>> steps;
+      private final Output<List<TriggerBuildStepGetArgs>> steps;
 
-    public Input<List<TriggerBuildStepGetArgs>> getSteps() {
+    public Output<List<TriggerBuildStepGetArgs>> getSteps() {
         return this.steps;
     }
 
@@ -140,10 +140,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="substitutions")
-      private final @Nullable Input<Map<String,String>> substitutions;
+      private final @Nullable Output<Map<String,String>> substitutions;
 
-    public Input<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Input.empty() : this.substitutions;
+    public Output<Map<String,String>> getSubstitutions() {
+        return this.substitutions == null ? Output.empty() : this.substitutions;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<List<String>> tags;
+      private final @Nullable Output<List<String>> tags;
 
-    public Input<List<String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<List<String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -165,25 +165,25 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<String> timeout;
+      private final @Nullable Output<String> timeout;
 
-    public Input<String> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<String> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     public TriggerBuildGetArgs(
-        @Nullable Input<TriggerBuildArtifactsGetArgs> artifacts,
-        @Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets,
-        @Nullable Input<List<String>> images,
-        @Nullable Input<String> logsBucket,
-        @Nullable Input<TriggerBuildOptionsGetArgs> options,
-        @Nullable Input<String> queueTtl,
-        @Nullable Input<List<TriggerBuildSecretGetArgs>> secrets,
-        @Nullable Input<TriggerBuildSourceGetArgs> source,
-        Input<List<TriggerBuildStepGetArgs>> steps,
-        @Nullable Input<Map<String,String>> substitutions,
-        @Nullable Input<List<String>> tags,
-        @Nullable Input<String> timeout) {
+        @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts,
+        @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets,
+        @Nullable Output<List<String>> images,
+        @Nullable Output<String> logsBucket,
+        @Nullable Output<TriggerBuildOptionsGetArgs> options,
+        @Nullable Output<String> queueTtl,
+        @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets,
+        @Nullable Output<TriggerBuildSourceGetArgs> source,
+        Output<List<TriggerBuildStepGetArgs>> steps,
+        @Nullable Output<Map<String,String>> substitutions,
+        @Nullable Output<List<String>> tags,
+        @Nullable Output<String> timeout) {
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;
         this.images = images;
@@ -199,18 +199,18 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TriggerBuildGetArgs() {
-        this.artifacts = Input.empty();
-        this.availableSecrets = Input.empty();
-        this.images = Input.empty();
-        this.logsBucket = Input.empty();
-        this.options = Input.empty();
-        this.queueTtl = Input.empty();
-        this.secrets = Input.empty();
-        this.source = Input.empty();
-        this.steps = Input.empty();
-        this.substitutions = Input.empty();
-        this.tags = Input.empty();
-        this.timeout = Input.empty();
+        this.artifacts = Output.empty();
+        this.availableSecrets = Output.empty();
+        this.images = Output.empty();
+        this.logsBucket = Output.empty();
+        this.options = Output.empty();
+        this.queueTtl = Output.empty();
+        this.secrets = Output.empty();
+        this.source = Output.empty();
+        this.steps = Output.empty();
+        this.substitutions = Output.empty();
+        this.tags = Output.empty();
+        this.timeout = Output.empty();
     }
 
     public static Builder builder() {
@@ -222,18 +222,18 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<TriggerBuildArtifactsGetArgs> artifacts;
-        private @Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
-        private @Nullable Input<List<String>> images;
-        private @Nullable Input<String> logsBucket;
-        private @Nullable Input<TriggerBuildOptionsGetArgs> options;
-        private @Nullable Input<String> queueTtl;
-        private @Nullable Input<List<TriggerBuildSecretGetArgs>> secrets;
-        private @Nullable Input<TriggerBuildSourceGetArgs> source;
-        private Input<List<TriggerBuildStepGetArgs>> steps;
-        private @Nullable Input<Map<String,String>> substitutions;
-        private @Nullable Input<List<String>> tags;
-        private @Nullable Input<String> timeout;
+        private @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts;
+        private @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
+        private @Nullable Output<List<String>> images;
+        private @Nullable Output<String> logsBucket;
+        private @Nullable Output<TriggerBuildOptionsGetArgs> options;
+        private @Nullable Output<String> queueTtl;
+        private @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets;
+        private @Nullable Output<TriggerBuildSourceGetArgs> source;
+        private Output<List<TriggerBuildStepGetArgs>> steps;
+        private @Nullable Output<Map<String,String>> substitutions;
+        private @Nullable Output<List<String>> tags;
+        private @Nullable Output<String> timeout;
 
         public Builder() {
     	      // Empty
@@ -255,123 +255,123 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder artifacts(@Nullable Input<TriggerBuildArtifactsGetArgs> artifacts) {
+        public Builder artifacts(@Nullable Output<TriggerBuildArtifactsGetArgs> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
         public Builder artifacts(@Nullable TriggerBuildArtifactsGetArgs artifacts) {
-            this.artifacts = Input.ofNullable(artifacts);
+            this.artifacts = Output.ofNullable(artifacts);
             return this;
         }
 
-        public Builder availableSecrets(@Nullable Input<TriggerBuildAvailableSecretsGetArgs> availableSecrets) {
+        public Builder availableSecrets(@Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
 
         public Builder availableSecrets(@Nullable TriggerBuildAvailableSecretsGetArgs availableSecrets) {
-            this.availableSecrets = Input.ofNullable(availableSecrets);
+            this.availableSecrets = Output.ofNullable(availableSecrets);
             return this;
         }
 
-        public Builder images(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Output<List<String>> images) {
             this.images = images;
             return this;
         }
 
         public Builder images(@Nullable List<String> images) {
-            this.images = Input.ofNullable(images);
+            this.images = Output.ofNullable(images);
             return this;
         }
 
-        public Builder logsBucket(@Nullable Input<String> logsBucket) {
+        public Builder logsBucket(@Nullable Output<String> logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
 
         public Builder logsBucket(@Nullable String logsBucket) {
-            this.logsBucket = Input.ofNullable(logsBucket);
+            this.logsBucket = Output.ofNullable(logsBucket);
             return this;
         }
 
-        public Builder options(@Nullable Input<TriggerBuildOptionsGetArgs> options) {
+        public Builder options(@Nullable Output<TriggerBuildOptionsGetArgs> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable TriggerBuildOptionsGetArgs options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder queueTtl(@Nullable Input<String> queueTtl) {
+        public Builder queueTtl(@Nullable Output<String> queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
 
         public Builder queueTtl(@Nullable String queueTtl) {
-            this.queueTtl = Input.ofNullable(queueTtl);
+            this.queueTtl = Output.ofNullable(queueTtl);
             return this;
         }
 
-        public Builder secrets(@Nullable Input<List<TriggerBuildSecretGetArgs>> secrets) {
+        public Builder secrets(@Nullable Output<List<TriggerBuildSecretGetArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
         public Builder secrets(@Nullable List<TriggerBuildSecretGetArgs> secrets) {
-            this.secrets = Input.ofNullable(secrets);
+            this.secrets = Output.ofNullable(secrets);
             return this;
         }
 
-        public Builder source(@Nullable Input<TriggerBuildSourceGetArgs> source) {
+        public Builder source(@Nullable Output<TriggerBuildSourceGetArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable TriggerBuildSourceGetArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
 
-        public Builder steps(Input<List<TriggerBuildStepGetArgs>> steps) {
+        public Builder steps(Output<List<TriggerBuildStepGetArgs>> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
         public Builder steps(List<TriggerBuildStepGetArgs> steps) {
-            this.steps = Input.of(Objects.requireNonNull(steps));
+            this.steps = Output.of(Objects.requireNonNull(steps));
             return this;
         }
 
-        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Input.ofNullable(substitutions);
+            this.substitutions = Output.ofNullable(substitutions);
             return this;
         }
 
-        public Builder tags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Output<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder timeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Output<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
         public TriggerBuildGetArgs build() {

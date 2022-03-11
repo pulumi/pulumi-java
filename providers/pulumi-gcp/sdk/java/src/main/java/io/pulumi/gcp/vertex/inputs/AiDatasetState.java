@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecGetArgs;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-      private final @Nullable Input<String> createTime;
+      private final @Nullable Output<String> createTime;
 
-    public Input<String> getCreateTime() {
-        return this.createTime == null ? Input.empty() : this.createTime;
+    public Output<String> getCreateTime() {
+        return this.createTime == null ? Output.empty() : this.createTime;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSpec")
-      private final @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
+      private final @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
-    public Input<AiDatasetEncryptionSpecGetArgs> getEncryptionSpec() {
-        return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
+    public Output<AiDatasetEncryptionSpecGetArgs> getEncryptionSpec() {
+        return this.encryptionSpec == null ? Output.empty() : this.encryptionSpec;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Output<Map<String,String>> labels;
 
-    public Input<Map<String,String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<Map<String,String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataSchemaUri")
-      private final @Nullable Input<String> metadataSchemaUri;
+      private final @Nullable Output<String> metadataSchemaUri;
 
-    public Input<String> getMetadataSchemaUri() {
-        return this.metadataSchemaUri == null ? Input.empty() : this.metadataSchemaUri;
+    public Output<String> getMetadataSchemaUri() {
+        return this.metadataSchemaUri == null ? Output.empty() : this.metadataSchemaUri;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public AiDatasetState(
-        @Nullable Input<String> createTime,
-        @Nullable Input<String> displayName,
-        @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec,
-        @Nullable Input<Map<String,String>> labels,
-        @Nullable Input<String> metadataSchemaUri,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> createTime,
+        @Nullable Output<String> displayName,
+        @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec,
+        @Nullable Output<Map<String,String>> labels,
+        @Nullable Output<String> metadataSchemaUri,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.encryptionSpec = encryptionSpec;
@@ -141,15 +141,15 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AiDatasetState() {
-        this.createTime = Input.empty();
-        this.displayName = Input.empty();
-        this.encryptionSpec = Input.empty();
-        this.labels = Input.empty();
-        this.metadataSchemaUri = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.updateTime = Input.empty();
+        this.createTime = Output.empty();
+        this.displayName = Output.empty();
+        this.encryptionSpec = Output.empty();
+        this.labels = Output.empty();
+        this.metadataSchemaUri = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createTime;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
-        private @Nullable Input<Map<String,String>> labels;
-        private @Nullable Input<String> metadataSchemaUri;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> createTime;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
+        private @Nullable Output<Map<String,String>> labels;
+        private @Nullable Output<String> metadataSchemaUri;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder createTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Output<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Input.ofNullable(createTime);
+            this.createTime = Output.ofNullable(createTime);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder encryptionSpec(@Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
 
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
-            this.encryptionSpec = Input.ofNullable(encryptionSpec);
+            this.encryptionSpec = Output.ofNullable(encryptionSpec);
             return this;
         }
 
-        public Builder labels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Output<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
 
-        public Builder metadataSchemaUri(@Nullable Input<String> metadataSchemaUri) {
+        public Builder metadataSchemaUri(@Nullable Output<String> metadataSchemaUri) {
             this.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
 
         public Builder metadataSchemaUri(@Nullable String metadataSchemaUri) {
-            this.metadataSchemaUri = Input.ofNullable(metadataSchemaUri);
+            this.metadataSchemaUri = Output.ofNullable(metadataSchemaUri);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public AiDatasetState build() {

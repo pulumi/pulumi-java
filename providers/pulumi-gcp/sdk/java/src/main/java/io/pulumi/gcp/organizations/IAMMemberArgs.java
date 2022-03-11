@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.organizations.inputs.IAMMemberConditionArgs;
 import java.lang.String;
@@ -16,16 +16,16 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     public static final IAMMemberArgs Empty = new IAMMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<IAMMemberConditionArgs> condition;
+      private final @Nullable Output<IAMMemberConditionArgs> condition;
 
-    public Input<IAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<IAMMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -34,24 +34,24 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-      private final Input<String> orgId;
+      private final Output<String> orgId;
 
-    public Input<String> getOrgId() {
+    public Output<String> getOrgId() {
         return this.orgId;
     }
 
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public IAMMemberArgs(
-        @Nullable Input<IAMMemberConditionArgs> condition,
-        Input<String> member,
-        Input<String> orgId,
-        Input<String> role) {
+        @Nullable Output<IAMMemberConditionArgs> condition,
+        Output<String> member,
+        Output<String> orgId,
+        Output<String> role) {
         this.condition = condition;
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
         this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
@@ -59,10 +59,10 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMMemberArgs() {
-        this.condition = Input.empty();
-        this.member = Input.empty();
-        this.orgId = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.member = Output.empty();
+        this.orgId = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,10 +74,10 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IAMMemberConditionArgs> condition;
-        private Input<String> member;
-        private Input<String> orgId;
-        private Input<String> role;
+        private @Nullable Output<IAMMemberConditionArgs> condition;
+        private Output<String> member;
+        private Output<String> orgId;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -91,43 +91,43 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<IAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<IAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable IAMMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder orgId(Input<String> orgId) {
+        public Builder orgId(Output<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
         public Builder orgId(String orgId) {
-            this.orgId = Input.of(Objects.requireNonNull(orgId));
+            this.orgId = Output.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public IAMMemberArgs build() {

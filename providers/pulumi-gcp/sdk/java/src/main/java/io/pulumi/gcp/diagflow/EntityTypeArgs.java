@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
@@ -22,9 +22,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -33,10 +33,10 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-      private final @Nullable Input<Boolean> enableFuzzyExtraction;
+      private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
-    public Input<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
+    public Output<Boolean> getEnableFuzzyExtraction() {
+        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-      private final @Nullable Input<List<EntityTypeEntityArgs>> entities;
+      private final @Nullable Output<List<EntityTypeEntityArgs>> entities;
 
-    public Input<List<EntityTypeEntityArgs>> getEntities() {
-        return this.entities == null ? Input.empty() : this.entities;
+    public Output<List<EntityTypeEntityArgs>> getEntities() {
+        return this.entities == null ? Output.empty() : this.entities;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -73,18 +73,18 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     public EntityTypeArgs(
-        Input<String> displayName,
-        @Nullable Input<Boolean> enableFuzzyExtraction,
-        @Nullable Input<List<EntityTypeEntityArgs>> entities,
-        Input<String> kind,
-        @Nullable Input<String> project) {
+        Output<String> displayName,
+        @Nullable Output<Boolean> enableFuzzyExtraction,
+        @Nullable Output<List<EntityTypeEntityArgs>> entities,
+        Output<String> kind,
+        @Nullable Output<String> project) {
         this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
         this.enableFuzzyExtraction = enableFuzzyExtraction;
         this.entities = entities;
@@ -93,11 +93,11 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityTypeArgs() {
-        this.displayName = Input.empty();
-        this.enableFuzzyExtraction = Input.empty();
-        this.entities = Input.empty();
-        this.kind = Input.empty();
-        this.project = Input.empty();
+        this.displayName = Output.empty();
+        this.enableFuzzyExtraction = Output.empty();
+        this.entities = Output.empty();
+        this.kind = Output.empty();
+        this.project = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> displayName;
-        private @Nullable Input<Boolean> enableFuzzyExtraction;
-        private @Nullable Input<List<EntityTypeEntityArgs>> entities;
-        private Input<String> kind;
-        private @Nullable Input<String> project;
+        private Output<String> displayName;
+        private @Nullable Output<Boolean> enableFuzzyExtraction;
+        private @Nullable Output<List<EntityTypeEntityArgs>> entities;
+        private Output<String> kind;
+        private @Nullable Output<String> project;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder entities(@Nullable Input<List<EntityTypeEntityArgs>> entities) {
+        public Builder entities(@Nullable Output<List<EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
 
         public Builder entities(@Nullable List<EntityTypeEntityArgs> entities) {
-            this.entities = Input.ofNullable(entities);
+            this.entities = Output.ofNullable(entities);
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
         public EntityTypeArgs build() {

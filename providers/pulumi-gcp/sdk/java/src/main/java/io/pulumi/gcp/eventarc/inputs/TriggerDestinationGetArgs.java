@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationCloudRunServiceGetArgs;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudFunction")
-      private final @Nullable Input<String> cloudFunction;
+      private final @Nullable Output<String> cloudFunction;
 
-    public Input<String> getCloudFunction() {
-        return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
+    public Output<String> getCloudFunction() {
+        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cloudRunService")
-      private final @Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
+      private final @Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
 
-    public Input<TriggerDestinationCloudRunServiceGetArgs> getCloudRunService() {
-        return this.cloudRunService == null ? Input.empty() : this.cloudRunService;
+    public Output<TriggerDestinationCloudRunServiceGetArgs> getCloudRunService() {
+        return this.cloudRunService == null ? Output.empty() : this.cloudRunService;
     }
 
     public TriggerDestinationGetArgs(
-        @Nullable Input<String> cloudFunction,
-        @Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService) {
+        @Nullable Output<String> cloudFunction,
+        @Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService) {
         this.cloudFunction = cloudFunction;
         this.cloudRunService = cloudRunService;
     }
 
     private TriggerDestinationGetArgs() {
-        this.cloudFunction = Input.empty();
-        this.cloudRunService = Input.empty();
+        this.cloudFunction = Output.empty();
+        this.cloudRunService = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cloudFunction;
-        private @Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
+        private @Nullable Output<String> cloudFunction;
+        private @Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder cloudFunction(@Nullable Input<String> cloudFunction) {
+        public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Input.ofNullable(cloudFunction);
+            this.cloudFunction = Output.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder cloudRunService(@Nullable Input<TriggerDestinationCloudRunServiceGetArgs> cloudRunService) {
+        public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService) {
             this.cloudRunService = cloudRunService;
             return this;
         }
 
         public Builder cloudRunService(@Nullable TriggerDestinationCloudRunServiceGetArgs cloudRunService) {
-            this.cloudRunService = Input.ofNullable(cloudRunService);
+            this.cloudRunService = Output.ofNullable(cloudRunService);
             return this;
         }
         public TriggerDestinationGetArgs build() {

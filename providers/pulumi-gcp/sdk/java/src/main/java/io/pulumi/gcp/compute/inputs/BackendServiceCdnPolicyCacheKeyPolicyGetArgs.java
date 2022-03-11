@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeHost")
-      private final @Nullable Input<Boolean> includeHost;
+      private final @Nullable Output<Boolean> includeHost;
 
-    public Input<Boolean> getIncludeHost() {
-        return this.includeHost == null ? Input.empty() : this.includeHost;
+    public Output<Boolean> getIncludeHost() {
+        return this.includeHost == null ? Output.empty() : this.includeHost;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeProtocol")
-      private final @Nullable Input<Boolean> includeProtocol;
+      private final @Nullable Output<Boolean> includeProtocol;
 
-    public Input<Boolean> getIncludeProtocol() {
-        return this.includeProtocol == null ? Input.empty() : this.includeProtocol;
+    public Output<Boolean> getIncludeProtocol() {
+        return this.includeProtocol == null ? Output.empty() : this.includeProtocol;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="includeQueryString")
-      private final @Nullable Input<Boolean> includeQueryString;
+      private final @Nullable Output<Boolean> includeQueryString;
 
-    public Input<Boolean> getIncludeQueryString() {
-        return this.includeQueryString == null ? Input.empty() : this.includeQueryString;
+    public Output<Boolean> getIncludeQueryString() {
+        return this.includeQueryString == null ? Output.empty() : this.includeQueryString;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="queryStringBlacklists")
-      private final @Nullable Input<List<String>> queryStringBlacklists;
+      private final @Nullable Output<List<String>> queryStringBlacklists;
 
-    public Input<List<String>> getQueryStringBlacklists() {
-        return this.queryStringBlacklists == null ? Input.empty() : this.queryStringBlacklists;
+    public Output<List<String>> getQueryStringBlacklists() {
+        return this.queryStringBlacklists == null ? Output.empty() : this.queryStringBlacklists;
     }
 
     /**
@@ -78,18 +78,18 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
      * 
      */
     @InputImport(name="queryStringWhitelists")
-      private final @Nullable Input<List<String>> queryStringWhitelists;
+      private final @Nullable Output<List<String>> queryStringWhitelists;
 
-    public Input<List<String>> getQueryStringWhitelists() {
-        return this.queryStringWhitelists == null ? Input.empty() : this.queryStringWhitelists;
+    public Output<List<String>> getQueryStringWhitelists() {
+        return this.queryStringWhitelists == null ? Output.empty() : this.queryStringWhitelists;
     }
 
     public BackendServiceCdnPolicyCacheKeyPolicyGetArgs(
-        @Nullable Input<Boolean> includeHost,
-        @Nullable Input<Boolean> includeProtocol,
-        @Nullable Input<Boolean> includeQueryString,
-        @Nullable Input<List<String>> queryStringBlacklists,
-        @Nullable Input<List<String>> queryStringWhitelists) {
+        @Nullable Output<Boolean> includeHost,
+        @Nullable Output<Boolean> includeProtocol,
+        @Nullable Output<Boolean> includeQueryString,
+        @Nullable Output<List<String>> queryStringBlacklists,
+        @Nullable Output<List<String>> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;
@@ -98,11 +98,11 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     }
 
     private BackendServiceCdnPolicyCacheKeyPolicyGetArgs() {
-        this.includeHost = Input.empty();
-        this.includeProtocol = Input.empty();
-        this.includeQueryString = Input.empty();
-        this.queryStringBlacklists = Input.empty();
-        this.queryStringWhitelists = Input.empty();
+        this.includeHost = Output.empty();
+        this.includeProtocol = Output.empty();
+        this.includeQueryString = Output.empty();
+        this.queryStringBlacklists = Output.empty();
+        this.queryStringWhitelists = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,11 +114,11 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> includeHost;
-        private @Nullable Input<Boolean> includeProtocol;
-        private @Nullable Input<Boolean> includeQueryString;
-        private @Nullable Input<List<String>> queryStringBlacklists;
-        private @Nullable Input<List<String>> queryStringWhitelists;
+        private @Nullable Output<Boolean> includeHost;
+        private @Nullable Output<Boolean> includeProtocol;
+        private @Nullable Output<Boolean> includeQueryString;
+        private @Nullable Output<List<String>> queryStringBlacklists;
+        private @Nullable Output<List<String>> queryStringWhitelists;
 
         public Builder() {
     	      // Empty
@@ -133,53 +133,53 @@ public final class BackendServiceCdnPolicyCacheKeyPolicyGetArgs extends io.pulum
     	      this.queryStringWhitelists = defaults.queryStringWhitelists;
         }
 
-        public Builder includeHost(@Nullable Input<Boolean> includeHost) {
+        public Builder includeHost(@Nullable Output<Boolean> includeHost) {
             this.includeHost = includeHost;
             return this;
         }
 
         public Builder includeHost(@Nullable Boolean includeHost) {
-            this.includeHost = Input.ofNullable(includeHost);
+            this.includeHost = Output.ofNullable(includeHost);
             return this;
         }
 
-        public Builder includeProtocol(@Nullable Input<Boolean> includeProtocol) {
+        public Builder includeProtocol(@Nullable Output<Boolean> includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
         public Builder includeProtocol(@Nullable Boolean includeProtocol) {
-            this.includeProtocol = Input.ofNullable(includeProtocol);
+            this.includeProtocol = Output.ofNullable(includeProtocol);
             return this;
         }
 
-        public Builder includeQueryString(@Nullable Input<Boolean> includeQueryString) {
+        public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
-            this.includeQueryString = Input.ofNullable(includeQueryString);
+            this.includeQueryString = Output.ofNullable(includeQueryString);
             return this;
         }
 
-        public Builder queryStringBlacklists(@Nullable Input<List<String>> queryStringBlacklists) {
+        public Builder queryStringBlacklists(@Nullable Output<List<String>> queryStringBlacklists) {
             this.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
 
         public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
-            this.queryStringBlacklists = Input.ofNullable(queryStringBlacklists);
+            this.queryStringBlacklists = Output.ofNullable(queryStringBlacklists);
             return this;
         }
 
-        public Builder queryStringWhitelists(@Nullable Input<List<String>> queryStringWhitelists) {
+        public Builder queryStringWhitelists(@Nullable Output<List<String>> queryStringWhitelists) {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
 
         public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
-            this.queryStringWhitelists = Input.ofNullable(queryStringWhitelists);
+            this.queryStringWhitelists = Output.ofNullable(queryStringWhitelists);
             return this;
         }
         public BackendServiceCdnPolicyCacheKeyPolicyGetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="applicationReadable")
-      private final @Nullable Input<Boolean> applicationReadable;
+      private final @Nullable Output<Boolean> applicationReadable;
 
-    public Input<Boolean> getApplicationReadable() {
-        return this.applicationReadable == null ? Input.empty() : this.applicationReadable;
+    public Output<Boolean> getApplicationReadable() {
+        return this.applicationReadable == null ? Output.empty() : this.applicationReadable;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="expiration")
-      private final @Nullable Input<String> expiration;
+      private final @Nullable Output<String> expiration;
 
-    public Input<String> getExpiration() {
-        return this.expiration == null ? Input.empty() : this.expiration;
+    public Output<String> getExpiration() {
+        return this.expiration == null ? Output.empty() : this.expiration;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="httpHeaders")
-      private final @Nullable Input<Map<String,String>> httpHeaders;
+      private final @Nullable Output<Map<String,String>> httpHeaders;
 
-    public Input<Map<String,String>> getHttpHeaders() {
-        return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
+    public Output<Map<String,String>> getHttpHeaders() {
+        return this.httpHeaders == null ? Output.empty() : this.httpHeaders;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="mimeType")
-      private final @Nullable Input<String> mimeType;
+      private final @Nullable Output<String> mimeType;
 
-    public Input<String> getMimeType() {
-        return this.mimeType == null ? Input.empty() : this.mimeType;
+    public Output<String> getMimeType() {
+        return this.mimeType == null ? Output.empty() : this.mimeType;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="requireMatchingFile")
-      private final @Nullable Input<Boolean> requireMatchingFile;
+      private final @Nullable Output<Boolean> requireMatchingFile;
 
-    public Input<Boolean> getRequireMatchingFile() {
-        return this.requireMatchingFile == null ? Input.empty() : this.requireMatchingFile;
+    public Output<Boolean> getRequireMatchingFile() {
+        return this.requireMatchingFile == null ? Output.empty() : this.requireMatchingFile;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="uploadPathRegex")
-      private final @Nullable Input<String> uploadPathRegex;
+      private final @Nullable Output<String> uploadPathRegex;
 
-    public Input<String> getUploadPathRegex() {
-        return this.uploadPathRegex == null ? Input.empty() : this.uploadPathRegex;
+    public Output<String> getUploadPathRegex() {
+        return this.uploadPathRegex == null ? Output.empty() : this.uploadPathRegex;
     }
 
     public FlexibleAppVersionHandlerStaticFilesArgs(
-        @Nullable Input<Boolean> applicationReadable,
-        @Nullable Input<String> expiration,
-        @Nullable Input<Map<String,String>> httpHeaders,
-        @Nullable Input<String> mimeType,
-        @Nullable Input<String> path,
-        @Nullable Input<Boolean> requireMatchingFile,
-        @Nullable Input<String> uploadPathRegex) {
+        @Nullable Output<Boolean> applicationReadable,
+        @Nullable Output<String> expiration,
+        @Nullable Output<Map<String,String>> httpHeaders,
+        @Nullable Output<String> mimeType,
+        @Nullable Output<String> path,
+        @Nullable Output<Boolean> requireMatchingFile,
+        @Nullable Output<String> uploadPathRegex) {
         this.applicationReadable = applicationReadable;
         this.expiration = expiration;
         this.httpHeaders = httpHeaders;
@@ -118,13 +118,13 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     }
 
     private FlexibleAppVersionHandlerStaticFilesArgs() {
-        this.applicationReadable = Input.empty();
-        this.expiration = Input.empty();
-        this.httpHeaders = Input.empty();
-        this.mimeType = Input.empty();
-        this.path = Input.empty();
-        this.requireMatchingFile = Input.empty();
-        this.uploadPathRegex = Input.empty();
+        this.applicationReadable = Output.empty();
+        this.expiration = Output.empty();
+        this.httpHeaders = Output.empty();
+        this.mimeType = Output.empty();
+        this.path = Output.empty();
+        this.requireMatchingFile = Output.empty();
+        this.uploadPathRegex = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> applicationReadable;
-        private @Nullable Input<String> expiration;
-        private @Nullable Input<Map<String,String>> httpHeaders;
-        private @Nullable Input<String> mimeType;
-        private @Nullable Input<String> path;
-        private @Nullable Input<Boolean> requireMatchingFile;
-        private @Nullable Input<String> uploadPathRegex;
+        private @Nullable Output<Boolean> applicationReadable;
+        private @Nullable Output<String> expiration;
+        private @Nullable Output<Map<String,String>> httpHeaders;
+        private @Nullable Output<String> mimeType;
+        private @Nullable Output<String> path;
+        private @Nullable Output<Boolean> requireMatchingFile;
+        private @Nullable Output<String> uploadPathRegex;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     	      this.uploadPathRegex = defaults.uploadPathRegex;
         }
 
-        public Builder applicationReadable(@Nullable Input<Boolean> applicationReadable) {
+        public Builder applicationReadable(@Nullable Output<Boolean> applicationReadable) {
             this.applicationReadable = applicationReadable;
             return this;
         }
 
         public Builder applicationReadable(@Nullable Boolean applicationReadable) {
-            this.applicationReadable = Input.ofNullable(applicationReadable);
+            this.applicationReadable = Output.ofNullable(applicationReadable);
             return this;
         }
 
-        public Builder expiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Output<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Input.ofNullable(expiration);
+            this.expiration = Output.ofNullable(expiration);
             return this;
         }
 
-        public Builder httpHeaders(@Nullable Input<Map<String,String>> httpHeaders) {
+        public Builder httpHeaders(@Nullable Output<Map<String,String>> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
         public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
-            this.httpHeaders = Input.ofNullable(httpHeaders);
+            this.httpHeaders = Output.ofNullable(httpHeaders);
             return this;
         }
 
-        public Builder mimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Output<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Input.ofNullable(mimeType);
+            this.mimeType = Output.ofNullable(mimeType);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder requireMatchingFile(@Nullable Input<Boolean> requireMatchingFile) {
+        public Builder requireMatchingFile(@Nullable Output<Boolean> requireMatchingFile) {
             this.requireMatchingFile = requireMatchingFile;
             return this;
         }
 
         public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
-            this.requireMatchingFile = Input.ofNullable(requireMatchingFile);
+            this.requireMatchingFile = Output.ofNullable(requireMatchingFile);
             return this;
         }
 
-        public Builder uploadPathRegex(@Nullable Input<String> uploadPathRegex) {
+        public Builder uploadPathRegex(@Nullable Output<String> uploadPathRegex) {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
 
         public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
-            this.uploadPathRegex = Input.ofNullable(uploadPathRegex);
+            this.uploadPathRegex = Output.ofNullable(uploadPathRegex);
             return this;
         }
         public FlexibleAppVersionHandlerStaticFilesArgs build() {

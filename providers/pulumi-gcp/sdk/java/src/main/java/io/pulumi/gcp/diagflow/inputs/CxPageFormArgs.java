@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterArgs;
 import java.util.List;
@@ -21,18 +21,18 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<List<CxPageFormParameterArgs>> parameters;
+      private final @Nullable Output<List<CxPageFormParameterArgs>> parameters;
 
-    public Input<List<CxPageFormParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<List<CxPageFormParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    public CxPageFormArgs(@Nullable Input<List<CxPageFormParameterArgs>> parameters) {
+    public CxPageFormArgs(@Nullable Output<List<CxPageFormParameterArgs>> parameters) {
         this.parameters = parameters;
     }
 
     private CxPageFormArgs() {
-        this.parameters = Input.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CxPageFormParameterArgs>> parameters;
+        private @Nullable Output<List<CxPageFormParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder parameters(@Nullable Input<List<CxPageFormParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<List<CxPageFormParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable List<CxPageFormParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public CxPageFormArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.runtimeconfig;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberConditionArgs;
 import java.lang.String;
@@ -16,10 +16,10 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConfigIamMemberArgs Empty = new ConfigIamMemberArgs();
 
     @InputImport(name="condition")
-      private final @Nullable Input<ConfigIamMemberConditionArgs> condition;
+      private final @Nullable Output<ConfigIamMemberConditionArgs> condition;
 
-    public Input<ConfigIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<ConfigIamMemberConditionArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -27,16 +27,16 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="config", required=true)
-      private final Input<String> config;
+      private final Output<String> config;
 
-    public Input<String> getConfig() {
+    public Output<String> getConfig() {
         return this.config;
     }
 
     @InputImport(name="member", required=true)
-      private final Input<String> member;
+      private final Output<String> member;
 
-    public Input<String> getMember() {
+    public Output<String> getMember() {
         return this.member;
     }
 
@@ -46,10 +46,10 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -59,18 +59,18 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-      private final Input<String> role;
+      private final Output<String> role;
 
-    public Input<String> getRole() {
+    public Output<String> getRole() {
         return this.role;
     }
 
     public ConfigIamMemberArgs(
-        @Nullable Input<ConfigIamMemberConditionArgs> condition,
-        Input<String> config,
-        Input<String> member,
-        @Nullable Input<String> project,
-        Input<String> role) {
+        @Nullable Output<ConfigIamMemberConditionArgs> condition,
+        Output<String> config,
+        Output<String> member,
+        @Nullable Output<String> project,
+        Output<String> role) {
         this.condition = condition;
         this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
         this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
@@ -79,11 +79,11 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConfigIamMemberArgs() {
-        this.condition = Input.empty();
-        this.config = Input.empty();
-        this.member = Input.empty();
-        this.project = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.config = Output.empty();
+        this.member = Output.empty();
+        this.project = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,11 +95,11 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigIamMemberConditionArgs> condition;
-        private Input<String> config;
-        private Input<String> member;
-        private @Nullable Input<String> project;
-        private Input<String> role;
+        private @Nullable Output<ConfigIamMemberConditionArgs> condition;
+        private Output<String> config;
+        private Output<String> member;
+        private @Nullable Output<String> project;
+        private Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -114,53 +114,53 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<ConfigIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Output<ConfigIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable ConfigIamMemberConditionArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder config(Input<String> config) {
+        public Builder config(Output<String> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
         public Builder config(String config) {
-            this.config = Input.of(Objects.requireNonNull(config));
+            this.config = Output.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder member(Input<String> member) {
+        public Builder member(Output<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
         public Builder member(String member) {
-            this.member = Input.of(Objects.requireNonNull(member));
+            this.member = Output.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder role(Input<String> role) {
+        public Builder role(Output<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
         public Builder role(String role) {
-            this.role = Input.of(Objects.requireNonNull(role));
+            this.role = Output.of(Objects.requireNonNull(role));
             return this;
         }
         public ConfigIamMemberArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="entityType", required=true)
-      private final Input<String> entityType;
+      private final Output<String> entityType;
 
-    public Input<String> getEntityType() {
+    public Output<String> getEntityType() {
         return this.entityType;
     }
 
@@ -32,9 +32,9 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -43,10 +43,10 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="isList")
-      private final @Nullable Input<Boolean> isList;
+      private final @Nullable Output<Boolean> isList;
 
-    public Input<Boolean> getIsList() {
-        return this.isList == null ? Input.empty() : this.isList;
+    public Output<Boolean> getIsList() {
+        return this.isList == null ? Output.empty() : this.isList;
     }
 
     /**
@@ -55,17 +55,17 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="redact")
-      private final @Nullable Input<Boolean> redact;
+      private final @Nullable Output<Boolean> redact;
 
-    public Input<Boolean> getRedact() {
-        return this.redact == null ? Input.empty() : this.redact;
+    public Output<Boolean> getRedact() {
+        return this.redact == null ? Output.empty() : this.redact;
     }
 
     public CxIntentParameterArgs(
-        Input<String> entityType,
-        Input<String> id,
-        @Nullable Input<Boolean> isList,
-        @Nullable Input<Boolean> redact) {
+        Output<String> entityType,
+        Output<String> id,
+        @Nullable Output<Boolean> isList,
+        @Nullable Output<Boolean> redact) {
         this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.isList = isList;
@@ -73,10 +73,10 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CxIntentParameterArgs() {
-        this.entityType = Input.empty();
-        this.id = Input.empty();
-        this.isList = Input.empty();
-        this.redact = Input.empty();
+        this.entityType = Output.empty();
+        this.id = Output.empty();
+        this.isList = Output.empty();
+        this.redact = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> entityType;
-        private Input<String> id;
-        private @Nullable Input<Boolean> isList;
-        private @Nullable Input<Boolean> redact;
+        private Output<String> entityType;
+        private Output<String> id;
+        private @Nullable Output<Boolean> isList;
+        private @Nullable Output<Boolean> redact;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class CxIntentParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.redact = defaults.redact;
         }
 
-        public Builder entityType(Input<String> entityType) {
+        public Builder entityType(Output<String> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
         public Builder entityType(String entityType) {
-            this.entityType = Input.of(Objects.requireNonNull(entityType));
+            this.entityType = Output.of(Objects.requireNonNull(entityType));
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder isList(@Nullable Input<Boolean> isList) {
+        public Builder isList(@Nullable Output<Boolean> isList) {
             this.isList = isList;
             return this;
         }
 
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Input.ofNullable(isList);
+            this.isList = Output.ofNullable(isList);
             return this;
         }
 
-        public Builder redact(@Nullable Input<Boolean> redact) {
+        public Builder redact(@Nullable Output<Boolean> redact) {
             this.redact = redact;
             return this;
         }
 
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Input.ofNullable(redact);
+            this.redact = Output.ofNullable(redact);
             return this;
         }
         public CxIntentParameterArgs build() {

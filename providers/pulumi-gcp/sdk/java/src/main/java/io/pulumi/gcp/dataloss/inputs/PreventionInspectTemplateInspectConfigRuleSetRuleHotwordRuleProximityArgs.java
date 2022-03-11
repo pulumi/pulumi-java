@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      * 
      */
     @InputImport(name="windowAfter")
-      private final @Nullable Input<Integer> windowAfter;
+      private final @Nullable Output<Integer> windowAfter;
 
-    public Input<Integer> getWindowAfter() {
-        return this.windowAfter == null ? Input.empty() : this.windowAfter;
+    public Output<Integer> getWindowAfter() {
+        return this.windowAfter == null ? Output.empty() : this.windowAfter;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      * 
      */
     @InputImport(name="windowBefore")
-      private final @Nullable Input<Integer> windowBefore;
+      private final @Nullable Output<Integer> windowBefore;
 
-    public Input<Integer> getWindowBefore() {
-        return this.windowBefore == null ? Input.empty() : this.windowBefore;
+    public Output<Integer> getWindowBefore() {
+        return this.windowBefore == null ? Output.empty() : this.windowBefore;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(
-        @Nullable Input<Integer> windowAfter,
-        @Nullable Input<Integer> windowBefore) {
+        @Nullable Output<Integer> windowAfter,
+        @Nullable Output<Integer> windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs() {
-        this.windowAfter = Input.empty();
-        this.windowBefore = Input.empty();
+        this.windowAfter = Output.empty();
+        this.windowBefore = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> windowAfter;
-        private @Nullable Input<Integer> windowBefore;
+        private @Nullable Output<Integer> windowAfter;
+        private @Nullable Output<Integer> windowBefore;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder windowAfter(@Nullable Input<Integer> windowAfter) {
+        public Builder windowAfter(@Nullable Output<Integer> windowAfter) {
             this.windowAfter = windowAfter;
             return this;
         }
 
         public Builder windowAfter(@Nullable Integer windowAfter) {
-            this.windowAfter = Input.ofNullable(windowAfter);
+            this.windowAfter = Output.ofNullable(windowAfter);
             return this;
         }
 
-        public Builder windowBefore(@Nullable Input<Integer> windowBefore) {
+        public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
             this.windowBefore = windowBefore;
             return this;
         }
 
         public Builder windowBefore(@Nullable Integer windowBefore) {
-            this.windowBefore = Input.ofNullable(windowBefore);
+            this.windowBefore = Output.ofNullable(windowBefore);
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs build() {

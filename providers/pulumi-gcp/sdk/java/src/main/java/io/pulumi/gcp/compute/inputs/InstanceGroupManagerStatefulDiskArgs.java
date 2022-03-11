@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class InstanceGroupManagerStatefulDiskArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deleteRule")
-      private final @Nullable Input<String> deleteRule;
+      private final @Nullable Output<String> deleteRule;
 
-    public Input<String> getDeleteRule() {
-        return this.deleteRule == null ? Input.empty() : this.deleteRule;
+    public Output<String> getDeleteRule() {
+        return this.deleteRule == null ? Output.empty() : this.deleteRule;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class InstanceGroupManagerStatefulDiskArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
     public InstanceGroupManagerStatefulDiskArgs(
-        @Nullable Input<String> deleteRule,
-        Input<String> deviceName) {
+        @Nullable Output<String> deleteRule,
+        Output<String> deviceName) {
         this.deleteRule = deleteRule;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
     }
 
     private InstanceGroupManagerStatefulDiskArgs() {
-        this.deleteRule = Input.empty();
-        this.deviceName = Input.empty();
+        this.deleteRule = Output.empty();
+        this.deviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class InstanceGroupManagerStatefulDiskArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deleteRule;
-        private Input<String> deviceName;
+        private @Nullable Output<String> deleteRule;
+        private Output<String> deviceName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class InstanceGroupManagerStatefulDiskArgs extends io.pulumi.resour
     	      this.deviceName = defaults.deviceName;
         }
 
-        public Builder deleteRule(@Nullable Input<String> deleteRule) {
+        public Builder deleteRule(@Nullable Output<String> deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
         public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Input.ofNullable(deleteRule);
+            this.deleteRule = Output.ofNullable(deleteRule);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
         public InstanceGroupManagerStatefulDiskArgs build() {

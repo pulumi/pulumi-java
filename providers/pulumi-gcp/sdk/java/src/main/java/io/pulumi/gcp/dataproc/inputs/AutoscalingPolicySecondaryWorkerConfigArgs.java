@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="maxInstances")
-      private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Output<Integer> maxInstances;
 
-    public Input<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Input.empty() : this.maxInstances;
+    public Output<Integer> getMaxInstances() {
+        return this.maxInstances == null ? Output.empty() : this.maxInstances;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="minInstances")
-      private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Output<Integer> minInstances;
 
-    public Input<Integer> getMinInstances() {
-        return this.minInstances == null ? Input.empty() : this.minInstances;
+    public Output<Integer> getMinInstances() {
+        return this.minInstances == null ? Output.empty() : this.minInstances;
     }
 
     /**
@@ -54,25 +54,25 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public AutoscalingPolicySecondaryWorkerConfigArgs(
-        @Nullable Input<Integer> maxInstances,
-        @Nullable Input<Integer> minInstances,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<Integer> maxInstances,
+        @Nullable Output<Integer> minInstances,
+        @Nullable Output<Integer> weight) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;
     }
 
     private AutoscalingPolicySecondaryWorkerConfigArgs() {
-        this.maxInstances = Input.empty();
-        this.minInstances = Input.empty();
-        this.weight = Input.empty();
+        this.maxInstances = Output.empty();
+        this.minInstances = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -84,9 +84,9 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxInstances;
-        private @Nullable Input<Integer> minInstances;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Integer> maxInstances;
+        private @Nullable Output<Integer> minInstances;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -99,33 +99,33 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
     	      this.weight = defaults.weight;
         }
 
-        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Input.ofNullable(maxInstances);
+            this.maxInstances = Output.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder minInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Output<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Input.ofNullable(minInstances);
+            this.minInstances = Output.ofNullable(minInstances);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public AutoscalingPolicySecondaryWorkerConfigArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="namespaceId")
-      private final @Nullable Input<String> namespaceId;
+      private final @Nullable Output<String> namespaceId;
 
-    public Input<String> getNamespaceId() {
-        return this.namespaceId == null ? Input.empty() : this.namespaceId;
+    public Output<String> getNamespaceId() {
+        return this.namespaceId == null ? Output.empty() : this.namespaceId;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * 
      */
     @InputImport(name="projectId", required=true)
-      private final Input<String> projectId;
+      private final Output<String> projectId;
 
-    public Input<String> getProjectId() {
+    public Output<String> getProjectId() {
         return this.projectId;
     }
 
     public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs(
-        @Nullable Input<String> namespaceId,
-        Input<String> projectId) {
+        @Nullable Output<String> namespaceId,
+        Output<String> projectId) {
         this.namespaceId = namespaceId;
         this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
     }
 
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs() {
-        this.namespaceId = Input.empty();
-        this.projectId = Input.empty();
+        this.namespaceId = Output.empty();
+        this.projectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     }
 
     public static final class Builder {
-        private @Nullable Input<String> namespaceId;
-        private Input<String> projectId;
+        private @Nullable Output<String> namespaceId;
+        private Output<String> projectId;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder namespaceId(@Nullable Input<String> namespaceId) {
+        public Builder namespaceId(@Nullable Output<String> namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
 
         public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Input.ofNullable(namespaceId);
+            this.namespaceId = Output.ofNullable(namespaceId);
             return this;
         }
 
-        public Builder projectId(Input<String> projectId) {
+        public Builder projectId(Output<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
         public Builder projectId(String projectId) {
-            this.projectId = Input.of(Objects.requireNonNull(projectId));
+            this.projectId = Output.of(Objects.requireNonNull(projectId));
             return this;
         }
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs build() {

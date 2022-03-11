@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationTitle", required=true)
-      private final Input<String> applicationTitle;
+      private final Output<String> applicationTitle;
 
-    public Input<String> getApplicationTitle() {
+    public Output<String> getApplicationTitle() {
         return this.applicationTitle;
     }
 
@@ -31,10 +31,10 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportEmail", required=true)
-      private final Input<String> supportEmail;
+      private final Output<String> supportEmail;
 
-    public Input<String> getSupportEmail() {
+    public Output<String> getSupportEmail() {
         return this.supportEmail;
     }
 
     public BrandArgs(
-        Input<String> applicationTitle,
-        @Nullable Input<String> project,
-        Input<String> supportEmail) {
+        Output<String> applicationTitle,
+        @Nullable Output<String> project,
+        Output<String> supportEmail) {
         this.applicationTitle = Objects.requireNonNull(applicationTitle, "expected parameter 'applicationTitle' to be non-null");
         this.project = project;
         this.supportEmail = Objects.requireNonNull(supportEmail, "expected parameter 'supportEmail' to be non-null");
     }
 
     private BrandArgs() {
-        this.applicationTitle = Input.empty();
-        this.project = Input.empty();
-        this.supportEmail = Input.empty();
+        this.applicationTitle = Output.empty();
+        this.project = Output.empty();
+        this.supportEmail = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationTitle;
-        private @Nullable Input<String> project;
-        private Input<String> supportEmail;
+        private Output<String> applicationTitle;
+        private @Nullable Output<String> project;
+        private Output<String> supportEmail;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportEmail = defaults.supportEmail;
         }
 
-        public Builder applicationTitle(Input<String> applicationTitle) {
+        public Builder applicationTitle(Output<String> applicationTitle) {
             this.applicationTitle = Objects.requireNonNull(applicationTitle);
             return this;
         }
 
         public Builder applicationTitle(String applicationTitle) {
-            this.applicationTitle = Input.of(Objects.requireNonNull(applicationTitle));
+            this.applicationTitle = Output.of(Objects.requireNonNull(applicationTitle));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder supportEmail(Input<String> supportEmail) {
+        public Builder supportEmail(Output<String> supportEmail) {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
         }
 
         public Builder supportEmail(String supportEmail) {
-            this.supportEmail = Input.of(Objects.requireNonNull(supportEmail));
+            this.supportEmail = Output.of(Objects.requireNonNull(supportEmail));
             return this;
         }
         public BrandArgs build() {

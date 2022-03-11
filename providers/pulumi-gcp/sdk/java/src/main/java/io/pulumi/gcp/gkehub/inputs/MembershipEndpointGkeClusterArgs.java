@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,18 +14,18 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     public static final MembershipEndpointGkeClusterArgs Empty = new MembershipEndpointGkeClusterArgs();
 
     @InputImport(name="resourceLink", required=true)
-      private final Input<String> resourceLink;
+      private final Output<String> resourceLink;
 
-    public Input<String> getResourceLink() {
+    public Output<String> getResourceLink() {
         return this.resourceLink;
     }
 
-    public MembershipEndpointGkeClusterArgs(Input<String> resourceLink) {
+    public MembershipEndpointGkeClusterArgs(Output<String> resourceLink) {
         this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
     }
 
     private MembershipEndpointGkeClusterArgs() {
-        this.resourceLink = Input.empty();
+        this.resourceLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> resourceLink;
+        private Output<String> resourceLink;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class MembershipEndpointGkeClusterArgs extends io.pulumi.resources.
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder resourceLink(Input<String> resourceLink) {
+        public Builder resourceLink(Output<String> resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
 
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Input.of(Objects.requireNonNull(resourceLink));
+            this.resourceLink = Output.of(Objects.requireNonNull(resourceLink));
             return this;
         }
         public MembershipEndpointGkeClusterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
      * 
      */
     @InputImport(name="groupIndexes")
-      private final @Nullable Input<List<Integer>> groupIndexes;
+      private final @Nullable Output<List<Integer>> groupIndexes;
 
-    public Input<List<Integer>> getGroupIndexes() {
-        return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
+    public Output<List<Integer>> getGroupIndexes() {
+        return this.groupIndexes == null ? Output.empty() : this.groupIndexes;
     }
 
     /**
@@ -33,22 +33,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
      * 
      */
     @InputImport(name="pattern", required=true)
-      private final Input<String> pattern;
+      private final Output<String> pattern;
 
-    public Input<String> getPattern() {
+    public Output<String> getPattern() {
         return this.pattern;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs(
-        @Nullable Input<List<Integer>> groupIndexes,
-        Input<String> pattern) {
+        @Nullable Output<List<Integer>> groupIndexes,
+        Output<String> pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = Objects.requireNonNull(pattern, "expected parameter 'pattern' to be non-null");
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs() {
-        this.groupIndexes = Input.empty();
-        this.pattern = Input.empty();
+        this.groupIndexes = Output.empty();
+        this.pattern = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> groupIndexes;
-        private Input<String> pattern;
+        private @Nullable Output<List<Integer>> groupIndexes;
+        private Output<String> pattern;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder groupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
+        public Builder groupIndexes(@Nullable Output<List<Integer>> groupIndexes) {
             this.groupIndexes = groupIndexes;
             return this;
         }
 
         public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
-            this.groupIndexes = Input.ofNullable(groupIndexes);
+            this.groupIndexes = Output.ofNullable(groupIndexes);
             return this;
         }
 
-        public Builder pattern(Input<String> pattern) {
+        public Builder pattern(Output<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
         public Builder pattern(String pattern) {
-            this.pattern = Input.of(Objects.requireNonNull(pattern));
+            this.pattern = Output.of(Objects.requireNonNull(pattern));
             return this;
         }
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs build() {

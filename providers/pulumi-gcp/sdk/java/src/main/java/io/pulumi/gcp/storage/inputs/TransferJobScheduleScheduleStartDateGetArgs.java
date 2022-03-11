@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="day", required=true)
-      private final Input<Integer> day;
+      private final Output<Integer> day;
 
-    public Input<Integer> getDay() {
+    public Output<Integer> getDay() {
         return this.day;
     }
 
@@ -29,9 +29,9 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="month", required=true)
-      private final Input<Integer> month;
+      private final Output<Integer> month;
 
-    public Input<Integer> getMonth() {
+    public Output<Integer> getMonth() {
         return this.month;
     }
 
@@ -40,25 +40,25 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
      * 
      */
     @InputImport(name="year", required=true)
-      private final Input<Integer> year;
+      private final Output<Integer> year;
 
-    public Input<Integer> getYear() {
+    public Output<Integer> getYear() {
         return this.year;
     }
 
     public TransferJobScheduleScheduleStartDateGetArgs(
-        Input<Integer> day,
-        Input<Integer> month,
-        Input<Integer> year) {
+        Output<Integer> day,
+        Output<Integer> month,
+        Output<Integer> year) {
         this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
         this.month = Objects.requireNonNull(month, "expected parameter 'month' to be non-null");
         this.year = Objects.requireNonNull(year, "expected parameter 'year' to be non-null");
     }
 
     private TransferJobScheduleScheduleStartDateGetArgs() {
-        this.day = Input.empty();
-        this.month = Input.empty();
-        this.year = Input.empty();
+        this.day = Output.empty();
+        this.month = Output.empty();
+        this.year = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private Input<Integer> day;
-        private Input<Integer> month;
-        private Input<Integer> year;
+        private Output<Integer> day;
+        private Output<Integer> month;
+        private Output<Integer> year;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class TransferJobScheduleScheduleStartDateGetArgs extends io.pulumi
     	      this.year = defaults.year;
         }
 
-        public Builder day(Input<Integer> day) {
+        public Builder day(Output<Integer> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
         public Builder day(Integer day) {
-            this.day = Input.of(Objects.requireNonNull(day));
+            this.day = Output.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder month(Input<Integer> month) {
+        public Builder month(Output<Integer> month) {
             this.month = Objects.requireNonNull(month);
             return this;
         }
 
         public Builder month(Integer month) {
-            this.month = Input.of(Objects.requireNonNull(month));
+            this.month = Output.of(Objects.requireNonNull(month));
             return this;
         }
 
-        public Builder year(Input<Integer> year) {
+        public Builder year(Output<Integer> year) {
             this.year = Objects.requireNonNull(year);
             return this;
         }
 
         public Builder year(Integer year) {
-            this.year = Input.of(Objects.requireNonNull(year));
+            this.year = Output.of(Objects.requireNonNull(year));
             return this;
         }
         public TransferJobScheduleScheduleStartDateGetArgs build() {

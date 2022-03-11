@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamBindingConditionGetArgs;
 import java.lang.String;
@@ -17,10 +17,10 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
     public static final GatewayIamBindingState Empty = new GatewayIamBindingState();
 
     @InputImport(name="condition")
-      private final @Nullable Input<GatewayIamBindingConditionGetArgs> condition;
+      private final @Nullable Output<GatewayIamBindingConditionGetArgs> condition;
 
-    public Input<GatewayIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Input.empty() : this.condition;
+    public Output<GatewayIamBindingConditionGetArgs> getCondition() {
+        return this.condition == null ? Output.empty() : this.condition;
     }
 
     /**
@@ -28,24 +28,24 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="etag")
-      private final @Nullable Input<String> etag;
+      private final @Nullable Output<String> etag;
 
-    public Input<String> getEtag() {
-        return this.etag == null ? Input.empty() : this.etag;
+    public Output<String> getEtag() {
+        return this.etag == null ? Output.empty() : this.etag;
     }
 
     @InputImport(name="gateway")
-      private final @Nullable Input<String> gateway;
+      private final @Nullable Output<String> gateway;
 
-    public Input<String> getGateway() {
-        return this.gateway == null ? Input.empty() : this.gateway;
+    public Output<String> getGateway() {
+        return this.gateway == null ? Output.empty() : this.gateway;
     }
 
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     /**
@@ -81,20 +81,20 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role")
-      private final @Nullable Input<String> role;
+      private final @Nullable Output<String> role;
 
-    public Input<String> getRole() {
-        return this.role == null ? Input.empty() : this.role;
+    public Output<String> getRole() {
+        return this.role == null ? Output.empty() : this.role;
     }
 
     public GatewayIamBindingState(
-        @Nullable Input<GatewayIamBindingConditionGetArgs> condition,
-        @Nullable Input<String> etag,
-        @Nullable Input<String> gateway,
-        @Nullable Input<List<String>> members,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        @Nullable Input<String> role) {
+        @Nullable Output<GatewayIamBindingConditionGetArgs> condition,
+        @Nullable Output<String> etag,
+        @Nullable Output<String> gateway,
+        @Nullable Output<List<String>> members,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        @Nullable Output<String> role) {
         this.condition = condition;
         this.etag = etag;
         this.gateway = gateway;
@@ -105,13 +105,13 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
     }
 
     private GatewayIamBindingState() {
-        this.condition = Input.empty();
-        this.etag = Input.empty();
-        this.gateway = Input.empty();
-        this.members = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.role = Input.empty();
+        this.condition = Output.empty();
+        this.etag = Output.empty();
+        this.gateway = Output.empty();
+        this.members = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.role = Output.empty();
     }
 
     public static Builder builder() {
@@ -123,13 +123,13 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<GatewayIamBindingConditionGetArgs> condition;
-        private @Nullable Input<String> etag;
-        private @Nullable Input<String> gateway;
-        private @Nullable Input<List<String>> members;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private @Nullable Input<String> role;
+        private @Nullable Output<GatewayIamBindingConditionGetArgs> condition;
+        private @Nullable Output<String> etag;
+        private @Nullable Output<String> gateway;
+        private @Nullable Output<List<String>> members;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private @Nullable Output<String> role;
 
         public Builder() {
     	      // Empty
@@ -146,73 +146,73 @@ public final class GatewayIamBindingState extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder condition(@Nullable Input<GatewayIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Output<GatewayIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
         public Builder condition(@Nullable GatewayIamBindingConditionGetArgs condition) {
-            this.condition = Input.ofNullable(condition);
+            this.condition = Output.ofNullable(condition);
             return this;
         }
 
-        public Builder etag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Output<String> etag) {
             this.etag = etag;
             return this;
         }
 
         public Builder etag(@Nullable String etag) {
-            this.etag = Input.ofNullable(etag);
+            this.etag = Output.ofNullable(etag);
             return this;
         }
 
-        public Builder gateway(@Nullable Input<String> gateway) {
+        public Builder gateway(@Nullable Output<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Input.ofNullable(gateway);
+            this.gateway = Output.ofNullable(gateway);
             return this;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder role(@Nullable Input<String> role) {
+        public Builder role(@Nullable Output<String> role) {
             this.role = role;
             return this;
         }
 
         public Builder role(@Nullable String role) {
-            this.role = Input.ofNullable(role);
+            this.role = Output.ofNullable(role);
             return this;
         }
         public GatewayIamBindingState build() {

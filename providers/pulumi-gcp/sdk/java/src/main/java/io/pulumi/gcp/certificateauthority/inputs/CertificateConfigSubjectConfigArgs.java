@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectAltNameArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectArgs;
@@ -21,9 +21,9 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subject", required=true)
-      private final Input<CertificateConfigSubjectConfigSubjectArgs> subject;
+      private final Output<CertificateConfigSubjectConfigSubjectArgs> subject;
 
-    public Input<CertificateConfigSubjectConfigSubjectArgs> getSubject() {
+    public Output<CertificateConfigSubjectConfigSubjectArgs> getSubject() {
         return this.subject;
     }
 
@@ -33,22 +33,22 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subjectAltName")
-      private final @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+      private final @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
-    public Input<CertificateConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
+    public Output<CertificateConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
+        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
     }
 
     public CertificateConfigSubjectConfigArgs(
-        Input<CertificateConfigSubjectConfigSubjectArgs> subject,
-        @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
+        Output<CertificateConfigSubjectConfigSubjectArgs> subject,
+        @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
         this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
         this.subjectAltName = subjectAltName;
     }
 
     private CertificateConfigSubjectConfigArgs() {
-        this.subject = Input.empty();
-        this.subjectAltName = Input.empty();
+        this.subject = Output.empty();
+        this.subjectAltName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<CertificateConfigSubjectConfigSubjectArgs> subject;
-        private @Nullable Input<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+        private Output<CertificateConfigSubjectConfigSubjectArgs> subject;
+        private @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder subject(Input<CertificateConfigSubjectConfigSubjectArgs> subject) {
+        public Builder subject(Output<CertificateConfigSubjectConfigSubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
         public Builder subject(CertificateConfigSubjectConfigSubjectArgs subject) {
-            this.subject = Input.of(Objects.requireNonNull(subject));
+            this.subject = Output.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder subjectAltName(@Nullable Input<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
         public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameArgs subjectAltName) {
-            this.subjectAltName = Input.ofNullable(subjectAltName);
+            this.subjectAltName = Output.ofNullable(subjectAltName);
             return this;
         }
         public CertificateConfigSubjectConfigArgs build() {

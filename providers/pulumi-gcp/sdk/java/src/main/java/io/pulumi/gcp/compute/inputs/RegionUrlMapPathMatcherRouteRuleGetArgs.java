@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs;
@@ -28,10 +28,10 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="headerAction")
-      private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
+      private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
 
-    public Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> getHeaderAction() {
-        return this.headerAction == null ? Input.empty() : this.headerAction;
+    public Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> getHeaderAction() {
+        return this.headerAction == null ? Output.empty() : this.headerAction;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="matchRules")
-      private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
+      private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
 
-    public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> getMatchRules() {
-        return this.matchRules == null ? Input.empty() : this.matchRules;
+    public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> getMatchRules() {
+        return this.matchRules == null ? Output.empty() : this.matchRules;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
@@ -80,10 +80,10 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="routeAction")
-      private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
+      private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
 
-    public Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> getRouteAction() {
-        return this.routeAction == null ? Input.empty() : this.routeAction;
+    public Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> getRouteAction() {
+        return this.routeAction == null ? Output.empty() : this.routeAction;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -105,19 +105,19 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="urlRedirect")
-      private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
+      private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
-    public Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> getUrlRedirect() {
-        return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
+    public Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> getUrlRedirect() {
+        return this.urlRedirect == null ? Output.empty() : this.urlRedirect;
     }
 
     public RegionUrlMapPathMatcherRouteRuleGetArgs(
-        @Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction,
-        @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules,
-        Input<Integer> priority,
-        @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction,
-        @Nullable Input<String> service,
-        @Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
+        @Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction,
+        @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules,
+        Output<Integer> priority,
+        @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction,
+        @Nullable Output<String> service,
+        @Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
@@ -127,12 +127,12 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
     }
 
     private RegionUrlMapPathMatcherRouteRuleGetArgs() {
-        this.headerAction = Input.empty();
-        this.matchRules = Input.empty();
-        this.priority = Input.empty();
-        this.routeAction = Input.empty();
-        this.service = Input.empty();
-        this.urlRedirect = Input.empty();
+        this.headerAction = Output.empty();
+        this.matchRules = Output.empty();
+        this.priority = Output.empty();
+        this.routeAction = Output.empty();
+        this.service = Output.empty();
+        this.urlRedirect = Output.empty();
     }
 
     public static Builder builder() {
@@ -144,12 +144,12 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
-        private @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
-        private Input<Integer> priority;
-        private @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
-        private @Nullable Input<String> service;
-        private @Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
+        private @Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
+        private @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
+        private Output<Integer> priority;
+        private @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
+        private @Nullable Output<String> service;
+        private @Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
         public Builder() {
     	      // Empty
@@ -165,63 +165,63 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder headerAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
+        public Builder headerAction(@Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
         public Builder headerAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs headerAction) {
-            this.headerAction = Input.ofNullable(headerAction);
+            this.headerAction = Output.ofNullable(headerAction);
             return this;
         }
 
-        public Builder matchRules(@Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
+        public Builder matchRules(@Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
         public Builder matchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs> matchRules) {
-            this.matchRules = Input.ofNullable(matchRules);
+            this.matchRules = Output.ofNullable(matchRules);
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder routeAction(@Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
+        public Builder routeAction(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
         public Builder routeAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs routeAction) {
-            this.routeAction = Input.ofNullable(routeAction);
+            this.routeAction = Output.ofNullable(routeAction);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder urlRedirect(@Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
         public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs urlRedirect) {
-            this.urlRedirect = Input.ofNullable(urlRedirect);
+            this.urlRedirect = Output.ofNullable(urlRedirect);
             return this;
         }
         public RegionUrlMapPathMatcherRouteRuleGetArgs build() {

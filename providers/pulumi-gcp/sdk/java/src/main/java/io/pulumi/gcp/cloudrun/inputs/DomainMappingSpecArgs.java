@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="certificateMode")
-      private final @Nullable Input<String> certificateMode;
+      private final @Nullable Output<String> certificateMode;
 
-    public Input<String> getCertificateMode() {
-        return this.certificateMode == null ? Input.empty() : this.certificateMode;
+    public Output<String> getCertificateMode() {
+        return this.certificateMode == null ? Output.empty() : this.certificateMode;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="forceOverride")
-      private final @Nullable Input<Boolean> forceOverride;
+      private final @Nullable Output<Boolean> forceOverride;
 
-    public Input<Boolean> getForceOverride() {
-        return this.forceOverride == null ? Input.empty() : this.forceOverride;
+    public Output<Boolean> getForceOverride() {
+        return this.forceOverride == null ? Output.empty() : this.forceOverride;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routeName", required=true)
-      private final Input<String> routeName;
+      private final Output<String> routeName;
 
-    public Input<String> getRouteName() {
+    public Output<String> getRouteName() {
         return this.routeName;
     }
 
     public DomainMappingSpecArgs(
-        @Nullable Input<String> certificateMode,
-        @Nullable Input<Boolean> forceOverride,
-        Input<String> routeName) {
+        @Nullable Output<String> certificateMode,
+        @Nullable Output<Boolean> forceOverride,
+        Output<String> routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = Objects.requireNonNull(routeName, "expected parameter 'routeName' to be non-null");
     }
 
     private DomainMappingSpecArgs() {
-        this.certificateMode = Input.empty();
-        this.forceOverride = Input.empty();
-        this.routeName = Input.empty();
+        this.certificateMode = Output.empty();
+        this.forceOverride = Output.empty();
+        this.routeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateMode;
-        private @Nullable Input<Boolean> forceOverride;
-        private Input<String> routeName;
+        private @Nullable Output<String> certificateMode;
+        private @Nullable Output<Boolean> forceOverride;
+        private Output<String> routeName;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class DomainMappingSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder certificateMode(@Nullable Input<String> certificateMode) {
+        public Builder certificateMode(@Nullable Output<String> certificateMode) {
             this.certificateMode = certificateMode;
             return this;
         }
 
         public Builder certificateMode(@Nullable String certificateMode) {
-            this.certificateMode = Input.ofNullable(certificateMode);
+            this.certificateMode = Output.ofNullable(certificateMode);
             return this;
         }
 
-        public Builder forceOverride(@Nullable Input<Boolean> forceOverride) {
+        public Builder forceOverride(@Nullable Output<Boolean> forceOverride) {
             this.forceOverride = forceOverride;
             return this;
         }
 
         public Builder forceOverride(@Nullable Boolean forceOverride) {
-            this.forceOverride = Input.ofNullable(forceOverride);
+            this.forceOverride = Output.ofNullable(forceOverride);
             return this;
         }
 
-        public Builder routeName(Input<String> routeName) {
+        public Builder routeName(Output<String> routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }
 
         public Builder routeName(String routeName) {
-            this.routeName = Input.of(Objects.requireNonNull(routeName));
+            this.routeName = Output.of(Objects.requireNonNull(routeName));
             return this;
         }
         public DomainMappingSpecArgs build() {

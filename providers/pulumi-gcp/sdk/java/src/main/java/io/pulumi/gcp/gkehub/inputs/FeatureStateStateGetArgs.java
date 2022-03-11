@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
     public static final FeatureStateStateGetArgs Empty = new FeatureStateStateGetArgs();
 
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     @InputImport(name="updateTime")
-      private final @Nullable Input<String> updateTime;
+      private final @Nullable Output<String> updateTime;
 
-    public Input<String> getUpdateTime() {
-        return this.updateTime == null ? Input.empty() : this.updateTime;
+    public Output<String> getUpdateTime() {
+        return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
     public FeatureStateStateGetArgs(
-        @Nullable Input<String> code,
-        @Nullable Input<String> description,
-        @Nullable Input<String> updateTime) {
+        @Nullable Output<String> code,
+        @Nullable Output<String> description,
+        @Nullable Output<String> updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;
     }
 
     private FeatureStateStateGetArgs() {
-        this.code = Input.empty();
-        this.description = Input.empty();
-        this.updateTime = Input.empty();
+        this.code = Output.empty();
+        this.description = Output.empty();
+        this.updateTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> updateTime;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> updateTime;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder updateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Output<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Input.ofNullable(updateTime);
+            this.updateTime = Output.ofNullable(updateTime);
             return this;
         }
         public FeatureStateStateGetArgs build() {

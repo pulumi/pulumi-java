@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigee.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -20,10 +20,10 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames")
-      private final @Nullable Input<List<String>> hostnames;
+      private final @Nullable Output<List<String>> hostnames;
 
-    public Input<List<String>> getHostnames() {
-        return this.hostnames == null ? Input.empty() : this.hostnames;
+    public Output<List<String>> getHostnames() {
+        return this.hostnames == null ? Output.empty() : this.hostnames;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId")
-      private final @Nullable Input<String> orgId;
+      private final @Nullable Output<String> orgId;
 
-    public Input<String> getOrgId() {
-        return this.orgId == null ? Input.empty() : this.orgId;
+    public Output<String> getOrgId() {
+        return this.orgId == null ? Output.empty() : this.orgId;
     }
 
     public EnvGroupState(
-        @Nullable Input<List<String>> hostnames,
-        @Nullable Input<String> name,
-        @Nullable Input<String> orgId) {
+        @Nullable Output<List<String>> hostnames,
+        @Nullable Output<String> name,
+        @Nullable Output<String> orgId) {
         this.hostnames = hostnames;
         this.name = name;
         this.orgId = orgId;
     }
 
     private EnvGroupState() {
-        this.hostnames = Input.empty();
-        this.name = Input.empty();
-        this.orgId = Input.empty();
+        this.hostnames = Output.empty();
+        this.name = Output.empty();
+        this.orgId = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> hostnames;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> orgId;
+        private @Nullable Output<List<String>> hostnames;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> orgId;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class EnvGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder hostnames(@Nullable Input<List<String>> hostnames) {
+        public Builder hostnames(@Nullable Output<List<String>> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
         public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Input.ofNullable(hostnames);
+            this.hostnames = Output.ofNullable(hostnames);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Output<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Input.ofNullable(orgId);
+            this.orgId = Output.ofNullable(orgId);
             return this;
         }
         public EnvGroupState build() {

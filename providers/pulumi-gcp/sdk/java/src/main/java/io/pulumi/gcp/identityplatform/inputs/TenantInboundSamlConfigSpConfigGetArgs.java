@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateGetArgs;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="callbackUri", required=true)
-      private final Input<String> callbackUri;
+      private final Output<String> callbackUri;
 
-    public Input<String> getCallbackUri() {
+    public Output<String> getCallbackUri() {
         return this.callbackUri;
     }
 
@@ -34,10 +34,10 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="spCertificates")
-      private final @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
+      private final @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
 
-    public Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> getSpCertificates() {
-        return this.spCertificates == null ? Input.empty() : this.spCertificates;
+    public Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> getSpCertificates() {
+        return this.spCertificates == null ? Output.empty() : this.spCertificates;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="spEntityId", required=true)
-      private final Input<String> spEntityId;
+      private final Output<String> spEntityId;
 
-    public Input<String> getSpEntityId() {
+    public Output<String> getSpEntityId() {
         return this.spEntityId;
     }
 
     public TenantInboundSamlConfigSpConfigGetArgs(
-        Input<String> callbackUri,
-        @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates,
-        Input<String> spEntityId) {
+        Output<String> callbackUri,
+        @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates,
+        Output<String> spEntityId) {
         this.callbackUri = Objects.requireNonNull(callbackUri, "expected parameter 'callbackUri' to be non-null");
         this.spCertificates = spCertificates;
         this.spEntityId = Objects.requireNonNull(spEntityId, "expected parameter 'spEntityId' to be non-null");
     }
 
     private TenantInboundSamlConfigSpConfigGetArgs() {
-        this.callbackUri = Input.empty();
-        this.spCertificates = Input.empty();
-        this.spEntityId = Input.empty();
+        this.callbackUri = Output.empty();
+        this.spCertificates = Output.empty();
+        this.spEntityId = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private Input<String> callbackUri;
-        private @Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
-        private Input<String> spEntityId;
+        private Output<String> callbackUri;
+        private @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates;
+        private Output<String> spEntityId;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class TenantInboundSamlConfigSpConfigGetArgs extends io.pulumi.reso
     	      this.spEntityId = defaults.spEntityId;
         }
 
-        public Builder callbackUri(Input<String> callbackUri) {
+        public Builder callbackUri(Output<String> callbackUri) {
             this.callbackUri = Objects.requireNonNull(callbackUri);
             return this;
         }
 
         public Builder callbackUri(String callbackUri) {
-            this.callbackUri = Input.of(Objects.requireNonNull(callbackUri));
+            this.callbackUri = Output.of(Objects.requireNonNull(callbackUri));
             return this;
         }
 
-        public Builder spCertificates(@Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates) {
+        public Builder spCertificates(@Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs>> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
 
         public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateGetArgs> spCertificates) {
-            this.spCertificates = Input.ofNullable(spCertificates);
+            this.spCertificates = Output.ofNullable(spCertificates);
             return this;
         }
 
-        public Builder spEntityId(Input<String> spEntityId) {
+        public Builder spEntityId(Output<String> spEntityId) {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }
 
         public Builder spEntityId(String spEntityId) {
-            this.spEntityId = Input.of(Objects.requireNonNull(spEntityId));
+            this.spEntityId = Output.of(Objects.requireNonNull(spEntityId));
             return this;
         }
         public TenantInboundSamlConfigSpConfigGetArgs build() {

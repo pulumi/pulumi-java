@@ -3,7 +3,6 @@
 
 package io.pulumi.gcp.dataproc;
 
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -240,14 +239,14 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkflowTemplate(String name, WorkflowTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/workflowTemplate:WorkflowTemplate", name, args == null ? WorkflowTemplateArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("gcp:dataproc/workflowTemplate:WorkflowTemplate", name, args == null ? WorkflowTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WorkflowTemplate(String name, Input<String> id, @Nullable WorkflowTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WorkflowTemplate(String name, Output<String> id, @Nullable WorkflowTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("gcp:dataproc/workflowTemplate:WorkflowTemplate", name, state, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .build();
@@ -263,7 +262,7 @@ public class WorkflowTemplate extends io.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WorkflowTemplate get(String name, Input<String> id, @Nullable WorkflowTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WorkflowTemplate get(String name, Output<String> id, @Nullable WorkflowTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WorkflowTemplate(name, id, state, options);
     }
 }

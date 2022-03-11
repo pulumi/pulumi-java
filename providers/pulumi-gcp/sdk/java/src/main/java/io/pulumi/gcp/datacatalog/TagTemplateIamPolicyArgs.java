@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,38 +15,38 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     public static final TagTemplateIamPolicyArgs Empty = new TagTemplateIamPolicyArgs();
 
     @InputImport(name="policyData", required=true)
-      private final Input<String> policyData;
+      private final Output<String> policyData;
 
-    public Input<String> getPolicyData() {
+    public Output<String> getPolicyData() {
         return this.policyData;
     }
 
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     @InputImport(name="region")
-      private final @Nullable Input<String> region;
+      private final @Nullable Output<String> region;
 
-    public Input<String> getRegion() {
-        return this.region == null ? Input.empty() : this.region;
+    public Output<String> getRegion() {
+        return this.region == null ? Output.empty() : this.region;
     }
 
     @InputImport(name="tagTemplate", required=true)
-      private final Input<String> tagTemplate;
+      private final Output<String> tagTemplate;
 
-    public Input<String> getTagTemplate() {
+    public Output<String> getTagTemplate() {
         return this.tagTemplate;
     }
 
     public TagTemplateIamPolicyArgs(
-        Input<String> policyData,
-        @Nullable Input<String> project,
-        @Nullable Input<String> region,
-        Input<String> tagTemplate) {
+        Output<String> policyData,
+        @Nullable Output<String> project,
+        @Nullable Output<String> region,
+        Output<String> tagTemplate) {
         this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
         this.project = project;
         this.region = region;
@@ -54,10 +54,10 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private TagTemplateIamPolicyArgs() {
-        this.policyData = Input.empty();
-        this.project = Input.empty();
-        this.region = Input.empty();
-        this.tagTemplate = Input.empty();
+        this.policyData = Output.empty();
+        this.project = Output.empty();
+        this.region = Output.empty();
+        this.tagTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -69,10 +69,10 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> policyData;
-        private @Nullable Input<String> project;
-        private @Nullable Input<String> region;
-        private Input<String> tagTemplate;
+        private Output<String> policyData;
+        private @Nullable Output<String> project;
+        private @Nullable Output<String> region;
+        private Output<String> tagTemplate;
 
         public Builder() {
     	      // Empty
@@ -86,43 +86,43 @@ public final class TagTemplateIamPolicyArgs extends io.pulumi.resources.Resource
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder policyData(Input<String> policyData) {
+        public Builder policyData(Output<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
         public Builder policyData(String policyData) {
-            this.policyData = Input.of(Objects.requireNonNull(policyData));
+            this.policyData = Output.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder region(@Nullable Input<String> region) {
+        public Builder region(@Nullable Output<String> region) {
             this.region = region;
             return this;
         }
 
         public Builder region(@Nullable String region) {
-            this.region = Input.ofNullable(region);
+            this.region = Output.ofNullable(region);
             return this;
         }
 
-        public Builder tagTemplate(Input<String> tagTemplate) {
+        public Builder tagTemplate(Output<String> tagTemplate) {
             this.tagTemplate = Objects.requireNonNull(tagTemplate);
             return this;
         }
 
         public Builder tagTemplate(String tagTemplate) {
-            this.tagTemplate = Input.of(Objects.requireNonNull(tagTemplate));
+            this.tagTemplate = Output.of(Objects.requireNonNull(tagTemplate));
             return this;
         }
         public TagTemplateIamPolicyArgs build() {

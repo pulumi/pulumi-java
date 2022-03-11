@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="bucketId")
-      private final @Nullable Input<String> bucketId;
+      private final @Nullable Output<String> bucketId;
 
-    public Input<String> getBucketId() {
-        return this.bucketId == null ? Input.empty() : this.bucketId;
+    public Output<String> getBucketId() {
+        return this.bucketId == null ? Output.empty() : this.bucketId;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="lifecycleState")
-      private final @Nullable Input<String> lifecycleState;
+      private final @Nullable Output<String> lifecycleState;
 
-    public Input<String> getLifecycleState() {
-        return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
+    public Output<String> getLifecycleState() {
+        return this.lifecycleState == null ? Output.empty() : this.lifecycleState;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-      private final @Nullable Input<String> project;
+      private final @Nullable Output<String> project;
 
-    public Input<String> getProject() {
-        return this.project == null ? Input.empty() : this.project;
+    public Output<String> getProject() {
+        return this.project == null ? Output.empty() : this.project;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     public ProjectBucketConfigState(
-        @Nullable Input<String> bucketId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> lifecycleState,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> project,
-        @Nullable Input<Integer> retentionDays) {
+        @Nullable Output<String> bucketId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> lifecycleState,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> project,
+        @Nullable Output<Integer> retentionDays) {
         this.bucketId = bucketId;
         this.description = description;
         this.lifecycleState = lifecycleState;
@@ -110,13 +110,13 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
     }
 
     private ProjectBucketConfigState() {
-        this.bucketId = Input.empty();
-        this.description = Input.empty();
-        this.lifecycleState = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.project = Input.empty();
-        this.retentionDays = Input.empty();
+        this.bucketId = Output.empty();
+        this.description = Output.empty();
+        this.lifecycleState = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.project = Output.empty();
+        this.retentionDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bucketId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> lifecycleState;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> project;
-        private @Nullable Input<Integer> retentionDays;
+        private @Nullable Output<String> bucketId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> lifecycleState;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> project;
+        private @Nullable Output<Integer> retentionDays;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class ProjectBucketConfigState extends io.pulumi.resources.Resource
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder bucketId(@Nullable Input<String> bucketId) {
+        public Builder bucketId(@Nullable Output<String> bucketId) {
             this.bucketId = bucketId;
             return this;
         }
 
         public Builder bucketId(@Nullable String bucketId) {
-            this.bucketId = Input.ofNullable(bucketId);
+            this.bucketId = Output.ofNullable(bucketId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder lifecycleState(@Nullable Input<String> lifecycleState) {
+        public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
 
         public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Input.ofNullable(lifecycleState);
+            this.lifecycleState = Output.ofNullable(lifecycleState);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder project(@Nullable Input<String> project) {
+        public Builder project(@Nullable Output<String> project) {
             this.project = project;
             return this;
         }
 
         public Builder project(@Nullable String project) {
-            this.project = Input.ofNullable(project);
+            this.project = Output.ofNullable(project);
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
         public ProjectBucketConfigState build() {

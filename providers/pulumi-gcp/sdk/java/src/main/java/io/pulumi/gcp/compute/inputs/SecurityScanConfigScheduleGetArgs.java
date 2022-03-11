@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="intervalDurationDays", required=true)
-      private final Input<Integer> intervalDurationDays;
+      private final Output<Integer> intervalDurationDays;
 
-    public Input<Integer> getIntervalDurationDays() {
+    public Output<Integer> getIntervalDurationDays() {
         return this.intervalDurationDays;
     }
 
@@ -33,22 +33,22 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheduleTime")
-      private final @Nullable Input<String> scheduleTime;
+      private final @Nullable Output<String> scheduleTime;
 
-    public Input<String> getScheduleTime() {
-        return this.scheduleTime == null ? Input.empty() : this.scheduleTime;
+    public Output<String> getScheduleTime() {
+        return this.scheduleTime == null ? Output.empty() : this.scheduleTime;
     }
 
     public SecurityScanConfigScheduleGetArgs(
-        Input<Integer> intervalDurationDays,
-        @Nullable Input<String> scheduleTime) {
+        Output<Integer> intervalDurationDays,
+        @Nullable Output<String> scheduleTime) {
         this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays, "expected parameter 'intervalDurationDays' to be non-null");
         this.scheduleTime = scheduleTime;
     }
 
     private SecurityScanConfigScheduleGetArgs() {
-        this.intervalDurationDays = Input.empty();
-        this.scheduleTime = Input.empty();
+        this.intervalDurationDays = Output.empty();
+        this.scheduleTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<Integer> intervalDurationDays;
-        private @Nullable Input<String> scheduleTime;
+        private Output<Integer> intervalDurationDays;
+        private @Nullable Output<String> scheduleTime;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder intervalDurationDays(Input<Integer> intervalDurationDays) {
+        public Builder intervalDurationDays(Output<Integer> intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
         public Builder intervalDurationDays(Integer intervalDurationDays) {
-            this.intervalDurationDays = Input.of(Objects.requireNonNull(intervalDurationDays));
+            this.intervalDurationDays = Output.of(Objects.requireNonNull(intervalDurationDays));
             return this;
         }
 
-        public Builder scheduleTime(@Nullable Input<String> scheduleTime) {
+        public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
 
         public Builder scheduleTime(@Nullable String scheduleTime) {
-            this.scheduleTime = Input.ofNullable(scheduleTime);
+            this.scheduleTime = Output.ofNullable(scheduleTime);
             return this;
         }
         public SecurityScanConfigScheduleGetArgs build() {

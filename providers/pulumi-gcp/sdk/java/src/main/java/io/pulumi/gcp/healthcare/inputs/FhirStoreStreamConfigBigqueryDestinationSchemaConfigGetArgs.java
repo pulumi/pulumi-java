@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
      * 
      */
     @InputImport(name="recursiveStructureDepth", required=true)
-      private final Input<Integer> recursiveStructureDepth;
+      private final Output<Integer> recursiveStructureDepth;
 
-    public Input<Integer> getRecursiveStructureDepth() {
+    public Output<Integer> getRecursiveStructureDepth() {
         return this.recursiveStructureDepth;
     }
 
@@ -38,22 +38,22 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
      * 
      */
     @InputImport(name="schemaType")
-      private final @Nullable Input<String> schemaType;
+      private final @Nullable Output<String> schemaType;
 
-    public Input<String> getSchemaType() {
-        return this.schemaType == null ? Input.empty() : this.schemaType;
+    public Output<String> getSchemaType() {
+        return this.schemaType == null ? Output.empty() : this.schemaType;
     }
 
     public FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs(
-        Input<Integer> recursiveStructureDepth,
-        @Nullable Input<String> schemaType) {
+        Output<Integer> recursiveStructureDepth,
+        @Nullable Output<String> schemaType) {
         this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth, "expected parameter 'recursiveStructureDepth' to be non-null");
         this.schemaType = schemaType;
     }
 
     private FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs() {
-        this.recursiveStructureDepth = Input.empty();
-        this.schemaType = Input.empty();
+        this.recursiveStructureDepth = Output.empty();
+        this.schemaType = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
     }
 
     public static final class Builder {
-        private Input<Integer> recursiveStructureDepth;
-        private @Nullable Input<String> schemaType;
+        private Output<Integer> recursiveStructureDepth;
+        private @Nullable Output<String> schemaType;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
     	      this.schemaType = defaults.schemaType;
         }
 
-        public Builder recursiveStructureDepth(Input<Integer> recursiveStructureDepth) {
+        public Builder recursiveStructureDepth(Output<Integer> recursiveStructureDepth) {
             this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
             return this;
         }
 
         public Builder recursiveStructureDepth(Integer recursiveStructureDepth) {
-            this.recursiveStructureDepth = Input.of(Objects.requireNonNull(recursiveStructureDepth));
+            this.recursiveStructureDepth = Output.of(Objects.requireNonNull(recursiveStructureDepth));
             return this;
         }
 
-        public Builder schemaType(@Nullable Input<String> schemaType) {
+        public Builder schemaType(@Nullable Output<String> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
 
         public Builder schemaType(@Nullable String schemaType) {
-            this.schemaType = Input.ofNullable(schemaType);
+            this.schemaType = Output.ofNullable(schemaType);
             return this;
         }
         public FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs build() {

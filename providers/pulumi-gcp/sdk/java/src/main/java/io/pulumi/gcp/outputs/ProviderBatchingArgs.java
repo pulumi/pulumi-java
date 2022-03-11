@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.outputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 @OutputCustomType
 public final class ProviderBatchingArgs {
-    private final @Nullable Input<Boolean> enableBatching;
-    private final @Nullable Input<String> sendAfter;
+    private final @Nullable Output<Boolean> enableBatching;
+    private final @Nullable Output<String> sendAfter;
 
     @OutputCustomType.Constructor
     private ProviderBatchingArgs(
-        @OutputCustomType.Parameter("enableBatching") @Nullable Input<Boolean> enableBatching,
-        @OutputCustomType.Parameter("sendAfter") @Nullable Input<String> sendAfter) {
+        @OutputCustomType.Parameter("enableBatching") @Nullable Output<Boolean> enableBatching,
+        @OutputCustomType.Parameter("sendAfter") @Nullable Output<String> sendAfter) {
         this.enableBatching = enableBatching;
         this.sendAfter = sendAfter;
     }
 
-    public @Nullable Input<Boolean> getEnableBatching() {
+    public @Nullable Output<Boolean> getEnableBatching() {
         return this.enableBatching;
     }
-    public @Nullable Input<String> getSendAfter() {
+    public @Nullable Output<String> getSendAfter() {
         return this.sendAfter;
     }
 
@@ -39,8 +39,8 @@ public final class ProviderBatchingArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableBatching;
-        private @Nullable Input<String> sendAfter;
+        private @Nullable Output<Boolean> enableBatching;
+        private @Nullable Output<String> sendAfter;
 
         public Builder() {
     	      // Empty
@@ -52,12 +52,12 @@ public final class ProviderBatchingArgs {
     	      this.sendAfter = defaults.sendAfter;
         }
 
-        public Builder enableBatching(@Nullable Input<Boolean> enableBatching) {
+        public Builder enableBatching(@Nullable Output<Boolean> enableBatching) {
             this.enableBatching = enableBatching;
             return this;
         }
 
-        public Builder sendAfter(@Nullable Input<String> sendAfter) {
+        public Builder sendAfter(@Nullable Output<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }

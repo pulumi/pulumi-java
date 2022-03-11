@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.vertex.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyName")
-      private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Output<String> kmsKeyName;
 
-    public Input<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
+    public Output<String> getKmsKeyName() {
+        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
-    public AiMetadataStoreEncryptionSpecGetArgs(@Nullable Input<String> kmsKeyName) {
+    public AiMetadataStoreEncryptionSpecGetArgs(@Nullable Output<String> kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
     private AiMetadataStoreEncryptionSpecGetArgs() {
-        this.kmsKeyName = Input.empty();
+        this.kmsKeyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kmsKeyName;
+        private @Nullable Output<String> kmsKeyName;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Input.ofNullable(kmsKeyName);
+            this.kmsKeyName = Output.ofNullable(kmsKeyName);
             return this;
         }
         public AiMetadataStoreEncryptionSpecGetArgs build() {
