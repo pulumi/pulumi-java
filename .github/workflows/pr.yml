@@ -122,10 +122,10 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-java-webserver &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi preview &&
+            pulumi stack rm dev --ye;
   example3:
     runs-on: ubuntu-latest
     steps:
@@ -176,11 +176,11 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
-            ./gradlew install
-            pulumi stack init dev;
+            ./gradlew install &&
+            pulumi stack init dev &&
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            pulumi preview &&
+            pulumi stack rm dev --yes"
   example4:
     runs-on: ubuntu-latest
     steps:
@@ -230,10 +230,10 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi preview &&
+            pulumi stack rm dev --yes"
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -281,12 +281,12 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi config set minimal:name foo
-            pulumi config set minimal:secret bar
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi config set minimal:name foo &&
+            pulumi config set minimal:secret bar &&
+            pulumi preview &&
+            pulumi stack rm dev --yes"
   example6:
     runs-on: ubuntu-latest
     steps:
@@ -345,10 +345,10 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi preview &&
+            pulumi stack rm dev --yes"
   example7:
     runs-on: ubuntu-latest
     steps:
@@ -397,10 +397,10 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi preview &&
+            pulumi stack rm dev --yes"
   example8:
     runs-on: ubuntu-latest
     steps:
@@ -449,10 +449,10 @@ jobs:
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
-            ./gradlew install
-            pulumi stack init dev;
-            pulumi preview;
-            pulumi stack rm dev --yes;";
+            ./gradlew install &&
+            pulumi stack init dev &&
+            pulumi preview &&
+            pulumi stack rm dev --yes"
       - name: Integration tests
         run: make integration_tests
     strategy:
