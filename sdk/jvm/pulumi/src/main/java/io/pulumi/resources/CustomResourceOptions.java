@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
 
@@ -36,7 +35,7 @@ public final class CustomResourceOptions extends ResourceOptions implements Copy
             @Nullable ProviderResource provider,
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
-            @Nullable List<Input<Alias>> aliases,
+            @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             boolean deleteBeforeReplace,
             @Nullable List<String> additionalSecretOutputs,

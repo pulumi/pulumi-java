@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 
 import javax.annotation.Nullable;
@@ -34,7 +33,7 @@ public abstract class ResourceOptions {
     @Nullable
     protected List<ResourceTransformation> resourceTransformations;
     @Nullable
-    protected List<Input<Alias>> aliases;
+    protected List<Output<Alias>> aliases;
     @Nullable
     protected String urn;
     @Nullable
@@ -52,7 +51,7 @@ public abstract class ResourceOptions {
             @Nullable ProviderResource provider,
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
-            @Nullable List<Input<Alias>> aliases,
+            @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges
     ) {
@@ -132,7 +131,7 @@ public abstract class ResourceOptions {
             return (B) this;
         }
 
-        public B setAliases(@Nullable List<Input<Alias>> aliases) {
+        public B setAliases(@Nullable List<Output<Alias>> aliases) {
             options.aliases = aliases;
             return (B) this;
         }
@@ -223,7 +222,7 @@ public abstract class ResourceOptions {
     /**
      * An optional list of aliases to treat this resource as matching.
      */
-    public List<Input<Alias>> getAliases() {
+    public List<Output<Alias>> getAliases() {
         return this.aliases == null ? List.of() : List.copyOf(this.aliases);
     }
 

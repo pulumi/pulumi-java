@@ -182,7 +182,7 @@ public abstract class Resource {
             options.aliases = options.aliases == null ? new ArrayList<>() : copyNullableList(options.aliases);
             for (var parentAlias : options.parent.aliases) {
                 options.aliases.add(
-                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type).toInput()
+                        urnInheritedChildAlias(this.name, options.parent.getResourceName(), parentAlias, this.type)
                 );
             }
 
@@ -300,12 +300,12 @@ public abstract class Resource {
     }
 
     private static Output<String> collapseAliasToUrn(
-            Input<Alias> alias,
+            Output<Alias> alias,
             String defaultName,
             String defaultType,
             @Nullable Resource defaultParent
     ) {
-        return alias.toOutput().apply(a -> {
+        return alias.apply(a -> {
             if (a.getUrn().isPresent()) {
                 return Output.of(a.getUrn().get());
             }

@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.Objects;
@@ -32,7 +31,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
             @Nullable String version,
             @Nullable CustomTimeouts customTimeouts,
             @Nullable List<ResourceTransformation> resourceTransformations,
-            @Nullable List<Input<Alias>> aliases,
+            @Nullable List<Output<Alias>> aliases,
             @Nullable String urn,
             @Nullable List<String> replaceOnChanges,
             @Nullable List<ProviderResource> providers

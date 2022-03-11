@@ -1,7 +1,6 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -66,7 +65,7 @@ class ResourceOptionsTest {
                                 "urn",
                                 List.of()
                         )
-                ) // FIXME: more test cases
+                ) // TODO: more test cases
         );
     }
 
@@ -107,7 +106,7 @@ class ResourceOptionsTest {
                 @Nullable ProviderResource provider,
                 @Nullable CustomTimeouts customTimeouts,
                 @Nullable List<ResourceTransformation> resourceTransformations,
-                @Nullable List<Input<Alias>> aliases,
+                @Nullable List<Output<Alias>> aliases,
                 @Nullable String urn,
                 @Nullable List<String> replaceOnChanges
         ) {
