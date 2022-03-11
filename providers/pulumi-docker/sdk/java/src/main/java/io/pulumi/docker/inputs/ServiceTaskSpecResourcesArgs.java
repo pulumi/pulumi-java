@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesLimitsArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationArgs;
@@ -16,29 +16,29 @@ public final class ServiceTaskSpecResourcesArgs extends io.pulumi.resources.Reso
     public static final ServiceTaskSpecResourcesArgs Empty = new ServiceTaskSpecResourcesArgs();
 
     @InputImport(name="limits")
-      private final @Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits;
+      private final @Nullable Output<ServiceTaskSpecResourcesLimitsArgs> limits;
 
-    public Input<ServiceTaskSpecResourcesLimitsArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<ServiceTaskSpecResourcesLimitsArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     @InputImport(name="reservation")
-      private final @Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation;
+      private final @Nullable Output<ServiceTaskSpecResourcesReservationArgs> reservation;
 
-    public Input<ServiceTaskSpecResourcesReservationArgs> getReservation() {
-        return this.reservation == null ? Input.empty() : this.reservation;
+    public Output<ServiceTaskSpecResourcesReservationArgs> getReservation() {
+        return this.reservation == null ? Output.empty() : this.reservation;
     }
 
     public ServiceTaskSpecResourcesArgs(
-        @Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits,
-        @Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation) {
+        @Nullable Output<ServiceTaskSpecResourcesLimitsArgs> limits,
+        @Nullable Output<ServiceTaskSpecResourcesReservationArgs> reservation) {
         this.limits = limits;
         this.reservation = reservation;
     }
 
     private ServiceTaskSpecResourcesArgs() {
-        this.limits = Input.empty();
-        this.reservation = Input.empty();
+        this.limits = Output.empty();
+        this.reservation = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceTaskSpecResourcesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits;
-        private @Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation;
+        private @Nullable Output<ServiceTaskSpecResourcesLimitsArgs> limits;
+        private @Nullable Output<ServiceTaskSpecResourcesReservationArgs> reservation;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceTaskSpecResourcesArgs extends io.pulumi.resources.Reso
     	      this.reservation = defaults.reservation;
         }
 
-        public Builder limits(@Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits) {
+        public Builder limits(@Nullable Output<ServiceTaskSpecResourcesLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder reservation(@Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation) {
+        public Builder reservation(@Nullable Output<ServiceTaskSpecResourcesReservationArgs> reservation) {
             this.reservation = reservation;
             return this;
         }
 
         public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationArgs reservation) {
-            this.reservation = Input.ofNullable(reservation);
+            this.reservation = Output.ofNullable(reservation);
             return this;
         }
         public ServiceTaskSpecResourcesArgs build() {

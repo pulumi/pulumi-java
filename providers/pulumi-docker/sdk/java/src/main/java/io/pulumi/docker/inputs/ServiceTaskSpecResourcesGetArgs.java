@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesLimitsGetArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGetArgs;
@@ -16,29 +16,29 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
     public static final ServiceTaskSpecResourcesGetArgs Empty = new ServiceTaskSpecResourcesGetArgs();
 
     @InputImport(name="limits")
-      private final @Nullable Input<ServiceTaskSpecResourcesLimitsGetArgs> limits;
+      private final @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
 
-    public Input<ServiceTaskSpecResourcesLimitsGetArgs> getLimits() {
-        return this.limits == null ? Input.empty() : this.limits;
+    public Output<ServiceTaskSpecResourcesLimitsGetArgs> getLimits() {
+        return this.limits == null ? Output.empty() : this.limits;
     }
 
     @InputImport(name="reservation")
-      private final @Nullable Input<ServiceTaskSpecResourcesReservationGetArgs> reservation;
+      private final @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
-    public Input<ServiceTaskSpecResourcesReservationGetArgs> getReservation() {
-        return this.reservation == null ? Input.empty() : this.reservation;
+    public Output<ServiceTaskSpecResourcesReservationGetArgs> getReservation() {
+        return this.reservation == null ? Output.empty() : this.reservation;
     }
 
     public ServiceTaskSpecResourcesGetArgs(
-        @Nullable Input<ServiceTaskSpecResourcesLimitsGetArgs> limits,
-        @Nullable Input<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
+        @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits,
+        @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
         this.limits = limits;
         this.reservation = reservation;
     }
 
     private ServiceTaskSpecResourcesGetArgs() {
-        this.limits = Input.empty();
-        this.reservation = Input.empty();
+        this.limits = Output.empty();
+        this.reservation = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTaskSpecResourcesLimitsGetArgs> limits;
-        private @Nullable Input<ServiceTaskSpecResourcesReservationGetArgs> reservation;
+        private @Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits;
+        private @Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceTaskSpecResourcesGetArgs extends io.pulumi.resources.R
     	      this.reservation = defaults.reservation;
         }
 
-        public Builder limits(@Nullable Input<ServiceTaskSpecResourcesLimitsGetArgs> limits) {
+        public Builder limits(@Nullable Output<ServiceTaskSpecResourcesLimitsGetArgs> limits) {
             this.limits = limits;
             return this;
         }
 
         public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsGetArgs limits) {
-            this.limits = Input.ofNullable(limits);
+            this.limits = Output.ofNullable(limits);
             return this;
         }
 
-        public Builder reservation(@Nullable Input<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
+        public Builder reservation(@Nullable Output<ServiceTaskSpecResourcesReservationGetArgs> reservation) {
             this.reservation = reservation;
             return this;
         }
 
         public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationGetArgs reservation) {
-            this.reservation = Input.ofNullable(reservation);
+            this.reservation = Output.ofNullable(reservation);
             return this;
         }
         public ServiceTaskSpecResourcesGetArgs build() {

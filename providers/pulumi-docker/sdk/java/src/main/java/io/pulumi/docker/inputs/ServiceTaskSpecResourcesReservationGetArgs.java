@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGenericResourcesGetArgs;
 import java.lang.Integer;
@@ -16,39 +16,39 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
     public static final ServiceTaskSpecResourcesReservationGetArgs Empty = new ServiceTaskSpecResourcesReservationGetArgs();
 
     @InputImport(name="genericResources")
-      private final @Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
+      private final @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
 
-    public Input<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> getGenericResources() {
-        return this.genericResources == null ? Input.empty() : this.genericResources;
+    public Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> getGenericResources() {
+        return this.genericResources == null ? Output.empty() : this.genericResources;
     }
 
     @InputImport(name="memoryBytes")
-      private final @Nullable Input<Integer> memoryBytes;
+      private final @Nullable Output<Integer> memoryBytes;
 
-    public Input<Integer> getMemoryBytes() {
-        return this.memoryBytes == null ? Input.empty() : this.memoryBytes;
+    public Output<Integer> getMemoryBytes() {
+        return this.memoryBytes == null ? Output.empty() : this.memoryBytes;
     }
 
     @InputImport(name="nanoCpus")
-      private final @Nullable Input<Integer> nanoCpus;
+      private final @Nullable Output<Integer> nanoCpus;
 
-    public Input<Integer> getNanoCpus() {
-        return this.nanoCpus == null ? Input.empty() : this.nanoCpus;
+    public Output<Integer> getNanoCpus() {
+        return this.nanoCpus == null ? Output.empty() : this.nanoCpus;
     }
 
     public ServiceTaskSpecResourcesReservationGetArgs(
-        @Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources,
-        @Nullable Input<Integer> memoryBytes,
-        @Nullable Input<Integer> nanoCpus) {
+        @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources,
+        @Nullable Output<Integer> memoryBytes,
+        @Nullable Output<Integer> nanoCpus) {
         this.genericResources = genericResources;
         this.memoryBytes = memoryBytes;
         this.nanoCpus = nanoCpus;
     }
 
     private ServiceTaskSpecResourcesReservationGetArgs() {
-        this.genericResources = Input.empty();
-        this.memoryBytes = Input.empty();
-        this.nanoCpus = Input.empty();
+        this.genericResources = Output.empty();
+        this.memoryBytes = Output.empty();
+        this.nanoCpus = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
-        private @Nullable Input<Integer> memoryBytes;
-        private @Nullable Input<Integer> nanoCpus;
+        private @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
+        private @Nullable Output<Integer> memoryBytes;
+        private @Nullable Output<Integer> nanoCpus;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
     	      this.nanoCpus = defaults.nanoCpus;
         }
 
-        public Builder genericResources(@Nullable Input<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources) {
+        public Builder genericResources(@Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources) {
             this.genericResources = genericResources;
             return this;
         }
 
         public Builder genericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResourcesGetArgs genericResources) {
-            this.genericResources = Input.ofNullable(genericResources);
+            this.genericResources = Output.ofNullable(genericResources);
             return this;
         }
 
-        public Builder memoryBytes(@Nullable Input<Integer> memoryBytes) {
+        public Builder memoryBytes(@Nullable Output<Integer> memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
 
         public Builder memoryBytes(@Nullable Integer memoryBytes) {
-            this.memoryBytes = Input.ofNullable(memoryBytes);
+            this.memoryBytes = Output.ofNullable(memoryBytes);
             return this;
         }
 
-        public Builder nanoCpus(@Nullable Input<Integer> nanoCpus) {
+        public Builder nanoCpus(@Nullable Output<Integer> nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }
 
         public Builder nanoCpus(@Nullable Integer nanoCpus) {
-            this.nanoCpus = Input.ofNullable(nanoCpus);
+            this.nanoCpus = Output.ofNullable(nanoCpus);
             return this;
         }
         public ServiceTaskSpecResourcesReservationGetArgs build() {

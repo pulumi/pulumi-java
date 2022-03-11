@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -16,39 +16,39 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     public static final ServiceTaskSpecContainerSpecDnsConfigArgs Empty = new ServiceTaskSpecContainerSpecDnsConfigArgs();
 
     @InputImport(name="nameservers", required=true)
-      private final Input<List<String>> nameservers;
+      private final Output<List<String>> nameservers;
 
-    public Input<List<String>> getNameservers() {
+    public Output<List<String>> getNameservers() {
         return this.nameservers;
     }
 
     @InputImport(name="options")
-      private final @Nullable Input<List<String>> options;
+      private final @Nullable Output<List<String>> options;
 
-    public Input<List<String>> getOptions() {
-        return this.options == null ? Input.empty() : this.options;
+    public Output<List<String>> getOptions() {
+        return this.options == null ? Output.empty() : this.options;
     }
 
     @InputImport(name="searches")
-      private final @Nullable Input<List<String>> searches;
+      private final @Nullable Output<List<String>> searches;
 
-    public Input<List<String>> getSearches() {
-        return this.searches == null ? Input.empty() : this.searches;
+    public Output<List<String>> getSearches() {
+        return this.searches == null ? Output.empty() : this.searches;
     }
 
     public ServiceTaskSpecContainerSpecDnsConfigArgs(
-        Input<List<String>> nameservers,
-        @Nullable Input<List<String>> options,
-        @Nullable Input<List<String>> searches) {
+        Output<List<String>> nameservers,
+        @Nullable Output<List<String>> options,
+        @Nullable Output<List<String>> searches) {
         this.nameservers = Objects.requireNonNull(nameservers, "expected parameter 'nameservers' to be non-null");
         this.options = options;
         this.searches = searches;
     }
 
     private ServiceTaskSpecContainerSpecDnsConfigArgs() {
-        this.nameservers = Input.empty();
-        this.options = Input.empty();
-        this.searches = Input.empty();
+        this.nameservers = Output.empty();
+        this.options = Output.empty();
+        this.searches = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<List<String>> nameservers;
-        private @Nullable Input<List<String>> options;
-        private @Nullable Input<List<String>> searches;
+        private Output<List<String>> nameservers;
+        private @Nullable Output<List<String>> options;
+        private @Nullable Output<List<String>> searches;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     	      this.searches = defaults.searches;
         }
 
-        public Builder nameservers(Input<List<String>> nameservers) {
+        public Builder nameservers(Output<List<String>> nameservers) {
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
 
         public Builder nameservers(List<String> nameservers) {
-            this.nameservers = Input.of(Objects.requireNonNull(nameservers));
+            this.nameservers = Output.of(Objects.requireNonNull(nameservers));
             return this;
         }
 
-        public Builder options(@Nullable Input<List<String>> options) {
+        public Builder options(@Nullable Output<List<String>> options) {
             this.options = options;
             return this;
         }
 
         public Builder options(@Nullable List<String> options) {
-            this.options = Input.ofNullable(options);
+            this.options = Output.ofNullable(options);
             return this;
         }
 
-        public Builder searches(@Nullable Input<List<String>> searches) {
+        public Builder searches(@Nullable Output<List<String>> searches) {
             this.searches = searches;
             return this;
         }
 
         public Builder searches(@Nullable List<String> searches) {
-            this.searches = Input.ofNullable(searches);
+            this.searches = Output.ofNullable(searches);
             return this;
         }
         public ServiceTaskSpecContainerSpecDnsConfigArgs build() {

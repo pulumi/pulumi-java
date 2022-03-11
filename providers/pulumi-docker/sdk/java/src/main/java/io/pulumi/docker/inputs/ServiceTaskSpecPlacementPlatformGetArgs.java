@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -14,29 +14,29 @@ public final class ServiceTaskSpecPlacementPlatformGetArgs extends io.pulumi.res
     public static final ServiceTaskSpecPlacementPlatformGetArgs Empty = new ServiceTaskSpecPlacementPlatformGetArgs();
 
     @InputImport(name="architecture", required=true)
-      private final Input<String> architecture;
+      private final Output<String> architecture;
 
-    public Input<String> getArchitecture() {
+    public Output<String> getArchitecture() {
         return this.architecture;
     }
 
     @InputImport(name="os", required=true)
-      private final Input<String> os;
+      private final Output<String> os;
 
-    public Input<String> getOs() {
+    public Output<String> getOs() {
         return this.os;
     }
 
     public ServiceTaskSpecPlacementPlatformGetArgs(
-        Input<String> architecture,
-        Input<String> os) {
+        Output<String> architecture,
+        Output<String> os) {
         this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
         this.os = Objects.requireNonNull(os, "expected parameter 'os' to be non-null");
     }
 
     private ServiceTaskSpecPlacementPlatformGetArgs() {
-        this.architecture = Input.empty();
-        this.os = Input.empty();
+        this.architecture = Output.empty();
+        this.os = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,8 +48,8 @@ public final class ServiceTaskSpecPlacementPlatformGetArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> architecture;
-        private Input<String> os;
+        private Output<String> architecture;
+        private Output<String> os;
 
         public Builder() {
     	      // Empty
@@ -61,23 +61,23 @@ public final class ServiceTaskSpecPlacementPlatformGetArgs extends io.pulumi.res
     	      this.os = defaults.os;
         }
 
-        public Builder architecture(Input<String> architecture) {
+        public Builder architecture(Output<String> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
         public Builder architecture(String architecture) {
-            this.architecture = Input.of(Objects.requireNonNull(architecture));
+            this.architecture = Output.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder os(Input<String> os) {
+        public Builder os(Output<String> os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
 
         public Builder os(String os) {
-            this.os = Input.of(Objects.requireNonNull(os));
+            this.os = Output.of(Objects.requireNonNull(os));
             return this;
         }
         public ServiceTaskSpecPlacementPlatformGetArgs build() {

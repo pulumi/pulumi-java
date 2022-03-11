@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.docker.inputs.ServiceModeReplicatedGetArgs;
 import java.lang.Boolean;
@@ -16,29 +16,29 @@ public final class ServiceModeGetArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceModeGetArgs Empty = new ServiceModeGetArgs();
 
     @InputImport(name="global")
-      private final @Nullable Input<Boolean> global;
+      private final @Nullable Output<Boolean> global;
 
-    public Input<Boolean> getGlobal() {
-        return this.global == null ? Input.empty() : this.global;
+    public Output<Boolean> getGlobal() {
+        return this.global == null ? Output.empty() : this.global;
     }
 
     @InputImport(name="replicated")
-      private final @Nullable Input<ServiceModeReplicatedGetArgs> replicated;
+      private final @Nullable Output<ServiceModeReplicatedGetArgs> replicated;
 
-    public Input<ServiceModeReplicatedGetArgs> getReplicated() {
-        return this.replicated == null ? Input.empty() : this.replicated;
+    public Output<ServiceModeReplicatedGetArgs> getReplicated() {
+        return this.replicated == null ? Output.empty() : this.replicated;
     }
 
     public ServiceModeGetArgs(
-        @Nullable Input<Boolean> global,
-        @Nullable Input<ServiceModeReplicatedGetArgs> replicated) {
+        @Nullable Output<Boolean> global,
+        @Nullable Output<ServiceModeReplicatedGetArgs> replicated) {
         this.global = global;
         this.replicated = replicated;
     }
 
     private ServiceModeGetArgs() {
-        this.global = Input.empty();
-        this.replicated = Input.empty();
+        this.global = Output.empty();
+        this.replicated = Output.empty();
     }
 
     public static Builder builder() {
@@ -50,8 +50,8 @@ public final class ServiceModeGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> global;
-        private @Nullable Input<ServiceModeReplicatedGetArgs> replicated;
+        private @Nullable Output<Boolean> global;
+        private @Nullable Output<ServiceModeReplicatedGetArgs> replicated;
 
         public Builder() {
     	      // Empty
@@ -63,23 +63,23 @@ public final class ServiceModeGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.replicated = defaults.replicated;
         }
 
-        public Builder global(@Nullable Input<Boolean> global) {
+        public Builder global(@Nullable Output<Boolean> global) {
             this.global = global;
             return this;
         }
 
         public Builder global(@Nullable Boolean global) {
-            this.global = Input.ofNullable(global);
+            this.global = Output.ofNullable(global);
             return this;
         }
 
-        public Builder replicated(@Nullable Input<ServiceModeReplicatedGetArgs> replicated) {
+        public Builder replicated(@Nullable Output<ServiceModeReplicatedGetArgs> replicated) {
             this.replicated = replicated;
             return this;
         }
 
         public Builder replicated(@Nullable ServiceModeReplicatedGetArgs replicated) {
-            this.replicated = Input.ofNullable(replicated);
+            this.replicated = Output.ofNullable(replicated);
             return this;
         }
         public ServiceModeGetArgs build() {
