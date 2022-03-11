@@ -86,9 +86,9 @@ jobs:
 #          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Run tests
         run: |
-          make bin/pulumi-language-jvm && mkdir -p ~/.pulumi/bin/ && cp bin/pulumi-language-jvm ~/.pulumi/bin/pulumi-language-jvm && export PATH="$PATH:~/.pulumi/bin/"
+          make bin/pulumi-language-jvm
           for provider in `ls tests/examples/*/ -d`; do
-            bash -c  "cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
+            bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" && cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
           done;
     strategy:
       fail-fast: true
