@@ -2,7 +2,7 @@ package io.pulumi.deployment;
 
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Stack;
-import io.pulumi.core.InputOutputTests;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -49,7 +49,7 @@ public class DeploymentResourceDependencyGatheringTest {
     public static class DeploysResourcesWithUnknownDependsOnStack extends Stack {
         public DeploysResourcesWithUnknownDependsOnStack() {
             var r = new MyCustomResource("r1", null, CustomResourceOptions.builder()
-                    .setDependsOn(InputOutputTests.unknown())
+                    .setDependsOn(OutputTests.unknown())
                     .build()
             );
         }

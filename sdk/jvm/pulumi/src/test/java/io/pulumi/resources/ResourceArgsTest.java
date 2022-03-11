@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.pulumi.core.InputOutputTests.waitFor;
+import static io.pulumi.core.OutputTests.waitFor;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ResourceArgsTest {

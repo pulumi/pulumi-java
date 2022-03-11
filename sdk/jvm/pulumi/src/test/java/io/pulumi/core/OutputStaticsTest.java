@@ -14,7 +14,7 @@ public class OutputStaticsTest {
     @Test
     void testListConcatNull() {
         var result = Output.concatList(null, null);
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
@@ -25,7 +25,7 @@ public class OutputStaticsTest {
     @Test
     void testListConcatEmpty() {
         var result = Output.concatList(Output.empty(), Output.empty());
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
@@ -48,7 +48,7 @@ public class OutputStaticsTest {
                 .build();
 
         var result = Output.concatList(list1, list2);
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
@@ -56,13 +56,13 @@ public class OutputStaticsTest {
         assertThat(data.getValueNullable()).hasSize(4);
         assertThat(data.getValueNullable()).containsOnly(
                 "V1",
-                InputOutputTests.waitFor(outV2).getValueNullable(),
-                InputOutputTests.waitFor(outV3).getValueNullable(),
+                OutputTests.waitFor(outV2).getValueNullable(),
+                OutputTests.waitFor(outV3).getValueNullable(),
                 "V4"
         );
 
         // Check that the input maps haven't changed
-        InputOutputTests.waitFor(
+        OutputTests.waitFor(
                 Output.tuple(list1, outV2).applyVoid(t -> {
                     assertThat(t.t1).hasSize(2);
                     assertThat(t.t1).contains("V1", t.t2);
@@ -77,7 +77,7 @@ public class OutputStaticsTest {
     @Test
     void testMapConcatNull() {
         var result = Output.concatMap(null, null);
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
@@ -88,7 +88,7 @@ public class OutputStaticsTest {
     @Test
     void testMapConcatEmpty() {
         var result = Output.concatMap(Output.empty(), Output.empty());
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isTrue();
         assertThat(data.isSecret()).isFalse();
@@ -113,7 +113,7 @@ public class OutputStaticsTest {
                 .build();
 
         var result = Output.concatMap(map1, map2);
-        var data = InputOutputTests.waitFor(result);
+        var data = OutputTests.waitFor(result);
 
         assertThat(data.isEmpty()).isFalse();
         assertThat(data.isSecret()).isFalse();
@@ -124,7 +124,7 @@ public class OutputStaticsTest {
         }
 
         // Check that the input maps haven't changed
-        InputOutputTests.waitFor(
+        OutputTests.waitFor(
                 Output.tuple(map1, outV3wrong).applyVoid(t -> {
                     assertThat(t.t1).hasSize(3);
                     assertThat(t.t1).contains(entry("K3", t.t2));
@@ -145,7 +145,7 @@ public class OutputStaticsTest {
                 ))
                 .build();
 
-        var data = InputOutputTests.waitFor(sample.dict);
+        var data = OutputTests.waitFor(sample.dict);
         assertThat(data.getValueNullable()).hasSize(2);
         assertThat(data.getValueNullable()).containsValue(Either.ofLeft("testValue"));
         assertThat(data.getValueNullable()).containsValue(Either.ofRight(123));
@@ -159,7 +159,7 @@ public class OutputStaticsTest {
                         Either.ofRight(123)
                 ))
                 .build();
-        var data = InputOutputTests.waitFor(sample.list);
+        var data = OutputTests.waitFor(sample.list);
         assertThat(data.getValueNullable()).hasSize(2);
         assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofLeft("testValue"));
         assertThat(data.getValueNullable()).containsOnlyOnce(Either.ofRight(123));
@@ -205,25 +205,25 @@ public class OutputStaticsTest {
     public void testNullableSecretifyOutput() {
         Output<String> res0_ = Output.ofNullable((String) null);
         Output<String> res0 = res0_.asSecret();
-        var data0 = InputOutputTests.waitFor(res0);
+        var data0 = OutputTests.waitFor(res0);
         assertThat(data0.getValueNullable()).isEqualTo(null);
         assertThat(data0.isSecret()).isTrue();
         assertThat(data0.isPresent()).isFalse();
         assertThat(data0.isKnown()).isTrue();
 
         // stringify should not modify the original Output
-        var data0_ = InputOutputTests.waitFor(res0_);
+        var data0_ = OutputTests.waitFor(res0_);
         assertThat(data0_.isSecret()).isFalse();
 
         Output<String> res1 = Output.ofNullable("test1").asSecret();
-        var data1 = InputOutputTests.waitFor(res1);
+        var data1 = OutputTests.waitFor(res1);
         assertThat(data1.getValueNullable()).isEqualTo("test1");
         assertThat(data1.isSecret()).isTrue();
         assertThat(data1.isPresent()).isTrue();
         assertThat(data1.isKnown()).isTrue();
 
         Output<String> res2 = Output.ofNullable(Output.of("test2")).asSecret();
-        var data2 = InputOutputTests.waitFor(res2);
+        var data2 = OutputTests.waitFor(res2);
         assertThat(data2.getValueNullable()).isEqualTo("test2");
         assertThat(data2.isSecret()).isTrue();
         assertThat(data2.isPresent()).isTrue();

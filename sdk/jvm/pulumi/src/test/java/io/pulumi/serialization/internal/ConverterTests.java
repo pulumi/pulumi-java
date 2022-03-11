@@ -10,8 +10,8 @@ import com.google.protobuf.NullValue;
 import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.InputImport;
@@ -547,7 +547,7 @@ class ConverterTests {
         @Test
         void testListWithUnknownElement() {
             var converter = new Converter(log);
-            var listWithUnknownElement = List.of(InputOutputTests.unknown());
+            var listWithUnknownElement = List.of(OutputTests.unknown());
             serializeToValueAsync(listWithUnknownElement)
                     .thenApply(value -> converter.convertValue("ListConverterTests", value, TypeShape.list(Boolean.class)))
                     .thenAccept(data -> {

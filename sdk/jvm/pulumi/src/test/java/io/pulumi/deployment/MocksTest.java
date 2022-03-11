@@ -3,8 +3,8 @@ package io.pulumi.deployment;
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Status;
 import io.pulumi.Stack;
-import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
+import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.annotations.OutputCustomType;
@@ -58,7 +58,7 @@ public class MocksTest {
                 .findFirst();
         assertThat(instance).isPresent();
 
-        var ip = InputOutputTests.waitFor(instance.get().publicIp).getValueNullable();
+        var ip = OutputTests.waitFor(instance.get().publicIp).getValueNullable();
         assertThat(ip).isEqualTo("203.0.113.12");
     }
 
@@ -77,11 +77,11 @@ public class MocksTest {
                 .findFirst();
         assertThat(myCustom).isPresent();
 
-        var instance = InputOutputTests.waitFor(myCustom.get().instance).getValueNullable();
+        var instance = OutputTests.waitFor(myCustom.get().instance).getValueNullable();
         assertThat(instance).isNotNull();
         assertThat(instance).isInstanceOf(Instance.class);
 
-        var ip = InputOutputTests.waitFor(instance.publicIp).getValueNullable();
+        var ip = OutputTests.waitFor(instance.publicIp).getValueNullable();
         assertThat(ip).isEqualTo("203.0.113.12");
     }
 
@@ -100,7 +100,7 @@ public class MocksTest {
                 .findFirst();
         assertThat(stack).isPresent();
 
-        var ip = InputOutputTests.waitFor(stack.get().publicIp).getValueNullable();
+        var ip = OutputTests.waitFor(stack.get().publicIp).getValueNullable();
         assertThat(ip).isEqualTo("203.0.113.12");
     }
 
