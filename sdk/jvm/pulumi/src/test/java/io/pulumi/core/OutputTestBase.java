@@ -253,24 +253,15 @@ public abstract class OutputTestBase {
     void testAllParamsOutputs() {
         var o1 = Output.of(1);
         var o2 = Output.of(2);
-        var o3 = Output.allOutputs(o1, o2);
-        var data = OutputTests.waitFor(o3);
-        assertThat(data.getValueNullable()).containsExactly(1, 2);
-    }
-
-    @Test
-    void testAllParamsInputs() {
-        var o1 = Input.of(1);
-        var o2 = Input.of(2);
-        var o3 = Output.allInputs(o1, o2);
+        var o3 = Output.all(o1, o2);
         var data = OutputTests.waitFor(o3);
         assertThat(data.getValueNullable()).containsExactly(1, 2);
     }
 
     @Test
     void testIsSecretAsyncOnKnownOutput() {
-        var o1 = Input.ofSecret(0);
-        var o2 = Input.of(1);
+        var o1 = Output.ofSecret(0);
+        var o2 = Output.of(1);
         var isSecret1 = Internal.of(o1).isSecret().join();
         var isSecret2 = Internal.of(o2).isSecret().join();
         assertThat(isSecret1).isTrue();
@@ -279,8 +270,8 @@ public abstract class OutputTestBase {
 
     @Test
     void testIsSecretAsyncOnAwaitableOutput() {
-        var o1 = Input.ofSecret(0).applyFuture(a -> CompletableFuture.completedFuture("inner1"));
-        var o2 = Input.of(1).applyFuture(a -> CompletableFuture.completedFuture("inner2"));
+        var o1 = Output.ofSecret(0).applyFuture(a -> CompletableFuture.completedFuture("inner1"));
+        var o2 = Output.of(1).applyFuture(a -> CompletableFuture.completedFuture("inner2"));
         var isSecret1 = Internal.of(o1).isSecret().join();
         var isSecret2 = Internal.of(o2).isSecret().join();
         assertThat(isSecret1).isTrue();
@@ -289,7 +280,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnKnownSecretValue() {
-        var secret = Input.ofSecret(1);
+        var secret = Output.ofSecret(1);
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
@@ -298,7 +289,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnAwaitableSecretValue() {
-        var secret = Input.ofSecret(1).applyFuture(a -> CompletableFuture.completedFuture("inner"));
+        var secret = Output.ofSecret(1).applyFuture(a -> CompletableFuture.completedFuture("inner"));
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
@@ -307,7 +298,7 @@ public abstract class OutputTestBase {
 
     @Test
     void testUnsecretOnNonSecretValue() {
-        var secret = Input.of(2);
+        var secret = Output.of(2);
         var notSecret = secret.asPlaintext();
         var notSecretData = Internal.of(notSecret).getDataAsync().join();
         assertThat(notSecretData.isSecret()).isFalse();
