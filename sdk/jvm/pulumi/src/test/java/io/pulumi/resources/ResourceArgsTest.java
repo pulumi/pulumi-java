@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.Log;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -22,17 +22,17 @@ class ResourceArgsTest {
     public static class ComplexResourceArgs1 extends ResourceArgs {
         @InputImport
         @Nullable
-        public Input<String> s = null;
+        public Output<String> s = null;
 
         @InputImport(name = "array")
         @Nullable
-        private Input<List<Boolean>> array = null;
+        private Output<List<Boolean>> array = null;
 
-        public Input<List<Boolean>> getArray() {
-            return this.array == null ? Input.ofList() : this.array;
+        public Output<List<Boolean>> getArray() {
+            return this.array == null ? Output.ofList() : this.array;
         }
 
-        public void setArray(@Nullable Input<List<Boolean>> value) {
+        public void setArray(@Nullable Output<List<Boolean>> value) {
             this.array = value;
         }
     }
@@ -52,44 +52,44 @@ class ResourceArgsTest {
     @Test
     void testComplexResourceArgs1_simpleValues() {
         var args = new ComplexResourceArgs1();
-        args.s = Input.of("s");
-        args.array = Input.of(List.of(true, false));
+        args.s = Output.of("s");
+        args.array = Output.of(List.of(true, false));
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("s");
         assertThat(map).containsKey("array");
 
         var s = map.get("s").get();
-        assertThat(s).isInstanceOf(Input.class);
-        assertThat(waitFor((Input) s)).isEqualTo(waitFor(Input.of("s")));
+        assertThat(s).isInstanceOf(Output.class);
+        assertThat(waitFor((Output) s)).isEqualTo(waitFor(Output.of("s")));
 
         var array = map.get("array").get();
-        assertThat(array).isInstanceOf(Input.class);
-        assertThat(waitFor((Input) array)).isEqualTo(waitFor(Input.of(List.of(true, false))));
+        assertThat(array).isInstanceOf(Output.class);
+        assertThat(waitFor((Output) array)).isEqualTo(waitFor(Output.of(List.of(true, false))));
     }
 
     public static class JsonResourceArgs1 extends ResourceArgs {
         @InputImport(name = "array", json = true)
         @Nullable
-        private Input<List<Boolean>> array = null;
+        private Output<List<Boolean>> array = null;
 
         @InputImport(name = "map", json = true)
         @Nullable
-        private Input<Map<String, Integer>> map = null;
+        private Output<Map<String, Integer>> map = null;
 
-        public Input<List<Boolean>> getArray() {
-            return this.array == null ? Input.ofList() : this.array;
+        public Output<List<Boolean>> getArray() {
+            return this.array == null ? Output.ofList() : this.array;
         }
 
-        public void setArray(@Nullable Input<List<Boolean>> value) {
+        public void setArray(@Nullable Output<List<Boolean>> value) {
             this.array = value;
         }
 
-        public Input<Map<String, Integer>> getMap() {
-            return this.map == null ? Input.ofMap() : this.map;
+        public Output<Map<String, Integer>> getMap() {
+            return this.map == null ? Output.ofMap() : this.map;
         }
 
-        public void setMap(@Nullable Input<Map<String, Integer>> value) {
+        public void setMap(@Nullable Output<Map<String, Integer>> value) {
             this.map = value;
         }
     }
@@ -97,8 +97,8 @@ class ResourceArgsTest {
     @Test
     void testJsonMap() {
         var args = new JsonResourceArgs1();
-        args.setArray(Input.ofList(true, false));
-        args.setMap(Input.ofMap("k1", 1, "k2", 2));
+        args.setArray(Output.ofList(true, false));
+        args.setMap(Output.ofMap("k1", 1, "k2", 2));
         var map = Internal.from(args).toOptionalMapAsync(log).join();
 
         assertThat(map).containsKey("array");

@@ -3,7 +3,6 @@ package io.pulumi.deployment;
 import com.google.common.collect.ImmutableMap;
 import io.grpc.Status;
 import io.pulumi.Stack;
-import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
@@ -208,10 +207,10 @@ public class MocksTest {
     public static final class MyCustomArgs extends ResourceArgs {
         @InputImport
         @Nullable
-        public final Input<Instance> instance;
+        public final Output<Instance> instance;
 
         public MyCustomArgs(@Nullable Instance instance) {
-            this.instance = Input.of(instance);
+            this.instance = Output.of(instance);
         }
     }
 
